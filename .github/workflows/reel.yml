@@ -1,10 +1,13 @@
 name: Reel
 
 on:
-  # Daily post. Cron is UTC: 20:30 UTC = 4:30pm New York (EDT) / 3:30pm (EST, Nov–Mar).
-  # A cloud run takes ~50 min, so the Reel goes up ~5:20–5:30pm (GitHub may start scheduled runs a few min late).
+  # Two Reels a day, posted ~1pm and ~8pm New York time. A run takes ~50 min, so runs start at 12:05 and 19:05 NY.
+  # Cron is UTC and doesn't know about daylight saving, so we fire at both the EDT and EST times and the
+  # "gate" job below only lets through the one that matches START_HOURS in New York.
+  # To change post times: edit START_HOURS (NY start hours = post hour − 1) and the matching crons (NY hour +4 and +5).
   schedule:
-    - cron: '30 20 * * *'
+    - cron: '5 16,17,23 * * *'
+    - cron: '5 0 * * *'
 
   # "Run workflow" button (GitHub app/website)
   workflow_dispatch:
@@ -34,8 +37,26 @@ concurrency:
   group: reel
   cancel-in-progress: false
 
+env:
+  START_HOURS: '12,19'   # New York hours when scheduled runs start (→ posts ~1pm and ~8pm)
+
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      go: ${{ steps.check.outputs.go }}
+    steps:
+      - id: check
+        env:
+          EVENT: ${{ github.event_name }}
+        run: |
+          H=$(TZ=America/New_York date +%-H)
+          if [ "$EVENT" != "schedule" ] || [[ ",$START_HOURS," == *",$H,"* ]]; then echo "go=true" >> "$GITHUB_OUTPUT"; echo "go (NY hour $H)"
+          else echo "go=false" >> "$GITHUB_OUTPUT"; echo "skip: NY hour $H not in $START_HOURS (other daylight-saving slot)"; fi
+
   reel:
+    needs: gate
+    if: needs.gate.outputs.go == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 300
     steps:

@@ -1,6 +1,7 @@
 # Miami Reels — operating guide for Claude
 
-This repo makes and posts one satirical South Florida Instagram Reel per day to **@getnearapp**.
+This repo makes and posts **two** satirical South Florida Instagram Reels per day to **@getnearapp**, at ~1pm and ~8pm New York time
+(the owner's ChatGPT setup separately posts carousels at 9am and 5pm — keep Reels away from those times).
 Everything runs in GitHub Actions (`.github/workflows/reel.yml`) — the owner controls it by chatting with
 Claude from their phone. Your job in a chat is to turn their request into a commit on `main`.
 
@@ -11,9 +12,9 @@ Claude from their phone. Your job in a chat is to turn their request into a comm
 | "Post one now" / "post about X now" | Write `requests/run.json` → `{"topic": "X or empty", "publish": true, "at": "<ISO timestamp>"}` and commit + push to `main`. The push starts a run (~50 min until it is live). Always change `at` so the file actually changes. |
 | "Make one but don't post it" | Same, with `"publish": false`. The video is attached to the Actions run as an artifact. |
 | "Post this exact script" | Write `episodes/<NNN>-<slug>/episode.json` (copy the shape of `episodes/001-rudest-cities/episode.json`), then `requests/run.json` → `{"episode": "episodes/<NNN>-<slug>", "publish": true, "at": "..."}`. Commit both, push. |
-| "Change the daily time" | Edit the `cron` line in `.github/workflows/reel.yml`. It's **UTC**: New York EDT = UTC−4, EST = UTC−5. Start the run ~55 min before the desired post time (a run takes ~50 min). Commit + push. |
+| "Change the post times" / "add a third post" | In `.github/workflows/reel.yml`: set `START_HOURS` to the New York hours runs should start (post hour − 1; a run takes ~50 min), and make the `cron` lines fire at minute 5 of each of those hours +4 and +5 in UTC (covers EDT and EST; the gate job drops the wrong one). Commit + push. |
 | "Pause" / "resume" | `control.json` → `"paused": true/false`. Commit + push. |
-| "Skip tomorrow" / a date | Add `"YYYY-MM-DD"` (New York date) to `control.json` → `skipDates`. Commit + push. |
+| "Skip tomorrow" / a date | Add `"YYYY-MM-DD"` (New York date) to `control.json` → `skipDates` (skips both posts that day). Commit + push. |
 | "What did we post?" | Read `posted.log` (timestamp, file, Instagram link) and `episodes/*/episode.json`. |
 | "Change the style / voice / tone" | Style prompt: `pipeline/generate.mjs` (PROMPT). Graphics: `src/Reel.tsx`. Voice: repo variable `KOKORO_VOICE` (am_adam default). |
 

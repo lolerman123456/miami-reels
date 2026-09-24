@@ -2,7 +2,7 @@
 
 Daily satirical South Florida Reels: 3D Google footage + Adam narration + animated captions → Instagram.
 
-**Runs in the cloud** (GitHub Actions, `.github/workflows/reel.yml`) daily at 4:30pm New York → posted ~5:25pm.
+**Runs in the cloud** (GitHub Actions, `.github/workflows/reel.yml`) twice a day → posted ~1pm and ~8pm New York time.
 Control it from your phone by chatting with Claude on this repo — see `CLAUDE.md`. The Mac is not needed.
 
 ## Pipeline
