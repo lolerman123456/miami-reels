@@ -13,6 +13,7 @@ export type Scene = {
   emoji: string | null;
   emojis: string[] | null;
   alert?: string | null;
+  note?: string | null;
   from: number;
   duration: number;
   video: string;
@@ -132,15 +133,23 @@ const Hook: React.FC<{ scene: Scene }> = ({ scene }) => {
   ];
   return (
     <AbsoluteFill>
-      <div style={{ position: 'absolute', top: 470, width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 18 }}>
+      <div style={{ position: 'absolute', top: lines.length > 2 ? 400 : 470, width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
         {lines.map((line, i) => (
           <Pop key={i} delay={3 + i * 7} rotate={i % 2 ? 8 : -8}>
             <div style={{
-              fontFamily: FONT, fontSize: fitSize(line, i === 0 ? 124 : 100, 960), lineHeight: 1, color: i === 0 ? '#fff' : YELLOW,
+              fontFamily: FONT, fontSize: fitSize(line, i === 0 ? 124 : 104, 960), lineHeight: 1,
+              color: i === lines.length - 1 && lines.length > 2 ? RED : i === 0 ? '#fff' : YELLOW,
               textShadow: outline(9), textAlign: 'center', whiteSpace: 'nowrap', letterSpacing: -1,
             }}>{line}</div>
           </Pop>
         ))}
+        {scene.note && (
+          <Pop delay={3 + lines.length * 7 + 4} from={0.5}>
+            <div style={{ background: 'rgba(0,0,0,.72)', padding: '8px 20px', borderRadius: 12, marginTop: 6 }}>
+              <span style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif", fontWeight: 700, fontSize: 32, color: '#fff' }}>{scene.note}</span>
+            </div>
+          </Pop>
+        )}
       </div>
       {emojis.slice(0, 4).map((e, i) => (
         <div key={i} style={{ position: 'absolute', left: spots[i].left, top: spots[i].top }}>

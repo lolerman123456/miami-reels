@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, FPS, WIDTH, HEIGHT, run, readJSON, writeJSON, step } from './util.mjs';
 import { makeNarration } from './voice.mjs';
-import { transcribeWords, alignToScript } from './captions.mjs';
+import { makeCaptions } from './captions.mjs';
 import { captureShots } from './capture.mjs';
 import { ensureSfx } from './sfx.mjs';
 
@@ -17,7 +17,7 @@ export async function makeEpisode(epDir, { pane = false } = {}) {
   // 1. Voice
   const timelineFile = path.join(epDir, 'timeline.json');
   if (!fs.existsSync(timelineFile)) {
-    step('Narration (Kokoro)');
+    step(`Narration (${episode.voice?.provider === 'openai' ? 'OpenAI ' + (episode.voice.voice || 'ash') : 'Kokoro'})`);
     const { timeline, duration } = await makeNarration(episode, epDir);
     writeJSON(timelineFile, { timeline, duration });
   }
@@ -28,8 +28,7 @@ export async function makeEpisode(epDir, { pane = false } = {}) {
   const captionsFile = path.join(epDir, 'captions.json');
   if (!fs.existsSync(captionsFile)) {
     step('Caption timing (Whisper)');
-    const words = await transcribeWords(path.join(epDir, 'narration.wav'));
-    writeJSON(captionsFile, alignToScript(episode, timeline, words));
+    writeJSON(captionsFile, await makeCaptions(episode, timeline, epDir));
   }
 
   // 3. 3D footage
@@ -52,7 +51,7 @@ export async function makeEpisode(epDir, { pane = false } = {}) {
     captions: readJSON(captionsFile),
     scenes: episode.scenes.map((s, i) => ({
       kind: s.kind, rank: s.rank ?? null, overlay: s.overlay, sub: s.sub ?? null,
-      emoji: s.emoji ?? null, emojis: s.emojis ?? null, alert: s.alert ?? null,
+      emoji: s.emoji ?? null, emojis: s.emojis ?? null, alert: s.alert ?? null, note: s.note ?? null,
       from: Math.round(timeline[i].start * FPS),
       duration: Math.round(timeline[i].duration * FPS),
       video: videos[i],
