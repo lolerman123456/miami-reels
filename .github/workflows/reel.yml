@@ -151,6 +151,18 @@ jobs:
           curl -s "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=$INSTAGRAM_ACCESS_TOKEN" \
             | jq '{expires_in_days: ((.expires_in // 0) / 86400 | floor), error: .error.message}'
 
+      - name: Public watch link
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          F=$(ls out/*.mp4 2>/dev/null | head -1); [ -n "$F" ] || exit 0
+          mkdir -p out/share; S="out/share/$(basename "$F")"
+          ffmpeg -loglevel error -y -i "$F" -c:v libx264 -preset veryfast -b:v 4500k -maxrate 5500k -bufsize 11M -c:a aac -b:a 160k -movflags +faststart "$S"
+          gh release view videos >/dev/null 2>&1 || gh release create videos --title "Reel videos" --notes "Every rendered Reel. Tap a file to watch it on your phone."
+          gh release upload videos "$S" --clobber
+          echo "▶ Watch: https://github.com/${{ github.repository }}/releases/download/videos/$(basename "$F")" | tee -a "$GITHUB_STEP_SUMMARY"
+
       - name: Upload video
         if: always()
         uses: actions/upload-artifact@v4

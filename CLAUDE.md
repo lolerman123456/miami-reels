@@ -22,6 +22,14 @@ Scheduled runs respect `control.json`; runs started by `requests/run.json` or th
 
 The owner can also do all of this without Claude: GitHub app → Actions → **Control** → Run workflow (`.github/workflows/control.yml`).
 
+## Checking on runs & sharing videos (works without gh / without login — the repo is public)
+- Every rendered video is uploaded as `https://github.com/lolerman123456/miami-reels/releases/download/videos/<episode-id>.mp4`
+  (phone-friendly, no login). Send the owner that link when a video is ready, especially for previews (`"publish": false`).
+- Run status: `curl -s "https://api.github.com/repos/lolerman123456/miami-reels/actions/runs?per_page=5"` (fields: name, event,
+  status, conclusion, created_at, html_url). A Reel run takes ~60–100 min depending on video length.
+- What got posted: `posted.log` (pull first — the bot commits it after each run).
+- A voice other than Adam: add `"voice": {"provider": "openai", "voice": "ash"}` to that episode.json (optional `"speed": 1.15`).
+
 ## Content rules (keep the account safe)
 Savage satire of places, traffic, prices, HOAs, tourists, clubs, weather — never ethnic groups, nationalities,
 religions, races, or real private people. No slurs/explicit content. Hook in the first 3 seconds.
