@@ -1,0 +1,90 @@
+name: Control
+
+# Phone remote: GitHub app → this repo → Actions → Control → Run workflow → pick an action.
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'What to do'
+        type: choice
+        options:
+          - post a Reel now
+          - make a Reel but don't post it
+          - change post times
+          - skip a day
+          - un-skip a day
+          - pause daily Reels
+          - resume daily Reels
+          - show status
+      topic:
+        description: 'Topic for the Reel (optional, e.g. "worst Publix locations")'
+        required: false
+        default: ''
+      times:
+        description: 'For "change post times": hours in 24h Miami time, comma-separated (e.g. 13,20 = 1pm & 8pm)'
+        required: false
+        default: ''
+      date:
+        description: 'For skip/un-skip: YYYY-MM-DD (blank = tomorrow)'
+        required: false
+        default: ''
+
+permissions:
+  contents: write
+  actions: write
+
+jobs:
+  control:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Do it
+        env:
+          ACTION: ${{ inputs.action }}
+          TOPIC: ${{ inputs.topic }}
+          TIMES: ${{ inputs.times }}
+          DATE_IN: ${{ inputs.date }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -e
+          say() { echo "$1"; echo "$1" >> "$GITHUB_STEP_SUMMARY"; }
+          edit() { jq "$@" control.json > c.tmp && mv c.tmp control.json; }
+          DAY="${DATE_IN:-$(TZ=America/New_York date -d tomorrow +%F)}"
+
+          case "$ACTION" in
+            "post a Reel now")
+              gh workflow run reel.yml -f topic="$TOPIC" -f publish=true
+              say "🎬 Started a Reel${TOPIC:+ about \"$TOPIC\"} — it'll be on Instagram in ~50 min." ;;
+            "make a Reel but don't post it")
+              gh workflow run reel.yml -f topic="$TOPIC" -f publish=false
+              say "🎬 Making a preview Reel${TOPIC:+ about \"$TOPIC\"} (not posted). In ~50 min open the Reel run → Artifacts to watch it." ;;
+            "change post times")
+              if ! [[ "$TIMES" =~ ^[0-9]{1,2}(,[0-9]{1,2})*$ ]]; then say "❌ Times must look like 13,20"; exit 1; fi
+              edit --argjson h "[$TIMES]" '.postHours = ($h | map(select(. >= 1 and . <= 23)) | unique)'
+              say "⏰ Reels will now post at: $(jq -r '.postHours | map(if . > 12 then "\(. - 12)pm" elif . == 12 then "12pm" else "\(.)am" end) | join(", ")' control.json) (Miami time)."
+              for h in 9 17; do [[ ",$TIMES," == *",$h,"* ]] && say "⚠️ ${h}:00 is also a ChatGPT carousel time."; done; true ;;
+            "skip a day")
+              edit --arg d "$DAY" '.skipDates = ((.skipDates // []) + [$d] | unique)'
+              say "⏭️ No Reels on $DAY." ;;
+            "un-skip a day")
+              edit --arg d "$DAY" '.skipDates = ((.skipDates // []) - [$d])'
+              say "✅ Reels are back on for $DAY." ;;
+            "pause daily Reels")
+              edit '.paused = true'
+              say "⏸️ Daily Reels paused (\"post a Reel now\" still works)." ;;
+            "resume daily Reels")
+              edit '.paused = false'
+              say "▶️ Daily Reels resumed." ;;
+            "show status") ;;
+          esac
+
+          # drop past skip dates, save
+          edit --arg t "$(TZ=America/New_York date +%F)" '.skipDates = ((.skipDates // []) | map(select(. >= $t)))'
+          git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
+          if ! git diff --quiet control.json; then git commit -qam "Control: $ACTION" && git push -q; fi
+
+          say ""
+          say "**Status:** $(jq -r 'if .paused then "⏸️ paused" else "▶️ running" end' control.json) · posts at $(jq -r '.postHours | map(if . > 12 then "\(. - 12)pm" elif . == 12 then "12pm" else "\(.)am" end) | join(", ")' control.json) · skipped days: $(jq -r '(.skipDates // []) | if length == 0 then "none" else join(", ") end' control.json)"
+          say "**Last posts:**"
+          tail -n 5 posted.log 2>/dev/null | awk -F'\t' '{print "- " substr($1,1,10) " " $3}' | tee -a "$GITHUB_STEP_SUMMARY" || true

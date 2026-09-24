@@ -1,13 +1,11 @@
 name: Reel
 
 on:
-  # Two Reels a day, posted ~1pm and ~8pm New York time. A run takes ~50 min, so runs start at 12:05 and 19:05 NY.
-  # Cron is UTC and doesn't know about daylight saving, so we fire at both the EDT and EST times and the
-  # "gate" job below only lets through the one that matches START_HOURS in New York.
-  # To change post times: edit START_HOURS (NY start hours = post hour − 1) and the matching crons (NY hour +4 and +5).
+  # Checks every hour; the "gate" job reads control.json and only starts a Reel when the next New York
+  # hour is one of postHours (a run takes ~50 min). Post times, pause and skip days all live in control.json,
+  # so they can be changed from the Control workflow in the GitHub phone app. DST-proof.
   schedule:
-    - cron: '5 16,17,23 * * *'
-    - cron: '5 0 * * *'
+    - cron: '5 * * * *'
 
   # "Run workflow" button (GitHub app/website)
   workflow_dispatch:
@@ -33,30 +31,37 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: reel
-  cancel-in-progress: false
-
-env:
-  START_HOURS: '12,19'   # New York hours when scheduled runs start (→ posts ~1pm and ~8pm)
-
 jobs:
   gate:
     runs-on: ubuntu-latest
     outputs:
       go: ${{ steps.check.outputs.go }}
     steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: control.json
+          sparse-checkout-cone-mode: false
       - id: check
         env:
           EVENT: ${{ github.event_name }}
         run: |
-          H=$(TZ=America/New_York date +%-H)
-          if [ "$EVENT" != "schedule" ] || [[ ",$START_HOURS," == *",$H,"* ]]; then echo "go=true" >> "$GITHUB_OUTPUT"; echo "go (NY hour $H)"
-          else echo "go=false" >> "$GITHUB_OUTPUT"; echo "skip: NY hour $H not in $START_HOURS (other daylight-saving slot)"; fi
+          if [ "$EVENT" != "schedule" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; echo "manual run → go"; exit 0; fi
+          H=$(TZ=America/New_York date +%-H); D=$(TZ=America/New_York date +%F); NEXT=$(( (H + 1) % 24 ))
+          GO=$(jq -r --argjson next "$NEXT" --arg d "$D" '
+            if .paused then "paused"
+            elif ((.skipDates // []) | index($d)) then "skip-day"
+            elif ((.postHours // []) | index($next)) then "true"
+            else "not-a-post-hour" end' control.json)
+          echo "NY $D ${H}:xx, next hour $NEXT → $GO"
+          echo "go=$([ "$GO" = "true" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
 
   reel:
     needs: gate
     if: needs.gate.outputs.go == 'true'
+    # one video at a time (only real video runs queue here, not the hourly checks)
+    concurrency:
+      group: reel
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 300
     steps:

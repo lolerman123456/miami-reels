@@ -1,4 +1,5 @@
 {
   "paused": false,
+  "postHours": [13, 20],
   "skipDates": []
 }
