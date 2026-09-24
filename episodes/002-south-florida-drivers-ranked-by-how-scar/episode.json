@@ -1,0 +1,162 @@
+{
+  "title": "South Florida Drivers Ranked by How Scared You Should Be",
+  "igCaption": "South Florida drivers ranked by fear level 😭🚗💥 Who did we miss, and which ZIP code is pure chaos? (satire) #SouthFlorida #Miami #Broward #PalmBeach #Hialeah #Brickell #SunnyIsles #BocaRaton #FortLauderdale #I95 #FloridaDrivers #MiamiReels",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "South Florida drivers are NPCs with insurance and emotional damage.",
+      "overlay": [
+        "DRIVERS RANKED",
+        "BY FEAR 😭"
+      ],
+      "emojis": [
+        "🚗",
+        "💥",
+        "😱",
+        "🦎"
+      ],
+      "location": {
+        "name": "Golden Glades Interchange",
+        "lat": 25.9286,
+        "lon": -80.2119,
+        "h": 35
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 5,
+      "text": "Number five, Boca drivers go thirty in a sixty, protected by Lexus armor.",
+      "caption": "Number 5: Boca drivers go 30 in a 60, protected by Lexus armor.",
+      "overlay": "BOCA RATON",
+      "sub": "Lexus turtle zone",
+      "emoji": "🐢",
+      "location": {
+        "name": "Mizner Park",
+        "lat": 26.3569,
+        "lon": -80.0857,
+        "h": 30
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 850,
+        "pitch": -30,
+        "heading": 70,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 4,
+      "text": "Number four, Fort Lauderdale Beach drivers brake for yachts, scooters, and imaginary vee eye pee entrances.",
+      "caption": "Number 4: Fort Lauderdale Beach drivers brake for yachts, scooters, and imaginary VIP entrances.",
+      "overlay": "FORT LAUDERDALE BEACH",
+      "sub": "VIP brake checks",
+      "emoji": "🛥️",
+      "location": {
+        "name": "Fort Lauderdale Beach at Las Olas",
+        "lat": 26.1193,
+        "lon": -80.1043,
+        "h": 80
+      },
+      "shot": {
+        "type": "push",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 15
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 3,
+      "text": "Number three, Brickell drivers merge across four lanes because their lease payment has anxiety.",
+      "caption": "Number 3: Brickell drivers merge across 4 lanes because their lease payment has anxiety.",
+      "overlay": "BRICKELL",
+      "sub": "Lease-payment lanes",
+      "emoji": "💸",
+      "location": {
+        "name": "Brickell City Centre",
+        "lat": 25.7665,
+        "lon": -80.1931,
+        "h": 100
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1700,
+        "pitch": -35,
+        "heading": 260,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 2,
+      "text": "Number two, Sunny Isles drivers park Bentleys diagonally, then honk like gravity betrayed them.",
+      "caption": "Number 2: Sunny Isles drivers park Bentleys diagonally, then honk like gravity betrayed them.",
+      "overlay": "SUNNY ISLES",
+      "sub": "Bentley panic mode",
+      "emoji": "🚘",
+      "location": {
+        "name": "Sunny Isles Beach Pier",
+        "lat": 25.9385,
+        "lon": -80.1207,
+        "h": 100
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 1600,
+        "pitch": -36,
+        "heading": 190
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 1,
+      "text": "And number one, Hialeah drivers treat red lights like suggestions from a man they blocked.",
+      "caption": "And number 1: Hialeah drivers treat red lights like suggestions from a man they blocked.",
+      "overlay": "HIALEAH",
+      "sub": "Red lights are rumors",
+      "emoji": "🚦",
+      "location": {
+        "name": "Hialeah Park Racing and Casino",
+        "lat": 25.8468,
+        "lon": -80.2781,
+        "h": 25
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -30,
+        "heading": 310,
+        "degrees": 100,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Drop your scariest ZIP code.",
+      "overlay": "COMMENT YOUR ZIP 🚗",
+      "sub": "Start a fight below",
+      "location": {
+        "name": "Downtown Miami I-95",
+        "lat": 25.7836,
+        "lon": -80.1986,
+        "h": 100
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2000,
+        "pitch": -32,
+        "heading": 145
+      }
+    }
+  ],
+  "id": "002-south-florida-drivers-ranked-by-how-scar"
+}
