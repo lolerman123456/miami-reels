@@ -1,11 +1,12 @@
 name: Reel
 
 on:
-  # Checks every hour; the "gate" job reads control.json and only starts a Reel when the next New York
-  # hour is one of postHours (a run takes ~50 min). Post times, pause and skip days all live in control.json,
-  # so they can be changed from the Control workflow in the GitHub phone app. DST-proof.
+  # Checks every 30 min; the "gate" job reads control.json and starts a Reel for a post hour P (a run takes ~50 min).
+  # GitHub sometimes drops scheduled runs, so each slot gets 4 chances (P-1:05, P-1:35, P:05, P:35);
+  # the first one to run claims the slot in state/slots.txt so it never posts twice. DST-proof.
+  # Post times, pause and skip days live in control.json (editable from the Control workflow on the phone).
   schedule:
-    - cron: '5 * * * *'
+    - cron: '5,35 * * * *'
 
   # "Run workflow" button (GitHub app/website)
   workflow_dispatch:
@@ -38,22 +39,28 @@ jobs:
       go: ${{ steps.check.outputs.go }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          sparse-checkout: control.json
-          sparse-checkout-cone-mode: false
       - id: check
         env:
           EVENT: ${{ github.event_name }}
         run: |
           if [ "$EVENT" != "schedule" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; echo "manual run → go"; exit 0; fi
-          H=$(TZ=America/New_York date +%-H); D=$(TZ=America/New_York date +%F); NEXT=$(( (H + 1) % 24 ))
-          GO=$(jq -r --argjson next "$NEXT" --arg d "$D" '
-            if .paused then "paused"
-            elif ((.skipDates // []) | index($d)) then "skip-day"
-            elif ((.postHours // []) | index($next)) then "true"
-            else "not-a-post-hour" end' control.json)
-          echo "NY $D ${H}:xx, next hour $NEXT → $GO"
-          echo "go=$([ "$GO" = "true" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          H=$(TZ=America/New_York date +%-H); D=$(TZ=America/New_York date +%F)
+          nogo() { echo "NY $D ${H}:xx → $1"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; }
+          jq -e '.paused' control.json >/dev/null && nogo "paused"
+          jq -e --arg d "$D" '(.skipDates // []) | index($d)' control.json >/dev/null && nogo "skipped day"
+          # the slot this run could serve: next hour (normal) or current hour (catch-up if earlier checks were dropped)
+          for P in $(( (H + 1) % 24 )) $H; do
+            jq -e --argjson p "$P" '(.postHours // []) | index($p)' control.json >/dev/null || continue
+            SLOT="$D $P"
+            if grep -qx "$SLOT" state/slots.txt 2>/dev/null; then nogo "slot $SLOT already started"; fi
+            # claim it (retry if a Reel run pushed at the same moment)
+            mkdir -p state; echo "$SLOT" >> state/slots.txt; tail -n 60 state/slots.txt > s.tmp && mv s.tmp state/slots.txt
+            git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
+            git add state/slots.txt && git commit -qm "Claim slot $SLOT"
+            for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+            echo "NY $D ${H}:xx → starting Reel for ${P}:00 slot"; echo "go=true" >> "$GITHUB_OUTPUT"; exit 0
+          done
+          nogo "not a post slot"
 
   reel:
     needs: gate

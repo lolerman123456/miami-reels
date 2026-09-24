@@ -12,7 +12,7 @@ Claude from their phone. Your job in a chat is to turn their request into a comm
 | "Post one now" / "post about X now" | Write `requests/run.json` → `{"topic": "X or empty", "publish": true, "at": "<ISO timestamp>"}` and commit + push to `main`. The push starts a run (~50 min until it is live). Always change `at` so the file actually changes. |
 | "Make one but don't post it" | Same, with `"publish": false`. The video is attached to the Actions run as an artifact. |
 | "Post this exact script" | Write `episodes/<NNN>-<slug>/episode.json` (copy the shape of `episodes/001-rudest-cities/episode.json`), then `requests/run.json` → `{"episode": "episodes/<NNN>-<slug>", "publish": true, "at": "..."}`. Commit both, push. |
-| "Change the post times" / "add a third post" | `control.json` → `postHours` = New York post hours, 24h (e.g. `[13, 20]`). The hourly check in `reel.yml` starts a run 1 hour before each. Commit + push. |
+| "Change the post times" / "add a third post" | `control.json` → `postHours` = New York post hours, 24h (e.g. `[13, 20]`). A check every 30 min in `reel.yml` starts a run ~1 hour before each (up to 4 retries; `state/slots.txt` prevents double posts). Commit + push. |
 | "Pause" / "resume" | `control.json` → `"paused": true/false`. Commit + push. |
 | "Skip tomorrow" / a date | Add `"YYYY-MM-DD"` (New York date) to `control.json` → `skipDates` (skips both posts that day). Commit + push. |
 | "What did we post?" | Read `posted.log` (timestamp, file, Instagram link) and `episodes/*/episode.json`. |
