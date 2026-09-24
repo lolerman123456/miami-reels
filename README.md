@@ -2,6 +2,9 @@
 
 Daily satirical South Florida Reels: 3D Google footage + Adam narration + animated captions → Instagram.
 
+**Runs in the cloud** (GitHub Actions, `.github/workflows/reel.yml`) daily at 4:30pm New York → posted ~5:25pm.
+Control it from your phone by chatting with Claude on this repo — see `CLAUDE.md`. The Mac is not needed.
+
 ## Pipeline
 1. `pipeline/generate.mjs` – GPT writes the concept, script, labels and camera shots → `episodes/<id>/episode.json`
 2. `pipeline/voice.mjs` – Kokoro TTS (`am_adam`) → `narration.wav`

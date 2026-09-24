@@ -1,10 +1,10 @@
 name: Reel
 
 on:
-  # Daily post. Cron is UTC: 20:00 UTC = 4:00pm New York (EDT) / 3:00pm (EST, Nov–Mar).
-  # A cloud run takes ~1–1.5h, so the Reel goes up ~5–5:30pm.
+  # Daily post. Cron is UTC: 20:30 UTC = 4:30pm New York (EDT) / 3:30pm (EST, Nov–Mar).
+  # A cloud run takes ~50 min, so the Reel goes up ~5:20–5:30pm (GitHub may start scheduled runs a few min late).
   schedule:
-    - cron: '0 20 * * *'
+    - cron: '30 20 * * *'
 
   # "Run workflow" button (GitHub app/website)
   workflow_dispatch:

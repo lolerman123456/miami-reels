@@ -8,10 +8,10 @@ Claude from their phone. Your job in a chat is to turn their request into a comm
 
 | Request | What to do |
 |---|---|
-| "Post one now" / "post about X now" | Write `requests/run.json` → `{"topic": "X or empty", "publish": true, "at": "<ISO timestamp>"}` and commit + push to `main`. The push starts a run (~1–1.5h until it's live). Always change `at` so the file actually changes. |
+| "Post one now" / "post about X now" | Write `requests/run.json` → `{"topic": "X or empty", "publish": true, "at": "<ISO timestamp>"}` and commit + push to `main`. The push starts a run (~50 min until it is live). Always change `at` so the file actually changes. |
 | "Make one but don't post it" | Same, with `"publish": false`. The video is attached to the Actions run as an artifact. |
 | "Post this exact script" | Write `episodes/<NNN>-<slug>/episode.json` (copy the shape of `episodes/001-rudest-cities/episode.json`), then `requests/run.json` → `{"episode": "episodes/<NNN>-<slug>", "publish": true, "at": "..."}`. Commit both, push. |
-| "Change the daily time" | Edit the `cron` line in `.github/workflows/reel.yml`. It's **UTC**: New York EDT = UTC−4, EST = UTC−5. Start the run ~1h15m before the desired post time. Commit + push. |
+| "Change the daily time" | Edit the `cron` line in `.github/workflows/reel.yml`. It's **UTC**: New York EDT = UTC−4, EST = UTC−5. Start the run ~55 min before the desired post time (a run takes ~50 min). Commit + push. |
 | "Pause" / "resume" | `control.json` → `"paused": true/false`. Commit + push. |
 | "Skip tomorrow" / a date | Add `"YYYY-MM-DD"` (New York date) to `control.json` → `skipDates`. Commit + push. |
 | "What did we post?" | Read `posted.log` (timestamp, file, Instagram link) and `episodes/*/episode.json`. |
