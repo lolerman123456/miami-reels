@@ -52,7 +52,7 @@ export async function makeEpisode(epDir, { pane = false } = {}) {
     captions: readJSON(captionsFile),
     scenes: episode.scenes.map((s, i) => ({
       kind: s.kind, rank: s.rank ?? null, overlay: s.overlay, sub: s.sub ?? null,
-      emoji: s.emoji ?? null, emojis: s.emojis ?? null,
+      emoji: s.emoji ?? null, emojis: s.emojis ?? null, alert: s.alert ?? null,
       from: Math.round(timeline[i].start * FPS),
       duration: Math.round(timeline[i].duration * FPS),
       video: videos[i],

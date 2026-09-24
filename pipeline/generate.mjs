@@ -1,44 +1,94 @@
-// Write tomorrow's episode: concept + script + labels + camera shots, as episode.json
+// Write the next episode: concept + script + labels + camera shots, as episode.json
+// Two passes: a draft, then a harsh editor pass that kills anything generic or AI-sounding.
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, readJSON, writeJSON } from './util.mjs';
 
-const PROMPT = `You write viral, satirical Instagram Reels for a South Florida page. Every video is ~30 seconds of
-3D drone-style footage over real places (Google Earth style) with a narrator, big captions and emoji pop-ups.
+const VOICE = `WHO IS TALKING
+You are a born-and-raised Miami local with a big mouth, recording a voiceover on your phone. You've sat in traffic on the
+Palmetto at 5:40pm, waited 25 minutes for a ventanita cafecito, paid $40 to park in South Beach, watched someone parallel
+park a Lambo into a hydrant. You talk like a person, not a brand. Short sentences. Contractions. You interrupt yourself.
+You say "bro", "I swear", "no, seriously", "I'm not even joking" — sparingly, when it lands.
 
-STYLE
-- Savage, funny, clickbait, zero corporate tone. Roast places, habits, traffic, prices, rent, HOAs, clubs, tourists, weather, drivers, iguanas, Publix, I-95, Brightline, etc.
-- Hot takes can be loosely "justified" by real-world vibes or indirect stats, but NEVER cite sources or say "studies show".
-- Roast places and behaviors, never ethnic groups, nationalities, religions, races, or real private people. Keep it Instagram-safe (no slurs, no explicit content).
-- The first 3 seconds are everything: the hook must be a shocking, controversial, borderline-offensive-to-locals one-liner that
-  makes people stop scrolling and argue in the comments (e.g. "If you live in number one, I'm sorry. Actually no I'm not.").
-- Be savage, not cute. Punchlines should sting. Item #1 must be the harshest roast.
-- For countdowns, each item line MUST start with "Number five," / "Number four," … and the last one with "And number one..."
-- Formats that work: "Top 5 …" countdowns (#5 → #1), "X vs Y", "Places locals will never go", "Rating neighborhoods by …", "POV …". Prefer Top 5.
+WHAT MAKES IT NOT GENERIC (most important)
+- Every item needs ONE hyper-specific, real detail a local would recognize: a street, exit, intersection, store, bridge,
+  parking garage, time of day, price, sound, smell. e.g. "the Publix on Alton Road at 6pm", "the 836 merge by the airport",
+  "the Brickell Avenue bridge going up while you're late", "Dadeland Mall parking lot on a Saturday", "the Las Olas valet line".
+- Tell it like something that happened: "I watched a guy…", "my cousin got…", "last Sunday I…", "you ever…".
+  Then twist it into a punchline. Mini-story > description.
+- Numbers make it feel real: "$19 for a smoothie", "three lanes, no signal", "forty-five minutes to go four miles".
+  (Hot takes can be loosely based on real surveys/stats, but NEVER say "studies show" or cite anything.)
+- Escalate: each item worse than the last. #1 must be the most brutal and the most specific.
 
-LENGTH: total narration 75–95 words. Each item line 12–18 words. Hook 8–14 words. Outro 5–9 words (a comment-bait CTA).
+CLARITY: every sentence must make sense heard ONCE at speed. Normal grammar, plain words. Clever-but-confusing = cut.
 
-LOCATIONS: only well-known, real South Florida places (Miami-Dade, Broward, Palm Beach, Keys) with ACCURATE lat/lon of a visually
-interesting spot (skyline, beach, marina, landmark). h = height above ground in meters to aim at (tall towers 60–120, low areas 5–20).
+RETENTION (people scroll in 1.5 seconds)
+- HOOK (first 3 seconds): an accusation, confession or controversial claim aimed at the viewer or a specific area.
+  Good: "If you live in Kendall, this video is about you and I'm not sorry." / "I lived in all five of these. Number one ruined my life."
+  Bad: "Here are the top 5…" / "South Florida is wild" / anything that sounds like a listicle title.
+- Open a loop in the hook that only #1 closes ("number one is gonna get me cursed out").
+- RE-HOOKS: at #3 and right before #1, one short line that snaps attention back:
+  "Okay but number two is actually illegal." / "Stay for number one, I'm dead serious." / "This next one got me blocked by my aunt."
+- Outro: a question that forces a comment — picking sides, naming a place, tagging someone. Never "like and subscribe".
 
-SHOTS: type is one of dive (hook only), orbit, push, zoomin, pullout (outro). range meters: 500–900 for low-rise areas/beaches,
-1400–1800 for high-rise skylines (Brickell, Downtown, Sunny Isles, Fort Lauderdale beach towers — closer puts the camera inside buildings),
-1500–2500 for wide areas. pitch -25 to -40 (use -32 or steeper around skyscrapers). heading 0–359 (vary it). For orbit add degrees (50–120) and dir (1 or -1).
+BANNED (instant rewrite if any appear): vibes, iconic, hidden gem, paradise, bustling, nestled, "in the heart of",
+"where X meets Y", "whether you're", "let's dive", "buckle up", "not for the faint of heart", "a whole different",
+"it's giving", "main character", NPC, "emotional damage", "treat X like Y", "lives rent free", chaos/chaotic, unhinged,
+"hits different", "literally", "absolutely", "ultimate", "the real MVP", "we need to talk about", "let that sink in",
+"no cap", rhetorical triple adjectives, and any sentence that could be about any city (if you could swap "Miami" for
+"Phoenix" and it still works, it's too generic — rewrite it).
+
+SAFETY: roast places, prices, traffic, habits, HOAs, clubs, tourists, weather — never ethnic groups, nationalities,
+religions, races, or real private individuals. No slurs, nothing sexual. Satire, not hate.`;
+
+const FORMAT = `FORMAT
+- Top 5 countdown (#5 → #1) is the default; "X vs Y" or "Rating neighborhoods by…" are fine if the topic fits (still 5 items).
+- Each item line MUST start with "Number five," / "Number four," / "Number three," / "Number two," and the last with "And number one...".
+- LENGTH: 120–150 spoken words total (≈45–55 seconds). Hook 12–20 words. Each item 20–30 words (detail + mini-story + punchline).
+  Outro 8–14 words.
+- "text" is exactly what the narrator says (write numbers/symbols as words: "nineteen dollars", "I ninety-five").
+  "caption" is the same line as it should appear on screen (digits, $, I-95). Always include caption when they differ.
+- On-screen: "overlay" = place name in caps. "sub" = ≤24-char gut-punch tagline (not a summary — a jab).
+  "alert" (optional, use on exactly TWO items, one of them #1) = ≤18-char red banner that slams in, e.g. "THIS ONE'S ILLEGAL 🚨", "I GOT BLOCKED 💀".
+
+LOCATIONS: only real South Florida places (Miami-Dade, Broward, Palm Beach, Keys) with ACCURATE lat/lon of the exact spot
+you mention (the actual intersection, mall, bridge, beach). h = aim height above ground in meters (towers 60–120, low areas 5–20).
+
+SHOTS: type is dive (hook only), orbit, push, zoomin, pullout (outro only). range: 500–900 low-rise/beaches,
+1400–1800 high-rise skylines (Brickell, Downtown, Sunny Isles, Fort Lauderdale beach — closer puts the camera inside buildings),
+1500–2500 wide areas/highways. pitch -25 to -40 (-32 or steeper near skyscrapers). Vary heading 0–359. Orbit: add degrees (50–120) and dir (1 or -1).
 
 OUTPUT strictly this JSON:
 {
   "title": "…",
-  "igCaption": "caption with emojis, a comment-bait question, '(satire)', and 10–14 hashtags",
+  "igCaption": "2–3 punchy lines in the same voice, a question that forces a comment, '(satire)', then 10–14 hashtags",
   "scenes": [
-    { "kind": "hook", "text": "spoken words", "overlay": ["LINE 1 (≤18 chars)", "LINE 2 (≤18 chars)"], "emojis": ["4 big emojis"],
+    { "kind": "hook", "text": "…", "overlay": ["LINE 1 ≤18 chars", "LINE 2 ≤18 chars"], "emojis": ["4 emojis"],
       "location": {"name": "…", "lat": 0, "lon": 0, "h": 0}, "shot": {"type": "dive", "range": 1600, "pitch": -32, "heading": 200} },
-    { "kind": "item", "rank": 5, "text": "spoken words (write numbers/symbols as spoken words)", "caption": "same line as it should appear on screen, with digits/symbols",
-      "overlay": "PLACE NAME", "sub": "≤24 char roast tagline", "emoji": "1 emoji",
+    { "kind": "item", "rank": 5, "text": "…", "caption": "…", "overlay": "PLACE", "sub": "…", "emoji": "1 emoji", "alert": "optional",
       "location": {…}, "shot": {…} },
-    … items #4 to #1 …,
-    { "kind": "outro", "text": "…", "overlay": "SHORT CTA WITH EMOJI", "sub": "short line", "location": {…}, "shot": {"type": "pullout", …} }
+    … #4, #3, #2, #1 …,
+    { "kind": "outro", "text": "…", "overlay": "SHORT CTA + EMOJI", "sub": "…", "location": {…}, "shot": {"type": "pullout", …} }
   ]
 }`;
+
+const EDITOR = `You are a ruthless short-form video editor. You get a draft Reel script (JSON). Rewrite it so it sounds like a real,
+funny Miami local — not AI. Go line by line:
+1. Delete every banned phrase and every sentence that could be about any other city. Replace with a specific local detail.
+2. Every item must contain a concrete detail (street/exit/store/price/time) AND a mini-story AND a punchline that twists. If not, rewrite.
+3. The hook must stop a thumb in 1.5 seconds: an accusation, confession or controversial claim. Open a loop only #1 closes.
+4. Make sure there's a re-hook line at #3 and right before #1. Make #1 the harshest.
+5. Read it out loud in your head: cut filler words, stack short sentences, keep contractions. No listicle voice.
+   CLARITY BEATS CLEVER: a 14-year-old must get every sentence on first listen. Plain words, normal grammar, no weird
+   metaphors, no word salad, no fragments that only make sense on paper. If a joke needs explaining, cut it.
+6. Keep all JSON fields, lat/lon, shots, and the length rules (120–150 spoken words). Keep text/caption in sync.
+Return ONLY the corrected JSON.
+
+${VOICE}
+
+${FORMAT}`;
+
+const BANNED = /\b(vibes?|iconic|hidden gem|paradise|bustling|nestled|in the heart of|whether you're|let's dive|buckle up|faint of heart|it's giving|main character|npcs?|emotional damage|lives rent free|chaos|chaotic|unhinged|hits different|literally|absolutely|ultimate|real mvp|let that sink in|no cap)\b/i;
 
 export async function generateEpisode({ topic } = {}) {
   const epRoot = path.join(ROOT, 'episodes');
@@ -46,20 +96,23 @@ export async function generateEpisode({ topic } = {}) {
   const past = existing.map(d => readJSON(path.join(epRoot, d, 'episode.json')).title);
   const num = String(existing.length + 1).padStart(3, '0');
 
-  const res = await fetch('https://api.openai.com/v1/chat/completions', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      model: process.env.OPENAI_MODEL || 'gpt-5.5',
-      response_format: { type: 'json_object' },
-      messages: [
-        { role: 'system', content: PROMPT },
-        { role: 'user', content: `Today is ${new Date().toDateString()}. Past videos (don't repeat the concept):\n${past.map(t => '- ' + t).join('\n') || '(none)'}\n\n${topic ? `Today's topic/angle (from the account owner, follow it): ${topic}\n\n` : ''}Write today's episode.` },
-      ],
-    }),
-  });
-  if (!res.ok) throw new Error(`OpenAI ${res.status}: ${await res.text()}`);
-  const episode = JSON.parse((await res.json()).choices[0].message.content);
+  const ask = `Today is ${new Date().toDateString()}. Past videos (don't repeat the concept or the same places as #1):\n${past.map(t => '- ' + t).join('\n') || '(none)'}\n\n` +
+    (topic ? `Today's topic/angle from the account owner — follow it: ${topic}\n\n` : 'Pick a concept that will start fights in the comments.\n\n') +
+    'Write the episode.';
+
+  let episode;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const draft = await chat([{ role: 'system', content: `${VOICE}\n\n${FORMAT}` }, { role: 'user', content: ask }]);
+    episode = await chat([{ role: 'system', content: EDITOR }, { role: 'user', content: JSON.stringify(draft) }]);
+    const spoken = episode.scenes.map(s => s.text).join(' ');
+    const bad = spoken.match(BANNED);
+    const words = spoken.split(/\s+/).length;
+    try { validate(episode); } catch (e) { console.log(`  attempt ${attempt}: ${e.message}`); continue; }
+    if (bad) { console.log(`  attempt ${attempt}: banned phrase "${bad[0]}" — rewriting`); continue; }
+    if (words < 100 || words > 175) { console.log(`  attempt ${attempt}: ${words} words — rewriting`); continue; }
+    console.log(`  script: ${words} words`);
+    break;
+  }
   validate(episode);
 
   const slug = episode.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
@@ -67,11 +120,22 @@ export async function generateEpisode({ topic } = {}) {
   const dir = path.join(epRoot, episode.id);
   writeJSON(path.join(dir, 'episode.json'), episode);
   console.log(`✔ New episode: ${episode.title} → ${path.relative(ROOT, dir)}`);
+  for (const s of episode.scenes) console.log(`   ${s.rank ? '#' + s.rank : s.kind}: ${s.text}`);
   return dir;
 }
 
+async function chat(messages) {
+  const res = await fetch('https://api.openai.com/v1/chat/completions', {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify({ model: process.env.OPENAI_MODEL || 'gpt-5.5', response_format: { type: 'json_object' }, messages }),
+  });
+  if (!res.ok) throw new Error(`OpenAI ${res.status}: ${await res.text()}`);
+  return JSON.parse((await res.json()).choices[0].message.content);
+}
+
 function validate(ep) {
-  if (!ep.title || !Array.isArray(ep.scenes) || ep.scenes.length < 3) throw new Error('Bad episode: ' + JSON.stringify(ep).slice(0, 300));
+  if (!ep?.title || !Array.isArray(ep.scenes) || ep.scenes.length < 3) throw new Error('Bad episode: ' + JSON.stringify(ep).slice(0, 300));
   for (const s of ep.scenes) {
     const { lat, lon } = s.location || {};
     if (!(lat > 24.3 && lat < 27.2 && lon > -82.2 && lon < -79.9)) throw new Error(`Location outside South Florida: ${JSON.stringify(s.location)}`);
@@ -79,4 +143,7 @@ function validate(ep) {
   }
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) await generateEpisode();
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const i = process.argv.indexOf('--topic');
+  await generateEpisode({ topic: i > 0 ? process.argv[i + 1] : null });
+}

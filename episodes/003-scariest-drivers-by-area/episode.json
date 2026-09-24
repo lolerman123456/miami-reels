@@ -1,0 +1,63 @@
+{
+  "id": "003-scariest-drivers-by-area",
+  "title": "Scariest Drivers in South Florida, by Area",
+  "igCaption": "Brickell drivers, this one's for you 😤🚗\n\nWhich area has the scariest drivers? Wrong answers only 👇 and tag the worst driver you know.\n\n(satire — but seriously, use your blinker)\n\n#miami #brickell #southflorida #miamidrivers #palmetto #dadeland #aventura #lasolas #fortlauderdale #floridadrivers #miamilife #miamitraffic #roadrage",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "If you drive in Brickell, I'm sorry. Number one on this list is you. And I have proof.",
+      "overlay": ["SCARIEST DRIVERS", "IN MIAMI 😱"],
+      "emojis": ["🚗", "💥", "😱", "🚨"],
+      "location": { "name": "Brickell / Downtown Miami", "lat": 25.7700, "lon": -80.1920, "h": 90 },
+      "shot": { "type": "dive", "range": 1700, "pitch": -34, "heading": 200 }
+    },
+    {
+      "kind": "item", "rank": 5,
+      "text": "Number five, Aventura Mall on a Sunday. Forty minutes looking for parking, and a white Range Rover still stole my spot. Then waved at me.",
+      "overlay": "AVENTURA", "sub": "Steals your spot. Waves.", "emoji": "🛍️",
+      "location": { "name": "Aventura Mall", "lat": 25.9567, "lon": -80.1428, "h": 15 },
+      "shot": { "type": "push", "range": 800, "pitch": -32, "heading": 250 }
+    },
+    {
+      "kind": "item", "rank": 4,
+      "text": "Number four, Dadeland. Kendall Drive and U.S. One. Nobody signals there. My uncle says a blinker just tells the other guy your plan.",
+      "caption": "Number four, Dadeland. Kendall Drive and US-1. Nobody signals there. My uncle says a blinker just tells the other guy your plan.",
+      "overlay": "DADELAND", "sub": "Blinkers = snitching", "emoji": "🚦",
+      "location": { "name": "Dadeland Mall / Kendall Dr & US-1", "lat": 25.6893, "lon": -80.3120, "h": 15 },
+      "shot": { "type": "orbit", "range": 750, "pitch": -32, "heading": 20, "degrees": 70 }
+    },
+    {
+      "kind": "item", "rank": 3,
+      "text": "Number three, Las Olas. The bridge starts going up, and somebody always tries to jump it. Okay, but number two is actually illegal.",
+      "overlay": "LAS OLAS", "sub": "Bridge up? Floor it.", "emoji": "🌉",
+      "location": { "name": "Las Olas Boulevard bridge, Fort Lauderdale", "lat": 26.1196, "lon": -80.1150, "h": 10 },
+      "shot": { "type": "orbit", "range": 700, "pitch": -30, "heading": 140, "degrees": 70, "dir": -1 }
+    },
+    {
+      "kind": "item", "rank": 2,
+      "text": "Number two, the Palmetto at five thirty. I watched a guy cut across five lanes for the Coral Way exit. From the far left. He didn't even look.",
+      "caption": "Number two, the Palmetto at 5:30. I watched a guy cut across five lanes for the Coral Way exit. From the far left. He didn't even look.",
+      "overlay": "THE PALMETTO", "sub": "5 lanes. 0 rules.", "emoji": "🛣️",
+      "alert": "FROM THE LEFT LANE 💀",
+      "location": { "name": "Palmetto Expressway at Coral Way", "lat": 25.7497, "lon": -80.3312, "h": 10 },
+      "shot": { "type": "push", "range": 1500, "pitch": -34, "heading": 0 }
+    },
+    {
+      "kind": "item", "rank": 1,
+      "text": "And number one... Brickell. Scooters on the sidewalk, Lambos double parked, and an Uber that stopped in the middle lane so the driver could finish his empanada.",
+      "caption": "And number one... Brickell. Scooters on the sidewalk, Lambos double-parked, and an Uber that stopped in the middle lane so the driver could finish his empanada.",
+      "overlay": "BRICKELL", "sub": "Uber's on empanada break", "emoji": "🏎️",
+      "alert": "I'M NOT JOKING 🚨",
+      "location": { "name": "Brickell Avenue", "lat": 25.7650, "lon": -80.1925, "h": 110 },
+      "shot": { "type": "orbit", "range": 1500, "pitch": -33, "heading": 300, "degrees": 90 }
+    },
+    {
+      "kind": "outro",
+      "text": "Which area did we miss? Comment it, and tag the worst driver you know.",
+      "overlay": "TAG THE WORST DRIVER 👇",
+      "sub": "your area's next",
+      "location": { "name": "Brickell", "lat": 25.7670, "lon": -80.1930, "h": 110 },
+      "shot": { "type": "pullout", "range": 1500, "pitch": -35, "heading": 40 }
+    }
+  ]
+}

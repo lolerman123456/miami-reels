@@ -12,6 +12,7 @@ export type Scene = {
   sub: string | null;
   emoji: string | null;
   emojis: string[] | null;
+  alert?: string | null;
   from: number;
   duration: number;
   video: string;
@@ -196,6 +197,32 @@ const Item: React.FC<{ scene: Scene }> = ({ scene }) => {
           </Pop>
         )}
       </div>
+      {scene.alert && <AlertBanner text={scene.alert} at={ALERT_AT} />}
+    </AbsoluteFill>
+  );
+};
+
+// Re-hook banner: slams in mid-scene with a shake so attention snaps back
+const ALERT_AT = 40;
+const AlertBanner: React.FC<{ text: string; at: number }> = ({ text, at }) => {
+  const frame = useCurrentFrame();
+  const { fps } = useVideoConfig();
+  const f = frame - at;
+  if (f < 0 || f > 75) return null;
+  const s = spring({ frame: f, fps, config: { damping: 8, stiffness: 220 } });
+  const out = interpolate(f, [62, 75], [1, 0], { extrapolateLeft: 'clamp' });
+  const shake = interpolate(f, [0, 10], [14, 0], { extrapolateRight: 'clamp' }) * Math.sin(f * 2.7);
+  return (
+    <AbsoluteFill>
+      <AbsoluteFill style={{ backgroundColor: RED, opacity: interpolate(f, [0, 5], [0.35, 0], { extrapolateRight: 'clamp' }) }} />
+      <div style={{
+        position: 'absolute', top: 760, left: -40, right: -40, display: 'flex', justifyContent: 'center',
+        transform: `translateX(${shake}px) rotate(-4deg) scale(${interpolate(s, [0, 1], [2.4, 1])})`, opacity: out,
+      }}>
+        <div style={{ background: RED, border: '8px solid #fff', padding: '16px 44px', boxShadow: '0 0 0 8px #000, 0 20px 50px rgba(0,0,0,.6)' }}>
+          <span style={{ fontFamily: FONT, fontSize: fitSize(text, 84, 900), color: '#fff', textShadow: outline(4), whiteSpace: 'nowrap' }}>{text}</span>
+        </div>
+      </div>
     </AbsoluteFill>
   );
 };
@@ -311,6 +338,7 @@ const SoundEffects: React.FC<{ scenes: Scene[] }> = ({ scenes }) => {
       cues.push({ at: s.from + 14, file: 'sfx/pop.wav', volume: 0.4 });
     }
     if (s.rank === 1) cues.push({ at: Math.max(0, s.from - 45), file: 'sfx/riser.wav', volume: 0.45 });
+    if (s.alert) cues.push({ at: s.from + ALERT_AT, file: 'sfx/boom.wav', volume: 0.8 });
     if (s.kind === 'outro') cues.push({ at: s.from + 3, file: 'sfx/ding.wav', volume: 0.5 });
   });
   return (
