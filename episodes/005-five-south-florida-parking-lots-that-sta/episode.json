@@ -1,0 +1,162 @@
+{
+  "title": "Five South Florida Parking Lots That Started Family Beef",
+  "igCaption": "Some of y'all park like the lease is ending.\nWhich South Florida lot makes you say a prayer before the ticket machine?\n(satire)\n#Miami #MiamiBeach #Brickell #Kendall #Aventura #MidtownMiami #SouthFlorida #DadeCounty #BrowardCounty #PalmBeach #ParkingLot #MiamiProblems",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "If you defend these lots, you're the menace, and number one should lose its permit.",
+      "overlay": [
+        "PARKING LOTS",
+        "THAT TEST YOU"
+      ],
+      "emojis": [
+        "🚗",
+        "😤",
+        "🅿️",
+        "🔥"
+      ],
+      "location": {
+        "name": "MacArthur Causeway over Biscayne Bay",
+        "lat": 25.7773,
+        "lon": -80.1737,
+        "h": 50
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 250
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 5,
+      "text": "Number five, Fifth and Alton Publix. I watched a Mercedes circle level two at six p.m. for one lime. Twenty minutes. The lime won.",
+      "caption": "Number five, Fifth and Alton Publix. I watched a Mercedes circle level 2 at 6 PM for one lime. 20 minutes. The lime won.",
+      "overlay": "FIFTH & ALTON",
+      "sub": "ONE LIME WAR",
+      "emoji": "🍋",
+      "location": {
+        "name": "Publix at Fifth and Alton",
+        "lat": 25.775,
+        "lon": -80.1402,
+        "h": 15
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 700,
+        "pitch": -35,
+        "heading": 120,
+        "degrees": 90,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 4,
+      "text": "Number four, Dadeland Mall by Cheesecake Factory. Last Saturday, two SUVs stared down one spot off Kendall Drive. Nobody parked. Cheesecake got cold.",
+      "caption": "Number four, Dadeland Mall by Cheesecake Factory. Last Saturday, 2 SUVs stared down one spot off Kendall Drive. Nobody parked. Cheesecake got cold.",
+      "overlay": "DADELAND MALL",
+      "sub": "SPOT STANDOFF",
+      "emoji": "🛻",
+      "location": {
+        "name": "Dadeland Mall Cheesecake Factory parking area",
+        "lat": 25.6903,
+        "lon": -80.3154,
+        "h": 20
+      },
+      "shot": {
+        "type": "push",
+        "range": 800,
+        "pitch": -34,
+        "heading": 270
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 3,
+      "text": "Number three, stay for number one, I'm dead serious. Brickell City Centre level four trapped me forty-five minutes. Cologne, brake pads, zero dignity.",
+      "caption": "Number three, stay for #1, I'm dead serious. Brickell City Centre level 4 trapped me 45 minutes. Cologne, brake pads, zero dignity.",
+      "overlay": "BRICKELL CITY CENTRE",
+      "sub": "BRAKE PAD PERFUME",
+      "emoji": "😵",
+      "location": {
+        "name": "Brickell City Centre parking garage",
+        "lat": 25.7674,
+        "lon": -80.1934,
+        "h": 90
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 1600,
+        "pitch": -38,
+        "heading": 45
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 2,
+      "text": "Number two, Aventura Mall Nordstrom garage off Northeast one ninety-fifth. My cousin lost level three, bought socks to look busy. Don't leave; number one fights back.",
+      "caption": "Number two, Aventura Mall Nordstrom garage off NE 195th. My cousin lost level 3, bought socks to look busy. Don't leave; #1 fights back.",
+      "overlay": "AVENTURA MALL",
+      "sub": "YOU LIVE HERE NOW",
+      "emoji": "🛍️",
+      "alert": "MALL MAZE 🚨",
+      "location": {
+        "name": "Aventura Mall Nordstrom parking garage",
+        "lat": 25.9574,
+        "lon": -80.1431,
+        "h": 25
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 850,
+        "pitch": -33,
+        "heading": 210,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 1,
+      "text": "And number one... Trader Joe's Midtown, Northeast First and Thirty-second. I saw a Prius block three cars for Greek yogurt. Tow the whole building.",
+      "caption": "And number one... Trader Joe's Midtown, NE 1st and 32nd. I saw a Prius block 3 cars for Greek yogurt. Tow the whole building.",
+      "overlay": "TRADER JOE'S MIDTOWN",
+      "sub": "YOGURT HOSTAGE",
+      "emoji": "🥛",
+      "alert": "I SAID IT 💀",
+      "location": {
+        "name": "Trader Joe's Midtown Miami garage",
+        "lat": 25.8077,
+        "lon": -80.193,
+        "h": 20
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 700,
+        "pitch": -34,
+        "heading": 330
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which lot did I miss? Say the address. I want problems.",
+      "overlay": "NAME THE LOT 👇",
+      "sub": "Start a fight",
+      "location": {
+        "name": "Dolphin Mall west parking lots",
+        "lat": 25.7864,
+        "lon": -80.3807,
+        "h": 25
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -30,
+        "heading": 115
+      }
+    }
+  ],
+  "id": "005-five-south-florida-parking-lots-that-sta"
+}
