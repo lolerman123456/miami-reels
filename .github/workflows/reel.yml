@@ -1,0 +1,137 @@
+name: Reel
+
+on:
+  # Daily post. Cron is UTC: 20:00 UTC = 4:00pm New York (EDT) / 3:00pm (EST, Nov–Mar).
+  # A cloud run takes ~1–1.5h, so the Reel goes up ~5–5:30pm.
+  schedule:
+    - cron: '0 20 * * *'
+
+  # "Run workflow" button (GitHub app/website)
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Optional topic/angle for this video'
+        required: false
+        default: ''
+      episode:
+        description: 'Optional existing episode folder to render (e.g. episodes/005-my-idea)'
+        required: false
+        default: ''
+      publish:
+        description: 'Post to Instagram when done'
+        type: boolean
+        default: true
+
+  # Post-on-demand from a chat: commit requests/run.json → a run starts
+  push:
+    branches: [main]
+    paths: ['requests/run.json']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: reel
+  cancel-in-progress: false
+
+jobs:
+  reel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Resolve request
+        id: req
+        env:
+          EVENT: ${{ github.event_name }}
+          IN_TOPIC: ${{ github.event.inputs.topic }}
+          IN_EPISODE: ${{ github.event.inputs.episode }}
+          IN_PUBLISH: ${{ github.event.inputs.publish }}
+        run: |
+          TOPIC="$IN_TOPIC"; EPISODE="$IN_EPISODE"; PUBLISH="${IN_PUBLISH:-true}"
+          if [ "$EVENT" = "push" ]; then
+            TOPIC=$(jq -r '.topic // ""' requests/run.json)
+            EPISODE=$(jq -r '.episode // ""' requests/run.json)
+            PUBLISH=$(jq -r 'if .publish == false then "false" else "true" end' requests/run.json)
+          fi
+          {
+            echo "topic<<EOF"; echo "$TOPIC"; echo "EOF"
+            echo "episode=$EPISODE"
+            echo "publish=$PUBLISH"
+          } >> "$GITHUB_OUTPUT"
+          echo "event=$EVENT topic='$TOPIC' episode='$EPISODE' publish=$PUBLISH"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: System packages
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji > /dev/null
+          sudo curl -sSL -o /usr/local/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+          sudo chmod +x /usr/local/bin/cloudflared
+
+      - name: Cache browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/puppeteer
+          key: puppeteer-${{ hashFiles('package-lock.json') }}
+
+      - run: npm ci
+
+      - name: Cache voice model
+        uses: actions/cache@v4
+        with:
+          path: node_modules/@huggingface/transformers/.cache
+          key: kokoro-v1
+
+      - name: Make (and post) the Reel
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.5' }}
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          KOKORO_VOICE: ${{ vars.KOKORO_VOICE || 'am_adam' }}
+          KOKORO_SPEED: ${{ vars.KOKORO_SPEED || '1.08' }}
+          CLOUDFLARED_BIN: /usr/local/bin/cloudflared
+          REEL_TOPIC: ${{ steps.req.outputs.topic }}
+          REEL_EPISODE: ${{ steps.req.outputs.episode }}
+          EVENT: ${{ github.event_name }}
+          PUBLISH: ${{ steps.req.outputs.publish }}
+        run: |
+          ARGS=""
+          [ "$PUBLISH" = "false" ] && ARGS="$ARGS --dry-run"
+          [ "$EVENT" != "schedule" ] && ARGS="$ARGS --force"
+          node pipeline/daily.mjs $ARGS
+
+      - name: Keep Instagram token alive
+        if: always()
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        run: |
+          curl -s "https://graph.instagram.com/refresh_access_token?grant_type=ig_refresh_token&access_token=$INSTAGRAM_ACCESS_TOKEN" \
+            | jq '{expires_in_days: ((.expires_in // 0) / 86400 | floor), error: .error.message}'
+
+      - name: Upload video
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reel-${{ github.run_number }}
+          path: out/*.mp4
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Save episode + post log
+        if: always()
+        run: |
+          git config user.name "reel-bot"
+          git config user.email "reel-bot@users.noreply.github.com"
+          git add episodes/*/episode.json posted.log 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Reel run ${{ github.run_number }} ($(date -u +%F))"
+            git pull --rebase && git push
+          fi

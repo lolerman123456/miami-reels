@@ -1,0 +1,10 @@
+node_modules
+.env
+out
+tools/
+samples/
+tts/
+index.html
+.claude/
+episodes/*/*
+!episodes/*/episode.json

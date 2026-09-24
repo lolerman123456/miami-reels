@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Reel Renderer</title>
+<script src="https://cdn.jsdelivr.net/npm/cesium@1.118.0/Build/Cesium/Cesium.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/cesium@1.118.0/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: #000; color: #9cf; font: 13px system-ui, sans-serif; }
+  #c { position: absolute; top: 0; left: 0; }
+  #hud { position: fixed; top: 8px; right: 8px; z-index: 5; background: rgba(0,0,0,.75); padding: 8px 10px; border-radius: 8px; max-width: 320px; }
+</style>
+</head>
+<body>
+<div id="c"></div>
+<div id="hud">Starting…</div>
+<script type="module">
+import { poseAt } from './shots.js';
+
+const hud = msg => { document.getElementById('hud').textContent = msg; };
+const log = msg => { hud(msg); fetch('/api/log', { method: 'POST', body: msg }).catch(() => {}); };
+// setTimeout is throttled to 1/s when the tab is hidden; MessageChannel isn't.
+const tick = () => new Promise(r => { const c = new MessageChannel(); c.port1.onmessage = () => r(); c.port2.postMessage(0); });
+const sleep = async ms => { const end = performance.now() + ms; do { await tick(); } while (performance.now() < end); };
+const GEOID = -25; // fallback ellipsoid offset for South Florida
+
+async function main() {
+  const job = await (await fetch('/api/job')).json();
+  const key = window.__GMAPS_KEY || localStorage.getItem('gmapsKey');
+  if (!key) throw new Error('No Google Maps key (set GOOGLE_MAPS_API_KEY in .env or load the camera page once).');
+
+  // Fixed-size canvas: exactly job.width x job.height pixels regardless of window size
+  const dpr = window.devicePixelRatio || 1;
+  const el = document.getElementById('c');
+  el.style.width = (job.renderWidth || job.width) / dpr + 'px';
+  el.style.height = (job.renderHeight || job.height) / dpr + 'px';
+
+  Cesium.GoogleMaps.defaultApiKey = key;
+  const viewer = new Cesium.Viewer(el, {
+    globe: false, baseLayer: false, timeline: false, animation: false, baseLayerPicker: false,
+    geocoder: false, homeButton: false, sceneModePicker: false, navigationHelpButton: false,
+    fullscreenButton: false, infoBox: false, selectionIndicator: false,
+    useDefaultRenderLoop: false,
+    contextOptions: { webgl: { preserveDrawingBuffer: true } },
+  });
+  viewer.useBrowserRecommendedResolution = false; // render at CSS size * dpr = job size
+  viewer.resolutionScale = 1;
+  viewer.clock.currentTime = Cesium.JulianDate.fromIso8601('2026-06-01T17:30:00Z'); // early afternoon Miami sky
+  viewer.clock.shouldAnimate = false;
+  const scene = viewer.scene;
+  if (scene.skyAtmosphere) scene.skyAtmosphere.show = true;
+  scene.fog.enabled = true;
+
+  const tileset = await Cesium.createGooglePhotorealistic3DTileset();
+  tileset.maximumScreenSpaceError = job.sse ?? 8;
+  scene.primitives.add(tileset);
+
+  // South Florida is flat (~0–5 m above sea level), so a fixed geoid offset is more reliable than
+  // sampling the surface (which hits rooftops in dense areas).
+  for (const shot of job.shots) {
+    shot.center = Cesium.Cartesian3.fromDegrees(shot.lon, shot.lat, GEOID + (shot.h ?? 0));
+  }
+
+  for (const shot of job.shots) {
+    for (let f = shot.skip || 0; f < shot.frames; f++) {
+      const t = shot.frames > 1 ? f / (shot.frames - 1) : 0;
+      const p = poseAt(shot, t, Cesium.Math.toRadians);
+      viewer.camera.lookAt(shot.center, new Cesium.HeadingPitchRange(p.h, p.p, p.r));
+      await renderUntilLoaded(scene, tileset, f === (shot.skip || 0) ? 15000 : (job.frameTimeout ?? 1800));
+      const blob = await new Promise(r => scene.canvas.toBlob(r, 'image/jpeg', 0.93));
+      await fetch(`/api/frame?shot=${shot.index}&frame=${f}`, { method: 'POST', body: blob });
+      if (f % 10 === 0) hud(`Shot ${shot.index + 1}/${job.shots.length} · frame ${f + 1}/${shot.frames}`);
+    }
+    viewer.camera.lookAtTransform(Cesium.Matrix4.IDENTITY);
+  }
+  await fetch('/api/done', { method: 'POST' });
+  hud('Done ✔');
+}
+
+async function renderUntilLoaded(scene, tileset, timeout) {
+  const start = performance.now();
+  let n = 0;
+  while (true) {
+    scene.render();
+    n++;
+    if (n >= 2 && tileset.tilesLoaded) return;
+    if (performance.now() - start > timeout) return;
+    await sleep(150); // let tiles download/decode without hammering the GPU
+  }
+}
+
+main().catch(e => {
+  console.error(e);
+  fetch('/api/error', { method: 'POST', body: String(e && e.stack || e) }).catch(() => {});
+  hud('ERROR: ' + e.message);
+});
+</script>
+</body>
+</html>

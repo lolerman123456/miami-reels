@@ -1,0 +1,159 @@
+{
+  "id": "001-rudest-cities",
+  "title": "The 5 Rudest Cities in South Florida",
+  "igCaption": "South Florida's rudest cities, ranked 😤 Number one isn't even close.\n\nWhich city did we miss? Drop it below and we'll roast it next 👇\n\n(satire — don't come for us)\n\n#miami #southflorida #florida #miamibeach #fortlauderdale #bocaraton #weston #brickell #miamilife #floridalife #top5 #rudest",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "The five rudest cities in South Florida. And number one... isn't even close.",
+      "overlay": [
+        "5 RUDEST CITIES",
+        "IN SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "😤",
+        "🤬",
+        "💢",
+        "🚗"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7745,
+        "lon": -80.19,
+        "h": 60
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 5,
+      "text": "Number five, Weston. Nobody says hi, but the H.O.A. will fine you for half an inch of grass.",
+      "caption": "Number five, Weston. Nobody says hi, but the HOA will fine you for half an inch of grass.",
+      "overlay": "WESTON",
+      "sub": "HOA letters > saying hi",
+      "emoji": "🏡",
+      "location": {
+        "name": "Weston Town Center",
+        "lat": 26.0996,
+        "lon": -80.4003,
+        "h": 10
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 650,
+        "pitch": -34,
+        "heading": 30,
+        "degrees": 60
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 4,
+      "text": "Number four, Boca. They'll cut you in line at Publix, then tell you to wait your turn.",
+      "overlay": "BOCA RATON",
+      "sub": "Professional line cutters",
+      "emoji": "🛒",
+      "location": {
+        "name": "Mizner Park, Boca Raton",
+        "lat": 26.353,
+        "lon": -80.0855,
+        "h": 15
+      },
+      "shot": {
+        "type": "push",
+        "range": 600,
+        "pitch": -30,
+        "heading": 250
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 3,
+      "text": "Number three, Fort Lauderdale. Boat music at two in the morning, and on I ninety-five, brakes are optional.",
+      "caption": "Number three, Fort Lauderdale. Boat music at 2AM, and on I-95, brakes are optional.",
+      "overlay": "FORT LAUDERDALE",
+      "sub": "Boat music at 2AM",
+      "emoji": "🛥️",
+      "location": {
+        "name": "Downtown Fort Lauderdale / New River",
+        "lat": 26.119,
+        "lon": -80.142,
+        "h": 40
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -28,
+        "heading": 120,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 2,
+      "text": "Number two, Miami Beach. A thirty-eight dollar drink, a bouncer who hates you, and your car is already getting towed.",
+      "caption": "Number two, Miami Beach. A $38 drink, a bouncer who hates you, and your car is already getting towed.",
+      "overlay": "MIAMI BEACH",
+      "sub": "$38 drink. Instant tow.",
+      "emoji": "🍹",
+      "location": {
+        "name": "Ocean Drive, South Beach",
+        "lat": 25.7812,
+        "lon": -80.1305,
+        "h": 10
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 520,
+        "pitch": -24,
+        "heading": 70,
+        "degrees": 70
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 1,
+      "text": "And number one... Miami. Where using your turn signal is a sign of weakness.",
+      "overlay": "MIAMI",
+      "sub": "Turn signal = weakness",
+      "emoji": "🏆",
+      "location": {
+        "name": "Brickell",
+        "lat": 25.767,
+        "lon": -80.193,
+        "h": 110
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -33,
+        "heading": 300,
+        "degrees": 90
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Comment your city. We're roasting it next.",
+      "overlay": "COMMENT YOUR CITY 👇",
+      "sub": "we're roasting it next",
+      "location": {
+        "name": "Brickell",
+        "lat": 25.767,
+        "lon": -80.193,
+        "h": 110
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 40
+      }
+    }
+  ]
+}
