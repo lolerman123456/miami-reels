@@ -47,6 +47,11 @@ Rules:
   happening → who it affects here → where it leaves South Florida / what's next. Write slide 2+ so they read as a
   continuation ("That's…", "The jump comes as…", "For drivers in Miami-Dade…", "It puts Florida…"), never as standalone
   facts that repeat the topic name each time. Roundups (brief/world) are the exception: one separate story per slide.
+  The HEADLINES themselves chain: slide 1's headline states the news; every later headline starts with a transition that
+  links to the slide before it, e.g. "THAT'S 12 CENTS MORE THAN LAST WEEK", "THAT ALSO MEANS A FILL-UP COSTS $18.90 MORE",
+  "WHICH PUTS FLORIDA NEAR ITS 12-MONTH HIGH", "THE REASON: …", "AND DIESEL IS WORSE AT $6.34", "SO WHAT HAPPENS NEXT?",
+  "FOR DRIVERS IN MIAMI-DADE, THAT MEANS…". Read only the headlines in order and they must tell the whole story.
+  Include the why (causes named in the headlines/sources) and who it affects when the sources have it, not only numbers.
 - SECTOR: pick ONE section label for the post from: ECONOMY, TRAFFIC, WEATHER, REAL ESTATE, CRIME, DEVELOPMENT, TRANSIT,
   HISTORY, SPORTS, HEALTH, EDUCATION, CITY HALL, WORLD, USA. Single-topic posts use that same label on every slide.
   Roundups label each slide with its own sector from that list. Never use labels like UPDATE, FACT, MONEY, NEWS.
@@ -120,12 +125,15 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     const tells = [...aiTells(copy), ...memeTells(copy), ...(copy.match(BANNED) || []).slice(0, 1)];
     if (tells.length && attempt < 3) { console.log(`  attempt ${attempt}: sounds like AI (${tells.join(' | ')}) — rewriting`); post = null; continue; }
     const incomplete = (post?.slides || []).filter(s => !s?.headline || !s?.body || !s?.photo).length;
+    const CONNECT = /^(that|that's|thats|which|and|so|but|because|the reason|for |on top|meanwhile|now|still|plus|this|it|here|what|those|even|then|since|after|as a result)/i;
+    const loose = (kind === 'feature' || topic) ? (post?.slides || []).slice(1).filter(x => !CONNECT.test(String(x.headline || '').trim())).length : 0;
+    if (loose > 1 && attempt < 3) { console.log(`  attempt ${attempt}: ${loose} headlines don't connect — rewriting`); post = null; continue; }
     if (post?.cover?.highlight && post.cover.photo && n >= 3 && n <= 8 && !incomplete) break;
     console.log(`  attempt ${attempt}: bad shape (${n} slides, ${incomplete} incomplete) — retrying`);
     post = null;
   }
   if (!post) throw new Error('Could not write carousel');
-  const checked = await chat([{ role: 'system', content: 'You fact-check an Instagram carousel (JSON) against the given headlines and sources. Fix or remove any number, date, name, "tallest/first/biggest" claim or outcome that is not supported. Remove quirky lists, personification and meme-caption jokes; keep at most one dry, fact-based line per slide; keep it informative. Never mention "sources" in the text. Keep every JSON field and the same structure. Return only the corrected JSON plus "removed": [short notes].' },
+  const checked = await chat([{ role: 'system', content: 'You fact-check an Instagram carousel (JSON) against the given headlines and sources. Fix or remove any number, date, name, "tallest/first/biggest" claim or outcome that is not supported. Keep the headline transitions that chain the slides together ("THAT ALSO MEANS…", "WHICH PUTS…"). Remove quirky lists, personification and meme-caption jokes; keep at most one dry, fact-based line per slide; keep it informative. Never mention "sources" in the text. Keep every JSON field and the same structure. Return only the corrected JSON plus "removed": [short notes].' },
     { role: 'user', content: `${ask}\n\nDRAFT:\n${JSON.stringify(post)}\n\n${STYLE}\n${REMINDER}` }]).catch(() => null);
   if (checked?.slides?.length >= 3 && checked.cover?.highlight) {
     if (checked.removed?.length) console.log(`  fact-check fixed: ${checked.removed.join(' | ').slice(0, 400)}`);
