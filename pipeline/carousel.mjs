@@ -9,6 +9,7 @@ import { fetchNews } from './news.mjs';
 import { getPhoto, newPost } from './photos.mjs';
 import { aiTells, BANNED } from './generate.mjs';
 import { wikiArticle, rentFacts } from './facts.mjs';
+import { STYLE, REMINDER, toneLines, sanitize } from './style.mjs';
 
 const HANDLE = '@getnearapp';
 const TAGS = ['#miami', '#miamidade', '#305', '#southflorida', '#miaminews', '#florida', '#dade', '#miamilife',
@@ -96,7 +97,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
 
   let post;
   for (let attempt = 1; attempt <= 3; attempt++) {
-    post = await chat([{ role: 'system', content: SYSTEM }, { role: 'user', content: ask }]);
+    post = await chat([{ role: 'system', content: `${SYSTEM}\n\n${STYLE}\n\n${toneLines()}` }, { role: 'user', content: `${ask}\n\n${REMINDER}` }]);
     const n = post?.slides?.length || 0;
     const copy = JSON.stringify([post?.caption, ...(post?.slides || []).map(x => [x.headline, x.body])]);
     const tells = [...aiTells(copy), ...(copy.match(BANNED) || []).slice(0, 1)];
@@ -108,11 +109,12 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   }
   if (!post) throw new Error('Could not write carousel');
   const checked = await chat([{ role: 'system', content: 'You fact-check an Instagram carousel (JSON) against the given headlines and sources. Fix or remove any number, date, name, "tallest/first/biggest" claim or outcome that is not supported. Remove any jokes or sarcasm; keep it informative and plain. Never mention "sources" in the text. Keep every JSON field and the same structure. Return only the corrected JSON plus "removed": [short notes].' },
-    { role: 'user', content: `${ask}\n\nDRAFT:\n${JSON.stringify(post)}` }]).catch(() => null);
+    { role: 'user', content: `${ask}\n\nDRAFT:\n${JSON.stringify(post)}\n\n${STYLE}\n${REMINDER}` }]).catch(() => null);
   if (checked?.slides?.length >= 3 && checked.cover?.highlight) {
     if (checked.removed?.length) console.log(`  fact-check fixed: ${checked.removed.join(' | ').slice(0, 400)}`);
     delete checked.removed; post = checked;
   }
+  post = sanitize(post);
   post.slides = post.slides.slice(0, 7);
 
   const sources = [...new Set(post.slides.map(s => s.source).filter(Boolean))];

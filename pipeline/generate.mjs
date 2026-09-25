@@ -7,6 +7,7 @@ import path from 'node:path';
 import { ROOT, readJSON, writeJSON } from './util.mjs';
 import { fetchNews } from './news.mjs';
 import { wikiArticle, rentFacts } from './facts.mjs';
+import { STYLE, REMINDER, toneLines, sanitize } from './style.mjs';
 
 const FORMATS = `FORMATS (pick the one that fits the best available material):
 - NEW BUILD: something being built, approved or opening in South Florida (tallest towers, stadiums, stations, bridges, big
@@ -122,9 +123,9 @@ export async function generateEpisode({ topic } = {}) {
   // 3. write → fact-check, retry on AI-sounding copy or bad length
   let episode;
   for (let attempt = 1; attempt <= 3; attempt++) {
-    const draft = await chat([{ role: 'system', content: `${NARRATOR}\n\n${FORMAT}` },
-      { role: 'user', content: `Format: ${plan.format}\nAngle: ${plan.angle}\n${topic ? `Owner's request: ${topic}\n` : ''}\n${SOURCES}\n\nWrite the episode.` }]);
-    episode = await chat([{ role: 'system', content: CHECKER }, { role: 'user', content: `${SOURCES}\n\nDRAFT:\n${JSON.stringify(draft)}` }]);
+    const draft = await chat([{ role: 'system', content: `${NARRATOR}\n\n${STYLE}\n\n${toneLines()}\n\n${FORMAT}` },
+      { role: 'user', content: `Format: ${plan.format}\nAngle: ${plan.angle}\n${topic ? `Owner's request: ${topic}\n` : ''}\n${SOURCES}\n\nWrite the episode.\n${REMINDER}` }]);
+    episode = sanitize(await chat([{ role: 'system', content: `${CHECKER}\n\n${STYLE}` }, { role: 'user', content: `${SOURCES}\n\nDRAFT:\n${JSON.stringify(draft)}\n\n${REMINDER}` }]));
     if (episode.removed?.length) console.log(`  fact-check fixed: ${episode.removed.join(' | ').slice(0, 400)}`);
     const spoken = (episode.scenes || []).map(s => s.text).join(' ');
     const words = spoken.split(/\s+/).length;

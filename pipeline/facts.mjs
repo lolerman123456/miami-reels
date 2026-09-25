@@ -50,9 +50,12 @@ export async function rentFacts(places) {
     const [lastDate, now] = at('9999');
     const y = Number(lastDate.slice(0, 4)), m = lastDate.slice(5, 7);
     const label = kind === 'zip' ? `ZIP ${place} (${row[cols.indexOf('City')] || row[cols.indexOf('CountyName')]})` : place;
-    const [, y1] = at(`${y - 1}-${m}-31`), [, y5] = at(`${y - 5}-${m}-31`), [d0, first] = at('2015-01-31');
-    out.push(`${label}: typical monthly rent $${now.toLocaleString()} (${lastDate}); $${y1.toLocaleString()} a year earlier; ` +
-      `$${y5.toLocaleString()} five years earlier (${y - 5}-${m}); $${first.toLocaleString()} in ${d0}. Source: Zillow Observed Rent Index.`);
+    const [d1, y1] = at(`${y - 1}-${m}-31`), [d5, y5] = at(`${y - 5}-${m}-31`), [d0, first] = at('2015-01-31');
+    const pts = [[d1, y1, 'a year earlier'], [d5, y5, 'five years earlier'], [d0, first, 'earliest on record']]
+      .filter(([d], i, a) => d !== lastDate && a.findIndex(x => x[0] === d) === i)
+      .map(([d, v, what]) => `$${v.toLocaleString()} in ${d} (${what})`);
+    const change = first ? ` Change since ${d0}: +$${(now - first).toLocaleString()} (${Math.round((now / first - 1) * 100)}%).` : '';
+    out.push(`${label}: typical monthly rent $${now.toLocaleString()} (${lastDate}); ${pts.join('; ')}.${change} Source: Zillow Observed Rent Index.`);
   }
   return out;
 }
