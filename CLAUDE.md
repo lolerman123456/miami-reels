@@ -1,8 +1,8 @@
 # Miami Reels — operating guide for Claude
 
 This repo runs **@getnearapp** end to end (the owner handed Claude the account; ChatGPT no longer posts). Daily, New York time:
-2 informational map Reels (~1pm, ~8pm) + 3 carousels — `brief` 9am (South Florida news), `feature` 5pm (rotating culture /
-opinion / follow-up, see FEATURES in `pipeline/carousel.mjs`), `world` 10pm (US + world). Every post is cross-posted to stories.
+2 informational map Reels (~1pm, ~8pm) + 3 carousels — `brief` 9am (South Florida news), `feature` 5pm (rotating informational
+posts: did you know / rent check / history / new builds / by the numbers / follow-up / week recap — FEATURES in `pipeline/carousel.mjs`), `world` 10pm (US + world). Every post is cross-posted to stories.
 Goal: grow the account. Raise volume slowly as it grows (add carousel slots in `control.json` → `carousels`); the owner audits
 and archives anything bad.
 Everything runs in GitHub Actions (`.github/workflows/reel.yml`) — the owner controls it by chatting with
@@ -37,8 +37,8 @@ The owner can also do all of this without Claude: GitHub app → Actions → **C
 - A voice other than Adam: add `"voice": {"provider": "openai", "voice": "ash"}` to that episode.json (optional `"speed": 1.15`).
 
 ## Content rules (keep the account safe)
-Savage satire of places, traffic, prices, HOAs, tourists, clubs, weather — never ethnic groups, nationalities,
-religions, races, or real private people. No slurs/explicit content. Hook in the first 3 seconds.
+No jokes (owner's call — they read as AI): everything is informational, from real sources (news, Wikipedia, Zillow), fact-checked.
+Never target ethnic groups, nationalities, religions, races, or real private people. No slurs/explicit content. Hook in the first 3 seconds.
 
 ## Episode JSON essentials
 Map Reels are **informational explainers, no jokes and no rankings** (owner's call): NEW BUILD / HISTORY / DID YOU KNOW /

@@ -8,21 +8,22 @@ import { ROOT, readJSON, writeJSON, step } from './util.mjs';
 import { fetchNews } from './news.mjs';
 import { getPhoto, newPost } from './photos.mjs';
 import { aiTells, BANNED } from './generate.mjs';
-import { fetchLocalTalk, ownerLines } from './locals.mjs';
+import { wikiArticle, rentFacts } from './facts.mjs';
 
 const HANDLE = '@getnearapp';
 const TAGS = ['#miami', '#miamidade', '#305', '#southflorida', '#miaminews', '#florida', '#dade', '#miamilife',
   '#hialeah', '#browardcounty', '#fortlauderdale', '#onlyinmiami', '#onlyindade', '#getnearmiami'];
 
-// Feature posts rotate by New York weekday (0 = Sunday)
+// Feature posts rotate by New York weekday (0 = Sunday). All informational, from real sources — no jokes.
+// wiki/rent: the writer first picks Wikipedia articles / Zillow rent places to pull facts from.
 const FEATURES = [
-  { name: 'THIS OR THAT', ask: 'A "this or that" debate carousel: 5 South Florida matchups (e.g. Palmetto vs I-95 at 5pm, Versailles vs La Carreta, Brickell vs Wynwood, Publix sub vs Pollo Tropical). One slide per matchup with a savage one-line case for each side. Readers comment their picks.' },
-  { name: 'HOT TAKE', ask: 'One spicy South Florida hot take, argued over 5 slides (the claim, 3 pieces of evidence from lived local experience, the verdict). Opinion and jokes only — no invented statistics.' },
-  { name: 'MEANWHILE IN FLORIDA', ask: 'The 5 wildest/weirdest Florida stories from the headlines below (animals, "Florida Man", bizarre crimes, weather chaos). Tell them straight but with a wink.' },
-  { name: 'YOU KNOW YOU\'RE FROM DADE WHEN', ask: 'A culture carousel: 6 hyper-specific, affectionate "you know you\'re from Dade when…" moments (cafecito at 3pm, the ventanita, Publix subs, hurricane-prep panic buying, the 5 o\'clock rain, parking at Dadeland on a Saturday). Celebrate the culture; never mock any ethnic group.' },
-  { name: 'THE FOLLOW-UP', ask: 'A follow-up carousel: pick the 4–5 biggest stories from our recent posts (listed below) that have new developments in today\'s headlines, and tell readers what happened next. Tag each slide UPDATE. If fewer than 4 have updates, fill with today\'s biggest South Florida stories.' },
-  { name: 'SOUTH FLORIDA STARTER PACK', ask: 'A "starter pack" carousel: 5 South Florida neighborhoods or cities (Kendall, Hialeah, Brickell, Doral, Fort Lauderdale…) with 3-4 funny, specific starter-pack items each. Roast places and habits, never ethnic groups.' },
-  { name: 'THE WEEK IN DADE', ask: 'Recap the 5–6 biggest South Florida stories of the week from our recent posts and today\'s headlines, one slide each, with a closing "what\'s next".' },
+  { name: 'THE WEEK IN DADE', ask: 'Recap the 5–6 biggest South Florida stories of the week from our recent posts and the headlines below, one slide each: what happened and what happens next.' },
+  { name: 'DID YOU KNOW', wiki: true, ask: 'A "did you know" carousel: 5–6 genuinely surprising, true facts about ONE South Florida city, neighborhood, landmark or institution, taken from the Wikipedia sources. Each slide = one fact with the number/date/name that makes it land.' },
+  { name: 'RENT CHECK', rent: true, ask: 'A rent carousel from the Zillow rent data: one slide per city/ZIP with the typical rent now vs a year ago, 5 years ago and 2015, plus the dollar and percent change. Close with the biggest jump.' },
+  { name: 'THE HISTORY OF', wiki: true, ask: 'The real history of ONE South Florida place (a landmark, island, building, neighborhood or road), told in 5–6 slides from its start to today, each slide a key moment with its date. Use the Wikipedia sources.' },
+  { name: 'THE FOLLOW-UP', ask: 'A follow-up carousel: pick the 4–5 biggest stories from our recent posts (listed below) that have new developments in the headlines, and say what happened next. Tag each slide UPDATE. If fewer than 4 have updates, fill with the biggest current South Florida stories.' },
+  { name: 'NEW IN SOUTH FLORIDA', wiki: true, ask: 'What is being built, approved or opening in South Florida (towers, stations, parks, stadiums, big projects), from the headlines and Wikipedia sources: what it is, where, how big/tall/expensive, when it opens.' },
+  { name: 'BY THE NUMBERS', wiki: true, ask: 'ONE big South Florida place or system (PortMiami, MIA, Brightline, the Everglades, Hard Rock Stadium, I-95, a famous building) told through 5–6 real numbers from the Wikipedia sources, one number per slide with what it means.' },
 ];
 
 const KINDS = {
@@ -31,19 +32,19 @@ const KINDS = {
   feature: { feed: 'local' },
 };
 
-const SYSTEM = `You write carousel posts for @getnearapp, a South Florida Instagram account in the spirit of Only in Dade: local, fast, funny, a little savage, community first. You're the friend who knows everything happening in Dade.
+const SYSTEM = `You write carousel posts for @getnearapp, a South Florida Instagram account: local news, real facts and useful information, community first. You're the friend who always knows what's going on and explains it clearly.
 
 Rules:
-- News: only use facts that are in the headlines/summaries given to you. Never invent names, numbers, quotes or outcomes. If a detail isn't in the source, leave it out.
-- Crime/accusations: say "police say"/"according to" as the source did; don't name people who haven't been charged; never mock victims.
-- Satire targets places, traffic, prices, HOAs, tourists, weather, situations — never ethnic groups, nationalities, religions, races, or private people. No slurs, nothing explicit.
-- Every news slide credits its outlet in "source" (use the outlet name exactly as given).
-- Headlines: punchy, ≤ 70 characters, sentence case. Body: 1–2 short sentences, ≤ 200 characters, conversational.
-- Voice: a laid-back local talking normally. Sound like a person texting a friend, not AI. Banned shapes: "It's not X, it's Y", "That's not X, that's Y", "If not X, then Y", "X isn't just Y", "The result? …", "Plot twist", "Here's the thing", "Let's be real", "Welcome to", em-dashes, neat morals, triples. Funny = a specific detail + one flat exaggeration.
-- Caption: a 1–2 line hook, then a question that invites comments. Don't list sources in the caption (we add them).
+- Facts: use ONLY facts in the headlines/sources given to you. Never invent names, numbers, dates, quotes or outcomes. If a detail isn't in the sources, leave it out.
+- Crime/accusations: say "police say"/"according to" as the source did; don't name people who haven't been charged.
+- No jokes, no sarcasm, no puns, no roasting, no "savage" lines. Informative, clear, normal. Interesting because of the facts.
+- Every news slide credits its outlet in "source" (outlet name exactly as given; "Wikipedia" or "Zillow" for those).
+- Headlines: specific and clear, ≤ 70 characters, sentence case, with the key number/name. Body: 1–2 sentences, ≤ 200 characters: the detail and why it matters to people here.
+- Write like a person talking normally, not AI. Banned: "It's not X, it's Y", "That's not X, that's Y", "If not X, then Y", "X isn't just Y", "The result? …", "Plot twist", "Here's the thing", "Let's be real", "Welcome to", em-dashes, neat morals, triples, and never mention "sources" in the text.
+- Caption: 1–2 informative lines, then a real question for the comments. Don't list sources in the caption (we add them).
 
 The cover is a scroll-stopping hook in this exact stacked style (all caps on the image):
-  top: small setup line (e.g. "STUDIES SHOW", "POLICE SAY", "NOBODY TALKS ABOUT", "MIAMI IS FURIOUS")
+  top: small setup line (e.g. "POLICE SAY", "DID YOU KNOW", "NOBODY TALKS ABOUT", "RENT IN")
   main: big line that opens the curiosity gap (e.g. "WHAT THE AVERAGE")
   highlight: 1–3 punchy words in giant blue letters (e.g. "FLORIDA MAN")
   bottom: the payoff that forces the swipe (e.g. "LOOKS LIKE")
@@ -54,8 +55,8 @@ The cover is a scroll-stopping hook in this exact stacked style (all caps on the
 Every cover and slide needs a photo: {"query":"Wikimedia Commons search for a real stock photo (place, landmark, road, building, vehicle, object, scene — e.g. 'Brightline train Miami', 'Palmetto Expressway traffic', 'police car Miami-Dade', 'Cuban coffee cafecito')","prompt":"AI photo description, used only if no stock photo looks good (e.g. 'police cruiser lights reflecting on a wet Hialeah street at night')"}
   Stock photos are preferred (AI images are budgeted), so write queries likely to find a real, good-looking photo. Never plan a real photo of a person to illustrate a news story.
 
-Return JSON: {"cover":{"top":"...","main":"...","highlight":"...","bottom":"...","blur":false,"photo":{...}},"slides":[{"tag":"ONE-WORD LABEL (e.g. TRAFFIC, WEATHER, CRIME, MONEY, UPDATE, WEIRD, SPORTS, WORLD, USA, CULTURE)","headline":"...","highlight":"2-3 word phrase copied exactly from the headline to color blue","body":"...","place":"neighborhood/city or country, optional","source":"outlet or empty for opinion slides","photo":{...}}],"caption":"...","hashtags":["5-8 extra niche hashtags"]}
-3 to 7 slides. EVERY slide must have tag, headline, highlight, body and photo — for list formats (starter packs, matchups) put the list items in body.`;
+Return JSON: {"cover":{"top":"...","main":"...","highlight":"...","bottom":"...","blur":false,"photo":{...}},"slides":[{"tag":"ONE-WORD LABEL (e.g. TRAFFIC, WEATHER, CRIME, MONEY, RENT, UPDATE, HISTORY, FACT, BUILD, SPORTS, WORLD, USA)","headline":"...","highlight":"2-3 word phrase copied exactly from the headline to color blue","body":"...","place":"neighborhood/city or country, optional","source":"outlet or empty for opinion slides","photo":{...}}],"caption":"...","hashtags":["5-8 extra niche hashtags"]}
+3 to 7 slides. EVERY slide must have tag, headline, highlight, body and photo.`;
 
 const nyDate = (d = new Date()) => d.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
 
@@ -76,16 +77,20 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
 
   step(`Writing ${kind} carousel${feature ? ` (${feature.name})` : ''}`);
   const news = await fetchNews(spec.feed);
-  const talk = kind === 'world' ? [] : await fetchLocalTalk().catch(() => []);
-  const mine = ownerLines();
-  console.log(`  local talk: ${talk.length} posts, owner lines: ${mine.length}`);
+  const extra = [];
+  if (feature?.wiki || feature?.rent) {
+    const plan = await chat([{ role: 'system', content: 'Plan the fact sources for a South Florida Instagram carousel. Return JSON {"wikipedia":["up to 4 exact English Wikipedia article titles"],"rent":["up to 6 South Florida city names or 5-digit ZIPs"]}. Only fill "rent" for rent posts.' },
+      { role: 'user', content: `Carousel: ${feature.name}\n${topic || feature.ask}\nDon't repeat these recent posts:\n${recentPosts().map(p => '- ' + (p.kicker || '') + ': ' + p.slides.map(x => x.headline).join('; ')).join('\n')}` }]);
+    for (const t of (plan.wikipedia || []).slice(0, 4)) { const w = await wikiArticle(t, { chars: 5000 }).catch(() => null); if (w) extra.push(`WIKIPEDIA "${w.title}":\n${w.text}`); }
+    if (feature.rent) (await rentFacts(plan.rent?.length ? plan.rent : ['Miami', 'Hialeah', 'Fort Lauderdale', '33131', '33139', 'West Palm Beach']).catch(() => [])).forEach(r => extra.push(`ZILLOW RENT DATA: ${r}`));
+    console.log(`  fact sources: ${extra.map(e => e.split(/[:\n]/)[0]).join('; ')}`);
+  }
   const recent = recentPosts();
   const ask = [
     topic ? `The account owner asked for this — follow it: ${topic}` : (feature ? feature.ask : spec.ask),
     `Today (New York): ${new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric' })}`,
     `Headlines (outlet — headline — summary):\n${news.map(n => `- ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}`,
-    talk.length ? `What real locals posted this week (for tone and topics only — not news sources; never quote, never mention Reddit; skip politics/immigration/religion):\n${talk.map(t => '- ' + t).join('\n')}` : '',
-    mine.length ? `Lines the account owner wrote — match this voice:\n${mine.map(t => '- ' + t).join('\n')}` : '',
+    extra.length ? `Fact sources:\n\n${extra.join('\n\n')}` : '',
     recent.length ? `Our posts from the last week (don't repeat these unless there's an update — then tag it UPDATE):\n${recent.flatMap(p => p.slides.map(s => `- ${p.date}: ${s.headline}`)).join('\n')}` : '',
   ].filter(Boolean).join('\n\n');
 
@@ -102,6 +107,12 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     post = null;
   }
   if (!post) throw new Error('Could not write carousel');
+  const checked = await chat([{ role: 'system', content: 'You fact-check an Instagram carousel (JSON) against the given headlines and sources. Fix or remove any number, date, name, "tallest/first/biggest" claim or outcome that is not supported. Remove any jokes or sarcasm; keep it informative and plain. Never mention "sources" in the text. Keep every JSON field and the same structure. Return only the corrected JSON plus "removed": [short notes].' },
+    { role: 'user', content: `${ask}\n\nDRAFT:\n${JSON.stringify(post)}` }]).catch(() => null);
+  if (checked?.slides?.length >= 3 && checked.cover?.highlight) {
+    if (checked.removed?.length) console.log(`  fact-check fixed: ${checked.removed.join(' | ').slice(0, 400)}`);
+    delete checked.removed; post = checked;
+  }
   post.slides = post.slides.slice(0, 7);
 
   const sources = [...new Set(post.slides.map(s => s.source).filter(Boolean))];
