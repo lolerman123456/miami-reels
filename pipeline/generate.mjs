@@ -60,7 +60,7 @@ OUTPUT strictly this JSON:
 {
   "title": "…",
   "sources": ["outlet or Wikipedia article or 'Zillow Observed Rent Index'", …],
-  "igCaption": "2–4 informative lines with the most interesting facts, a question for the comments, then 10–14 hashtags",
+  "igCaption": "2–4 informative lines with the most interesting facts, a question for the comments, then exactly 4 hashtags",
   "scenes": [
     { "kind": "hook", "text": "…", "overlay": ["LINE 1 ≤18 chars", "LINE 2 ≤18 chars"], "emojis": ["4 emojis"],
       "location": {"name": "…", "lat": 0, "lon": 0, "h": 0}, "shot": {"type": "dive", "range": 1600, "pitch": -32, "heading": 200} },
@@ -145,6 +145,8 @@ export async function generateEpisode({ topic } = {}) {
   for (const s of episode.scenes) delete s.rank;
   episode.format = plan.format;
   const credit = (episode.sources || []).length ? `\n\nSources: ${episode.sources.join(', ')}` : '';
+  // max 4 hashtags
+  let n = 0; episode.igCaption = (episode.igCaption || '').replace(/#\w+/g, t => (++n <= 4 ? t : '')).replace(/[ \t]+$/gm, '').trim();
   const cap = episode.igCaption || ''; const h = cap.search(/(^|\s)#\w/);
   episode.igCaption = h >= 0 ? `${cap.slice(0, h).trim()}${credit}\n\n${cap.slice(h).trim()}` : cap + credit;
 

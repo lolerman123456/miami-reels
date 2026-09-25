@@ -49,8 +49,8 @@ Rules:
   facts that repeat the topic name each time. Roundups (brief/world) are the exception: one separate story per slide.
   The HEADLINES themselves chain: slide 1's headline states the news; every later headline starts with a transition that
   links to the slide before it, e.g. "THAT'S 12 CENTS MORE THAN LAST WEEK", "THAT ALSO MEANS A FILL-UP COSTS $18.90 MORE",
-  "WHICH PUTS FLORIDA NEAR ITS 12-MONTH HIGH", "THE REASON: …", "AND DIESEL IS WORSE AT $6.34", "SO WHAT HAPPENS NEXT?",
-  "FOR DRIVERS IN MIAMI-DADE, THAT MEANS…". Read only the headlines in order and they must tell the whole story.
+  "WHICH PUTS FLORIDA NEAR ITS 12-MONTH HIGH", "THE REASON: CRUDE COSTS AND MIDEAST CONFLICT", "AND DIESEL IS WORSE AT $6.34", "SO WHAT HAPPENS NEXT?",
+  "FOR DRIVERS IN MIAMI-DADE, THAT MEANS…". Read only the headlines in order and they must tell the whole story. EVERY headline after the first starts with a linking phrase (THAT'S, THAT ALSO MEANS, WHICH, THE REASON:, AND, SO, FOR …, ON TOP OF THAT).
   Include the why (causes named in the headlines/sources) and who it affects when the sources have it, not only numbers.
 - SECTOR: pick ONE section label for the post from: ECONOMY, TRAFFIC, WEATHER, REAL ESTATE, CRIME, DEVELOPMENT, TRANSIT,
   HISTORY, SPORTS, HEALTH, EDUCATION, CITY HALL, WORLD, USA. Single-topic posts use that same label on every slide.
@@ -70,7 +70,7 @@ The cover is a scroll-stopping hook in this exact stacked style (all caps on the
 Every cover and slide needs a photo: {"query":"Wikimedia Commons search for a real stock photo (place, landmark, road, building, vehicle, object, scene — e.g. 'Brightline train Miami', 'Palmetto Expressway traffic', 'police car Miami-Dade', 'Cuban coffee cafecito')","prompt":"AI photo description, used only if no stock photo looks good (e.g. 'police cruiser lights reflecting on a wet Hialeah street at night')"}
   Stock photos are preferred (AI images are budgeted), so write queries likely to find a real, good-looking photo. Never plan a real photo of a person to illustrate a news story.
 
-Return JSON: {"sector":"ECONOMY","cover":{"top":"...","main":"...","highlight":"...","bottom":"...","blur":false,"photo":{...}},"slides":[{"tag":"SECTOR label from the list","headline":"...","highlight":"2-3 word phrase copied exactly from the headline to color blue","body":"...","place":"neighborhood/city or country, optional","source":"outlet or empty for opinion slides","photo":{...}}],"caption":"...","hashtags":["5-8 extra niche hashtags"]}
+Return JSON: {"sector":"ECONOMY","cover":{"top":"...","main":"...","highlight":"...","bottom":"...","blur":false,"photo":{...}},"slides":[{"tag":"SECTOR label from the list","headline":"...","highlight":"2-3 word phrase copied exactly from the headline to color blue","body":"...","place":"neighborhood/city or country, optional","source":"outlet or empty for opinion slides","photo":{...}}],"caption":"...","hashtags":["2 specific hashtags for this post"]}
 3 to 7 slides. EVERY slide must have tag, headline, highlight, body and photo.`;
 
 const nyDate = (d = new Date()) => d.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
@@ -127,7 +127,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     const incomplete = (post?.slides || []).filter(s => !s?.headline || !s?.body || !s?.photo).length;
     const CONNECT = /^(that|that's|thats|which|and|so|but|because|the reason|for |on top|meanwhile|now|still|plus|this|it|here|what|those|even|then|since|after|as a result)/i;
     const loose = (kind === 'feature' || topic) ? (post?.slides || []).slice(1).filter(x => !CONNECT.test(String(x.headline || '').trim())).length : 0;
-    if (loose > 1 && attempt < 3) { console.log(`  attempt ${attempt}: ${loose} headlines don't connect — rewriting`); post = null; continue; }
+    if (loose > 0 && attempt < 3) { console.log(`  attempt ${attempt}: ${loose} headlines don't connect — rewriting`); post = null; continue; }
     if (post?.cover?.highlight && post.cover.photo && n >= 3 && n <= 8 && !incomplete) break;
     console.log(`  attempt ${attempt}: bad shape (${n} slides, ${incomplete} incomplete) — retrying`);
     post = null;
@@ -150,7 +150,8 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   post.slides = post.slides.slice(0, 7);
 
   const sources = [...new Set(post.slides.map(s => s.source).filter(Boolean))];
-  const tags = [...new Set([...TAGS.slice(0, 8), ...(post.hashtags || []).map(t => '#' + String(t).replace(/^#/, '').replace(/\s/g, ''))])].slice(0, 20);
+  // max 4 hashtags: 2 of the post's own + #miami #southflorida
+  const tags = [...new Set([...(post.hashtags || []).map(t => '#' + String(t).replace(/^#/, '').replace(/\s/g, '')).slice(0, 2), '#miami', '#southflorida'])].slice(0, 4);
   post.igCaption = [
     post.caption,
     sources.length ? `📰 Sources: ${sources.join(', ')}` : '',
