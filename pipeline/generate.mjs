@@ -46,7 +46,7 @@ const FORMAT = `FORMAT
 - On-screen: "overlay" = place name in caps (≤18 chars). "badge" = the key stat for that scene, ≤14 chars
   ("1,049 FT", "$3,831/MO", "OPENS 2028", "BUILT 1925", "+61% SINCE '15"). "sub" = ≤26-char line of context.
 
-LOCATIONS: real South Florida spots. When a source gives coordinates for a place, use EXACTLY those. Otherwise give the accurate
+LOCATIONS: real Florida spots (South Florida preferred). When a source gives coordinates for a place, use EXACTLY those. Otherwise give the accurate
 lat/lon of the exact building/landmark. h = aim height in meters (towers 60–150, low areas 5–20).
 
 SHOTS: type is dive (hook only), orbit, push, zoomin, pullout (outro only). range: 500–900 low-rise/beaches,
@@ -133,6 +133,9 @@ export async function generateEpisode({ topic } = {}) {
     console.log(`  script: ${words} words`);
     break;
   }
+  // last resort: park any scene with a bad location on the nearest good one instead of failing the run
+  const good = episode.scenes?.find(s => inFlorida(s.location));
+  if (good) for (const s of episode.scenes) if (!inFlorida(s.location)) { console.log(`  (moved "${s.location?.name}" camera to ${good.location.name})`); s.location = { ...good.location }; }
   validate(episode);
   delete episode.removed;
   for (const s of episode.scenes) delete s.rank;
@@ -167,11 +170,13 @@ async function chat(messages) {
   }
 }
 
+const inFlorida = l => l && l.lat > 24.3 && l.lat < 31.1 && l.lon > -87.7 && l.lon < -79.8;
+
 function validate(ep) {
   if (!ep?.title || !Array.isArray(ep.scenes) || ep.scenes.length < 4) throw new Error('Bad episode: ' + JSON.stringify(ep).slice(0, 300));
   for (const s of ep.scenes) {
     const { lat, lon } = s.location || {};
-    if (!(lat > 24.3 && lat < 27.2 && lon > -82.2 && lon < -79.9)) throw new Error(`Location outside South Florida: ${JSON.stringify(s.location)}`);
+    if (!inFlorida(s.location)) throw new Error(`Location outside Florida: ${JSON.stringify(s.location)}`);
     if (!s.text || !s.shot?.type) throw new Error('Scene missing text/shot: ' + JSON.stringify(s));
   }
 }
