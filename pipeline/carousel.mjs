@@ -53,7 +53,7 @@ Every cover and slide needs a photo:
   Use "place" for locations, landmarks, vehicles, buildings. Use "ai" for crime/people/abstract scenes. Never use a real photo of a person to illustrate a news story.
 
 Return JSON: {"cover":{"top":"...","main":"...","highlight":"...","bottom":"...","blur":false,"photo":{...}},"slides":[{"tag":"ONE-WORD LABEL (e.g. TRAFFIC, WEATHER, CRIME, MONEY, UPDATE, WEIRD, SPORTS, WORLD, USA, CULTURE)","headline":"...","highlight":"2-3 word phrase copied exactly from the headline to color blue","body":"...","place":"neighborhood/city or country, optional","source":"outlet or empty for opinion slides","photo":{...}}],"caption":"...","hashtags":["5-8 extra niche hashtags"]}
-3 to 7 slides.`;
+3 to 7 slides. EVERY slide must have tag, headline, highlight, body and photo — for list formats (starter packs, matchups) put the list items in body.`;
 
 const nyDate = (d = new Date()) => d.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
 
@@ -86,8 +86,9 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   for (let attempt = 1; attempt <= 3; attempt++) {
     post = await chat([{ role: 'system', content: SYSTEM }, { role: 'user', content: ask }]);
     const n = post?.slides?.length || 0;
-    if (post?.cover?.highlight && n >= 3 && n <= 8) break;
-    console.log(`  attempt ${attempt}: bad shape (${n} slides) — retrying`);
+    const incomplete = (post?.slides || []).filter(s => !s?.headline || !s?.body || !s?.photo).length;
+    if (post?.cover?.highlight && post.cover.photo && n >= 3 && n <= 8 && !incomplete) break;
+    console.log(`  attempt ${attempt}: bad shape (${n} slides, ${incomplete} incomplete) — retrying`);
     post = null;
   }
   if (!post) throw new Error('Could not write carousel');
