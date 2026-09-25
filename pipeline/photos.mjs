@@ -20,6 +20,8 @@ export async function getPhoto(spec, dir, name, { context = '' } = {}) {
   if (!spec) return null;
   const attempt = async (fn, ...a) => { try { return await fn(...a); } catch (e) { console.log(`  (${fn.name} failed for ${name}: ${e.message.slice(0, 160)})`); return null; } };
   const simple = spec.query?.replace(/\b(miami|dade|florida|south|broward|palm beach|fort lauderdale|fl)\b/gi, '').replace(/\s+/g, ' ').trim();
+  // owner asked for AI images on this post: AI first, no budget caps
+  if (process.env.AI_PHOTOS === '1' && spec.prompt) { const p = await attempt(aiPhoto, spec.prompt, dir, name); if (p) return p; }
   return (spec.query && await attempt(stockPhoto, spec.query, dir, name, context))
     || (simple && simple !== spec.query && simple.split(' ').length >= 1 && await attempt(stockPhoto, simple, dir, name, context))
     || (spec.prompt && aiBudgetLeft() > 0 && aiThisPost < Number(process.env.AI_IMAGES_PER_POST ?? 1) && await attempt(aiPhoto, spec.prompt, dir, name))

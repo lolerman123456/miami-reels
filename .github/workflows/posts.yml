@@ -121,8 +121,10 @@ jobs:
           if [ "$EVENT" = "push" ]; then
             TOPIC=$(jq -r '.topic // ""' requests/post.json)
             PUBLISH=$(jq -r 'if .publish == false then "false" else "true" end' requests/post.json)
+            [ "$(jq -r '.aiPhotos // false' requests/post.json)" = "true" ] && AI="--ai-photos" || true
           fi
           ARGS=("$KIND")
+          [ -n "${AI:-}" ] && ARGS+=(--ai-photos)
           [ -n "$TOPIC" ] && ARGS+=(--topic "$TOPIC")
           [ "$PUBLISH" = "false" ] && ARGS+=(--dry-run)
           if [ "${WAIT:-0}" -gt 0 ]; then echo "waiting $((WAIT / 60)) min to post on the hour"; sleep "$WAIT"; fi

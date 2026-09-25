@@ -42,6 +42,14 @@ Rules:
 - Every news slide credits its outlet in "source" (outlet name exactly as given; "Wikipedia" or "Zillow" for those).
 - Headlines: specific and clear, ≤ 70 characters, sentence case, with the key number/name. Body: 1–2 sentences, ≤ 200 characters: the detail and why it matters to people here.
 - Write like a person talking normally, not AI. Banned: "It's not X, it's Y", "That's not X, that's Y", "If not X, then Y", "X isn't just Y", "The result? …", "Plot twist", "Here's the thing", "Let's be real", "Welcome to", em-dashes, neat morals, triples, and never mention "sources" in the text.
+- STORY: if the post is about ONE topic (anything except the daily brief/world roundups), the slides are ONE continuous story.
+  Each slide picks up where the previous one ended and adds the next piece: what happened → how it compares → why it's
+  happening → who it affects here → where it leaves South Florida / what's next. Write slide 2+ so they read as a
+  continuation ("That's…", "The jump comes as…", "For drivers in Miami-Dade…", "It puts Florida…"), never as standalone
+  facts that repeat the topic name each time. Roundups (brief/world) are the exception: one separate story per slide.
+- SECTOR: pick ONE section label for the post from: ECONOMY, TRAFFIC, WEATHER, REAL ESTATE, CRIME, DEVELOPMENT, TRANSIT,
+  HISTORY, SPORTS, HEALTH, EDUCATION, CITY HALL, WORLD, USA. Single-topic posts use that same label on every slide.
+  Roundups label each slide with its own sector from that list. Never use labels like UPDATE, FACT, MONEY, NEWS.
 - Caption: 1–2 informative lines, then a real question for the comments. Don't list sources in the caption (we add them).
 
 The cover is a scroll-stopping hook in this exact stacked style (all caps on the image):
@@ -57,7 +65,7 @@ The cover is a scroll-stopping hook in this exact stacked style (all caps on the
 Every cover and slide needs a photo: {"query":"Wikimedia Commons search for a real stock photo (place, landmark, road, building, vehicle, object, scene — e.g. 'Brightline train Miami', 'Palmetto Expressway traffic', 'police car Miami-Dade', 'Cuban coffee cafecito')","prompt":"AI photo description, used only if no stock photo looks good (e.g. 'police cruiser lights reflecting on a wet Hialeah street at night')"}
   Stock photos are preferred (AI images are budgeted), so write queries likely to find a real, good-looking photo. Never plan a real photo of a person to illustrate a news story.
 
-Return JSON: {"cover":{"top":"...","main":"...","highlight":"...","bottom":"...","blur":false,"photo":{...}},"slides":[{"tag":"ONE-WORD LABEL (e.g. TRAFFIC, WEATHER, CRIME, MONEY, RENT, UPDATE, HISTORY, FACT, BUILD, SPORTS, WORLD, USA)","headline":"...","highlight":"2-3 word phrase copied exactly from the headline to color blue","body":"...","place":"neighborhood/city or country, optional","source":"outlet or empty for opinion slides","photo":{...}}],"caption":"...","hashtags":["5-8 extra niche hashtags"]}
+Return JSON: {"sector":"ECONOMY","cover":{"top":"...","main":"...","highlight":"...","bottom":"...","blur":false,"photo":{...}},"slides":[{"tag":"SECTOR label from the list","headline":"...","highlight":"2-3 word phrase copied exactly from the headline to color blue","body":"...","place":"neighborhood/city or country, optional","source":"outlet or empty for opinion slides","photo":{...}}],"caption":"...","hashtags":["5-8 extra niche hashtags"]}
 3 to 7 slides. EVERY slide must have tag, headline, highlight, body and photo.`;
 
 const nyDate = (d = new Date()) => d.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
@@ -124,6 +132,13 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     delete checked.removed; post = checked;
   }
   post = sanitize(post);
+  const SECTORS = /^(ECONOMY|TRAFFIC|WEATHER|REAL ESTATE|CRIME|DEVELOPMENT|TRANSIT|HISTORY|SPORTS|HEALTH|EDUCATION|CITY HALL|WORLD|USA)$/;
+  const single = kind === 'feature' || !!topic;
+  for (const x of post.slides) {
+    if (single && post.sector) x.tag = post.sector;
+    if (!SECTORS.test(String(x.tag || '').toUpperCase())) x.tag = post.sector || 'NEWS';
+    x.tag = String(x.tag).toUpperCase();
+  }
   post.slides = post.slides.slice(0, 7);
 
   const sources = [...new Set(post.slides.map(s => s.source).filter(Boolean))];
@@ -291,7 +306,9 @@ async function chat(messages) {
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const args = process.argv.slice(2);
-  const kind = args.find(a => !a.startsWith('--')) || 'brief';
+  if (args.includes('--ai-photos')) process.env.AI_PHOTOS = '1';
+  const topicArg = args.includes('--topic') ? args[args.indexOf('--topic') + 1] : null;
+  const kind = args.find(a => !a.startsWith('--') && a !== topicArg) || 'brief';
   const ti = args.indexOf('--topic');
   const dir = args.includes('--render-only') ? path.resolve(ROOT, args[args.indexOf('--render-only') + 1])
     : await writeCarousel(kind, { topic: ti >= 0 ? args[ti + 1] : null, preview: args.includes('--dry-run') });
