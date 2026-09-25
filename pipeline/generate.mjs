@@ -111,7 +111,7 @@ const AI_TELLS = [
 ];
 export const aiTells = text => AI_TELLS.filter(r => r.test(text)).map(r => (text.match(r) || [''])[0]);
 
-const BANNED = /\b(vibes?|iconic|hidden gem|paradise|bustling|nestled|in the heart of|whether you're|let's dive|buckle up|faint of heart|it's giving|main character|npcs?|emotional damage|lives rent free|chaos|chaotic|unhinged|hits different|literally|absolutely|ultimate|real mvp|let that sink in|no cap)\b/i;
+export const BANNED = /\b(vibes?|iconic|hidden gem|paradise|bustling|nestled|in the heart of|whether you're|let's dive|buckle up|faint of heart|it's giving|main character|npcs?|emotional damage|lives rent free|chaos|chaotic|unhinged|hits different|literally|absolutely|ultimate|real mvp|let that sink in|no cap)\b/i;
 
 export async function generateEpisode({ topic } = {}) {
   const epRoot = path.join(ROOT, 'episodes');

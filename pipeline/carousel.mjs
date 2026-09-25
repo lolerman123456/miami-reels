@@ -7,7 +7,7 @@ import puppeteer from 'puppeteer';
 import { ROOT, readJSON, writeJSON, step } from './util.mjs';
 import { fetchNews } from './news.mjs';
 import { getPhoto, newPost } from './photos.mjs';
-import { aiTells } from './generate.mjs';
+import { aiTells, BANNED } from './generate.mjs';
 import { fetchLocalTalk, ownerLines } from './locals.mjs';
 
 const HANDLE = '@getnearapp';
@@ -78,6 +78,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   const news = await fetchNews(spec.feed);
   const talk = kind === 'world' ? [] : await fetchLocalTalk().catch(() => []);
   const mine = ownerLines();
+  console.log(`  local talk: ${talk.length} posts, owner lines: ${mine.length}`);
   const recent = recentPosts();
   const ask = [
     topic ? `The account owner asked for this — follow it: ${topic}` : (feature ? feature.ask : spec.ask),
@@ -92,7 +93,8 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   for (let attempt = 1; attempt <= 3; attempt++) {
     post = await chat([{ role: 'system', content: SYSTEM }, { role: 'user', content: ask }]);
     const n = post?.slides?.length || 0;
-    const tells = aiTells(JSON.stringify([post?.caption, ...(post?.slides || []).map(x => [x.headline, x.body])]));
+    const copy = JSON.stringify([post?.caption, ...(post?.slides || []).map(x => [x.headline, x.body])]);
+    const tells = [...aiTells(copy), ...(copy.match(BANNED) || []).slice(0, 1)];
     if (tells.length && attempt < 3) { console.log(`  attempt ${attempt}: sounds like AI (${tells.join(' | ')}) — rewriting`); post = null; continue; }
     const incomplete = (post?.slides || []).filter(s => !s?.headline || !s?.body || !s?.photo).length;
     if (post?.cover?.highlight && post.cover.photo && n >= 3 && n <= 8 && !incomplete) break;
