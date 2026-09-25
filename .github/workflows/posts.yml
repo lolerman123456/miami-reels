@@ -45,7 +45,12 @@ jobs:
           IN_KIND: ${{ github.event.inputs.kind }}
         run: |
           if [ "$EVENT" = "workflow_dispatch" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; echo "kind=$IN_KIND" >> "$GITHUB_OUTPUT"; echo "wait=0" >> "$GITHUB_OUTPUT"; exit 0; fi
-          if [ "$EVENT" = "push" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; echo "kind=$(jq -r '.kind // "brief"' requests/post.json)" >> "$GITHUB_OUTPUT"; echo "wait=0" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if [ "$EVENT" = "push" ]; then
+            # optional "notBefore" (ISO time): the backup scheduler starts early and the post waits for its hour
+            NB=$(jq -r '.notBefore // ""' requests/post.json); W=0
+            if [ -n "$NB" ]; then W=$(( $(date -d "$NB" +%s) - $(date +%s) - 420 )); [ $W -lt 0 ] && W=0; [ $W -gt 3000 ] && W=3000; fi
+            { echo "go=true"; echo "kind=$(jq -r '.kind // "brief"' requests/post.json)"; echo "wait=$W"; } >> "$GITHUB_OUTPUT"; exit 0
+          fi
           D=$(TZ=America/New_York date +%F)
           nogo() { echo "NY $D → $1"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; }
           jq -e '.paused' control.json >/dev/null && nogo "paused"
