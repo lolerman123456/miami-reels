@@ -19,7 +19,9 @@ export function newPost() { used.clear(); aiThisPost = 0; }
 export async function getPhoto(spec, dir, name, { context = '' } = {}) {
   if (!spec) return null;
   const attempt = async (fn, ...a) => { try { return await fn(...a); } catch (e) { console.log(`  (${fn.name} failed for ${name}: ${e.message.slice(0, 160)})`); return null; } };
+  const simple = spec.query?.replace(/\b(miami|dade|florida|south|broward|palm beach|fort lauderdale|fl)\b/gi, '').replace(/\s+/g, ' ').trim();
   return (spec.query && await attempt(stockPhoto, spec.query, dir, name, context))
+    || (simple && simple !== spec.query && simple.split(' ').length >= 1 && await attempt(stockPhoto, simple, dir, name, context))
     || (spec.prompt && aiBudgetLeft() > 0 && aiThisPost < Number(process.env.AI_IMAGES_PER_POST ?? 1) && await attempt(aiPhoto, spec.prompt, dir, name))
     || await attempt(stockPhoto, FALLBACKS[Math.floor(Math.random() * FALLBACKS.length)], dir, name, '', true);
 }
@@ -37,7 +39,7 @@ async function candidates(query) {
       artist: (m.Artist?.value || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 40) || 'Wikimedia Commons',
     };
   }).filter(c => c && !used.has(c.title) && c.width >= 1000 && c.height >= 700 && OK_LICENSE.test(c.license)
-    && !/logo|map|diagram|chart|seal|flag|coat of arms|plaque|sign|\.svg|\.gif|\.tif/i.test(c.title)).slice(0, 5);
+    && !/logo|map|diagram|chart|seal|flag|coat of arms|plaque|sign|postcard|lithograph|drawing|engraving|poster|\.svg|\.gif|\.tif/i.test(c.title)).slice(0, 5);
 }
 
 async function stockPhoto(query, dir, name, context, anyOk = false) {
@@ -64,7 +66,7 @@ async function judge(list, query, context) {
   const content = [
     { type: 'text', text: `Instagram carousel slide about: "${context || query}". Wanted photo: "${query}".\n` +
       `Pick the ONE candidate that clearly shows that subject and looks like an attractive, sharp, modern social-media photo ` +
-      `(no documents, no old/grainy/tilted snapshots, no random interiors, no close-ups of identifiable people, no visible prices, numbers, signs or big text that could clash with the post's own numbers). ` +
+      `(no documents, no old/grainy/tilted snapshots, no random interiors, no close-ups of identifiable people, no vintage postcards or old illustrations; small price signs in the background are fine, but not a big close-up price/number that could clash with the post). ` +
       `If none is good enough, answer -1. Reply JSON {"pick": index}.` },
     ...list.flatMap((c, i) => [{ type: 'text', text: `Candidate ${i}: ${c.title}` }, { type: 'image_url', image_url: { url: `data:image/jpeg;base64,${c.data.toString('base64')}`, detail: 'low' } }]),
   ];
