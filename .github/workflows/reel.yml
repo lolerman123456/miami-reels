@@ -89,11 +89,13 @@ jobs:
             TOPIC=$(jq -r '.topic // ""' requests/run.json)
             EPISODE=$(jq -r '.episode // ""' requests/run.json)
             PUBLISH=$(jq -r 'if .publish == false then "false" else "true" end' requests/run.json)
+            POST_VIDEO=$(jq -r '.postVideo // ""' requests/run.json)
           fi
           {
             echo "topic<<EOF"; echo "$TOPIC"; echo "EOF"
             echo "episode=$EPISODE"
             echo "publish=$PUBLISH"
+            echo "post_video=$POST_VIDEO"
           } >> "$GITHUB_OUTPUT"
           echo "event=$EVENT topic='$TOPIC' episode='$EPISODE' publish=$PUBLISH"
 
@@ -137,7 +139,16 @@ jobs:
           REEL_EPISODE: ${{ steps.req.outputs.episode }}
           EVENT: ${{ github.event_name }}
           PUBLISH: ${{ steps.req.outputs.publish }}
+          POST_VIDEO: ${{ steps.req.outputs.post_video }}
+          GH_TOKEN: ${{ github.token }}
         run: |
+          # Fast path: post an already-rendered video from the "videos" release (no re-render).
+          if [ -n "$POST_VIDEO" ]; then
+            ID=$(basename "$POST_VIDEO")
+            mkdir -p out/posted && gh release download videos -p "$ID.mp4" -D out/posted --clobber
+            node pipeline/publish.mjs "out/posted/$ID.mp4" "episodes/$ID"
+            exit 0
+          fi
           ARGS=""
           [ "$PUBLISH" = "false" ] && ARGS="$ARGS --dry-run"
           [ "$EVENT" != "schedule" ] && ARGS="$ARGS --force"
