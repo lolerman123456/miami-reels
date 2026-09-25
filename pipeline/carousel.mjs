@@ -9,7 +9,7 @@ import { fetchNews } from './news.mjs';
 import { getPhoto, newPost } from './photos.mjs';
 import { aiTells, BANNED } from './generate.mjs';
 import { wikiArticle, rentFacts } from './facts.mjs';
-import { STYLE, REMINDER, toneLines, sanitize } from './style.mjs';
+import { STYLE, REMINDER, toneLines, sanitize, memeTells } from './style.mjs';
 
 const HANDLE = '@getnearapp';
 const TAGS = ['#miami', '#miamidade', '#305', '#southflorida', '#miaminews', '#florida', '#dade', '#miamilife',
@@ -38,7 +38,7 @@ const SYSTEM = `You write carousel posts for @getnearapp, a South Florida Instag
 Rules:
 - Facts: use ONLY facts in the headlines/sources given to you. Never invent names, numbers, dates, quotes or outcomes. If a detail isn't in the sources, leave it out.
 - Crime/accusations: say "police say"/"according to" as the source did; don't name people who haven't been charged.
-- No jokes, no sarcasm, no puns, no roasting, no "savage" lines. Informative, clear, normal. Interesting because of the facts.
+- Informative first. Interesting because of the facts. Humor only as the house style allows (one dry line from the fact, never quirky lists).
 - Every news slide credits its outlet in "source" (outlet name exactly as given; "Wikipedia" or "Zillow" for those).
 - Headlines: specific and clear, ≤ 70 characters, sentence case, with the key number/name. Body: 1–2 sentences, ≤ 200 characters: the detail and why it matters to people here.
 - Write like a person talking normally, not AI. Banned: "It's not X, it's Y", "That's not X, that's Y", "If not X, then Y", "X isn't just Y", "The result? …", "Plot twist", "Here's the thing", "Let's be real", "Welcome to", em-dashes, neat morals, triples, and never mention "sources" in the text.
@@ -100,7 +100,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     post = await chat([{ role: 'system', content: `${SYSTEM}\n\n${STYLE}\n\n${toneLines()}` }, { role: 'user', content: `${ask}\n\n${REMINDER}` }]);
     const n = post?.slides?.length || 0;
     const copy = JSON.stringify([post?.caption, ...(post?.slides || []).map(x => [x.headline, x.body])]);
-    const tells = [...aiTells(copy), ...(copy.match(BANNED) || []).slice(0, 1)];
+    const tells = [...aiTells(copy), ...memeTells(copy), ...(copy.match(BANNED) || []).slice(0, 1)];
     if (tells.length && attempt < 3) { console.log(`  attempt ${attempt}: sounds like AI (${tells.join(' | ')}) — rewriting`); post = null; continue; }
     const incomplete = (post?.slides || []).filter(s => !s?.headline || !s?.body || !s?.photo).length;
     if (post?.cover?.highlight && post.cover.photo && n >= 3 && n <= 8 && !incomplete) break;
@@ -108,7 +108,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     post = null;
   }
   if (!post) throw new Error('Could not write carousel');
-  const checked = await chat([{ role: 'system', content: 'You fact-check an Instagram carousel (JSON) against the given headlines and sources. Fix or remove any number, date, name, "tallest/first/biggest" claim or outcome that is not supported. Remove any jokes or sarcasm; keep it informative and plain. Never mention "sources" in the text. Keep every JSON field and the same structure. Return only the corrected JSON plus "removed": [short notes].' },
+  const checked = await chat([{ role: 'system', content: 'You fact-check an Instagram carousel (JSON) against the given headlines and sources. Fix or remove any number, date, name, "tallest/first/biggest" claim or outcome that is not supported. Remove quirky lists, personification and meme-caption jokes; keep at most one dry, fact-based line per slide; keep it informative. Never mention "sources" in the text. Keep every JSON field and the same structure. Return only the corrected JSON plus "removed": [short notes].' },
     { role: 'user', content: `${ask}\n\nDRAFT:\n${JSON.stringify(post)}\n\n${STYLE}\n${REMINDER}` }]).catch(() => null);
   if (checked?.slides?.length >= 3 && checked.cover?.highlight) {
     if (checked.removed?.length) console.log(`  fact-check fixed: ${checked.removed.join(' | ').slice(0, 400)}`);

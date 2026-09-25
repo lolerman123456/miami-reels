@@ -15,7 +15,11 @@ comma, colon or rewrite the sentence. No en dashes between clauses either. Hyphe
   Let the number or fact carry it.
 - No intro or transition phrases that frame something as significant or surprising ("Interestingly", "Notably",
   "It's worth noting", "In a major move", "Big news"). Get to the fact.
-- No jokes, puns or sarcasm. A dry, plain delivery is fine.
+- Humor: wry and subtle, at most ONE dry line per slide/scene, and it must come out of the fact itself, said flat
+  (e.g. "Brickell rent is $3,831 a month. That's $45,972 a year before parking." / "Up 89% since 2015. The beach is the same size.").
+  NEVER the meme-caption pattern: no lists of quirky things ("a warehouse you swear is a restaurant, golf carts acting rich,
+  a plaza nobody planned for"), no personification ("acting rich", "pretending", "treated like suggestions"),
+  no "starter pack", "energy", "be having", "nobody asked for", "like it's a", no puns, no "relatable" exaggerations.
 - Short, dense sentences. Every sentence carries a fact.`;
 
 export function toneLines() {
@@ -25,7 +29,17 @@ export function toneLines() {
 }
 
 // Short reminder appended to every user message (keeps the style from fading).
-export const REMINDER = 'Reminder: house style. No em or en dashes. Active voice, direct statements, no contrast framing, no subjective adjectives, no jokes.';
+export const REMINDER = 'Reminder: house style. No em or en dashes. Active voice, direct statements, no contrast framing, no subjective adjectives, no quirky lists or personification; at most one dry line that comes from the fact.';
+
+// Meme-caption / "white girl humor" patterns the owner hates: quirky lists and personification.
+export const MEME_TELLS = [
+  /\b(acting|pretending|treated|dressed) (like|as|rich)\b/i, /\blike it['’]s a\b/i, /\bnobody (asked|planned|needed)\b/i,
+  /\bstarter pack\b/i, /\benergy\b/i, /\bbe having\b/i, /\byou swear\b/i, /\bthe way (it|they|he|she)\b/i,
+];
+// a sentence that is a list of 4+ quirky items ("A dad in cargo shorts, a 40-minute left turn, Target as..., and someone...")
+const quirkyList = t => t.split(/(?<=[.!?])\s+/).filter(sn => (sn.match(/,/g) || []).length >= 3 &&
+  sn.split(/,\s*(?:and\s+)?/).filter(x => /^(a|an|one|someone|your|the|some)\s/i.test(x.trim())).length >= 2);
+export const memeTells = t => [...MEME_TELLS.filter(r => r.test(t)).map(r => (t.match(r) || [''])[0]), ...quirkyList(t).map(x => x.slice(0, 50))];
 
 // Replace dashes the model slipped in anyway; walks any JSON value.
 export function sanitize(v) {

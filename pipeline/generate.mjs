@@ -7,7 +7,7 @@ import path from 'node:path';
 import { ROOT, readJSON, writeJSON } from './util.mjs';
 import { fetchNews } from './news.mjs';
 import { wikiArticle, rentFacts } from './facts.mjs';
-import { STYLE, REMINDER, toneLines, sanitize } from './style.mjs';
+import { STYLE, REMINDER, toneLines, sanitize, memeTells } from './style.mjs';
 
 const FORMATS = `FORMATS (pick the one that fits the best available material):
 - NEW BUILD: something being built, approved or opening in South Florida (tallest towers, stadiums, stations, bridges, big
@@ -19,7 +19,8 @@ const FORMATS = `FORMATS (pick the one that fits the best available material):
 
 const NARRATOR = `WHO IS TALKING
 A South Florida local who knows a lot about the area, talking to camera like a good explainer video. Clear, calm,
-conversational, informative. NO jokes, no roasting, no sarcasm, no hype. Just interesting, specific information said normally.
+conversational, informative. No roasting, no hype, no meme jokes. Interesting, specific information said normally, with the
+occasional dry line that comes straight out of a fact.
 
 HOW IT SOUNDS
 - Plain spoken English, contractions, normal sentences. Like explaining something cool to a friend.
@@ -76,7 +77,7 @@ ranking ("tallest", "first", "biggest") and name — confirm it is supported by 
 - Supported: keep it (match the source's exact number; keep hedges like "about", "planned", "expected").
 - Not supported or contradicted: fix it to what the source says, or remove it and smooth the sentence.
 - NEVER mention sources, "sourced", "these sources", "based on", "according to the data" in text/caption — the viewer never sees the sources. Just state the fact plainly, or cut it.
-- Keep the voice normal and conversational; don't add jokes. Keep all JSON fields, locations and shots. Keep 140–190 spoken words.
+- Keep the voice normal and conversational; cut quirky lists or personification jokes; one dry fact-based line is fine. Keep all JSON fields, locations and shots. Keep 140–190 spoken words.
 Return ONLY the corrected JSON, plus a field "removed": ["short notes of anything you had to fix or cut"].`;
 
 // AI-sounding sentence shapes (checked on the spoken script; any hit → rewrite). Also used by carousel.mjs.
@@ -130,7 +131,7 @@ export async function generateEpisode({ topic } = {}) {
     const spoken = (episode.scenes || []).map(s => s.text).join(' ');
     const words = spoken.split(/\s+/).length;
     try { validate(episode); } catch (e) { console.log(`  attempt ${attempt}: ${e.message}`); continue; }
-    const bad = spoken.match(BANNED) || spoken.match(/\b(sourced|these sources|the sources|based on (the|these) (sources|data))\b/i); const tells = aiTells(spoken);
+    const bad = spoken.match(BANNED) || spoken.match(/\b(sourced|these sources|the sources|based on (the|these) (sources|data))\b/i); const tells = [...aiTells(spoken), ...memeTells(spoken)];
     if ((bad || tells.length) && attempt < 3) { console.log(`  attempt ${attempt}: sounds like AI (${[bad?.[0], ...tells].filter(Boolean).join(' | ')}) — rewriting`); continue; }
     if ((words < 120 || words > 210) && attempt < 3) { console.log(`  attempt ${attempt}: ${words} words — rewriting`); continue; }
     console.log(`  script: ${words} words`);
