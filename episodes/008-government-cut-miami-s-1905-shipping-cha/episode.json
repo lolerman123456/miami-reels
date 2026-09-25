@@ -1,0 +1,167 @@
+{
+  "title": "Government Cut: Miami's 1905 Shipping Channel",
+  "sources": [
+    "NBC 6 South Florida",
+    "Wikipedia Government Cut",
+    "Wikipedia PortMiami",
+    "Wikipedia Fisher Island, Florida"
+  ],
+  "igCaption": "Government Cut opened in 1905 after Congress authorized it in 1902.\nIt created Fisher Island and improved shipping access to the new port.\nSeptember 25, 2026 marks ten years since Marlins pitcher José Fernández died there.\n\nSources: NBC 6 South Florida, Wikipedia Government Cut, Wikipedia PortMiami, Wikipedia Fisher Island, Florida\n\n#MiamiHistory #GovernmentCut #PortMiami #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "September twenty-fifth, twenty twenty-six marks ten years since Marlins pitcher José Fernández died at Government Cut, a channel that opened in nineteen oh five.",
+      "overlay": [
+        "GOVERNMENT CUT",
+        "1905"
+      ],
+      "emojis": [
+        "🌊",
+        "🚢",
+        "🏝️",
+        "⚾"
+      ],
+      "location": {
+        "name": "Government Cut",
+        "lat": 25.7631025,
+        "lon": -80.1323461,
+        "h": 25
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 260
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Before the cut, boats heading to the Miami River port had to go around Cape Florida, south of Key Biscayne. Congress authorized a direct route in nineteen oh two.",
+      "caption": "Before the cut, boats heading to the Miami River port had to go around Cape Florida, south of Key Biscayne. Congress authorized a direct route in 1902.",
+      "overlay": "GOVERNMENT CUT",
+      "badge": "1902 APPROVAL",
+      "sub": "Direct route approved",
+      "emoji": "🛥️",
+      "location": {
+        "name": "Government Cut",
+        "lat": 25.7631025,
+        "lon": -80.1323461,
+        "h": 25
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 40,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Dredging began in nineteen oh three and finished in summer nineteen oh five. The channel crossed the mangroves and beach at the south end of the peninsula, creating Fisher Island.",
+      "caption": "Dredging began in 1903 and finished in summer 1905. The channel crossed the mangroves and beach at the south end of the peninsula, creating Fisher Island.",
+      "overlay": "FISHER ISLAND",
+      "badge": "OPENED 1905",
+      "sub": "South end cut",
+      "emoji": "🏝️",
+      "location": {
+        "name": "Fisher Island",
+        "lat": 25.76083333,
+        "lon": -80.14166667,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -33,
+        "heading": 115,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The new access created the Main Channel and improved shipping access to the new port. Dredging spoils later formed Dodge, Lummus and Sam’s islands.",
+      "caption": "The new access created the Main Channel and improved shipping access to the new port. Dredging spoils later formed Dodge, Lummus and Sam’s islands.",
+      "overlay": "PORTMIAMI",
+      "badge": "MAIN CHANNEL",
+      "sub": "Spoils formed islands",
+      "emoji": "🚢",
+      "location": {
+        "name": "PortMiami",
+        "lat": 25.7743,
+        "lon": -80.171,
+        "h": 45
+      },
+      "shot": {
+        "type": "push",
+        "range": 1700,
+        "pitch": -35,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "PortMiami is the largest passenger port in the world. As of twenty twenty-three, it accounts for about three hundred thirty-four thousand five hundred jobs and forty-three billion dollars a year for Florida.",
+      "caption": "PortMiami is the largest passenger port in the world. As of 2023, it accounts for about 334,500 jobs and $43 billion a year for Florida.",
+      "overlay": "PORTMIAMI",
+      "badge": "334,500 JOBS",
+      "sub": "$43B for Florida",
+      "emoji": "⚓",
+      "location": {
+        "name": "PortMiami",
+        "lat": 25.7743,
+        "lon": -80.171,
+        "h": 55
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 1600,
+        "pitch": -36,
+        "heading": 315
+      }
+    },
+    {
+      "kind": "item",
+      "text": "On September twenty-fifth, twenty sixteen, José Fernández died in a boating accident at Government Cut. The boat hit the jetty and capsized, killing Fernández, twenty-five-year-old Eduardo Rivero and twenty-seven-year-old Emilio Macias.",
+      "caption": "On September 25, 2016, José Fernández died in a boating accident at Government Cut. The boat hit the jetty and capsized, killing Fernández, 25-year-old Eduardo Rivero and 27-year-old Emilio Macias.",
+      "overlay": "GOVERNMENT CUT",
+      "badge": "SEP 25, 2016",
+      "sub": "Three men killed",
+      "emoji": "⚾",
+      "location": {
+        "name": "Government Cut",
+        "lat": 25.7631025,
+        "lon": -80.1323461,
+        "h": 20
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 850,
+        "pitch": -32,
+        "heading": 140
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Government Cut still carries ships between the Atlantic and Biscayne Bay. Comment with the Miami place we should cover next.",
+      "overlay": "COMMENT 🌊",
+      "sub": "What should we cover next?",
+      "location": {
+        "name": "Government Cut",
+        "lat": 25.7631025,
+        "lon": -80.1323461,
+        "h": 25
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1900,
+        "pitch": -35,
+        "heading": 75
+      }
+    }
+  ],
+  "format": "HISTORY",
+  "id": "008-government-cut-miami-s-1905-shipping-cha"
+}
