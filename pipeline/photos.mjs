@@ -92,7 +92,7 @@ function aiBudgetLeft() {
 async function aiPhoto(description, dir, name) {
   if (!process.env.OPENAI_API_KEY) return null;
   const prompt = `${description}. Photorealistic editorial photo, natural light, shot on a phone camera, South Florida setting. ` +
-    'No text, no logos, no watermarks. No identifiable real people or public figures; faces turned away, blurred or out of frame.';
+    'No text, no readable numbers, no price signs or price displays, no logos, no watermarks. No identifiable real people or public figures; faces turned away, blurred or out of frame.';
   for (const model of [process.env.OPENAI_IMAGE_MODEL, 'gpt-image-1'].filter(Boolean)) {
     const res = await fetch('https://api.openai.com/v1/images/generations', {
       method: 'POST',
