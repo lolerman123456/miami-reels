@@ -1,0 +1,126 @@
+{
+  "sector": "ECONOMY",
+  "cover": {
+    "top": "FLORIDA GAS",
+    "main": "JUST HIT",
+    "highlight": "$4.22",
+    "bottom": "UP $1.26 YEARLY",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Florida gas station fuel pump",
+      "prompt": "close-up of a gas pump at a Florida station with cars in the background on a sunny day"
+    },
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration"
+  },
+  "slides": [
+    {
+      "tag": "ECONOMY",
+      "headline": "Florida gas hit $4.22 a gallon this week",
+      "highlight": "$4.22 a gallon",
+      "body": "Florida regular gas averaged $4.22 for the week of Sept. 21, up from $4.10 one week earlier.",
+      "place": "Florida",
+      "source": "U.S. Energy Information Administration (EIA)",
+      "photo": {
+        "query": "Wikimedia Commons Florida gas station fuel pump",
+        "prompt": "gas pump handle at a Florida station with regular fuel price digits visible and traffic behind it"
+      },
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "ECONOMY",
+      "headline": "That's 12 cents more than last week",
+      "highlight": "12 cents more",
+      "body": "The state average was $3.86 two weeks earlier and $3.77 one month earlier.",
+      "place": "Florida",
+      "source": "U.S. Energy Information Administration (EIA)",
+      "photo": {
+        "query": "Wikimedia Commons gasoline pump close up",
+        "prompt": "close-up of a driver filling a car at a gas pump in South Florida daylight"
+      },
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "ECONOMY",
+      "headline": "That also means gas is up $1.26 from last year",
+      "highlight": "up $1.26",
+      "body": "Florida regular gas averaged $2.96 a year earlier. A 15-gallon fill-up now costs $18.90 more than it did then.",
+      "place": "Florida",
+      "source": "U.S. Energy Information Administration (EIA)",
+      "photo": {
+        "query": "Wikimedia Commons car fueling gasoline station",
+        "prompt": "person fueling a car at a roadside gas station with palm trees in the distance"
+      },
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "ECONOMY",
+      "headline": "Which puts Florida near its 12-month high",
+      "highlight": "12-month high",
+      "body": "The highest Florida average in the last 12 months was $4.30 in the week of May 11. The lowest was $2.60 in January.",
+      "place": "Florida",
+      "source": "U.S. Energy Information Administration (EIA)",
+      "photo": {
+        "query": "Wikimedia Commons Florida highway traffic",
+        "prompt": "busy Florida highway traffic passing gas station signs under a bright sky"
+      },
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "ECONOMY",
+      "headline": "Crude costs and Mideast conflict are in the mix",
+      "highlight": "crude costs",
+      "body": "Florida outlets tied the latest spike to rising crude oil costs and continuing Mideast conflict.",
+      "place": "Florida",
+      "source": "News4JAX; NBC 6 South Florida",
+      "photo": {
+        "query": "Wikimedia Commons oil refinery pipes",
+        "prompt": "oil refinery equipment and fuel storage tanks under an overcast sky"
+      },
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "ECONOMY",
+      "headline": "And diesel hit $6.34 in Florida",
+      "highlight": "diesel hit $6.34",
+      "body": "Diesel reached $6.34 a gallon in Florida, raising concerns about higher costs for goods and services.",
+      "place": "Florida",
+      "source": "CBS News",
+      "photo": {
+        "query": "Wikimedia Commons diesel fuel pump truck",
+        "prompt": "diesel pump beside a delivery truck at a Florida fueling station"
+      },
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "ECONOMY",
+      "headline": "So drivers are waiting for relief",
+      "highlight": "waiting for relief",
+      "body": "Florida's average remains 8 cents below its 12-month high of $4.30.",
+      "place": "Florida",
+      "source": "WPBF",
+      "photo": {
+        "query": "Wikimedia Commons Miami traffic cars highway",
+        "prompt": "cars lined up in Miami traffic near a gas station during the afternoon"
+      },
+      "photoFile": "photo-7.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Florida gas is back at $4.22 a gallon, close to its 12-month high. Diesel reached $6.34, which can ripple into goods and services.\n\nHow much are you seeing near you?",
+  "hashtags": [
+    "#FloridaGasPrices",
+    "#SouthFloridaDrivers"
+  ],
+  "igCaption": "Florida gas is back at $4.22 a gallon, close to its 12-month high. Diesel reached $6.34, which can ripple into goods and services.\n\nHow much are you seeing near you?\n\n📰 Sources: U.S. Energy Information Administration (EIA), News4JAX; NBC 6 South Florida, CBS News, WPBF\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#FloridaGasPrices #SouthFloridaDrivers #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-09-25",
+  "id": "2026-09-25-brief-custom"
+}
