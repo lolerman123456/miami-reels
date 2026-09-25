@@ -1,7 +1,7 @@
 # Miami Reels — operating guide for Claude
 
 This repo runs **@getnearapp** end to end (the owner handed Claude the account; ChatGPT no longer posts). Daily, New York time:
-2 satirical map Reels (~1pm, ~8pm) + 3 carousels — `brief` 9am (South Florida news), `feature` 5pm (rotating culture /
+2 informational map Reels (~1pm, ~8pm) + 3 carousels — `brief` 9am (South Florida news), `feature` 5pm (rotating culture /
 opinion / follow-up, see FEATURES in `pipeline/carousel.mjs`), `world` 10pm (US + world). Every post is cross-posted to stories.
 Goal: grow the account. Raise volume slowly as it grows (add carousel slots in `control.json` → `carousels`); the owner audits
 and archives anything bad.
@@ -41,11 +41,13 @@ Savage satire of places, traffic, prices, HOAs, tourists, clubs, weather — nev
 religions, races, or real private people. No slurs/explicit content. Hook in the first 3 seconds.
 
 ## Episode JSON essentials
-Scenes: `hook` (overlay = 2 short lines, 4 emojis, shot `dive`), 3× `item` (rank 3→1, text starts "Number three," …
-"And number one..."), `outro` (CTA, shot `pullout`). Voice: Shane Gillis-style (his delivery, never his material) — laid-back,
-one committed bit per place that escalates, not rapid one-liners (see VOICE in `pipeline/generate.mjs`). `text` = spoken (write numbers as words), `caption` = on-screen
-version. Locations must be real South Florida lat/lon. Camera `range`: 500–900 m low-rise, **1400–1800 m for
-skylines** (Brickell/Downtown/Sunny Isles) or the camera ends up inside buildings. 160–200 words total ≈ 60–70 s.
+Map Reels are **informational explainers, no jokes and no rankings** (owner's call): NEW BUILD / HISTORY / DID YOU KNOW /
+RENT CHECK / BY THE NUMBERS. `pipeline/generate.mjs` plans a topic, pulls real sources (news, Wikipedia via `pipeline/facts.mjs`,
+Zillow rent data), writes only from those sources, then a fact-check pass fixes anything unsupported.
+Scenes: `hook` (overlay = 2 short lines, 4 emojis, shot `dive`), 3–5× `item` (no rank; `badge` = key stat like "1,049 FT" or
+"$3,831/MO", `overlay` = place, `sub` = context), `outro` (question, shot `pullout`). `text` = spoken (numbers as words),
+`caption` = on-screen version. Locations: use Wikipedia coordinates when available. Camera `range`: 500–900 m low-rise,
+**1400–1800 m for skylines** or the camera ends up inside buildings. 140–190 words ≈ 55–70 s.
 
 ## Secrets (repo settings, never commit them)
 `OPENAI_API_KEY`, `GOOGLE_MAPS_API_KEY`, `INSTAGRAM_ACCESS_TOKEN`, `INSTAGRAM_USER_ID`.

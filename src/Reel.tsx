@@ -14,6 +14,7 @@ export type Scene = {
   emojis: string[] | null;
   alert?: string | null;
   note?: string | null;
+  badge?: string | null;
   from: number;
   duration: number;
   video: string;
@@ -178,11 +179,14 @@ const Item: React.FC<{ scene: Scene }> = ({ scene }) => {
           <div style={{
             transform: `scale(${interpolate(slam, [0, 1], [3.2, 1])}) rotate(${interpolate(slam, [0, 1], [-25, -6])}deg)`,
             opacity: interpolate(slam, [0, 0.2], [0, 1], { extrapolateRight: 'clamp' }),
-            width: 230, height: 230, borderRadius: 40, background: top ? RED : YELLOW,
+            ...(scene.rank != null ? { width: 230, height: 230 } : { height: 150, padding: '0 36px', maxWidth: 820 }),
+            borderRadius: 40, background: top ? RED : YELLOW,
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             boxShadow: '0 18px 40px rgba(0,0,0,.5)', border: '8px solid #000',
           }}>
-            <span style={{ fontFamily: FONT, fontSize: 150, color: top ? '#fff' : '#000', letterSpacing: -6, marginLeft: -8 }}>#{scene.rank}</span>
+            {scene.rank != null
+              ? <span style={{ fontFamily: FONT, fontSize: 150, color: top ? '#fff' : '#000', letterSpacing: -6, marginLeft: -8 }}>#{scene.rank}</span>
+              : <span style={{ fontFamily: FONT, fontSize: fitSize(String(scene.badge || 'DID YOU KNOW'), 96, 700), color: '#000', letterSpacing: -2, whiteSpace: 'nowrap' }}>{scene.badge || 'DID YOU KNOW'}</span>}
           </div>
           {scene.emoji && (
             <Pop delay={9} rotate={40}>
