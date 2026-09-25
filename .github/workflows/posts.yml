@@ -148,7 +148,7 @@ jobs:
           git config user.name "reel-bot"
           git config user.email "reel-bot@users.noreply.github.com"
           for f in posts/*/post.json posted.log state/ai-images.txt; do [ -e "$f" ] && git add "$f"; done; true
-          git reset -q -- 'posts/*-preview' 2>/dev/null || true
+          git reset -q -- 'posts/*-preview/*' 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "Post run ${{ github.run_number }} ($(date -u +%F))"
             git pull --rebase && git push

@@ -6,7 +6,7 @@ import path from 'node:path';
 import puppeteer from 'puppeteer';
 import { ROOT, readJSON, writeJSON, step } from './util.mjs';
 import { fetchNews } from './news.mjs';
-import { getPhoto } from './photos.mjs';
+import { getPhoto, newPost } from './photos.mjs';
 
 const HANDLE = '@getnearapp';
 const TAGS = ['#miami', '#miamidade', '#305', '#southflorida', '#miaminews', '#florida', '#dade', '#miamilife',
@@ -107,6 +107,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   const dir = path.join(ROOT, 'posts', post.id);
   fs.mkdirSync(dir, { recursive: true });
   step('Finding photos');
+  newPost();
   for (const [i, item] of [post.cover, ...post.slides].entries()) {
     const photo = await getPhoto(item.photo, dir, i ? `photo-${i}` : 'photo-cover',
       { context: i ? item.headline : [item.top, item.main, item.highlight, item.bottom].filter(Boolean).join(' ') });

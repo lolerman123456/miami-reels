@@ -13,12 +13,14 @@ const OK_LICENSE = /^(CC0|Public domain|PD|CC BY(-SA)?( [0-9.]+)?)/i;
 const BUDGET_FILE = path.join(ROOT, 'state', 'ai-images.txt');
 const FALLBACKS = ['Miami skyline', 'Miami Beach aerial', 'Brickell skyline', 'Biscayne Bay Miami'];
 const used = new Set(); // don't reuse one photo twice in a post
+let aiThisPost = 0;     // at most AI_IMAGES_PER_POST (default 1) per carousel
+export function newPost() { used.clear(); aiThisPost = 0; }
 
 export async function getPhoto(spec, dir, name, { context = '' } = {}) {
   if (!spec) return null;
   const attempt = async (fn, ...a) => { try { return await fn(...a); } catch (e) { console.log(`  (${fn.name} failed for ${name}: ${e.message.slice(0, 160)})`); return null; } };
   return (spec.query && await attempt(stockPhoto, spec.query, dir, name, context))
-    || (spec.prompt && aiBudgetLeft() > 0 && await attempt(aiPhoto, spec.prompt, dir, name))
+    || (spec.prompt && aiBudgetLeft() > 0 && aiThisPost < Number(process.env.AI_IMAGES_PER_POST ?? 1) && await attempt(aiPhoto, spec.prompt, dir, name))
     || await attempt(stockPhoto, FALLBACKS[Math.floor(Math.random() * FALLBACKS.length)], dir, name, '', true);
 }
 
@@ -41,13 +43,17 @@ async function candidates(query) {
 async function stockPhoto(query, dir, name, context, anyOk = false) {
   const list = await candidates(query);
   if (!list.length) return null;
-  const pick = anyOk ? 0 : await judge(list, query, context);
+  for (const c of list) {
+    const img = await fetch(c.url, { headers: { 'User-Agent': UA } }).catch(() => null);
+    if (img?.ok) c.data = Buffer.from(await img.arrayBuffer());
+  }
+  const ok = list.filter(c => c.data);
+  if (!ok.length) return null;
+  const pick = anyOk ? 0 : await judge(ok, query, context);
   if (pick < 0) { console.log(`  stock rejected for "${query}"`); return null; }
-  const c = list[pick];
-  const img = await fetch(c.url, { headers: { 'User-Agent': UA } });
-  if (!img.ok) return null;
+  const c = ok[pick];
   const file = path.join(dir, `${name}.jpg`);
-  fs.writeFileSync(file, Buffer.from(await img.arrayBuffer()));
+  fs.writeFileSync(file, c.data);
   used.add(c.title);
   return { file, credit: `Photo: ${c.artist} / ${c.license}`, kind: 'stock' };
 }
@@ -60,7 +66,7 @@ async function judge(list, query, context) {
       `Pick the ONE candidate that clearly shows that subject and looks like an attractive, sharp, modern social-media photo ` +
       `(no documents, no old/grainy/tilted snapshots, no random interiors, no close-ups of identifiable people). ` +
       `If none is good enough, answer -1. Reply JSON {"pick": index}.` },
-    ...list.flatMap((c, i) => [{ type: 'text', text: `Candidate ${i}: ${c.title}` }, { type: 'image_url', image_url: { url: c.url.replace(/\/\d+px-/, '/512px-'), detail: 'low' } }]),
+    ...list.flatMap((c, i) => [{ type: 'text', text: `Candidate ${i}: ${c.title}` }, { type: 'image_url', image_url: { url: `data:image/jpeg;base64,${c.data.toString('base64')}`, detail: 'low' } }]),
   ];
   const res = await fetch('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
@@ -68,7 +74,7 @@ async function judge(list, query, context) {
     body: JSON.stringify({ model: process.env.OPENAI_VISION_MODEL || process.env.OPENAI_MODEL || 'gpt-5.5', response_format: { type: 'json_object' },
       messages: [{ role: 'user', content }] }),
   });
-  if (!res.ok) { console.log(`  (photo judge ${res.status} — taking first candidate)`); return 0; }
+  if (!res.ok) { console.log(`  (photo judge ${res.status}: ${(await res.text()).slice(0, 200)} — taking first candidate)`); return 0; }
   const pick = Number(JSON.parse((await res.json()).choices[0].message.content).pick);
   return Number.isInteger(pick) && pick < list.length ? pick : -1;
 }
@@ -96,6 +102,7 @@ async function aiPhoto(description, dir, name) {
     fs.writeFileSync(file, Buffer.from(b64, 'base64'));
     fs.mkdirSync(path.dirname(BUDGET_FILE), { recursive: true });
     fs.appendFileSync(BUDGET_FILE, `${new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' })}\t${name}\n`);
+    aiThisPost++;
     return { file, credit: 'AI illustration', kind: 'ai' };
   }
   return null;
