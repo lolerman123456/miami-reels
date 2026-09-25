@@ -1,0 +1,120 @@
+{
+  "title": "South Florida Places Trying Way Too Hard To Be Miami",
+  "igCaption": "Fort Lauderdale got one crane on Las Olas and started charging Brickell feelings.\nWho’s pretending the hardest: Lauderdale, Boca, or West Palm?\n(satire)\n#SouthFlorida #FortLauderdale #BocaRaton #WestPalmBeach #MiamiComedy #FloridaComedy #LasOlas #MiznerPark #ClematisStreet #Brickell #SoFlo #FloridaTraffic",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Fort Lauderdale people, you got one condo crane and started acting like Brickell. Number one gets me cursed out.",
+      "overlay": [
+        "LAUDERDALE",
+        "ANSWER FOR THIS"
+      ],
+      "emojis": [
+        "🏗️",
+        "🚗",
+        "🌧️",
+        "☕"
+      ],
+      "location": {
+        "name": "Las Olas Boulevard Bridge, Fort Lauderdale",
+        "lat": 26.1195,
+        "lon": -80.1401,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 3,
+      "text": "Number three, Downtown West Palm. Last Saturday by Rosemary Square, I watched a guy pay nineteen dollars for parking to buy a twelve dollar iced coffee, then call it peaceful. Bro, Clematis at ten p.m. is three golf carts, one bachelorette sash, and a security guard whispering into his sleeve.",
+      "caption": "Number 3, Downtown West Palm. Last Saturday by Rosemary Square, I watched a guy pay $19 for parking to buy a $12 iced coffee, then call it peaceful. Bro, Clematis at 10 p.m. is 3 golf carts, one bachelorette sash, and a security guard whispering into his sleeve.",
+      "overlay": "DOWNTOWN WEST PALM",
+      "sub": "PAY TO FEEL CALM",
+      "emoji": "☕",
+      "location": {
+        "name": "Rosemary Square, West Palm Beach",
+        "lat": 26.7066,
+        "lon": -80.057,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 850,
+        "pitch": -34,
+        "heading": 35,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 2,
+      "text": "Number two, Boca by Mizner Park. My aunt says it’s classy, then she circles the garage on Plaza Real for twenty-two minutes behind a Range Rover with no reverse lights. Every restaurant has one guy explaining his boat slip like it’s a medical degree. I respect it. Stay for number one, I’m dead serious.",
+      "caption": "Number 2, Boca by Mizner Park. My aunt says it’s classy, then she circles the garage on Plaza Real for 22 minutes behind a Range Rover with no reverse lights. Every restaurant has one guy explaining his boat slip like it’s a medical degree. I respect it. Stay for number 1, I’m dead serious.",
+      "overlay": "BOCA RATON",
+      "sub": "RICH GARAGE PURGATORY",
+      "emoji": "🛥️",
+      "alert": "BOCA TAX 💀",
+      "location": {
+        "name": "Mizner Park, Plaza Real, Boca Raton",
+        "lat": 26.3532,
+        "lon": -80.0855,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 750,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "rank": 1,
+      "text": "And number one... Fort Lauderdale. I was on Federal Highway by Ruth’s Chris at Northeast twenty-sixth after that stupid rain, and a hero in a lifted truck hit the floodwater like he was docking in Bimini. The wake slapped a Corolla, the valet guy looked tired, and a crane down Las Olas kept spinning. Miami Junior.",
+      "caption": "And number 1... Fort Lauderdale. I was on Federal Highway by Ruth’s Chris at NE 26th after that stupid rain, and a hero in a lifted truck hit the floodwater like he was docking in Bimini. The wake slapped a Corolla, the valet guy looked tired, and a crane down Las Olas kept spinning. Miami Junior.",
+      "overlay": "FORT LAUDERDALE",
+      "sub": "BRICKELL WITH WAKE",
+      "emoji": "🌊",
+      "alert": "WAKE DAMAGE 🚨",
+      "location": {
+        "name": "North Federal Highway and Northeast 26th Street, Fort Lauderdale",
+        "lat": 26.1606,
+        "lon": -80.1192,
+        "h": 12
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 650,
+        "pitch": -30,
+        "heading": 185
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Who’s pretending harder, Lauderdale, Boca, or West Palm?",
+      "overlay": "PICK A SIDE 👇",
+      "sub": "Name names",
+      "location": {
+        "name": "Las Olas Boulevard Bridge, Fort Lauderdale",
+        "lat": 26.1195,
+        "lon": -80.1401,
+        "h": 120
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -33,
+        "heading": 215
+      }
+    }
+  ],
+  "id": "006-south-florida-places-trying-way-too-hard"
+}
