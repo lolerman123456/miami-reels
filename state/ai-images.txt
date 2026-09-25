@@ -1,3 +1,10 @@
 2026-09-25	photo-cover
 2026-09-25	photo-1
 2026-09-25	photo-2
+2026-09-25	photo-cover
+2026-09-25	photo-1
+2026-09-25	photo-2
+2026-09-25	photo-3
+2026-09-25	photo-4
+2026-09-25	photo-5
+2026-09-25	photo-6
