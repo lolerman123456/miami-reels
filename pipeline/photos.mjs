@@ -64,7 +64,7 @@ async function judge(list, query, context) {
   const content = [
     { type: 'text', text: `Instagram carousel slide about: "${context || query}". Wanted photo: "${query}".\n` +
       `Pick the ONE candidate that clearly shows that subject and looks like an attractive, sharp, modern social-media photo ` +
-      `(no documents, no old/grainy/tilted snapshots, no random interiors, no close-ups of identifiable people). ` +
+      `(no documents, no old/grainy/tilted snapshots, no random interiors, no close-ups of identifiable people, no visible prices, numbers, signs or big text that could clash with the post's own numbers). ` +
       `If none is good enough, answer -1. Reply JSON {"pick": index}.` },
     ...list.flatMap((c, i) => [{ type: 'text', text: `Candidate ${i}: ${c.title}` }, { type: 'image_url', image_url: { url: `data:image/jpeg;base64,${c.data.toString('base64')}`, detail: 'low' } }]),
   ];

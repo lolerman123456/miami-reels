@@ -49,6 +49,7 @@ The cover is a scroll-stopping hook in this exact stacked style (all caps on the
   main: big line that opens the curiosity gap (e.g. "WHAT THE AVERAGE")
   highlight: 1–3 punchy words in giant blue letters (e.g. "FLORIDA MAN")
   bottom: the payoff that forces the swipe (e.g. "LOOKS LIKE")
+  The four lines must read as ONE sentence with a payoff, e.g. "GAS IN FLORIDA / JUST HIT / $4.22 / UP $1.26 FROM LAST YEAR" or "THIS TOWER IN MIAMI / WILL BE THE / TALLEST IN FLORIDA / AT 1,049 FEET". Never repeat a word across lines (not "GAS ... GAS").
   Build the hook around the single most clickable story or idea in the post (a specific shocking detail, not a summary like "stories to know").
   The hook must be true to the slides — never promise something the post doesn't deliver, never claim a study/number that isn't in the sources.
   blur: true when the cover photo should be blurred with a big "?" (mystery hooks), else false.
@@ -189,7 +190,7 @@ function coverHTML(post, dir, h) {
   const c = post.cover; const img = dataUrl(dir, c.photoFile);
   return `
     ${img ? `<div class="bg" style="background-image:url('${img}');${c.blur ? 'filter:blur(26px);transform:scale(1.12)' : ''}"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 30%, #2a3a66, #05070d)"></div>`}
-    <div class="shade" style="background:linear-gradient(to bottom, rgba(0,0,0,.05) 30%, rgba(0,0,0,.35) 55%, rgba(0,0,0,.9) 88%)"></div>
+    <div class="shade" style="background:linear-gradient(to bottom, rgba(0,0,0,0) 28%, rgba(0,0,0,.55) 52%, rgba(0,0,0,.93) 76%)"></div>
     ${c.blur ? `<div class="caps" style="position:absolute;left:0;right:0;top:${h * 0.22}px;text-align:center;font-size:${h > 1400 ? 300 : 250}px">?</div>` : ''}
     ${c.credit && !c.blur ? `<div class="credit">${esc(c.credit)}</div>` : ''}
     <div style="position:absolute;left:40px;right:40px;bottom:${h > 1400 ? 220 : 150}px;text-align:center">
