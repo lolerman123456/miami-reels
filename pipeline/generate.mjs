@@ -32,6 +32,7 @@ HOW IT SOUNDS
 FACTS — THE MOST IMPORTANT RULE
 - Use ONLY facts that appear in the SOURCES you're given. Never invent a number, date, height, price, name or quote.
 - If a source says "about" or "planned", keep that wording. If you're not sure, leave it out.
+- Never mention "sources" in the script; state facts plainly like a person who knows them.
 - Numbers are spoken as words in "text" ("one thousand forty-nine feet", "three thousand eight hundred dollars a month").
 
 BANNED — sounds like AI: "It's not X, it's Y", "That's not X, that's Y", "If not X, then Y", "X isn't just Y",
@@ -73,6 +74,7 @@ For every claim in "text", "caption", "badge", "sub", "overlay" and "igCaption" 
 ranking ("tallest", "first", "biggest") and name — confirm it is supported by the SOURCES.
 - Supported: keep it (match the source's exact number; keep hedges like "about", "planned", "expected").
 - Not supported or contradicted: fix it to what the source says, or remove it and smooth the sentence.
+- NEVER mention sources, "sourced", "these sources", "based on", "according to the data" in text/caption — the viewer never sees the sources. Just state the fact plainly, or cut it.
 - Keep the voice normal and conversational; don't add jokes. Keep all JSON fields, locations and shots. Keep 140–190 spoken words.
 Return ONLY the corrected JSON, plus a field "removed": ["short notes of anything you had to fix or cut"].`;
 
@@ -127,7 +129,7 @@ export async function generateEpisode({ topic } = {}) {
     const spoken = (episode.scenes || []).map(s => s.text).join(' ');
     const words = spoken.split(/\s+/).length;
     try { validate(episode); } catch (e) { console.log(`  attempt ${attempt}: ${e.message}`); continue; }
-    const bad = spoken.match(BANNED); const tells = aiTells(spoken);
+    const bad = spoken.match(BANNED) || spoken.match(/\b(sourced|these sources|the sources|based on (the|these) (sources|data))\b/i); const tells = aiTells(spoken);
     if ((bad || tells.length) && attempt < 3) { console.log(`  attempt ${attempt}: sounds like AI (${[bad?.[0], ...tells].filter(Boolean).join(' | ')}) — rewriting`); continue; }
     if ((words < 120 || words > 210) && attempt < 3) { console.log(`  attempt ${attempt}: ${words} words — rewriting`); continue; }
     console.log(`  script: ${words} words`);
