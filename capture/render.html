@@ -49,6 +49,7 @@ async function main() {
   viewer.clock.shouldAnimate = false;
   const scene = viewer.scene;
   if (scene.skyAtmosphere) scene.skyAtmosphere.show = true;
+  if (job.fxaa) scene.postProcessStages.fxaa.enabled = true;
   scene.fog.enabled = true;
 
   const tileset = await Cesium.createGooglePhotorealistic3DTileset();

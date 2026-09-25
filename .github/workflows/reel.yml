@@ -90,12 +90,14 @@ jobs:
             EPISODE=$(jq -r '.episode // ""' requests/run.json)
             PUBLISH=$(jq -r 'if .publish == false then "false" else "true" end' requests/run.json)
             POST_VIDEO=$(jq -r '.postVideo // ""' requests/run.json)
+            QUALITY=$(jq -r '.quality // ""' requests/run.json)
           fi
           {
             echo "topic<<EOF"; echo "$TOPIC"; echo "EOF"
             echo "episode=$EPISODE"
             echo "publish=$PUBLISH"
             echo "post_video=$POST_VIDEO"
+            echo "quality=$QUALITY"
           } >> "$GITHUB_OUTPUT"
           echo "event=$EVENT topic='$TOPIC' episode='$EPISODE' publish=$PUBLISH"
 
@@ -140,6 +142,7 @@ jobs:
           EVENT: ${{ github.event_name }}
           PUBLISH: ${{ steps.req.outputs.publish }}
           POST_VIDEO: ${{ steps.req.outputs.post_video }}
+          CAPTURE_QUALITY: ${{ steps.req.outputs.quality }}
           GH_TOKEN: ${{ github.token }}
         run: |
           # Fast path: post an already-rendered video from the "videos" release (no re-render).

@@ -20,8 +20,13 @@ export async function captureShots(episode, timeline, epDir, { mode } = {}) {
     .map(s => ({ ...s, skip: countFrames(path.join(framesDir, String(s.index))) }));
 
   if (todo.length) {
-    // Render at 2/3 size and upscale: ~2x faster on integrated GPUs, and Instagram recompresses anyway
-    const job = { width: WIDTH, height: HEIGHT, renderWidth: 720, renderHeight: 1280, sse: 10, frameTimeout: 1800, shots: todo };
+    // standard: render at 2/3 size and upscale (fast, daily posts). high: full 1080x1920, ~2.5x more building detail,
+    // wait for every tile to load, anti-aliasing. Set CAPTURE_QUALITY=high (requests/run.json "quality": "high").
+    const high = process.env.CAPTURE_QUALITY === 'high';
+    const job = high
+      ? { width: WIDTH, height: HEIGHT, renderWidth: WIDTH, renderHeight: HEIGHT, sse: 4, frameTimeout: 12000, fxaa: true, shots: todo }
+      : { width: WIDTH, height: HEIGHT, renderWidth: 720, renderHeight: 1280, sse: 10, frameTimeout: 1800, shots: todo };
+    if (high) console.log('  capture quality: HIGH (slower)');
     const srv = await startCaptureServer({ job, framesDir });
     const key = process.env.GOOGLE_MAPS_API_KEY;
     const usePane = mode === 'pane' || !key;
@@ -57,7 +62,7 @@ export async function captureShots(episode, timeline, epDir, { mode } = {}) {
     if (fs.existsSync(out)) continue;
     await run('ffmpeg', ['-y', '-loglevel', 'error', '-framerate', String(FPS),
       '-i', path.join(framesDir, String(s.index), '%05d.jpg'),
-      '-vf', `scale=${WIDTH}:${HEIGHT}:flags=lanczos`, '-c:v', 'libx264', '-preset', 'medium', '-crf', '17', '-pix_fmt', 'yuv420p', out]);
+      '-vf', `scale=${WIDTH}:${HEIGHT}:flags=lanczos${process.env.CAPTURE_QUALITY === 'high' ? ',unsharp=5:5:0.6:5:5:0,eq=contrast=1.05:saturation=1.12' : ''}`, '-c:v', 'libx264', '-preset', process.env.CAPTURE_QUALITY === 'high' ? 'slow' : 'medium', '-crf', process.env.CAPTURE_QUALITY === 'high' ? '14' : '17', '-pix_fmt', 'yuv420p', out]);
     console.log(`  shot ${s.index} → ${path.relative(epDir, out)}`);
   }
   return shots.map(s => `shots/${s.index}.mp4`);
