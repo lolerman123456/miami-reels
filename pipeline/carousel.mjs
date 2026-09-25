@@ -234,13 +234,24 @@ export async function renderCarousel(dir) {
 }
 
 async function chat(messages) {
-  const res = await fetch('https://api.openai.com/v1/chat/completions', {
-    method: 'POST',
-    headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ model: process.env.OPENAI_MODEL || 'gpt-5.5', response_format: { type: 'json_object' }, messages }),
-  });
-  if (!res.ok) throw new Error(`OpenAI ${res.status}: ${await res.text()}`);
-  return JSON.parse((await res.json()).choices[0].message.content);
+  // Low reasoning effort keeps it well under Node's 5-min header timeout; retry network hiccups.
+  let effort = 'low';
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      const res = await fetch('https://api.openai.com/v1/chat/completions', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model: process.env.OPENAI_MODEL || 'gpt-5.5', response_format: { type: 'json_object' }, messages,
+          ...(effort ? { reasoning_effort: effort } : {}) }),
+      });
+      if (res.status === 400 && effort) { const t = await res.text(); if (/reasoning/i.test(t)) { effort = null; attempt--; continue; } throw new Error(`OpenAI 400: ${t}`); }
+      if (!res.ok) throw new Error(`OpenAI ${res.status}: ${await res.text()}`);
+      return JSON.parse((await res.json()).choices[0].message.content);
+    } catch (e) {
+      if (attempt === 3) throw e;
+      console.log(`  (OpenAI attempt ${attempt} failed: ${e.message.slice(0, 120)} — retrying)`);
+    }
+  }
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
