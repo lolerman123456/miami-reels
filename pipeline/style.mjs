@@ -15,11 +15,16 @@ comma, colon or rewrite the sentence. No en dashes between clauses either. Hyphe
   Let the number or fact carry it.
 - No intro or transition phrases that frame something as significant or surprising ("Interestingly", "Notably",
   "It's worth noting", "In a major move", "Big news"). Get to the fact.
-- Humor: wry and subtle, at most ONE dry line per slide/scene, and it must come out of the fact itself, said flat
-  (e.g. "Brickell rent is $3,831 a month. That's $45,972 a year before parking." / "Up 89% since 2015. The beach is the same size.").
-  NEVER the meme-caption pattern: no lists of quirky things ("a warehouse you swear is a restaurant, golf carts acting rich,
-  a plaza nobody planned for"), no personification ("acting rich", "pretending", "treated like suggestions"),
-  no "starter pack", "energy", "be having", "nobody asked for", "like it's a", no puns, no "relatable" exaggerations.
+- HUMOR (from comedy-writing guides): humor comes from SURPRISE; a formula stops being funny the second time.
+  * Default is no joke. At most ONE joke in the whole post/video, only where a fact genuinely invites it. Most posts: zero.
+  * Techniques to choose from (use a different one each time): say the obvious thing everyone thinks but nobody says;
+    self-deprecation (we live here and pay this rent too); play dumb / take something literally; a short real moment
+    people recognize; exaggerate one true detail to an absurd extreme; a callback to an earlier slide.
+  * Said like a person talking, not a caption. Never mean, never at a group of people.
+  * BANNED formulas (they read as AI): fact + ironic tag ("Same commute, $1,102 more." / "The beach is the same size." /
+    "X went up, Y stayed the same." / "and the landlord got it." / "didn't get the memo."); lists of quirky things;
+    personification ("acting rich", "pretending", "treated like suggestions"); "starter pack", "energy", "be having",
+    "nobody asked for", "like it's a"; puns.
 - Short, dense sentences. Every sentence carries a fact.`;
 
 export function toneLines() {
@@ -29,12 +34,13 @@ export function toneLines() {
 }
 
 // Short reminder appended to every user message (keeps the style from fading).
-export const REMINDER = 'Reminder: house style. No em or en dashes. Active voice, direct statements, no contrast framing, no subjective adjectives, no quirky lists or personification; at most one dry line that comes from the fact.';
+export const REMINDER = 'Reminder: house style. No em or en dashes. Active voice, direct statements, no contrast framing, no subjective adjectives, no quirky lists, no fact + ironic tag; at most one joke in the whole post, only if a fact invites it.';
 
 // Meme-caption / "white girl humor" patterns the owner hates: quirky lists and personification.
 export const MEME_TELLS = [
   /\b(acting|pretending|treated|dressed) (like|as|rich)\b/i, /\blike it['’]s a\b/i, /\bnobody (asked|planned|needed)\b/i,
-  /\bstarter pack\b/i, /\benergy\b/i, /\bbe having\b/i, /\byou swear\b/i, /\bthe way (it|they|he|she)\b/i,
+  /\bstarter pack\b/i, /(^|[.!?]\s+)same \w+/i, /\b(is|stayed|still|remains?) the same\b/i, /\band the \w+ (got|kept|took) (it|that)\b/i,
+  /\bget the memo\b/i, /\benergy\b/i, /\bbe having\b/i, /\byou swear\b/i, /\bthe way (it|they|he|she)\b/i,
 ];
 // a sentence that is a list of 4+ quirky items ("A dad in cargo shorts, a 40-minute left turn, Target as..., and someone...")
 const quirkyList = t => t.split(/(?<=[.!?])\s+/).filter(sn => (sn.match(/,/g) || []).length >= 3 &&
