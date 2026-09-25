@@ -7,6 +7,8 @@ import puppeteer from 'puppeteer';
 import { ROOT, readJSON, writeJSON, step } from './util.mjs';
 import { fetchNews } from './news.mjs';
 import { getPhoto, newPost } from './photos.mjs';
+import { aiTells } from './generate.mjs';
+import { fetchLocalTalk, ownerLines } from './locals.mjs';
 
 const HANDLE = '@getnearapp';
 const TAGS = ['#miami', '#miamidade', '#305', '#southflorida', '#miaminews', '#florida', '#dade', '#miamilife',
@@ -37,6 +39,7 @@ Rules:
 - Satire targets places, traffic, prices, HOAs, tourists, weather, situations — never ethnic groups, nationalities, religions, races, or private people. No slurs, nothing explicit.
 - Every news slide credits its outlet in "source" (use the outlet name exactly as given).
 - Headlines: punchy, ≤ 70 characters, sentence case. Body: 1–2 short sentences, ≤ 200 characters, conversational.
+- Sound like a person texting a friend, not AI. Banned shapes: "It's not X, it's Y", "That's not X, that's Y", "If not X, then Y", "X isn't just Y", "The result? …", "Plot twist", "Here's the thing", "Let's be real", "Welcome to", em-dashes, neat morals, triples. Funny = a specific detail + one flat exaggeration.
 - Caption: a 1–2 line hook, then a question that invites comments. Don't list sources in the caption (we add them).
 
 The cover is a scroll-stopping hook in this exact stacked style (all caps on the image):
@@ -73,11 +76,15 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
 
   step(`Writing ${kind} carousel${feature ? ` (${feature.name})` : ''}`);
   const news = await fetchNews(spec.feed);
+  const talk = kind === 'world' ? [] : await fetchLocalTalk().catch(() => []);
+  const mine = ownerLines();
   const recent = recentPosts();
   const ask = [
     topic ? `The account owner asked for this — follow it: ${topic}` : (feature ? feature.ask : spec.ask),
     `Today (New York): ${new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric' })}`,
     `Headlines (outlet — headline — summary):\n${news.map(n => `- ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}`,
+    talk.length ? `What real locals posted this week (for tone and topics only — not news sources; never quote, never mention Reddit; skip politics/immigration/religion):\n${talk.map(t => '- ' + t).join('\n')}` : '',
+    mine.length ? `Lines the account owner wrote — match this voice:\n${mine.map(t => '- ' + t).join('\n')}` : '',
     recent.length ? `Our posts from the last week (don't repeat these unless there's an update — then tag it UPDATE):\n${recent.flatMap(p => p.slides.map(s => `- ${p.date}: ${s.headline}`)).join('\n')}` : '',
   ].filter(Boolean).join('\n\n');
 
@@ -85,6 +92,8 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   for (let attempt = 1; attempt <= 3; attempt++) {
     post = await chat([{ role: 'system', content: SYSTEM }, { role: 'user', content: ask }]);
     const n = post?.slides?.length || 0;
+    const tells = aiTells(JSON.stringify([post?.caption, ...(post?.slides || []).map(x => [x.headline, x.body])]));
+    if (tells.length && attempt < 3) { console.log(`  attempt ${attempt}: sounds like AI (${tells.join(' | ')}) — rewriting`); post = null; continue; }
     const incomplete = (post?.slides || []).filter(s => !s?.headline || !s?.body || !s?.photo).length;
     if (post?.cover?.highlight && post.cover.photo && n >= 3 && n <= 8 && !incomplete) break;
     console.log(`  attempt ${attempt}: bad shape (${n} slides, ${incomplete} incomplete) — retrying`);

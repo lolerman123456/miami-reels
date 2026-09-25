@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, readJSON, writeJSON } from './util.mjs';
+import { fetchLocalTalk, ownerLines } from './locals.mjs';
 
 const VOICE = `WHO IS TALKING
 You are a born-and-raised Miami local with a big mouth, recording a voiceover on your phone. You've sat in traffic on the
@@ -37,6 +38,18 @@ BANNED (instant rewrite if any appear): vibes, iconic, hidden gem, paradise, bus
 "hits different", "literally", "absolutely", "ultimate", "the real MVP", "we need to talk about", "let that sink in",
 "no cap", rhetorical triple adjectives, and any sentence that could be about any city (if you could swap "Miami" for
 "Phoenix" and it still works, it's too generic — rewrite it).
+
+SOUNDS LIKE AI (banned sentence SHAPES — people don't talk like this):
+- Contrast framing: "It's not X, it's Y." / "That's not X, that's Y." / "If not X, then Y." / "X isn't just Y, it's Z." /
+  "Not because X, but because Y." / "Less X, more Y." / "X? No. Y." — say the Y part straight, or make it a real joke.
+- Set-up-and-answer: "The result? …" "The worst part? …" "The catch? …" "Plot twist:" "Spoiler:" "One word:".
+- Openers: "Picture this", "Imagine", "Here's the thing", "Let's be real/honest", "Welcome to", "And honestly?".
+- Triples ("loud, proud and broke"), em-dashes, ending an item on a moral or a neat summary.
+HOW REAL PEOPLE ARE FUNNY: a specific thing you actually saw + one exaggeration, said flat. Understatement. Petty
+complaints taken way too seriously. Callbacks to an earlier item. Talking to one friend, not an audience.
+  e.g. "The light at Coral Way and 27th has been red since 2019. I've aged in that turn lane."
+  e.g. "My cousin moved to Doral for the schools. Now he sits on the 836 for forty minutes to get to a Chipotle."
+  e.g. "Valet on Las Olas wanted thirty dollars. My car is worth forty."
 
 SAFETY: roast places, prices, traffic, habits, HOAs, clubs, tourists, weather — never ethnic groups, nationalities,
 religions, races, or real private individuals. No slurs, nothing sexual. Satire, not hate.`;
@@ -88,6 +101,16 @@ ${VOICE}
 
 ${FORMAT}`;
 
+// AI-sounding sentence shapes (checked on the spoken script; any hit → rewrite)
+const AI_TELLS = [
+  /\b(it|that|this)(['’]s| is) not\b[^.!?]{0,60}[,;—-]\s*(it|that|this)(['’]s| is)\b/i,
+  /\b(it|that|this)(['’]s| is)n['’]t\b[^.!?]{0,60}[,;—-]\s*(it|that|this)(['’]s| is)\b/i,
+  /\bisn['’]t just\b/i, /\bif not\b[^.!?]{0,40},\s*then\b/i, /\bnot because\b[^.!?]{0,60}\bbut because\b/i,
+  /\bless \w+[^.!?]{0,30}\bmore \w+/i, /\b(the (result|catch|worst part|best part|twist))\?/i,
+  /\b(plot twist|spoiler|one word|picture this|here['’]s the thing|let['’]s be (real|honest)|welcome to|and honestly\?)/i, /—/,
+];
+export const aiTells = text => AI_TELLS.filter(r => r.test(text)).map(r => (text.match(r) || [''])[0]);
+
 const BANNED = /\b(vibes?|iconic|hidden gem|paradise|bustling|nestled|in the heart of|whether you're|let's dive|buckle up|faint of heart|it's giving|main character|npcs?|emotional damage|lives rent free|chaos|chaotic|unhinged|hits different|literally|absolutely|ultimate|real mvp|let that sink in|no cap)\b/i;
 
 export async function generateEpisode({ topic } = {}) {
@@ -96,8 +119,13 @@ export async function generateEpisode({ topic } = {}) {
   const past = existing.map(d => readJSON(path.join(epRoot, d, 'episode.json')).title);
   const num = String(existing.length + 1).padStart(3, '0');
 
+  const talk = await fetchLocalTalk().catch(() => []);
+  const mine = ownerLines();
   const ask = `Today is ${new Date().toDateString()}. Past videos (don't repeat the concept or the same places as #1):\n${past.map(t => '- ' + t).join('\n') || '(none)'}\n\n` +
     (topic ? `Today's topic/angle from the account owner — follow it: ${topic}\n\n` : 'Pick a concept that will start fights in the comments.\n\n') +
+    (talk.length ? `What real locals posted this week (raw material: steal the frustrations and the way they talk, never copy
+a post word for word, never mention Reddit or users; skip politics, immigration, religion, and anything about a private person):\n${talk.map(t => '- ' + t).join('\n')}\n\n` : '') +
+    (mine.length ? `Lines the account owner wrote — this is the voice to match:\n${mine.map(t => '- ' + t).join('\n')}\n\n` : '') +
     'Write the episode.';
 
   let episode;
@@ -109,6 +137,8 @@ export async function generateEpisode({ topic } = {}) {
     const words = spoken.split(/\s+/).length;
     try { validate(episode); } catch (e) { console.log(`  attempt ${attempt}: ${e.message}`); continue; }
     if (bad) { console.log(`  attempt ${attempt}: banned phrase "${bad[0]}" — rewriting`); continue; }
+    const tells = aiTells(spoken);
+    if (tells.length && attempt < 3) { console.log(`  attempt ${attempt}: sounds like AI (${tells.join(' | ')}) — rewriting`); continue; }
     if (words < 100 || words > 175) { console.log(`  attempt ${attempt}: ${words} words — rewriting`); continue; }
     console.log(`  script: ${words} words`);
     break;
