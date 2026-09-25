@@ -47,10 +47,8 @@ The cover is a scroll-stopping hook in this exact stacked style (all caps on the
   The hook must be true to the slides — never promise something the post doesn't deliver, never claim a study/number that isn't in the sources.
   blur: true when the cover photo should be blurred with a big "?" (mystery hooks), else false.
 
-Every cover and slide needs a photo:
-  {"type":"place","query":"Wikimedia Commons search for a real photo of the PLACE or THING (e.g. 'Brightline train Miami', 'Miami International Airport terminal', 'Palmetto Expressway traffic')","prompt":"fallback AI photo description"}
-  or {"type":"ai","prompt":"vivid description of an illustrative photo (e.g. 'police cruiser lights reflecting on a wet Hialeah street at night')"}
-  Use "place" for locations, landmarks, vehicles, buildings. Use "ai" for crime/people/abstract scenes. Never use a real photo of a person to illustrate a news story.
+Every cover and slide needs a photo: {"query":"Wikimedia Commons search for a real stock photo (place, landmark, road, building, vehicle, object, scene — e.g. 'Brightline train Miami', 'Palmetto Expressway traffic', 'police car Miami-Dade', 'Cuban coffee cafecito')","prompt":"AI photo description, used only if no stock photo looks good (e.g. 'police cruiser lights reflecting on a wet Hialeah street at night')"}
+  Stock photos are preferred (AI images are budgeted), so write queries likely to find a real, good-looking photo. Never plan a real photo of a person to illustrate a news story.
 
 Return JSON: {"cover":{"top":"...","main":"...","highlight":"...","bottom":"...","blur":false,"photo":{...}},"slides":[{"tag":"ONE-WORD LABEL (e.g. TRAFFIC, WEATHER, CRIME, MONEY, UPDATE, WEIRD, SPORTS, WORLD, USA, CULTURE)","headline":"...","highlight":"2-3 word phrase copied exactly from the headline to color blue","body":"...","place":"neighborhood/city or country, optional","source":"outlet or empty for opinion slides","photo":{...}}],"caption":"...","hashtags":["5-8 extra niche hashtags"]}
 3 to 7 slides. EVERY slide must have tag, headline, highlight, body and photo — for list formats (starter packs, matchups) put the list items in body.`;
@@ -110,7 +108,8 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   fs.mkdirSync(dir, { recursive: true });
   step('Finding photos');
   for (const [i, item] of [post.cover, ...post.slides].entries()) {
-    const photo = await getPhoto(item.photo, dir, i ? `photo-${i}` : 'photo-cover');
+    const photo = await getPhoto(item.photo, dir, i ? `photo-${i}` : 'photo-cover',
+      { context: i ? item.headline : [item.top, item.main, item.highlight, item.bottom].filter(Boolean).join(' ') });
     if (photo) { item.photoFile = path.basename(photo.file); item.credit = photo.credit; }
     console.log(`  ${i ? '#' + i : 'cover'}: ${photo ? photo.credit : 'no photo'}`);
   }
