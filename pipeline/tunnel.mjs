@@ -8,17 +8,26 @@ import { spawn } from 'node:child_process';
 import { ROOT } from './util.mjs';
 
 export async function serveFilePublicly(file) {
+  const { urls, close } = await serveFilesPublicly([file]);
+  return { url: urls[0], close };
+}
+
+// Same, for several files at once (carousel slides): one tunnel, one URL per file.
+export async function serveFilesPublicly(files) {
   const secret = crypto.randomBytes(16).toString('hex');
-  const name = `/${secret}/${path.basename(file)}`;
-  const size = fs.statSync(file).size;
+  const routes = new Map(files.map((f, i) => [`/${secret}/${i}-${path.basename(f)}`, f]));
+  const TYPES = { '.mp4': 'video/mp4', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png' };
 
   const server = http.createServer((req, res) => {
-    if (req.url !== name) { res.writeHead(404); return res.end(); }
+    const file = routes.get(req.url);
+    if (!file) { res.writeHead(404); return res.end(); }
+    const size = fs.statSync(file).size;
     const range = /bytes=(\d*)-(\d*)/.exec(req.headers.range || '');
     let start = 0, end = size - 1, code = 200;
     if (range) { start = range[1] ? +range[1] : 0; end = range[2] ? +range[2] : size - 1; code = 206; }
     res.writeHead(code, {
-      'Content-Type': 'video/mp4', 'Content-Length': end - start + 1, 'Accept-Ranges': 'bytes',
+      'Content-Type': TYPES[path.extname(file).toLowerCase()] || 'application/octet-stream',
+      'Content-Length': end - start + 1, 'Accept-Ranges': 'bytes',
       ...(code === 206 ? { 'Content-Range': `bytes ${start}-${end}/${size}` } : {}),
     });
     if (req.method === 'HEAD') return res.end();
@@ -40,11 +49,11 @@ export async function serveFilePublicly(file) {
     cf.on('exit', c => reject(new Error('cloudflared exited ' + c)));
   });
 
-  const url = base + name;
-  // wait until the tunnel actually serves the file (DNS for new tunnels can take a few seconds)
+  const urls = [...routes.keys()].map(r => base + r);
+  // wait until the tunnel actually serves the files (DNS for new tunnels can take a few seconds)
   for (let i = 0; i < 30; i++) {
-    try { if ((await fetch(url, { method: 'HEAD' })).ok) break; } catch {}
+    try { if ((await fetch(urls[0], { method: 'HEAD' })).ok) break; } catch {}
     await new Promise(r => setTimeout(r, 2000));
   }
-  return { url, close: () => { cf.kill(); server.close(); } };
+  return { urls, close: () => { cf.kill(); server.close(); } };
 }

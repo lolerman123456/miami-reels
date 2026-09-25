@@ -8,3 +8,4 @@ index.html
 .claude/
 episodes/*/*
 !episodes/*/episode.json
+posts/*/*.jpg

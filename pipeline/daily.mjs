@@ -9,7 +9,7 @@ import path from 'node:path';
 import { ROOT, readJSON } from './util.mjs';
 import { generateEpisode } from './generate.mjs';
 import { makeEpisode } from './make.mjs';
-import { publishReel } from './publish.mjs';
+import { publishReel, publishStory } from './publish.mjs';
 
 const args = process.argv.slice(2);
 const flag = name => args.includes(name);
@@ -31,4 +31,8 @@ if (!flag('--force') && !episodeArg && !topic) {
 const dir = episodeArg ? path.resolve(ROOT, episodeArg) : await generateEpisode({ topic });
 const { out, episode } = await makeEpisode(dir);
 if (dry) console.log(`(dry run) Would post ${out}`);
-else await publishReel(out, episode.igCaption);
+else {
+  await publishReel(out, episode.igCaption);
+  // cross-post to stories; a failed story never fails the Reel
+  await publishStory(out, episode.id).catch(e => console.log(`(story skipped: ${e.message})`));
+}

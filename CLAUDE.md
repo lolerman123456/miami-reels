@@ -1,7 +1,10 @@
 # Miami Reels — operating guide for Claude
 
-This repo makes and posts **two** satirical South Florida Instagram Reels per day to **@getnearapp**, at ~1pm and ~8pm New York time
-(the owner's ChatGPT setup separately posts carousels at 9am and 5pm — keep Reels away from those times).
+This repo runs **@getnearapp** end to end (the owner handed Claude the account; ChatGPT no longer posts). Daily, New York time:
+2 satirical map Reels (~1pm, ~8pm) + 3 carousels — `brief` 9am (South Florida news), `feature` 5pm (rotating culture /
+opinion / follow-up, see FEATURES in `pipeline/carousel.mjs`), `world` 10pm (US + world). Every post is cross-posted to stories.
+Goal: grow the account. Raise volume slowly as it grows (add carousel slots in `control.json` → `carousels`); the owner audits
+and archives anything bad.
 Everything runs in GitHub Actions (`.github/workflows/reel.yml`) — the owner controls it by chatting with
 Claude from their phone. Your job in a chat is to turn their request into a commit on `main`.
 
@@ -13,6 +16,8 @@ Claude from their phone. Your job in a chat is to turn their request into a comm
 | "Make one but don't post it" | Same, with `"publish": false`. The video is attached to the Actions run as an artifact. |
 | "Post this exact script" | Write `episodes/<NNN>-<slug>/episode.json` (copy the shape of `episodes/001-rudest-cities/episode.json`), then `requests/run.json` → `{"episode": "episodes/<NNN>-<slug>", "publish": true, "at": "..."}`. Commit both, push. |
 | "Post that preview" (already rendered) | `requests/run.json` → `{"postVideo": "episodes/<NNN>-<slug>", "at": "..."}`. Posts the video already in the `videos` release — no re-render, live in ~5–10 min. |
+| "Post a carousel now" | `requests/post.json` → `{"kind": "brief|world|feature", "topic": "optional angle", "publish": true, "at": "..."}`. Live in ~8 min (`.github/workflows/posts.yml`). |
+| "Change carousel times" / "add a carousel" | `control.json` → `carousels` = `{"kind": hour}`. |
 | "Change the post times" / "add a third post" | `control.json` → `postHours` = New York post hours, 24h (e.g. `[13, 20]`). A check every 30 min in `reel.yml` starts a run ~1 hour before each (up to 4 retries; `state/slots.txt` prevents double posts). Commit + push. |
 | "Pause" / "resume" | `control.json` → `"paused": true/false`. Commit + push. |
 | "Skip tomorrow" / a date | Add `"YYYY-MM-DD"` (New York date) to `control.json` → `skipDates` (skips both posts that day). Commit + push. |

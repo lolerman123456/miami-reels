@@ -4,5 +4,10 @@
     13,
     20
   ],
-  "skipDates": []
+  "skipDates": [],
+  "carousels": {
+    "brief": 9,
+    "feature": 17,
+    "world": 22
+  }
 }

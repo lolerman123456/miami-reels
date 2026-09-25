@@ -1,9 +1,9 @@
-// Publish an MP4 as an Instagram Reel via the Instagram Graph API (resumable upload, no public URL needed).
+// Publish to Instagram via the Graph API: Reels (publishReel), carousels (publishCarousel), stories (publishStory).
 //   node pipeline/publish.mjs out/001-rudest-cities.mp4 [episodes/001-rudest-cities]
 import fs from 'node:fs';
 import path from 'node:path';
 import { readJSON, ROOT } from './util.mjs';
-import { serveFilePublicly } from './tunnel.mjs';
+import { serveFilePublicly, serveFilesPublicly } from './tunnel.mjs';
 
 const VERSION = 'v23.0';
 
@@ -54,12 +54,71 @@ export async function publishReel(videoFile, caption) {
     tunnel?.close();
   }
 
-  const pub = await call(`${api}/${igUser}/media_publish`, { creation_id: create.id, access_token: token });
+  return finish(api, igUser, token, create.id, path.basename(videoFile));
+}
+
+// Carousel of 2–10 JPEGs (Instagram only accepts JPEG for images).
+export async function publishCarousel(imageFiles, caption, label) {
+  const { api, igUser, token } = auth();
+  const tunnel = await serveFilesPublicly(imageFiles);
+  try {
+    console.log(`▶ Instagram: creating carousel (${imageFiles.length} slides)`);
+    const children = [];
+    for (const url of tunnel.urls) {
+      const c = await call(`${api}/${igUser}/media`, { image_url: url, is_carousel_item: 'true', access_token: token });
+      children.push(c.id);
+    }
+    for (const id of children) await waitReady(api, token, id);
+    const create = await call(`${api}/${igUser}/media`, {
+      media_type: 'CAROUSEL', children: children.join(','), caption, access_token: token,
+    });
+    await waitReady(api, token, create.id);
+    return await finish(api, igUser, token, create.id, label || path.basename(path.dirname(imageFiles[0])));
+  } finally {
+    tunnel.close();
+  }
+}
+
+// Story from a 9:16 JPEG or MP4 (≤60 s).
+export async function publishStory(file, label) {
+  const { api, igUser, token } = auth();
+  const tunnel = await serveFilePublicly(file);
+  try {
+    const video = file.endsWith('.mp4');
+    console.log(`▶ Instagram: creating story (${video ? 'video' : 'image'})`);
+    const create = await call(`${api}/${igUser}/media`, {
+      media_type: 'STORIES', [video ? 'video_url' : 'image_url']: tunnel.url, access_token: token,
+    });
+    await waitReady(api, token, create.id);
+    return await finish(api, igUser, token, create.id, `story:${label || path.basename(file)}`);
+  } finally {
+    tunnel.close();
+  }
+}
+
+function auth() {
+  const token = process.env.INSTAGRAM_ACCESS_TOKEN;
+  const igUser = process.env.INSTAGRAM_USER_ID;
+  if (!token || !igUser) throw new Error('Set INSTAGRAM_ACCESS_TOKEN and INSTAGRAM_USER_ID in .env');
+  const host = token.startsWith('IG') ? 'graph.instagram.com' : 'graph.facebook.com';
+  return { api: `https://${host}/${VERSION}`, igUser, token };
+}
+
+async function waitReady(api, token, id) {
+  for (let i = 0; i < 90; i++) {
+    const s = await (await fetch(`${api}/${id}?fields=status_code,status&access_token=${token}`)).json();
+    if (!s.status_code || s.status_code === 'FINISHED') return;
+    if (s.status_code === 'ERROR' || s.status_code === 'EXPIRED') throw new Error('Processing failed: ' + JSON.stringify(s));
+    await new Promise(r => setTimeout(r, 5000));
+  }
+  throw new Error('Instagram processing timed out');
+}
+
+async function finish(api, igUser, token, creationId, label) {
+  const pub = await call(`${api}/${igUser}/media_publish`, { creation_id: creationId, access_token: token });
   const info = await (await fetch(`${api}/${pub.id}?fields=permalink&access_token=${token}`)).json();
   console.log(`✔ Posted: ${info.permalink || pub.id}`);
-
-  const logFile = path.join(ROOT, 'posted.log');
-  fs.appendFileSync(logFile, `${new Date().toISOString()}\t${path.basename(videoFile)}\t${info.permalink || pub.id}\n`);
+  fs.appendFileSync(path.join(ROOT, 'posted.log'), `${new Date().toISOString()}\t${label}\t${info.permalink || pub.id}\n`);
   return info.permalink || pub.id;
 }
 
@@ -75,4 +134,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   if (!video) { console.error('Usage: node pipeline/publish.mjs out/<id>.mp4 [episodes/<id>]'); process.exit(1); }
   const dir = epDir || path.join(ROOT, 'episodes', path.basename(video, '.mp4'));
   await publishReel(video, readJSON(path.join(dir, 'episode.json')).igCaption);
+  await publishStory(video).catch(e => console.log(`(story skipped: ${e.message})`));
 }

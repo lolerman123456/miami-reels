@@ -1,0 +1,144 @@
+name: Posts
+
+on:
+  # Carousels (+ a story teaser each). Checks every 30 min; control.json → "carousels" maps kind → New York hour.
+  # A slot can start from 40 min before to 45 min after its hour; an early run waits until the hour, then posts.
+  # state/slots.txt ("YYYY-MM-DD H kind") prevents double posts.
+  schedule:
+    - cron: '20,50 * * * *'
+
+  workflow_dispatch:
+    inputs:
+      kind:
+        description: 'brief (local news) | world (US + world) | feature (culture/opinion)'
+        required: true
+        default: 'brief'
+      topic:
+        description: 'Optional angle'
+        required: false
+        default: ''
+      publish:
+        description: 'Post to Instagram'
+        type: boolean
+        default: true
+
+  # From a chat: commit requests/post.json {"kind":"brief","topic":"","publish":true,"at":"..."}
+  push:
+    branches: [main]
+    paths: ['requests/post.json']
+
+permissions:
+  contents: write
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      go: ${{ steps.check.outputs.go }}
+      kind: ${{ steps.check.outputs.kind }}
+      wait: ${{ steps.check.outputs.wait }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: check
+        env:
+          EVENT: ${{ github.event_name }}
+          IN_KIND: ${{ github.event.inputs.kind }}
+        run: |
+          if [ "$EVENT" = "workflow_dispatch" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; echo "kind=$IN_KIND" >> "$GITHUB_OUTPUT"; echo "wait=0" >> "$GITHUB_OUTPUT"; exit 0; fi
+          if [ "$EVENT" = "push" ]; then echo "go=true" >> "$GITHUB_OUTPUT"; echo "kind=$(jq -r '.kind // "brief"' requests/post.json)" >> "$GITHUB_OUTPUT"; echo "wait=0" >> "$GITHUB_OUTPUT"; exit 0; fi
+          D=$(TZ=America/New_York date +%F)
+          nogo() { echo "NY $D → $1"; echo "go=false" >> "$GITHUB_OUTPUT"; exit 0; }
+          jq -e '.paused' control.json >/dev/null && nogo "paused"
+          jq -e --arg d "$D" '(.skipDates // []) | index($d)' control.json >/dev/null && nogo "skipped day"
+          M=$(( 10#$(TZ=America/New_York date +%H) * 60 + 10#$(TZ=America/New_York date +%M) ))
+          for row in $(jq -r '(.carousels // {}) | to_entries[] | "\(.key)=\(.value)"' control.json); do
+            K=${row%=*}; P=${row#*=}
+            DELTA=$(( P * 60 - M ))
+            [ $DELTA -le 40 ] && [ $DELTA -ge -45 ] || continue
+            SLOT="$D $P $K"
+            grep -qx "$SLOT" state/slots.txt 2>/dev/null && nogo "slot $SLOT already done"
+            mkdir -p state; echo "$SLOT" >> state/slots.txt; tail -n 80 state/slots.txt > s.tmp && mv s.tmp state/slots.txt
+            git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
+            git add state/slots.txt && git commit -qm "Claim slot $SLOT"
+            for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+            # the job takes ~6 min to get ready; wait the rest so it posts on the hour
+            W=$(( DELTA > 7 ? (DELTA - 7) * 60 : 0 ))
+            echo "NY $D → $K carousel for ${P}:00 (in $DELTA min)"
+            { echo "go=true"; echo "kind=$K"; echo "wait=$W"; } >> "$GITHUB_OUTPUT"; exit 0
+          done
+          nogo "not a carousel slot"
+
+  post:
+    needs: gate
+    if: needs.gate.outputs.go == 'true'
+    concurrency:
+      group: posts
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: System packages
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq fonts-noto-color-emoji > /dev/null
+          sudo curl -sSL -o /usr/local/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+          sudo chmod +x /usr/local/bin/cloudflared
+
+      - name: Cache browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/puppeteer
+          key: puppeteer-${{ hashFiles('package-lock.json') }}
+
+      - run: npm ci
+
+      - name: Write, render and post
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.5' }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          CLOUDFLARED_BIN: /usr/local/bin/cloudflared
+          EVENT: ${{ github.event_name }}
+          KIND: ${{ needs.gate.outputs.kind }}
+          WAIT: ${{ needs.gate.outputs.wait }}
+          IN_TOPIC: ${{ github.event.inputs.topic }}
+          IN_PUBLISH: ${{ github.event.inputs.publish }}
+        run: |
+          TOPIC="$IN_TOPIC"; PUBLISH="${IN_PUBLISH:-true}"
+          if [ "$EVENT" = "push" ]; then
+            TOPIC=$(jq -r '.topic // ""' requests/post.json)
+            PUBLISH=$(jq -r 'if .publish == false then "false" else "true" end' requests/post.json)
+          fi
+          ARGS=("$KIND")
+          [ -n "$TOPIC" ] && ARGS+=(--topic "$TOPIC")
+          [ "$PUBLISH" = "false" ] && ARGS+=(--dry-run)
+          if [ "${WAIT:-0}" -gt 0 ]; then echo "waiting $((WAIT / 60)) min to post on the hour"; sleep "$WAIT"; fi
+          node pipeline/carousel.mjs "${ARGS[@]}"
+
+      - name: Upload slides
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-${{ github.run_number }}
+          path: posts/*/*.jpg
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Save post + log
+        if: always()
+        run: |
+          git config user.name "reel-bot"
+          git config user.email "reel-bot@users.noreply.github.com"
+          git add posts/*/post.json posted.log 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Post run ${{ github.run_number }} ($(date -u +%F))"
+            git pull --rebase && git push
+          fi
