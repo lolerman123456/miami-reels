@@ -1,0 +1,149 @@
+{
+  "title": "Brightline By The Numbers",
+  "sources": [
+    "The Desert Sun",
+    "Sun Sentinel",
+    "ABC7 WWSB",
+    "The Palm Beach Post",
+    "Wikipedia: Brightline",
+    "Wikipedia: MiamiCentral",
+    "Wikipedia: Orlando International Airport Intermodal Terminal"
+  ],
+  "igCaption": "Brightline filed for Chapter 11 on Sept. 25, 2026, but trains are still running from Miami to Orlando.\nThe route is 235 miles, covered in 3 hours and 25 minutes, with a 125 mph top segment between Orlando and Cocoa.\nWould you ride during restructuring?\n\nSources: The Desert Sun, Sun Sentinel, ABC7 WWSB, The Palm Beach Post, Wikipedia: Brightline, Wikipedia: MiamiCentral, Wikipedia: Orlando International Airport Intermodal Terminal\n\n#Brightline #Miami #Orlando #SouthFlorida #FloridaRail #MiamiCentral #Transit #Trains #Florida #Chapter11 #RailTravel #Urbanism",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Brightline filed for Chapter eleven bankruptcy, but its Miami to Orlando trains are still running as usual.",
+      "overlay": [
+        "BY THE NUMBERS",
+        "BRIGHTLINE"
+      ],
+      "emojis": [
+        "🚆",
+        "🏙️",
+        "📉",
+        "🧾"
+      ],
+      "location": {
+        "name": "MiamiCentral",
+        "lat": 25.77753,
+        "lon": -80.19578,
+        "h": 70
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Brightline covers a two hundred thirty-five mile route between MiamiCentral and Orlando International Airport in three hours and twenty-five minutes. The stops named in these sources are Miami, Fort Lauderdale, West Palm Beach, Aventura, Boca Raton, and Orlando.",
+      "caption": "Brightline covers a 235-mile route between MiamiCentral and Orlando International Airport in 3 hours and 25 minutes. The stops named in these sources are Miami, Fort Lauderdale, West Palm Beach, Aventura, Boca Raton, and Orlando.",
+      "overlay": "MIAMICENTRAL",
+      "badge": "235 MI",
+      "sub": "6 named stops",
+      "emoji": "📍",
+      "location": {
+        "name": "MiamiCentral",
+        "lat": 25.77753,
+        "lon": -80.19578,
+        "h": 70
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 120,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The fastest sourced stretch is between Orlando and Cocoa, where Brightline’s maximum operating speed is one hundred twenty-five miles per hour for thirty-five miles. Across the whole route, the average is sixty-nine miles per hour.",
+      "caption": "The fastest sourced stretch is between Orlando and Cocoa, where Brightline’s maximum operating speed is 125 mph for 35 miles. Across the whole route, the average is 69 mph.",
+      "overlay": "ORLANDO MCO",
+      "badge": "125 MPH",
+      "sub": "Orlando to Cocoa",
+      "emoji": "⚡",
+      "location": {
+        "name": "Orlando International Airport Intermodal Terminal",
+        "lat": 28.41453,
+        "lon": -81.30818,
+        "h": 25
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 260
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The early cost picture began in two thousand twelve, when construction was projected at one point five billion dollars. All Aboard Florida later applied for a one point six billion dollar federal rail loan, and Brightline secured one point seven five billion dollars for the Orlando extension in twenty nineteen.",
+      "caption": "The early cost picture began in 2012, when construction was projected at $1.5B. All Aboard Florida later applied for a $1.6B federal rail loan, and Brightline secured $1.75B for the Orlando extension in 2019.",
+      "overlay": "PROJECT COSTS",
+      "badge": "$1.75B",
+      "sub": "Orlando extension",
+      "emoji": "💵",
+      "location": {
+        "name": "MiamiCentral",
+        "lat": 25.77753,
+        "lon": -80.19578,
+        "h": 70
+      },
+      "shot": {
+        "type": "push",
+        "range": 1600,
+        "pitch": -35,
+        "heading": 40
+      }
+    },
+    {
+      "kind": "item",
+      "text": "On September twenty-fifth, twenty twenty-six, Brightline filed for Chapter eleven. Based on these sources, the confirmed change is bankruptcy restructuring, while trains keep running between Miami and Orlando.",
+      "caption": "On Sept. 25, 2026, Brightline filed for Chapter 11. Based on these sources, the confirmed change is bankruptcy restructuring, while trains keep running between Miami and Orlando.",
+      "overlay": "BANKRUPTCY",
+      "badge": "CH 11",
+      "sub": "Trains still running",
+      "emoji": "📄",
+      "location": {
+        "name": "MiamiCentral",
+        "lat": 25.77753,
+        "lon": -80.19578,
+        "h": 70
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 210,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Would you ride it now, or wait for the restructuring?",
+      "overlay": "WOULD YOU RIDE? 🚆",
+      "sub": "Tell us in the comments",
+      "location": {
+        "name": "Orlando International Airport Intermodal Terminal",
+        "lat": 28.41453,
+        "lon": -81.30818,
+        "h": 25
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -30,
+        "heading": 300
+      }
+    }
+  ],
+  "format": "BY THE NUMBERS",
+  "id": "007-brightline-by-the-numbers"
+}
