@@ -1,0 +1,69 @@
+{
+  "title": "Miami Raves Coming Up",
+  "id": "009-miami-raves-coming-up",
+  "format": "EVENTS",
+  "sources": ["III Points", "Mana Wynwood", "Resident Advisor", "DICE", "Club Space"],
+  "igCaption": "Four big nights of electronic music hit Miami in the next five weeks: III Points at Mana Wynwood, Ravefurrest at The Boombox, Satellite and Halloweek at Club Space.\n\nWhich one are you going to? Tag who you're bringing.\n\nSources: III Points, Mana Wynwood, Resident Advisor, DICE, Club Space\n\n#miamievents #iiipoints #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Four big nights of electronic music are coming to Miami in the next five weeks. Here's where to be and who's playing.",
+      "overlay": ["MIAMI RAVES", "NEXT 5 WEEKS"],
+      "emojis": ["🎧", "🔊", "🌴", "🪩"],
+      "location": {"name": "Downtown Miami", "lat": 25.7845551, "lon": -80.1931533, "h": 60},
+      "shot": {"type": "dive", "range": 1700, "pitch": -34, "heading": 200}
+    },
+    {
+      "kind": "item",
+      "text": "First, III Points takes over Mana Wynwood on Friday, October sixteenth and Saturday the seventeenth. More than one hundred fifty artists play over ten stages, including Underworld, Four Tet, Charlotte de Witte and Flying Lotus. It's all ages.",
+      "caption": "First, III Points takes over Mana Wynwood on Friday, Oct 16 and Saturday the 17th. More than 150 artists play over 10 stages, including Underworld, Four Tet, Charlotte de Witte and Flying Lotus. It's all ages.",
+      "overlay": "III POINTS",
+      "badge": "OCT 16 & 17",
+      "sub": "Mana Wynwood · 150+ artists",
+      "emoji": "🎪",
+      "location": {"name": "Mana Wynwood", "lat": 25.7980804, "lon": -80.201582, "h": 12},
+      "shot": {"type": "arrive", "range": 750, "pitch": -32, "heading": 120, "degrees": 45, "dir": 1}
+    },
+    {
+      "kind": "item",
+      "text": "That same Friday, Ravefurrest brings hardcore and club music to The Boombox on Southwest seventy-fifth Avenue. Doors run from nine p.m. to three a.m., and it's eighteen and up.",
+      "caption": "That same Friday, Ravefurrest brings hardcore and club music to The Boombox on SW 75th Ave. Doors run from 9 p.m. to 3 a.m., and it's 18+.",
+      "overlay": "RAVEFURREST",
+      "badge": "OCT 16 · 9PM",
+      "sub": "The Boombox · 18+",
+      "emoji": "🔊",
+      "location": {"name": "The Boombox", "lat": 25.7284823, "lon": -80.316812, "h": 8},
+      "shot": {"type": "arrive", "range": 650, "pitch": -34, "heading": 300, "degrees": 45, "dir": -1}
+    },
+    {
+      "kind": "item",
+      "text": "On Saturday the seventeenth, Club Space hosts Satellite on The Terrace. Four Tet, Floating Points and Daphni play back to back, with Disco Lines, horsegiirL and Kettama on the bill. It runs Saturday night into Sunday afternoon.",
+      "caption": "On Saturday the 17th, Club Space hosts Satellite on The Terrace. Four Tet, Floating Points and Daphni play back to back, with Disco Lines, horsegiirL and Kettama on the bill. It runs Saturday night into Sunday afternoon.",
+      "overlay": "CLUB SPACE",
+      "badge": "OCT 17",
+      "sub": "Satellite · Four Tet b2b Floating Points b2b Daphni",
+      "emoji": "🪩",
+      "location": {"name": "Club Space", "lat": 25.7845551, "lon": -80.1931533, "h": 20},
+      "shot": {"type": "arrive", "range": 1400, "pitch": -36, "heading": 40, "degrees": 45, "dir": 1}
+    },
+    {
+      "kind": "item",
+      "text": "Club Space closes the month with Halloweek, from October thirtieth through November first. Camelphat plays Friday the thirtieth, and Halloween night follows on Saturday.",
+      "caption": "Club Space closes the month with Halloweek, from Oct 30 through Nov 1. Camelphat plays Friday the 30th, and Halloween night follows on Saturday.",
+      "overlay": "HALLOWEEK",
+      "badge": "OCT 30",
+      "sub": "Club Space · Camelphat",
+      "emoji": "🎃",
+      "location": {"name": "Club Space", "lat": 25.7845551, "lon": -80.1931533, "h": 20},
+      "shot": {"type": "arrive", "range": 1500, "pitch": -34, "heading": 220, "degrees": 45, "dir": -1}
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you going to? Tag who you're bringing.",
+      "overlay": "WHO'S GOING? 🎟️",
+      "sub": "Follow for Miami events",
+      "location": {"name": "Downtown Miami", "lat": 25.7845551, "lon": -80.1931533, "h": 60},
+      "shot": {"type": "pullout", "range": 1500, "pitch": -34, "heading": 180}
+    }
+  ]
+}

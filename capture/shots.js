@@ -4,6 +4,7 @@
 const easeInOutCubic = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 const easeInOutSine = t => -(Math.cos(Math.PI * t) - 1) / 2;
 const easeOutExpo = t => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
+const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
 const lerp = (a, b, t) => a + (b - a) * t;
 const logLerp = (a, b, t) => a * Math.pow(b / a, t);
 
@@ -29,6 +30,15 @@ export function poseAt(shot, t, rad) {
     case 'pullout': {
       const e = easeInOutCubic(t);
       return { h: H + dir * rad(60) * e, p: lerp(P, rad(-70), e), r: logLerp(R, R * 10, e) };
+    }
+    case 'arrive': { // fast swoop in from high above (first ~22%), then a slow-motion circle over the place
+      const k = shot.fast ?? 0.22;
+      if (t < k) {
+        const e = easeOutCubic(t / k);
+        return { h: H - dir * rad(50) * (1 - e), p: lerp(rad(-80), P, e), r: logLerp(R * 25, R, e) };
+      }
+      const u = (t - k) / (1 - k);
+      return { h: H + dir * rad(shot.degrees ?? 45) * easeInOutSine(u), p: P, r: R * (1 - 0.1 * u) };
     }
     case 'push':
     default: { // slow drift toward the target
