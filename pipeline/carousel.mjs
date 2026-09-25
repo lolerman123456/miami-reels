@@ -44,6 +44,7 @@ The cover is a scroll-stopping hook in this exact stacked style (all caps on the
   main: big line that opens the curiosity gap (e.g. "WHAT THE AVERAGE")
   highlight: 1–3 punchy words in giant blue letters (e.g. "FLORIDA MAN")
   bottom: the payoff that forces the swipe (e.g. "LOOKS LIKE")
+  Build the hook around the single most clickable story or idea in the post (a specific shocking detail, not a summary like "stories to know").
   The hook must be true to the slides — never promise something the post doesn't deliver, never claim a study/number that isn't in the sources.
   blur: true when the cover photo should be blurred with a big "?" (mystery hooks), else false.
 

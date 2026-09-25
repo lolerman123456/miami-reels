@@ -128,7 +128,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          D=$(ls -d posts/*-preview 2>/dev/null | head -1); [ -n "$D" ] || exit 0
+          D=$(ls -td posts/*-preview 2>/dev/null | while read d; do ls "$d"/00-cover.jpg >/dev/null 2>&1 && echo "$d" && break; done); [ -n "$D" ] || exit 0
           gh release view slides >/dev/null 2>&1 || gh release create slides --title "Carousel previews" --notes "Preview slides (not posted)."
           for f in "$D"/*.jpg; do case "$f" in */photo-*) continue;; esac; cp "$f" "out-$(basename "$D")-$(basename "$f")"; gh release upload slides "out-$(basename "$D")-$(basename "$f")" --clobber; \
             echo "▶ https://github.com/${{ github.repository }}/releases/download/slides/out-$(basename "$D")-$(basename "$f")" | tee -a "$GITHUB_STEP_SUMMARY"; done
