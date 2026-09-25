@@ -5,10 +5,10 @@ import fs from 'node:fs';
 import path from 'node:path';
 import puppeteer from 'puppeteer';
 import { ROOT, readJSON, writeJSON, step } from './util.mjs';
-import { fetchNews } from './news.mjs';
+import { fetchNews, searchNews } from './news.mjs';
 import { getPhoto, newPost } from './photos.mjs';
 import { aiTells, BANNED } from './generate.mjs';
-import { wikiArticle, rentFacts } from './facts.mjs';
+import { wikiArticle, rentFacts, gasFacts } from './facts.mjs';
 import { STYLE, REMINDER, toneLines, sanitize, memeTells } from './style.mjs';
 
 const HANDLE = '@getnearapp';
@@ -79,6 +79,14 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   step(`Writing ${kind} carousel${feature ? ` (${feature.name})` : ''}`);
   const news = await fetchNews(spec.feed);
   const extra = [];
+  if (topic) {
+    // owner's topic: pull topic-specific headlines + any matching data source
+    const found = await searchNews(`${topic} Florida`).catch(() => []);
+    news.unshift(...found);
+    if (/\b(gas|fuel|pump|gallon)\b/i.test(topic)) (await gasFacts().catch(() => [])).forEach(g => extra.push(`EIA GAS PRICE DATA: ${g}`));
+    if (/\brent\b/i.test(topic)) (await rentFacts(['Miami', 'Hialeah', 'Fort Lauderdale', '33131', 'Doral', 'West Palm Beach']).catch(() => [])).forEach(r => extra.push(`ZILLOW RENT DATA: ${r}`));
+    console.log(`  topic sources: ${found.length} headlines, ${extra.length} data`);
+  }
   if (feature?.wiki || feature?.rent) {
     const plan = await chat([{ role: 'system', content: 'Plan the fact sources for a South Florida Instagram carousel. Return JSON {"wikipedia":["up to 4 exact English Wikipedia article titles"],"rent":["up to 6 South Florida city names or 5-digit ZIPs"]}. Only fill "rent" for rent posts.' },
       { role: 'user', content: `Carousel: ${feature.name}\n${topic || feature.ask}\nDon't repeat these recent posts:\n${recentPosts().map(p => '- ' + (p.kicker || '') + ': ' + p.slides.map(x => x.headline).join('; ')).join('\n')}` }]);

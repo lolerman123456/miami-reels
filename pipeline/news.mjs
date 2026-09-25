@@ -50,6 +50,17 @@ export async function fetchNews(kind = 'local', { hours = 30, max = 60 } = {}) {
   }).slice(0, max);
 }
 
+// Headlines for any topic (Google News search, last `days` days)
+export async function searchNews(query, { days = 7, max = 25 } = {}) {
+  const url = `https://news.google.com/rss/search?q=${encodeURIComponent(query + ' when:' + days + 'd')}&hl=en-US&gl=US&ceid=US:en`;
+  const xml = await (await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (getnear news bot)' }, signal: AbortSignal.timeout(20000) })).text();
+  return xml.split(/<item[\s>]/).slice(1).map(b => {
+    const source = tag(b, 'source') || 'News'; let title = tag(b, 'title');
+    if (title.endsWith(` - ${source}`)) title = title.slice(0, -(source.length + 3));
+    return { title, source, date: Date.parse(tag(b, 'pubDate')) || Date.now(), summary: '' };
+  }).slice(0, max);
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
   for (const i of await fetchNews(process.argv[2] || 'local')) console.log(`[${i.source}] ${i.title}`);
 }

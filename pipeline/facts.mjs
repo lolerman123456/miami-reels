@@ -60,8 +60,32 @@ export async function rentFacts(places) {
   return out;
 }
 
+// Florida average retail price of regular gas, weekly (U.S. Energy Information Administration)
+export async function gasFacts() {
+  const html = await (await fetch('https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=EMM_EPMR_PTE_SFL_DPG&f=W', {
+    headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(30000) })).text();
+  const pts = [];
+  for (const row of html.match(/<tr>[\s\S]*?<\/tr>/g) || []) {
+    const c = [...row.matchAll(/<td[^>]*>([\s\S]*?)<\/td>/g)].map(m => m[1].replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').trim());
+    const ym = /^(\d{4})-(\w{3})$/.exec(c[0] || ''); if (!ym) continue;
+    for (let i = 1; i + 1 < c.length; i += 2) if (c[i] && c[i + 1]) {
+      const [mm, dd] = c[i].split('/'); pts.push({ date: `${ym[1]}-${mm}-${dd}`, price: Number(c[i + 1]) });
+    }
+  }
+  if (!pts.length) return [];
+  pts.sort((a, b) => a.date.localeCompare(b.date));
+  const last = pts.at(-1), back = days => [...pts].reverse().find(p => p.date <= new Date(Date.parse(last.date) - days * 864e5).toISOString().slice(0, 10));
+  const year = pts.filter(p => p.date > new Date(Date.parse(last.date) - 365 * 864e5).toISOString().slice(0, 10));
+  const hi = year.reduce((a, b) => (b.price > a.price ? b : a)), lo = year.reduce((a, b) => (b.price < a.price ? b : a));
+  const f = p => `$${p.price.toFixed(2)} (week of ${p.date})`;
+  return [`Florida average price of regular gasoline: ${f(last)}. One week earlier: ${f(back(7))}. Two weeks earlier: ${f(back(14))}. ` +
+    `One month earlier: ${f(back(30))}. One year earlier: ${f(back(365))}. Highest in the last 12 months: ${f(hi)}. Lowest: ${f(lo)}. ` +
+    `Source: U.S. Energy Information Administration (EIA), weekly Florida retail gasoline prices.`];
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
   const a = process.argv.slice(2);
-  if (a[0] === '--rent') console.log((await rentFacts(a.slice(1))).join('\n'));
+  if (a[0] === '--gas') console.log((await gasFacts()).join('\n'));
+  else if (a[0] === '--rent') console.log((await rentFacts(a.slice(1))).join('\n'));
   else { const w = await wikiArticle(a.join(' ')); console.log(w ? `${w.title} (${w.lat},${w.lon}) ${w.url}\n${w.text.slice(0, 1500)}` : 'not found'); }
 }
