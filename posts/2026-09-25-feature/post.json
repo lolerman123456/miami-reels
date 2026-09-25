@@ -1,0 +1,103 @@
+{
+  "cover": {
+    "top": "NOBODY TALKS ABOUT",
+    "main": "WHAT YOUR",
+    "highlight": "ZIP CODE",
+    "bottom": "IS QUIETLY WEARING",
+    "blur": false,
+    "photo": {
+      "query": "Miami aerial skyline neighborhoods Wikimedia Commons",
+      "prompt": "sunny aerial view of South Florida neighborhoods with roads, condos, palm trees, and skyline in the distance"
+    },
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: B137 / CC BY-SA 4.0"
+  },
+  "slides": [
+    {
+      "tag": "KENDALL",
+      "headline": "Kendall starter pack",
+      "highlight": "Kendall starter",
+      "body": "A dad in cargo shorts, a 40-minute left turn, Target as the town square, and someone saying “I’m basically in Miami.” GPS needs cafecito.",
+      "place": "Kendall",
+      "source": "",
+      "photo": {
+        "query": "Kendall Miami suburban shopping center Wikimedia Commons",
+        "prompt": "busy suburban South Florida shopping plaza with palm trees, parked SUVs, and afternoon traffic"
+      },
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Curt Teich &amp; Co., Chicago (publisher / Public domain"
+    },
+    {
+      "tag": "HIALEAH",
+      "headline": "Hialeah starter pack",
+      "highlight": "Hialeah starter",
+      "body": "A parking spot saved by pure attitude, a lake named after something dramatic, 17 barbershops per block, and traffic lights treated like suggestions.",
+      "place": "Hialeah",
+      "source": "",
+      "photo": {
+        "query": "Hialeah Florida street traffic Wikimedia Commons",
+        "prompt": "sunny Hialeah street scene with small businesses, palm trees, cars, and bright storefront signs"
+      },
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Miami Beach Casino Co. / Public domain"
+    },
+    {
+      "tag": "BRICKELL",
+      "headline": "Brickell starter pack",
+      "highlight": "Brickell starter",
+      "body": "A dog in an elevator, rent that needs a co-signer and a prayer, $24 valet, and someone dressed like they’re closing a deal at Publix.",
+      "place": "Brickell",
+      "source": "",
+      "photo": {
+        "query": "Brickell Miami skyline condos Wikimedia Commons",
+        "prompt": "Brickell high-rise condo towers with palm trees, luxury cars, and a sunny city street"
+      },
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Marc Averette / CC BY 3.0"
+    },
+    {
+      "tag": "DORAL",
+      "headline": "Doral starter pack",
+      "highlight": "Doral starter",
+      "body": "A warehouse you swear is a restaurant, roundabout stress, golf carts acting rich, and a plaza with 9 dessert spots nobody planned for.",
+      "place": "Doral",
+      "source": "",
+      "photo": {
+        "query": "Doral Florida city street shopping plaza Wikimedia Commons",
+        "prompt": "modern Doral shopping plaza with palm trees, wide roads, SUVs, and low-rise office buildings"
+      },
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: A. D. Weiss Lithograph Co. / Public domain"
+    },
+    {
+      "tag": "LAUDERDALE",
+      "headline": "Fort Lauderdale starter pack",
+      "highlight": "Fort Lauderdale starter",
+      "body": "A boat you don’t own, brunch by the water, one friend planning Bimini like it’s a Publix run, and a new tower where your shortcut used to be.",
+      "place": "Fort Lauderdale",
+      "source": "",
+      "photo": {
+        "query": "Fort Lauderdale canals boats Wikimedia Commons",
+        "prompt": "Fort Lauderdale canal with boats, waterfront restaurants, palm trees, and sunny blue sky"
+      },
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Abujoy / CC BY 3.0"
+    }
+  ],
+  "caption": "South Florida neighborhoods be having a uniform, a personality, and a parking problem.\n\nWhich city needs to get cooked next?",
+  "hashtags": [
+    "#SouthFloridaLife",
+    "#MiamiMemes",
+    "#DadeCounty",
+    "#BrowardCounty",
+    "#KendallFL",
+    "#Hialeah",
+    "#Brickell",
+    "#FortLauderdale"
+  ],
+  "igCaption": "South Florida neighborhoods be having a uniform, a personality, and a parking problem.\n\nWhich city needs to get cooked next?\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#miami #miamidade #305 #southflorida #miaminews #florida #dade #miamilife #SouthFloridaLife #MiamiMemes #DadeCounty #BrowardCounty #KendallFL #Hialeah #Brickell #FortLauderdale",
+  "kind": "feature",
+  "kicker": "SOUTH FLORIDA STARTER PACK",
+  "date": "2026-09-25",
+  "id": "2026-09-25-feature"
+}
