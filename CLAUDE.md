@@ -41,10 +41,11 @@ Savage satire of places, traffic, prices, HOAs, tourists, clubs, weather — nev
 religions, races, or real private people. No slurs/explicit content. Hook in the first 3 seconds.
 
 ## Episode JSON essentials
-Scenes: `hook` (overlay = 2 short lines, 4 emojis, shot `dive`), 5× `item` (rank 5→1, text starts "Number five," …
-"And number one..."), `outro` (CTA, shot `pullout`). `text` = spoken (write numbers as words), `caption` = on-screen
+Scenes: `hook` (overlay = 2 short lines, 4 emojis, shot `dive`), 3× `item` (rank 3→1, text starts "Number three," …
+"And number one..."), `outro` (CTA, shot `pullout`). Voice: Shane Gillis-style (his delivery, never his material) — laid-back,
+one committed bit per place that escalates, not rapid one-liners (see VOICE in `pipeline/generate.mjs`). `text` = spoken (write numbers as words), `caption` = on-screen
 version. Locations must be real South Florida lat/lon. Camera `range`: 500–900 m low-rise, **1400–1800 m for
-skylines** (Brickell/Downtown/Sunny Isles) or the camera ends up inside buildings. ~75–95 words total ≈ 30–35 s.
+skylines** (Brickell/Downtown/Sunny Isles) or the camera ends up inside buildings. 160–200 words total ≈ 60–70 s.
 
 ## Secrets (repo settings, never commit them)
 `OPENAI_API_KEY`, `GOOGLE_MAPS_API_KEY`, `INSTAGRAM_ACCESS_TOKEN`, `INSTAGRAM_USER_ID`.
