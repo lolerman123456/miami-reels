@@ -1,0 +1,3 @@
+posted.log merge=union
+state/slots.txt merge=union
+state/ai-images.txt merge=union
