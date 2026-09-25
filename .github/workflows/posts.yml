@@ -123,6 +123,16 @@ jobs:
           if [ "${WAIT:-0}" -gt 0 ]; then echo "waiting $((WAIT / 60)) min to post on the hour"; sleep "$WAIT"; fi
           node pipeline/carousel.mjs "${ARGS[@]}"
 
+      - name: Preview links
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          D=$(ls -d posts/*-preview 2>/dev/null | head -1); [ -n "$D" ] || exit 0
+          gh release view slides >/dev/null 2>&1 || gh release create slides --title "Carousel previews" --notes "Preview slides (not posted)."
+          for f in "$D"/*.jpg; do case "$f" in */photo-*) continue;; esac; cp "$f" "out-$(basename "$D")-$(basename "$f")"; gh release upload slides "out-$(basename "$D")-$(basename "$f")" --clobber; \
+            echo "▶ https://github.com/${{ github.repository }}/releases/download/slides/out-$(basename "$D")-$(basename "$f")" | tee -a "$GITHUB_STEP_SUMMARY"; done
+
       - name: Upload slides
         if: always()
         uses: actions/upload-artifact@v4
@@ -138,6 +148,7 @@ jobs:
           git config user.name "reel-bot"
           git config user.email "reel-bot@users.noreply.github.com"
           git add posts/*/post.json posted.log 2>/dev/null || true
+          git reset -q -- 'posts/*-preview' 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "Post run ${{ github.run_number }} ($(date -u +%F))"
             git pull --rebase && git push
