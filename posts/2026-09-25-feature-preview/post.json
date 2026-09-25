@@ -1,0 +1,40 @@
+{
+  "cover": {
+    "top": "SOUTH FLORIDA",
+    "main": "PICK YOUR",
+    "highlight": "STARTER PACK",
+    "bottom": "AND DEFEND YOURSELF",
+    "blur": false,
+    "photo": {
+      "type": "place",
+      "query": "Wikimedia Commons search for Miami skyline South Florida aerial",
+      "prompt": "sunny aerial photo of South Florida neighborhoods with Miami skyline, palm trees, highways, and bright blue water"
+    },
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration"
+  },
+  "slides": [
+    {
+      "tag": "KENDALL",
+      "headline": "Kendall starter pack",
+      "highlight": "Kendall starter",
+      "body": "Costco run, 137th traffic trauma, “it’s not that far,” and a cafecito strong enough to make you reorganize your garage.",
+      "place": "Kendall",
+      "source": "",
+      "photo": {
+        "type": "place",
+        "query": "Wikimedia Commons search for Kendall Florida street shopping center",
+        "prompt": "busy suburban Kendall shopping plaza with palm trees, traffic, SUVs, and a coffee window on a sunny afternoon"
+      },
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    "slides_extra_remove_me_if_seen? : ",
+    "photo2? "
+  ],
+  "igCaption": "📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#miami #miamidade #305 #southflorida #miaminews #florida #dade #miamilife",
+  "kind": "feature",
+  "kicker": "SOUTH FLORIDA STARTER PACK",
+  "date": "2026-09-25",
+  "id": "2026-09-25-feature-preview"
+}
