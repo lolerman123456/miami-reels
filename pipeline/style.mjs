@@ -40,7 +40,7 @@ export const REMINDER = 'Reminder: house style. No em or en dashes. Active voice
 export const MEME_TELLS = [
   /\b(acting|pretending|treated|dressed) (like|as|rich)\b/i, /\blike it['’]s a\b/i, /\bnobody (asked|planned|needed)\b/i,
   /\bstarter pack\b/i, /(^|[.!?]\s+)same \w+/i, /\b(is|stayed|still|remains?) the same\b/i, /\band the \w+ (got|kept|took) (it|that)\b/i,
-  /\bget the memo\b/i, /\benergy\b/i, /\bbe having\b/i, /\byou swear\b/i, /\bthe way (it|they|he|she)\b/i,
+  /\bget the memo\b/i, /\b(main character|big \w+|\w+ city|chaotic|villain|rich|boss) energy\b/i, /\bbe having\b/i, /\byou swear\b/i, /\bthe way (it|they|he|she)\b/i,
 ];
 // a sentence that is a list of 4+ quirky items ("A dad in cargo shorts, a 40-minute left turn, Target as..., and someone...")
 const quirkyList = t => t.split(/(?<=[.!?])\s+/).filter(sn => (sn.match(/,/g) || []).length >= 3 &&

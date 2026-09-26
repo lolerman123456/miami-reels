@@ -130,16 +130,17 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   ].filter(Boolean).join('\n\n');
 
   let post;
-  for (let attempt = 1; attempt <= 3; attempt++) {
+  const TRIES = 5;
+  for (let attempt = 1; attempt <= TRIES; attempt++) {
     post = await chat([{ role: 'system', content: `${SYSTEM}\n\n${STYLE}\n\n${toneLines()}\n\n${HANDLES_RULE()}` }, { role: 'user', content: `${ask}\n\n${REMINDER}` }]);
     const n = post?.slides?.length || 0;
     const copy = JSON.stringify([post?.caption, ...(post?.slides || []).map(x => [x.headline, x.body])]);
     const tells = [...aiTells(copy), ...memeTells(copy), ...(copy.match(BANNED) || []).slice(0, 1)];
-    if (tells.length && attempt < 3) { console.log(`  attempt ${attempt}: sounds like AI (${tells.join(' | ')}) — rewriting`); post = null; continue; }
+    if (tells.length && attempt < TRIES) { console.log(`  attempt ${attempt}: sounds like AI (${tells.join(' | ')}) — rewriting`); post = null; continue; }
     const incomplete = (post?.slides || []).filter(s => !s?.headline || !s?.body || !s?.photo).length;
     const CONNECT = /^(that|that's|thats|which|and|so|but|because|the reason|for |on top|meanwhile|now|still|plus|this|it|here|what|those|even|then|since|after|as a result)/i;
     const loose = (kind === 'feature' || topic) ? (post?.slides || []).slice(1).filter(x => !CONNECT.test(String(x.headline || '').trim())).length : 0;
-    if (loose > 0 && attempt < 3) { console.log(`  attempt ${attempt}: ${loose} headlines don't connect — rewriting`); post = null; continue; }
+    if (loose > 0 && attempt < TRIES) { console.log(`  attempt ${attempt}: ${loose} headlines don't connect — rewriting`); post = null; continue; }
     if (post?.cover?.highlight && post.cover.photo && n >= 3 && n <= 8 && !incomplete) break;
     console.log(`  attempt ${attempt}: bad shape (${n} slides, ${incomplete} incomplete) — retrying`);
     post = null;
