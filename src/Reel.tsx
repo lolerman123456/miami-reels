@@ -133,7 +133,7 @@ const ImageView: React.FC<{ scene: Scene }> = ({ scene }) => {
   const fade = ease(frame, 0, 8);
   return (
     <AbsoluteFill style={{ background: '#fff', opacity: fade }}>
-      <AbsoluteFill style={{ transform: `translate(${(0.5 - x) * 100}%, ${(0.55 - y) * 100}%) scale(${z})`, transformOrigin: `${x * 100}% ${y * 100}%` }}>
+      <AbsoluteFill style={{ transform: `translate(${(0.5 - x) * 100}%, ${(0.4 - y) * 100}%) scale(${z})`, transformOrigin: `${x * 100}% ${y * 100}%` }}>
         <Img src={staticFile(img.file)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       </AbsoluteFill>
       <div style={{ position: 'absolute', top: 1080, right: 40, background: 'rgba(8,10,16,.55)', padding: '6px 14px', borderRadius: 8 }}>
