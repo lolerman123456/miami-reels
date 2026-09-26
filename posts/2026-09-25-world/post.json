@@ -1,0 +1,112 @@
+{
+  "sector": "USA",
+  "cover": {
+    "top": "FLORIDA COUNTIES",
+    "main": "DECLARED EMERGENCY",
+    "highlight": "DENGUE",
+    "bottom": "OUTBREAK",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons mosquito Aedes aegypti Florida",
+      "prompt": "close-up mosquito on a neutral background with a Florida map texture behind it"
+    },
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Apurv013 / CC0"
+  },
+  "slides": [
+    {
+      "tag": "HEALTH",
+      "headline": "Florida counties declare dengue emergencies",
+      "highlight": "dengue emergencies",
+      "body": "Florida counties declared emergencies over an unusual dengue outbreak, and dengue spreads through infected mosquitoes.",
+      "place": "Florida",
+      "source": "The Washington Post",
+      "photo": {
+        "query": "Wikimedia Commons Aedes aegypti mosquito",
+        "prompt": "mosquito on a windowsill in a humid South Florida neighborhood"
+      },
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Fedaro / CC BY-SA 4.0"
+    },
+    {
+      "tag": "USA",
+      "headline": "Supreme Court lets voter database be used",
+      "highlight": "voter database",
+      "body": "The Supreme Court let the Trump administration use a revamped federal voter eligibility database for now.",
+      "place": "United States",
+      "source": "apnews.com",
+      "photo": {
+        "query": "Wikimedia Commons voting booths United States",
+        "prompt": "empty voting booths in a civic building with American flags in the background"
+      },
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Kenneth C. Zirkel / CC0"
+    },
+    {
+      "tag": "USA",
+      "headline": "Democrats favored for a slim House majority",
+      "highlight": "slim House",
+      "body": "A nonpartisan analyst says Democrats are favored to win a slim House majority.",
+      "place": "United States",
+      "source": "The Washington Post",
+      "photo": {
+        "query": "Wikimedia Commons United States Capitol House chamber",
+        "prompt": "wide exterior view of the U.S. Capitol at dusk"
+      },
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Rhododendrites / CC BY-SA 4.0"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "Trump and Xi summit gets Washington scrutiny",
+      "highlight": "Xi summit",
+      "body": "The Trump-Xi summit in Washington drew scrutiny over diplomacy, pageantry and policy takeaways.",
+      "place": "Washington",
+      "source": "The Guardian",
+      "photo": {
+        "query": "Wikimedia Commons White House Washington DC exterior",
+        "prompt": "White House exterior with U.S. and Chinese flags in a formal diplomatic setting"
+      },
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Appitecture / CC BY-SA 4.0"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "Iran offers 7-day Strait of Hormuz plan",
+      "highlight": "7-day Strait",
+      "body": "Iran offered the U.S. a seven-day plan to reopen the Strait of Hormuz, a route tied to global oil shipping and fuel prices.",
+      "place": "Iran",
+      "source": "BBC",
+      "photo": {
+        "query": "Wikimedia Commons Strait of Hormuz oil tanker",
+        "prompt": "oil tanker moving through a narrow sea channel under a hazy sky"
+      },
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Dori / CC BY-SA 3.0"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "Ukraine says Russia is hitting data centers",
+      "highlight": "data centers",
+      "body": "Zelensky says Russia is attacking Ukraine’s data centers to disrupt people’s ability to stay connected, study and work.",
+      "place": "Ukraine",
+      "source": "BBC News",
+      "photo": {
+        "query": "Wikimedia Commons Ukraine Kyiv data center server room",
+        "prompt": "dark server room with emergency lighting and cables after a power disruption"
+      },
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Thomas Spiegelhalter / CC BY-SA 4.0"
+    }
+  ],
+  "caption": "Tonight’s brief: dengue emergencies in Florida, a Supreme Court voting decision, House projections, and three world stories with U.S. ripple effects.\nWhich one are you watching closest?",
+  "hashtags": [
+    "#FloridaNews",
+    "#NightBrief"
+  ],
+  "igCaption": "Tonight’s brief: dengue emergencies in Florida, a Supreme Court voting decision, House projections, and three world stories with U.S. ripple effects.\nWhich one are you watching closest?\n\n📰 Sources: The Washington Post, apnews.com, The Guardian, BBC, BBC News\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#FloridaNews #NightBrief #miami #southflorida",
+  "kind": "world",
+  "kicker": "TONIGHT IN THE WORLD 🌎",
+  "date": "2026-09-25",
+  "id": "2026-09-25-world"
+}
