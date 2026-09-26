@@ -29,7 +29,7 @@ const FEATURES = [
 
 const KINDS = {
   brief: { kicker: 'THE DADE BRIEF ☕', feed: 'local', ask: 'The morning news carousel: the 5–6 most talked-about South Florida (Miami-Dade, Broward, Palm Beach, the Keys) stories from the headlines below. Prioritize what locals will share and argue about: traffic, weather, crime, prices, rent, development, Brightline, airports, sports, viral moments. Skip national stories unless they hit South Florida directly.' },
-  world: { kicker: 'TONIGHT IN THE WORLD 🌎', feed: 'world', ask: 'The night news carousel: the 3 biggest US stories and the 3 biggest world stories from the headlines below, one per slide, explained in one breath for someone scrolling in bed. Add a Miami/Florida angle when there honestly is one.' },
+  world: { kicker: 'TONIGHT IN THE WORLD 🌎', feed: 'world', ask: 'The night news carousel: the 3 biggest US stories and the 3 biggest world stories from the headlines below, one per slide (put the most striking, most visual story FIRST; its photo becomes the cover), explained in one breath for someone scrolling in bed. Add a Miami/Florida angle when there honestly is one.' },
   feature: { feed: 'local' },
 };
 
@@ -166,12 +166,16 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   fs.mkdirSync(dir, { recursive: true });
   step('Finding photos');
   newPost();
+  // world carousels: fixed cover title, lead story's photo behind it (owner's format)
+  if (kind === 'world') post.cover = { top: '', main: 'NEWS FROM', highlight: 'AROUND THE WORLD', bottom: '', blur: false };
   for (const [i, item] of [post.cover, ...post.slides].entries()) {
+    if (kind === 'world' && i === 0) continue;
     const photo = await getPhoto(item.photo, dir, i ? `photo-${i}` : 'photo-cover',
       { context: i ? item.headline : [item.top, item.main, item.highlight, item.bottom].filter(Boolean).join(' ') });
     if (photo) { item.photoFile = path.basename(photo.file); item.credit = photo.credit; }
     console.log(`  ${i ? '#' + i : 'cover'}: ${photo ? photo.credit : 'no photo'}`);
   }
+  if (kind === 'world' && post.slides[0]?.photoFile) Object.assign(post.cover, { photoFile: post.slides[0].photoFile, credit: post.slides[0].credit });
   writeJSON(path.join(dir, 'post.json'), post);
   console.log(`✔ ${kicker}: ${[post.cover.top, post.cover.main, post.cover.highlight, post.cover.bottom].filter(Boolean).join(' / ')}`);
   for (const s of post.slides) console.log(`   [${s.tag}] ${s.headline}${s.source ? ` (${s.source})` : ''}`);
