@@ -28,8 +28,9 @@ const FEATURES = [
 ];
 
 const KINDS = {
-  brief: { kicker: 'THE DADE BRIEF ☕', feed: 'local', ask: 'The morning news carousel: the 5–6 most talked-about South Florida (Miami-Dade, Broward, Palm Beach, the Keys) stories from the headlines below. Prioritize what locals will share and argue about: traffic, weather, crime, prices, rent, development, Brightline, airports, sports, viral moments. Skip national stories unless they hit South Florida directly.' },
-  world: { kicker: 'TONIGHT IN THE WORLD 🌎', feed: 'world', ask: 'The night news carousel: the 3 biggest US stories and the 3 biggest world stories from the headlines below, one per slide (put the most striking, most visual story FIRST; its photo becomes the cover), explained in one breath for someone scrolling in bed. Add a Miami/Florida angle when there honestly is one.' },
+  // owner: no roundups. Each news carousel is ONE big story told in depth, slides connected.
+  brief: { kicker: 'THE DADE BRIEF ☕', feed: 'local', pick: 'the single biggest South Florida (Miami-Dade, Broward, Palm Beach, the Keys) story that many people here will care about: a major crime, disaster, big money, prices/rent, a big development, a major court case. Never a small business closing, a minor traffic item or a neighborhood-only story.', ask: 'The morning news carousel: ONE South Florida story told in depth across 5–6 connected slides (what happened, the key details and numbers, why it happened, who it affects here, what happens next).' },
+  world: { kicker: 'NEWS FROM AROUND THE WORLD 🌎', feed: 'world', pick: 'the single most serious story in the world today: the deadliest, most dangerous or most consequential (war, disaster, attack, crisis). Pick the one with the most facts in the headlines.', ask: 'The night news carousel: ONE world story, the most serious one today, told in depth across 5–6 connected slides (what happened, the scale in numbers, how it started, who is affected, what the world is doing, what happens next, and a Florida/US angle only if there honestly is one).' },
   feature: { feed: 'local' },
 };
 
@@ -46,7 +47,7 @@ Rules:
   Each slide picks up where the previous one ended and adds the next piece: what happened → how it compares → why it's
   happening → who it affects here → where it leaves South Florida / what's next. Write slide 2+ so they read as a
   continuation ("That's…", "The jump comes as…", "For drivers in Miami-Dade…", "It puts Florida…"), never as standalone
-  facts that repeat the topic name each time. Roundups (brief/world) are the exception: one separate story per slide.
+  facts that repeat the topic name each time. This applies to every post, including the daily brief and world carousels.
   The HEADLINES themselves chain: slide 1's headline states the news; every later headline starts with a transition that
   links to the slide before it, e.g. "THAT'S 12 CENTS MORE THAN LAST WEEK", "THAT ALSO MEANS A FILL-UP COSTS $18.90 MORE",
   "WHICH PUTS FLORIDA NEAR ITS 12-MONTH HIGH", "THE REASON: CRUDE COSTS AND MIDEAST CONFLICT", "AND DIESEL IS WORSE AT $6.34", "SO WHAT HAPPENS NEXT?",
@@ -54,7 +55,7 @@ Rules:
   Include the why (causes named in the headlines/sources) and who it affects when the sources have it, not only numbers.
 - SECTOR: pick ONE section label for the post from: ECONOMY, TRAFFIC, WEATHER, REAL ESTATE, CRIME, DEVELOPMENT, TRANSIT,
   HISTORY, SPORTS, HEALTH, EDUCATION, CITY HALL, WORLD, USA. Single-topic posts use that same label on every slide.
-  Roundups label each slide with its own sector from that list. Never use labels like UPDATE, FACT, MONEY, NEWS.
+  Never use labels like UPDATE, FACT, MONEY, NEWS.
 - Caption: 1–2 informative lines, then a real question for the comments. Don't list sources in the caption (we add them).
 
 The cover is a scroll-stopping hook in this exact stacked style (all caps on the image):
@@ -101,6 +102,17 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     if (/\brent\b/i.test(topic)) (await rentFacts(['Miami', 'Hialeah', 'Fort Lauderdale', '33131', 'Doral', 'West Palm Beach']).catch(() => [])).forEach(r => extra.push(`ZILLOW RENT DATA: ${r}`));
     console.log(`  topic sources: ${found.length} headlines, ${extra.length} data`);
   }
+  // brief/world: pick ONE story, then pull every headline about it so the slides can go deep
+  if (spec.pick && !topic) {
+    const choice = await chat([{ role: 'system', content: `Pick ${spec.pick} Return JSON {"story":"one sentence","search":["2–4 Google News searches to find more reporting on that exact story"],"wikipedia":["0–2 exact English Wikipedia titles for background (a country, a conflict, a place)"]}` },
+      { role: 'user', content: `Headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` }]);
+    console.log(`  story: ${choice.story}`);
+    const more = [];
+    for (const q of (choice.search || []).slice(0, 4)) more.push(...await searchNews(q, { days: 3, max: 15 }).catch(() => []));
+    news.splice(0, news.length, ...more, ...news);
+    for (const t of (choice.wikipedia || []).slice(0, 2)) { const w = await wikiArticle(t, { chars: 3000 }).catch(() => null); if (w) extra.push(`WIKIPEDIA "${w.title}" (background):\n${w.text}`); }
+    topic = `ONE story, in depth: ${choice.story}. Use only headlines about this story.`;
+  }
   if (feature?.wiki || feature?.rent) {
     const plan = await chat([{ role: 'system', content: 'Plan the fact sources for a South Florida Instagram carousel. Return JSON {"wikipedia":["up to 4 exact English Wikipedia article titles"],"rent":["up to 6 South Florida city names or 5-digit ZIPs"]}. Only fill "rent" for rent posts.' },
       { role: 'user', content: `Carousel: ${feature.name}\n${topic || feature.ask}\nDon't repeat these recent posts:\n${recentPosts().map(p => '- ' + (p.kicker || '') + ': ' + p.slides.map(x => x.headline).join('; ')).join('\n')}` }]);
@@ -110,7 +122,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   }
   const recent = recentPosts();
   const ask = [
-    topic ? `The account owner asked for this — follow it: ${topic}` : (feature ? feature.ask : spec.ask),
+    topic ? `${spec.pick ? spec.ask + '\n' : ''}The account owner asked for this — follow it: ${topic}` : (feature ? feature.ask : spec.ask),
     `Today (New York): ${new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric' })}`,
     `Headlines (outlet — headline — summary):\n${news.map(n => `- ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}`,
     extra.length ? `Fact sources:\n\n${extra.join('\n\n')}` : '',
@@ -162,21 +174,20 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   post.kind = kind;
   post.kicker = kicker;
   post.date = nyDate();
-  post.id = `${post.date}-${kind}${topic ? '-custom' : ''}${preview ? '-preview' : ''}`;
+  post.id = `${post.date}-${kind}${topic && !spec.pick ? '-custom' : ''}${preview ? '-preview' : ''}`;
   const dir = path.join(ROOT, 'posts', post.id);
   fs.mkdirSync(dir, { recursive: true });
   step('Finding photos');
   newPost();
   // world carousels: fixed cover title, lead story's photo behind it (owner's format)
-  if (kind === 'world') post.cover = { top: '', main: 'NEWS FROM', highlight: 'AROUND THE WORLD', bottom: '', blur: false };
+  // world: the story's own hook, with "NEWS FROM AROUND THE WORLD" as the small top line (owner's format)
+  if (kind === 'world') Object.assign(post.cover, { top: 'NEWS FROM AROUND THE WORLD', blur: false });
   for (const [i, item] of [post.cover, ...post.slides].entries()) {
-    if (kind === 'world' && i === 0) continue;
     const photo = await getPhoto(item.photo, dir, i ? `photo-${i}` : 'photo-cover',
       { context: i ? item.headline : [item.top, item.main, item.highlight, item.bottom].filter(Boolean).join(' ') });
     if (photo) { item.photoFile = path.basename(photo.file); item.credit = photo.credit; }
     console.log(`  ${i ? '#' + i : 'cover'}: ${photo ? photo.credit : 'no photo'}`);
   }
-  if (kind === 'world' && post.slides[0]?.photoFile) Object.assign(post.cover, { photoFile: post.slides[0].photoFile, credit: post.slides[0].credit });
   writeJSON(path.join(dir, 'post.json'), post);
   console.log(`✔ ${kicker}: ${[post.cover.top, post.cover.main, post.cover.highlight, post.cover.bottom].filter(Boolean).join(' / ')}`);
   for (const s of post.slides) console.log(`   [${s.tag}] ${s.headline}${s.source ? ` (${s.source})` : ''}`);
