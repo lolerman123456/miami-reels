@@ -7,7 +7,7 @@ import { serveFilePublicly, serveFilesPublicly } from './tunnel.mjs';
 
 const VERSION = 'v23.0';
 
-export async function publishReel(videoFile, caption) {
+export async function publishReel(videoFile, caption, { collaborators = [] } = {}) {
   const token = process.env.INSTAGRAM_ACCESS_TOKEN;
   const igUser = process.env.INSTAGRAM_USER_ID;
   if (!token || !igUser) throw new Error('Set INSTAGRAM_ACCESS_TOKEN and INSTAGRAM_USER_ID in .env');
@@ -23,9 +23,9 @@ export async function publishReel(videoFile, caption) {
       console.log('▶ Instagram: opening temporary public link');
       tunnel = await serveFilePublicly(videoFile);
       console.log('▶ Instagram: creating Reel container');
-      create = await call(`${api}/${igUser}/media`, {
-        media_type: 'REELS', video_url: tunnel.url, caption, share_to_feed: 'true', access_token: token,
-      });
+      create = await withCollabs(collaborators, extra => call(`${api}/${igUser}/media`, {
+        media_type: 'REELS', video_url: tunnel.url, caption, share_to_feed: 'true', access_token: token, ...extra,
+      }));
     } else {
       console.log('▶ Instagram: creating Reel container');
       create = await call(`${api}/${igUser}/media`, {
@@ -58,7 +58,7 @@ export async function publishReel(videoFile, caption) {
 }
 
 // Carousel of 2–10 JPEGs (Instagram only accepts JPEG for images).
-export async function publishCarousel(imageFiles, caption, label) {
+export async function publishCarousel(imageFiles, caption, label, { collaborators = [] } = {}) {
   const { api, igUser, token } = auth();
   const tunnel = await serveFilesPublicly(imageFiles);
   try {
@@ -69,9 +69,9 @@ export async function publishCarousel(imageFiles, caption, label) {
       children.push(c.id);
     }
     for (const id of children) await waitReady(api, token, id);
-    const create = await call(`${api}/${igUser}/media`, {
-      media_type: 'CAROUSEL', children: children.join(','), caption, access_token: token,
-    });
+    const create = await withCollabs(collaborators, extra => call(`${api}/${igUser}/media`, {
+      media_type: 'CAROUSEL', children: children.join(','), caption, access_token: token, ...extra,
+    }));
     await waitReady(api, token, create.id);
     return await finish(api, igUser, token, create.id, label || path.basename(path.dirname(imageFiles[0])));
   } finally {
@@ -100,6 +100,20 @@ export async function publishStory(file, label) {
     return await finish(api, igUser, token, create.id, `story:${label || path.basename(file)}`);
   } finally {
     tunnel.close();
+  }
+}
+
+// Invite collaborators (up to 3 usernames); if Instagram rejects them, post without instead of failing.
+async function withCollabs(list, make) {
+  const users = [...new Set(list || [])].filter(Boolean).slice(0, 3);
+  if (!users.length) return make({});
+  try {
+    const r = await make({ collaborators: JSON.stringify(users) });
+    console.log(`  collaborator invites: ${users.map(u => '@' + u).join(', ')}`);
+    return r;
+  } catch (e) {
+    console.log(`  (collaborators rejected: ${e.message.slice(0, 160)}; posting without)`);
+    return make({});
   }
 }
 
@@ -140,6 +154,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const [video, epDir] = process.argv.slice(2);
   if (!video) { console.error('Usage: node pipeline/publish.mjs out/<id>.mp4 [episodes/<id>]'); process.exit(1); }
   const dir = epDir || path.join(ROOT, 'episodes', path.basename(video, '.mp4'));
-  await publishReel(video, readJSON(path.join(dir, 'episode.json')).igCaption);
+  const ep = readJSON(path.join(dir, 'episode.json'));
+  await publishReel(video, ep.igCaption, { collaborators: ep.collaborators });
   await publishStory(video).catch(e => console.log(`(story skipped: ${e.message})`));
 }

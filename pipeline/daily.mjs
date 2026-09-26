@@ -32,7 +32,7 @@ const dir = episodeArg ? path.resolve(ROOT, episodeArg) : await generateEpisode(
 const { out, episode } = await makeEpisode(dir);
 if (dry) console.log(`(dry run) Would post ${out}`);
 else {
-  await publishReel(out, episode.igCaption);
+  await publishReel(out, episode.igCaption, { collaborators: episode.collaborators });
   // cross-post to stories; a failed story never fails the Reel
   await publishStory(out, episode.id).catch(e => console.log(`(story skipped: ${e.message})`));
 }

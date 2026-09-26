@@ -58,3 +58,16 @@ export function sanitize(v) {
   if (v && typeof v === 'object') return Object.fromEntries(Object.entries(v).map(([k, x]) => [k, sanitize(x)]));
   return v;
 }
+
+// Confirmed Instagram handles (voice/handles.json) the writers may tag.
+export function knownHandles() {
+  const f = path.join(ROOT, 'voice', 'handles.json');
+  if (!fs.existsSync(f)) return {};
+  const h = JSON.parse(fs.readFileSync(f, 'utf8')); delete h._note; return h;
+}
+export const HANDLES_RULE = () => {
+  const h = knownHandles();
+  return Object.keys(h).length ? `COLLABORATORS: if the post is mainly about one of these, list their handle(s) in "collaborators" (max 3) and @mention them once in the caption. Only use handles from this list, never guess others:\n${Object.entries(h).map(([k, v]) => `- ${k}: ${v}`).join('\n')}` : '';
+};
+// keep only confirmed handles
+export const cleanCollabs = list => { const ok = new Set(Object.values(knownHandles())); return [...new Set((list || []).map(x => String(x).replace(/^@/, '').trim()))].filter(x => ok.has(x)).slice(0, 3); };

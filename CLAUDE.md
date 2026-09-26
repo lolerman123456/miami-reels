@@ -38,7 +38,7 @@ The owner can also do all of this without Claude: GitHub app → Actions → **C
 
 ## Content rules (keep the account safe)
 No jokes (owner's call — they read as AI): everything is informational, from real sources (news, Wikipedia, Zillow), fact-checked.
-Never target ethnic groups, nationalities, religions, races, or real private people. No slurs/explicit content. Hook in the first 3 seconds. Max 4 hashtags per post. Single-topic carousels: one sector label (ECONOMY…), headlines chain with transitions (THAT'S… / THAT ALSO MEANS… / WHICH PUTS…).
+Never target ethnic groups, nationalities, religions, races, or real private people. No slurs/explicit content. Hook in the first 3 seconds. Max 4 hashtags per post. Collaborator invites: posts about a venue/brand in `voice/handles.json` tag it (max 3); only add confirmed official handles there. Single-topic carousels: one sector label (ECONOMY…), headlines chain with transitions (THAT'S… / THAT ALSO MEANS… / WHICH PUTS…).
 
 ## Episode JSON essentials
 Map Reels are **informational explainers, no jokes and no rankings** (owner's call): NEW BUILD / HISTORY / DID YOU KNOW /

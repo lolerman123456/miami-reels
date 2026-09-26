@@ -9,7 +9,7 @@ import { fetchNews, searchNews } from './news.mjs';
 import { getPhoto, newPost } from './photos.mjs';
 import { aiTells, BANNED } from './generate.mjs';
 import { wikiArticle, rentFacts, gasFacts } from './facts.mjs';
-import { STYLE, REMINDER, toneLines, sanitize, memeTells } from './style.mjs';
+import { STYLE, REMINDER, toneLines, sanitize, memeTells, HANDLES_RULE, cleanCollabs } from './style.mjs';
 
 const HANDLE = '@getnearapp';
 const TAGS = ['#miami', '#miamidade', '#305', '#southflorida', '#miaminews', '#florida', '#dade', '#miamilife',
@@ -70,7 +70,7 @@ The cover is a scroll-stopping hook in this exact stacked style (all caps on the
 Every cover and slide needs a photo: {"query":"Wikimedia Commons search for a real stock photo (place, landmark, road, building, vehicle, object, scene — e.g. 'Brightline train Miami', 'Palmetto Expressway traffic', 'police car Miami-Dade', 'Cuban coffee cafecito')","prompt":"AI photo description, used only if no stock photo looks good (e.g. 'police cruiser lights reflecting on a wet Hialeah street at night')"}
   Stock photos are preferred (AI images are budgeted), so write queries likely to find a real, good-looking photo. Never plan a real photo of a person to illustrate a news story.
 
-Return JSON: {"sector":"ECONOMY","cover":{"top":"...","main":"...","highlight":"...","bottom":"...","blur":false,"photo":{...}},"slides":[{"tag":"SECTOR label from the list","headline":"...","highlight":"2-3 word phrase copied exactly from the headline to color blue","body":"...","place":"neighborhood/city or country, optional","source":"outlet or empty for opinion slides","photo":{...}}],"caption":"...","hashtags":["2 specific hashtags for this post"]}
+Return JSON: {"sector":"ECONOMY","cover":{"top":"...","main":"...","highlight":"...","bottom":"...","blur":false,"photo":{...}},"slides":[{"tag":"SECTOR label from the list","headline":"...","highlight":"2-3 word phrase copied exactly from the headline to color blue","body":"...","place":"neighborhood/city or country, optional","source":"outlet or empty for opinion slides","photo":{...}}],"caption":"...","hashtags":["2 specific hashtags for this post"],"collaborators":["handles from the COLLABORATORS list, or empty"]}
 3 to 7 slides. EVERY slide must have tag, headline, highlight, body and photo.`;
 
 const nyDate = (d = new Date()) => d.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
@@ -119,7 +119,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
 
   let post;
   for (let attempt = 1; attempt <= 3; attempt++) {
-    post = await chat([{ role: 'system', content: `${SYSTEM}\n\n${STYLE}\n\n${toneLines()}` }, { role: 'user', content: `${ask}\n\n${REMINDER}` }]);
+    post = await chat([{ role: 'system', content: `${SYSTEM}\n\n${STYLE}\n\n${toneLines()}\n\n${HANDLES_RULE()}` }, { role: 'user', content: `${ask}\n\n${REMINDER}` }]);
     const n = post?.slides?.length || 0;
     const copy = JSON.stringify([post?.caption, ...(post?.slides || []).map(x => [x.headline, x.body])]);
     const tells = [...aiTells(copy), ...memeTells(copy), ...(copy.match(BANNED) || []).slice(0, 1)];
@@ -140,6 +140,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     delete checked.removed; post = checked;
   }
   post = sanitize(post);
+  post.collaborators = cleanCollabs(post.collaborators);
   const SECTORS = /^(ECONOMY|TRAFFIC|WEATHER|REAL ESTATE|CRIME|DEVELOPMENT|TRANSIT|HISTORY|SPORTS|HEALTH|EDUCATION|CITY HALL|WORLD|USA)$/;
   const single = kind === 'feature' || !!topic;
   for (const x of post.slides) {
@@ -329,7 +330,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   if (args.includes('--dry-run') || args.includes('--render-only')) console.log(`(dry run) ${slides.length} slides in ${path.relative(ROOT, dir)}`);
   else {
     const { publishCarousel, publishStory } = await import('./publish.mjs');
-    await publishCarousel(slides, post.igCaption, post.id);
+    await publishCarousel(slides, post.igCaption, post.id, { collaborators: post.collaborators });
     await publishStory(story, post.id).catch(e => console.log(`(story skipped: ${e.message})`));
   }
 }
