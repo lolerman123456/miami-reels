@@ -91,13 +91,17 @@ function timeFocus(image, sceneIndex, captions, timeline) {
   const start = timeline[sceneIndex].start, dur = timeline[sceneIndex].duration;
   const norm = t => String(t).toLowerCase().replace(/[^a-z0-9]/g, '');
   let from = 0;
-  return path.map((p, k) => {
+  const timed = path.map((p, k) => {
     if (k === 0) return { ...p, at: 0 };
     const keys = String(image.focus?.[k - 1] || '').toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 3 && !STOP.has(w));
     const hit = words.findIndex((w, j) => j >= from && keys.some(key => norm(w.text).startsWith(key.slice(0, 5))));
     if (hit >= 0) { from = hit + 1; return { ...p, at: Math.max(0, Math.round((words[hit].start - start) * FPS)) }; }
     return { ...p, at: Math.round((dur * FPS * k) / path.length) }; // not spoken: spread evenly
   });
+  // after the last spot, pull back to the whole building if the narrator keeps talking for a while
+  const back = timed[timed.length - 1].at + 60;
+  if (timed.length > 1 && dur * FPS - back > 45) timed.push({ ...timed[0], at: back });
+  return timed;
 }
 
 function pickMusic() {
