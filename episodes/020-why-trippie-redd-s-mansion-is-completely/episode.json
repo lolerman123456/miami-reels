@@ -112,6 +112,7 @@
           "the eight-car garage"
         ],
         "label": "AI RENDER · ILLUSTRATION",
+        "file": "images/scene-2.png",
         "path": [
           {
             "x": 0.5,
@@ -119,27 +120,26 @@
             "zoom": 1
           },
           {
-            "x": 0.56,
-            "y": 0.68,
-            "zoom": 2.1
+            "x": 0.405,
+            "y": 0.464,
+            "zoom": 2
           },
           {
-            "x": 0.54,
-            "y": 0.53,
+            "x": 0.626,
+            "y": 0.417,
             "zoom": 2.4
           },
           {
-            "x": 0.75,
-            "y": 0.54,
+            "x": 0.743,
+            "y": 0.502,
             "zoom": 2.2
           },
           {
-            "x": 0.55,
-            "y": 0.76,
-            "zoom": 1.8
+            "x": 0.704,
+            "y": 0.645,
+            "zoom": 1.7
           }
-        ],
-        "file": "images/scene-2.png"
+        ]
       }
     },
     {
@@ -178,6 +178,7 @@
           "the black driveway"
         ],
         "label": "AI RENDER · ILLUSTRATION",
+        "file": "images/scene-3.png",
         "path": [
           {
             "x": 0.5,
@@ -185,22 +186,21 @@
             "zoom": 1
           },
           {
-            "x": 0.47,
-            "y": 0.63,
+            "x": 0.59,
+            "y": 0.51,
             "zoom": 2.1
           },
           {
-            "x": 0.47,
-            "y": 0.52,
-            "zoom": 1.8
+            "x": 0.5,
+            "y": 0.39,
+            "zoom": 2
           },
           {
-            "x": 0.58,
-            "y": 0.82,
+            "x": 0.64,
+            "y": 0.75,
             "zoom": 1.8
           }
-        ],
-        "file": "images/scene-3.png"
+        ]
       }
     },
     {
