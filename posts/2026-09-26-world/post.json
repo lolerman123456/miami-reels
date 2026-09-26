@@ -1,0 +1,113 @@
+{
+  "sector": "WORLD",
+  "cover": {
+    "top": "NEWS FROM AROUND THE WORLD",
+    "main": "IRAN'S SEVEN-DAY",
+    "highlight": "HORMUZ PLAN",
+    "bottom": "FACES U.S. REJECTION",
+    "blur": false,
+    "photo": {
+      "query": "Strait of Hormuz satellite Wikimedia Commons",
+      "prompt": "satellite-style view of the Strait of Hormuz between Iran and Oman"
+    },
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: NASA image using data provided courtesy  / Public domain"
+  },
+  "slides": [
+    {
+      "tag": "WORLD",
+      "headline": "Iran offers 7-day plan to reopen Hormuz",
+      "highlight": "7-day plan",
+      "body": "Iran proposed reopening the Strait of Hormuz within seven days, with talks taking place through mediators.",
+      "place": "Strait of Hormuz",
+      "source": "BBC",
+      "photo": {
+        "query": "Strait of Hormuz satellite Wikimedia Commons",
+        "prompt": "wide aerial view of cargo ships near the Strait of Hormuz"
+      },
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "That would reopen a key oil and gas route",
+      "highlight": "key oil",
+      "body": "The strait provides the only sea passage from the Persian Gulf to the open ocean and carried 25% of seaborne oil trade and 20% of liquefied natural gas during 2023 to 2025.",
+      "place": "Persian Gulf",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "oil tanker Strait of Hormuz Wikimedia Commons",
+        "prompt": "oil tanker moving through a narrow gulf shipping lane at sunrise"
+      },
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Curt Teich &amp; Co., Chicago (publisher / Public domain"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "And Iran says inspectors could return",
+      "highlight": "inspectors could",
+      "body": "President Masoud Pezeshkian said Iran would allow nuclear inspectors as part of the proposal.",
+      "place": "Iran",
+      "source": "CBS News",
+      "photo": {
+        "query": "IAEA inspectors Iran Wikimedia Commons",
+        "prompt": "international nuclear inspection team entering a secure facility"
+      },
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Miami Beach Casino Co. / Public domain"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "But Trump reportedly rejected the proposal",
+      "highlight": "rejected the",
+      "body": "Trump reportedly rejected Iran's conditional ceasefire proposal tied to the seven-day Hormuz plan.",
+      "place": "United States",
+      "source": "CNBC",
+      "photo": {
+        "query": "White House exterior Wikimedia Commons",
+        "prompt": "the White House exterior at night with press lights outside"
+      },
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Geraldshields11 / CC BY-SA 4.0"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "That leaves talks moving through mediators",
+      "highlight": "through mediators",
+      "body": "Iran offered the Hormuz reopening plan through Qatari mediators and awaited a U.S. response.",
+      "place": "Qatar",
+      "source": "The Business Standard",
+      "photo": {
+        "query": "Doha Qatar skyline Wikimedia Commons",
+        "prompt": "Doha skyline with government buildings and flags"
+      },
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Zairon / CC BY 4.0"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "And the region is still under pressure",
+      "highlight": "under pressure",
+      "body": "Saudi coalition forces intercepted projectiles, while Pezeshkian said Iran no longer trusts talks with Washington.",
+      "place": "Middle East",
+      "source": "CNBC",
+      "photo": {
+        "query": "Saudi Arabia air defense missile Wikimedia Commons",
+        "prompt": "air defense system at night with radar equipment in a desert setting"
+      },
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Department of Defense. American Forces I / Public domain"
+    }
+  ],
+  "caption": "Iran's seven-day Hormuz offer now sits alongside a reported U.S. rejection, mediator talks and intercepted projectiles in the region.",
+  "hashtags": [
+    "#StraitOfHormuz",
+    "#IranUS"
+  ],
+  "collaborators": [],
+  "igCaption": "Iran's seven-day Hormuz offer now sits alongside a reported U.S. rejection, mediator talks and intercepted projectiles in the region.\n\n📰 Sources: BBC, Wikipedia, CBS News, CNBC, The Business Standard\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#StraitOfHormuz #IranUS #miami #southflorida",
+  "kind": "world",
+  "kicker": "NEWS FROM AROUND THE WORLD 🌎",
+  "date": "2026-09-26",
+  "id": "2026-09-26-world"
+}
