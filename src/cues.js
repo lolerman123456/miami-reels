@@ -4,7 +4,8 @@
 export const ALERT_AT = 40;
 
 // when stat card i of a scene appears (frames into the scene); also used by the graphics so sound and count-up line up
-export const statAt = (scene, i) => Math.max(16, Math.round(scene.duration * (0.2 + 0.32 * i)));
+// (after the camera lands on fly-to scenes)
+export const statAt = (scene, i) => Math.max(16, Math.round(scene.duration * ((scene.shotType === 'flyto' ? 0.34 : 0.2) + 0.28 * i)));
 
 export function sfxCues(scenes) {
   const cues = [];
