@@ -4,7 +4,7 @@ import {
   useCurrentFrame, useVideoConfig,
 } from 'remotion';
 // @ts-ignore plain JS module shared with the node pipeline
-import { sfxCues } from './cues.js';
+import { sfxCues, statAt } from './cues.js';
 
 export type Word = { text: string; start: number; end: number; scene: number };
 export type Scene = {
@@ -17,6 +17,11 @@ export type Scene = {
   alert?: string | null;
   note?: string | null;
   badge?: string | null;
+  stats?: { value: string; label: string }[] | null; // big numbers that count up while the narrator says them
+  source?: string | null; // where the facts come from, shown small
+  hit?: string | null;
+  shotType?: string | null;
+  sfx?: string | null;
   videoOffset?: number; // parallel renders: this scene's clip starts at this scene frame
   from: number;
   duration: number;
@@ -143,13 +148,22 @@ const Hook: React.FC<{ scene: Scene }> = ({ scene }) => {
 const Item: React.FC<{ scene: Scene }> = ({ scene }) => {
   const frame = useCurrentFrame();
   const e1 = ease(frame, 2, 9), e2 = ease(frame, 7, 9), e3 = ease(frame, 12, 9);
-  const badge = scene.rank != null ? `#${scene.rank}` : (scene.badge || '');
+  const badge = scene.badge || '';
   return (
     <AbsoluteFill>
       <div style={{ position: 'absolute', top: 200, left: 60, right: 60, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 14 }}>
-        {badge && (
-          <div style={{ opacity: e1, transform: `translateX(${(1 - e1) * -40}px)`, background: BLUE, padding: '10px 24px', borderRadius: 12, boxShadow: SHADOW }}>
-            <span style={{ fontFamily: FONT, fontWeight: 900, fontSize: fitSize(badge, 64, 700), color: '#fff', letterSpacing: 0.5, whiteSpace: 'nowrap' }}>{badge}</span>
+        {(badge || scene.rank != null) && (
+          <div style={{ opacity: e1, transform: `translateX(${(1 - e1) * -40}px)`, display: 'flex', gap: 12 }}>
+            {scene.rank != null && (
+              <div style={{ background: '#fff', padding: '10px 22px', borderRadius: 12, boxShadow: SHADOW }}>
+                <span style={{ fontFamily: FONT, fontWeight: 900, fontSize: 64, color: BLUE, whiteSpace: 'nowrap' }}>#{scene.rank}</span>
+              </div>
+            )}
+            {badge && (
+              <div style={{ background: BLUE, padding: '10px 24px', borderRadius: 12, boxShadow: SHADOW }}>
+                <span style={{ fontFamily: FONT, fontWeight: 900, fontSize: fitSize(badge, 64, scene.rank != null ? 560 : 700), color: '#fff', letterSpacing: 0.5, whiteSpace: 'nowrap' }}>{badge}</span>
+              </div>
+            )}
           </div>
         )}
         <div style={{ opacity: e2, transform: `translateX(${(1 - e2) * -40}px)` }}>
@@ -161,8 +175,60 @@ const Item: React.FC<{ scene: Scene }> = ({ scene }) => {
           </div>
         )}
       </div>
+      {scene.stats && scene.stats.length > 0 && <Stats scene={scene} />}
+      {scene.source && <SourceTag text={scene.source} />}
       {scene.alert && <AlertBanner text={scene.alert} at={ALERT_AT} />}
     </AbsoluteFill>
+  );
+};
+
+// Stat cards: the number counts up from zero when it appears ("$110M", "1,100 TONS", "+61%"); years just fade in.
+const Stats: React.FC<{ scene: Scene }> = ({ scene }) => {
+  const frame = useCurrentFrame();
+  const stats = (scene.stats || []).slice(0, 2);
+  return (
+    <div style={{ position: 'absolute', top: 890, left: 60, right: 60, display: 'flex', gap: 18 }}>
+      {stats.map((st, i) => {
+        const at = statAt(scene, i);
+        const e = ease(frame, at, 9);
+        const c = ease(frame, at, 20);
+        return (
+          <div key={i} style={{ opacity: e, transform: `translateY(${(1 - e) * 30}px)`, flex: 1, minWidth: 0,
+            background: GLASS, borderRadius: 16, padding: '14px 22px 16px', borderLeft: `10px solid ${BLUE}`, boxShadow: SHADOW }}>
+            <div style={{ fontFamily: FONT, fontWeight: 900, fontSize: fitSize(st.value, stats.length > 1 ? 80 : 96, stats.length > 1 ? 330 : 760), color: '#fff', lineHeight: 1.05, whiteSpace: 'nowrap' }}>
+              {countUp(st.value, c)}
+            </div>
+            <div style={{ fontFamily: FONT, fontWeight: 700, fontSize: 28, color: '#BFD4FF', textTransform: 'uppercase', marginTop: 4, lineHeight: 1.2 }}>{st.label}</div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+function countUp(value: string, p: number) {
+  const m = value.match(/\d[\d,]*(\.\d+)?/);
+  if (!m || p >= 1) return value;
+  const raw = m[0], n = parseFloat(raw.replace(/,/g, ''));
+  const isYear = /^(1[5-9]|20)\d\d$/.test(raw);
+  if (!isFinite(n) || isYear) return value;
+  const dec = m[1] ? m[1].length - 1 : 0;
+  const cur = n * p;
+  const txt = raw.includes(',') || n >= 10000
+    ? cur.toLocaleString('en-US', { minimumFractionDigits: dec, maximumFractionDigits: dec })
+    : cur.toFixed(dec);
+  return value.slice(0, m.index) + txt + value.slice((m.index || 0) + raw.length);
+}
+
+const SourceTag: React.FC<{ text: string }> = ({ text }) => {
+  const frame = useCurrentFrame();
+  const e = ease(frame, 10, 10);
+  return (
+    <div style={{ position: 'absolute', bottom: 205, left: 60, right: 60, display: 'flex', opacity: e * 0.92 }}>
+      <div style={{ background: 'rgba(8,10,16,.6)', padding: '6px 14px', borderRadius: 8, maxWidth: 900 }}>
+        <span style={{ fontFamily: FONT, fontWeight: 700, fontSize: 24, color: '#fff', letterSpacing: 0.5 }}>SOURCE: {text.toUpperCase()}</span>
+      </div>
+    </div>
   );
 };
 

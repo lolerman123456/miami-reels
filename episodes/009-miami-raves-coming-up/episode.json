@@ -58,7 +58,18 @@
         "heading": 120,
         "degrees": 45,
         "dir": 1
-      }
+      },
+      "stats": [
+        {
+          "value": "150+",
+          "label": "artists"
+        },
+        {
+          "value": "10",
+          "label": "stages"
+        }
+      ],
+      "source": "III Points"
     },
     {
       "kind": "item",
@@ -75,13 +86,20 @@
         "h": 8
       },
       "shot": {
-        "type": "arrive",
+        "type": "flyto",
         "range": 650,
         "pitch": -34,
         "heading": 300,
         "degrees": 45,
         "dir": -1
-      }
+      },
+      "stats": [
+        {
+          "value": "6 HOURS",
+          "label": "9 PM to 3 AM"
+        }
+      ],
+      "source": "Resident Advisor"
     },
     {
       "kind": "item",
@@ -98,13 +116,21 @@
         "h": 20
       },
       "shot": {
-        "type": "arrive",
+        "type": "flyto",
         "range": 1400,
         "pitch": -36,
         "heading": 40,
         "degrees": 45,
         "dir": 1
-      }
+      },
+      "stats": [
+        {
+          "value": "3 DJS",
+          "label": "back to back"
+        }
+      ],
+      "source": "Club Space",
+      "hit": "explosion"
     },
     {
       "kind": "item",
@@ -127,7 +153,14 @@
         "heading": 220,
         "degrees": 45,
         "dir": -1
-      }
+      },
+      "stats": [
+        {
+          "value": "3 NIGHTS",
+          "label": "Oct 30 to Nov 1"
+        }
+      ],
+      "source": "Club Space"
     },
     {
       "kind": "outro",

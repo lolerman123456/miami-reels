@@ -6,17 +6,13 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, FPS, WIDTH, HEIGHT, readJSON, writeJSON, run } from './util.mjs';
 import { prepareEpisode, buildProps } from './make.mjs';
-import { renderFrames } from './capture.mjs';
+import { renderFrames, buildShots } from './capture.mjs';
 import { ensureSfx } from './sfx.mjs';
 import { sfxCues } from '../src/cues.js';
 
 const PIECES = Number(process.env.CAPTURE_PIECES || 20);
 
-function shotsOf(episode, timeline) {
-  return episode.scenes.map((scene, index) => ({
-    index, frames: Math.ceil(timeline[index].duration * FPS) + 2, ...scene.location, ...scene.shot,
-  }));
-}
+const shotsOf = buildShots;
 
 // Split all frames into ~PIECES slices of similar size; a slice never crosses a shot boundary.
 function plan(shots) {
@@ -38,7 +34,7 @@ if (cmd === 'prepare') {
   let dir = opt('--episode');
   if (!dir) {
     const { generateEpisode } = await import('./generate.mjs');
-    dir = await generateEpisode({ topic: opt('--topic') || null });
+    dir = await generateEpisode({ topic: opt('--topic') || null, hook: opt('--hook') || null, num: opt('--num') || null });
   }
   dir = path.resolve(ROOT, dir);
   const { episode, timeline } = await prepareEpisode(dir);
@@ -117,7 +113,7 @@ if (cmd === 'prepare') {
     const ms = Math.round((c.at / FPS) * 1000);
     chains.push(`[${i + 2}:a]aresample=48000,aformat=channel_layouts=stereo,volume=${c.volume},adelay=${ms}|${ms}[s${i}]`);
   });
-  const mix = `${chains.join(';')};[a0]${cues.map((_, i) => `[s${i}]`).join('')}amix=inputs=${cues.length + 1}:duration=first:normalize=0[a]`;
+  const mix = `${chains.join(';')};[a0]${cues.map((_, i) => `[s${i}]`).join('')}amix=inputs=${cues.length + 1}:duration=first:normalize=0,alimiter=limit=0.97[a]`;
   const out = path.join(ROOT, 'out', `${episode.id}.mp4`);
   fs.mkdirSync(path.dirname(out), { recursive: true });
   await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', video, ...inputs, '-filter_complex', mix,

@@ -72,6 +72,7 @@ export function buildProps(episode, timeline, duration, captions, videos, music 
     scenes: episode.scenes.map((s, i) => ({
       kind: s.kind, rank: s.rank ?? null, overlay: s.overlay, sub: s.sub ?? null,
       emoji: s.emoji ?? null, emojis: s.emojis ?? null, alert: s.alert ?? null, note: s.note ?? null, badge: s.badge ?? null,
+      stats: s.stats ?? null, source: s.source ?? null, hit: s.hit ?? null, shotType: s.shot?.type ?? null, sfx: episode.sfx ?? 'hard',
       from: Math.round(timeline[i].start * FPS),
       duration: Math.round(timeline[i].duration * FPS),
       video: videos[i],

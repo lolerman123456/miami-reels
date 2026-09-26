@@ -52,7 +52,12 @@ async function main() {
   if (job.fxaa) scene.postProcessStages.fxaa.enabled = true;
   scene.fog.enabled = true;
 
-  const tileset = await Cesium.createGooglePhotorealistic3DTileset();
+  // Load everything the camera sees at full detail before a frame is taken (no half-loaded chunks popping in mid-move):
+  // no cheaper tiles while moving, no lower detail at the screen edges, keep loaded tiles cached for the whole slice.
+  const tileset = await Cesium.createGooglePhotorealistic3DTileset(undefined, {
+    cullRequestsWhileMoving: false, foveatedScreenSpaceError: false, dynamicScreenSpaceError: false,
+    preloadWhenHidden: true, cacheBytes: 1536 * 1024 * 1024, maximumCacheOverflowBytes: 1024 * 1024 * 1024,
+  });
   tileset.maximumScreenSpaceError = job.sse ?? 8;
   scene.primitives.add(tileset);
 
@@ -60,16 +65,27 @@ async function main() {
   // sampling the surface (which hits rooftops in dense areas).
   for (const shot of job.shots) {
     shot.center = Cesium.Cartesian3.fromDegrees(shot.lon, shot.lat, GEOID + (shot.h ?? 0));
+    if (shot.prev) {
+      shot.prevCenter = Cesium.Cartesian3.fromDegrees(shot.prev.lon, shot.prev.lat, GEOID + (shot.prev.h ?? 0));
+      shot.dist = Cesium.Cartesian3.distance(shot.prevCenter, shot.center);
+    }
   }
+  const scratch = new Cesium.Cartesian3();
+  const place = (shot, f) => {
+    const t = shot.frames > 1 ? f / (shot.frames - 1) : 0;
+    const p = poseAt(shot, t, Cesium.Math.toRadians);
+    const c = p.c != null && shot.prevCenter ? Cesium.Cartesian3.lerp(shot.prevCenter, shot.center, p.c, scratch) : shot.center;
+    viewer.camera.lookAt(c, new Cesium.HeadingPitchRange(p.h, p.p, p.r));
+  };
 
   for (const shot of job.shots) {
     // parallel jobs render a slice [from, to) of a shot; t still spans the whole shot so slices join seamlessly
     const start = Math.max(shot.from ?? 0, shot.skip || 0), end = shot.to ?? shot.frames;
+    // warm-up pass: visit the slice's path first so its tiles are downloaded and cached before the real frames
+    for (let f = start; f < end; f += 6) { place(shot, f); await renderUntilLoaded(scene, tileset, f === start ? 30000 : 8000); }
     for (let f = start; f < end; f++) {
-      const t = shot.frames > 1 ? f / (shot.frames - 1) : 0;
-      const p = poseAt(shot, t, Cesium.Math.toRadians);
-      viewer.camera.lookAt(shot.center, new Cesium.HeadingPitchRange(p.h, p.p, p.r));
-      await renderUntilLoaded(scene, tileset, f === start ? 15000 : (job.frameTimeout ?? 1800));
+      place(shot, f);
+      await renderUntilLoaded(scene, tileset, f === start ? 20000 : (job.frameTimeout ?? 1800));
       // first frame of a slice: let lighting/atmosphere settle (otherwise it comes out darker = a visible blink)
       if (f === start) for (let w = 0; w < 12; w++) { scene.render(); await sleep(60); }
       const blob = await new Promise(r => scene.canvas.toBlob(r, 'image/jpeg', 0.93));
@@ -84,13 +100,14 @@ async function main() {
 
 async function renderUntilLoaded(scene, tileset, timeout) {
   const start = performance.now();
-  let n = 0;
+  let n = 0, done = 0;
   while (true) {
     scene.render();
     n++;
-    if (n >= 2 && tileset.tilesLoaded) return;
+    if (tileset.tilesLoaded) { if (++done >= 2) return; } else done = 0; // loaded on two renders in a row
+    if (n > 400) return;
     if (performance.now() - start > timeout) return;
-    await sleep(150); // let tiles download/decode without hammering the GPU
+    await sleep(done ? 20 : 120); // let tiles download/decode without hammering the GPU
   }
 }
 

@@ -5,7 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, readJSON, writeJSON } from './util.mjs';
-import { fetchNews } from './news.mjs';
+import { fetchNews, searchNews } from './news.mjs';
 import { wikiArticle, rentFacts } from './facts.mjs';
 import { STYLE, REMINDER, toneLines, sanitize, memeTells, HANDLES_RULE, cleanCollabs } from './style.mjs';
 
@@ -20,7 +20,17 @@ const FORMATS = `FORMATS (pick the one that fits the best available material):
 - HISTORY: the real story of one place (a landmark, island, building, neighborhood, road). How it started, key moments, what it is now.
 - DID YOU KNOW: 4–5 genuinely surprising facts about one city, neighborhood or landmark.
 - RENT CHECK: what typical rent costs right now in 4–5 South Florida cities/ZIPs vs a year ago, 5 years ago and 2015 (Zillow data).
-- BY THE NUMBERS: one big place or system (PortMiami, MIA, Brightline, the Everglades, I-95, a stadium) told through its numbers.`;
+- BY THE NUMBERS: one big place or system (PortMiami, MIA, Brightline, the Everglades, I-95, a stadium) told through its numbers.
+- TOP LIST (only when the owner asks for a top 5 / ranking / "cheapest", "most expensive" list): exactly 5 items counted
+  down from #5 to #1, each item a specific real place (a named city, neighborhood or property, never a vague "Miami").
+  Rank by a real number from the sources when there is one (price, rent, crime rate). When the owner's ranking is a
+  matter of taste (e.g. "most attractive people"), pick specific, unexpected real cities and present them as a straight
+  countdown with no disclaimers, and back each pick with REAL facts about that city (what's there, population, beaches,
+  nightlife, gyms, a university, events). Never invent a study, survey, poll, score or statistic to justify a pick.
+- CASE FILE: a true crime, mystery or dark-history story (unsolved murders, serial killers, disappearances, what was found
+  somewhere). Tell it in order with names of convicted/public figures, dates and places, what investigators found, and
+  where it stands now. Factual and respectful to victims; no gore; never name private people who aren't in the sources;
+  never state as fact a guilt that was never proven.`;
 
 const NARRATOR = `WHO IS TALKING
 A South Florida local who knows a lot about the area, talking to camera like a good explainer video. Clear, calm,
@@ -48,8 +58,16 @@ triples, neat morals, and these words: vibes, iconic, hidden gem, paradise, bust
 "a testament to", "boasts", "stands as", literally, absolutely, ultimate.`;
 
 const FORMAT = `FORMAT
-- Scenes: hook, then 3–5 "item" scenes (each one place or one fact, NO ranks, never say "number one"), then outro.
-- LENGTH: 140–190 spoken words total (≈55–70 seconds). Hook 12–22 words. Items 25–45 words each. Outro 8–16 words.
+- Scenes: hook, then 3–5 "item" scenes (each one place or one fact), then outro. No ranks, except TOP LIST: exactly 5 items
+  with "rank": 5,4,3,2,1 in that order (say "number five", … "and number one").
+- LENGTH: 140–190 spoken words total (≈55–70 seconds); TOP LIST 170–230. Hook 12–26 words. Items 25–45 words each. Outro 8–16 words.
+- Go deep: every item has at least one hard number or date and one specific detail (a name, a street, what it sold for, who
+  built it, what happened next). No filler, no repeating the same kind of joke, no generic lines.
+- "stats" (items): 1–2 key numbers from the sources that the narrator says in that scene, shown as big counting-up cards:
+  [{"value": "$173M" | "1,100 TONS" | "28 YEARS" | "+61%", "label": "≤22 chars, what it is"}]. Only numbers in the sources.
+- "source" (items): short name of where that scene's facts come from ("Miami Herald", "Wikipedia", "Zillow", "FBI").
+- "hit" (optional, 1–2 per video, dramatic moments only): "explosion" (a huge reveal), "crash" (a crime, a collapse, a
+  shock). Leave it out otherwise.
 - "text" = exactly what the narrator says. "caption" = same line for the screen (digits, $, ft). Include caption when they differ.
 - On-screen: "overlay" = place name in caps (≤18 chars). "badge" = the key stat for that scene, ≤14 chars
   ("1,049 FT", "$3,831/MO", "OPENS 2028", "BUILT 1925", "+61% SINCE '15"). "sub" = ≤26-char line of context.
@@ -57,7 +75,9 @@ const FORMAT = `FORMAT
 LOCATIONS: real Florida spots (South Florida preferred). When a source gives coordinates for a place, use EXACTLY those. Otherwise give the accurate
 lat/lon of the exact building/landmark. h = aim height in meters (towers 60–150, low areas 5–20).
 
-SHOTS: type is dive (hook only), orbit, push, zoomin, pullout (outro only). range: 500–900 low-rise/beaches,
+SHOTS: type is dive (hook only), flyto, orbit, push, zoomin, pullout (outro only). flyto = the camera zooms out from the
+previous scene's place and flies fast to this one, then circles slowly: use it for most items that are a different place
+than the previous scene (not for the first item after the hook if it is the same place). range: 500–900 low-rise/beaches,
 1400–1800 high-rise skylines (Brickell, Downtown, Sunny Isles, Fort Lauderdale beach — closer puts the camera inside buildings),
 1500–2500 wide areas/highways. pitch -25 to -40 (-32 or steeper near skyscrapers). Vary heading 0–359. Orbit: add degrees (50–120) and dir (1 or -1).
 
@@ -71,7 +91,7 @@ OUTPUT strictly this JSON:
     { "kind": "hook", "text": "…", "overlay": ["LINE 1 ≤18 chars", "LINE 2 ≤18 chars"], "emojis": ["4 emojis"],
       "location": {"name": "…", "lat": 0, "lon": 0, "h": 0}, "shot": {"type": "dive", "range": 1600, "pitch": -32, "heading": 200} },
     { "kind": "item", "text": "…", "caption": "…", "overlay": "PLACE", "badge": "KEY STAT", "sub": "…", "emoji": "1 emoji",
-      "location": {…}, "shot": {…} },
+      "stats": [{"value": "…", "label": "…"}], "source": "…", "location": {…}, "shot": {"type": "flyto", "range": 800, "pitch": -32, "heading": 140, "degrees": 40, "dir": 1} },
     …,
     { "kind": "outro", "text": "…", "overlay": "SHORT CTA + EMOJI", "sub": "…", "location": {…}, "shot": {"type": "pullout", …} }
   ]
@@ -83,7 +103,7 @@ ranking ("tallest", "first", "biggest") and name — confirm it is supported by 
 - Supported: keep it (match the source's exact number; keep hedges like "about", "planned", "expected").
 - Not supported or contradicted: fix it to what the source says, or remove it and smooth the sentence.
 - NEVER mention sources, "sourced", "these sources", "based on", "according to the data" in text/caption — the viewer never sees the sources. Just state the fact plainly, or cut it.
-- Keep the voice normal and conversational; cut quirky lists or personification jokes; one dry fact-based line is fine. Keep all JSON fields, locations and shots. Keep 140–190 spoken words.
+- Keep the voice normal and conversational; cut quirky lists or personification jokes; one dry fact-based line is fine. Keep all JSON fields (including rank, stats, source, hit), locations and shots. Every "stats" value must match the sources exactly, else fix or drop that stat. Keep 140–190 spoken words (TOP LIST up to 230). If the hook is the owner's line, keep its wording and only fix a fact the sources contradict.
 Return ONLY the corrected JSON, plus a field "removed": ["short notes of anything you had to fix or cut"].`;
 
 // AI-sounding sentence shapes (checked on the spoken script; any hit → rewrite). Also used by carousel.mjs.
@@ -98,11 +118,13 @@ export const aiTells = text => AI_TELLS.filter(r => r.test(text)).map(r => (text
 
 export const BANNED = /\b(vibes?|iconic|hidden gem|paradise|bustling|nestled|in the heart of|whether you're|let's dive|buckle up|faint of heart|it's giving|main character|npcs?|emotional damage|lives rent free|chaos|chaotic|unhinged|hits different|literally|absolutely|ultimate|real mvp|let that sink in|no cap|game[- ]changer|a testament to|boasts|stands as)\b/i;
 
-export async function generateEpisode({ topic } = {}) {
+export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
   const epRoot = path.join(ROOT, 'episodes');
   const existing = fs.existsSync(epRoot) ? fs.readdirSync(epRoot).filter(d => fs.existsSync(path.join(epRoot, d, 'episode.json'))).sort() : [];
   const past = existing.map(d => readJSON(path.join(epRoot, d, 'episode.json')).title);
-  const num = String(Math.max(0, ...existing.map(d => parseInt(d, 10) || 0)) + 1).padStart(3, '0');
+  // a batch of runs at once passes its own number so two runs never share an episode id
+  const num = forcedNum ? String(forcedNum).padStart(3, '0') : String(Math.max(0, ...existing.map(d => parseInt(d, 10) || 0)) + 1).padStart(3, '0');
+  const HOOK = hook ? `\nOWNER'S HOOK — the hook scene's "text" must be this line, word for word (finish a "starting with…" line with the first item's name). Only change a word if a fact in it is contradicted by the sources:\n"${hook}"\n` : '';
 
   // 1. plan
   const news = await fetchNews('local', { hours: 72, max: 80 }).catch(() => []);
@@ -110,8 +132,9 @@ export async function generateEpisode({ topic } = {}) {
     'Pick ONE topic people would send to a friend. Default to a STORY (famous person, crime, disaster, mansion, mystery tied to one real place). ' +
     'Use a news topic only when it is big (a record tower, a major opening, a price shock). Avoid boring topics: infrastructure stats, generic numbers, anything a viewer would not repeat to a friend. ' +
     'Don\'t repeat past videos. Return JSON: {"format":"…","angle":"one sentence","wikipedia":["up to 5 exact English Wikipedia article titles to pull facts from"],' +
-    '"rent":["up to 6 South Florida city names or 5-digit ZIPs for Zillow rent data, only for rent topics"],"news":[indexes of the relevant headlines]}' },
-    { role: 'user', content: `Today: ${new Date().toDateString()}\n${topic ? `The account owner asked for: ${topic}\n` : ''}` +
+    '"rent":["up to 12 South Florida city names or 5-digit ZIPs for Zillow rent data, only for rent/cost topics"],"news":[indexes of the relevant headlines],' +
+    '"search":["up to 4 Google News searches for facts the other sources will not have: recent sales, events, crime data, case updates"]}' },
+    { role: 'user', content: `Today: ${new Date().toDateString()}\n${topic ? `The account owner asked for: ${topic}\n` : ''}${HOOK}` +
       `Past videos:\n${past.map(t => '- ' + t).join('\n') || '(none)'}\n\nRecent South Florida headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` }]);
   console.log(`  plan: [${plan.format}] ${plan.angle}`);
 
@@ -122,6 +145,10 @@ export async function generateEpisode({ topic } = {}) {
     const w = await wikiArticle(t).catch(e => { console.log(`  (wikipedia "${t}": ${e.message})`); return null; });
     if (w) sources.push(`WIKIPEDIA "${w.title}"${w.lat ? ` — coordinates ${w.lat}, ${w.lon}` : ''}:\n${w.text}`);
   }
+  for (const q of (plan.search || []).slice(0, 4)) {
+    const hits = await searchNews(q, { days: 400, max: 12 }).catch(() => []);
+    hits.forEach(n => sources.push(`NEWS (${n.source}, ${new Date(n.date).toDateString()}): ${n.title}`));
+  }
   if (plan.rent?.length) (await rentFacts(plan.rent).catch(e => { console.log(`  (rent data: ${e.message})`); return []; })).forEach(r => sources.push(`RENT DATA: ${r}`));
   console.log(`  sources: ${sources.length} (${sources.map(s => s.split(/[:\n]/)[0]).join('; ').slice(0, 300)})`);
   if (!sources.length) throw new Error('No sources found for the planned topic');
@@ -131,15 +158,17 @@ export async function generateEpisode({ topic } = {}) {
   let episode;
   for (let attempt = 1; attempt <= 3; attempt++) {
     const draft = await chat([{ role: 'system', content: `${NARRATOR}\n\n${STYLE}\n\n${toneLines()}\n\n${HANDLES_RULE()}\n\n${FORMAT}` },
-      { role: 'user', content: `Format: ${plan.format}\nAngle: ${plan.angle}\n${topic ? `Owner's request: ${topic}\n` : ''}\n${SOURCES}\n\nWrite the episode.\n${REMINDER}` }]);
+      { role: 'user', content: `Format: ${plan.format}\nAngle: ${plan.angle}\n${topic ? `Owner's request: ${topic}\n` : ''}${HOOK}\n${SOURCES}\n\nWrite the episode.\n${REMINDER}` }]);
     episode = sanitize(await chat([{ role: 'system', content: `${CHECKER}\n\n${STYLE}` }, { role: 'user', content: `${SOURCES}\n\nDRAFT:\n${JSON.stringify(draft)}\n\n${REMINDER}` }]));
     if (episode.removed?.length) console.log(`  fact-check fixed: ${episode.removed.join(' | ').slice(0, 400)}`);
     const spoken = (episode.scenes || []).map(s => s.text).join(' ');
+    const checked = (episode.scenes || []).filter((s, i) => !(hook && i === 0)).map(s => s.text).join(' '); // the owner's own hook is never rewritten
     const words = spoken.split(/\s+/).length;
     try { validate(episode); } catch (e) { console.log(`  attempt ${attempt}: ${e.message}`); continue; }
-    const bad = spoken.match(BANNED) || spoken.match(/\b(sourced|these sources|the sources|based on (the|these) (sources|data))\b/i); const tells = [...aiTells(spoken), ...memeTells(spoken)];
+    const bad = checked.match(BANNED) || checked.match(/\b(sourced|these sources|the sources|based on (the|these) (sources|data))\b/i); const tells = [...aiTells(checked), ...memeTells(checked)];
     if ((bad || tells.length) && attempt < 3) { console.log(`  attempt ${attempt}: sounds like AI (${[bad?.[0], ...tells].filter(Boolean).join(' | ')}) — rewriting`); continue; }
-    if ((words < 120 || words > 210) && attempt < 3) { console.log(`  attempt ${attempt}: ${words} words — rewriting`); continue; }
+    const top = /TOP/i.test(plan.format || '');
+    if ((words < 120 || words > (top ? 250 : 210)) && attempt < 3) { console.log(`  attempt ${attempt}: ${words} words — rewriting`); continue; }
     console.log(`  script: ${words} words`);
     break;
   }
@@ -149,7 +178,14 @@ export async function generateEpisode({ topic } = {}) {
   validate(episode);
   delete episode.removed;
   episode.collaborators = cleanCollabs(episode.collaborators);
-  for (const s of episode.scenes) delete s.rank;
+  if (!/TOP/i.test(plan.format || '')) for (const s of episode.scenes) delete s.rank;
+  // flyto needs a different previous place; otherwise a normal arrival
+  episode.scenes.forEach((s, i) => {
+    const p = episode.scenes[i - 1]?.location;
+    if (s.shot?.type === 'flyto' && (!p || (Math.abs(p.lat - s.location.lat) < 0.002 && Math.abs(p.lon - s.location.lon) < 0.002))) s.shot.type = 'arrive';
+    if (s.stats && !Array.isArray(s.stats)) delete s.stats;
+    if (s.hit && !['explosion', 'crash', 'impact'].includes(s.hit)) delete s.hit;
+  });
   episode.format = plan.format;
   const credit = (episode.sources || []).length ? `\n\nSources: ${episode.sources.join(', ')}` : '';
   // max 4 hashtags
@@ -195,6 +231,6 @@ function validate(ep) {
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const i = process.argv.indexOf('--topic');
-  await generateEpisode({ topic: i > 0 ? process.argv[i + 1] : null });
+  const arg = n => { const i = process.argv.indexOf(n); return i > 0 ? process.argv[i + 1] : null; };
+  await generateEpisode({ topic: arg('--topic'), hook: arg('--hook'), num: arg('--num') });
 }

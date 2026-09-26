@@ -9,12 +9,7 @@ export async function captureShots(episode, timeline, epDir, { mode } = {}) {
   const shotsDir = path.join(epDir, 'shots');
   fs.mkdirSync(shotsDir, { recursive: true });
 
-  const shots = episode.scenes.map((scene, index) => ({
-    index,
-    frames: Math.ceil(timeline[index].duration * FPS) + 2,
-    ...scene.location,
-    ...scene.shot,
-  }));
+  const shots = buildShots(episode, timeline);
 
   const todo = shots.filter(s => !fs.existsSync(path.join(shotsDir, `${s.index}.mp4`)))
     .map(s => ({ ...s, skip: countFrames(path.join(framesDir, String(s.index))) }))
@@ -34,14 +29,22 @@ export async function captureShots(episode, timeline, epDir, { mode } = {}) {
 }
 
 
+// One camera job per scene. A "flyto" shot gets the previous shot so it can start exactly where that one ended.
+export function buildShots(episode, timeline) {
+  const shots = episode.scenes.map((scene, index) => ({
+    index, frames: Math.ceil(timeline[index].duration * FPS) + 2, ...scene.location, ...scene.shot,
+  }));
+  return shots.map((s, i) => (s.type === 'flyto' && i > 0 ? { ...s, prev: { ...shots[i - 1] } } : s));
+}
+
 // Render camera frames for some shots (optionally a frame range: shot.from/shot.to) into framesDir/<shot>/NNNNN.jpg
 export async function renderFrames(todo, framesDir, { mode } = {}) {
   // standard: render at 2/3 size and upscale (fast, daily posts). high: full 1080x1920, ~2.5x more building detail,
   // wait for every tile to load, anti-aliasing. Set CAPTURE_QUALITY=high (requests/run.json "quality": "high").
   const high = process.env.CAPTURE_QUALITY === 'high';
   const job = high
-    ? { width: WIDTH, height: HEIGHT, renderWidth: WIDTH, renderHeight: HEIGHT, sse: 5, frameTimeout: 7000, fxaa: true, shots: todo }
-    : { width: WIDTH, height: HEIGHT, renderWidth: 720, renderHeight: 1280, sse: 10, frameTimeout: 1800, shots: todo };
+    ? { width: WIDTH, height: HEIGHT, renderWidth: WIDTH, renderHeight: HEIGHT, sse: 5, frameTimeout: 12000, fxaa: true, shots: todo }
+    : { width: WIDTH, height: HEIGHT, renderWidth: 720, renderHeight: 1280, sse: 10, frameTimeout: 6000, shots: todo };
   if (high) console.log('  capture quality: HIGH (slower)');
   const srv = await startCaptureServer({ job, framesDir });
   const key = process.env.GOOGLE_MAPS_API_KEY;

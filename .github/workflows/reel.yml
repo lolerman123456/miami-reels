@@ -23,6 +23,18 @@ on:
         description: 'Post to Instagram when done'
         type: boolean
         default: true
+      hook:
+        description: 'Optional exact hook line (first thing the narrator says)'
+        required: false
+        default: ''
+      number:
+        description: 'Optional episode number (batches: gives each run its own id)'
+        required: false
+        default: ''
+      quality:
+        description: 'Optional: high'
+        required: false
+        default: ''
 
   # Post-on-demand from a chat: commit requests/run.json → a run starts
   push:
@@ -86,17 +98,24 @@ jobs:
           IN_TOPIC: ${{ github.event.inputs.topic }}
           IN_EPISODE: ${{ github.event.inputs.episode }}
           IN_PUBLISH: ${{ github.event.inputs.publish }}
+          IN_HOOK: ${{ github.event.inputs.hook }}
+          IN_NUMBER: ${{ github.event.inputs.number }}
+          IN_QUALITY: ${{ github.event.inputs.quality }}
         run: |
-          TOPIC="$IN_TOPIC"; EPISODE="$IN_EPISODE"; PUBLISH="${IN_PUBLISH:-true}"; POST_VIDEO=""; QUALITY=""
+          TOPIC="$IN_TOPIC"; EPISODE="$IN_EPISODE"; PUBLISH="${IN_PUBLISH:-true}"; POST_VIDEO=""; QUALITY="$IN_QUALITY"; HOOK="$IN_HOOK"; NUMBER="$IN_NUMBER"
           if [ "$EVENT" = "push" ]; then
             TOPIC=$(jq -r '.topic // ""' requests/run.json)
             EPISODE=$(jq -r '.episode // ""' requests/run.json)
             PUBLISH=$(jq -r 'if .publish == false then "false" else "true" end' requests/run.json)
             POST_VIDEO=$(jq -r '.postVideo // ""' requests/run.json)
             QUALITY=$(jq -r '.quality // ""' requests/run.json)
+            HOOK=$(jq -r '.hook // ""' requests/run.json)
+            NUMBER=$(jq -r '.number // ""' requests/run.json)
           fi
           {
             echo "topic<<EOF"; echo "$TOPIC"; echo "EOF"
+            echo "hook<<EOF"; echo "$HOOK"; echo "EOF"
+            echo "number=$NUMBER"
             echo "episode=$EPISODE"
             echo "publish=$PUBLISH"
             echo "post_video=$POST_VIDEO"
@@ -142,6 +161,8 @@ jobs:
           CLOUDFLARED_BIN: /usr/local/bin/cloudflared
           REEL_TOPIC: ${{ steps.req.outputs.topic }}
           REEL_EPISODE: ${{ steps.req.outputs.episode }}
+          REEL_HOOK: ${{ steps.req.outputs.hook }}
+          REEL_NUMBER: ${{ steps.req.outputs.number }}
           POST_VIDEO: ${{ steps.req.outputs.post_video }}
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -168,6 +189,8 @@ jobs:
           ARGS=()
           [ -n "$REEL_EPISODE" ] && ARGS+=(--episode "$REEL_EPISODE")
           [ -n "$REEL_TOPIC" ] && ARGS+=(--topic "$REEL_TOPIC")
+          [ -n "$REEL_HOOK" ] && ARGS+=(--hook "$REEL_HOOK")
+          [ -n "$REEL_NUMBER" ] && ARGS+=(--num "$REEL_NUMBER")
           node pipeline/parallel.mjs prepare "${ARGS[@]}"
           echo "render=true" >> "$GITHUB_OUTPUT"
 
@@ -229,9 +252,9 @@ jobs:
   reel:
     needs: [prepare, capture]
     if: needs.prepare.outputs.render == 'true'
-    # one post at a time
+    # one post at a time (previews get their own group: GitHub cancels a 2nd waiting run in a group, which would kill a batch)
     concurrency:
-      group: reel
+      group: ${{ needs.prepare.outputs.publish == 'false' && format('preview-{0}', github.run_id) || 'reel' }}
       cancel-in-progress: false
     runs-on: ubuntu-latest
     timeout-minutes: 120
