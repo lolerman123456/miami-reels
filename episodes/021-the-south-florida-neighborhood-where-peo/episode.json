@@ -1,0 +1,190 @@
+{
+  "title": "The South Florida Neighborhood Where People Park Airplanes at Home",
+  "id": "021-the-south-florida-neighborhood-where-peo",
+  "format": "STORY",
+  "sources": [
+    "Wellington Aero Club",
+    "Dan's Papers",
+    "Robb Report"
+  ],
+  "igCaption": "In Wellington's Aero Club, 248 homes share a private 4,000-foot runway, and some have their own hangar next to the garage.\n\nWould you rather have a boat or a plane in the driveway?\n\nSources: Wellington Aero Club, Dan's Papers, Robb Report\n\n#wellington #aviation #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Did you know that there's a neighborhood in South Florida where people literally park airplanes in their driveways?",
+      "overlay": [
+        "AIRPLANES IN",
+        "THE DRIVEWAY"
+      ],
+      "emojis": [
+        "✈️",
+        "🏡",
+        "🛩️",
+        "🌴"
+      ],
+      "location": {
+        "name": "Wellington Aero Club",
+        "lat": 26.6456233,
+        "lon": -80.2941094,
+        "h": 6
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 39
+      },
+      "caption": "Did you know there's a neighborhood in South Florida where people literally park AIRPLANES in their driveways?"
+    },
+    {
+      "kind": "item",
+      "text": "It's the Aero Club in Wellington, Palm Beach County. In nineteen eighty-three, C. Oliver Wellington, the man the town is named after, wanted a hangar for his own Cessna. He and two other plane owners bought four hundred acres of open land and built a neighborhood around a runway.",
+      "caption": "It's the Aero Club in Wellington, Palm Beach County. In 1983, C. Oliver Wellington, the man the town is named after, wanted a hangar for his own Cessna. He and two other plane owners bought 400 acres of open land and built a neighborhood around a runway.",
+      "overlay": "AERO CLUB",
+      "badge": "FOUNDED 1983",
+      "sub": "Wellington · Palm Beach County",
+      "emoji": "🛩️",
+      "location": {
+        "name": "Wellington Aero Club",
+        "lat": 26.6456233,
+        "lon": -80.2941094,
+        "h": 6
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 900,
+        "pitch": -36,
+        "heading": 20,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "400 ACRES",
+          "label": "bought in 1983"
+        }
+      ],
+      "source": "Dan's Papers"
+    },
+    {
+      "kind": "item",
+      "text": "The runway is four thousand feet long, lit at night and paved in twenty twelve, and it's approved for jets up to twelve thousand pounds. Taxiways connect to the homes, so you can roll your plane from the runway to your own hangar.",
+      "caption": "The runway is 4,000 feet long, lit at night and paved in 2012, and it's approved for jets up to 12,000 lbs. Taxiways connect to the homes, so you can roll your plane from the runway to your own hangar.",
+      "overlay": "THE RUNWAY",
+      "badge": "4,000 FT",
+      "sub": "Paved in 2012",
+      "emoji": "🛫",
+      "location": {
+        "name": "Wellington Aero Club runway",
+        "lat": 26.6456,
+        "lon": -80.296,
+        "h": 4
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1100,
+        "pitch": -38,
+        "heading": 110,
+        "degrees": 70,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "4,000 FT",
+          "label": "private runway"
+        },
+        {
+          "value": "12,000 LBS",
+          "label": "max jet weight"
+        }
+      ],
+      "source": "Wellington Aero Club",
+      "hit": "explosion"
+    },
+    {
+      "kind": "item",
+      "text": "There are two hundred forty-eight homes, each on about an acre, from four thousand to over ten thousand square feet. The neighborhood even has its own fuel station with aviation gas and jet fuel.",
+      "caption": "There are 248 homes, each on about an acre, from 4,000 to over 10,000 sq ft. The neighborhood even has its own fuel station with aviation gas and jet fuel.",
+      "overlay": "248 HOMES",
+      "badge": "1 ACRE EACH",
+      "sub": "Own fuel station",
+      "emoji": "⛽",
+      "location": {
+        "name": "Wellington Aero Club",
+        "lat": 26.6456233,
+        "lon": -80.2941094,
+        "h": 6
+      },
+      "shot": {
+        "type": "push",
+        "range": 900,
+        "pitch": -36,
+        "heading": 250
+      },
+      "stats": [
+        {
+          "value": "248",
+          "label": "homes"
+        },
+        {
+          "value": "1 ACRE",
+          "label": "per lot"
+        }
+      ],
+      "source": "Wellington Aero Club"
+    },
+    {
+      "kind": "item",
+      "text": "Florida has about eighty of these airparks, second only to Texas with eighty-four. Homes in them list for about thirty percent more than similar homes elsewhere.",
+      "caption": "Florida has about 80 of these airparks, second only to Texas with 84. Homes in them list for about 30% more than similar homes elsewhere.",
+      "overlay": "FLORIDA AIRPARKS",
+      "badge": "ABOUT 80",
+      "sub": "#2 in the US",
+      "emoji": "🗺️",
+      "location": {
+        "name": "Wellington Aero Club",
+        "lat": 26.6456233,
+        "lon": -80.2941094,
+        "h": 6
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -40,
+        "heading": 300,
+        "degrees": 60,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "80",
+          "label": "airparks in Florida"
+        },
+        {
+          "value": "+30%",
+          "label": "price premium"
+        }
+      ],
+      "source": "Robb Report"
+    },
+    {
+      "kind": "outro",
+      "text": "Boat or plane in the driveway? Pick one.",
+      "overlay": "BOAT OR PLANE? ✈️",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Wellington Aero Club",
+        "lat": 26.6456233,
+        "lon": -80.2941094,
+        "h": 6
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 304
+      }
+    }
+  ],
+  "collaborators": []
+}

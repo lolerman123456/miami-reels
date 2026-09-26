@@ -1,0 +1,224 @@
+{
+  "title": "The Cheapest Cities to Live in South Florida",
+  "id": "016-the-cheapest-cities-to-live-in-south-flo",
+  "format": "TOP LIST",
+  "sources": [
+    "Zillow Observed Rent Index (August 2026)"
+  ],
+  "igCaption": "Typical rent, August 2026 (Zillow): Oakland Park $2,151, Margate $2,134, Greenacres $2,128, Lauderdale Lakes $2,065, Lauderhill $1,878. Miami is $3,008. Palm Beach is $7,432.\n\nWhat do you pay?\n\nSources: Zillow Observed Rent Index (August 2026)\n\n#rent #broward #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "If you're broke, these are the cheapest cities in South Florida you can move to, starting with Oakland Park.",
+      "overlay": [
+        "CHEAPEST CITIES",
+        "IN SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "💸",
+        "🏠",
+        "📉",
+        "🌴"
+      ],
+      "location": {
+        "name": "Oakland Park",
+        "lat": 26.1723065,
+        "lon": -80.1319893,
+        "h": 15
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 49
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number five, Oakland Park, in Broward. Typical rent is two thousand one hundred fifty-one dollars a month. That's up ninety percent since twenty fifteen, when it was eleven hundred thirty-five.",
+      "caption": "#5, Oakland Park, in Broward. Typical rent is $2,151 a month. That's up 90% since 2015, when it was $1,135.",
+      "overlay": "OAKLAND PARK",
+      "badge": "$2,151/MO",
+      "sub": "Broward · +90% since 2015",
+      "emoji": "🏠",
+      "location": {
+        "name": "Oakland Park",
+        "lat": 26.1723065,
+        "lon": -80.1319893,
+        "h": 15
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 60,
+        "degrees": 40,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "$2,151",
+          "label": "typical rent / month"
+        },
+        {
+          "value": "+90%",
+          "label": "since 2015"
+        }
+      ],
+      "source": "Zillow",
+      "rank": 5
+    },
+    {
+      "kind": "item",
+      "text": "Number four, Margate. Two thousand one hundred thirty-four a month, and it's a little lower than a year ago, when it was two thousand one hundred forty-eight.",
+      "caption": "#4, Margate. $2,134 a month, and it's a little lower than a year ago, when it was $2,148.",
+      "overlay": "MARGATE",
+      "badge": "$2,134/MO",
+      "sub": "Broward · down from a year ago",
+      "emoji": "📉",
+      "location": {
+        "name": "Margate",
+        "lat": 26.2445263,
+        "lon": -80.206436,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "$2,134",
+          "label": "typical rent / month"
+        }
+      ],
+      "source": "Zillow",
+      "rank": 4
+    },
+    {
+      "kind": "item",
+      "text": "Number three is in Palm Beach County. Greenacres, at two thousand one hundred twenty-eight dollars. Ten minutes east, the town of Palm Beach averages seven thousand four hundred thirty-two.",
+      "caption": "#3 is in Palm Beach County. Greenacres, at $2,128. Ten minutes east, the town of Palm Beach averages $7,432.",
+      "overlay": "GREENACRES",
+      "badge": "$2,128/MO",
+      "sub": "Palm Beach County",
+      "emoji": "🌴",
+      "location": {
+        "name": "Greenacres",
+        "lat": 26.623679,
+        "lon": -80.1253213,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 250,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "$2,128",
+          "label": "Greenacres"
+        },
+        {
+          "value": "$7,432",
+          "label": "town of Palm Beach"
+        }
+      ],
+      "source": "Zillow",
+      "rank": 3,
+      "hit": "explosion"
+    },
+    {
+      "kind": "item",
+      "text": "Number two, Lauderdale Lakes, at two thousand sixty-five a month, up from sixteen hundred forty-three about five years ago.",
+      "caption": "#2, Lauderdale Lakes, at $2,065 a month, up from $1,643 about five years ago.",
+      "overlay": "LAUDERDALE LAKES",
+      "badge": "$2,065/MO",
+      "sub": "Broward",
+      "emoji": "🏘️",
+      "location": {
+        "name": "Lauderdale Lakes",
+        "lat": 26.1667184,
+        "lon": -80.2085565,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 20,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "$2,065",
+          "label": "typical rent / month"
+        }
+      ],
+      "source": "Zillow",
+      "rank": 2
+    },
+    {
+      "kind": "item",
+      "text": "And number one, right next door, Lauderhill. Typical rent is one thousand eight hundred seventy-eight dollars, the lowest of any city in South Florida's Zillow data, and it actually dropped from nineteen thirty-six last year. The city of Miami is at three thousand and eight.",
+      "caption": "And #1, right next door, Lauderhill. Typical rent is $1,878, the lowest of any city in South Florida's Zillow data, and it actually dropped from $1,936 last year. The city of Miami is at $3,008.",
+      "overlay": "LAUDERHILL",
+      "badge": "$1,878/MO",
+      "sub": "Cheapest city in the data",
+      "emoji": "🏆",
+      "location": {
+        "name": "Lauderhill",
+        "lat": 26.1403635,
+        "lon": -80.2133808,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 200,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "$1,878",
+          "label": "Lauderhill"
+        },
+        {
+          "value": "$3,008",
+          "label": "city of Miami"
+        }
+      ],
+      "source": "Zillow",
+      "rank": 1
+    },
+    {
+      "kind": "outro",
+      "text": "What do you pay for rent where you live?",
+      "overlay": "WHAT DO YOU PAY? 💸",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Broward County",
+        "lat": 26.15,
+        "lon": -80.2,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2000,
+        "pitch": -32,
+        "heading": 160
+      }
+    }
+  ],
+  "collaborators": []
+}

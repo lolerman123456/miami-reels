@@ -1,0 +1,183 @@
+{
+  "title": "The Devil's Tree Murders",
+  "id": "022-the-devil-s-tree-murders",
+  "format": "CASE FILE",
+  "sources": [
+    "WKMG News 6",
+    "City of Port St. Lucie",
+    "Wikipedia: Gerard John Schaefer"
+  ],
+  "igCaption": "A live oak in Port St. Lucie's Oak Hammock Park is tied to the case of Gerard Schaefer, the \"Killer Cop,\" convicted of the 1972 murders of two teenagers.\n\nHave you ever been to the Devil's Tree?\n\nSources: WKMG News 6, City of Port St. Lucie, Wikipedia: Gerard John Schaefer\n\n#truecrime #portstlucie #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "There's a tree in South Florida connected to one of the area's most disturbing serial murder cases.",
+      "overlay": [
+        "THE DEVIL'S",
+        "TREE"
+      ],
+      "emojis": [
+        "🌳",
+        "😈",
+        "🚨",
+        "🕯️"
+      ],
+      "location": {
+        "name": "Oak Hammock Park, Port St. Lucie",
+        "lat": 27.2788177,
+        "lon": -80.405588,
+        "h": 8
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 254
+      }
+    },
+    {
+      "kind": "item",
+      "text": "It's a southern live oak, more than a hundred years old, in Oak Hammock Park in Port St. Lucie, by the C-twenty-four canal. People call it the Devil's Tree.",
+      "caption": "It's a southern live oak, more than 100 years old, in Oak Hammock Park in Port St. Lucie, by the C-24 canal. People call it the Devil's Tree.",
+      "overlay": "OAK HAMMOCK PARK",
+      "badge": "100+ YEARS OLD",
+      "sub": "Port St. Lucie",
+      "emoji": "🌳",
+      "location": {
+        "name": "Oak Hammock Park, Port St. Lucie",
+        "lat": 27.2788177,
+        "lon": -80.405588,
+        "h": 8
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 600,
+        "pitch": -35,
+        "heading": 60,
+        "degrees": 40,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "100+",
+          "label": "years old"
+        }
+      ],
+      "source": "City of Port St. Lucie"
+    },
+    {
+      "kind": "item",
+      "text": "In the early nineteen seventies, Gerard John Schaefer was a sheriff's deputy in Martin County. In September nineteen seventy-two, two teenagers, Susan Place, seventeen, and Georgia Jessup, sixteen, disappeared. Their remains were found in April nineteen seventy-three, buried near a large tree in Port St. Lucie.",
+      "caption": "In the early 1970s, Gerard John Schaefer was a sheriff's deputy in Martin County. In September 1972, two teenagers, Susan Place, 17, and Georgia Jessup, 16, disappeared. Their remains were found in April 1973, buried near a large tree in Port St. Lucie.",
+      "overlay": "THE KILLER COP",
+      "badge": "1972",
+      "sub": "Martin County deputy",
+      "emoji": "🚓",
+      "location": {
+        "name": "Stuart",
+        "lat": 27.1975,
+        "lon": -80.2528,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -32,
+        "heading": 150,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "1972",
+          "label": "the murders"
+        }
+      ],
+      "source": "WKMG News 6",
+      "hit": "crash"
+    },
+    {
+      "kind": "item",
+      "text": "Schaefer was convicted of their murders and got two life sentences in nineteen seventy-three. Investigators suspected him in up to twenty-six more killings. In December nineteen ninety-five, another inmate stabbed him to death at Florida State Prison.",
+      "caption": "Schaefer was convicted of their murders and got two life sentences in 1973. Investigators suspected him in up to 26 more killings. In December 1995, another inmate stabbed him to death at Florida State Prison.",
+      "overlay": "CONVICTED",
+      "badge": "2 LIFE SENTENCES",
+      "sub": "Suspected in up to 26 more",
+      "emoji": "⚖️",
+      "location": {
+        "name": "Port St. Lucie",
+        "lat": 27.273,
+        "lon": -80.3582,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 260,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "2",
+          "label": "life sentences"
+        },
+        {
+          "value": "26",
+          "label": "more suspected"
+        }
+      ],
+      "source": "Wikipedia"
+    },
+    {
+      "kind": "item",
+      "text": "Since then people have chopped the bark, spray painted it and set a fire at its base, so the city filled a hole in the trunk with cement. The stories about chainsaws failing and black sap? The city calls them one hundred percent urban legend.",
+      "caption": "Since then people have chopped the bark, spray painted it and set a fire at its base, so the city filled a hole in the trunk with cement. The stories about chainsaws failing and black sap? The city calls them 100% urban legend.",
+      "overlay": "THE TREE TODAY",
+      "badge": "CEMENT-FILLED",
+      "sub": "Vandalized, still standing",
+      "emoji": "🪓",
+      "location": {
+        "name": "Oak Hammock Park, Port St. Lucie",
+        "lat": 27.2788177,
+        "lon": -80.405588,
+        "h": 8
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 550,
+        "pitch": -35,
+        "heading": 330,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "100%",
+          "label": "urban legend, per the city"
+        }
+      ],
+      "source": "City of Port St. Lucie"
+    },
+    {
+      "kind": "outro",
+      "text": "Would you visit the Devil's Tree at night?",
+      "overlay": "WOULD YOU GO? 🌳",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Oak Hammock Park, Port St. Lucie",
+        "lat": 27.2788177,
+        "lon": -80.405588,
+        "h": 8
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 242
+      }
+    }
+  ],
+  "collaborators": []
+}

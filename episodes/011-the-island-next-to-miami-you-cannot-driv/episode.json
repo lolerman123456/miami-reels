@@ -1,0 +1,191 @@
+{
+  "title": "The Island Next to Miami You Cannot Drive Onto",
+  "id": "011-the-island-next-to-miami-you-cannot-driv",
+  "format": "STORY",
+  "sources": [
+    "Wikipedia: Fisher Island, Florida",
+    "City of Miami Beach",
+    "Miami-Dade County"
+  ],
+  "igCaption": "Fisher Island has no road or bridge to the mainland. You get there by yacht or by a private ferry, and guests need security clearance first.\n\nWould you take a ferry home every day?\n\nSources: Wikipedia: Fisher Island, Florida, City of Miami Beach, Miami-Dade County\n\n#fisherisland #miamibeach #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "There's an island right next to Miami that you literally can't drive onto.",
+      "overlay": [
+        "YOU CAN'T",
+        "DRIVE HERE"
+      ],
+      "emojis": [
+        "🏝️",
+        "⛴️",
+        "🚫",
+        "🚗"
+      ],
+      "location": {
+        "name": "Fisher Island",
+        "lat": 25.76083,
+        "lon": -80.14167,
+        "h": 15
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 298
+      }
+    },
+    {
+      "kind": "item",
+      "text": "This is Fisher Island. There's no road and no causeway to the mainland. You get there by yacht or on a private ferry, and ferry guests need security clearance arranged ahead of time. The twenty twenty census counted five hundred sixty-one people living here.",
+      "caption": "This is Fisher Island. There's no road and no causeway to the mainland. You get there by yacht or on a private ferry, and ferry guests need security clearance arranged ahead of time. The 2020 census counted 561 people living here.",
+      "overlay": "FISHER ISLAND",
+      "badge": "561 RESIDENTS",
+      "sub": "Ferry or yacht only",
+      "emoji": "⛴️",
+      "location": {
+        "name": "Fisher Island",
+        "lat": 25.76083,
+        "lon": -80.14167,
+        "h": 15
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 40,
+        "degrees": 50,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "561",
+          "label": "residents, 2020"
+        },
+        {
+          "value": "0",
+          "label": "roads to the mainland"
+        }
+      ],
+      "source": "U.S. Census"
+    },
+    {
+      "kind": "item",
+      "text": "The island exists because of Government Cut. Crews dredged that shipping channel from nineteen oh five to nineteen eleven, and it split this land off from what became Miami Beach. In nineteen eighteen, Dana A. Dorsey, one of the first Black millionaires in the South, bought it and planned a resort for Black families.",
+      "caption": "The island exists because of Government Cut. Crews dredged that shipping channel from 1905 to 1911, and it split this land off from what became Miami Beach. In 1918, Dana A. Dorsey, one of the first Black millionaires in the South, bought it and planned a resort for Black families.",
+      "overlay": "GOVERNMENT CUT",
+      "badge": "DREDGED 1905",
+      "sub": "Dorsey bought it in 1918",
+      "emoji": "🚢",
+      "location": {
+        "name": "Government Cut",
+        "lat": 25.7645,
+        "lon": -80.133,
+        "h": 5
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 110,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "1905–1911",
+          "label": "dredging"
+        },
+        {
+          "value": "1918",
+          "label": "Dorsey buys it"
+        }
+      ],
+      "source": "City of Miami Beach"
+    },
+    {
+      "kind": "item",
+      "text": "His resort never got built. A year later Carl Fisher bought the island, and in the late nineteen twenties he traded part of it to William K. Vanderbilt the Second for a yacht named Eagle. Vanderbilt built a winter estate here designed by Maurice Fatio.",
+      "caption": "His resort never got built. A year later Carl Fisher bought the island, and in the late 1920s he traded part of it to William K. Vanderbilt II for a yacht named Eagle. Vanderbilt built a winter estate here designed by Maurice Fatio.",
+      "overlay": "VANDERBILT ESTATE",
+      "badge": "TRADED FOR A YACHT",
+      "sub": "Designed by Maurice Fatio",
+      "emoji": "🛥️",
+      "location": {
+        "name": "Fisher Island Club",
+        "lat": 25.7634133,
+        "lon": -80.1388738,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -32,
+        "heading": 200,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "1 YACHT",
+          "label": "the price of the land"
+        }
+      ],
+      "source": "Wikipedia",
+      "hit": "explosion"
+    },
+    {
+      "kind": "item",
+      "text": "In nineteen sixty-three an investment group led by Bebe Rebozo, including Richard Nixon, bought the estate. The Fisher Island Club opened in nineteen eighty-seven, and today the island is regularly listed among the richest ZIP codes in the country.",
+      "caption": "In 1963 an investment group led by Bebe Rebozo, including Richard Nixon, bought the estate. The Fisher Island Club opened in 1987, and today the island is regularly listed among the richest ZIP codes in the country.",
+      "overlay": "FISHER ISLAND CLUB",
+      "badge": "OPENED 1987",
+      "sub": "Nixon was an investor",
+      "emoji": "🏛️",
+      "location": {
+        "name": "Fisher Island Club",
+        "lat": 25.7634133,
+        "lon": -80.1388738,
+        "h": 12
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 330,
+        "degrees": 70,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "1963",
+          "label": "Nixon's group buys in"
+        },
+        {
+          "value": "1987",
+          "label": "the club opens"
+        }
+      ],
+      "source": "Wikipedia"
+    },
+    {
+      "kind": "outro",
+      "text": "Would you take a ferry home every day to live here?",
+      "overlay": "WOULD YOU? ⛴️",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Fisher Island",
+        "lat": 25.76083,
+        "lon": -80.14167,
+        "h": 15
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 222
+      }
+    }
+  ],
+  "collaborators": []
+}

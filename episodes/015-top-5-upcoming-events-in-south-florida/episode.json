@@ -1,0 +1,234 @@
+{
+  "title": "Top 5 Upcoming Events in South Florida",
+  "id": "015-top-5-upcoming-events-in-south-florida",
+  "format": "TOP LIST",
+  "sources": [
+    "III Points",
+    "Fort Lauderdale International Boat Show",
+    "NASCAR",
+    "World Polo League",
+    "Art Basel"
+  ],
+  "igCaption": "Five big dates for your calendar: III Points (Oct 16–17), the Fort Lauderdale Boat Show (Oct 28–Nov 1), NASCAR Championship Weekend (Nov 6–8), Beach Polo World Cup (Nov 12–15) and Art Basel Miami Beach (Dec 4–6).\n\nWhich one are you going to?\n\nSources: III Points, Fort Lauderdale International Boat Show, NASCAR, World Polo League, Art Basel\n\n#miamievents #artbasel #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "These are the five biggest things happening in South Florida that you probably don't want to miss.",
+      "overlay": [
+        "5 BIG EVENTS",
+        "YOU CAN'T MISS"
+      ],
+      "emojis": [
+        "🎧",
+        "🛥️",
+        "🏁",
+        "🎨"
+      ],
+      "location": {
+        "name": "Mana Wynwood",
+        "lat": 25.7980804,
+        "lon": -80.201582,
+        "h": 12
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 276
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number five: the Beach Polo World Cup, November twelfth through fifteenth. Eight international teams and more than one hundred twenty horses play on the sand behind the Setai, between Twenty-first and Twenty-second Street in South Beach.",
+      "caption": "#5: the Beach Polo World Cup, November 12–15. Eight international teams and more than 120 horses play on the sand behind the Setai, between 21st and 22nd Street in South Beach.",
+      "overlay": "BEACH POLO",
+      "badge": "NOV 12–15",
+      "sub": "South Beach · on the sand",
+      "emoji": "🐎",
+      "location": {
+        "name": "Beach behind The Setai, Miami Beach",
+        "lat": 25.798,
+        "lon": -80.1275,
+        "h": 5
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 700,
+        "pitch": -32,
+        "heading": 250,
+        "degrees": 40,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "120+",
+          "label": "horses"
+        },
+        {
+          "value": "8",
+          "label": "teams"
+        }
+      ],
+      "source": "World Polo League",
+      "rank": 5
+    },
+    {
+      "kind": "item",
+      "text": "Number four: NASCAR Championship Weekend at Homestead-Miami Speedway, November sixth through eighth, where the season titles get decided across multiple series.",
+      "caption": "#4: NASCAR Championship Weekend at Homestead-Miami Speedway, November 6–8, where the season titles get decided across multiple series.",
+      "overlay": "HOMESTEAD",
+      "badge": "NOV 6–8",
+      "sub": "Championship Weekend",
+      "emoji": "🏁",
+      "location": {
+        "name": "Homestead-Miami Speedway",
+        "lat": 25.4517516,
+        "lon": -80.4094304,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1100,
+        "pitch": -32,
+        "heading": 30,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "3 DAYS",
+          "label": "of racing"
+        }
+      ],
+      "source": "NASCAR",
+      "rank": 4,
+      "hit": "explosion"
+    },
+    {
+      "kind": "item",
+      "text": "Number three: III Points at Mana Wynwood, October sixteenth and seventeenth. More than one hundred fifty artists on ten stages, including Underworld, Four Tet and Charlotte de Witte.",
+      "caption": "#3: III Points at Mana Wynwood, October 16 and 17. More than 150 artists on 10 stages, including Underworld, Four Tet and Charlotte de Witte.",
+      "overlay": "III POINTS",
+      "badge": "OCT 16–17",
+      "sub": "Mana Wynwood · all ages",
+      "emoji": "🎧",
+      "location": {
+        "name": "Mana Wynwood",
+        "lat": 25.7980804,
+        "lon": -80.201582,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 750,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "150+",
+          "label": "artists"
+        },
+        {
+          "value": "10",
+          "label": "stages"
+        }
+      ],
+      "source": "III Points",
+      "rank": 3
+    },
+    {
+      "kind": "item",
+      "text": "Number two: the Fort Lauderdale International Boat Show, October twenty-eighth to November first. It's the largest in-water boat show in the world, with more than thirteen hundred boats across seven locations and over one hundred thousand people.",
+      "caption": "#2: the Fort Lauderdale International Boat Show, October 28 to November 1. It's the largest in-water boat show in the world, with more than 1,300 boats across seven locations and over 100,000 people.",
+      "overlay": "BOAT SHOW",
+      "badge": "OCT 28–NOV 1",
+      "sub": "Bahia Mar & 6 more sites",
+      "emoji": "🛥️",
+      "location": {
+        "name": "Bahia Mar, Fort Lauderdale",
+        "lat": 26.1135458,
+        "lon": -80.1061129,
+        "h": 6
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 200,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "1,300+",
+          "label": "boats"
+        },
+        {
+          "value": "100,000+",
+          "label": "visitors"
+        }
+      ],
+      "source": "FLIBS",
+      "rank": 2
+    },
+    {
+      "kind": "item",
+      "text": "And number one: Art Basel Miami Beach, open to the public December fourth through sixth at the Miami Beach Convention Center. More than two hundred eighty galleries from over forty countries.",
+      "caption": "And #1: Art Basel Miami Beach, open to the public December 4–6 at the Miami Beach Convention Center. More than 280 galleries from over 40 countries.",
+      "overlay": "ART BASEL",
+      "badge": "DEC 4–6",
+      "sub": "Miami Beach Convention Center",
+      "emoji": "🎨",
+      "location": {
+        "name": "Miami Beach Convention Center",
+        "lat": 25.7955257,
+        "lon": -80.133515,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "280+",
+          "label": "galleries"
+        },
+        {
+          "value": "40+",
+          "label": "countries"
+        }
+      ],
+      "source": "Art Basel",
+      "rank": 1
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you going to? Tag who you're bringing.",
+      "overlay": "WHO'S GOING? 🎟️",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Miami Beach",
+        "lat": 25.7907,
+        "lon": -80.13,
+        "h": 30
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 190
+      }
+    }
+  ],
+  "collaborators": [
+    "iiipoints"
+  ]
+}

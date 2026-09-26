@@ -1,0 +1,190 @@
+{
+  "title": "South Florida's Most Infamous Unsolved Murders",
+  "id": "012-south-florida-s-most-infamous-unsolved-m",
+  "format": "CASE FILE",
+  "sources": [
+    "NBC 6",
+    "Florida Sheriffs Association",
+    "Wikipedia: South Florida serial murders",
+    "Miami-Dade Police"
+  ],
+  "igCaption": "A mall shootout that started Miami's drug war, a killer who stranded women with flat tires, and cases police still can't close.\n\nIf you know anything, call Miami-Dade Crime Stoppers: 305-471-TIPS.\n\nSources: NBC 6, Florida Sheriffs Association, Wikipedia: South Florida serial murders, Miami-Dade Police\n\n#truecrime #coldcase #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "These are some of the most infamous unsolved murders in South Florida, and the first one starts here.",
+      "overlay": [
+        "UNSOLVED",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🕵️",
+        "🚨",
+        "📁",
+        "❓"
+      ],
+      "location": {
+        "name": "Dadeland Mall",
+        "lat": 25.69027778,
+        "lon": -80.31194444,
+        "h": 10
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 214
+      },
+      "caption": "These are some of the most infamous UNSOLVED murders in South Florida… and the first one starts here."
+    },
+    {
+      "kind": "item",
+      "text": "Dadeland Mall, July eleventh, nineteen seventy-nine, around two thirty in the afternoon. Gunmen walked into Crown Liquors and shot drug trafficker German Jimenez Panesso and his bodyguard, then fled in a fake party supply van police called the war wagon. Griselda Blanco is believed to have ordered it. Nobody was ever prosecuted.",
+      "caption": "Dadeland Mall, July 11, 1979, around 2:30 in the afternoon. Gunmen walked into Crown Liquors and shot drug trafficker German Jimenez Panesso and his bodyguard, then fled in a fake party supply van police called the war wagon. Griselda Blanco is believed to have ordered it. Nobody was ever prosecuted.",
+      "overlay": "DADELAND MALL",
+      "badge": "JULY 11, 1979",
+      "sub": "Crown Liquors shootout",
+      "emoji": "🔫",
+      "location": {
+        "name": "Dadeland Mall",
+        "lat": 25.69027778,
+        "lon": -80.31194444,
+        "h": 10
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 700,
+        "pitch": -32,
+        "heading": 60,
+        "degrees": 40,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "2",
+          "label": "killed"
+        },
+        {
+          "value": "0",
+          "label": "people prosecuted"
+        }
+      ],
+      "source": "NBC 6",
+      "hit": "crash"
+    },
+    {
+      "kind": "item",
+      "text": "Between February nineteen seventy-five and January nineteen seventy-six, twelve women and girls were murdered across Broward and Miami-Dade. Investigators believe the killer deflated their tires, then stopped to offer help. Bodies were left in canals and along remote roads. They're called the Flat Tire Murders, and no one was ever prosecuted.",
+      "caption": "Between February 1975 and January 1976, 12 women and girls were murdered across Broward and Miami-Dade. Investigators believe the killer deflated their tires, then stopped to offer help. Bodies were left in canals and along remote roads. They're called the Flat Tire Murders, and no one was ever prosecuted.",
+      "overlay": "FLAT TIRE MURDERS",
+      "badge": "1975–1976",
+      "sub": "Broward & Miami-Dade",
+      "emoji": "🛞",
+      "location": {
+        "name": "Fort Lauderdale",
+        "lat": 26.1224,
+        "lon": -80.1373,
+        "h": 40
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 20,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "12",
+          "label": "victims"
+        },
+        {
+          "value": "50+ YEARS",
+          "label": "unsolved"
+        }
+      ],
+      "source": "Florida Sheriffs Association"
+    },
+    {
+      "kind": "item",
+      "text": "From nineteen ninety-seven to two thousand one, a string of women were found murdered across Broward and Palm Beach. One was former Playboy model Star Stowe, found in Coral Springs in March nineteen ninety-seven. DNA led to an arrest in one case in two thousand one. Most of the others were never solved.",
+      "caption": "From 1997 to 2001, a string of women were found murdered across Broward and Palm Beach. One was former Playboy model Star Stowe, found in Coral Springs in March 1997. DNA led to an arrest in one case in 2001. Most of the others were never solved.",
+      "overlay": "CORAL SPRINGS",
+      "badge": "1997–2001",
+      "sub": "South Florida serial murders",
+      "emoji": "📁",
+      "location": {
+        "name": "Coral Springs",
+        "lat": 26.2712,
+        "lon": -80.2706,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -32,
+        "heading": 280,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "1997",
+          "label": "Star Stowe found"
+        }
+      ],
+      "source": "Wikipedia"
+    },
+    {
+      "kind": "item",
+      "text": "And in June twenty sixteen, Laura Cuni was beaten to death inside the Public Storage office on Marlin Road in Cutler Bay, where she worked as the manager. She was found in an office closet. Her case is still open.",
+      "caption": "And in June 2016, Laura Cuni was beaten to death inside the Public Storage office on Marlin Road in Cutler Bay, where she worked as the manager. She was found in an office closet. Her case is still open.",
+      "overlay": "CUTLER BAY",
+      "badge": "JUNE 24, 2016",
+      "sub": "Still unsolved",
+      "emoji": "🚨",
+      "location": {
+        "name": "Public Storage, Marlin Road, Cutler Bay",
+        "lat": 25.5916106,
+        "lon": -80.3625823,
+        "h": 6
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 600,
+        "pitch": -32,
+        "heading": 170,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "2016",
+          "label": "case still open"
+        }
+      ],
+      "source": "NBC 6",
+      "hit": "crash"
+    },
+    {
+      "kind": "outro",
+      "text": "If you know anything, call Miami-Dade Crime Stoppers at three oh five, four seven one, TIPS.",
+      "overlay": "305-471-TIPS",
+      "sub": "Anonymous tips",
+      "location": {
+        "name": "Cutler Bay",
+        "lat": 25.5808,
+        "lon": -80.3468,
+        "h": 10
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 30
+      }
+    }
+  ],
+  "collaborators": []
+}

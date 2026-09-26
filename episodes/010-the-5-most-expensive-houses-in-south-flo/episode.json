@@ -1,0 +1,233 @@
+{
+  "title": "The 5 Most Expensive Houses in South Florida",
+  "id": "010-the-5-most-expensive-houses-in-south-flo",
+  "format": "TOP LIST",
+  "sources": [
+    "The Real Deal",
+    "Bloomberg",
+    "Palm Beach Daily News",
+    "Forbes",
+    "Robb Report"
+  ],
+  "igCaption": "The five priciest home sales ever recorded in South Florida, from Shaq's old Star Island estate to Larry Ellison's $173M Gemini in Manalapan.\n\nWhich one would you live in?\n\nSources: The Real Deal, Bloomberg, Palm Beach Daily News, Forbes, Robb Report\n\n#realestate #palmbeach #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "These are the five most expensive houses in South Florida, and number one sold for one hundred seventy-three million dollars.",
+      "overlay": [
+        "5 PRICIEST HOUSES",
+        "IN SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🏝️",
+        "💰",
+        "🏠",
+        "😳"
+      ],
+      "location": {
+        "name": "Star Island, Miami Beach",
+        "lat": 25.7785,
+        "lon": -80.15,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 165
+      },
+      "caption": "These are the 5 most expensive houses in South Florida… and #1 sold for $173 MILLION."
+    },
+    {
+      "kind": "item",
+      "text": "Number five is twenty-six Star Island Drive in Miami Beach. Developer Vlad Doronin bought it from Shaquille O'Neal in two thousand nine for sixteen million dollars. In twenty twenty-five he sold it for one hundred twenty million, a county record at the time.",
+      "caption": "#5 is 26 Star Island Drive in Miami Beach. Developer Vlad Doronin bought it from Shaquille O'Neal in 2009 for $16 million. In 2025 he sold it for $120 million, a county record at the time.",
+      "overlay": "STAR ISLAND",
+      "badge": "$120M",
+      "sub": "Miami Beach · sold 2025",
+      "emoji": "🏀",
+      "location": {
+        "name": "26 Star Island Drive, Miami Beach",
+        "lat": 25.7796834,
+        "lon": -80.149998,
+        "h": 8
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 650,
+        "pitch": -32,
+        "heading": 210,
+        "degrees": 40,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "$120M",
+          "label": "sold in 2025"
+        },
+        {
+          "value": "$16M",
+          "label": "paid in 2009"
+        }
+      ],
+      "source": "Bloomberg",
+      "rank": 5
+    },
+    {
+      "kind": "item",
+      "text": "Number four sits on its own private island. Tarpon Island in Palm Beach, with a twenty-eight thousand six hundred square foot house, sold in May twenty twenty-four for one hundred fifty-two million dollars, a record for a lakefront home.",
+      "caption": "#4 sits on its own private island. Tarpon Island in Palm Beach, with a 28,600 sq ft house, sold in May 2024 for $152 million, a record for a lakefront home.",
+      "overlay": "TARPON ISLAND",
+      "badge": "$152M",
+      "sub": "Palm Beach · private island",
+      "emoji": "🏝️",
+      "location": {
+        "name": "Tarpon Island, Palm Beach",
+        "lat": 26.6936765,
+        "lon": -80.0417076,
+        "h": 6
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 150,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "$152M",
+          "label": "sold May 2024"
+        },
+        {
+          "value": "28,600 SQ FT",
+          "label": "house"
+        }
+      ],
+      "source": "Palm Beach Daily News",
+      "rank": 4
+    },
+    {
+      "kind": "item",
+      "text": "Number three is five eighty-nine North County Road, a one point six acre oceanfront estate in Palm Beach. Car dealer Michael Cantanucci bought it in twenty twenty-three for a price reported at about one hundred seventy million dollars.",
+      "caption": "#3 is 589 North County Road, a 1.6-acre oceanfront estate in Palm Beach. Car dealer Michael Cantanucci bought it in 2023 for a price reported at about $170 million.",
+      "overlay": "N. COUNTY ROAD",
+      "badge": "≈$170M",
+      "sub": "Palm Beach · oceanfront",
+      "emoji": "🌊",
+      "location": {
+        "name": "589 North County Road, Palm Beach",
+        "lat": 26.7347374,
+        "lon": -80.0364592,
+        "h": 8
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -32,
+        "heading": 80,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "1.6 ACRES",
+          "label": "oceanfront"
+        }
+      ],
+      "source": "Palm Beach Daily News",
+      "rank": 3
+    },
+    {
+      "kind": "item",
+      "text": "Number two belongs to Mark Zuckerberg. In March twenty twenty-six he and Priscilla Chan paid one hundred seventy million dollars for a house still under construction on Indian Creek Island. It was listed at two hundred million, and it's now the Miami-Dade record.",
+      "caption": "#2 belongs to Mark Zuckerberg. In March 2026 he and Priscilla Chan paid $170 million for a house still under construction on Indian Creek Island. It was listed at $200 million, and it's now the Miami-Dade record.",
+      "overlay": "INDIAN CREEK",
+      "badge": "$170M",
+      "sub": "Miami-Dade record · 2026",
+      "emoji": "🏗️",
+      "location": {
+        "name": "Indian Creek Island",
+        "lat": 25.8795,
+        "lon": -80.1375,
+        "h": 8
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "$170M",
+          "label": "paid March 2026"
+        },
+        {
+          "value": "$200M",
+          "label": "asking price"
+        }
+      ],
+      "source": "The Real Deal",
+      "rank": 2,
+      "hit": "explosion"
+    },
+    {
+      "kind": "item",
+      "text": "And number one is Gemini in Manalapan, an estate that runs from the ocean to the lake. Jim Clark bought it for ninety-four point two million. About fifteen months later, in June twenty twenty-two, Larry Ellison paid one hundred seventy-three million, the most ever paid for a home in Florida at the time.",
+      "caption": "And #1 is Gemini in Manalapan, an estate that runs from the ocean to the lake. Jim Clark bought it for $94.2 million. About 15 months later, in June 2022, Larry Ellison paid $173 million, the most ever paid for a home in Florida at the time.",
+      "overlay": "GEMINI",
+      "badge": "$173M",
+      "sub": "Manalapan · ocean to lake",
+      "emoji": "👑",
+      "location": {
+        "name": "Gemini estate, Manalapan",
+        "lat": 26.5692364,
+        "lon": -80.0395,
+        "h": 8
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 250,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "$173M",
+          "label": "Larry Ellison, 2022"
+        },
+        {
+          "value": "$94.2M",
+          "label": "what Clark paid"
+        }
+      ],
+      "source": "Forbes",
+      "rank": 1
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you actually live in? Tell us below.",
+      "overlay": "WHICH ONE? 🏠",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Palm Beach",
+        "lat": 26.7056,
+        "lon": -80.0364,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 187
+      }
+    }
+  ],
+  "collaborators": []
+}

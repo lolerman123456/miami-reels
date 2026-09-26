@@ -1,0 +1,225 @@
+{
+  "title": "5 South Florida Cities With the Most Attractive People",
+  "id": "018-5-south-florida-cities-with-the-most-att",
+  "format": "TOP LIST",
+  "sources": [
+    "Wikipedia",
+    "U.S. Census"
+  ],
+  "igCaption": "Our picks for the five South Florida cities with the best-looking people: Jupiter, Weston, Doral, Key Biscayne and Coral Gables.\n\nWho did we miss?\n\nSources: Wikipedia, U.S. Census\n\n#coralgables #doral #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "These are the five cities in South Florida with the most attractive people, starting with Jupiter.",
+      "overlay": [
+        "MOST ATTRACTIVE",
+        "CITIES IN SOFLO"
+      ],
+      "emojis": [
+        "😍",
+        "🌴",
+        "📍",
+        "🔥"
+      ],
+      "location": {
+        "name": "Jupiter",
+        "lat": 26.925,
+        "lon": -80.12722222,
+        "h": 15
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 357
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number five, Jupiter. The northernmost town in Palm Beach County, sitting at the mouth of the Loxahatchee River with its red lighthouse from eighteen sixty. The name came from a mapmaker's mix-up of the native name Hobe.",
+      "caption": "#5, Jupiter. The northernmost town in Palm Beach County, sitting at the mouth of the Loxahatchee River with its red lighthouse from 1860. The name came from a mapmaker's mix-up of the native name Hobe.",
+      "overlay": "JUPITER",
+      "badge": "LIGHTHOUSE 1860",
+      "sub": "Palm Beach County",
+      "emoji": "🌊",
+      "location": {
+        "name": "Jupiter Inlet Lighthouse",
+        "lat": 26.9484,
+        "lon": -80.0819,
+        "h": 20
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 800,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "1860",
+          "label": "lighthouse built"
+        }
+      ],
+      "source": "Wikipedia",
+      "rank": 5
+    },
+    {
+      "kind": "item",
+      "text": "Number four, Weston. A planned city on the edge of the Everglades in Broward, sixty-eight thousand people, and the first homes only went up in nineteen eighty-four.",
+      "caption": "#4, Weston. A planned city on the edge of the Everglades in Broward, 68,000 people, and the first homes only went up in 1984.",
+      "overlay": "WESTON",
+      "badge": "68,107 PEOPLE",
+      "sub": "Broward · planned city",
+      "emoji": "🏡",
+      "location": {
+        "name": "Weston",
+        "lat": 26.1075,
+        "lon": -80.38805556,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "68,107",
+          "label": "residents, 2020"
+        },
+        {
+          "value": "1984",
+          "label": "first homes"
+        }
+      ],
+      "source": "U.S. Census",
+      "rank": 4
+    },
+    {
+      "kind": "item",
+      "text": "Number three, Doral. Five miles west of Miami International Airport, it grew from forty-five thousand people in twenty ten to almost seventy-six thousand in twenty twenty.",
+      "caption": "#3, Doral. Five miles west of Miami International Airport, it grew from 45,704 people in 2010 to 75,874 in 2020.",
+      "overlay": "DORAL",
+      "badge": "+66% IN 10 YRS",
+      "sub": "Miami-Dade",
+      "emoji": "✈️",
+      "location": {
+        "name": "Doral",
+        "lat": 25.82388889,
+        "lon": -80.37166667,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -32,
+        "heading": 30,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "75,874",
+          "label": "residents, 2020"
+        },
+        {
+          "value": "+66%",
+          "label": "since 2010"
+        }
+      ],
+      "source": "U.S. Census",
+      "rank": 3
+    },
+    {
+      "kind": "item",
+      "text": "Number two, Key Biscayne. About fifteen thousand people on an island that used to be the largest coconut plantation in the continental US. In nineteen fifty-one, new homes here sold for nine thousand five hundred forty dollars.",
+      "caption": "#2, Key Biscayne. About 15,000 people on an island that used to be the largest coconut plantation in the continental US. In 1951, new homes here sold for $9,540.",
+      "overlay": "KEY BISCAYNE",
+      "badge": "14,809 PEOPLE",
+      "sub": "Island village",
+      "emoji": "🥥",
+      "location": {
+        "name": "Key Biscayne",
+        "lat": 25.69083333,
+        "lon": -80.16555556,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 210,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "$9,540",
+          "label": "a new home in 1951"
+        }
+      ],
+      "source": "Wikipedia",
+      "rank": 2
+    },
+    {
+      "kind": "item",
+      "text": "And number one, Coral Gables. George Merrick planned it in the nineteen twenties with strict zoning and Mediterranean buildings, and it's home to the University of Miami, the city's biggest employer with over sixteen thousand faculty and staff.",
+      "caption": "And #1, Coral Gables. George Merrick planned it in the 1920s with strict zoning and Mediterranean buildings, and it's home to the University of Miami, the city's biggest employer with over 16,000 faculty and staff.",
+      "overlay": "CORAL GABLES",
+      "badge": "EST. 1925",
+      "sub": "Home of the U",
+      "emoji": "🏆",
+      "location": {
+        "name": "Coral Gables",
+        "lat": 25.7215,
+        "lon": -80.2684,
+        "h": 30
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -32,
+        "heading": 100,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "16,479",
+          "label": "UM faculty & staff"
+        },
+        {
+          "value": "1925",
+          "label": "incorporated"
+        }
+      ],
+      "source": "Wikipedia",
+      "rank": 1,
+      "hit": "explosion"
+    },
+    {
+      "kind": "outro",
+      "text": "Which city did we miss? Drop it below.",
+      "overlay": "WHO DID WE MISS? 👀",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Coral Gables",
+        "lat": 25.7215,
+        "lon": -80.2684,
+        "h": 30
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 229
+      }
+    }
+  ],
+  "collaborators": []
+}

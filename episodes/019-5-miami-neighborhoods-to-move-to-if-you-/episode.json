@@ -1,0 +1,220 @@
+{
+  "title": "5 Miami Neighborhoods to Move to if You're Single",
+  "id": "019-5-miami-neighborhoods-to-move-to-if-you-",
+  "format": "LIST",
+  "sources": [
+    "Zillow Observed Rent Index (August 2026)",
+    "Wikipedia"
+  ],
+  "igCaption": "Brickell, Wynwood, Edgewater, South Beach and Coconut Grove, with what a typical rental costs in each ZIP right now (Zillow, Aug 2026).\n\nWhich one would you pick?\n\nSources: Zillow Observed Rent Index (August 2026), Wikipedia\n\n#brickell #wynwood #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "If you're single and moving to Miami, these are five neighborhoods you should know about.",
+      "overlay": [
+        "SINGLE IN MIAMI?",
+        "LIVE HERE"
+      ],
+      "emojis": [
+        "🍸",
+        "🌆",
+        "💘",
+        "📍"
+      ],
+      "location": {
+        "name": "Brickell",
+        "lat": 25.758,
+        "lon": -80.193,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 147
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Brickell. Miami's financial district and its densest neighborhood, with about forty thousand people packed into towers. Typical rent in the thirty-three one thirty-one ZIP is three thousand eight hundred thirty-one dollars.",
+      "caption": "Brickell. Miami's financial district and its densest neighborhood, with about 40,000 people packed into towers. Typical rent in the 33131 ZIP is $3,831.",
+      "overlay": "BRICKELL",
+      "badge": "$3,831/MO",
+      "sub": "40,000 people in towers",
+      "emoji": "🌆",
+      "location": {
+        "name": "Brickell",
+        "lat": 25.758,
+        "lon": -80.193,
+        "h": 80
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 200,
+        "degrees": 40,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "40,000",
+          "label": "residents"
+        },
+        {
+          "value": "$3,831",
+          "label": "typical rent"
+        }
+      ],
+      "source": "Zillow"
+    },
+    {
+      "kind": "item",
+      "text": "Wynwood. Old warehouses turned into murals, breweries, restaurants and clubs. Rent in the thirty-three one twenty-seven ZIP averages two thousand nine hundred fifty-six, up seventy-two percent since twenty nineteen.",
+      "caption": "Wynwood. Old warehouses turned into murals, breweries, restaurants and clubs. Rent in the 33127 ZIP averages $2,956, up 72% since 2019.",
+      "overlay": "WYNWOOD",
+      "badge": "$2,956/MO",
+      "sub": "Murals, breweries, clubs",
+      "emoji": "🎨",
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.801,
+        "lon": -80.199,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 60,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "$2,956",
+          "label": "typical rent"
+        },
+        {
+          "value": "+72%",
+          "label": "since 2019"
+        }
+      ],
+      "source": "Zillow"
+    },
+    {
+      "kind": "item",
+      "text": "Edgewater. High-rises along Biscayne Bay, a few minutes from the Design District and Downtown. Typical rent here is three thousand five hundred seventy-two.",
+      "caption": "Edgewater. High-rises along Biscayne Bay, a few minutes from the Design District and Downtown. Typical rent here is $3,572.",
+      "overlay": "EDGEWATER",
+      "badge": "$3,572/MO",
+      "sub": "Towers on the bay",
+      "emoji": "🌊",
+      "location": {
+        "name": "Edgewater, Miami",
+        "lat": 25.8022,
+        "lon": -80.188,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 110,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "$3,572",
+          "label": "typical rent"
+        }
+      ],
+      "source": "Zillow"
+    },
+    {
+      "kind": "item",
+      "text": "South Beach. The surprise is the price. The thirty-three one thirty-nine ZIP averages two thousand eight hundred thirty-five, the cheapest on this list, with the beach and Ocean Drive right outside.",
+      "caption": "South Beach. The surprise is the price. The 33139 ZIP averages $2,835, the cheapest on this list, with the beach and Ocean Drive right outside.",
+      "overlay": "SOUTH BEACH",
+      "badge": "$2,835/MO",
+      "sub": "Cheapest on this list",
+      "emoji": "🏖️",
+      "location": {
+        "name": "South Beach",
+        "lat": 25.7825,
+        "lon": -80.131,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 250,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "$2,835",
+          "label": "typical rent"
+        }
+      ],
+      "source": "Zillow",
+      "hit": "explosion"
+    },
+    {
+      "kind": "item",
+      "text": "And Coconut Grove, Miami's oldest neighborhood, full of trees, bayfront bars and marinas. It's also the fastest riser here. Rent has more than doubled since twenty fifteen, from seventeen seventy-five to three thousand six hundred twenty-one.",
+      "caption": "And Coconut Grove, Miami's oldest neighborhood, full of trees, bayfront bars and marinas. It's also the fastest riser here. Rent has more than doubled since 2015, from $1,775 to $3,621.",
+      "overlay": "COCONUT GROVE",
+      "badge": "+104% SINCE '15",
+      "sub": "Miami's oldest neighborhood",
+      "emoji": "🌳",
+      "location": {
+        "name": "Coconut Grove",
+        "lat": 25.728,
+        "lon": -80.24,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 330,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "$3,621",
+          "label": "typical rent"
+        },
+        {
+          "value": "+104%",
+          "label": "since 2015"
+        }
+      ],
+      "source": "Zillow"
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you pick? Tag someone single.",
+      "overlay": "WHICH ONE? 💘",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77,
+        "lon": -80.19,
+        "h": 60
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 77
+      }
+    }
+  ],
+  "collaborators": []
+}

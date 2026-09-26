@@ -1,0 +1,197 @@
+{
+  "title": "The Darkest Things Found in the Everglades",
+  "id": "013-the-darkest-things-found-in-the-everglad",
+  "format": "CASE FILE",
+  "sources": [
+    "Wikipedia: Eastern Air Lines Flight 401",
+    "Wikipedia: ValuJet Flight 592",
+    "Conservancy of Southwest Florida",
+    "Associated Press"
+  ],
+  "igCaption": "Two airliners, a python that tried to swallow an alligator, and a 215-pound snake full of eggs. What's been found out in the Everglades.\n\nWould you go out there at night?\n\nSources: Wikipedia: Eastern Air Lines Flight 401, Wikipedia: ValuJet Flight 592, Conservancy of Southwest Florida, Associated Press\n\n#everglades #florida #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "People have found some seriously disturbing things deep inside the Everglades.",
+      "overlay": [
+        "THE DARK SIDE OF",
+        "THE EVERGLADES"
+      ],
+      "emojis": [
+        "🐊",
+        "🐍",
+        "✈️",
+        "🌾"
+      ],
+      "location": {
+        "name": "Eastern Air Lines Flight 401 crash site",
+        "lat": 25.86666667,
+        "lon": -80.6,
+        "h": 2
+      },
+      "shot": {
+        "type": "dive",
+        "range": 2500,
+        "pitch": -34,
+        "heading": 289
+      }
+    },
+    {
+      "kind": "item",
+      "text": "December twenty-ninth, nineteen seventy-two, just before midnight. Eastern Air Lines Flight four oh one was on approach to Miami when the crew got fixated on a landing gear light. The autopilot slipped out of altitude hold, and the jet slowly descended into the sawgrass. One hundred one people died. Seventy-five survived.",
+      "caption": "December 29, 1972, just before midnight. Eastern Air Lines Flight 401 was on approach to Miami when the crew got fixated on a landing gear light. The autopilot slipped out of altitude hold, and the jet slowly descended into the sawgrass. 101 people died. 75 survived.",
+      "overlay": "FLIGHT 401",
+      "badge": "DEC 29, 1972",
+      "sub": "Lockheed L-1011 TriStar",
+      "emoji": "✈️",
+      "location": {
+        "name": "Eastern Air Lines Flight 401 crash site",
+        "lat": 25.86666667,
+        "lon": -80.6,
+        "h": 2
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 1500,
+        "pitch": -40,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "101",
+          "label": "killed"
+        },
+        {
+          "value": "75",
+          "label": "survived"
+        }
+      ],
+      "source": "NTSB via Wikipedia",
+      "hit": "crash"
+    },
+    {
+      "kind": "item",
+      "text": "A few miles away, on May eleventh, nineteen ninety-six, ValuJet Flight five ninety-two went down about ten minutes after leaving Miami. Mislabeled oxygen generators caught fire in the cargo hold. All one hundred ten people on board were killed. It's still the deadliest air crash in Florida history.",
+      "caption": "A few miles away, on May 11, 1996, ValuJet Flight 592 went down about 10 minutes after leaving Miami. Mislabeled oxygen generators caught fire in the cargo hold. All 110 people on board were killed. It's still the deadliest air crash in Florida history.",
+      "overlay": "FLIGHT 592",
+      "badge": "MAY 11, 1996",
+      "sub": "Miami to Atlanta",
+      "emoji": "🔥",
+      "location": {
+        "name": "ValuJet Flight 592 crash site",
+        "lat": 25.913,
+        "lon": -80.578,
+        "h": 2
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -40,
+        "heading": 200,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "110",
+          "label": "on board, no survivors"
+        },
+        {
+          "value": "10 MIN",
+          "label": "after takeoff"
+        }
+      ],
+      "source": "NTSB via Wikipedia",
+      "hit": "explosion"
+    },
+    {
+      "kind": "item",
+      "text": "Then there are the pythons. In two thousand five, researchers in Everglades National Park found a thirteen-foot Burmese python that had tried to swallow a six-foot alligator. Both animals were dead, the alligator still partly inside the snake.",
+      "caption": "Then there are the pythons. In 2005, researchers in Everglades National Park found a 13-foot Burmese python that had tried to swallow a 6-foot alligator. Both animals were dead, the alligator still partly inside the snake.",
+      "overlay": "PYTHON VS GATOR",
+      "badge": "2005",
+      "sub": "Everglades National Park",
+      "emoji": "🐍",
+      "location": {
+        "name": "Everglades National Park",
+        "lat": 25.3829,
+        "lon": -80.61,
+        "h": 2
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -38,
+        "heading": 330,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "13 FT",
+          "label": "python"
+        },
+        {
+          "value": "6 FT",
+          "label": "alligator"
+        }
+      ],
+      "source": "Associated Press"
+    },
+    {
+      "kind": "item",
+      "text": "And the record breaker. Researchers from the Conservancy of Southwest Florida caught a female python nearly eighteen feet long weighing two hundred fifteen pounds. Inside her were one hundred twenty-two developing eggs, and deer hooves in her stomach. Pythons have been breeding out here since at least two thousand.",
+      "caption": "And the record breaker. Researchers from the Conservancy of Southwest Florida caught a female python nearly 18 feet long weighing 215 pounds. Inside her were 122 developing eggs, and deer hooves in her stomach. Pythons have been breeding out here since at least 2000.",
+      "overlay": "215-POUND PYTHON",
+      "badge": "122 EGGS",
+      "sub": "A Florida record at the time",
+      "emoji": "🥚",
+      "location": {
+        "name": "Big Cypress National Preserve",
+        "lat": 25.86,
+        "lon": -81.03,
+        "h": 2
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -38,
+        "heading": 60,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "215 LBS",
+          "label": "female python"
+        },
+        {
+          "value": "122",
+          "label": "developing eggs"
+        }
+      ],
+      "source": "Conservancy of SW Florida"
+    },
+    {
+      "kind": "outro",
+      "text": "Would you go out into the Everglades at night?",
+      "overlay": "WOULD YOU GO? 🐊",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Everglades",
+        "lat": 25.75,
+        "lon": -80.75,
+        "h": 2
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2500,
+        "pitch": -32,
+        "heading": 25
+      }
+    }
+  ],
+  "collaborators": []
+}

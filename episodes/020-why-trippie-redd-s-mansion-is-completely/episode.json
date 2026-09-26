@@ -1,0 +1,156 @@
+{
+  "title": "Why Trippie Redd's Mansion Is Completely Black",
+  "id": "020-why-trippie-redd-s-mansion-is-completely",
+  "format": "STORY",
+  "sources": [
+    "XXL",
+    "Local 10",
+    "Architecture Hub"
+  ],
+  "igCaption": "Trippie Redd bought a white Mediterranean mansion in Southwest Ranches for $7.5M in 2022, then painted the whole thing matte black, driveway included.\n\nWould you paint your house black?\n\nSources: XXL, Local 10, Architecture Hub\n\n#trippieredd #broward #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "There's a completely black mansion sitting in South Florida, and it belongs to Trippie Redd.",
+      "overlay": [
+        "AN ALL-BLACK",
+        "MANSION"
+      ],
+      "emojis": [
+        "🖤",
+        "🏠",
+        "🎤",
+        "🌴"
+      ],
+      "location": {
+        "name": "Southwest Ranches",
+        "lat": 26.0586543,
+        "lon": -80.3381531,
+        "h": 8
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 250
+      },
+      "caption": "There's a completely BLACK mansion sitting in South Florida… and it belongs to Trippie Redd."
+    },
+    {
+      "kind": "item",
+      "text": "It's in Southwest Ranches, a rural town in western Broward about thirty miles from Miami. Trippie bought the house in twenty twenty-two for seven and a half million dollars. It had been listed at twelve and a half million, and he got the discount because the previous owner was facing foreclosure.",
+      "caption": "It's in Southwest Ranches, a rural town in western Broward about 30 miles from Miami. Trippie bought the house in 2022 for $7.5 million. It had been listed at $12.5 million, and he got the discount because the previous owner was facing foreclosure.",
+      "overlay": "SOUTHWEST RANCHES",
+      "badge": "$7.5M",
+      "sub": "Bought in 2022",
+      "emoji": "🏡",
+      "location": {
+        "name": "Southwest Ranches",
+        "lat": 26.0586543,
+        "lon": -80.3381531,
+        "h": 8
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 1400,
+        "pitch": -38,
+        "heading": 90,
+        "degrees": 40,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "$7.5M",
+          "label": "paid in 2022"
+        },
+        {
+          "value": "$12.5M",
+          "label": "original asking price"
+        }
+      ],
+      "source": "XXL"
+    },
+    {
+      "kind": "item",
+      "text": "The house is almost nineteen thousand square feet on about four point six acres. Nine bedrooms, an indoor basketball court, a recording studio, a movie theater and an eight-car garage.",
+      "caption": "The house is almost 19,000 sq ft on about 4.6 acres. Nine bedrooms, an indoor basketball court, a recording studio, a movie theater and an eight-car garage.",
+      "overlay": "THE HOUSE",
+      "badge": "18,923 SQ FT",
+      "sub": "9 bedrooms · 4.6 acres",
+      "emoji": "🏀",
+      "location": {
+        "name": "Southwest Ranches",
+        "lat": 26.0586543,
+        "lon": -80.3381531,
+        "h": 8
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1200,
+        "pitch": -40,
+        "heading": 200,
+        "degrees": 70,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "18,923",
+          "label": "square feet"
+        },
+        {
+          "value": "4.6 ACRES",
+          "label": "of land"
+        }
+      ],
+      "source": "XXL"
+    },
+    {
+      "kind": "item",
+      "text": "It used to be a white Mediterranean mansion. In twenty twenty-four he covered the walls, the roof and even the driveway in matte black paint. His reason: black is beautiful, from my skin to even stars in a jet black sky.",
+      "caption": "It used to be a white Mediterranean mansion. In 2024 he covered the walls, the roof and even the driveway in matte black paint. His reason: \"Black is beautiful, from my skin to even stars in a jet black sky.\"",
+      "overlay": "PAINTED BLACK",
+      "badge": "2024",
+      "sub": "Walls, roof & driveway",
+      "emoji": "🖤",
+      "location": {
+        "name": "Southwest Ranches",
+        "lat": 26.0586543,
+        "lon": -80.3381531,
+        "h": 8
+      },
+      "shot": {
+        "type": "push",
+        "range": 1200,
+        "pitch": -40,
+        "heading": 330
+      },
+      "stats": [
+        {
+          "value": "2024",
+          "label": "painted matte black"
+        }
+      ],
+      "source": "XXL",
+      "hit": "explosion"
+    },
+    {
+      "kind": "outro",
+      "text": "Would you paint your house all black?",
+      "overlay": "WOULD YOU? 🖤",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Southwest Ranches",
+        "lat": 26.0586543,
+        "lon": -80.3381531,
+        "h": 8
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 342
+      }
+    }
+  ],
+  "collaborators": []
+}

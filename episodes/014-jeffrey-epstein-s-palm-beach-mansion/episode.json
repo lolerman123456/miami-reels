@@ -1,0 +1,189 @@
+{
+  "title": "Jeffrey Epstein's Palm Beach Mansion",
+  "id": "014-jeffrey-epstein-s-palm-beach-mansion",
+  "format": "STORY",
+  "sources": [
+    "Wikipedia: Jeffrey Epstein's Palm Beach mansion",
+    "Miami Herald",
+    "WPTV",
+    "The Real Deal"
+  ],
+  "igCaption": "358 El Brillo Way: bought for $2.5M in 1990, searched by police in 2005, sold for $18.5M and torn down in 2021. A new house stands there now.\n\nShould houses like this be torn down?\n\nSources: Wikipedia: Jeffrey Epstein's Palm Beach mansion, Miami Herald, WPTV, The Real Deal\n\n#palmbeach #truecrime #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "This house in Palm Beach sits on the lot where Jeffrey Epstein's mansion used to be.",
+      "overlay": [
+        "EPSTEIN'S",
+        "PALM BEACH LOT"
+      ],
+      "emojis": [
+        "🏚️",
+        "🚨",
+        "⚖️",
+        "🌴"
+      ],
+      "location": {
+        "name": "358 El Brillo Way, Palm Beach",
+        "lat": 26.6934,
+        "lon": -80.0386,
+        "h": 8
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1400,
+        "pitch": -34,
+        "heading": 113
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The address was three fifty-eight El Brillo Way. The house was built in nineteen fifty-two by architect John Volk, and one of Chrysler's founding engineers lived there until nineteen sixty-nine. Epstein bought it in nineteen ninety for two and a half million dollars.",
+      "caption": "The address was 358 El Brillo Way. The house was built in 1952 by architect John Volk, and one of Chrysler's founding engineers lived there until 1969. Epstein bought it in 1990 for $2.5 million.",
+      "overlay": "358 EL BRILLO WAY",
+      "badge": "BOUGHT 1990",
+      "sub": "Built 1952 · John Volk",
+      "emoji": "🏠",
+      "location": {
+        "name": "358 El Brillo Way, Palm Beach",
+        "lat": 26.6934,
+        "lon": -80.0386,
+        "h": 8
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 550,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 40,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "$2.5M",
+          "label": "Epstein paid, 1990"
+        }
+      ],
+      "source": "Wikipedia"
+    },
+    {
+      "kind": "item",
+      "text": "In two thousand five, a woman told Palm Beach police that Epstein had paid her fourteen-year-old stepdaughter at this house. Police searched it, and investigators identified thirty-six girls between fourteen and seventeen with similar accounts.",
+      "caption": "In 2005, a woman told Palm Beach police that Epstein had paid her 14-year-old stepdaughter at this house. Police searched it, and investigators identified 36 girls between 14 and 17 with similar accounts.",
+      "overlay": "PALM BEACH POLICE",
+      "badge": "2005",
+      "sub": "The search that started it",
+      "emoji": "🚓",
+      "location": {
+        "name": "Palm Beach Police Department",
+        "lat": 26.7036,
+        "lon": -80.0363,
+        "h": 8
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 600,
+        "pitch": -32,
+        "heading": 60,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "36",
+          "label": "girls identified"
+        }
+      ],
+      "source": "Palm Beach Police via Wikipedia",
+      "hit": "crash"
+    },
+    {
+      "kind": "item",
+      "text": "In two thousand eight he took a plea deal on state charges and served thirteen months with work release. A Miami Herald investigation in twenty eighteen led to federal sex trafficking charges in twenty nineteen. He died in a New York jail cell that August, and it was ruled a suicide.",
+      "caption": "In 2008 he took a plea deal on state charges and served 13 months with work release. A Miami Herald investigation in 2018 led to federal sex trafficking charges in 2019. He died in a New York jail cell that August, and it was ruled a suicide.",
+      "overlay": "THE PLEA DEAL",
+      "badge": "13 MONTHS",
+      "sub": "Work release",
+      "emoji": "⚖️",
+      "location": {
+        "name": "Palm Beach County Courthouse",
+        "lat": 26.7134,
+        "lon": -80.053,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 250,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "13 MONTHS",
+          "label": "served, with work release"
+        },
+        {
+          "value": "2019",
+          "label": "federal charges"
+        }
+      ],
+      "source": "Miami Herald"
+    },
+    {
+      "kind": "item",
+      "text": "His estate sold the house for eighteen and a half million dollars to developer Todd Michael Glaser, who said people kept driving down the dead-end street to look at it. He tore it down in April twenty twenty-one and sold the lot. A new ten thousand square foot house was approved in twenty twenty-two and built here.",
+      "caption": "His estate sold the house for $18.5 million to developer Todd Michael Glaser, who said people kept driving down the dead-end street to look at it. He tore it down in April 2021 and sold the lot. A new 10,000 sq ft house was approved in 2022 and built here.",
+      "overlay": "DEMOLISHED",
+      "badge": "APRIL 2021",
+      "sub": "A new house stands here",
+      "emoji": "🚜",
+      "location": {
+        "name": "358 El Brillo Way, Palm Beach",
+        "lat": 26.6934,
+        "lon": -80.0386,
+        "h": 8
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 600,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "$18.5M",
+          "label": "estate sale price"
+        },
+        {
+          "value": "2021",
+          "label": "torn down"
+        }
+      ],
+      "source": "WPTV",
+      "hit": "explosion"
+    },
+    {
+      "kind": "outro",
+      "text": "Should houses like this be torn down? Tell us what you think.",
+      "overlay": "TEAR IT DOWN?",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "358 El Brillo Way, Palm Beach",
+        "lat": 26.6934,
+        "lon": -80.0386,
+        "h": 8
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 73
+      }
+    }
+  ],
+  "collaborators": []
+}

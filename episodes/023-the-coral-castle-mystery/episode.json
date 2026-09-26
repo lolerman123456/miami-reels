@@ -1,0 +1,185 @@
+{
+  "title": "The Coral Castle Mystery",
+  "id": "023-the-coral-castle-mystery",
+  "format": "STORY",
+  "sources": [
+    "Wikipedia: Coral Castle",
+    "Coral Castle Museum"
+  ],
+  "igCaption": "Edward Leedskalnin spent more than 28 years cutting and moving tons of coral rock by himself, mostly at night, and never told anyone how.\n\nHow do you think he did it?\n\nSources: Wikipedia: Coral Castle, Coral Castle Museum\n\n#coralcastle #homestead #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "One man built this place using more than one thousand tons of stone, and how he did it remains a mystery.",
+      "overlay": [
+        "1,000+ TONS",
+        "ONE MAN"
+      ],
+      "emojis": [
+        "🗿",
+        "🏰",
+        "❓",
+        "🌙"
+      ],
+      "location": {
+        "name": "Coral Castle",
+        "lat": 25.50027778,
+        "lon": -80.445,
+        "h": 6
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1300,
+        "pitch": -34,
+        "heading": 356
+      },
+      "caption": "One man built this place using more than 1,000 TONS of stone… and how he did it remains a mystery."
+    },
+    {
+      "kind": "item",
+      "text": "This is Coral Castle, just outside Homestead. It was built by Edward Leedskalnin, a Latvian immigrant. The castle's own story says his sixteen-year-old fiancée called off their wedding one day before it happened, and he spent his life building this for his Sweet Sixteen.",
+      "caption": "This is Coral Castle, just outside Homestead. It was built by Edward Leedskalnin, a Latvian immigrant. The castle's own story says his 16-year-old fiancée called off their wedding one day before it happened, and he spent his life building this for his \"Sweet Sixteen.\"",
+      "overlay": "CORAL CASTLE",
+      "badge": "EDWARD LEEDSKALNIN",
+      "sub": "Built for his Sweet Sixteen",
+      "emoji": "💔",
+      "location": {
+        "name": "Coral Castle",
+        "lat": 25.50027778,
+        "lon": -80.445,
+        "h": 6
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 450,
+        "pitch": -38,
+        "heading": 60,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "28+ YEARS",
+          "label": "of building"
+        }
+      ],
+      "source": "Wikipedia"
+    },
+    {
+      "kind": "item",
+      "text": "He started around nineteen twenty-three in Florida City. In nineteen thirty-six he moved the whole thing ten miles north, stone by stone, and it took him three years. He worked alone, often at night, and wouldn't let anyone watch.",
+      "caption": "He started around 1923 in Florida City. In 1936 he moved the whole thing 10 miles north, stone by stone, and it took him 3 years. He worked alone, often at night, and wouldn't let anyone watch.",
+      "overlay": "FLORIDA CITY",
+      "badge": "MOVED IN 1936",
+      "sub": "10 miles, 3 years",
+      "emoji": "🚚",
+      "location": {
+        "name": "Florida City",
+        "lat": 25.44777778,
+        "lon": -80.48444444,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1100,
+        "pitch": -32,
+        "heading": 200,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "10 MILES",
+          "label": "moved"
+        },
+        {
+          "value": "3 YEARS",
+          "label": "to move it"
+        }
+      ],
+      "source": "Wikipedia",
+      "hit": "explosion"
+    },
+    {
+      "kind": "item",
+      "text": "Many single stones weigh several tons: walls, a swinging gate, tables, a crescent moon, a sundial. Some teenagers claimed they saw blocks float like hydrogen balloons. When people asked how he did it, he only said it's not difficult if you know how. Photos show he used pulleys and simple tools.",
+      "caption": "Many single stones weigh several tons: walls, a swinging gate, tables, a crescent moon, a sundial. Some teenagers claimed they saw blocks float like hydrogen balloons. When people asked how he did it, he only said \"It's not difficult if you know how.\" Photos show he used pulleys and simple tools.",
+      "overlay": "THE MYSTERY",
+      "badge": "SEVERAL TONS EACH",
+      "sub": "\"Not difficult if you know how\"",
+      "emoji": "🗿",
+      "location": {
+        "name": "Coral Castle",
+        "lat": 25.50027778,
+        "lon": -80.445,
+        "h": 6
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 500,
+        "pitch": -40,
+        "heading": 250,
+        "degrees": 80,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "1,000+ TONS",
+          "label": "of coral rock"
+        }
+      ],
+      "source": "Wikipedia"
+    },
+    {
+      "kind": "item",
+      "text": "He charged ten cents a tour, then asked for a quarter. In November nineteen fifty-one he hung a sign that said going to the hospital, rode the bus to Jackson Memorial, and died twenty-eight days later at sixty-four. Three thousand five hundred dollars was found in his belongings.",
+      "caption": "He charged 10 cents a tour, then asked for a quarter. In November 1951 he hung a sign that said \"Going to the Hospital,\" rode the bus to Jackson Memorial, and died 28 days later at 64. $3,500 was found in his belongings.",
+      "overlay": "1951",
+      "badge": "DIED AT 64",
+      "sub": "Tours cost 25 cents",
+      "emoji": "🪧",
+      "location": {
+        "name": "Coral Castle",
+        "lat": 25.50027778,
+        "lon": -80.445,
+        "h": 6
+      },
+      "shot": {
+        "type": "push",
+        "range": 500,
+        "pitch": -38,
+        "heading": 330
+      },
+      "stats": [
+        {
+          "value": "25¢",
+          "label": "a tour"
+        },
+        {
+          "value": "$3,500",
+          "label": "found after he died"
+        }
+      ],
+      "source": "Wikipedia"
+    },
+    {
+      "kind": "outro",
+      "text": "How do you think he did it? Tell us below.",
+      "overlay": "HOW'D HE DO IT? 🤔",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Coral Castle",
+        "lat": 25.50027778,
+        "lon": -80.445,
+        "h": 6
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 331
+      }
+    }
+  ],
+  "collaborators": []
+}

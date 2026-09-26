@@ -1,0 +1,193 @@
+{
+  "title": "The Most Dangerous Area in South Florida by the Data",
+  "id": "017-the-most-dangerous-area-in-south-florida",
+  "format": "BY THE NUMBERS",
+  "sources": [
+    "FBI Uniform Crime Reporting via AreaVibes",
+    "U.S. Census",
+    "WLRN",
+    "Wikipedia"
+  ],
+  "igCaption": "By FBI-reported violent crime per resident, Florida City tops the state at 2,291 per 100,000. Belle Glade and Riviera Beach also make the top ten. Meanwhile Liberty City's homicides fell from 31 in 2020 to 5 in 2024.\n\nDid any of these surprise you?\n\nSources: FBI Uniform Crime Reporting via AreaVibes, U.S. Census, WLRN, Wikipedia\n\n#crime #florida #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "According to reported violent-crime data, this may be one of the most dangerous areas in South Florida.",
+      "overlay": [
+        "BY THE DATA",
+        "MOST DANGEROUS"
+      ],
+      "emojis": [
+        "🚨",
+        "📊",
+        "📍",
+        "⚠️"
+      ],
+      "location": {
+        "name": "Florida City",
+        "lat": 25.44777778,
+        "lon": -80.48444444,
+        "h": 10
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 238
+      }
+    },
+    {
+      "kind": "item",
+      "text": "This is Florida City, at the bottom of Miami-Dade. Using FBI crime reports, it has two thousand two hundred ninety-one violent crimes per one hundred thousand people, the highest rate of any city in Florida and seven hundred fifty-eight percent above the state average.",
+      "caption": "This is Florida City, at the bottom of Miami-Dade. Using FBI crime reports, it has 2,291 violent crimes per 100,000 people, the highest rate of any city in Florida and 758% above the state average.",
+      "overlay": "FLORIDA CITY",
+      "badge": "2,291 / 100K",
+      "sub": "#1 in Florida",
+      "emoji": "🚨",
+      "location": {
+        "name": "Florida City",
+        "lat": 25.44777778,
+        "lon": -80.48444444,
+        "h": 10
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 1100,
+        "pitch": -32,
+        "heading": 80,
+        "degrees": 40,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "2,291",
+          "label": "violent crimes / 100k"
+        },
+        {
+          "value": "+758%",
+          "label": "vs Florida average"
+        }
+      ],
+      "source": "FBI UCR via AreaVibes",
+      "hit": "crash"
+    },
+    {
+      "kind": "item",
+      "text": "That rate is per resident, and only about thirteen thousand people live here. But Florida City is the last stop on the mainland before the Keys and the entrance to Everglades National Park, and much of the city is hotels and tourist businesses.",
+      "caption": "That rate is per resident, and only about 13,000 people live here. But Florida City is the last stop on the mainland before the Keys and the entrance to Everglades National Park, and much of the city is hotels and tourist businesses.",
+      "overlay": "THE CATCH",
+      "badge": "13,085 RESIDENTS",
+      "sub": "Gateway to the Keys",
+      "emoji": "🧮",
+      "location": {
+        "name": "Florida City, US 1 and Turnpike",
+        "lat": 25.448,
+        "lon": -80.479,
+        "h": 8
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 200,
+        "degrees": 60,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "13,085",
+          "label": "residents, 2020"
+        }
+      ],
+      "source": "U.S. Census"
+    },
+    {
+      "kind": "item",
+      "text": "Number two on that same list is Belle Glade, on Lake Okeechobee, with thirteen hundred twenty-seven per one hundred thousand. Riviera Beach, in Palm Beach County, is sixth at nine hundred forty-three.",
+      "caption": "#2 on that same list is Belle Glade, on Lake Okeechobee, with 1,327 per 100,000. Riviera Beach, in Palm Beach County, is 6th at 943.",
+      "overlay": "BELLE GLADE",
+      "badge": "1,327 / 100K",
+      "sub": "#2 in Florida",
+      "emoji": "📊",
+      "location": {
+        "name": "Belle Glade",
+        "lat": 26.69277778,
+        "lon": -80.64305556,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 330,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "1,327",
+          "label": "Belle Glade"
+        },
+        {
+          "value": "943",
+          "label": "Riviera Beach"
+        }
+      ],
+      "source": "FBI UCR via AreaVibes"
+    },
+    {
+      "kind": "item",
+      "text": "And the numbers can move fast. In Miami's Liberty City, homicides dropped from thirty-one in twenty twenty to five in twenty twenty-four, the lowest the neighborhood has seen, after years of community safety programs.",
+      "caption": "And the numbers can move fast. In Miami's Liberty City, homicides dropped from 31 in 2020 to 5 in 2024, the lowest the neighborhood has seen, after years of community safety programs.",
+      "overlay": "LIBERTY CITY",
+      "badge": "31 → 5",
+      "sub": "Homicides, 2020 vs 2024",
+      "emoji": "📉",
+      "location": {
+        "name": "Liberty City, Miami",
+        "lat": 25.8326,
+        "lon": -80.2231,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 110,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "31",
+          "label": "homicides, 2020"
+        },
+        {
+          "value": "5",
+          "label": "homicides, 2024"
+        }
+      ],
+      "source": "WLRN",
+      "hit": "explosion"
+    },
+    {
+      "kind": "outro",
+      "text": "Did any of these surprise you? Tell us below.",
+      "overlay": "SURPRISED? 👇",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Miami-Dade",
+        "lat": 25.6,
+        "lon": -80.4,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2500,
+        "pitch": -32,
+        "heading": 92
+      }
+    }
+  ],
+  "collaborators": []
+}
