@@ -1,8 +1,8 @@
 # Miami Reels — operating guide for Claude
 
 This repo runs **@getnearapp** end to end (the owner handed Claude the account; ChatGPT no longer posts). Daily, New York time:
-2 informational map Reels (~1pm, ~8pm) + 3 carousels — `brief` 9am (South Florida news), `feature` 5pm (rotating informational
-posts: did you know / rent check / history / new builds / by the numbers / follow-up / week recap — FEATURES in `pipeline/carousel.mjs`), `world` 10pm (US + world). Every post is cross-posted to stories.
+2 informational map Reels (~1pm, ~8pm) + carousels (max 10 posts/day total) — `news` 7am/11am/3pm/7pm (the most viral South Florida story right now, one story in depth), `brief` 9am (the biggest South Florida story), `feature` 5pm (rotating informational
+posts: did you know / rent check / history / new builds / by the numbers / follow-up / week recap — FEATURES in `pipeline/carousel.mjs`), `world` 10pm (the most serious world story). Every news carousel is ONE story told in depth with connected slides — never a roundup. Every post is cross-posted to stories.
 Goal: grow the account. Raise volume slowly as it grows (add carousel slots in `control.json` → `carousels`); the owner audits
 and archives anything bad.
 Everything runs in GitHub Actions (`.github/workflows/reel.yml`) — the owner controls it by chatting with
@@ -19,7 +19,7 @@ Claude from their phone. Your job in a chat is to turn their request into a comm
 | "Post a carousel now" | `requests/post.json` → `{"kind": "brief|world|feature", "topic": "optional angle", "publish": true, "at": "..."}`. Live in ~8 min (`.github/workflows/posts.yml`). |
 | "Post these videos over the week" | One episode id per line in `plan/videos.txt`; each scheduled slot posts the next already-rendered one on the hour (no re-render). Remove a line to drop it. |
 | "This week's Reels are…" | Add one topic per line to `plan/queue.txt`; each scheduled Reel takes the next line. |
-| "Change carousel times" / "add a carousel" | `control.json` → `carousels` = `{"kind": hour}`. |
+| "Change carousel times" / "add a carousel" | `control.json` → `carousels` = `{"kind": hour}` or `{"kind": [hours]}` (e.g. `"news": [7, 11, 15, 19]`). Keep the day at ≤10 posts including Reels. |
 | "Change the post times" / "add a third post" | `control.json` → `postHours` = New York post hours, 24h (e.g. `[13, 20]`). A check every 30 min in `reel.yml` starts a run ~1 hour before each (up to 4 retries; `state/slots.txt` prevents double posts). Commit + push. |
 | "Pause" / "resume" | `control.json` → `"paused": true/false`. Commit + push. |
 | "Skip tomorrow" / a date | Add `"YYYY-MM-DD"` (New York date) to `control.json` → `skipDates` (skips both posts that day). Commit + push. |

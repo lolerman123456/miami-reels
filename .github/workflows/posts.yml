@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
     inputs:
       kind:
-        description: 'brief (local news) | world (US + world) | feature (culture/opinion)'
+        description: 'brief (morning local story) | news (viral local story) | world (world story) | feature (informational)'
         required: true
         default: 'brief'
       topic:
@@ -56,7 +56,8 @@ jobs:
           jq -e '.paused' control.json >/dev/null && nogo "paused"
           jq -e --arg d "$D" '(.skipDates // []) | index($d)' control.json >/dev/null && nogo "skipped day"
           M=$(( 10#$(TZ=America/New_York date +%H) * 60 + 10#$(TZ=America/New_York date +%M) ))
-          for row in $(jq -r '(.carousels // {}) | to_entries[] | "\(.key)=\(.value)"' control.json); do
+          # carousels: {"kind": hour} or {"kind": [hours]} (several a day)
+          for row in $(jq -r '(.carousels // {}) | to_entries[] | .key as $k | (.value | if type == "array" then .[] else . end) | "\($k)=\(.)"' control.json); do
             K=${row%=*}; P=${row#*=}
             DELTA=$(( P * 60 - M ))
             [ $DELTA -le 40 ] && [ $DELTA -ge -45 ] || continue

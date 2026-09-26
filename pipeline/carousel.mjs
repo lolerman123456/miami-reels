@@ -1,5 +1,5 @@
 // Carousel posts (+ a story teaser for each): write → render JPEG slides → post.
-//   node pipeline/carousel.mjs brief|world|feature [--dry-run] [--topic "..."]
+//   node pipeline/carousel.mjs brief|news|world|feature [--dry-run] [--topic "..."]
 // brief = morning South Florida news, world = US + world tonight, feature = rotating culture/opinion/follow-up post.
 import fs from 'node:fs';
 import path from 'node:path';
@@ -30,6 +30,8 @@ const FEATURES = [
 const KINDS = {
   // owner: no roundups. Each news carousel is ONE big story told in depth, slides connected.
   brief: { kicker: 'THE DADE BRIEF ☕', feed: 'local', pick: 'the single biggest South Florida (Miami-Dade, Broward, Palm Beach, the Keys) story that many people here will care about: a major crime, disaster, big money, prices/rent, a big development, a major court case. Never a small business closing, a minor traffic item or a neighborhood-only story.', ask: 'The morning news carousel: ONE South Florida story told in depth across 5–6 connected slides (what happened, the key details and numbers, why it happened, who it affects here, what happens next).' },
+  // several a day (control.json carousels.news = [hours]): the most viral South Florida story right now, one per post
+  news: { kicker: 'MIAMI NEWS 🚨', feed: 'local', pick: 'the single most viral South Florida story right now: the one people are sharing, commenting on and arguing about (a shocking crime or arrest, a wild video, a disaster, a celebrity moment in Miami, a big price or rent shock, a major court case, a huge development). Never a small business closing, a minor traffic item, a routine meeting or a neighborhood-only story. It must be a DIFFERENT story from the ones we already posted (listed below).', ask: 'A news carousel: ONE viral South Florida story told in depth across 5–6 connected slides (what happened, the key details and numbers, how it started, who it affects here, what happens next).' },
   world: { kicker: 'NEWS FROM AROUND THE WORLD 🌎', feed: 'world', pick: 'the single most serious story in the world today: the deadliest, most dangerous or most consequential (war, disaster, attack, crisis). Pick the one with the most facts in the headlines.', ask: 'The night news carousel: ONE world story, the most serious one today, told in depth across 5–6 connected slides (what happened, the scale in numbers, how it started, who is affected, what the world is doing, what happens next, and a Florida/US angle only if there honestly is one).' },
   feature: { feed: 'local' },
 };
@@ -86,7 +88,7 @@ function recentPosts(days = 7) {
 
 export async function writeCarousel(kind, { topic, preview } = {}) {
   const spec = KINDS[kind];
-  if (!spec) throw new Error(`Unknown carousel kind "${kind}" (brief|world|feature)`);
+  if (!spec) throw new Error(`Unknown carousel kind "${kind}" (brief|news|world|feature)`);
   const weekday = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })).getDay();
   const feature = kind === 'feature' ? FEATURES[weekday] : null;
   const kicker = feature ? `${feature.name}` : spec.kicker;
@@ -105,7 +107,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   // brief/world: pick ONE story, then pull every headline about it so the slides can go deep
   if (spec.pick && !topic) {
     const choice = await chat([{ role: 'system', content: `Pick ${spec.pick} Return JSON {"story":"one sentence","search":["2–4 Google News searches to find more reporting on that exact story"],"wikipedia":["0–2 exact English Wikipedia titles for background (a country, a conflict, a place)"]}` },
-      { role: 'user', content: `Headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` }]);
+      { role: 'user', content: `Headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}\n\nAlready posted (pick something else unless there is a big new development):\n${recentPosts(2).map(p => '- ' + [p.cover?.main, p.cover?.highlight].filter(Boolean).join(' ') + ': ' + (p.slides || []).map(x => x.headline).join('; ')).join('\n') || '(none)'}` }]);
     console.log(`  story: ${choice.story}`);
     const more = [];
     for (const q of (choice.search || []).slice(0, 4)) more.push(...await searchNews(q, { days: 3, max: 15 }).catch(() => []));
@@ -175,7 +177,8 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   post.kind = kind;
   post.kicker = kicker;
   post.date = nyDate();
-  post.id = `${post.date}-${kind}${topic && !spec.pick ? '-custom' : ''}${preview ? '-preview' : ''}`;
+  const hour = new Date().toLocaleString('en-US', { timeZone: 'America/New_York', hour: '2-digit', hour12: false });
+  post.id = `${post.date}-${kind}${kind === 'news' ? '-' + hour : ''}${topic && !spec.pick ? '-custom' : ''}${preview ? '-preview' : ''}`;
   const dir = path.join(ROOT, 'posts', post.id);
   fs.mkdirSync(dir, { recursive: true });
   step('Finding photos');
