@@ -1,0 +1,16 @@
+# Approved, already-rendered Reels. Each scheduled slot (control.json postHours) posts the next line on the hour.
+# Remove a line to drop a video; reorder lines to change the order. Topic queue (plan/queue.txt) is used only when this is empty.
+010-the-5-most-expensive-houses-in-south-flo
+015-top-5-upcoming-events-in-south-florida
+014-jeffrey-epstein-s-palm-beach-mansion
+023-the-coral-castle-mystery
+012-south-florida-s-most-infamous-unsolved-m
+021-the-south-florida-neighborhood-where-peo
+013-the-darkest-things-found-in-the-everglad
+016-the-cheapest-cities-to-live-in-south-flo
+020-why-trippie-redd-s-mansion-is-completely
+018-5-south-florida-cities-with-the-most-att
+022-the-devil-s-tree-murders
+011-the-island-next-to-miami-you-cannot-driv
+017-the-most-dangerous-area-in-south-florida
+019-5-miami-neighborhoods-to-move-to-if-you-

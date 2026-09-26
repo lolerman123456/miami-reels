@@ -49,6 +49,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       go: ${{ steps.check.outputs.go }}
+      slot: ${{ steps.check.outputs.slot }}
     steps:
       - uses: actions/checkout@v4
       - id: check
@@ -72,7 +73,7 @@ jobs:
             git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
             git add state/slots.txt && git commit -qm "Claim slot $SLOT"
             for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
-            echo "NY $D ${H}:xx → starting Reel for ${P}:00 slot ($DELTA min before)"; echo "go=true" >> "$GITHUB_OUTPUT"; exit 0
+            echo "NY $D ${H}:xx → starting Reel for ${P}:00 slot ($DELTA min before)"; { echo "go=true"; echo "slot=$P"; } >> "$GITHUB_OUTPUT"; exit 0
           done
           nogo "not a post slot"
 
@@ -81,7 +82,7 @@ jobs:
     needs: gate
     if: needs.gate.outputs.go == 'true'
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 150
     outputs:
       render: ${{ steps.prep.outputs.render }}
       dir: ${{ steps.prep.outputs.dir }}
@@ -165,12 +166,27 @@ jobs:
           REEL_NUMBER: ${{ steps.req.outputs.number }}
           POST_VIDEO: ${{ steps.req.outputs.post_video }}
           GH_TOKEN: ${{ github.token }}
+          SLOT: ${{ needs.gate.outputs.slot }}
         run: |
+          # owner's approved videos: a scheduled slot posts the next already-rendered video in plan/videos.txt, on the hour
+          if [ -z "$REEL_TOPIC" ] && [ -z "$REEL_EPISODE" ] && [ -z "$POST_VIDEO" ] && [ -n "$SLOT" ] && [ -s plan/videos.txt ]; then
+            HAVE=$(gh release view videos --json assets -q '.assets[].name')
+            NEXT=$(grep -v '^\s*#' plan/videos.txt | grep -v '^\s*$' | while read v; do echo "$HAVE" | grep -qx "$(basename "$v").mp4" && { echo "$v"; break; }; done)
+            if [ -n "$NEXT" ]; then
+              echo "▶ queued video: $NEXT"
+              grep -vxF "$NEXT" plan/videos.txt > q.tmp; mv q.tmp plan/videos.txt
+              git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
+              git add plan/videos.txt && git commit -qm "Post queued video: $NEXT" && { git pull -q --rebase && git push -q; } || true
+              POST_VIDEO="$NEXT"
+              W=$(( $(TZ=America/New_York date -d "today ${SLOT}:00" +%s) - $(date +%s) - 240 ))
+              if [ "$W" -gt 0 ]; then echo "waiting $((W / 60)) min to post at ${SLOT}:00"; sleep "$W"; fi
+            fi
+          fi
           # Fast path: post an already-rendered video from the "videos" release (no re-render).
           if [ -n "$POST_VIDEO" ]; then
-            ID=$(basename "$POST_VIDEO")
+            ID=$(basename "$POST_VIDEO"); case "$POST_VIDEO" in */*) ;; *) POST_VIDEO="episodes/$ID";; esac
             mkdir -p out/posted && gh release download videos -p "$ID.mp4" -D out/posted --clobber
-            node pipeline/publish.mjs "out/posted/$ID.mp4" "episodes/$ID"
+            node pipeline/publish.mjs "out/posted/$ID.mp4" "$POST_VIDEO"
             echo "render=false" >> "$GITHUB_OUTPUT"
             git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
             git add posted.log && git commit -qm "Posted $ID" && { git pull --rebase && git push; } || true

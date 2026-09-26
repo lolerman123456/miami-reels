@@ -17,6 +17,7 @@ Claude from their phone. Your job in a chat is to turn their request into a comm
 | "Post this exact script" | Write `episodes/<NNN>-<slug>/episode.json` (copy the shape of `episodes/001-rudest-cities/episode.json`), then `requests/run.json` → `{"episode": "episodes/<NNN>-<slug>", "publish": true, "at": "..."}`. Commit both, push. |
 | "Post that preview" (already rendered) | `requests/run.json` → `{"postVideo": "episodes/<NNN>-<slug>", "at": "..."}`. Posts the video already in the `videos` release — no re-render, live in ~5–10 min. |
 | "Post a carousel now" | `requests/post.json` → `{"kind": "brief|world|feature", "topic": "optional angle", "publish": true, "at": "..."}`. Live in ~8 min (`.github/workflows/posts.yml`). |
+| "Post these videos over the week" | One episode id per line in `plan/videos.txt`; each scheduled slot posts the next already-rendered one on the hour (no re-render). Remove a line to drop it. |
 | "This week's Reels are…" | Add one topic per line to `plan/queue.txt`; each scheduled Reel takes the next line. |
 | "Change carousel times" / "add a carousel" | `control.json` → `carousels` = `{"kind": hour}`. |
 | "Change the post times" / "add a third post" | `control.json` → `postHours` = New York post hours, 24h (e.g. `[13, 20]`). A check every 30 min in `reel.yml` starts a run ~1 hour before each (up to 4 retries; `state/slots.txt` prevents double posts). Commit + push. |
