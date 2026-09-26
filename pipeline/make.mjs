@@ -50,20 +50,7 @@ export async function makeEpisode(epDir, { pane = false } = {}) {
   const music = pickMusic();
   if (music) fs.copyFileSync(music, path.join(epDir, 'music' + path.extname(music)));
 
-  const props = {
-    fps: FPS, width: WIDTH, height: HEIGHT,
-    durationInFrames: Math.ceil(duration * FPS),
-    narration: 'narration.wav',
-    music: music ? 'music' + path.extname(music) : null,
-    captions: readJSON(captionsFile),
-    scenes: episode.scenes.map((s, i) => ({
-      kind: s.kind, rank: s.rank ?? null, overlay: s.overlay, sub: s.sub ?? null,
-      emoji: s.emoji ?? null, emojis: s.emojis ?? null, alert: s.alert ?? null, note: s.note ?? null, badge: s.badge ?? null,
-      from: Math.round(timeline[i].start * FPS),
-      duration: Math.round(timeline[i].duration * FPS),
-      video: videos[i],
-    })),
-  };
+  const props = buildProps(episode, timeline, duration, readJSON(captionsFile), videos, music ? 'music' + path.extname(music) : null);
   const propsFile = path.join(epDir, 'props.json');
   writeJSON(propsFile, props);
 
@@ -73,6 +60,23 @@ export async function makeEpisode(epDir, { pane = false } = {}) {
     `--props=${propsFile}`, `--public-dir=${epDir}`, '--codec=h264', '--crf=21', '--audio-bitrate=192k', '--concurrency=100%']);
   console.log(`\n✔ Video: ${out}`);
   return { out, episode };
+}
+
+export function buildProps(episode, timeline, duration, captions, videos, music = null) {
+  return {
+    fps: FPS, width: WIDTH, height: HEIGHT,
+    durationInFrames: Math.ceil(duration * FPS),
+    narration: 'narration.wav',
+    music,
+    captions,
+    scenes: episode.scenes.map((s, i) => ({
+      kind: s.kind, rank: s.rank ?? null, overlay: s.overlay, sub: s.sub ?? null,
+      emoji: s.emoji ?? null, emojis: s.emojis ?? null, alert: s.alert ?? null, note: s.note ?? null, badge: s.badge ?? null,
+      from: Math.round(timeline[i].start * FPS),
+      duration: Math.round(timeline[i].duration * FPS),
+      video: videos[i],
+    })),
+  };
 }
 
 function pickMusic() {

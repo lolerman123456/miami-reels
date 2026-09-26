@@ -202,19 +202,27 @@ jobs:
           path: ~/.cache/puppeteer
           key: puppeteer-${{ hashFiles('package-lock.json') }}
       - run: npm ci
+      - name: Cache Remotion browser
+        uses: actions/cache@v4
+        with:
+          path: node_modules/.remotion
+          key: remotion-browser-${{ hashFiles('package-lock.json') }}
+      - name: ffmpeg
+        run: command -v ffmpeg >/dev/null || { sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null; }
       - uses: actions/download-artifact@v4
         with:
           name: episode
           path: ${{ needs.prepare.outputs.dir }}
-      - name: Render slice ${{ matrix.piece }}
+      - name: Render + compose slice ${{ matrix.piece }}
         env:
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
           CAPTURE_QUALITY: ${{ needs.prepare.outputs.quality }}
         run: node pipeline/parallel.mjs capture "${{ needs.prepare.outputs.dir }}" ${{ matrix.piece }}
       - uses: actions/upload-artifact@v4
         with:
-          name: frames-${{ matrix.piece }}
-          path: ${{ needs.prepare.outputs.dir }}/frames
+          name: part-${{ matrix.piece }}
+          path: ${{ needs.prepare.outputs.dir }}/parts
+          if-no-files-found: ignore
           retention-days: 3
 
   # 3) stitch footage + motion graphics, post, share link, log
@@ -237,18 +245,11 @@ jobs:
 
       - name: System packages
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji > /dev/null
+          command -v ffmpeg >/dev/null || { sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg > /dev/null; }
           sudo curl -sSL -o /usr/local/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
           sudo chmod +x /usr/local/bin/cloudflared
 
-      - name: Cache browsers
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/puppeteer
-          key: puppeteer-${{ hashFiles('package-lock.json') }}
-
-      - run: npm ci
+      - run: npm ci --ignore-scripts
 
       - uses: actions/download-artifact@v4
         with:
@@ -257,23 +258,20 @@ jobs:
 
       - uses: actions/download-artifact@v4
         with:
-          pattern: frames-*
+          pattern: part-*
           merge-multiple: true
-          path: ${{ needs.prepare.outputs.dir }}/frames
+          path: ${{ needs.prepare.outputs.dir }}/parts
 
-      - name: Make (and post) the Reel
+      - name: Join parts, mix audio, post
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
           CLOUDFLARED_BIN: /usr/local/bin/cloudflared
           PUBLISH: ${{ needs.prepare.outputs.publish }}
-          CAPTURE_QUALITY: ${{ needs.prepare.outputs.quality }}
         run: |
-          ARGS=(--episode "${{ needs.prepare.outputs.dir }}" --force)
+          ARGS=()
           [ "$PUBLISH" = "false" ] && ARGS+=(--dry-run)
-          node pipeline/daily.mjs "${ARGS[@]}"
+          node pipeline/parallel.mjs finish "${{ needs.prepare.outputs.dir }}" "${ARGS[@]}"
 
       - name: Keep Instagram token alive
         if: always()

@@ -3,6 +3,8 @@ import {
   AbsoluteFill, Audio, OffthreadVideo, Sequence, staticFile, spring, interpolate, delayRender, continueRender,
   useCurrentFrame, useVideoConfig,
 } from 'remotion';
+// @ts-ignore plain JS module shared with the node pipeline
+import { sfxCues } from './cues.js';
 
 export type Word = { text: string; start: number; end: number; scene: number };
 export type Scene = {
@@ -15,6 +17,7 @@ export type Scene = {
   alert?: string | null;
   note?: string | null;
   badge?: string | null;
+  videoOffset?: number; // parallel renders: this scene's clip starts at this scene frame
   from: number;
   duration: number;
   video: string;
@@ -23,6 +26,7 @@ export type ReelProps = {
   fps: number; width: number; height: number; durationInFrames: number;
   narration: string | null; music: string | null;
   captions: Word[]; scenes: Scene[];
+  noAudio?: boolean; // parallel renders are silent; audio is mixed afterwards
 };
 
 // Near brand: blue + white on dark glass. Calm motion only (fades/slides, no bounce, no tilt).
@@ -56,7 +60,7 @@ const useBundledFont = () => {
   }, [handle]);
 };
 
-export const Reel: React.FC<ReelProps> = ({ narration, music, captions, scenes, durationInFrames }) => {
+export const Reel: React.FC<ReelProps> = ({ narration, music, captions, scenes, durationInFrames, noAudio }) => {
   useBundledFont();
   return (
     <AbsoluteFill style={{ backgroundColor: '#000' }}>
@@ -71,9 +75,9 @@ export const Reel: React.FC<ReelProps> = ({ narration, music, captions, scenes, 
       <Attribution />
       <Brand />
 
-      {narration && <Audio src={staticFile(narration)} />}
-      {music && <Audio src={staticFile(music)} volume={0.12} loop />}
-      <SoundEffects scenes={scenes} />
+      {!noAudio && narration && <Audio src={staticFile(narration)} />}
+      {!noAudio && music && <Audio src={staticFile(music)} volume={0.12} loop />}
+      {!noAudio && <SoundEffects scenes={scenes} />}
     </AbsoluteFill>
   );
 };
@@ -87,7 +91,9 @@ const SceneView: React.FC<{ scene: Scene; index: number }> = ({ scene, index }) 
   return (
     <AbsoluteFill>
       <AbsoluteFill style={{ transform: `scale(${scale})` }}>
-        <OffthreadVideo src={staticFile(scene.video)} muted style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        <Sequence from={scene.videoOffset ?? 0} layout="none">
+          <OffthreadVideo src={staticFile(scene.video)} muted style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+        </Sequence>
       </AbsoluteFill>
       <AbsoluteFill style={{
         background: 'linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 32%, rgba(0,0,0,0) 58%, rgba(0,0,0,.55) 100%)',
@@ -162,7 +168,7 @@ const Item: React.FC<{ scene: Scene }> = ({ scene }) => {
   );
 };
 
-// Re-hook banner: slams in mid-scene with a shake so attention snaps back
+// Re-hook banner
 const ALERT_AT = 40;
 const AlertBanner: React.FC<{ text: string; at: number }> = ({ text, at }) => {
   const frame = useCurrentFrame();
@@ -268,27 +274,7 @@ const Attribution: React.FC = () => (
 // ---------------------------------------------------------------------------
 
 const SoundEffects: React.FC<{ scenes: Scene[] }> = ({ scenes }) => {
-  // subtle: whoosh into every scene, soft ticks as each label lands, a light riser into the last item, chime on the outro
-  const cues: { at: number; file: string; volume: number }[] = [];
-  const items = scenes.filter(s => s.kind === 'item');
-  const last = items[items.length - 1];
-  scenes.forEach(s => {
-    if (s.kind === 'hook') {
-      cues.push({ at: 0, file: 'sfx/boom.wav', volume: 0.35 });
-      cues.push({ at: 3, file: 'sfx/tick.wav', volume: 0.3 });
-      cues.push({ at: 8, file: 'sfx/tick.wav', volume: 0.3 });
-    } else {
-      cues.push({ at: Math.max(0, s.from - 8), file: 'sfx/whoosh.wav', volume: 0.3 });
-    }
-    if (s.kind === 'item') {
-      cues.push({ at: s.from + 3, file: 'sfx/tick.wav', volume: 0.32 });
-      cues.push({ at: s.from + 8, file: 'sfx/pop.wav', volume: 0.18 });
-      if (s.sub) cues.push({ at: s.from + 13, file: 'sfx/tick.wav', volume: 0.22 });
-    }
-    if (s === last && s.from > 45) cues.push({ at: s.from - 40, file: 'sfx/riser.wav', volume: 0.22 });
-    if (s.alert) cues.push({ at: s.from + ALERT_AT, file: 'sfx/boom.wav', volume: 0.3 });
-    if (s.kind === 'outro') cues.push({ at: s.from + 3, file: 'sfx/ding.wav', volume: 0.3 });
-  });
+  const cues: { at: number; file: string; volume: number }[] = sfxCues(scenes);
   return (
     <>
       {cues.map((c, i) => (
