@@ -17,7 +17,7 @@ export type Scene = {
   alert?: string | null;
   note?: string | null;
   badge?: string | null;
-  image?: { file: string; path: { x: number; y: number; zoom: number }[] | null; label: string } | null; // AI render instead of the map
+  image?: { file: string; path: { x: number; y: number; zoom: number; at?: number }[] | null; label: string } | null; // AI render instead of the map
   stats?: { value: string; label: string }[] | null; // big numbers that count up while the narrator says them
   source?: string | null; // where the facts come from, shown small
   hit?: string | null;
@@ -117,14 +117,17 @@ const SceneView: React.FC<{ scene: Scene; index: number }> = ({ scene, index }) 
 const ImageView: React.FC<{ scene: Scene }> = ({ scene }) => {
   const frame = useCurrentFrame();
   const img = scene.image!;
-  const path = img.path && img.path.length ? img.path : [{ x: 0.5, y: 0.5, zoom: 1 }, { x: 0.5, y: 0.45, zoom: 1.4 }];
-  // each leg: glide 40%, hold/drift 60%
-  const legs = Math.max(1, path.length - 1);
-  const t = Math.min(0.9999, frame / Math.max(1, scene.duration)) * legs;
-  const k = Math.floor(t), u = t - k;
-  const a = path[Math.min(k, path.length - 1)], b = path[Math.min(k + 1, path.length - 1)];
-  const e = u < 0.4 ? (1 - Math.cos(Math.PI * (u / 0.4))) / 2 : 1;
-  const drift = u < 0.4 ? 0 : (u - 0.4) * 0.06;
+  const path = img.path && img.path.length ? img.path : [{ x: 0.5, y: 0.5, zoom: 1, at: 0 }, { x: 0.5, y: 0.45, zoom: 1.4, at: 30 }];
+  // hold on each spot until the narrator names the next one, then glide there in ~0.4 s (starting just before the word)
+  const GLIDE = 12, LEAD = 6;
+  const times = path.map((p, k) => (k === 0 ? 0 : Math.max(0, (p.at ?? (k * scene.duration) / path.length) - LEAD)));
+  let k = 0;
+  while (k + 1 < path.length && frame >= times[k + 1]) k++;
+  const a = path[Math.max(0, k - 1)], b = path[k];
+  const u = k === 0 ? 1 : Math.min(1, (frame - times[k]) / GLIDE);
+  const e = (1 - Math.cos(Math.PI * u)) / 2;
+  const since = frame - times[k] - GLIDE;
+  const drift = since > 0 ? Math.min(0.06, since * 0.0015) : 0; // slow push while holding
   const x = a.x + (b.x - a.x) * e, y = a.y + (b.y - a.y) * e, z = (a.zoom + (b.zoom - a.zoom) * e) * (1 + drift);
   // the 1024x1536 render fills the 1080x1920 frame; move the focus point to the middle of the screen
   const fade = ease(frame, 0, 8);

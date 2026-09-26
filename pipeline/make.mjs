@@ -72,13 +72,32 @@ export function buildProps(episode, timeline, duration, captions, videos, music 
     scenes: episode.scenes.map((s, i) => ({
       kind: s.kind, rank: s.rank ?? null, overlay: s.overlay, sub: s.sub ?? null,
       emoji: s.emoji ?? null, emojis: s.emojis ?? null, alert: s.alert ?? null, note: s.note ?? null, badge: s.badge ?? null,
-      image: s.image?.file ? { file: s.image.file, path: s.image.path ?? null, label: s.image.label ?? 'AI RENDER' } : null,
+      image: s.image?.file ? { file: s.image.file, path: timeFocus(s.image, i, captions, timeline), label: s.image.label ?? 'AI RENDER' } : null,
       stats: s.stats ?? null, source: s.source ?? null, hit: s.hit ?? null, shotType: s.shot?.type ?? null, sfx: episode.sfx ?? 'hard',
       from: Math.round(timeline[i].start * FPS),
       duration: Math.round(timeline[i].duration * FPS),
       video: videos[i],
     })),
   };
+}
+
+// Image scenes: move the camera to each focus spot exactly when the narrator says it. Each spot (after the opening full
+// view) gets "at" = frames into the scene of the first spoken word that matches its focus phrase ("the movie theater" → "theater").
+const STOP = new Set(['the', 'and', 'with', 'from', 'that', 'this', 'its', 'his', 'her', 'their', 'black', 'eight', 'car']);
+function timeFocus(image, sceneIndex, captions, timeline) {
+  const path = image.path;
+  if (!path?.length) return null;
+  const words = (captions || []).filter(w => w.scene === sceneIndex);
+  const start = timeline[sceneIndex].start, dur = timeline[sceneIndex].duration;
+  const norm = t => String(t).toLowerCase().replace(/[^a-z0-9]/g, '');
+  let from = 0;
+  return path.map((p, k) => {
+    if (k === 0) return { ...p, at: 0 };
+    const keys = String(image.focus?.[k - 1] || '').toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 3 && !STOP.has(w));
+    const hit = words.findIndex((w, j) => j >= from && keys.some(key => norm(w.text).startsWith(key.slice(0, 5))));
+    if (hit >= 0) { from = hit + 1; return { ...p, at: Math.max(0, Math.round((words[hit].start - start) * FPS)) }; }
+    return { ...p, at: Math.round((dur * FPS * k) / path.length) }; // not spoken: spread evenly
+  });
 }
 
 function pickMusic() {
