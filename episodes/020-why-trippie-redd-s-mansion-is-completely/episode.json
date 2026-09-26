@@ -111,7 +111,35 @@
           "the movie theater",
           "the eight-car garage"
         ],
-        "label": "AI RENDER · ILLUSTRATION"
+        "label": "AI RENDER · ILLUSTRATION",
+        "path": [
+          {
+            "x": 0.5,
+            "y": 0.5,
+            "zoom": 1
+          },
+          {
+            "x": 0.56,
+            "y": 0.68,
+            "zoom": 2.1
+          },
+          {
+            "x": 0.54,
+            "y": 0.53,
+            "zoom": 2.4
+          },
+          {
+            "x": 0.75,
+            "y": 0.54,
+            "zoom": 2.2
+          },
+          {
+            "x": 0.55,
+            "y": 0.76,
+            "zoom": 1.8
+          }
+        ],
+        "file": "images/scene-2.png"
       }
     },
     {
@@ -149,7 +177,30 @@
           "the black roof",
           "the black driveway"
         ],
-        "label": "AI RENDER · ILLUSTRATION"
+        "label": "AI RENDER · ILLUSTRATION",
+        "path": [
+          {
+            "x": 0.5,
+            "y": 0.5,
+            "zoom": 1
+          },
+          {
+            "x": 0.47,
+            "y": 0.63,
+            "zoom": 2.1
+          },
+          {
+            "x": 0.47,
+            "y": 0.52,
+            "zoom": 1.8
+          },
+          {
+            "x": 0.58,
+            "y": 0.82,
+            "zoom": 1.8
+          }
+        ],
+        "file": "images/scene-3.png"
       }
     },
     {
