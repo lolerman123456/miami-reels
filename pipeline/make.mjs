@@ -9,7 +9,8 @@ import { makeCaptions } from './captions.mjs';
 import { captureShots } from './capture.mjs';
 import { ensureSfx } from './sfx.mjs';
 
-export async function makeEpisode(epDir, { pane = false } = {}) {
+// Steps 1–2 (voice + caption timing). Also used by the parallel pipeline's "prepare" job.
+export async function prepareEpisode(epDir) {
   epDir = path.resolve(epDir);
   const episode = readJSON(path.join(epDir, 'episode.json'));
   console.log(`\n=== ${episode.title} (${episode.id}) ===`);
@@ -30,6 +31,12 @@ export async function makeEpisode(epDir, { pane = false } = {}) {
     step('Caption timing (Whisper)');
     writeJSON(captionsFile, await makeCaptions(episode, timeline, epDir));
   }
+  return { episode, timeline, duration, captionsFile };
+}
+
+export async function makeEpisode(epDir, { pane = false } = {}) {
+  epDir = path.resolve(epDir);
+  const { episode, timeline, duration, captionsFile } = await prepareEpisode(epDir);
 
   // 3. 3D footage
   step('3D footage');

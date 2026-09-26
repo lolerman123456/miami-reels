@@ -64,15 +64,18 @@ jobs:
           done
           nogo "not a post slot"
 
-  reel:
+  # 1) script + voice + captions, and a plan that splits the 3D footage into slices
+  prepare:
     needs: gate
     if: needs.gate.outputs.go == 'true'
-    # one video at a time (only real video runs queue here, not the hourly checks)
-    concurrency:
-      group: reel
-      cancel-in-progress: false
     runs-on: ubuntu-latest
-    timeout-minutes: 300
+    timeout-minutes: 60
+    outputs:
+      render: ${{ steps.prep.outputs.render }}
+      dir: ${{ steps.prep.outputs.dir }}
+      pieces: ${{ steps.prep.outputs.pieces }}
+      publish: ${{ steps.req.outputs.publish }}
+      quality: ${{ steps.req.outputs.quality }}
     steps:
       - uses: actions/checkout@v4
 
@@ -84,7 +87,7 @@ jobs:
           IN_EPISODE: ${{ github.event.inputs.episode }}
           IN_PUBLISH: ${{ github.event.inputs.publish }}
         run: |
-          TOPIC="$IN_TOPIC"; EPISODE="$IN_EPISODE"; PUBLISH="${IN_PUBLISH:-true}"
+          TOPIC="$IN_TOPIC"; EPISODE="$IN_EPISODE"; PUBLISH="${IN_PUBLISH:-true}"; POST_VIDEO=""; QUALITY=""
           if [ "$EVENT" = "push" ]; then
             TOPIC=$(jq -r '.topic // ""' requests/run.json)
             EPISODE=$(jq -r '.episode // ""' requests/run.json)
@@ -99,7 +102,123 @@ jobs:
             echo "post_video=$POST_VIDEO"
             echo "quality=$QUALITY"
           } >> "$GITHUB_OUTPUT"
-          echo "event=$EVENT topic='$TOPIC' episode='$EPISODE' publish=$PUBLISH"
+          echo "event=$EVENT topic='$TOPIC' episode='$EPISODE' publish=$PUBLISH quality='$QUALITY'"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: System packages
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg > /dev/null
+          sudo curl -sSL -o /usr/local/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+          sudo chmod +x /usr/local/bin/cloudflared
+
+      - name: Cache browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/puppeteer
+          key: puppeteer-${{ hashFiles('package-lock.json') }}
+
+      - run: npm ci
+
+      - name: Cache voice model
+        uses: actions/cache@v4
+        with:
+          path: node_modules/@huggingface/transformers/.cache
+          key: kokoro-v1
+
+      - name: Write script, voice, captions (or post an existing video)
+        id: prep
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.5' }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          KOKORO_VOICE: ${{ vars.KOKORO_VOICE || 'am_adam' }}
+          KOKORO_SPEED: ${{ vars.KOKORO_SPEED || '1.08' }}
+          CLOUDFLARED_BIN: /usr/local/bin/cloudflared
+          REEL_TOPIC: ${{ steps.req.outputs.topic }}
+          REEL_EPISODE: ${{ steps.req.outputs.episode }}
+          POST_VIDEO: ${{ steps.req.outputs.post_video }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Fast path: post an already-rendered video from the "videos" release (no re-render).
+          if [ -n "$POST_VIDEO" ]; then
+            ID=$(basename "$POST_VIDEO")
+            mkdir -p out/posted && gh release download videos -p "$ID.mp4" -D out/posted --clobber
+            node pipeline/publish.mjs "out/posted/$ID.mp4" "episodes/$ID"
+            echo "render=false" >> "$GITHUB_OUTPUT"
+            git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
+            git add posted.log && git commit -qm "Posted $ID" && { git pull --rebase && git push; } || true
+            exit 0
+          fi
+          ARGS=()
+          [ -n "$REEL_EPISODE" ] && ARGS+=(--episode "$REEL_EPISODE")
+          [ -n "$REEL_TOPIC" ] && ARGS+=(--topic "$REEL_TOPIC")
+          node pipeline/parallel.mjs prepare "${ARGS[@]}"
+          echo "render=true" >> "$GITHUB_OUTPUT"
+
+      - name: Hand off to the capture jobs
+        if: steps.prep.outputs.render == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: episode
+          path: ${{ steps.prep.outputs.dir }}
+          retention-days: 3
+
+  # 2) the 3D footage, sliced across many machines at once
+  capture:
+    needs: prepare
+    if: needs.prepare.outputs.render == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 18
+      matrix:
+        piece: ${{ fromJSON(needs.prepare.outputs.pieces) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Cache browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/puppeteer
+          key: puppeteer-${{ hashFiles('package-lock.json') }}
+      - run: npm ci
+      - uses: actions/download-artifact@v4
+        with:
+          name: episode
+          path: ${{ needs.prepare.outputs.dir }}
+      - name: Render slice ${{ matrix.piece }}
+        env:
+          GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
+          CAPTURE_QUALITY: ${{ needs.prepare.outputs.quality }}
+        run: node pipeline/parallel.mjs capture "${{ needs.prepare.outputs.dir }}" ${{ matrix.piece }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: frames-${{ matrix.piece }}
+          path: ${{ needs.prepare.outputs.dir }}/frames
+          retention-days: 3
+
+  # 3) stitch footage + motion graphics, post, share link, log
+  reel:
+    needs: [prepare, capture]
+    if: needs.prepare.outputs.render == 'true'
+    # one post at a time
+    concurrency:
+      group: reel
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
@@ -121,41 +240,30 @@ jobs:
 
       - run: npm ci
 
-      - name: Cache voice model
-        uses: actions/cache@v4
+      - uses: actions/download-artifact@v4
         with:
-          path: node_modules/@huggingface/transformers/.cache
-          key: kokoro-v1
+          name: episode
+          path: ${{ needs.prepare.outputs.dir }}
+
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: frames-*
+          merge-multiple: true
+          path: ${{ needs.prepare.outputs.dir }}/frames
 
       - name: Make (and post) the Reel
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.5' }}
           GOOGLE_MAPS_API_KEY: ${{ secrets.GOOGLE_MAPS_API_KEY }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
-          KOKORO_VOICE: ${{ vars.KOKORO_VOICE || 'am_adam' }}
-          KOKORO_SPEED: ${{ vars.KOKORO_SPEED || '1.08' }}
           CLOUDFLARED_BIN: /usr/local/bin/cloudflared
-          REEL_TOPIC: ${{ steps.req.outputs.topic }}
-          REEL_EPISODE: ${{ steps.req.outputs.episode }}
-          EVENT: ${{ github.event_name }}
-          PUBLISH: ${{ steps.req.outputs.publish }}
-          POST_VIDEO: ${{ steps.req.outputs.post_video }}
-          CAPTURE_QUALITY: ${{ steps.req.outputs.quality }}
-          GH_TOKEN: ${{ github.token }}
+          PUBLISH: ${{ needs.prepare.outputs.publish }}
+          CAPTURE_QUALITY: ${{ needs.prepare.outputs.quality }}
         run: |
-          # Fast path: post an already-rendered video from the "videos" release (no re-render).
-          if [ -n "$POST_VIDEO" ]; then
-            ID=$(basename "$POST_VIDEO")
-            mkdir -p out/posted && gh release download videos -p "$ID.mp4" -D out/posted --clobber
-            node pipeline/publish.mjs "out/posted/$ID.mp4" "episodes/$ID"
-            exit 0
-          fi
-          ARGS=""
-          [ "$PUBLISH" = "false" ] && ARGS="$ARGS --dry-run"
-          [ "$EVENT" != "schedule" ] && ARGS="$ARGS --force"
-          node pipeline/daily.mjs $ARGS
+          ARGS=(--episode "${{ needs.prepare.outputs.dir }}" --force)
+          [ "$PUBLISH" = "false" ] && ARGS+=(--dry-run)
+          node pipeline/daily.mjs "${ARGS[@]}"
 
       - name: Keep Instagram token alive
         if: always()

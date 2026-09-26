@@ -63,11 +63,13 @@ async function main() {
   }
 
   for (const shot of job.shots) {
-    for (let f = shot.skip || 0; f < shot.frames; f++) {
+    // parallel jobs render a slice [from, to) of a shot; t still spans the whole shot so slices join seamlessly
+    const start = Math.max(shot.from ?? 0, shot.skip || 0), end = shot.to ?? shot.frames;
+    for (let f = start; f < end; f++) {
       const t = shot.frames > 1 ? f / (shot.frames - 1) : 0;
       const p = poseAt(shot, t, Cesium.Math.toRadians);
       viewer.camera.lookAt(shot.center, new Cesium.HeadingPitchRange(p.h, p.p, p.r));
-      await renderUntilLoaded(scene, tileset, f === (shot.skip || 0) ? 15000 : (job.frameTimeout ?? 1800));
+      await renderUntilLoaded(scene, tileset, f === start ? 15000 : (job.frameTimeout ?? 1800));
       const blob = await new Promise(r => scene.canvas.toBlob(r, 'image/jpeg', 0.93));
       await fetch(`/api/frame?shot=${shot.index}&frame=${f}`, { method: 'POST', body: blob });
       if (f % 10 === 0) hud(`Shot ${shot.index + 1}/${job.shots.length} · frame ${f + 1}/${shot.frames}`);

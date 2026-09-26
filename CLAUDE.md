@@ -32,7 +32,7 @@ The owner can also do all of this without Claude: GitHub app → Actions → **C
 - Every rendered video is uploaded as `https://github.com/lolerman123456/miami-reels/releases/download/videos/<episode-id>.mp4`
   (phone-friendly, no login). Send the owner that link when a video is ready, especially for previews (`"publish": false`).
 - Run status: `curl -s "https://api.github.com/repos/lolerman123456/miami-reels/actions/runs?per_page=5"` (fields: name, event,
-  status, conclusion, created_at, html_url). A Reel run takes ~60–100 min depending on video length.
+  status, conclusion, created_at, html_url). A Reel run is split into jobs: `prepare` (script/voice/captions) → `capture` (the 3D footage, ~16 slices rendered in parallel by `pipeline/parallel.mjs`) → `reel` (stitch, post). ~15 min normal, ~25–30 min with `"quality": "high"` in requests/run.json (full-res, more detail; use for hand-picked Reels).
 - What got posted: `posted.log` (pull first — the bot commits it after each run).
 - A voice other than Adam: add `"voice": {"provider": "openai", "voice": "ash"}` to that episode.json (optional `"speed": 1.15`).
 
