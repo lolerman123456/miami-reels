@@ -87,7 +87,6 @@ export const Reel: React.FC<ReelProps> = ({ narration, music, captions, scenes, 
 const SceneView: React.FC<{ scene: Scene; index: number }> = ({ scene, index }) => {
   const frame = useCurrentFrame();
   const scale = interpolate(frame, [0, scene.duration], [1.02, 1.07]);
-  const fadeIn = index === 0 ? 1 : ease(frame, 0, 6);
   return (
     <AbsoluteFill>
       <AbsoluteFill style={{ transform: `scale(${scale})` }}>
@@ -101,7 +100,6 @@ const SceneView: React.FC<{ scene: Scene; index: number }> = ({ scene, index }) 
       {scene.kind === 'hook' && <Hook scene={scene} />}
       {scene.kind === 'item' && <Item scene={scene} />}
       {scene.kind === 'outro' && <Outro scene={scene} />}
-      <AbsoluteFill style={{ backgroundColor: '#000', opacity: 1 - fadeIn }} />
     </AbsoluteFill>
   );
 };
@@ -124,9 +122,9 @@ const Hook: React.FC<{ scene: Scene }> = ({ scene }) => {
         {lines.map((line, i) => (
           <Pop key={i} delay={2 + i * 5}>
             <div style={{
-              fontFamily: FONT, fontWeight: 900, fontSize: fitSize(line, i === 0 ? 112 : 124, 960), lineHeight: 1.02,
-              color: i === lines.length - 1 ? BLUE : '#fff', textShadow: SHADOW, textAlign: 'center', whiteSpace: 'nowrap',
-              textTransform: 'uppercase', letterSpacing: -1,
+              fontFamily: FONT, fontWeight: 900, fontSize: fitSize(line, i === 0 ? 104 : 112, 900), lineHeight: 1.02,
+              color: '#fff', textAlign: 'center', whiteSpace: 'nowrap', textTransform: 'uppercase', letterSpacing: -1,
+              background: i === lines.length - 1 ? BLUE : GLASS, padding: '10px 26px 14px', borderRadius: 16, boxShadow: SHADOW,
             }}>{line}</div>
           </Pop>
         ))}
@@ -220,18 +218,21 @@ const Captions: React.FC<{ words: Word[] }> = ({ words }) => {
   return (
     <AbsoluteFill>
       <div style={{
-        position: 'absolute', top: 1200, left: 60, right: 60, display: 'flex', flexWrap: 'wrap', justifyContent: 'center',
-        gap: '4px 24px', opacity: e, transform: `translateY(${(1 - e) * 10}px)`,
+        position: 'absolute', top: 1190, left: 0, right: 0, display: 'flex', justifyContent: 'center',
+        opacity: e, transform: `translateY(${(1 - e) * 10}px)`,
       }}>
+       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2px 22px', maxWidth: 940,
+         background: 'rgba(8,10,16,.66)', padding: '10px 26px 14px', borderRadius: 18 }}>
         {g.words.map((w, i) => {
           const active = t >= w.start && t < w.end + 0.05;
           return (
             <span key={i} style={{
               fontFamily: FONT, fontWeight: 900, fontSize: 76, textTransform: 'uppercase', lineHeight: 1.12,
-              color: active ? BLUE : '#fff', textShadow: '0 3px 12px rgba(0,0,0,.85), 0 0 2px rgba(0,0,0,.9)',
+              color: active ? '#4D8DFF' : '#fff', textShadow: '0 2px 6px rgba(0,0,0,.6)',
             }}>{w.text}</span>
           );
         })}
+       </div>
       </div>
     </AbsoluteFill>
   );
