@@ -1,0 +1,113 @@
+{
+  "sector": "CITY HALL",
+  "cover": {
+    "top": "TRUMP SAYS",
+    "main": "HE WILL HOLD",
+    "highlight": "FLORIDA RALLIES",
+    "bottom": "FOR BYRON DONALDS",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Donald Trump Florida rally",
+      "prompt": "a large political rally stage in Florida with American flags and bright arena lights"
+    },
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Michael Vadon / CC BY-SA 4.0"
+  },
+  "slides": [
+    {
+      "tag": "CITY HALL",
+      "headline": "Trump says Florida rallies are coming for Donalds",
+      "highlight": "Florida rallies",
+      "body": "Trump announced Florida rallies to boost Byron Donalds after recent reporting drew his anger.",
+      "place": "Florida",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Wikimedia Commons Donald Trump Florida rally",
+        "prompt": "a packed indoor political rally in Florida with flags, a podium and campaign signs"
+      },
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Michael Vadon / CC BY-SA 4.0"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "That puts Trump inside the governor’s race",
+      "highlight": "governor’s race",
+      "body": "Donalds is the Republican nominee for Florida governor in 2026 and will face Democratic nominee David Jolly.",
+      "place": "Florida",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Florida State Capitol Tallahassee",
+        "prompt": "the Florida State Capitol in Tallahassee on a clear day"
+      },
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: DXR / CC BY-SA 4.0"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "The reason: Trump mentions disappeared online",
+      "highlight": "Trump mentions",
+      "body": "Trump mentions disappeared from Donalds’ campaign website, and most were removed with 6 weeks to go.",
+      "place": "Florida",
+      "source": "The National Desk",
+      "photo": {
+        "query": "Wikimedia Commons laptop campaign website politics",
+        "prompt": "a laptop showing a generic political campaign website on a desk with no real person pictured"
+      },
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Rhododendrites / CC BY-SA 4.0"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "And Donalds says Trump’s agenda is common sense",
+      "highlight": "common sense",
+      "body": "Donalds called Trump’s agenda “common sense” after some Trump mentions were removed from his campaign website.",
+      "place": "Florida",
+      "source": "The Hill",
+      "photo": {
+        "query": "Wikimedia Commons Byron Donalds United States Congress",
+        "prompt": "a generic congressional hearing room with microphones and nameplates, no people visible"
+      },
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Curt Teich &amp; Co., Chicago (publisher / Public domain"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "That also comes as GOP cracks emerge in Florida",
+      "highlight": "GOP cracks",
+      "body": "Reports described cracks in the GOP’s Florida firewall and Trump’s influence weighing on the party.",
+      "place": "Florida",
+      "source": "politico.com",
+      "photo": {
+        "query": "Wikimedia Commons Republican Party elephant Florida",
+        "prompt": "Florida political signs near a state government building, with red and blue campaign colors"
+      },
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Daniel Christensen / Public domain"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "So Trump says Donalds needs him through Election Day",
+      "highlight": "Election Day",
+      "body": "Trump said he will rally twice with Donalds before Election Day and said Donalds would “lose” if he “dropped” Trump.",
+      "place": "Florida",
+      "source": "floridapolitics.com",
+      "photo": {
+        "query": "Wikimedia Commons Florida voting election polling place",
+        "prompt": "a Florida polling place sign outside a community building during early voting"
+      },
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: GeoMancer448 / CC BY-SA 4.0"
+    }
+  ],
+  "caption": "Trump says he will hold Florida rallies for Byron Donalds after reporting about Trump mentions being removed from Donalds’ campaign website.\n\nDoes Trump help or hurt a Florida governor candidate right now?",
+  "hashtags": [
+    "#FloridaPolitics",
+    "#ByronDonalds"
+  ],
+  "collaborators": [],
+  "igCaption": "Trump says he will hold Florida rallies for Byron Donalds after reporting about Trump mentions being removed from Donalds’ campaign website.\n\nDoes Trump help or hurt a Florida governor candidate right now?\n\n📰 Sources: Miami Herald, Wikipedia, The National Desk, The Hill, politico.com, floridapolitics.com\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#FloridaPolitics #ByronDonalds #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-09-26",
+  "id": "2026-09-26-news-18"
+}
