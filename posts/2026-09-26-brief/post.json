@@ -1,0 +1,113 @@
+{
+  "sector": "USA",
+  "cover": {
+    "top": "TAMARAC DRIVERS",
+    "main": "LINED UP FOR",
+    "highlight": "FREE GAS CARDS",
+    "bottom": "SATURDAY MORNING",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons gas station Florida cars line",
+      "prompt": "cars lined up at a South Florida gas station on a sunny morning"
+    },
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Tdorante10 / CC BY-SA 4.0"
+  },
+  "slides": [
+    {
+      "tag": "ECONOMY",
+      "headline": "Tamarac drivers lined up for free gas cards",
+      "highlight": "free gas cards",
+      "body": "Drivers lined up Saturday morning in Tamarac for a gas card giveaway.",
+      "place": "Tamarac",
+      "source": "Local 10",
+      "photo": {
+        "query": "Wikimedia Commons gas station Florida",
+        "prompt": "cars waiting in line at a gas station in Tamarac on a bright morning"
+      },
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Nielsoncaetanosalmeron / CC BY 4.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Bride-to-be says wedding packages were stolen",
+      "highlight": "wedding packages",
+      "body": "A bride-to-be says wedding shoes and earrings were among packages stolen from a Miami apartment building.",
+      "place": "Miami",
+      "source": "CBS News",
+      "photo": {
+        "query": "Wikimedia Commons apartment building Miami packages lobby",
+        "prompt": "stacked delivery boxes in the lobby of a Miami apartment building"
+      },
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "ECONOMY",
+      "headline": "South Florida shoppers face cash, credit or surcharge",
+      "highlight": "cash, credit",
+      "body": "South Florida shoppers are being reminded what to know before paying with cash, credit or a card that may carry a surcharge.",
+      "place": "South Florida",
+      "source": "sun-sentinel.com",
+      "photo": {
+        "query": "Wikimedia Commons credit card payment terminal",
+        "prompt": "a credit card payment terminal on a store counter in South Florida"
+      },
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Basile Morin / CC BY-SA 4.0"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "South Florida gets a cooler, less humid weekend",
+      "highlight": "less humid",
+      "body": "South Florida gets a cooler, less humid weekend before rain returns.",
+      "place": "South Florida",
+      "source": "WPBF",
+      "photo": {
+        "query": "Wikimedia Commons South Florida beach sunny sky",
+        "prompt": "a sunny South Florida beach with clear skies and light breeze"
+      },
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Vyacheslav Argenberg / CC BY 4.0"
+    },
+    {
+      "tag": "ECONOMY",
+      "headline": "Starbucks on Clematis is closing",
+      "highlight": "Clematis is closing",
+      "body": "The Starbucks on Clematis Street is among about 250 Starbucks stores closing across North America.",
+      "place": "West Palm Beach",
+      "source": "The Palm Beach Post",
+      "photo": {
+        "query": "Wikimedia Commons Clematis Street West Palm Beach",
+        "prompt": "Clematis Street in downtown West Palm Beach with storefronts and pedestrians"
+      },
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Ebyabe / CC BY-SA 3.0"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "Dolphins youth gets a Chiefs offense test",
+      "highlight": "Chiefs offense",
+      "body": "An experienced Chiefs offense will test the Dolphins’ younger players.",
+      "place": "Miami Gardens",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Wikimedia Commons Hard Rock Stadium Miami Dolphins",
+        "prompt": "Hard Rock Stadium in Miami Gardens on a football game day"
+      },
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Gatorfan252525 / CC BY-SA 4.0"
+    }
+  ],
+  "caption": "Gas cards in Tamarac, package theft in Miami, a Clematis coffee closure and a cooler weekend are leading the local conversation.\n\nWhich one affects your Saturday the most?",
+  "hashtags": [
+    "#SouthFloridaNews",
+    "#Tamarac"
+  ],
+  "collaborators": [],
+  "igCaption": "Gas cards in Tamarac, package theft in Miami, a Clematis coffee closure and a cooler weekend are leading the local conversation.\n\nWhich one affects your Saturday the most?\n\n📰 Sources: Local 10, CBS News, sun-sentinel.com, WPBF, The Palm Beach Post, Miami Herald\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaNews #Tamarac #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-09-26",
+  "id": "2026-09-26-brief"
+}
