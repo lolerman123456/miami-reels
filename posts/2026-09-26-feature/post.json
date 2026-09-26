@@ -1,0 +1,115 @@
+{
+  "sector": "SPORTS",
+  "cover": {
+    "top": "MIAMI GARDENS",
+    "main": "HOSTED",
+    "highlight": "6 SUPER BOWLS",
+    "bottom": "AT ONE STADIUM",
+    "blur": false,
+    "photo": {
+      "query": "Hard Rock Stadium Miami Gardens aerial Wikimedia Commons",
+      "prompt": "Aerial view of a large football stadium in Miami Gardens on a clear day"
+    },
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Dori / CC BY-SA 3.0"
+  },
+  "slides": [
+    {
+      "tag": "SPORTS",
+      "headline": "Hard Rock Stadium opened in 1987",
+      "highlight": "1987",
+      "body": "The Miami Gardens venue opened as Joe Robbie Stadium.",
+      "place": "Miami Gardens",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Hard Rock Stadium Miami Gardens Wikimedia Commons",
+        "prompt": "Exterior of a large football stadium in Miami Gardens with palm trees and crowds arriving"
+      },
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: A.J. Lipp / CC BY-SA 4.0"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "That followed 21 Dolphins seasons at the Orange Bowl",
+      "highlight": "21 seasons",
+      "body": "The Dolphins played their first 21 seasons at the Orange Bowl before moving to the new stadium.",
+      "place": "Miami Gardens",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Miami Orange Bowl stadium Wikimedia Commons",
+        "prompt": "Historic football stadium in Miami with orange and teal seats under a sunny sky"
+      },
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Totenkopf / CC BY-SA 4.0"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "And its first row sat 90 feet from the sideline",
+      "highlight": "90 feet",
+      "body": "The wider field design supported football, baseball and soccer configurations.",
+      "place": "Miami Gardens",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Hard Rock Stadium football field Wikimedia Commons",
+        "prompt": "Wide football field inside a large stadium with lower bowl seats visible"
+      },
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Thomas Spiegelhalter / CC BY-SA 4.0"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "Which put 2 World Series in Miami Gardens",
+      "highlight": "2 World Series",
+      "body": "The stadium hosted World Series games while the Florida Marlins used it as their home field.",
+      "place": "Miami Gardens",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Florida Marlins Pro Player Stadium Wikimedia Commons",
+        "prompt": "Baseball field configuration inside a large multi-purpose stadium in South Florida"
+      },
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Rhododendrites / CC BY-SA 4.0"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "That same building has hosted 6 Super Bowls",
+      "highlight": "6 Super Bowls",
+      "body": "Hard Rock Stadium has hosted six Super Bowls in Miami Gardens.",
+      "place": "Miami Gardens",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Hard Rock Stadium Super Bowl LIV Wikimedia Commons",
+        "prompt": "Football stadium packed for a championship game at night in Miami Gardens"
+      },
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Daniel Christensen / Public domain"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "So Hard Rock keeps the name through 2034",
+      "highlight": "2034",
+      "body": "The naming rights agreement with Hard Rock International runs through that year.",
+      "place": "Miami Gardens",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Hard Rock Stadium sign Miami Gardens Wikimedia Commons",
+        "prompt": "Hard Rock Stadium sign outside a large stadium entrance in Miami Gardens"
+      },
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Phillip Pessar / CC BY 2.0"
+    }
+  ],
+  "caption": "Hard Rock Stadium has hosted football, baseball, soccer, tennis and Formula One events in Miami Gardens.\nWhich number about it stood out to you?",
+  "hashtags": [
+    "#HardRockStadium",
+    "#MiamiGardens"
+  ],
+  "collaborators": [
+    "miamidolphins"
+  ],
+  "igCaption": "Hard Rock Stadium has hosted football, baseball, soccer, tennis and Formula One events in Miami Gardens.\nWhich number about it stood out to you?\n\n📰 Sources: Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#HardRockStadium #MiamiGardens #miami #southflorida",
+  "kind": "feature",
+  "kicker": "BY THE NUMBERS",
+  "date": "2026-09-26",
+  "id": "2026-09-26-feature"
+}
