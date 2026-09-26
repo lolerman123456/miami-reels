@@ -17,6 +17,7 @@ export async function ensureImages(epDir, episode) {
       console.log(`  scene ${i}: rendering image`);
       fs.mkdirSync(path.dirname(file), { recursive: true });
       fs.writeFileSync(file, await render(s.image.prompt));
+      delete s.image.path; changed = true; // new picture → find the focus spots again
     }
     if (s.image.focus?.length && !s.image.path) { s.image.path = await locate(file, s.image.focus); changed = true; }
     if (s.image.file !== rel) { s.image.file = rel; changed = true; }

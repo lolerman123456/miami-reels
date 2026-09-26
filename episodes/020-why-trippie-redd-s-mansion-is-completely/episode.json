@@ -104,42 +104,14 @@
       ],
       "source": "XXL",
       "image": {
-        "prompt": "Isometric 3D cutaway render of a large two-story Mediterranean-style mansion with arched windows, columns and a clay tile roof, every surface painted matte black, on a big green lot with palm trees in rural South Florida, part of the roof removed to show the inside: an indoor basketball court, a recording studio with a mixing desk, a home movie theater, and an attached eight-car garage. The building sits in the lower two-thirds of the frame; the top third is empty white",
+        "prompt": "Isometric 3D cutaway render of a large two-story Mediterranean-style mansion with arched windows, columns and a clay tile roof, every surface painted matte black, including the walls, the roof tiles and the garage doors (no brown, no terracotta, no white anywhere on the building), on a big green lot with palm trees in rural South Florida, part of the roof removed to show the inside: an indoor basketball court, a recording studio with a mixing desk, a home movie theater, and an attached eight-car garage. The building sits in the lower two-thirds of the frame; the top third is empty white",
         "focus": [
           "the indoor basketball court",
           "the recording studio",
           "the movie theater",
           "the eight-car garage"
         ],
-        "label": "AI RENDER · ILLUSTRATION",
-        "path": [
-          {
-            "x": 0.5,
-            "y": 0.5,
-            "zoom": 1
-          },
-          {
-            "x": 0.31,
-            "y": 0.51,
-            "zoom": 2.1
-          },
-          {
-            "x": 0.56,
-            "y": 0.51,
-            "zoom": 2.5
-          },
-          {
-            "x": 0.72,
-            "y": 0.52,
-            "zoom": 2.4
-          },
-          {
-            "x": 0.72,
-            "y": 0.62,
-            "zoom": 1.8
-          }
-        ],
-        "file": "images/scene-2.png"
+        "label": "AI RENDER · ILLUSTRATION"
       }
     },
     {
@@ -171,36 +143,13 @@
       "source": "XXL",
       "hit": "explosion",
       "image": {
-        "prompt": "Three-quarter aerial 3D render of a large two-story Mediterranean-style mansion with arched windows, columns and a clay tile roof, every surface painted matte black, on a big green lot with palm trees in rural South Florida; the long driveway is also painted matte black. The building sits in the lower two-thirds of the frame; the top third is empty white",
+        "prompt": "Three-quarter aerial 3D render of a large two-story Mediterranean-style mansion with arched windows, columns and a clay tile roof, every surface painted matte black, including the walls, the roof tiles and the garage doors (no brown, no terracotta, no white anywhere on the building), on a big green lot with palm trees in rural South Florida; the long driveway is also painted matte black. The building sits in the lower two-thirds of the frame; the top third is empty white",
         "focus": [
           "the black walls and arched windows",
           "the black roof",
           "the black driveway"
         ],
-        "label": "AI RENDER · ILLUSTRATION",
-        "path": [
-          {
-            "x": 0.5,
-            "y": 0.5,
-            "zoom": 1
-          },
-          {
-            "x": 0.49,
-            "y": 0.58,
-            "zoom": 1.8
-          },
-          {
-            "x": 0.47,
-            "y": 0.46,
-            "zoom": 1.7
-          },
-          {
-            "x": 0.43,
-            "y": 0.8,
-            "zoom": 1.6
-          }
-        ],
-        "file": "images/scene-3.png"
+        "label": "AI RENDER · ILLUSTRATION"
       }
     },
     {
