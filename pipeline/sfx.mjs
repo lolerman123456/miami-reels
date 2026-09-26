@@ -10,6 +10,7 @@ const SFX = {
            '-af', 'lowpass=f=900,volume=1.6'],
   pop:    ['-f', 'lavfi', '-i', "aevalsrc='0.8*sin(2*PI*(1100-7000*t)*t)*exp(-35*t)':d=0.16:s=44100"],
   ding:   ['-f', 'lavfi', '-i', "aevalsrc='0.45*sin(2*PI*1318*t)*exp(-3.5*t)+0.3*sin(2*PI*1976*t)*exp(-4.5*t)+0.15*sin(2*PI*2637*t)*exp(-6*t)':d=1.4:s=44100"],
+  tick:   ['-f', 'lavfi', '-i', "aevalsrc='0.6*sin(2*PI*2400*t)*exp(-90*t)+0.3*sin(2*PI*1200*t)*exp(-60*t)':d=0.08:s=44100"],
   riser:  ['-f', 'lavfi', '-i', "aevalsrc='0.35*sin(2*PI*(200*t+300*t*t))*t/1.5+0.2*(random(0)-0.5)*t/1.5':d=1.5:s=44100",
            '-af', 'highpass=f=150,afade=t=out:st=1.4:d=0.1'],
 };

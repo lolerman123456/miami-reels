@@ -17,6 +17,7 @@ Claude from their phone. Your job in a chat is to turn their request into a comm
 | "Post this exact script" | Write `episodes/<NNN>-<slug>/episode.json` (copy the shape of `episodes/001-rudest-cities/episode.json`), then `requests/run.json` → `{"episode": "episodes/<NNN>-<slug>", "publish": true, "at": "..."}`. Commit both, push. |
 | "Post that preview" (already rendered) | `requests/run.json` → `{"postVideo": "episodes/<NNN>-<slug>", "at": "..."}`. Posts the video already in the `videos` release — no re-render, live in ~5–10 min. |
 | "Post a carousel now" | `requests/post.json` → `{"kind": "brief|world|feature", "topic": "optional angle", "publish": true, "at": "..."}`. Live in ~8 min (`.github/workflows/posts.yml`). |
+| "This week's Reels are…" | Add one topic per line to `plan/queue.txt`; each scheduled Reel takes the next line. |
 | "Change carousel times" / "add a carousel" | `control.json` → `carousels` = `{"kind": hour}`. |
 | "Change the post times" / "add a third post" | `control.json` → `postHours` = New York post hours, 24h (e.g. `[13, 20]`). A check every 30 min in `reel.yml` starts a run ~1 hour before each (up to 4 retries; `state/slots.txt` prevents double posts). Commit + push. |
 | "Pause" / "resume" | `control.json` → `"paused": true/false`. Commit + push. |
@@ -41,8 +42,9 @@ No jokes (owner's call — they read as AI): everything is informational, from r
 Never target ethnic groups, nationalities, religions, races, or real private people. No slurs/explicit content. Hook in the first 3 seconds. Max 4 hashtags per post. Collaborator invites: posts about a venue/brand in `voice/handles.json` tag it (max 3); only add confirmed official handles there. Single-topic carousels: one sector label (ECONOMY…), headlines chain with transitions (THAT'S… / THAT ALSO MEANS… / WHICH PUTS…).
 
 ## Episode JSON essentials
-Map Reels are **informational explainers, no jokes and no rankings** (owner's call): NEW BUILD / HISTORY / DID YOU KNOW /
-RENT CHECK / BY THE NUMBERS. `pipeline/generate.mjs` plans a topic, pulls real sources (news, Wikipedia via `pipeline/facts.mjs`,
+Map Reels are **informational, no jokes, no rankings** (owner's call). Default format is STORY: a gripping true story tied to one
+place (e.g. "Did you know one of the world's greatest designers died here?" → Versace mansion). Also NEW BUILD / HISTORY / DID YOU KNOW /
+RENT CHECK / BY THE NUMBERS. Voice at 1.3 speed (KOKORO_SPEED). Graphics: calm fades/slides, Near blue #1769FF + white, no bounce/tilt, getnearapp tag. `pipeline/generate.mjs` plans a topic, pulls real sources (news, Wikipedia via `pipeline/facts.mjs`,
 Zillow rent data), writes only from those sources, then a fact-check pass fixes anything unsupported.
 Scenes: `hook` (overlay = 2 short lines, 4 emojis, shot `dive`), 3–5× `item` (no rank; `badge` = key stat like "1,049 FT" or
 "$3,831/MO", `overlay` = place, `sub` = context), `outro` (question, shot `pullout`). `text` = spoken (numbers as words),

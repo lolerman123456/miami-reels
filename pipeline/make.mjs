@@ -70,7 +70,7 @@ export async function makeEpisode(epDir, { pane = false } = {}) {
   const out = path.join(ROOT, 'out', `${episode.id}.mp4`);
   fs.mkdirSync(path.dirname(out), { recursive: true });
   await run('npx', ['remotion', 'render', 'src/index.ts', 'Reel', out,
-    `--props=${propsFile}`, `--public-dir=${epDir}`, '--codec=h264', '--crf=21', '--audio-bitrate=192k']);
+    `--props=${propsFile}`, `--public-dir=${epDir}`, '--codec=h264', '--crf=21', '--audio-bitrate=192k', '--concurrency=100%']);
   console.log(`\n✔ Video: ${out}`);
   return { out, episode };
 }

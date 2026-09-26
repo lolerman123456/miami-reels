@@ -40,7 +40,7 @@ export async function renderFrames(todo, framesDir, { mode } = {}) {
   // wait for every tile to load, anti-aliasing. Set CAPTURE_QUALITY=high (requests/run.json "quality": "high").
   const high = process.env.CAPTURE_QUALITY === 'high';
   const job = high
-    ? { width: WIDTH, height: HEIGHT, renderWidth: WIDTH, renderHeight: HEIGHT, sse: 4, frameTimeout: 12000, fxaa: true, shots: todo }
+    ? { width: WIDTH, height: HEIGHT, renderWidth: WIDTH, renderHeight: HEIGHT, sse: 5, frameTimeout: 7000, fxaa: true, shots: todo }
     : { width: WIDTH, height: HEIGHT, renderWidth: 720, renderHeight: 1280, sse: 10, frameTimeout: 1800, shots: todo };
   if (high) console.log('  capture quality: HIGH (slower)');
   const srv = await startCaptureServer({ job, framesDir });

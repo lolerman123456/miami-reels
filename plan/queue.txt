@@ -1,0 +1,2 @@
+# Weekly Reel plan: one topic per line. Each scheduled Reel (1pm, 8pm) uses the next line, then removes it.
+# Lines starting with # are ignored. Leave empty and the system picks its own topics.

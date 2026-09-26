@@ -8,7 +8,7 @@ import { ROOT, FPS, readJSON, writeJSON } from './util.mjs';
 import { prepareEpisode } from './make.mjs';
 import { renderFrames } from './capture.mjs';
 
-const PIECES = Number(process.env.CAPTURE_PIECES || 16);
+const PIECES = Number(process.env.CAPTURE_PIECES || 20);
 
 function shotsOf(episode, timeline) {
   return episode.scenes.map((scene, index) => ({

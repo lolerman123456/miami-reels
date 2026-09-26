@@ -25,30 +25,34 @@ export type ReelProps = {
   captions: Word[]; scenes: Scene[];
 };
 
-const YELLOW = '#FFE14D';
-const RED = '#FF3B3B';
-const FONT = "'Archivo Black', 'Arial Black', Impact, sans-serif";
+// Near brand: blue + white on dark glass. Calm motion only (fades/slides, no bounce, no tilt).
+const BLUE = '#1769FF';
+const YELLOW = BLUE; // legacy names kept for old code paths
+const RED = BLUE;
+const FONT = "'Montserrat', 'Helvetica Neue', Arial, sans-serif";
 const EMOJI = "'Apple Color Emoji', 'Noto Color Emoji', sans-serif";
+const GLASS = 'rgba(8,10,16,.72)';
+const SHADOW = '0 4px 18px rgba(0,0,0,.55)';
+const outline = (_px: number, _color = '#000') => SHADOW;
 
-const outline = (px: number, color = '#000') => {
-  const s: string[] = [];
-  for (let a = 0; a < 16; a++) {
-    const r = (a / 16) * Math.PI * 2;
-    s.push(`${(Math.cos(r) * px).toFixed(1)}px ${(Math.sin(r) * px).toFixed(1)}px 0 ${color}`);
-  }
-  s.push(`0 ${px + 6}px ${px * 2}px rgba(0,0,0,.55)`);
-  return s.join(',');
-};
+// eased 0→1 over `dur` frames starting at `delay` (no overshoot)
+const ease = (frame: number, delay = 0, dur = 10) =>
+  interpolate(frame - delay, [0, dur], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: t => 1 - Math.pow(1 - t, 3) });
 
 // ---------------------------------------------------------------------------
 
-// Bundled font so the Mac and the Linux cloud runner render identically
+// Bundled fonts so the Mac and the Linux cloud runner render identically
 const useBundledFont = () => {
   const [handle] = React.useState(() => delayRender('Loading font'));
   React.useEffect(() => {
-    new FontFace('Archivo Black', `url(${staticFile('fonts/ArchivoBlack-Regular.ttf')})`).load()
-      .then(f => { document.fonts.add(f); continueRender(handle); })
-      .catch(() => continueRender(handle));
+    const faces = [
+      new FontFace('Montserrat', `url(${staticFile('fonts/Montserrat-700.woff2')})`, { weight: '700' }),
+      new FontFace('Montserrat', `url(${staticFile('fonts/Montserrat-800.woff2')})`, { weight: '800' }),
+      new FontFace('Montserrat', `url(${staticFile('fonts/Montserrat-900.woff2')})`, { weight: '900' }),
+      new FontFace('Montserrat', `url(${staticFile('fonts/Montserrat-800i.woff2')})`, { weight: '800', style: 'italic' }),
+    ];
+    Promise.all(faces.map(f => f.load().then(x => document.fonts.add(x)).catch(() => {})))
+      .then(() => continueRender(handle));
   }, [handle]);
 };
 
@@ -65,6 +69,7 @@ export const Reel: React.FC<ReelProps> = ({ narration, music, captions, scenes, 
       <Captions words={captions} />
       <ProgressBar total={durationInFrames} />
       <Attribution />
+      <Brand />
 
       {narration && <Audio src={staticFile(narration)} />}
       {music && <Audio src={staticFile(music)} volume={0.12} loop />}
@@ -77,29 +82,20 @@ export const Reel: React.FC<ReelProps> = ({ narration, music, captions, scenes, 
 
 const SceneView: React.FC<{ scene: Scene; index: number }> = ({ scene, index }) => {
   const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-
-  const punch = spring({ frame, fps, config: { damping: 14, stiffness: 120 } });
-  const scale = interpolate(punch, [0, 1], [1.14, 1]) * interpolate(frame, [0, scene.duration], [1, 1.05]);
-
-  // hook + #1 get a camera shake on entry
-  const shakeAmt = (scene.kind === 'hook' || scene.rank === 1) ? interpolate(frame, [0, 14], [22, 0], { extrapolateRight: 'clamp' }) : 0;
-  const sx = Math.sin(frame * 2.3) * shakeAmt, sy = Math.cos(frame * 3.1) * shakeAmt;
-
-  const flash = index === 0 ? 0 : interpolate(frame, [0, 6], [0.85, 0], { extrapolateRight: 'clamp' });
-
+  const scale = interpolate(frame, [0, scene.duration], [1.02, 1.07]);
+  const fadeIn = index === 0 ? 1 : ease(frame, 0, 6);
   return (
     <AbsoluteFill>
-      <AbsoluteFill style={{ transform: `translate(${sx}px, ${sy}px) scale(${scale})` }}>
+      <AbsoluteFill style={{ transform: `scale(${scale})` }}>
         <OffthreadVideo src={staticFile(scene.video)} muted style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
       </AbsoluteFill>
       <AbsoluteFill style={{
-        background: 'linear-gradient(180deg, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 38%, rgba(0,0,0,0) 55%, rgba(0,0,0,.55) 100%)',
+        background: 'linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 32%, rgba(0,0,0,0) 58%, rgba(0,0,0,.55) 100%)',
       }} />
       {scene.kind === 'hook' && <Hook scene={scene} />}
       {scene.kind === 'item' && <Item scene={scene} />}
       {scene.kind === 'outro' && <Outro scene={scene} />}
-      <AbsoluteFill style={{ backgroundColor: '#fff', opacity: flash }} />
+      <AbsoluteFill style={{ backgroundColor: '#000', opacity: 1 - fadeIn }} />
     </AbsoluteFill>
   );
 };
@@ -107,107 +103,58 @@ const SceneView: React.FC<{ scene: Scene; index: number }> = ({ scene, index }) 
 // ---------------------------------------------------------------------------
 
 const Pop: React.FC<{ delay?: number; children: React.ReactNode; from?: number; rotate?: number; style?: React.CSSProperties }> = (
-  { delay = 0, children, from = 0, rotate = 0, style },
+  { delay = 0, children, style },
 ) => {
   const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const s = spring({ frame: frame - delay, fps, config: { damping: 9, stiffness: 180, mass: 0.7 } });
-  return (
-    <div style={{
-      transform: `scale(${interpolate(s, [0, 1], [from, 1])}) rotate(${interpolate(s, [0, 1], [rotate, 0])}deg)`,
-      opacity: frame < delay ? 0 : 1, ...style,
-    }}>{children}</div>
-  );
-};
-
-const Bob: React.FC<{ children: React.ReactNode; speed?: number; amp?: number; phase?: number }> = ({ children, speed = 0.12, amp = 14, phase = 0 }) => {
-  const frame = useCurrentFrame();
-  return <div style={{ transform: `translateY(${Math.sin(frame * speed + phase) * amp}px) rotate(${Math.sin(frame * speed * 0.7 + phase) * 6}deg)` }}>{children}</div>;
+  const e = ease(frame, delay, 10);
+  return <div style={{ opacity: e, transform: `translateY(${(1 - e) * 24}px)`, ...style }}>{children}</div>;
 };
 
 const Hook: React.FC<{ scene: Scene }> = ({ scene }) => {
   const lines = Array.isArray(scene.overlay) ? scene.overlay : [scene.overlay];
-  const emojis = scene.emojis ?? [];
-  const spots = [
-    { left: 70, top: 190, r: -18 }, { left: 800, top: 170, r: 16 },
-    { left: 90, top: 870, r: 12 }, { left: 790, top: 890, r: -14 },
-  ];
   return (
     <AbsoluteFill>
-      <div style={{ position: 'absolute', top: lines.length > 2 ? 400 : 470, width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
+      <div style={{ position: 'absolute', top: 430, left: 60, right: 60, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
         {lines.map((line, i) => (
-          <Pop key={i} delay={3 + i * 7} rotate={i % 2 ? 8 : -8}>
+          <Pop key={i} delay={2 + i * 5}>
             <div style={{
-              fontFamily: FONT, fontSize: fitSize(line, i === 0 ? 124 : 104, 960), lineHeight: 1,
-              color: i === lines.length - 1 && lines.length > 2 ? RED : i === 0 ? '#fff' : YELLOW,
-              textShadow: outline(9), textAlign: 'center', whiteSpace: 'nowrap', letterSpacing: -1,
+              fontFamily: FONT, fontWeight: 900, fontSize: fitSize(line, i === 0 ? 112 : 124, 960), lineHeight: 1.02,
+              color: i === lines.length - 1 ? BLUE : '#fff', textShadow: SHADOW, textAlign: 'center', whiteSpace: 'nowrap',
+              textTransform: 'uppercase', letterSpacing: -1,
             }}>{line}</div>
           </Pop>
         ))}
         {scene.note && (
-          <Pop delay={3 + lines.length * 7 + 4} from={0.5}>
-            <div style={{ background: 'rgba(0,0,0,.72)', padding: '8px 20px', borderRadius: 12, marginTop: 6 }}>
-              <span style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif", fontWeight: 700, fontSize: 32, color: '#fff' }}>{scene.note}</span>
+          <Pop delay={4 + lines.length * 5}>
+            <div style={{ background: GLASS, padding: '10px 22px', borderRadius: 12, marginTop: 8 }}>
+              <span style={{ fontFamily: FONT, fontWeight: 700, fontSize: 32, color: '#fff' }}>{scene.note}</span>
             </div>
           </Pop>
         )}
       </div>
-      {emojis.slice(0, 4).map((e, i) => (
-        <div key={i} style={{ position: 'absolute', left: spots[i].left, top: spots[i].top }}>
-          <Pop delay={10 + i * 4} rotate={spots[i].r * 3}>
-            <Bob phase={i * 1.7}>
-              <div style={{ fontFamily: EMOJI, fontSize: 190, transform: `rotate(${spots[i].r}deg)`, filter: 'drop-shadow(0 12px 18px rgba(0,0,0,.5))' }}>{e}</div>
-            </Bob>
-          </Pop>
-        </div>
-      ))}
     </AbsoluteFill>
   );
 };
 
 const Item: React.FC<{ scene: Scene }> = ({ scene }) => {
   const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
-  const top = scene.rank === 1;
-  const slam = spring({ frame, fps, config: { damping: 11, stiffness: 150 } });
-  const nameIn = spring({ frame: frame - 5, fps, config: { damping: 13, stiffness: 140 } });
-
+  const e1 = ease(frame, 2, 9), e2 = ease(frame, 7, 9), e3 = ease(frame, 12, 9);
+  const badge = scene.rank != null ? `#${scene.rank}` : (scene.badge || '');
   return (
     <AbsoluteFill>
-      <div style={{ position: 'absolute', top: 210, left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 26 }}>
-          <div style={{
-            transform: `scale(${interpolate(slam, [0, 1], [3.2, 1])}) rotate(${interpolate(slam, [0, 1], [-25, -6])}deg)`,
-            opacity: interpolate(slam, [0, 0.2], [0, 1], { extrapolateRight: 'clamp' }),
-            ...(scene.rank != null ? { width: 230, height: 230 } : { height: 150, padding: '0 36px', maxWidth: 820 }),
-            borderRadius: 40, background: top ? RED : YELLOW,
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            boxShadow: '0 18px 40px rgba(0,0,0,.5)', border: '8px solid #000',
-          }}>
-            {scene.rank != null
-              ? <span style={{ fontFamily: FONT, fontSize: 150, color: top ? '#fff' : '#000', letterSpacing: -6, marginLeft: -8 }}>#{scene.rank}</span>
-              : <span style={{ fontFamily: FONT, fontSize: fitSize(String(scene.badge || 'DID YOU KNOW'), 96, 700), color: '#000', letterSpacing: -2, whiteSpace: 'nowrap' }}>{scene.badge || 'DID YOU KNOW'}</span>}
+      <div style={{ position: 'absolute', top: 200, left: 60, right: 60, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 14 }}>
+        {badge && (
+          <div style={{ opacity: e1, transform: `translateX(${(1 - e1) * -40}px)`, background: BLUE, padding: '10px 24px', borderRadius: 12, boxShadow: SHADOW }}>
+            <span style={{ fontFamily: FONT, fontWeight: 900, fontSize: fitSize(badge, 64, 700), color: '#fff', letterSpacing: 0.5, whiteSpace: 'nowrap' }}>{badge}</span>
           </div>
-          {scene.emoji && (
-            <Pop delay={9} rotate={40}>
-              <Bob><div style={{ fontFamily: EMOJI, fontSize: top ? 210 : 180, filter: 'drop-shadow(0 12px 18px rgba(0,0,0,.5))' }}>{scene.emoji}</div></Bob>
-            </Pop>
-          )}
+        )}
+        <div style={{ opacity: e2, transform: `translateX(${(1 - e2) * -40}px)` }}>
+          <span style={{ fontFamily: FONT, fontWeight: 900, fontSize: fitSize(String(scene.overlay), 104, 900), color: '#fff', textShadow: SHADOW, textTransform: 'uppercase', letterSpacing: -1, lineHeight: 1 }}>{scene.overlay}</span>
         </div>
-
-        <div style={{
-          marginTop: 36, transform: `translateX(${interpolate(nameIn, [0, 1], [-1100, 0])}px) rotate(-2deg)`,
-          background: '#000', padding: '14px 38px 20px', borderRadius: 18,
-        }}>
-          <span style={{ fontFamily: FONT, fontSize: fitSize(String(scene.overlay), 118, 780), color: '#fff', letterSpacing: -1 }}>{scene.overlay}</span>
-        </div>
-
         {scene.sub && (
-          <Pop delay={14} from={0.3} style={{ marginTop: 22 }}>
-            <div style={{ background: top ? YELLOW : RED, padding: '12px 28px', borderRadius: 999, transform: 'rotate(2deg)', border: '5px solid #000' }}>
-              <span style={{ fontFamily: FONT, fontSize: 52, color: top ? '#000' : '#fff' }}>{scene.sub}</span>
-            </div>
-          </Pop>
+          <div style={{ opacity: e3, transform: `translateX(${(1 - e3) * -40}px)`, background: GLASS, padding: '10px 20px', borderRadius: 10, maxWidth: 900 }}>
+            <span style={{ fontFamily: FONT, fontWeight: 700, fontSize: 38, color: '#fff', lineHeight: 1.25 }}>{scene.sub}</span>
+          </div>
         )}
       </div>
       {scene.alert && <AlertBanner text={scene.alert} at={ALERT_AT} />}
@@ -219,53 +166,38 @@ const Item: React.FC<{ scene: Scene }> = ({ scene }) => {
 const ALERT_AT = 40;
 const AlertBanner: React.FC<{ text: string; at: number }> = ({ text, at }) => {
   const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
   const f = frame - at;
   if (f < 0 || f > 75) return null;
-  const s = spring({ frame: f, fps, config: { damping: 8, stiffness: 220 } });
-  const out = interpolate(f, [62, 75], [1, 0], { extrapolateLeft: 'clamp' });
-  const shake = interpolate(f, [0, 10], [14, 0], { extrapolateRight: 'clamp' }) * Math.sin(f * 2.7);
+  const o = Math.min(ease(f, 0, 8), interpolate(f, [62, 75], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }));
   return (
-    <AbsoluteFill>
-      <AbsoluteFill style={{ backgroundColor: RED, opacity: interpolate(f, [0, 5], [0.35, 0], { extrapolateRight: 'clamp' }) }} />
-      <div style={{
-        position: 'absolute', top: 760, left: -40, right: -40, display: 'flex', justifyContent: 'center',
-        transform: `translateX(${shake}px) rotate(-4deg) scale(${interpolate(s, [0, 1], [2.4, 1])})`, opacity: out,
-      }}>
-        <div style={{ background: RED, border: '8px solid #fff', padding: '16px 44px', boxShadow: '0 0 0 8px #000, 0 20px 50px rgba(0,0,0,.6)' }}>
-          <span style={{ fontFamily: FONT, fontSize: fitSize(text, 84, 900), color: '#fff', textShadow: outline(4), whiteSpace: 'nowrap' }}>{text}</span>
-        </div>
+    <div style={{ position: 'absolute', top: 760, left: 60, right: 60, display: 'flex', justifyContent: 'center', opacity: o }}>
+      <div style={{ background: BLUE, padding: '14px 36px', borderRadius: 14, boxShadow: SHADOW }}>
+        <span style={{ fontFamily: FONT, fontWeight: 900, fontSize: fitSize(text, 72, 900), color: '#fff', whiteSpace: 'nowrap' }}>{text}</span>
       </div>
-    </AbsoluteFill>
+    </div>
   );
 };
 
-const Outro: React.FC<{ scene: Scene }> = ({ scene }) => {
-  const frame = useCurrentFrame();
-  return (
-    <AbsoluteFill style={{ alignItems: 'center' }}>
-      <div style={{ position: 'absolute', top: 420, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 20 }}>
-        <Pop delay={2} rotate={-6}>
-          <div style={{ fontFamily: FONT, fontSize: 104, color: '#fff', textShadow: outline(9), textAlign: 'center', padding: '0 50px', lineHeight: 1.05 }}>
-            {scene.overlay}
-          </div>
-        </Pop>
-        {scene.sub && (
-          <Pop delay={10}>
-            <div style={{ background: YELLOW, padding: '12px 30px', borderRadius: 999, border: '5px solid #000' }}>
-              <span style={{ fontFamily: FONT, fontSize: 54, color: '#000' }}>{scene.sub}</span>
-            </div>
-          </Pop>
-        )}
-        <div style={{ fontFamily: EMOJI, fontSize: 170, transform: `translateY(${Math.abs(Math.sin(frame * 0.2)) * 40}px)` }}>👇</div>
-      </div>
-    </AbsoluteFill>
-  );
-};
+const Outro: React.FC<{ scene: Scene }> = ({ scene }) => (
+  <AbsoluteFill style={{ alignItems: 'center' }}>
+    <div style={{ position: 'absolute', top: 440, left: 60, right: 60, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 22 }}>
+      <Pop delay={2}>
+        <div style={{ fontFamily: FONT, fontWeight: 900, fontSize: 88, color: '#fff', textShadow: SHADOW, textAlign: 'center', lineHeight: 1.08, textTransform: 'uppercase' }}>
+          {scene.overlay}
+        </div>
+      </Pop>
+      <Pop delay={9}>
+        <div style={{ background: BLUE, padding: '14px 32px', borderRadius: 14, boxShadow: SHADOW }}>
+          <span style={{ fontFamily: FONT, fontWeight: 800, fontStyle: 'italic', fontSize: 50, color: '#fff' }}>follow @getnearapp</span>
+        </div>
+      </Pop>
+    </div>
+  </AbsoluteFill>
+);
 
 function fitSize(text: string, max: number, width: number) {
-  // rough width estimate for a heavy font: ~0.72em per character
-  return Math.min(max, Math.floor(width / (text.length * 0.72)));
+  // rough width estimate for Montserrat Black caps: ~0.74em per character
+  return Math.min(max, Math.floor(width / (text.length * 0.74)));
 }
 
 // ---------------------------------------------------------------------------
@@ -274,28 +206,23 @@ const Captions: React.FC<{ words: Word[] }> = ({ words }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
-
   const groups = React.useMemo(() => chunk(words), [words]);
   const gi = groups.findIndex((g, i) => t >= g.start && t < (groups[i + 1] ? Math.min(groups[i + 1].start, g.end + 0.4) : g.end + 0.4));
   if (gi < 0) return null;
   const g = groups[gi];
-  const enter = spring({ frame: frame - Math.round(g.start * fps), fps, config: { damping: 12, stiffness: 200 } });
-
+  const e = ease(frame, Math.round(g.start * fps), 4);
   return (
     <AbsoluteFill>
       <div style={{
-        position: 'absolute', top: 1180, left: 60, right: 60, display: 'flex', flexWrap: 'wrap', justifyContent: 'center',
-        gap: '6px 34px', transform: `scale(${interpolate(enter, [0, 1], [0.7, 1])})`,
+        position: 'absolute', top: 1200, left: 60, right: 60, display: 'flex', flexWrap: 'wrap', justifyContent: 'center',
+        gap: '4px 24px', opacity: e, transform: `translateY(${(1 - e) * 10}px)`,
       }}>
         {g.words.map((w, i) => {
           const active = t >= w.start && t < w.end + 0.05;
-          const said = t >= w.start;
           return (
             <span key={i} style={{
-              fontFamily: FONT, fontSize: 84, textTransform: 'uppercase', lineHeight: 1.1,
-              color: active ? YELLOW : '#fff', opacity: said ? 1 : 0.9,
-              textShadow: outline(7), display: 'inline-block', transformOrigin: 'center bottom',
-              transform: `scale(${active ? 1.1 : 1}) rotate(${active ? -2 : 0}deg)`,
+              fontFamily: FONT, fontWeight: 900, fontSize: 76, textTransform: 'uppercase', lineHeight: 1.12,
+              color: active ? BLUE : '#fff', textShadow: '0 3px 12px rgba(0,0,0,.85), 0 0 2px rgba(0,0,0,.9)',
             }}>{w.text}</span>
           );
         })}
@@ -322,10 +249,14 @@ function chunk(words: Word[]) {
 
 const ProgressBar: React.FC<{ total: number }> = ({ total }) => {
   const frame = useCurrentFrame();
-  return (
-    <div style={{ position: 'absolute', top: 0, left: 0, height: 10, width: `${(frame / total) * 100}%`, background: YELLOW, boxShadow: '0 0 12px rgba(255,225,77,.8)' }} />
-  );
+  return <div style={{ position: 'absolute', top: 0, left: 0, height: 8, width: `${(frame / total) * 100}%`, background: BLUE }} />;
 };
+
+const Brand: React.FC = () => (
+  <div style={{ position: 'absolute', bottom: 150, left: 0, right: 0, display: 'flex', justifyContent: 'center', opacity: 0.9 }}>
+    <span style={{ fontFamily: FONT, fontWeight: 800, fontStyle: 'italic', fontSize: 34, color: '#fff', textShadow: SHADOW }}>getnearapp</span>
+  </div>
+);
 
 const Attribution: React.FC = () => (
   <div style={{ position: 'absolute', top: 24, left: 26, display: 'flex', alignItems: 'baseline', gap: 10, opacity: 0.85 }}>
@@ -337,22 +268,26 @@ const Attribution: React.FC = () => (
 // ---------------------------------------------------------------------------
 
 const SoundEffects: React.FC<{ scenes: Scene[] }> = ({ scenes }) => {
+  // subtle: whoosh into every scene, soft ticks as each label lands, a light riser into the last item, chime on the outro
   const cues: { at: number; file: string; volume: number }[] = [];
-  scenes.forEach((s, i) => {
+  const items = scenes.filter(s => s.kind === 'item');
+  const last = items[items.length - 1];
+  scenes.forEach(s => {
     if (s.kind === 'hook') {
-      cues.push({ at: 0, file: 'sfx/boom.wav', volume: 0.9 });
-      cues.push({ at: 4, file: 'sfx/pop.wav', volume: 0.6 });
-      cues.push({ at: 11, file: 'sfx/pop.wav', volume: 0.6 });
+      cues.push({ at: 0, file: 'sfx/boom.wav', volume: 0.35 });
+      cues.push({ at: 3, file: 'sfx/tick.wav', volume: 0.3 });
+      cues.push({ at: 8, file: 'sfx/tick.wav', volume: 0.3 });
     } else {
-      cues.push({ at: Math.max(0, s.from - 9), file: 'sfx/whoosh.wav', volume: 0.55 });
+      cues.push({ at: Math.max(0, s.from - 8), file: 'sfx/whoosh.wav', volume: 0.3 });
     }
     if (s.kind === 'item') {
-      cues.push({ at: s.from + 2, file: s.rank === 1 ? 'sfx/boom.wav' : 'sfx/pop.wav', volume: s.rank === 1 ? 0.9 : 0.6 });
-      cues.push({ at: s.from + 14, file: 'sfx/pop.wav', volume: 0.4 });
+      cues.push({ at: s.from + 3, file: 'sfx/tick.wav', volume: 0.32 });
+      cues.push({ at: s.from + 8, file: 'sfx/pop.wav', volume: 0.18 });
+      if (s.sub) cues.push({ at: s.from + 13, file: 'sfx/tick.wav', volume: 0.22 });
     }
-    if (s.rank === 1) cues.push({ at: Math.max(0, s.from - 45), file: 'sfx/riser.wav', volume: 0.45 });
-    if (s.alert) cues.push({ at: s.from + ALERT_AT, file: 'sfx/boom.wav', volume: 0.8 });
-    if (s.kind === 'outro') cues.push({ at: s.from + 3, file: 'sfx/ding.wav', volume: 0.5 });
+    if (s === last && s.from > 45) cues.push({ at: s.from - 40, file: 'sfx/riser.wav', volume: 0.22 });
+    if (s.alert) cues.push({ at: s.from + ALERT_AT, file: 'sfx/boom.wav', volume: 0.3 });
+    if (s.kind === 'outro') cues.push({ at: s.from + 3, file: 'sfx/ding.wav', volume: 0.3 });
   });
   return (
     <>

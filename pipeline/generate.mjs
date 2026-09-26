@@ -10,6 +10,11 @@ import { wikiArticle, rentFacts } from './facts.mjs';
 import { STYLE, REMINDER, toneLines, sanitize, memeTells, HANDLES_RULE, cleanCollabs } from './style.mjs';
 
 const FORMATS = `FORMATS (pick the one that fits the best available material):
+- STORY (preferred): a true, gripping story tied to ONE real South Florida place people can see on the map. Famous people who
+  lived or died there, crimes and how they were solved, disasters, scandals, mysteries, celebrity mansions, record-breaking
+  moments, weird history. Hook with a curiosity question the place answers, e.g. "Did you know one of the world's greatest
+  designers was killed on these steps?" (Versace mansion, Ocean Drive), then tell the story in order: who, what happened,
+  what happened next, what the place is now. Respectful and factual about deaths and crimes.
 - NEW BUILD: something being built, approved or opening in South Florida (tallest towers, stadiums, stations, bridges, big
   projects). What it is, where, how tall/big/expensive, when it opens, what was there before, what it changes.
 - HISTORY: the real story of one place (a landmark, island, building, neighborhood, road). How it started, key moments, what it is now.
@@ -27,7 +32,7 @@ HOW IT SOUNDS
 - Go in depth: every scene gives real substance — a number, a date, a name, a before/after, a comparison that makes the number
   feel real ("that's taller than anything in Florida", "that's about seven hundred dollars more than five years ago").
 - Flow like a story: context → the interesting fact → why it matters or what it means for people who live here.
-- HOOK (first 3 seconds): the single most surprising real fact or a direct question, e.g. "This tower going up in downtown Miami
+- HOOK (first 3 seconds): a curiosity question the video answers (\"Did you know one of the world's greatest designers died here?\") or the single most surprising real fact, e.g. "This tower going up in downtown Miami
   is about to be the tallest building in Florida." / "Rent in Brickell is up over fourteen hundred dollars since 2015."
 - Outro: a real question people will answer in the comments (would you live there, did you know this, what should we cover next).
 
@@ -102,8 +107,8 @@ export async function generateEpisode({ topic } = {}) {
   // 1. plan
   const news = await fetchNews('local', { hours: 72, max: 80 }).catch(() => []);
   const plan = await chat([{ role: 'system', content: `You plan informational Instagram Reels for @getnearapp, a South Florida account.\n\n${FORMATS}\n\n` +
-    'Pick ONE topic people in South Florida will find genuinely interesting and share. Prefer a fresh news hook (a new tower, project, opening, ' +
-    'price change) when the headlines have one; otherwise pick an evergreen HISTORY / DID YOU KNOW / RENT CHECK / BY THE NUMBERS topic. ' +
+    'Pick ONE topic people would send to a friend. Default to a STORY (famous person, crime, disaster, mansion, mystery tied to one real place). ' +
+    'Use a news topic only when it is big (a record tower, a major opening, a price shock). Avoid boring topics: infrastructure stats, generic numbers, anything a viewer would not repeat to a friend. ' +
     'Don\'t repeat past videos. Return JSON: {"format":"…","angle":"one sentence","wikipedia":["up to 5 exact English Wikipedia article titles to pull facts from"],' +
     '"rent":["up to 6 South Florida city names or 5-digit ZIPs for Zillow rent data, only for rent topics"],"news":[indexes of the relevant headlines]}' },
     { role: 'user', content: `Today: ${new Date().toDateString()}\n${topic ? `The account owner asked for: ${topic}\n` : ''}` +
