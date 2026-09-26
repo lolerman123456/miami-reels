@@ -2,7 +2,7 @@
 //   node pipeline/publish.mjs out/001-rudest-cities.mp4 [episodes/001-rudest-cities]
 import fs from 'node:fs';
 import path from 'node:path';
-import { readJSON, ROOT } from './util.mjs';
+import { readJSON, ROOT, run } from './util.mjs';
 import { serveFilePublicly, serveFilesPublicly } from './tunnel.mjs';
 
 const VERSION = 'v23.0';
@@ -82,6 +82,13 @@ export async function publishCarousel(imageFiles, caption, label) {
 // Story from a 9:16 JPEG or MP4 (≤60 s).
 export async function publishStory(file, label) {
   const { api, igUser, token } = auth();
+  if (file.endsWith('.mp4')) {
+    // stories max out at 60 s: post a trimmed, lighter copy of longer Reels
+    const short = file.replace(/\.mp4$/, '.story.mp4');
+    await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', file, '-t', '58', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '22',
+      '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '128k', '-movflags', '+faststart', short]);
+    file = short;
+  }
   const tunnel = await serveFilePublicly(file);
   try {
     const video = file.endsWith('.mp4');
