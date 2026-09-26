@@ -112,11 +112,13 @@ jobs:
             QUALITY=$(jq -r '.quality // ""' requests/run.json)
             HOOK=$(jq -r '.hook // ""' requests/run.json)
             NUMBER=$(jq -r '.number // ""' requests/run.json)
+            SLOT=$(jq -r '.slot // ""' requests/run.json)
           fi
           {
             echo "topic<<EOF"; echo "$TOPIC"; echo "EOF"
             echo "hook<<EOF"; echo "$HOOK"; echo "EOF"
             echo "number=$NUMBER"
+            echo "slot=${SLOT:-}"
             echo "episode=$EPISODE"
             echo "publish=$PUBLISH"
             echo "post_video=$POST_VIDEO"
@@ -166,7 +168,7 @@ jobs:
           REEL_NUMBER: ${{ steps.req.outputs.number }}
           POST_VIDEO: ${{ steps.req.outputs.post_video }}
           GH_TOKEN: ${{ github.token }}
-          SLOT: ${{ needs.gate.outputs.slot }}
+          SLOT: ${{ needs.gate.outputs.slot || steps.req.outputs.slot }}
         run: |
           # owner's approved videos: a scheduled slot posts the next already-rendered video in plan/videos.txt, on the hour
           if [ -z "$REEL_TOPIC" ] && [ -z "$REEL_EPISODE" ] && [ -z "$POST_VIDEO" ] && [ -n "$SLOT" ] && [ -s plan/videos.txt ]; then
