@@ -8,6 +8,7 @@ import { ROOT, FPS, WIDTH, HEIGHT, readJSON, writeJSON, run } from './util.mjs';
 import { prepareEpisode, buildProps } from './make.mjs';
 import { renderFrames, buildShots } from './capture.mjs';
 import { ensureSfx } from './sfx.mjs';
+import { ensureImages } from './images.mjs';
 import { sfxCues } from '../src/cues.js';
 
 const PIECES = Number(process.env.CAPTURE_PIECES || 20);
@@ -37,6 +38,7 @@ if (cmd === 'prepare') {
     dir = await generateEpisode({ topic: opt('--topic') || null, hook: opt('--hook') || null, num: opt('--num') || null });
   }
   dir = path.resolve(ROOT, dir);
+  await ensureImages(dir, readJSON(path.join(dir, 'episode.json'))); // AI renders for scenes that show a picture instead of the map
   const { episode, timeline } = await prepareEpisode(dir);
   const pieces = plan(shotsOf(episode, timeline));
   writeJSON(path.join(dir, 'plan.json'), pieces);
@@ -56,15 +58,16 @@ if (cmd === 'prepare') {
   const shot = { ...shots[piece.shot], from: piece.from, to: piece.to };
   console.log(`▶ slice ${k}: shot ${piece.shot}, frames ${piece.from}–${piece.to - 1}`);
 
-  // 1) 3D frames → clip
+  // 1) 3D frames → clip (not needed when this scene shows a rendered image instead of the map)
+  const imageScene = !!episode.scenes[piece.shot].image?.file;
   const fdir = path.join(dir, 'frames', String(piece.shot));
   const have = n => fs.existsSync(path.join(fdir, String(n).padStart(5, '0') + '.jpg'));
   let missing = false; for (let f = piece.from; f < piece.to; f++) if (!have(f)) { missing = true; break; }
-  if (missing) await renderFrames([shot], path.join(dir, 'frames'));
+  if (missing && !imageScene) await renderFrames([shot], path.join(dir, 'frames'));
   const high = process.env.CAPTURE_QUALITY === 'high';
   fs.mkdirSync(path.join(dir, 'shots'), { recursive: true });
   const clip = `shots/slice-${k}.mp4`;
-  await run('ffmpeg', ['-y', '-loglevel', 'error', '-framerate', String(FPS), '-start_number', String(piece.from),
+  if (!imageScene) await run('ffmpeg', ['-y', '-loglevel', 'error', '-framerate', String(FPS), '-start_number', String(piece.from),
     '-i', path.join(dir, 'frames', String(piece.shot), '%05d.jpg'), '-frames:v', String(piece.to - piece.from),
     '-vf', `deflicker=size=5:mode=pm,scale=${WIDTH}:${HEIGHT}:flags=lanczos${high ? ',unsharp=5:5:0.6:5:5:0,eq=contrast=1.05:saturation=1.12' : ''}`,
     '-c:v', 'libx264', '-preset', 'veryfast', '-crf', high ? '14' : '17', '-pix_fmt', 'yuv420p', path.join(dir, clip)]);

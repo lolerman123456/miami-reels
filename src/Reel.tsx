@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  AbsoluteFill, Audio, OffthreadVideo, Sequence, staticFile, spring, interpolate, delayRender, continueRender,
+  AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, staticFile, spring, interpolate, delayRender, continueRender,
   useCurrentFrame, useVideoConfig,
 } from 'remotion';
 // @ts-ignore plain JS module shared with the node pipeline
@@ -17,6 +17,7 @@ export type Scene = {
   alert?: string | null;
   note?: string | null;
   badge?: string | null;
+  image?: { file: string; path: { x: number; y: number; zoom: number }[] | null; label: string } | null; // AI render instead of the map
   stats?: { value: string; label: string }[] | null; // big numbers that count up while the narrator says them
   source?: string | null; // where the facts come from, shown small
   hit?: string | null;
@@ -94,17 +95,47 @@ const SceneView: React.FC<{ scene: Scene; index: number }> = ({ scene, index }) 
   const scale = interpolate(frame, [0, scene.duration], [1.02, 1.07]);
   return (
     <AbsoluteFill>
-      <AbsoluteFill style={{ transform: `scale(${scale})` }}>
-        <Sequence from={scene.videoOffset ?? 0} layout="none">
-          <OffthreadVideo src={staticFile(scene.video)} muted style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-        </Sequence>
-      </AbsoluteFill>
+      {scene.image ? <ImageView scene={scene} /> : (
+        <AbsoluteFill style={{ transform: `scale(${scale})` }}>
+          <Sequence from={scene.videoOffset ?? 0} layout="none">
+            <OffthreadVideo src={staticFile(scene.video)} muted style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+          </Sequence>
+        </AbsoluteFill>
+      )}
       <AbsoluteFill style={{
-        background: 'linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 32%, rgba(0,0,0,0) 58%, rgba(0,0,0,.55) 100%)',
+        background: scene.image ? 'linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 80%, rgba(0,0,0,.2) 100%)'
+          : 'linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 32%, rgba(0,0,0,0) 58%, rgba(0,0,0,.55) 100%)',
       }} />
       {scene.kind === 'hook' && <Hook scene={scene} />}
       {scene.kind === 'item' && <Item scene={scene} />}
       {scene.kind === 'outro' && <Outro scene={scene} />}
+    </AbsoluteFill>
+  );
+};
+
+// Render on white: the camera starts on the whole building and glides from one focus spot to the next
+const ImageView: React.FC<{ scene: Scene }> = ({ scene }) => {
+  const frame = useCurrentFrame();
+  const img = scene.image!;
+  const path = img.path && img.path.length ? img.path : [{ x: 0.5, y: 0.5, zoom: 1 }, { x: 0.5, y: 0.45, zoom: 1.4 }];
+  // each leg: glide 40%, hold/drift 60%
+  const legs = Math.max(1, path.length - 1);
+  const t = Math.min(0.9999, frame / Math.max(1, scene.duration)) * legs;
+  const k = Math.floor(t), u = t - k;
+  const a = path[Math.min(k, path.length - 1)], b = path[Math.min(k + 1, path.length - 1)];
+  const e = u < 0.4 ? (1 - Math.cos(Math.PI * (u / 0.4))) / 2 : 1;
+  const drift = u < 0.4 ? 0 : (u - 0.4) * 0.06;
+  const x = a.x + (b.x - a.x) * e, y = a.y + (b.y - a.y) * e, z = (a.zoom + (b.zoom - a.zoom) * e) * (1 + drift);
+  // the 1024x1536 render fills the 1080x1920 frame; move the focus point to the middle of the screen
+  const fade = ease(frame, 0, 8);
+  return (
+    <AbsoluteFill style={{ background: '#fff', opacity: fade }}>
+      <AbsoluteFill style={{ transform: `translate(${(0.5 - x) * 100}%, ${(0.55 - y) * 100}%) scale(${z})`, transformOrigin: `${x * 100}% ${y * 100}%` }}>
+        <Img src={staticFile(img.file)} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+      </AbsoluteFill>
+      <div style={{ position: 'absolute', top: 1080, right: 40, background: 'rgba(8,10,16,.55)', padding: '6px 14px', borderRadius: 8 }}>
+        <span style={{ fontFamily: FONT, fontWeight: 700, fontSize: 22, color: '#fff', letterSpacing: 1 }}>{img.label}</span>
+      </div>
     </AbsoluteFill>
   );
 };
@@ -166,7 +197,7 @@ const Item: React.FC<{ scene: Scene }> = ({ scene }) => {
             )}
           </div>
         )}
-        <div style={{ opacity: e2, transform: `translateX(${(1 - e2) * -40}px)` }}>
+        <div style={{ opacity: e2, transform: `translateX(${(1 - e2) * -40}px)`, ...(scene.image ? { background: GLASS, padding: '8px 20px 12px', borderRadius: 14 } : {}) }}>
           <span style={{ fontFamily: FONT, fontWeight: 900, fontSize: fitSize(String(scene.overlay), 104, 900), color: '#fff', textShadow: SHADOW, textTransform: 'uppercase', letterSpacing: -1, lineHeight: 1 }}>{scene.overlay}</span>
         </div>
         {scene.sub && (
