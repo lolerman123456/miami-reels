@@ -27,7 +27,7 @@ export async function captureShots(episode, timeline, epDir, { mode } = {}) {
     if (fs.existsSync(out)) continue;
     await run('ffmpeg', ['-y', '-loglevel', 'error', '-framerate', String(FPS),
       '-i', path.join(framesDir, String(s.index), '%05d.jpg'),
-      '-vf', `scale=${WIDTH}:${HEIGHT}:flags=lanczos${process.env.CAPTURE_QUALITY === 'high' ? ',unsharp=5:5:0.6:5:5:0,eq=contrast=1.05:saturation=1.12' : ''}`, '-c:v', 'libx264', '-preset', process.env.CAPTURE_QUALITY === 'high' ? 'slow' : 'medium', '-crf', process.env.CAPTURE_QUALITY === 'high' ? '14' : '17', '-pix_fmt', 'yuv420p', out]);
+      '-vf', `deflicker=size=5:mode=pm,scale=${WIDTH}:${HEIGHT}:flags=lanczos${process.env.CAPTURE_QUALITY === 'high' ? ',unsharp=5:5:0.6:5:5:0,eq=contrast=1.05:saturation=1.12' : ''}`, '-c:v', 'libx264', '-preset', process.env.CAPTURE_QUALITY === 'high' ? 'slow' : 'medium', '-crf', process.env.CAPTURE_QUALITY === 'high' ? '14' : '17', '-pix_fmt', 'yuv420p', out]);
     console.log(`  shot ${s.index} → ${path.relative(epDir, out)}`);
   }
   return shots.map(s => `shots/${s.index}.mp4`);

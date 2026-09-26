@@ -70,6 +70,8 @@ async function main() {
       const p = poseAt(shot, t, Cesium.Math.toRadians);
       viewer.camera.lookAt(shot.center, new Cesium.HeadingPitchRange(p.h, p.p, p.r));
       await renderUntilLoaded(scene, tileset, f === start ? 15000 : (job.frameTimeout ?? 1800));
+      // first frame of a slice: let lighting/atmosphere settle (otherwise it comes out darker = a visible blink)
+      if (f === start) for (let w = 0; w < 12; w++) { scene.render(); await sleep(60); }
       const blob = await new Promise(r => scene.canvas.toBlob(r, 'image/jpeg', 0.93));
       await fetch(`/api/frame?shot=${shot.index}&frame=${f}`, { method: 'POST', body: blob });
       if (f % 10 === 0) hud(`Shot ${shot.index + 1}/${job.shots.length} · frame ${f + 1}/${shot.frames}`);
