@@ -10,3 +10,4 @@ episodes/*/*
 !episodes/*/episode.json
 posts/*/*.jpg
 posts/*/*.png
+!episodes/*/images/
