@@ -182,11 +182,11 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   if (!video) { console.error('Usage: node pipeline/publish.mjs out/<id>.mp4 [episodes/<id>]'); process.exit(1); }
   const dir = epDir || path.join(ROOT, 'episodes', path.basename(video, '.mp4'));
   const ep = readJSON(path.join(dir, 'episode.json'));
-  const { wantsBuffer, sendReelToBuffer, postToTikTok } = await import('./buffer.mjs');
+  const { wantsMusic, handToOwner, postToTikTok } = await import('./buffer.mjs');
   const ai = ep.scenes?.some(s => s.image);
-  if (wantsBuffer(ep)) { // owner posts it from Buffer with music (Instagram and TikTok)
-    await sendReelToBuffer(video, ep);
-    await postToTikTok({ video, text: ep.igCaption, label: path.basename(dir), ai });
+  if (wantsMusic(ep)) { // owner posts it on Instagram with a trending sound; TikTok gets a Buffer reminder
+    await handToOwner(video, ep);
+    await postToTikTok({ video: video, text: ep.igCaption, label: path.basename(dir), ai });
     process.exit(0);
   }
   await publishReel(video, ep.igCaption, { collaborators: ep.collaborators });

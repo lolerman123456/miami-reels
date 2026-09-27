@@ -174,7 +174,8 @@ jobs:
           # owner's approved videos: a scheduled slot posts the next already-rendered video in plan/videos.txt, on the hour
           if [ -z "$REEL_TOPIC" ] && [ -z "$REEL_EPISODE" ] && [ -z "$POST_VIDEO" ] && [ -n "$SLOT" ] && [ -s plan/videos.txt ]; then
             HAVE=$(gh release view videos --json assets -q '.assets[].name')
-            NEXT=$(grep -v '^\s*#' plan/videos.txt | grep -v '^\s*$' | while read v; do echo "$HAVE" | grep -qx "$(basename "$v").mp4" && { echo "$v"; break; }; done)
+            # music Reels are the owner's to post by hand (Claude sends them the link), so slots skip them
+            NEXT=$(grep -v '^\s*#' plan/videos.txt | grep -v '^\s*$' | while read v; do jq -e '.music == true' "episodes/$(basename "$v")/episode.json" >/dev/null 2>&1 && continue; echo "$HAVE" | grep -qx "$(basename "$v").mp4" && { echo "$v"; break; }; done)
             if [ -n "$NEXT" ]; then
               echo "▶ queued video: $NEXT"
               grep -vxF "$NEXT" plan/videos.txt > q.tmp; mv q.tmp plan/videos.txt

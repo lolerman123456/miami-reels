@@ -30,15 +30,16 @@ Scheduled runs respect `control.json`; runs started by `requests/run.json` or th
 
 The owner can also do all of this without Claude: GitHub app → Actions → **Control** → Run workflow (`.github/workflows/control.yml`).
 
-## Reels with music (Buffer)
-The Instagram API can't add music. An episode with `"music": true` isn't auto-posted: at its slot it goes to the owner's
-Buffer as an Instagram Reel **reminder** (`pipeline/buffer.mjs`, secret `BUFFER_API_KEY`); Buffer pings their phone, they add a
-trending sound in Instagram and post. Use it for Reels that would do well with music (events, parties, guides, lifestyle
-lists) — `generate.mjs` sets it automatically for EVENTS/GUIDE. Informational/history ones keep auto-posting. Without the
-secret, music episodes auto-post as before.
+## Reels with music (owner posts them)
+The Instagram API can't add music. An episode with `"music": true` is never auto-posted to Instagram: the owner posts it
+from the app with a trending sound. Use it for Reels that would do well with music (events, parties, guides, lifestyle
+lists) — `generate.mjs` sets it automatically for EVENTS/GUIDE; informational/history ones keep auto-posting. Scheduled
+slots skip music videos in `plan/videos.txt`; if a generated Reel is a music one, `handToOwner()` (`pipeline/buffer.mjs`)
+logs `music:<id>  <video link>` in `posted.log` instead of posting. **Send the owner that link** (check-ins look for new
+`music:` lines) with a suggested post time.
 
 **TikTok** goes through the same Buffer (TikTok connected as a Buffer channel). Owner's rule: nothing auto-posts to TikTok
-(music matters). Every Reel becomes a TikTok **reminder** in Buffer right after its Instagram post; the owner adds a sound and
+(music matters). Every Reel (music ones too) becomes a TikTok **reminder** in Buffer right after its Instagram post / hand-off; the owner adds a sound and
 posts (`postToTikTok` in `pipeline/buffer.mjs`). Carousels aren't sent (Buffer can't do reminders for TikTok photo posts).
 The old direct TikTok app (`pipeline/tiktok.mjs`, `docs/tiktok/`) is no longer needed.
 

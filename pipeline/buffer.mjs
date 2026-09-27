@@ -1,9 +1,6 @@
-// Buffer hand-off for Reels that should go out with trending music (the Instagram API can't add music).
-// An episode with "music": true isn't posted through the Graph API. Instead it lands in the owner's Buffer as an
-// Instagram Reel *reminder* (schedulingType: notification) at the slot time. Buffer pings the owner's phone, they open
-// it in Instagram, add a trending sound, and post. Needs the BUFFER_API_KEY secret (Buffer → Settings → API).
-//   node pipeline/buffer.mjs out/<id>.mp4 episodes/<id>      → send one now
-// Every Reel also becomes a TikTok reminder (postToTikTok) when TikTok is connected in the same Buffer.
+// Buffer: TikTok reminders for every Reel (owner adds music in TikTok and posts), plus the hand-off for music Reels.
+// Instagram music Reels aren't posted by the bot at all: handToOwner() logs the public video link for the owner.
+// Needs the BUFFER_API_KEY secret for TikTok (Buffer → Settings → API).
 import fs from 'node:fs';
 import path from 'node:path';
 import { readJSON, ROOT, run } from './util.mjs';
@@ -11,7 +8,7 @@ import { readJSON, ROOT, run } from './util.mjs';
 const API = 'https://api.buffer.com';
 const REPO = process.env.GITHUB_REPOSITORY || 'lolerman123456/miami-reels';
 
-export const wantsBuffer = episode => !!episode?.music && !!process.env.BUFFER_API_KEY;
+export const wantsMusic = episode => !!episode?.music;
 
 async function gql(query, variables = {}) {
   const res = await fetch(API, {
@@ -60,19 +57,13 @@ async function create(input) {
 }
 const log = (label, note) => fs.appendFileSync(path.join(ROOT, 'posted.log'), `${new Date().toISOString()}\t${label}\t${note}\n`);
 
-export async function sendReelToBuffer(file, episode, { at = new Date(Date.now() + 3 * 60e3) } = {}) {
-  const channelId = await channelFor('instagram');
-  if (!channelId) throw new Error('no Instagram channel connected in Buffer');
+// Music Reels aren't auto-posted to Instagram: the owner posts them from the app with a trending sound.
+// Make sure the video is in the public release and log a "music:" line; Claude's check-ins send the owner the link.
+export async function handToOwner(file, episode) {
   const url = await publicUrl(file);
-  const post = await create({
-    channelId, text: episode.igCaption || '', schedulingType: 'notification', mode: 'customScheduled',
-    dueAt: at.toISOString(), needsApproval: false,
-    assets: [{ video: { url, metadata: { thumbnailOffset: 1500 } } }],
-    metadata: { instagram: { type: 'reel', shouldShareToFeed: true } },
-  });
-  console.log(`✔ Sent to Buffer as a reminder for ${new Date(post.dueAt || at).toISOString()} (owner adds music and posts)`);
-  log(`buffer:${path.basename(file)}`, 'sent to Buffer (owner posts with music)');
-  return post.id;
+  console.log(`✔ Music Reel, not auto-posted: ${url} (owner posts it on Instagram with a trending sound)`);
+  log(`music:${path.basename(file, '.mp4')}`, url);
+  return url;
 }
 
 // TikTok through Buffer (TikTok connected as a Buffer channel). Owner's rule: nothing auto-posts to TikTok — music matters —
@@ -98,7 +89,7 @@ export async function postToTikTok({ video, images, text = '', label, ai = false
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const [video, epDir] = process.argv.slice(2);
-  if (!video) { console.error('Usage: node pipeline/buffer.mjs out/<id>.mp4 [episodes/<id>]'); process.exit(1); }
+  if (!video) { console.error('Usage: node pipeline/buffer.mjs out/<id>.mp4 [episodes/<id>]  (TikTok reminder)'); process.exit(1); }
   const ep = readJSON(path.join(epDir || path.join(ROOT, 'episodes', path.basename(video, '.mp4')), 'episode.json'));
-  await sendReelToBuffer(video, ep);
+  await postToTikTok({ video, text: ep.igCaption, label: path.basename(video, '.mp4') });
 }

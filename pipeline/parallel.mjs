@@ -123,10 +123,10 @@ if (cmd === 'prepare') {
     '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', out]);
   console.log(`✔ Video: ${out}`);
   if (!args.includes('--dry-run')) {
-    const { wantsBuffer, sendReelToBuffer, postToTikTok } = await import('./buffer.mjs');
+    const { wantsMusic, handToOwner, postToTikTok } = await import('./buffer.mjs');
     const ai = episode.scenes?.some(s => s.image);
-    if (wantsBuffer(episode)) { // owner posts it from Buffer with music (Instagram and TikTok)
-      await sendReelToBuffer(out, episode);
+    if (wantsMusic(episode)) { // owner posts it on Instagram with a trending sound; TikTok gets a Buffer reminder
+      await handToOwner(out, episode);
       await postToTikTok({ video: out, text: episode.igCaption, label: episode.id, ai });
       process.exit(0);
     }
