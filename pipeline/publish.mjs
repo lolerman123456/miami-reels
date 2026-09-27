@@ -135,7 +135,29 @@ async function waitReady(api, token, id) {
   throw new Error('Instagram processing timed out');
 }
 
+// Owner's rule: keep feed posts at least an hour apart, including ones the owner posts by hand from the app.
+// Before publishing, look at the account's latest post; if it's under MIN_GAP old, wait out the rest.
+// Posts we didn't make (manual ones) are added to posted.log so the record stays complete.
+const MIN_GAP = Number(process.env.MIN_POST_GAP_MIN || 60) * 60e3;
+async function spacing(api, igUser, token) {
+  try {
+    const j = await (await fetch(`${api}/${igUser}/media?fields=timestamp,permalink&limit=5&access_token=${token}`)).json();
+    const posts = (j.data || []).map(p => ({ t: Date.parse(p.timestamp.replace(/([+-]\d\d)(\d\d)$/, '$1:$2')), url: p.permalink })).filter(p => p.t);
+    const logFile = path.join(ROOT, 'posted.log');
+    const log = fs.existsSync(logFile) ? fs.readFileSync(logFile, 'utf8') : '';
+    for (const p of posts.filter(p => p.url && !log.includes(p.url.replace(/\/$/, '')) && Date.now() - p.t < 2 * 86400e3).reverse())
+      fs.appendFileSync(logFile, `${new Date(p.t).toISOString()}\tmanual (posted from the app)\t${p.url}\n`);
+    const last = Math.max(0, ...posts.map(p => p.t));
+    const wait = last + MIN_GAP - Date.now();
+    if (wait > 0) {
+      console.log(`⏸ last post on the account was ${Math.round((Date.now() - last) / 60e3)} min ago; waiting ${Math.ceil(wait / 60e3)} min to keep posts an hour apart`);
+      await new Promise(r => setTimeout(r, wait));
+    }
+  } catch (e) { console.log(`  (couldn't check the last post time: ${e.message}; posting now)`); }
+}
+
 async function finish(api, igUser, token, creationId, label) {
+  if (!String(label).startsWith('story:')) await spacing(api, igUser, token);
   const pub = await call(`${api}/${igUser}/media_publish`, { creation_id: creationId, access_token: token });
   const info = await (await fetch(`${api}/${pub.id}?fields=permalink&access_token=${token}`)).json();
   console.log(`✔ Posted: ${info.permalink || pub.id}`);

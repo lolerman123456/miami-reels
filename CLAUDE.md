@@ -2,7 +2,7 @@
 
 This repo runs **@getnearapp** end to end (the owner handed Claude the account; ChatGPT no longer posts). Daily, New York time:
 2 informational map Reels (~1pm, ~8pm) + carousels (max 10 posts/day total) — `news` 7am/11am/3pm/7pm (the most viral South Florida story right now, one story in depth), `brief` 9am (the biggest South Florida story), `feature` 5pm (rotating informational
-posts: did you know / rent check / history / new builds / by the numbers / follow-up / week recap — FEATURES in `pipeline/carousel.mjs`), `world` 10pm (the most serious world story). Every news carousel is ONE story told in depth with connected slides — never a roundup. Every post is cross-posted to stories.
+posts: did you know / rent check / history / new builds / by the numbers / follow-up / week recap — FEATURES in `pipeline/carousel.mjs`), `world` 10pm (the most serious world story). Every news carousel is ONE story told in depth with connected slides — never a roundup. Every post is cross-posted to stories. Feed posts stay ≥1 hour apart: before publishing, `pipeline/publish.mjs` checks the account's latest post (including ones the owner posts from the app, which it logs in `posted.log` as manual) and waits out the rest of the hour.
 Goal: grow the account. Raise volume slowly as it grows (add carousel slots in `control.json` → `carousels`); the owner audits
 and archives anything bad.
 Everything runs in GitHub Actions (`.github/workflows/reel.yml`) — the owner controls it by chatting with
