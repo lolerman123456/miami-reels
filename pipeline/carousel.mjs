@@ -256,7 +256,7 @@ function slideHTML(s, i, n, dir) {
     ${img ? `<div class="bg" style="background-image:url('${img}');bottom:auto;height:760px"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 20%, #2a3a66, #05070d)"></div>`}
     <div class="shade" style="background:linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(0,0,0,.6) 45%, #000 57%)"></div>
     ${s.credit ? `<div class="credit">${esc(s.credit)}</div>` : ''}
-    <div style="position:absolute;left:60px;right:60px;top:560px">
+    <div style="position:absolute;left:60px;right:60px;bottom:150px">
       <span class="tag" style="background:${red ? '#FF3B3B' : BLUE}">${esc(s.tag || 'NEWS')}</span>
       <div class="caps" style="font-size:${size}px;margin-top:26px">${headline}</div>
       <div style="margin-top:26px;font-size:42px;font-weight:700;line-height:1.32;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)">${esc(s.body)}</div>
