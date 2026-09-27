@@ -25,7 +25,7 @@ export async function getPhoto(spec, dir, name, { context = '' } = {}) {
   return (spec.query && await attempt(stockPhoto, spec.query, dir, name, context))
     || (simple && simple !== spec.query && simple.split(' ').length >= 1 && await attempt(stockPhoto, simple, dir, name, context))
     || (spec.prompt && aiBudgetLeft() > 0 && aiThisPost < Number(process.env.AI_IMAGES_PER_POST ?? 4) && await attempt(aiPhoto, spec.prompt, dir, name))
-    || (spec.prompt && aiBudgetLeft() > 0 && await attempt(aiPhoto, spec.prompt, dir, name)) // over the per-post cap, but better than an off-topic photo
+    || (spec.prompt && aiBudgetLeft() > -20 && await attempt(aiPhoto, spec.prompt, dir, name)) // over the normal caps (owner: never post a slide without a picture); hard stop at +20/day
     || null; // no photo: the slide uses the plain dark background instead of a random, off-topic stock picture
 }
 
