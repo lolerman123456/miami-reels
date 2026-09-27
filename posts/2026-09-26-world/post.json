@@ -2,110 +2,110 @@
   "sector": "WEATHER",
   "cover": {
     "top": "NEWS FROM AROUND THE WORLD",
-    "main": "PUTS",
+    "main": "A NOR'EASTER PUTS",
     "highlight": "TENS OF MILLIONS",
     "bottom": "FROM MAINE TO VIRGINIA IN ITS PATH",
     "blur": false,
     "photo": {
-      "query": "Wikimedia Commons nor'easter coastal flooding New Jersey storm waves",
-      "prompt": "large waves and coastal flooding along a Northeast beach town during a nor'easter"
+      "query": "Wikimedia Commons nor'easter coastal flooding New Jersey",
+      "prompt": "large waves and floodwater covering a coastal street during a nor'easter on the U.S. East Coast"
     },
-    "photoFile": "photo-cover.jpg",
-    "credit": "Photo: Dori / CC BY-SA 3.0"
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration"
   },
   "slides": [
     {
       "tag": "WEATHER",
-      "headline": "Nor’easter batters the East Coast this weekend",
-      "highlight": "East Coast",
-      "body": "Heavy rain, strong winds and coastal flooding are hitting the Northeast, with impacts expected through the weekend.",
-      "place": "Northeastern United States",
-      "source": "NBC News",
-      "photo": {
-        "query": "Wikimedia Commons nor'easter East Coast storm waves",
-        "prompt": "heavy rain and wind along an East Coast waterfront during a nor'easter"
-      },
-      "photoFile": "photo-1.jpg",
-      "credit": "Photo: Wilfredor / CC0"
-    },
-    {
-      "tag": "WEATHER",
-      "headline": "That puts tens of millions from Maine to Virginia at risk",
-      "highlight": "tens of millions",
-      "body": "The storm is affecting a corridor from Maine to Virginia with rain, wind and flooding threats.",
-      "place": "Maine to Virginia",
+      "headline": "Nor’easter puts Maine to Virginia in its path",
+      "highlight": "Maine to Virginia",
+      "body": "Tens of millions of people from Maine to Virginia are in the path of the powerful storm.",
+      "place": "U.S. East Coast",
       "source": "BBC News",
       "photo": {
-        "query": "Wikimedia Commons United States East Coast map Maine Virginia",
-        "prompt": "weather map style view of the U.S. East Coast from Maine to Virginia under storm clouds"
+        "query": "Wikimedia Commons East Coast nor'easter storm waves",
+        "prompt": "dark storm clouds over rough Atlantic surf along the U.S. East Coast"
       },
-      "photoFile": "photo-2.jpg",
-      "credit": "Photo: Wikideas1 / CC0"
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
     },
     {
       "tag": "WEATHER",
-      "headline": "And New York and New Jersey declared emergencies",
-      "highlight": "declared emergencies",
-      "body": "New York and New Jersey declared states of emergency as officials prepared for flooding and power outages.",
+      "headline": "That includes emergencies in New York and New Jersey",
+      "highlight": "New York and New Jersey",
+      "body": "New York and New Jersey declared emergencies as the storm brings coastal flooding, heavy rain and wind.",
       "place": "New York and New Jersey",
-      "source": "Reuters",
+      "source": "BBC",
       "photo": {
-        "query": "Wikimedia Commons New York City rain storm street flooding",
-        "prompt": "rainy New York City street with wind, puddles and emergency lights in the distance"
+        "query": "Wikimedia Commons New York City storm rain flooding",
+        "prompt": "rain and standing water on a New York City street during a coastal storm"
       },
-      "photoFile": "photo-3.jpg",
+      "photoFile": "photo-2.jpg",
       "credit": "Photo: Tommy Gao / CC BY-SA 4.0"
     },
     {
       "tag": "WEATHER",
-      "headline": "That includes 8 New Jersey counties bracing for it",
-      "highlight": "8 New Jersey",
-      "body": "New Jersey’s emergency order covers 8 counties as coastal communities face flooding along the shore.",
-      "place": "New Jersey",
-      "source": "ABC7 New York",
+      "headline": "And heavy snow and high winds are hitting the Northeast",
+      "highlight": "heavy snow",
+      "body": "The storm has brought heavy snow and high winds to parts of the Northeast and snarled travel in New York City.",
+      "place": "Northeast U.S.",
+      "source": "The New York Times",
       "photo": {
-        "query": "Wikimedia Commons Jersey Shore storm surge coastal flooding",
-        "prompt": "coastal flooding on a New Jersey shore street during a nor'easter"
+        "query": "Wikimedia Commons New York City heavy snow storm",
+        "prompt": "snow-covered New York City street with traffic moving slowly during a winter storm"
       },
-      "photoFile": "photo-4.jpg",
-      "credit": "Photo: J. B. Sommers / Public domain"
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Danazar / CC BY-SA 4.0"
     },
     {
       "tag": "WEATHER",
-      "headline": "And over 400 flights have been canceled",
-      "highlight": "400 flights",
-      "body": "Travel disruptions include more than 400 canceled flights as the storm brings flooding and outages across the Northeast.",
-      "place": "U.S. Northeast",
-      "source": "Reuters",
+      "headline": "That started as a bombogenesis snowstorm",
+      "highlight": "bombogenesis snowstorm",
+      "body": "The system rapidly strengthened off the East Coast before pushing snow, wind and coastal flooding into the region.",
+      "place": "U.S. East Coast",
+      "source": "BBC",
       "photo": {
-        "query": "Wikimedia Commons airport departure board canceled flights rain",
-        "prompt": "airport terminal departure board showing canceled flights during a rainstorm"
+        "query": "Wikimedia Commons satellite nor'easter cyclone East Coast",
+        "prompt": "satellite-style view of a large winter cyclone off the U.S. East Coast"
+      },
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "Which has left at least 3 dead at the Jersey Shore",
+      "highlight": "at least 3",
+      "body": "At least 3 people have died as the dayslong nor’easter brings a final surge of coastal flooding to the Jersey Shore.",
+      "place": "Jersey Shore",
+      "source": "CNN",
+      "photo": {
+        "query": "Wikimedia Commons Jersey Shore coastal flooding storm",
+        "prompt": "flooded street near beach homes on the Jersey Shore during a nor'easter"
       },
       "photoFile": "photo-5.jpg",
-      "credit": "Photo: Curt Teich &amp; Co., Chicago (publisher / Public domain"
+      "credit": "Photo: Rhododendrites / CC BY-SA 4.0"
     },
     {
       "tag": "WEATHER",
-      "headline": "So the weekend threat is flooding, outages and wind damage",
-      "highlight": "weekend threat",
-      "body": "The storm is expected to keep bringing heavy rain, coastal flooding and strong winds into Sunday.",
-      "place": "U.S. East Coast",
-      "source": "NBC News",
+      "headline": "So officials warn of outages, damage and flight cuts",
+      "highlight": "flight cuts",
+      "body": "New York City faces flooding, power outages and damage Sunday, while airports report hundreds of canceled flights.",
+      "place": "New York City",
+      "source": "Gothamist",
       "photo": {
-        "query": "Wikimedia Commons nor'easter satellite storm Northeast United States",
-        "prompt": "satellite-style view of a nor'easter spinning off the Northeast coast"
+        "query": "Wikimedia Commons LaGuardia Airport winter storm delays",
+        "prompt": "airport departure board with canceled flights during a winter storm"
       },
       "photoFile": "photo-6.jpg",
-      "credit": "Photo: Rhododendrites / CC BY-SA 4.0"
+      "credit": "Photo: Miami Beach Casino Co. / Public domain"
     }
   ],
-  "caption": "A powerful nor’easter is hitting the Northeast with flooding, outages and travel disruptions from Maine to Virginia.\nDo you have family or travel plans anywhere in the storm zone?",
+  "caption": "A nor’easter is hitting the East Coast, with emergencies in New York and New Jersey and tens of millions from Maine to Virginia in its path.\nDo you have family or travel plans anywhere in the storm zone?",
   "hashtags": [
     "#Noreaster",
     "#EastCoastWeather"
   ],
   "collaborators": [],
-  "igCaption": "A powerful nor’easter is hitting the Northeast with flooding, outages and travel disruptions from Maine to Virginia.\nDo you have family or travel plans anywhere in the storm zone?\n\n📰 Sources: NBC News, BBC News, Reuters, ABC7 New York\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#Noreaster #EastCoastWeather #miami #southflorida",
+  "igCaption": "A nor’easter is hitting the East Coast, with emergencies in New York and New Jersey and tens of millions from Maine to Virginia in its path.\nDo you have family or travel plans anywhere in the storm zone?\n\n📰 Sources: BBC News, BBC, The New York Times, CNN, Gothamist\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#Noreaster #EastCoastWeather #miami #southflorida",
   "kind": "world",
   "kicker": "NEWS FROM AROUND THE WORLD 🌎",
   "date": "2026-09-26",
