@@ -1,0 +1,113 @@
+{
+  "sector": "TRANSIT",
+  "cover": {
+    "top": "FLYING TAXIS ARE",
+    "main": "COMING TO",
+    "highlight": "MIAMI",
+    "bottom": "$200 A SEAT, NO TRAFFIC",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Miami skyline Biscayne Bay eVTOL air taxi",
+      "prompt": "electric eVTOL air taxi with tilting rotors flying over the Miami skyline and Biscayne Bay, realistic news photo style"
+    },
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration"
+  },
+  "slides": [
+    {
+      "tag": "TRANSIT",
+      "headline": "Archer plans South Florida air taxis",
+      "highlight": "air taxis",
+      "body": "Archer announced South Florida as its 4th planned air taxi network on Dec. 3, 2025, with 10 to 20-minute flights planned between Miami, Fort Lauderdale, Boca Raton and West Palm Beach.",
+      "place": "South Florida",
+      "source": "Refresh Miami",
+      "photo": {
+        "query": "Wikimedia Commons Miami skyline Biscayne Bay eVTOL air taxi",
+        "prompt": "electric eVTOL air taxi flying over Biscayne Bay toward downtown Miami, realistic news photo style"
+      },
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "TRANSIT",
+      "headline": "That uses Midnight, a 4-passenger electric aircraft",
+      "highlight": "4-passenger electric",
+      "body": "Midnight takes off and lands vertically like a helicopter, then flies like a plane with 1 pilot and 4 passengers at about 150 mph.",
+      "place": "Miami",
+      "source": "Flying",
+      "photo": {
+        "query": "Wikimedia Commons electric vertical takeoff aircraft eVTOL Miami",
+        "prompt": "Archer-style electric air taxi with tilting rotors above Miami, no passengers visible, realistic news photo style"
+      },
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "TRANSIT",
+      "headline": "And the landing map includes airports and local pads",
+      "highlight": "airports and pads",
+      "body": "Planned vertiports include MIA, Fort Lauderdale-Hollywood, Palm Beach International, Hard Rock Stadium, Magic City in Little Haiti, downtown West Palm Beach and Apogee Golf Club.",
+      "place": "South Florida",
+      "source": "eVTOL Insights",
+      "photo": {
+        "query": "Wikimedia Commons Hard Rock Stadium aerial helipad Miami Gardens",
+        "prompt": "electric eVTOL air taxi landing on a stadium helipad at Hard Rock Stadium in Miami Gardens, realistic news photo style"
+      },
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "TRANSIT",
+      "headline": "That also puts West Palm about 30 minutes away",
+      "highlight": "30 minutes",
+      "body": "Reported trips include Miami to Fort Lauderdale in about 10 minutes by air, and Miami to West Palm Beach in about 30 minutes by air versus 60 to 90 minutes by car.",
+      "place": "Miami to West Palm Beach",
+      "source": "Downtown Magazine",
+      "photo": {
+        "query": "Wikimedia Commons I-95 traffic Miami Fort Lauderdale aerial",
+        "prompt": "electric air taxi flying above I-95 traffic between Miami and Fort Lauderdale, realistic news photo style"
+      },
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "TRANSIT",
+      "headline": "And the launch price is about $200 a seat",
+      "highlight": "$200 a seat",
+      "body": "The projected launch fare is around $200 per person, compared with premium ride-share or Uber Black, with prices expected to drop as networks scale.",
+      "place": "South Florida",
+      "source": "Downtown Magazine",
+      "photo": {
+        "query": "Wikimedia Commons Fort Lauderdale beach aerial skyline eVTOL",
+        "prompt": "electric eVTOL air taxi flying over Fort Lauderdale beach and nearby skyline, no beach crowds visible, realistic news photo style"
+      },
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "TRANSIT",
+      "headline": "So Miami passengers are expected around 2027",
+      "highlight": "around 2027",
+      "body": "Archer closed Phase 3 of the FAA's 4-phase type certification in May 2026, and Miami passenger service is expected around 2027 after approvals.",
+      "place": "Miami",
+      "source": "Axios",
+      "photo": {
+        "query": "Wikimedia Commons Miami International Airport aerial terminal eVTOL vertiport",
+        "prompt": "electric eVTOL air taxi at Miami International Airport near a vertiport pad, realistic news photo style"
+      },
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Air taxis are planned for Miami, Fort Lauderdale, Boca Raton and West Palm Beach, with launch fares projected around $200 a seat.\nWould you try one for a 10 to 30-minute South Florida trip?",
+  "hashtags": [
+    "#MiamiTransit",
+    "#AirTaxi"
+  ],
+  "collaborators": [],
+  "igCaption": "Air taxis are planned for Miami, Fort Lauderdale, Boca Raton and West Palm Beach, with launch fares projected around $200 a seat.\nWould you try one for a 10 to 30-minute South Florida trip?\n\n📰 Sources: Refresh Miami, Flying, eVTOL Insights, Downtown Magazine, Axios\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiTransit #AirTaxi #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-09-26",
+  "id": "2026-09-26-news-21"
+}
