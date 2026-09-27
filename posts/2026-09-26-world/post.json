@@ -1,111 +1,111 @@
 {
-  "sector": "WORLD",
+  "sector": "WEATHER",
   "cover": {
     "top": "NEWS FROM AROUND THE WORLD",
-    "main": "IRAN'S SEVEN-DAY",
-    "highlight": "HORMUZ PLAN",
-    "bottom": "FACES U.S. REJECTION",
+    "main": "PUTS",
+    "highlight": "TENS OF MILLIONS",
+    "bottom": "FROM MAINE TO VIRGINIA IN ITS PATH",
     "blur": false,
     "photo": {
-      "query": "Strait of Hormuz satellite Wikimedia Commons",
-      "prompt": "satellite-style view of the Strait of Hormuz between Iran and Oman"
+      "query": "Wikimedia Commons nor'easter coastal flooding New Jersey storm waves",
+      "prompt": "large waves and coastal flooding along a Northeast beach town during a nor'easter"
     },
     "photoFile": "photo-cover.jpg",
-    "credit": "Photo: NASA image using data provided courtesy  / Public domain"
+    "credit": "Photo: Dori / CC BY-SA 3.0"
   },
   "slides": [
     {
-      "tag": "WORLD",
-      "headline": "Iran offers 7-day plan to reopen Hormuz",
-      "highlight": "7-day plan",
-      "body": "Iran proposed reopening the Strait of Hormuz within seven days, with talks taking place through mediators.",
-      "place": "Strait of Hormuz",
-      "source": "BBC",
+      "tag": "WEATHER",
+      "headline": "Nor’easter batters the East Coast this weekend",
+      "highlight": "East Coast",
+      "body": "Heavy rain, strong winds and coastal flooding are hitting the Northeast, with impacts expected through the weekend.",
+      "place": "Northeastern United States",
+      "source": "NBC News",
       "photo": {
-        "query": "Strait of Hormuz satellite Wikimedia Commons",
-        "prompt": "wide aerial view of cargo ships near the Strait of Hormuz"
+        "query": "Wikimedia Commons nor'easter East Coast storm waves",
+        "prompt": "heavy rain and wind along an East Coast waterfront during a nor'easter"
       },
-      "photoFile": "photo-1.png",
-      "credit": "AI illustration"
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Wilfredor / CC0"
     },
     {
-      "tag": "WORLD",
-      "headline": "That would reopen a key oil and gas route",
-      "highlight": "key oil",
-      "body": "The strait provides the only sea passage from the Persian Gulf to the open ocean and carried 25% of seaborne oil trade and 20% of liquefied natural gas during 2023 to 2025.",
-      "place": "Persian Gulf",
-      "source": "Wikipedia",
+      "tag": "WEATHER",
+      "headline": "That puts tens of millions from Maine to Virginia at risk",
+      "highlight": "tens of millions",
+      "body": "The storm is affecting a corridor from Maine to Virginia with rain, wind and flooding threats.",
+      "place": "Maine to Virginia",
+      "source": "BBC News",
       "photo": {
-        "query": "oil tanker Strait of Hormuz Wikimedia Commons",
-        "prompt": "oil tanker moving through a narrow gulf shipping lane at sunrise"
+        "query": "Wikimedia Commons United States East Coast map Maine Virginia",
+        "prompt": "weather map style view of the U.S. East Coast from Maine to Virginia under storm clouds"
       },
       "photoFile": "photo-2.jpg",
+      "credit": "Photo: Wikideas1 / CC0"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "And New York and New Jersey declared emergencies",
+      "highlight": "declared emergencies",
+      "body": "New York and New Jersey declared states of emergency as officials prepared for flooding and power outages.",
+      "place": "New York and New Jersey",
+      "source": "Reuters",
+      "photo": {
+        "query": "Wikimedia Commons New York City rain storm street flooding",
+        "prompt": "rainy New York City street with wind, puddles and emergency lights in the distance"
+      },
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Tommy Gao / CC BY-SA 4.0"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "That includes 8 New Jersey counties bracing for it",
+      "highlight": "8 New Jersey",
+      "body": "New Jersey’s emergency order covers 8 counties as coastal communities face flooding along the shore.",
+      "place": "New Jersey",
+      "source": "ABC7 New York",
+      "photo": {
+        "query": "Wikimedia Commons Jersey Shore storm surge coastal flooding",
+        "prompt": "coastal flooding on a New Jersey shore street during a nor'easter"
+      },
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: J. B. Sommers / Public domain"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "And over 400 flights have been canceled",
+      "highlight": "400 flights",
+      "body": "Travel disruptions include more than 400 canceled flights as the storm brings flooding and outages across the Northeast.",
+      "place": "U.S. Northeast",
+      "source": "Reuters",
+      "photo": {
+        "query": "Wikimedia Commons airport departure board canceled flights rain",
+        "prompt": "airport terminal departure board showing canceled flights during a rainstorm"
+      },
+      "photoFile": "photo-5.jpg",
       "credit": "Photo: Curt Teich &amp; Co., Chicago (publisher / Public domain"
     },
     {
-      "tag": "WORLD",
-      "headline": "And Iran says inspectors could return",
-      "highlight": "inspectors could",
-      "body": "President Masoud Pezeshkian said Iran would allow nuclear inspectors as part of the proposal.",
-      "place": "Iran",
-      "source": "CBS News",
+      "tag": "WEATHER",
+      "headline": "So the weekend threat is flooding, outages and wind damage",
+      "highlight": "weekend threat",
+      "body": "The storm is expected to keep bringing heavy rain, coastal flooding and strong winds into Sunday.",
+      "place": "U.S. East Coast",
+      "source": "NBC News",
       "photo": {
-        "query": "IAEA inspectors Iran Wikimedia Commons",
-        "prompt": "international nuclear inspection team entering a secure facility"
-      },
-      "photoFile": "photo-3.jpg",
-      "credit": "Photo: Miami Beach Casino Co. / Public domain"
-    },
-    {
-      "tag": "WORLD",
-      "headline": "But Trump reportedly rejected the proposal",
-      "highlight": "rejected the",
-      "body": "Trump reportedly rejected Iran's conditional ceasefire proposal tied to the seven-day Hormuz plan.",
-      "place": "United States",
-      "source": "CNBC",
-      "photo": {
-        "query": "White House exterior Wikimedia Commons",
-        "prompt": "the White House exterior at night with press lights outside"
-      },
-      "photoFile": "photo-4.jpg",
-      "credit": "Photo: Geraldshields11 / CC BY-SA 4.0"
-    },
-    {
-      "tag": "WORLD",
-      "headline": "That leaves talks moving through mediators",
-      "highlight": "through mediators",
-      "body": "Iran offered the Hormuz reopening plan through Qatari mediators and awaited a U.S. response.",
-      "place": "Qatar",
-      "source": "The Business Standard",
-      "photo": {
-        "query": "Doha Qatar skyline Wikimedia Commons",
-        "prompt": "Doha skyline with government buildings and flags"
-      },
-      "photoFile": "photo-5.jpg",
-      "credit": "Photo: Zairon / CC BY 4.0"
-    },
-    {
-      "tag": "WORLD",
-      "headline": "And the region is still under pressure",
-      "highlight": "under pressure",
-      "body": "Saudi coalition forces intercepted projectiles, while Pezeshkian said Iran no longer trusts talks with Washington.",
-      "place": "Middle East",
-      "source": "CNBC",
-      "photo": {
-        "query": "Saudi Arabia air defense missile Wikimedia Commons",
-        "prompt": "air defense system at night with radar equipment in a desert setting"
+        "query": "Wikimedia Commons nor'easter satellite storm Northeast United States",
+        "prompt": "satellite-style view of a nor'easter spinning off the Northeast coast"
       },
       "photoFile": "photo-6.jpg",
-      "credit": "Photo: Department of Defense. American Forces I / Public domain"
+      "credit": "Photo: Rhododendrites / CC BY-SA 4.0"
     }
   ],
-  "caption": "Iran's seven-day Hormuz offer now sits alongside a reported U.S. rejection, mediator talks and intercepted projectiles in the region.",
+  "caption": "A powerful nor’easter is hitting the Northeast with flooding, outages and travel disruptions from Maine to Virginia.\nDo you have family or travel plans anywhere in the storm zone?",
   "hashtags": [
-    "#StraitOfHormuz",
-    "#IranUS"
+    "#Noreaster",
+    "#EastCoastWeather"
   ],
   "collaborators": [],
-  "igCaption": "Iran's seven-day Hormuz offer now sits alongside a reported U.S. rejection, mediator talks and intercepted projectiles in the region.\n\n📰 Sources: BBC, Wikipedia, CBS News, CNBC, The Business Standard\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#StraitOfHormuz #IranUS #miami #southflorida",
+  "igCaption": "A powerful nor’easter is hitting the Northeast with flooding, outages and travel disruptions from Maine to Virginia.\nDo you have family or travel plans anywhere in the storm zone?\n\n📰 Sources: NBC News, BBC News, Reuters, ABC7 New York\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#Noreaster #EastCoastWeather #miami #southflorida",
   "kind": "world",
   "kicker": "NEWS FROM AROUND THE WORLD 🌎",
   "date": "2026-09-26",
