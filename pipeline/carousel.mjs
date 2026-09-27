@@ -43,7 +43,7 @@ Rules:
 - Crime/accusations: say "police say"/"according to" as the source did; don't name people who haven't been charged.
 - Informative first. Interesting because of the facts. Humor only as the house style allows (one dry line from the fact, never quirky lists).
 - Every news slide credits its outlet in "source" (outlet name exactly as given; "Wikipedia" or "Zillow" for those).
-- Headlines: specific and clear, ≤ 70 characters, sentence case, with the key number/name. Body: 1–2 sentences, ≤ 200 characters: the detail and why it matters to people here.
+- Headlines: specific and clear, ≤ 70 characters, sentence case, with the key number/name. Body: 1–2 sentences, ≤ 190 characters, that EXPLAIN the headline with hard specifics (a number, a name, a place, a date, a price, a comparison like "vs 90 minutes by car"). Never vague filler like "this could change things", "it's a big deal", "many people", "experts say", "in the future". Each body picks up from the previous slide (it uses what the reader just learned) and sets up the next headline.
 - Write like a person talking normally, not AI. Banned: "It's not X, it's Y", "That's not X, that's Y", "If not X, then Y", "X isn't just Y", "The result? …", "Plot twist", "Here's the thing", "Let's be real", "Welcome to", em-dashes, neat morals, triples, and never mention "sources" in the text.
 - STORY: if the post is about ONE topic (anything except the daily brief/world roundups), the slides are ONE continuous story.
   Each slide picks up where the previous one ended and adds the next piece: what happened → how it compares → why it's
@@ -259,7 +259,7 @@ function slideHTML(s, i, n, dir) {
     <div style="position:absolute;left:60px;right:60px;top:560px">
       <span class="tag" style="background:${red ? '#FF3B3B' : BLUE}">${esc(s.tag || 'NEWS')}</span>
       <div class="caps" style="font-size:${size}px;margin-top:26px">${headline}</div>
-      <div style="margin-top:26px;font-size:36px;font-weight:700;line-height:1.35;color:rgba(255,255,255,.88)">${esc(s.body)}</div>
+      <div style="margin-top:26px;font-size:42px;font-weight:700;line-height:1.32;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)">${esc(s.body)}</div>
       <div style="margin-top:24px;font-size:28px;font-weight:800;color:rgba(255,255,255,.6)">${[s.place ? '📍 ' + esc(s.place) : '', s.source ? 'Source: ' + esc(s.source) : ''].filter(Boolean).join('  ·  ')}</div>
     </div>
     ${bar(i + 1 < n ? `${i + 1}/${n} ${arrow}` : `${i + 1}/${n}`)}`;
