@@ -125,6 +125,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   const recent = recentPosts();
   const ask = [
     topic ? `${spec.pick ? spec.ask + '\n' : ''}The account owner asked for this — follow it: ${topic}` : (feature ? feature.ask : spec.ask),
+    kind === 'world' ? 'COVER: the small top line is always "NEWS FROM AROUND THE WORLD" (we add it). Leave "top" empty and make main + highlight + bottom a complete sentence on their own, with its own subject, e.g. main "A NOR\'EASTER PUTS", highlight "50 MILLION", bottom "FROM MAINE TO VIRGINIA IN ITS PATH".' : '',
     `Today (New York): ${new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric' })}`,
     `Headlines (outlet — headline — summary):\n${news.map(n => `- ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}`,
     extra.length ? `Fact sources:\n\n${extra.join('\n\n')}` : '',
@@ -153,6 +154,14 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   if (checked?.slides?.length >= 3 && checked.cover?.highlight) {
     if (checked.removed?.length) console.log(`  fact-check fixed: ${checked.removed.join(' | ').slice(0, 400)}`);
     delete checked.removed; post = checked;
+  }
+  // the cover must read as ONE clear sentence (the owner saw a broken one); a cheap check + fix
+  const lines = c => [kind === 'world' ? 'NEWS FROM AROUND THE WORLD:' : c.top, c.main, c.highlight, c.bottom].filter(Boolean).join(' / ');
+  const cv = await chat([{ role: 'system', content: 'You check an Instagram carousel cover made of stacked lines. Read them in order as one sentence. If it is not a clear, complete, grammatical sentence with a subject (or starts with a dangling verb like "PUTS"), rewrite main/highlight/bottom (and top, unless it is fixed) so it is, keeping the same facts, all caps, highlight 1–3 words. Reply JSON {"ok": true|false, "top": "", "main": "", "highlight": "", "bottom": ""}.' },
+    { role: 'user', content: `${kind === 'world' ? 'The top line is fixed: NEWS FROM AROUND THE WORLD (do not include it in main).\n' : ''}Cover: ${lines(post.cover)}\nFirst slide: ${post.slides?.[0]?.headline}` }]).catch(() => null);
+  if (cv && cv.ok === false && cv.main && cv.highlight) {
+    console.log(`  cover fixed: "${lines(post.cover)}" → "${lines(cv)}"`);
+    Object.assign(post.cover, { ...(kind === 'world' ? {} : { top: cv.top || '' }), main: cv.main, highlight: cv.highlight, bottom: cv.bottom || '' });
   }
   post = sanitize(post);
   post.collaborators = cleanCollabs(post.collaborators);

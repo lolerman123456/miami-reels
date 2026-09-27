@@ -1,7 +1,7 @@
 // Photos for carousel slides — stock first, AI only when stock would look bad.
 //   1. Wikimedia Commons (free license, credited on the slide). A cheap vision check picks the best candidate
 //      or rejects them all if none fits / looks good.
-//   2. OpenAI image — only if no good stock AND today's AI budget (AI_IMAGES_PER_DAY, default 3) isn't used up.
+//   2. OpenAI image — when stock is missing or boring, within today's AI budget (AI_IMAGES_PER_DAY, default 20).
 //   3. A generic South Florida stock photo, so a slide never goes without an image.
 // Real photos are for places/things; people in news stories are never illustrated with a real photo.
 import fs from 'node:fs';
@@ -13,7 +13,7 @@ const OK_LICENSE = /^(CC0|Public domain|PD|CC BY(-SA)?( [0-9.]+)?)/i;
 const BUDGET_FILE = path.join(ROOT, 'state', 'ai-images.txt');
 const FALLBACKS = ['Miami skyline', 'Miami Beach aerial', 'Brickell skyline', 'Biscayne Bay Miami'];
 const used = new Set(); // don't reuse one photo twice in a post
-let aiThisPost = 0;     // at most AI_IMAGES_PER_POST (default 1) per carousel
+let aiThisPost = 0;     // at most AI_IMAGES_PER_POST (default 4) per carousel (owner: AI instead of boring stock)
 export function newPost() { used.clear(); aiThisPost = 0; }
 
 export async function getPhoto(spec, dir, name, { context = '' } = {}) {
@@ -24,7 +24,7 @@ export async function getPhoto(spec, dir, name, { context = '' } = {}) {
   if (process.env.AI_PHOTOS === '1' && spec.prompt) { const p = await attempt(aiPhoto, spec.prompt, dir, name); if (p) return p; }
   return (spec.query && await attempt(stockPhoto, spec.query, dir, name, context))
     || (simple && simple !== spec.query && simple.split(' ').length >= 1 && await attempt(stockPhoto, simple, dir, name, context))
-    || (spec.prompt && aiBudgetLeft() > 0 && aiThisPost < Number(process.env.AI_IMAGES_PER_POST ?? 1) && await attempt(aiPhoto, spec.prompt, dir, name))
+    || (spec.prompt && aiBudgetLeft() > 0 && aiThisPost < Number(process.env.AI_IMAGES_PER_POST ?? 4) && await attempt(aiPhoto, spec.prompt, dir, name))
     || await attempt(stockPhoto, FALLBACKS[Math.floor(Math.random() * FALLBACKS.length)], dir, name, '', true);
 }
 
@@ -41,7 +41,8 @@ async function candidates(query) {
       artist: (m.Artist?.value || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 40) || 'Wikimedia Commons',
     };
   }).filter(c => c && !used.has(c.title) && c.width >= 1000 && c.height >= 700 && OK_LICENSE.test(c.license)
-    && !/logo|map|diagram|chart|seal|flag|coat of arms|plaque|sign|postcard|lithograph|drawing|engraving|poster|\.svg|\.gif|\.tif/i.test(c.title)).slice(0, 5);
+    && !/logo|map|diagram|chart|seal|flag|coat of arms|plaque|sign|postcard|lithograph|drawing|engraving|poster|\.svg|\.gif|\.tif/i.test(c.title)
+    && !/curt teich|postcard|publisher/i.test(c.artist)).slice(0, 5);
 }
 
 async function stockPhoto(query, dir, name, context, anyOk = false) {
@@ -68,7 +69,7 @@ async function judge(list, query, context) {
   const content = [
     { type: 'text', text: `Instagram carousel slide about: "${context || query}". Wanted photo: "${query}".\n` +
       `Pick the ONE candidate that clearly shows that subject and looks like an attractive, sharp, modern social-media photo ` +
-      `(no documents, no old/grainy/tilted snapshots, no random interiors, no close-ups of identifiable people, no vintage postcards or old illustrations; small price signs in the background are fine, but not a big close-up price/number that could clash with the post). ` +
+      `(no documents, no old/grainy/tilted snapshots, no random interiors, no close-ups of identifiable people, no vintage postcards or old illustrations, nothing BORING: no flat gray skies over generic streets, no plain parking lots or buildings with nothing happening, no photos of a different city than the story, no photo a person would scroll past — only pick one that is striking and clearly about this exact story; small price signs in the background are fine, but not a big close-up price/number that could clash with the post). ` +
       `If none is good enough, answer -1. Reply JSON {"pick": index}.` },
     ...list.flatMap((c, i) => [{ type: 'text', text: `Candidate ${i}: ${c.title}` }, { type: 'image_url', image_url: { url: `data:image/jpeg;base64,${c.data.toString('base64')}`, detail: 'low' } }]),
   ];
@@ -86,7 +87,7 @@ async function judge(list, query, context) {
 function aiBudgetLeft() {
   const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
   const usedToday = fs.existsSync(BUDGET_FILE) ? fs.readFileSync(BUDGET_FILE, 'utf8').split('\n').filter(l => l.startsWith(today)).length : 0;
-  return Number(process.env.AI_IMAGES_PER_DAY ?? 3) - usedToday;
+  return Number(process.env.AI_IMAGES_PER_DAY ?? 20) - usedToday;
 }
 
 async function aiPhoto(description, dir, name) {
