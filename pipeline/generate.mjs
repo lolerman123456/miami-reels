@@ -191,6 +191,8 @@ export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
     if (s.hit && !['explosion', 'crash', 'impact'].includes(s.hit)) delete s.hit;
   });
   episode.format = plan.format;
+  // events/guides do best with a trending sound → they go to the owner's Buffer instead of auto-posting (pipeline/buffer.mjs)
+  if (/EVENT|GUIDE/i.test(plan.format || '')) episode.music = true;
   const credit = (episode.sources || []).length ? `\n\nSources: ${episode.sources.join(', ')}` : '';
   // max 4 hashtags
   let n = 0; episode.igCaption = (episode.igCaption || '').replace(/#\w+/g, t => (++n <= 4 ? t : '')).replace(/[ \t]+$/gm, '').trim();

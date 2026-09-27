@@ -30,6 +30,13 @@ Scheduled runs respect `control.json`; runs started by `requests/run.json` or th
 
 The owner can also do all of this without Claude: GitHub app → Actions → **Control** → Run workflow (`.github/workflows/control.yml`).
 
+## Reels with music (Buffer)
+The Instagram API can't add music. An episode with `"music": true` isn't auto-posted: at its slot it goes to the owner's
+Buffer as an Instagram Reel **reminder** (`pipeline/buffer.mjs`, secret `BUFFER_API_KEY`); Buffer pings their phone, they add a
+trending sound in Instagram and post. Use it for Reels that would do well with music (events, parties, guides, lifestyle
+lists) — `generate.mjs` sets it automatically for EVENTS/GUIDE. Informational/history ones keep auto-posting. Without the
+secret, music episodes auto-post as before.
+
 ## Checking on runs & sharing videos (works without gh / without login — the repo is public)
 - Every rendered video is uploaded as `https://github.com/lolerman123456/miami-reels/releases/download/videos/<episode-id>.mp4`
   (phone-friendly, no login). Send the owner that link when a video is ready, especially for previews (`"publish": false`).

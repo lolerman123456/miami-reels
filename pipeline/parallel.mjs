@@ -123,6 +123,8 @@ if (cmd === 'prepare') {
     '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', out]);
   console.log(`✔ Video: ${out}`);
   if (!args.includes('--dry-run')) {
+    const { wantsBuffer, sendReelToBuffer } = await import('./buffer.mjs');
+    if (wantsBuffer(episode)) { await sendReelToBuffer(out, episode); process.exit(0); } // owner posts it from Buffer with music
     const { publishReel, publishStory } = await import('./publish.mjs');
     await publishReel(out, episode.igCaption, { collaborators: episode.collaborators });
     await publishStory(out, episode.id).catch(e => console.log(`(story skipped: ${e.message})`));
