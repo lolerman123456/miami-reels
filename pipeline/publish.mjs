@@ -182,8 +182,14 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   if (!video) { console.error('Usage: node pipeline/publish.mjs out/<id>.mp4 [episodes/<id>]'); process.exit(1); }
   const dir = epDir || path.join(ROOT, 'episodes', path.basename(video, '.mp4'));
   const ep = readJSON(path.join(dir, 'episode.json'));
-  const { wantsBuffer, sendReelToBuffer } = await import('./buffer.mjs');
-  if (wantsBuffer(ep)) { await sendReelToBuffer(video, ep); process.exit(0); } // owner posts it from Buffer with music
+  const { wantsBuffer, sendReelToBuffer, postToTikTok } = await import('./buffer.mjs');
+  const ai = ep.scenes?.some(s => s.image);
+  if (wantsBuffer(ep)) { // owner posts it from Buffer with music (Instagram and TikTok)
+    await sendReelToBuffer(video, ep);
+    await postToTikTok({ video, text: ep.igCaption, label: path.basename(dir), notify: true, ai });
+    process.exit(0);
+  }
   await publishReel(video, ep.igCaption, { collaborators: ep.collaborators });
   await publishStory(video).catch(e => console.log(`(story skipped: ${e.message})`));
+  await postToTikTok({ video, text: ep.igCaption, label: path.basename(dir), ai });
 }

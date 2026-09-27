@@ -37,6 +37,11 @@ trending sound in Instagram and post. Use it for Reels that would do well with m
 lists) — `generate.mjs` sets it automatically for EVENTS/GUIDE. Informational/history ones keep auto-posting. Without the
 secret, music episodes auto-post as before.
 
+**TikTok** goes through the same Buffer (TikTok connected as a Buffer channel): every Reel is cross-posted as a TikTok video
+and every carousel as a TikTok photo post right after Instagram (`postToTikTok` in `pipeline/buffer.mjs`); music Reels become a
+TikTok reminder too. Media is served from public releases (`videos`, `tiktok`). If TikTok isn't connected it's skipped.
+The old direct TikTok app (`pipeline/tiktok.mjs`, `docs/tiktok/`) is no longer needed.
+
 ## Checking on runs & sharing videos (works without gh / without login — the repo is public)
 - Every rendered video is uploaded as `https://github.com/lolerman123456/miami-reels/releases/download/videos/<episode-id>.mp4`
   (phone-friendly, no login). Send the owner that link when a video is ready, especially for previews (`"publish": false`).

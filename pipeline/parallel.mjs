@@ -123,11 +123,17 @@ if (cmd === 'prepare') {
     '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', out]);
   console.log(`✔ Video: ${out}`);
   if (!args.includes('--dry-run')) {
-    const { wantsBuffer, sendReelToBuffer } = await import('./buffer.mjs');
-    if (wantsBuffer(episode)) { await sendReelToBuffer(out, episode); process.exit(0); } // owner posts it from Buffer with music
+    const { wantsBuffer, sendReelToBuffer, postToTikTok } = await import('./buffer.mjs');
+    const ai = episode.scenes?.some(s => s.image);
+    if (wantsBuffer(episode)) { // owner posts it from Buffer with music (Instagram and TikTok)
+      await sendReelToBuffer(out, episode);
+      await postToTikTok({ video: out, text: episode.igCaption, label: episode.id, notify: true, ai });
+      process.exit(0);
+    }
     const { publishReel, publishStory } = await import('./publish.mjs');
     await publishReel(out, episode.igCaption, { collaborators: episode.collaborators });
     await publishStory(out, episode.id).catch(e => console.log(`(story skipped: ${e.message})`));
+    await postToTikTok({ video: out, text: episode.igCaption, label: episode.id, ai });
   } else console.log('(dry run) not posted');
 } else {
   console.error('Usage: parallel.mjs prepare|capture …'); process.exit(1);
