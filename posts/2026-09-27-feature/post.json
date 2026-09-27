@@ -1,0 +1,115 @@
+{
+  "sector": "USA",
+  "cover": {
+    "top": "SOUTH FLORIDA",
+    "main": "JUST GOT",
+    "highlight": "AN 0-3 TEAM",
+    "bottom": "AND FLOODED STREETS",
+    "blur": false,
+    "photo": {
+      "query": "Hard Rock Stadium Miami Gardens Wikimedia Commons",
+      "prompt": "Hard Rock Stadium in Miami Gardens on an NFL game day, wide exterior view"
+    },
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: A.J. Lipp / CC BY-SA 4.0"
+  },
+  "slides": [
+    {
+      "tag": "USA",
+      "headline": "Dolphins fall 24-10 and open 0-3",
+      "highlight": "open 0-3",
+      "body": "Miami lost to Kansas City at Hard Rock Stadium on Sunday, and De’Von Achane exited with a knee injury.",
+      "place": "Miami Gardens",
+      "source": "Local 10",
+      "photo": {
+        "query": "Hard Rock Stadium Miami Gardens Dolphins Wikimedia Commons",
+        "prompt": "Miami Gardens football stadium exterior with fans arriving before a game"
+      },
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: ChaChaFut / CC0"
+    },
+    {
+      "tag": "USA",
+      "headline": "That came after king tides flooded Miami Beach",
+      "highlight": "flooded Miami Beach",
+      "body": "Water rose higher than expected in Miami Beach and covered streets across South Florida, with coastal flood risk continuing.",
+      "place": "Miami Beach",
+      "source": "",
+      "photo": {
+        "query": "Miami Beach flooding street king tide Wikimedia Commons",
+        "prompt": "Floodwater covering a Miami Beach street during a king tide, with cars moving slowly"
+      },
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "USA",
+      "headline": "And schools lost 35,000 students",
+      "highlight": "35,000 students",
+      "body": "The enrollment decline spans Miami-Dade, Broward and Palm Beach counties, putting budgets, staffing and school closures on the table.",
+      "place": "South Florida",
+      "source": "",
+      "photo": {
+        "query": "Miami-Dade public school building Wikimedia Commons",
+        "prompt": "Public school building in South Florida with buses parked outside"
+      },
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: SurfBalBay News / CC BY-SA 4.0"
+    },
+    {
+      "tag": "USA",
+      "headline": "Which followed Brightline hitting bankruptcy court",
+      "highlight": "bankruptcy court",
+      "body": "Brightline went to bankruptcy court this week, moving the rail company’s financial case into a court process.",
+      "place": "South Florida",
+      "source": "",
+      "photo": {
+        "query": "Brightline train Miami station Wikimedia Commons",
+        "prompt": "Brightline train at a Miami station platform"
+      },
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Patrickhamiltonbrightline / CC BY-SA 4.0"
+    },
+    {
+      "tag": "USA",
+      "headline": "On top of that, Florida gas hit $4.22",
+      "highlight": "$4.22",
+      "body": "Florida gas reached $4.22 a gallon, up 12 cents from last week and $1.26 from last year, while diesel hit $6.34.",
+      "place": "Florida",
+      "source": "",
+      "photo": {
+        "query": "gas station pump Florida Wikimedia Commons",
+        "prompt": "Gas pump at a Florida station with cars lined up nearby"
+      },
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Anthony Inswasty / CC BY-SA 4.0"
+    },
+    {
+      "tag": "USA",
+      "headline": "So Miami’s G20 invite keeps drawing criticism",
+      "highlight": "drawing criticism",
+      "body": "Rubio faced criticism after Trump’s Miami G20 invitation to Putin, while senators urged Trump to disinvite him and Russia said it would consider the invite.",
+      "place": "Miami",
+      "source": "",
+      "photo": {
+        "query": "Miami skyline government flags Wikimedia Commons",
+        "prompt": "Miami skyline with government flags in the foreground"
+      },
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Dolphins, king tides, school enrollment, Brightline, gas prices and the Miami G20 invite all moved this week.\nWhich one affects your week the most?",
+  "hashtags": [
+    "#SouthFloridaNews",
+    "#MiamiNews"
+  ],
+  "collaborators": [
+    "miamidolphins"
+  ],
+  "igCaption": "Dolphins, king tides, school enrollment, Brightline, gas prices and the Miami G20 invite all moved this week.\nWhich one affects your week the most?\n\n📰 Sources: Local 10\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaNews #MiamiNews #miami #southflorida",
+  "kind": "feature",
+  "kicker": "THE WEEK IN DADE",
+  "date": "2026-09-27",
+  "id": "2026-09-27-feature"
+}
