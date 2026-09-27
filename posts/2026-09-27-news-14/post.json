@@ -1,0 +1,113 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "EPSTEIN SURVIVORS",
+    "main": "SUE HIS",
+    "highlight": "ESTATE",
+    "bottom": "OVER CSAM CLAIMS",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Palm Beach Florida Worth Avenue street",
+      "prompt": "Palm Beach street scene near a courthouse area with palm trees and no visible people"
+    },
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: CZmarlin — Christopher Ziemnowicz — a ph / CC BY-SA 4.0"
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Epstein survivors sue his estate over CSAM claims",
+      "highlight": "CSAM claims",
+      "body": "Survivors filed a new lawsuit against Jeffrey Epstein’s estate, alleging a child sexual abuse material collection.",
+      "place": "Palm Beach",
+      "source": "WPEC",
+      "photo": {
+        "query": "Wikimedia Commons Palm Beach Florida courthouse",
+        "prompt": "Exterior of a Florida courthouse with palm trees on a clear day, no people visible"
+      },
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Michael Rivera / CC BY-SA 4.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "That also cites Palm Beach investigation failures",
+      "highlight": "investigation failures",
+      "body": "The lawsuit accuses Palm Beach investigators of failures in the original case.",
+      "place": "Palm Beach",
+      "source": "WPEC",
+      "photo": {
+        "query": "Wikimedia Commons Palm Beach Florida police car",
+        "prompt": "Police cruiser parked on a Palm Beach street at dusk, no people visible"
+      },
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: CZmarlin — Christopher Ziemnowicz — a ph / CC BY-SA 4.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "That case began after a report about a 14-year-old",
+      "highlight": "14-year-old",
+      "body": "In 2005, Palm Beach police began investigating after a woman said Epstein paid her 14-year-old stepdaughter to strip and massage him.",
+      "place": "Palm Beach",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Palm Beach Florida residential street",
+        "prompt": "Quiet Palm Beach residential street with hedges and palm trees, no people visible"
+      },
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Ebyabe / CC BY-SA 3.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "And investigators identified 36 girls ages 14 to 17",
+      "highlight": "36 girls",
+      "body": "Investigators identified 36 girls ages 14 to 17 with similar accounts of sexual abuse in the Palm Beach case.",
+      "place": "Palm Beach",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Palm Beach Florida Intracoastal Waterway",
+        "prompt": "Palm Beach Intracoastal Waterway view with buildings in the distance, no people visible"
+      },
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: CZmarlin — Christopher Ziemnowicz, relea / CC BY-SA 3.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Which led to a plea deal and 13 months in jail",
+      "highlight": "13 months",
+      "body": "Epstein pleaded guilty to state charges, registered as a sex offender and served 13 months in jail with work release.",
+      "place": "Palm Beach",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons jail cell bars",
+        "prompt": "Empty jail corridor with metal bars and harsh overhead lighting"
+      },
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Rhododendrites / CC BY-SA 4.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "So the estate is back in court after prior payouts",
+      "highlight": "prior payouts",
+      "body": "Epstein’s estate was valued at $600 million at his death, and hundreds of millions have been paid to at least 200 women in legal settlements.",
+      "place": "Palm Beach",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons legal documents gavel court",
+        "prompt": "Close-up of court papers and a gavel on a desk, no people visible"
+      },
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Epstein survivors filed a new lawsuit against his estate, alleging a child sexual abuse material collection and Palm Beach investigation failures.",
+  "hashtags": [
+    "#PalmBeach",
+    "#JeffreyEpstein"
+  ],
+  "collaborators": [],
+  "igCaption": "Epstein survivors filed a new lawsuit against his estate, alleging a child sexual abuse material collection and Palm Beach investigation failures.\n\n📰 Sources: WPEC, Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#PalmBeach #JeffreyEpstein #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-09-27",
+  "id": "2026-09-27-news-14"
+}
