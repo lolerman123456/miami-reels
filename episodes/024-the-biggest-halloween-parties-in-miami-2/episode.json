@@ -1,0 +1,239 @@
+{
+  "title": "The Biggest Halloween Parties in Miami 2026",
+  "id": "024-the-biggest-halloween-parties-in-miami-2",
+  "format": "EVENTS",
+  "sources": [
+    "The Miami Guide",
+    "Club Space",
+    "Eventbrite (HalloWYN)",
+    "Factory Town"
+  ],
+  "igCaption": "Miami's biggest Halloween events this year: Horrorland at Jungle Island, Club Space Halloweek (Oct 30–Nov 1), Hocus Pocus at Factory Town (Oct 30–Nov 1), HalloWYN in Wynwood (Oct 31, free) and the Lincoln Road block party (Oct 31, free).\n\nWhich one are you going to? Tag your costume partner 🎃\n\nSources: The Miami Guide, Club Space, Eventbrite (HalloWYN), Factory Town\n\n#miamihalloween #halloween #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "These are the biggest Halloween parties in Miami this year, and the two biggest ones are completely free.",
+      "overlay": [
+        "MIAMI HALLOWEEN",
+        "2026"
+      ],
+      "emojis": [
+        "🎃",
+        "👻",
+        "🪩",
+        "🦇"
+      ],
+      "location": {
+        "name": "Lincoln Road, Miami Beach",
+        "lat": 25.7904646,
+        "lon": -80.1418246,
+        "h": 10
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 165
+      },
+      "caption": "These are the biggest Halloween parties in Miami this year… and the two biggest ones are completely FREE."
+    },
+    {
+      "kind": "item",
+      "text": "Number five: Horrorland at Jungle Island. Six haunted houses, three scare zones and a fire show from a Cirque du Soleil veteran, open Thursday through Sunday nights until November first.",
+      "caption": "#5: Horrorland at Jungle Island. Six haunted houses, three scare zones and a fire show from a Cirque du Soleil veteran, open Thursday through Sunday nights until November 1.",
+      "overlay": "HORRORLAND",
+      "badge": "THU–SUN NIGHTS",
+      "sub": "Jungle Island · until Nov 1",
+      "emoji": "🏚️",
+      "location": {
+        "name": "Jungle Island",
+        "lat": 25.7861775,
+        "lon": -80.1746936,
+        "h": 8
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 700,
+        "pitch": -32,
+        "heading": 200,
+        "degrees": 40,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "6",
+          "label": "haunted houses"
+        },
+        {
+          "value": "3",
+          "label": "scare zones"
+        }
+      ],
+      "source": "The Miami Guide",
+      "rank": 5
+    },
+    {
+      "kind": "item",
+      "text": "Number four: Halloweek at Club Space, October thirtieth to November first. Camelphat and Volko play Friday, then Halloween night on Saturday. Single nights start at thirty dollars, the full pass at one hundred.",
+      "caption": "#4: Halloweek at Club Space, October 30 to November 1. Camelphat and Volko play Friday, then Halloween night on Saturday. Single nights start at $30, the full pass at $100.",
+      "overlay": "CLUB SPACE",
+      "badge": "OCT 30–NOV 1",
+      "sub": "Halloweek · Downtown",
+      "emoji": "🪩",
+      "location": {
+        "name": "Club Space",
+        "lat": 25.7845551,
+        "lon": -80.1931533,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -32,
+        "heading": 40,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "$30",
+          "label": "per night, from"
+        },
+        {
+          "value": "$100",
+          "label": "3-night pass"
+        }
+      ],
+      "source": "Club Space",
+      "rank": 4,
+      "hit": "explosion"
+    },
+    {
+      "kind": "item",
+      "text": "Number three: Hocus Pocus at Factory Town, the same weekend. It's eighteen and up, with Eric Prydz, Chase and Status, Jamie Jones and Purple Disco Machine. Three-day passes run from one seventy-five to three hundred dollars.",
+      "caption": "#3: Hocus Pocus at Factory Town, the same weekend. It's 18+, with Eric Prydz, Chase & Status, Jamie Jones and Purple Disco Machine. Three-day passes run from $175 to $300.",
+      "overlay": "HOCUS POCUS",
+      "badge": "OCT 30–NOV 1",
+      "sub": "Factory Town · 18+",
+      "emoji": "🔊",
+      "location": {
+        "name": "Factory Town",
+        "lat": 25.8174361,
+        "lon": -80.2575934,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "18+",
+          "label": "all 3 days"
+        },
+        {
+          "value": "$175",
+          "label": "3-day pass, from"
+        }
+      ],
+      "source": "The Miami Guide",
+      "rank": 3
+    },
+    {
+      "kind": "item",
+      "text": "Number two: HalloWYN, Wynwood's official block party, back for its thirteenth year on October thirty-first. It's free, it runs until three a.m., and about thirty thousand people show up in costume.",
+      "caption": "#2: HalloWYN, Wynwood's official block party, back for its 13th year on October 31. It's free, it runs until 3 a.m., and about 30,000 people show up in costume.",
+      "overlay": "HALLOWYN",
+      "badge": "OCT 31 · FREE",
+      "sub": "Wynwood Marketplace",
+      "emoji": "🎭",
+      "location": {
+        "name": "Wynwood Marketplace",
+        "lat": 25.7992762,
+        "lon": -80.1991234,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "30,000",
+          "label": "people, about"
+        },
+        {
+          "value": "FREE",
+          "label": "entry"
+        }
+      ],
+      "source": "Eventbrite",
+      "rank": 2
+    },
+    {
+      "kind": "item",
+      "text": "And number one: the Lincoln Road Halloween block party in Miami Beach. Also free, from five p.m. to one a.m. on Halloween night, with a costume parade and DJs. More than fifty thousand people usually pack the street.",
+      "caption": "And #1: the Lincoln Road Halloween block party in Miami Beach. Also free, from 5 p.m. to 1 a.m. on Halloween night, with a costume parade and DJs. More than 50,000 people usually pack the street.",
+      "overlay": "LINCOLN ROAD",
+      "badge": "OCT 31 · FREE",
+      "sub": "Miami Beach · 5PM–1AM",
+      "emoji": "👑",
+      "location": {
+        "name": "Lincoln Road, Miami Beach",
+        "lat": 25.7904646,
+        "lon": -80.1418246,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 250,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "50,000+",
+          "label": "people, usually"
+        },
+        {
+          "value": "FREE",
+          "label": "entry"
+        }
+      ],
+      "source": "The Miami Guide",
+      "rank": 1,
+      "hit": "explosion"
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you going to? Tag your costume partner.",
+      "overlay": "TAG YOUR DUO 🎃",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Lincoln Road, Miami Beach",
+        "lat": 25.7904646,
+        "lon": -80.1418246,
+        "h": 10
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 187
+      }
+    }
+  ],
+  "collaborators": [
+    "clubspace"
+  ]
+}

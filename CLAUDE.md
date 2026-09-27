@@ -43,7 +43,7 @@ No jokes (owner's call — they read as AI): everything is informational, from r
 Never target ethnic groups, nationalities, religions, races, or real private people. No slurs/explicit content. Hook in the first 3 seconds. Max 4 hashtags per post. Collaborator invites: posts about a venue/brand in `voice/handles.json` tag it (max 3); only add confirmed official handles there. Single-topic carousels: one sector label (ECONOMY…), headlines chain with transitions (THAT'S… / THAT ALSO MEANS… / WHICH PUTS…).
 
 ## Episode JSON essentials
-Map Reels are **informational, no jokes, no rankings** (owner's call). Default format is STORY: a gripping true story tied to one
+Map Reels are **informational, no jokes** (owner's call). **Default: upcoming / happening-now things people can go to** (events, parties, guides with dates, prices, venues + a tag-a-friend outro and venue collab tags) — the raves Reel was the top performer. History/crime only rarely. Older default was STORY: a gripping true story tied to one
 place (e.g. "Did you know one of the world's greatest designers died here?" → Versace mansion). Also NEW BUILD / HISTORY / DID YOU KNOW /
 RENT CHECK / BY THE NUMBERS. Voice at 1.3 speed (KOKORO_SPEED). Graphics: calm fades/slides, Near blue #1769FF + white, no bounce/tilt, getnearapp tag. `pipeline/generate.mjs` plans a topic, pulls real sources (news, Wikipedia via `pipeline/facts.mjs`,
 Zillow rent data), writes only from those sources, then a fact-check pass fixes anything unsupported.

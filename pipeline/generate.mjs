@@ -9,7 +9,11 @@ import { fetchNews, searchNews } from './news.mjs';
 import { wikiArticle, rentFacts } from './facts.mjs';
 import { STYLE, REMINDER, toneLines, sanitize, memeTells, HANDLES_RULE, cleanCollabs } from './style.mjs';
 
-const FORMATS = `FORMATS (pick the one that fits the best available material):
+const FORMATS = `FORMATS (pick the one that fits the best available material). OWNER'S RULE: default to what's UPCOMING or HAPPENING
+RIGHT NOW that people can go to, eat, see or use (events, parties, concerts, openings, deals, free things, guides with prices and
+dates), ending with a tag-a-friend question. These get shared; the account's best Reel was an upcoming-events list. History and
+crime stories only rarely, when the owner asks.
+- EVENTS / GUIDE (preferred): 4–5 specific things happening soon (or places to go) with exact dates, times, prices and venues.
 - STORY (preferred): a true, gripping story tied to ONE real South Florida place people can see on the map. Famous people who
   lived or died there, crimes and how they were solved, disasters, scandals, mysteries, celebrity mansions, record-breaking
   moments, weird history. Hook with a curiosity question the place answers, e.g. "Did you know one of the world's greatest
@@ -129,7 +133,7 @@ export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
   // 1. plan
   const news = await fetchNews('local', { hours: 72, max: 80 }).catch(() => []);
   const plan = await chat([{ role: 'system', content: `You plan informational Instagram Reels for @getnearapp, a South Florida account.\n\n${FORMATS}\n\n` +
-    'Pick ONE topic people would send to a friend. Default to a STORY (famous person, crime, disaster, mansion, mystery tied to one real place). ' +
+    'Pick ONE topic people would send to a friend. Default to EVENTS / GUIDE: things coming up or happening now in South Florida that people can go to (with dates, prices, venues), from the headlines. Only rarely a STORY. ' +
     'Use a news topic only when it is big (a record tower, a major opening, a price shock). Avoid boring topics: infrastructure stats, generic numbers, anything a viewer would not repeat to a friend. ' +
     'Don\'t repeat past videos. Return JSON: {"format":"…","angle":"one sentence","wikipedia":["up to 5 exact English Wikipedia article titles to pull facts from"],' +
     '"rent":["up to 12 South Florida city names or 5-digit ZIPs for Zillow rent data, only for rent/cost topics"],"news":[indexes of the relevant headlines],' +
