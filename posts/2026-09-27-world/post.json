@@ -1,0 +1,113 @@
+{
+  "sector": "WEATHER",
+  "cover": {
+    "top": "NEWS FROM AROUND THE WORLD",
+    "main": "A NOR'EASTER BRINGS RAIN, WIND AND",
+    "highlight": "COASTAL FLOODING",
+    "bottom": "TO TENS OF MILLIONS FROM MAINE TO VIRGINIA",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons coastal flooding New Jersey shore storm",
+      "prompt": "coastal flooding on a New Jersey shore street during a nor'easter with gray skies and high water"
+    },
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration"
+  },
+  "slides": [
+    {
+      "tag": "WEATHER",
+      "headline": "UPDATE: A nor'easter brings rain, wind and coastal flooding",
+      "highlight": "coastal flooding",
+      "body": "Heavy rain and wind battered the Northeast this weekend, with coastal flooding affecting shore communities along the East Coast.",
+      "place": "East Coast",
+      "source": "The New York Times",
+      "photo": {
+        "query": "Wikimedia Commons storm clouds Atlantic Ocean East Coast",
+        "prompt": "dark storm clouds over the Atlantic near the U.S. East Coast with rough surf and rain bands offshore"
+      },
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "That put New York and New Jersey under emergencies",
+      "highlight": "under emergencies",
+      "body": "New York and New Jersey declared states of emergency and told people to avoid travel through the weekend.",
+      "place": "New York and New Jersey",
+      "source": "CNN",
+      "photo": {
+        "query": "Wikimedia Commons New York City rain storm street flooding",
+        "prompt": "rain-soaked New York City street during a coastal storm with standing water and emergency lights in the distance"
+      },
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "And Atlantic City saw its highest flooding since Sandy",
+      "highlight": "highest flooding",
+      "body": "Flooding in Atlantic City reached its highest point since Superstorm Sandy, and neighborhoods along the Jersey Shore flooded.",
+      "place": "Atlantic City, New Jersey",
+      "source": "NBC News",
+      "photo": {
+        "query": "Wikimedia Commons Atlantic City flooding storm surge",
+        "prompt": "flooded street near the Atlantic City shoreline during a coastal storm with water covering the roadway"
+      },
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "That sent rescuers to flooded New Jersey motels",
+      "highlight": "flooded motels",
+      "body": "First responders rescued 9 adults and 1 dog from flooded motels in New Jersey on Saturday morning.",
+      "place": "New Jersey",
+      "source": "AP via Spokesman-Review",
+      "photo": {
+        "query": "Wikimedia Commons New Jersey coastal flooding motel street",
+        "prompt": "floodwater surrounding low-rise motels near the New Jersey shore during a nor'easter"
+      },
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "And tens of thousands lost power across the region",
+      "highlight": "lost power",
+      "body": "Tens of thousands of people in the Northeast and Mid-Atlantic lost power, and trees came down in New York City.",
+      "place": "Northeast and Mid-Atlantic",
+      "source": "PhillyVoice",
+      "photo": {
+        "query": "Wikimedia Commons downed tree New York City storm",
+        "prompt": "downed tree on a New York City street after a storm with wet pavement and crews nearby"
+      },
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "So Sunday brings another round of flood risk",
+      "highlight": "flood risk",
+      "body": "The National Weather Service said the storm would intensify again Saturday night into Sunday, with more flooding likely.",
+      "place": "East Coast",
+      "source": "NBC News",
+      "photo": {
+        "query": "Wikimedia Commons waves crashing over seawall storm",
+        "prompt": "large waves crashing over a seawall during a coastal storm with gray sky and spray over the road"
+      },
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "UPDATE: A nor’easter is bringing rain, wind and coastal flooding to the East Coast, with emergencies in New York and New Jersey.\nWhat are you seeing from family or friends up north?",
+  "hashtags": [
+    "#Noreaster",
+    "#EastCoastStorm"
+  ],
+  "collaborators": [],
+  "igCaption": "UPDATE: A nor’easter is bringing rain, wind and coastal flooding to the East Coast, with emergencies in New York and New Jersey.\nWhat are you seeing from family or friends up north?\n\n📰 Sources: The New York Times, CNN, NBC News, AP via Spokesman-Review, PhillyVoice\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#Noreaster #EastCoastStorm #miami #southflorida",
+  "kind": "world",
+  "kicker": "NEWS FROM AROUND THE WORLD 🌎",
+  "date": "2026-09-27",
+  "id": "2026-09-27-world"
+}
