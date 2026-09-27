@@ -1,0 +1,113 @@
+{
+  "sector": "WEATHER",
+  "cover": {
+    "top": "KING TIDES",
+    "main": "FLOODED",
+    "highlight": "MIAMI BEACH",
+    "bottom": "HIGHER THAN EXPECTED",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Miami Beach street flooding",
+      "prompt": "floodwater covering a Miami Beach street near palm trees and parked cars during high tide"
+    },
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration"
+  },
+  "slides": [
+    {
+      "tag": "WEATHER",
+      "headline": "King tides flooded Miami Beach higher than expected",
+      "highlight": "higher than expected",
+      "body": "King tides flooded Miami Beach on Sunday, with reports saying water rose higher than expected.",
+      "place": "Miami Beach",
+      "source": "CBS News",
+      "photo": {
+        "query": "Wikimedia Commons Miami Beach Collins Avenue flooding",
+        "prompt": "flooded Miami Beach street with water around curbside cars and low-rise buildings"
+      },
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "That also deluged South Florida streets",
+      "highlight": "South Florida streets",
+      "body": "King tides pushed water onto South Florida streets Sunday, and more flooding remained in the forecast.",
+      "place": "South Florida",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Wikimedia Commons South Florida flooded street",
+        "prompt": "tidal floodwater spreading across a South Florida residential street under sunny skies"
+      },
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: WeatheredAviation / CC0"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "And Hollywood Broadwalk saw water near homes",
+      "highlight": "near homes",
+      "body": "Flooding reached the Hollywood Broadwalk on Saturday and crept toward nearby homes.",
+      "place": "Hollywood",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Wikimedia Commons Hollywood Beach Broadwalk Florida",
+        "prompt": "water pooling along the Hollywood Beach Broadwalk with homes and palm trees nearby"
+      },
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Tamanoeconomico / CC BY-SA 4.0"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "Which left Broward streets underwater",
+      "highlight": "streets underwater",
+      "body": "King tide season left streets underwater in Broward, extending flooding beyond Miami Beach and Hollywood.",
+      "place": "Broward",
+      "source": "WSVN",
+      "photo": {
+        "query": "Wikimedia Commons Broward County flooded street",
+        "prompt": "flooded Broward County street with water covering lane markings and cars moving slowly"
+      },
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Quxyz / CC BY 4.0"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "The reason: naturally high tides got a boost",
+      "highlight": "naturally high tides",
+      "body": "King tides are predictable high tides, and local weather patterns and ocean conditions can raise water above predicted levels.",
+      "place": "South Florida",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons high tide ocean seawall",
+        "prompt": "ocean water rising against a seawall during an unusually high tide"
+      },
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "So coastal areas still face flood risk",
+      "highlight": "flood risk",
+      "body": "Coastal flooding and dangerous rip currents remained likely Sunday during high tide in South Florida.",
+      "place": "South Florida",
+      "source": "Local 10",
+      "photo": {
+        "query": "Wikimedia Commons Miami Beach ocean waves high tide",
+        "prompt": "rough surf and high water near a South Florida beach during high tide"
+      },
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Maoileann / CC BY-SA 4.0"
+    }
+  ],
+  "caption": "King tides pushed water into Miami Beach, Hollywood and Broward streets this weekend, with coastal flood risk still in the forecast.\nDid you see flooding near you today?",
+  "hashtags": [
+    "#KingTides",
+    "#MiamiBeach"
+  ],
+  "collaborators": [],
+  "igCaption": "King tides pushed water into Miami Beach, Hollywood and Broward streets this weekend, with coastal flood risk still in the forecast.\nDid you see flooding near you today?\n\n📰 Sources: CBS News, Miami Herald, WPLG Local 10, WSVN, Wikipedia, Local 10\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#KingTides #MiamiBeach #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-09-27",
+  "id": "2026-09-27-news-10"
+}
