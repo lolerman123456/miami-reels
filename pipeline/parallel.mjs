@@ -127,7 +127,7 @@ if (cmd === 'prepare') {
     const ai = episode.scenes?.some(s => s.image);
     if (wantsBuffer(episode)) { // owner posts it from Buffer with music (Instagram and TikTok)
       await sendReelToBuffer(out, episode);
-      await postToTikTok({ video: out, text: episode.igCaption, label: episode.id, notify: true, ai });
+      await postToTikTok({ video: out, text: episode.igCaption, label: episode.id, ai });
       process.exit(0);
     }
     const { publishReel, publishStory } = await import('./publish.mjs');

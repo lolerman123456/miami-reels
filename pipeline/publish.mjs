@@ -186,7 +186,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const ai = ep.scenes?.some(s => s.image);
   if (wantsBuffer(ep)) { // owner posts it from Buffer with music (Instagram and TikTok)
     await sendReelToBuffer(video, ep);
-    await postToTikTok({ video, text: ep.igCaption, label: path.basename(dir), notify: true, ai });
+    await postToTikTok({ video, text: ep.igCaption, label: path.basename(dir), ai });
     process.exit(0);
   }
   await publishReel(video, ep.igCaption, { collaborators: ep.collaborators });
