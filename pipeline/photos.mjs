@@ -25,7 +25,8 @@ export async function getPhoto(spec, dir, name, { context = '' } = {}) {
   return (spec.query && await attempt(stockPhoto, spec.query, dir, name, context))
     || (simple && simple !== spec.query && simple.split(' ').length >= 1 && await attempt(stockPhoto, simple, dir, name, context))
     || (spec.prompt && aiBudgetLeft() > 0 && aiThisPost < Number(process.env.AI_IMAGES_PER_POST ?? 4) && await attempt(aiPhoto, spec.prompt, dir, name))
-    || await attempt(stockPhoto, FALLBACKS[Math.floor(Math.random() * FALLBACKS.length)], dir, name, '', true);
+    || (spec.prompt && aiBudgetLeft() > 0 && await attempt(aiPhoto, spec.prompt, dir, name)) // over the per-post cap, but better than an off-topic photo
+    || null; // no photo: the slide uses the plain dark background instead of a random, off-topic stock picture
 }
 
 async function candidates(query) {

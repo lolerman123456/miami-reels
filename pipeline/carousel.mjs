@@ -127,7 +127,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     topic ? `${spec.pick ? spec.ask + '\n' : ''}The account owner asked for this — follow it: ${topic}` : (feature ? feature.ask : spec.ask),
     kind === 'world' ? 'COVER: the small top line is always "NEWS FROM AROUND THE WORLD" (we add it). Leave "top" empty and make main + highlight + bottom a complete sentence on their own, with its own subject, e.g. main "A NOR\'EASTER PUTS", highlight "50 MILLION", bottom "FROM MAINE TO VIRGINIA IN ITS PATH".' : '',
     `Today (New York): ${new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric' })}`,
-    `Headlines (outlet — headline — summary):\n${news.map(n => `- ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}`,
+    `Headlines (date — outlet — headline — summary). Only use headlines from the last 3 days about THIS exact event; a search can return an older, similar event (last winter's storm, a past case): ignore those, and if two headlines disagree, leave the detail out:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}`,
     extra.length ? `Fact sources:\n\n${extra.join('\n\n')}` : '',
     recent.length ? `Our posts from the last week (don't repeat these unless there's an update — then tag it UPDATE):\n${recent.flatMap(p => p.slides.map(s => `- ${p.date}: ${s.headline}`)).join('\n')}` : '',
   ].filter(Boolean).join('\n\n');
