@@ -1,0 +1,113 @@
+{
+  "sector": "EDUCATION",
+  "cover": {
+    "top": "SOUTH FLORIDA SCHOOLS",
+    "main": "LOST",
+    "highlight": "35,000 STUDENTS",
+    "bottom": "IN ANOTHER YEAR",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons public school building South Florida",
+      "prompt": "empty public school hallway in South Florida with lockers and classroom doors"
+    },
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration"
+  },
+  "slides": [
+    {
+      "tag": "EDUCATION",
+      "headline": "South Florida schools lost 35,000 students",
+      "highlight": "35,000 students",
+      "body": "Public schools in South Florida lost about 35,000 students in another year of enrollment declines.",
+      "place": "South Florida",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "Wikimedia Commons public school building Florida",
+        "prompt": "South Florida public school exterior on a quiet morning with buses parked outside"
+      },
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EDUCATION",
+      "headline": "That decline reaches three counties",
+      "highlight": "3 counties",
+      "body": "The enrollment drop raises questions in Broward, Miami-Dade and Palm Beach counties.",
+      "place": "Broward, Miami-Dade and Palm Beach",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "Wikimedia Commons Miami-Dade public school",
+        "prompt": "public school entrance in Miami-Dade County with no students visible"
+      },
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: WhisperToMe / CC0"
+    },
+    {
+      "tag": "EDUCATION",
+      "headline": "That includes Florida’s most populous county",
+      "highlight": "Miami-Dade",
+      "body": "Miami-Dade had 2,701,767 residents in the 2020 census, making it Florida’s most populous county.",
+      "place": "Miami-Dade County",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Miami-Dade County school building",
+        "prompt": "school district office building in Miami-Dade County on a sunny day"
+      },
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Pietro / CC BY-SA 3.0"
+    },
+    {
+      "tag": "EDUCATION",
+      "headline": "And Broward is Florida’s second-most populous",
+      "highlight": "Broward",
+      "body": "Broward had 1,944,375 residents in the 2020 census, making it Florida’s second-most populous county.",
+      "place": "Broward County",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Broward County public school Fort Lauderdale",
+        "prompt": "public school building in Broward County with an empty pickup loop"
+      },
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: MrBill3 / CC0"
+    },
+    {
+      "tag": "EDUCATION",
+      "headline": "Which puts budgets and staffing on the table",
+      "highlight": "budgets and staffing",
+      "body": "The enrollment decline raises budget and staffing questions for South Florida public school districts.",
+      "place": "South Florida",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "Wikimedia Commons school classroom empty Florida",
+        "prompt": "empty classroom with rows of desks and a teacher desk in a South Florida public school"
+      },
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Dobrislava / CC BY-SA 4.0"
+    },
+    {
+      "tag": "EDUCATION",
+      "headline": "So school closures are part of the next fight",
+      "highlight": "school closures",
+      "body": "Districts also face school closure questions across Broward, Miami-Dade and Palm Beach counties.",
+      "place": "South Florida",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "Wikimedia Commons closed school building Florida",
+        "prompt": "closed public school building with a locked gate and empty parking lot in South Florida"
+      },
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Aeotas / CC BY-SA 4.0"
+    }
+  ],
+  "caption": "South Florida public schools lost about 35,000 students in another year of enrollment declines.\nThe drop raises questions about budgets, staffing and possible school closures across Broward, Miami-Dade and Palm Beach counties.",
+  "hashtags": [
+    "#SouthFloridaSchools",
+    "#PublicEducation"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida public schools lost about 35,000 students in another year of enrollment declines.\nThe drop raises questions about budgets, staffing and possible school closures across Broward, Miami-Dade and Palm Beach counties.\n\n📰 Sources: Sun Sentinel, Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaSchools #PublicEducation #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-09-27",
+  "id": "2026-09-27-brief"
+}
