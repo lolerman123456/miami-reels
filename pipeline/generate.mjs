@@ -191,6 +191,7 @@ export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
     if (s.hit && !['explosion', 'crash', 'impact'].includes(s.hit)) delete s.hit;
   });
   episode.format = plan.format;
+  await nearMention(episode, plan);
   // events/guides do best with a trending sound → they go to the owner's Buffer instead of auto-posting (pipeline/buffer.mjs)
   if (/EVENT|GUIDE/i.test(plan.format || '')) episode.music = true;
   const credit = (episode.sources || []).length ? `\n\nSources: ${episode.sources.join(', ')}` : '';
@@ -206,6 +207,22 @@ export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
   console.log(`✔ New episode: ${episode.title} → ${path.relative(ROOT, dir)}`);
   for (const s of episode.scenes) console.log(`   ${s.kind}${s.badge ? ' [' + s.badge + ']' : ''}: ${s.text}`);
   return dir;
+}
+
+// Owner's rule: now and then (not every Reel, never on crime/tragedy), the outro ends with one quiet, natural mention of the
+// NEAR app (it shows you who walked past you during the day), tied to the topic, so people get curious. Never a hard sell.
+async function nearMention(episode, plan) {
+  if (Math.random() > 0.4 || /CASE FILE|CRIME|STORY/i.test(plan.format || '')) return;
+  const outro = episode.scenes.find(s => s.kind === 'outro');
+  if (!outro) return;
+  try {
+    const r = await chat([{ role: 'system', content: 'You add one short, casual sentence to the end of a South Florida Reel. It quietly mentions the NEAR app, which shows you who walked past you during the day. Tie it to the video topic so it feels natural and makes people curious, like a friend mentioning it in passing. Max 22 words, no hype words, no "download now", no emojis, numbers as words. If the topic is serious, sad or about crime, reply SKIP. Reply JSON {"line":"…"} or {"line":"SKIP"}.' },
+      { role: 'user', content: `Title: ${episode.title}\nOutro so far: ${outro.text}` }]);
+    const line = String(r.line || '').trim();
+    if (!line || /^SKIP/i.test(line) || line.split(/\s+/).length > 26) return;
+    outro.text = `${outro.text.trim()} ${line}`;
+    console.log(`  NEAR mention: ${line}`);
+  } catch (e) { console.log(`  (NEAR mention skipped: ${e.message.slice(0, 80)})`); }
 }
 
 async function chat(messages) {
