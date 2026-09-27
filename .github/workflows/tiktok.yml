@@ -1,0 +1,46 @@
+name: TikTok
+
+# NEAR Publisher backend for the page at https://lolerman123456.github.io/miami-reels/tiktok/ (connect TikTok, post a Reel).
+# Start it with the Run workflow button, or from a chat by committing requests/tiktok.json. It stays up 40 minutes.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['requests/tiktok.json']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tiktok
+  cancel-in-progress: true
+
+jobs:
+  publisher:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - name: cloudflared
+        run: |
+          sudo curl -sSL -o /usr/local/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+          sudo chmod +x /usr/local/bin/cloudflared
+      - name: Latest Reels
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p out/tiktok
+          for a in $(gh release view videos --json assets -q '.assets | sort_by(.updatedAt) | reverse | .[0:8] | .[].name'); do
+            gh release download videos -p "$a" -D out/tiktok --clobber
+          done
+          ls out/tiktok
+      - name: NEAR Publisher (40 min)
+        env:
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          CLOUDFLARED_BIN: /usr/local/bin/cloudflared
+        run: node pipeline/tiktok.mjs server
