@@ -3,109 +3,99 @@
   "cover": {
     "top": "NEWS FROM AROUND THE WORLD",
     "main": "A NOR'EASTER PUTS",
-    "highlight": "TENS OF MILLIONS",
-    "bottom": "FROM MAINE TO VIRGINIA IN ITS PATH",
+    "highlight": "MAINE TO VIRGINIA",
+    "bottom": "IN THE PATH OF RAIN, WIND AND COASTAL FLOODING",
     "blur": false,
     "photo": {
-      "query": "Wikimedia Commons nor'easter coastal flooding New Jersey",
-      "prompt": "large waves and floodwater covering a coastal street during a nor'easter on the U.S. East Coast"
-    },
-    "photoFile": "photo-cover.png",
-    "credit": "AI illustration"
+      "query": "Wikimedia Commons coastal flooding seawall Atlantic Ocean storm",
+      "prompt": "storm waves crashing over a seawall on the East Coast with flooded streets and dark Atlantic clouds"
+    }
   },
   "slides": [
     {
       "tag": "WEATHER",
-      "headline": "Nor’easter puts Maine to Virginia in its path",
-      "highlight": "Maine to Virginia",
-      "body": "Tens of millions of people from Maine to Virginia are in the path of the powerful storm.",
-      "place": "U.S. East Coast",
-      "source": "BBC News",
-      "photo": {
-        "query": "Wikimedia Commons East Coast nor'easter storm waves",
-        "prompt": "dark storm clouds over rough Atlantic surf along the U.S. East Coast"
-      },
-      "photoFile": "photo-1.png",
-      "credit": "AI illustration"
-    },
-    {
-      "tag": "WEATHER",
-      "headline": "That includes emergencies in New York and New Jersey",
-      "highlight": "New York and New Jersey",
-      "body": "New York and New Jersey declared emergencies as the storm brings coastal flooding, heavy rain and wind.",
-      "place": "New York and New Jersey",
-      "source": "BBC",
-      "photo": {
-        "query": "Wikimedia Commons New York City storm rain flooding",
-        "prompt": "rain and standing water on a New York City street during a coastal storm"
-      },
-      "photoFile": "photo-2.jpg",
-      "credit": "Photo: Tommy Gao / CC BY-SA 4.0"
-    },
-    {
-      "tag": "WEATHER",
-      "headline": "And heavy snow and high winds are hitting the Northeast",
-      "highlight": "heavy snow",
-      "body": "The storm has brought heavy snow and high winds to parts of the Northeast and snarled travel in New York City.",
-      "place": "Northeast U.S.",
-      "source": "The New York Times",
-      "photo": {
-        "query": "Wikimedia Commons New York City heavy snow storm",
-        "prompt": "snow-covered New York City street with traffic moving slowly during a winter storm"
-      },
-      "photoFile": "photo-3.jpg",
-      "credit": "Photo: Danazar / CC BY-SA 4.0"
-    },
-    {
-      "tag": "WEATHER",
-      "headline": "That started as a bombogenesis snowstorm",
-      "highlight": "bombogenesis snowstorm",
-      "body": "The system rapidly strengthened off the East Coast before pushing snow, wind and coastal flooding into the region.",
-      "place": "U.S. East Coast",
-      "source": "BBC",
-      "photo": {
-        "query": "Wikimedia Commons satellite nor'easter cyclone East Coast",
-        "prompt": "satellite-style view of a large winter cyclone off the U.S. East Coast"
-      },
-      "photoFile": "photo-4.png",
-      "credit": "AI illustration"
-    },
-    {
-      "tag": "WEATHER",
-      "headline": "Which has left at least 3 dead at the Jersey Shore",
-      "highlight": "at least 3",
-      "body": "At least 3 people have died as the dayslong nor’easter brings a final surge of coastal flooding to the Jersey Shore.",
-      "place": "Jersey Shore",
+      "headline": "A nor'easter is battering the East Coast",
+      "highlight": "East Coast",
+      "body": "The storm is bringing rain, wind and coastal flooding this weekend, with gusts forecast up to 60 mph and breaking waves up to 9 feet.",
+      "place": "East Coast",
       "source": "CNN",
       "photo": {
-        "query": "Wikimedia Commons Jersey Shore coastal flooding storm",
-        "prompt": "flooded street near beach homes on the Jersey Shore during a nor'easter"
-      },
-      "photoFile": "photo-5.jpg",
-      "credit": "Photo: Rhododendrites / CC BY-SA 4.0"
+        "query": "Wikimedia Commons nor'easter coastal flooding East Coast",
+        "prompt": "coastal flooding on an East Coast street during a nor'easter with rain, wind and gray skies"
+      }
     },
     {
       "tag": "WEATHER",
-      "headline": "So officials warn of outages, damage and flight cuts",
-      "highlight": "flight cuts",
-      "body": "New York City faces flooding, power outages and damage Sunday, while airports report hundreds of canceled flights.",
-      "place": "New York City",
-      "source": "Gothamist",
+      "headline": "That put New York and New Jersey under emergencies",
+      "highlight": "under emergencies",
+      "body": "New York and New Jersey declared states of emergency and told people to avoid travel through the weekend.",
+      "place": "New York and New Jersey",
+      "source": "NBC News",
       "photo": {
-        "query": "Wikimedia Commons LaGuardia Airport winter storm delays",
-        "prompt": "airport departure board with canceled flights during a winter storm"
+        "query": "Wikimedia Commons New Jersey coastal storm flooding street",
+        "prompt": "rainy flooded street near the New Jersey shore with emergency vehicles in the distance"
+      }
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "And Atlantic City flooding hit its highest point since Sandy",
+      "highlight": "highest point",
+      "body": "Flooding in Atlantic City reached its highest point since Superstorm Sandy, and neighborhoods along the Jersey Shore flooded.",
+      "place": "Atlantic City",
+      "source": "PhillyVoice",
+      "photo": {
+        "query": "Wikimedia Commons Atlantic City flooding storm",
+        "prompt": "flooded Atlantic City street near the shore during a coastal storm"
+      }
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "That sent rescuers to flooded New Jersey motels",
+      "highlight": "flooded motels",
+      "body": "First responders rescued 9 adults and 1 dog from flooded motels in New Jersey on Saturday morning.",
+      "place": "New Jersey",
+      "source": "AP via Spokesman-Review",
+      "photo": {
+        "query": "Wikimedia Commons New Jersey flood rescue motel",
+        "prompt": "first responders near flooded motel parking lots in coastal New Jersey during heavy rain"
+      }
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "And tens of thousands lost power across the region",
+      "highlight": "lost power",
+      "body": "Tens of thousands of people in the Northeast and Mid-Atlantic lost power, and trees came down in New York City.",
+      "place": "Northeast and Mid-Atlantic",
+      "source": "NBC News",
+      "photo": {
+        "query": "Wikimedia Commons downed trees New York City storm",
+        "prompt": "downed trees on a New York City street after a windstorm with wet pavement and cloudy skies"
+      },
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Jay Dobkin / CC BY-SA 4.0"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "So Saturday night into Sunday brings more flood risk",
+      "highlight": "more flood risk",
+      "body": "The National Weather Service said the storm would intensify again Saturday night into Sunday, with more flooding likely.",
+      "place": "Northeast",
+      "source": "PhillyVoice",
+      "photo": {
+        "query": "Wikimedia Commons storm clouds Atlantic Ocean coast",
+        "prompt": "dark storm clouds over the Atlantic Ocean near an East Coast shoreline"
       },
       "photoFile": "photo-6.jpg",
-      "credit": "Photo: Miami Beach Casino Co. / Public domain"
+      "credit": "Photo: Dietmar Rabich / CC BY-SA 4.0"
     }
   ],
-  "caption": "A nor’easter is hitting the East Coast, with emergencies in New York and New Jersey and tens of millions from Maine to Virginia in its path.\nDo you have family or travel plans anywhere in the storm zone?",
+  "caption": "A nor'easter is bringing rain, wind and coastal flooding to the East Coast this weekend.",
   "hashtags": [
     "#Noreaster",
     "#EastCoastWeather"
   ],
   "collaborators": [],
-  "igCaption": "A nor’easter is hitting the East Coast, with emergencies in New York and New Jersey and tens of millions from Maine to Virginia in its path.\nDo you have family or travel plans anywhere in the storm zone?\n\n📰 Sources: BBC News, BBC, The New York Times, CNN, Gothamist\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#Noreaster #EastCoastWeather #miami #southflorida",
+  "igCaption": "A nor'easter is bringing rain, wind and coastal flooding to the East Coast this weekend.\n\n📰 Sources: CNN, NBC News, PhillyVoice, AP via Spokesman-Review\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#Noreaster #EastCoastWeather #miami #southflorida",
   "kind": "world",
   "kicker": "NEWS FROM AROUND THE WORLD 🌎",
   "date": "2026-09-26",
