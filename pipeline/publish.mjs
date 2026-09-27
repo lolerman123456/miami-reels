@@ -158,7 +158,12 @@ async function spacing(api, igUser, token) {
 
 async function finish(api, igUser, token, creationId, label) {
   if (!String(label).startsWith('story:')) await spacing(api, igUser, token);
-  const pub = await call(`${api}/${igUser}/media_publish`, { creation_id: creationId, access_token: token });
+  // a freshly created container sometimes isn't visible yet ("Media Not Found", subcode 2207006) → retry a few times
+  let pub;
+  for (let i = 0; ; i++) {
+    try { pub = await call(`${api}/${igUser}/media_publish`, { creation_id: creationId, access_token: token }); break; }
+    catch (e) { if (i >= 3 || !/2207006|Media Not Found/.test(e.message)) throw e; await new Promise(r => setTimeout(r, 15000)); }
+  }
   const info = await (await fetch(`${api}/${pub.id}?fields=permalink&access_token=${token}`)).json();
   console.log(`✔ Posted: ${info.permalink || pub.id}`);
   fs.appendFileSync(path.join(ROOT, 'posted.log'), `${new Date().toISOString()}\t${label}\t${info.permalink || pub.id}\n`);
