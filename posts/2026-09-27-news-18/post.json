@@ -1,0 +1,113 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "BROWARD TEEN",
+    "main": "SPEAKS OUT",
+    "highlight": "AFTER ATTACK",
+    "bottom": "AT A GAME",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons high school football field Florida night",
+      "prompt": "empty high school football field in Broward County at night under stadium lights, no people visible"
+    },
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Heidi Knapp / CC BY-SA 4.0"
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "A 15-year-old is speaking out after a Broward game attack",
+      "highlight": "15-year-old",
+      "body": "The teen and his mother talked about an attack at a Broward high school football game that was caught on video.",
+      "place": "Broward County",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Wikimedia Commons high school football stadium Florida night",
+        "prompt": "empty high school football stadium at night in South Florida, bright field lights, no people visible"
+      },
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Ven-Lib / CC BY-SA 4.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "That video shows an attack involving seven people",
+      "highlight": "seven people",
+      "body": "The incident involved seven people at a Broward high school football game.",
+      "place": "Broward County",
+      "source": "Local 10",
+      "photo": {
+        "query": "Wikimedia Commons football field bleachers night Florida",
+        "prompt": "empty metal bleachers beside a high school football field at night, no people visible"
+      },
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "That happened Friday night in Broward County",
+      "highlight": "Friday night",
+      "body": "The attack on the 15-year-old was captured on camera Friday night in Broward County.",
+      "place": "Broward County",
+      "source": "Local 10",
+      "photo": {
+        "query": "Wikimedia Commons Broward County Florida school stadium",
+        "prompt": "exterior of a Broward County school stadium at night with field lights on, no people visible"
+      },
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Which puts a school game inside a county of 1.94M",
+      "highlight": "1.94M",
+      "body": "Broward had 1,944,375 residents in the 2020 census and is Florida’s second-most populous county after Miami-Dade.",
+      "place": "Broward County",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Broward County Florida aerial",
+        "prompt": "aerial view of Broward County suburbs and roads in South Florida, no people visible"
+      },
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Yanjipy / CC BY-SA 4.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "And the teen’s mother is now part of the story",
+      "highlight": "teen’s mother",
+      "body": "The 15-year-old and his mother both spoke about the attack involving seven people at the football game.",
+      "place": "Broward County",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Wikimedia Commons Broward County courthouse Fort Lauderdale",
+        "prompt": "Broward County courthouse exterior in Fort Lauderdale, daytime, no people visible"
+      },
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Georgia Guercio / CC BY-SA 3.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "So the next detail is what the investigation shows",
+      "highlight": "investigation",
+      "body": "The public details so far center on the video, the teen, his mother, seven people and the Broward school football game.",
+      "place": "Broward County",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Wikimedia Commons police car Broward County Florida",
+        "prompt": "police cruiser lights near an empty school parking lot in Broward County at night, no people visible"
+      },
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Oleg Yunakov / CC BY-SA 4.0"
+    }
+  ],
+  "caption": "A 15-year-old and his mother are speaking out after a Friday night attack at a Broward high school football game was caught on video.\n\nWhat should schools do when violence breaks out at games?",
+  "hashtags": [
+    "#BrowardCounty",
+    "#SouthFloridaNews"
+  ],
+  "collaborators": [],
+  "igCaption": "A 15-year-old and his mother are speaking out after a Friday night attack at a Broward high school football game was caught on video.\n\nWhat should schools do when violence breaks out at games?\n\n📰 Sources: WPLG Local 10, Local 10, Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#BrowardCounty #SouthFloridaNews #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-09-27",
+  "id": "2026-09-27-news-18"
+}
