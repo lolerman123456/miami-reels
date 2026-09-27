@@ -1,0 +1,113 @@
+{
+  "sector": "WORLD",
+  "cover": {
+    "top": "RUBIO",
+    "main": "WANTS TO WELCOME",
+    "highlight": "PUTIN",
+    "bottom": "TO MIAMI",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Miami skyline Biscayne Bay",
+      "prompt": "Miami skyline over Biscayne Bay with flags outside a convention venue, no people visible"
+    },
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: P. Hughes / CC BY 4.0"
+  },
+  "slides": [
+    {
+      "tag": "WORLD",
+      "headline": "Rubio faces criticism over Putin in Miami",
+      "highlight": "Putin in Miami",
+      "body": "A Miami Herald opinion article criticized Marco Rubio over support for welcoming Vladimir Putin to Miami.",
+      "place": "Miami",
+      "source": "miamiherald.com",
+      "photo": {
+        "query": "Wikimedia Commons Marco Rubio Miami",
+        "prompt": "A government building in Miami with U.S. flags outside, no people visible"
+      },
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Florida House of Representatives / Public domain"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "That follows Trump’s Miami G20 invitation",
+      "highlight": "Miami G20 invitation",
+      "body": "Trump invited Putin to the G20 summit in Miami, and Russia said it would consider the invitation.",
+      "place": "Miami",
+      "source": "Al Jazeera",
+      "photo": {
+        "query": "Wikimedia Commons G20 summit flags",
+        "prompt": "Rows of international flags outside a summit venue in Miami, no people visible"
+      },
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Casa Rosada / CC BY-SA 2.0"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "That also puts Rubio’s Miami roots in the story",
+      "highlight": "Miami roots",
+      "body": "Rubio was born and raised in Miami, represented Florida in the U.S. Senate from 2011 to 2025, and became secretary of state in 2025.",
+      "place": "Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Miami City Hall flags",
+        "prompt": "Miami government building exterior with American and Florida flags, daytime, no people visible"
+      },
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "Which brings Putin’s Ukraine record to South Florida",
+      "highlight": "Ukraine record",
+      "body": "Putin launched Russia’s full-scale invasion of Ukraine in February 2022, and the International Criminal Court issued an arrest warrant for him in March 2023.",
+      "place": "Russia / Ukraine",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Ukraine war damaged building",
+        "prompt": "Damaged urban building in Ukraine with debris and cloudy sky, no people visible"
+      },
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Rasal Hague / CC BY-SA 4.0"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "And senators are urging Trump to disinvite him",
+      "highlight": "disinvite him",
+      "body": "Senators urged Trump to disinvite Putin from the Miami G20 summit, while the EU plans to condemn the war in Ukraine if Putin attends.",
+      "place": "Miami",
+      "source": "suaragarut.id",
+      "photo": {
+        "query": "Wikimedia Commons United States Capitol exterior",
+        "prompt": "U.S. Capitol exterior with flags and cloudy sky, no people visible"
+      },
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Noclip / Public domain"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "So Russia says it will consider the invite",
+      "highlight": "consider the invite",
+      "body": "The Kremlin said no decision has been made on whether Putin will attend the Miami summit.",
+      "place": "Moscow / Miami",
+      "source": "Al Arabiya English",
+      "photo": {
+        "query": "Wikimedia Commons Kremlin Moscow exterior",
+        "prompt": "Kremlin walls and towers in Moscow under a gray sky, no people visible"
+      },
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Retired electrician / CC0"
+    }
+  ],
+  "caption": "A Miami G20 invitation for Vladimir Putin has turned into a South Florida political fight around Marco Rubio.\nShould Miami host him if Russia accepts the invitation?",
+  "hashtags": [
+    "#MiamiPolitics",
+    "#G20Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "A Miami G20 invitation for Vladimir Putin has turned into a South Florida political fight around Marco Rubio.\nShould Miami host him if Russia accepts the invitation?\n\n📰 Sources: miamiherald.com, Al Jazeera, Wikipedia, suaragarut.id, Al Arabiya English\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiPolitics #G20Miami #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-09-27",
+  "id": "2026-09-27-news-06"
+}
