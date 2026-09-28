@@ -1,0 +1,114 @@
+{
+  "sector": "HISTORY",
+  "cover": {
+    "top": "DID YOU KNOW",
+    "main": "ONE MAN BUILT CORAL CASTLE WITH MORE THAN",
+    "highlight": "1,100 TONS",
+    "bottom": "NEAR HOMESTEAD",
+    "blur": false,
+    "photo": {
+      "query": "Coral Castle Florida oolite limestone walls sunset",
+      "prompt": "low-angle photo of Coral Castle's oolite limestone walls near Homestead, Florida, warm sunset light, no people"
+    },
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration"
+  },
+  "slides": [
+    {
+      "tag": "HISTORY",
+      "headline": "Coral Castle holds more than 1,100 short tons",
+      "highlight": "1,100 short tons",
+      "body": "Edward Leedskalnin quarried and sculpted more than 1,100 short tons of oolite limestone into Coral Castle.",
+      "place": "Near Homestead",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Coral Castle Florida carved oolite limestone structures",
+        "prompt": "wide photo of Coral Castle's carved limestone structures and walls near Homestead, Florida, no people"
+      },
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "HISTORY",
+      "headline": "That work took more than 28 years",
+      "highlight": "28 years",
+      "body": "Leedskalnin spent more than 28 years building it and refused to let visitors watch him work.",
+      "place": "Near Homestead",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Coral Castle pulleys simple tools limestone blocks",
+        "prompt": "nighttime photo of limestone blocks, pulleys and simple tools at Coral Castle, no people"
+      },
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "HISTORY",
+      "headline": "And he started it after a rejected wedding",
+      "highlight": "16-year-old fiancée",
+      "body": "Coral Castle material says his 16-year-old fiancée rejected him in Latvia one day before their wedding.",
+      "place": "Latvia",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Edward Leedskalnin portrait Coral Castle",
+        "prompt": "archival portrait of Edward Leedskalnin beside carved limestone at Coral Castle"
+      },
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "HISTORY",
+      "headline": "Which began as Ed’s Place in Florida City",
+      "highlight": "Ed’s Place",
+      "body": "Around 1923, he built the first version at 18900 SW 352nd Street in Florida City and named it Ed’s Place.",
+      "place": "Florida City",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Florida City Florida 1920s road Everglades",
+        "prompt": "historic photo of a remote 1920s Florida City road near the Everglades with limestone blocks and scrubland"
+      },
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "HISTORY",
+      "headline": "Then he moved it 10 miles north",
+      "highlight": "10 miles north",
+      "body": "Around 1936, he moved the castle 10 miles north to its current location near Homestead.",
+      "place": "Near Homestead",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Coral Castle entrance South Dixie Highway Florida",
+        "prompt": "roadside photo of the Coral Castle entrance on South Dixie Highway near Homestead, Florida, no people"
+      },
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "HISTORY",
+      "headline": "So visitors paid 10 cents, then 25 cents",
+      "highlight": "25 cents",
+      "body": "In Florida City, tours cost 10 cents. After the move, he asked for 25-cent donations and let people in free if they had no money.",
+      "place": "Near Homestead",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Coral Castle Rock Gate entrance signs Ring Bell Twice",
+        "prompt": "close-up photo of Coral Castle's carved rock entrance sign reading Ring Bell Twice, no people",
+        "mark": "arrow"
+      },
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Coral Castle started as Ed’s Place in Florida City, then Edward Leedskalnin moved it 10 miles north near Homestead.\nWhich Coral Castle fact did you already know?",
+  "hashtags": [
+    "#CoralCastle",
+    "#HomesteadFL"
+  ],
+  "collaborators": [],
+  "igCaption": "Coral Castle started as Ed’s Place in Florida City, then Edward Leedskalnin moved it 10 miles north near Homestead.\nWhich Coral Castle fact did you already know?\n\n📰 Sources: Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#CoralCastle #HomesteadFL #miami #southflorida",
+  "kind": "feature",
+  "kicker": "DID YOU KNOW",
+  "date": "2026-09-28",
+  "id": "2026-09-28-feature"
+}
