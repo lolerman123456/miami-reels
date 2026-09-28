@@ -1,2 +1,8 @@
 # Weekly Reel plan: one topic per line. Each scheduled Reel (1pm, 8pm) uses the next line, then removes it.
 # Lines starting with # are ignored. Leave empty and the system picks its own topics.
+# Owner (Sep 28): social / community only — parties, raves, festivals, nightlife, things to go to with friends.
+The biggest parties in Miami this weekend (Oct 2–4, 2026): clubs, day parties, raves, with dates, venues and prices
+Scariest haunted houses and Halloween events in South Florida this October 2026 (Fright Nights, Halloween Horror Nights-style, haunted trails), dates and ticket prices
+The best free events in Miami this October 2026 (festivals, outdoor movies, markets, concerts)
+Best day parties and pool parties in Miami this month, dates and prices
+Food festivals and food events coming up in South Florida in October 2026, dates and prices
