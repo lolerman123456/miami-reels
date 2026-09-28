@@ -35,6 +35,8 @@ const KINDS = {
   world: { kicker: 'NEWS FROM AROUND THE WORLD 🌎', feed: 'world', pick: 'the single most serious story in the world today: the deadliest, most dangerous or most consequential (war, disaster, attack, crisis). Pick the one with the most facts in the headlines.', ask: 'The night news carousel: ONE world story, the most serious one today, told in depth across 5–6 connected slides (what happened, the scale in numbers, how it started, who is affected, what the world is doing, what happens next, and a Florida/US angle only if there honestly is one).' },
   feature: { feed: 'local' },
   // TikTok-first: things people can actually go to in the next 7 days (the raves Reel was our top post)
+  // everyday share bait (owner): food deals, free stuff, giveaways, food drives — things people send to a friend
+  deals: { kicker: 'FREE & CHEAP IN MIAMI 🍔', feed: 'local', ask: 'A "deals and free stuff" carousel for South Florida: the 5–6 best deals, freebies, giveaways and community food drives/distributions happening now or in the next 7 days (fast-food app deals and free-item days, national food day deals, free events, giveaways, church or food bank food drives with the place, date and time). One slide each: what you get, the price or "FREE", where (chain or place, and city for local ones), the exact dates, and how to get it (app, code, bring ID, first come). Only deals and drives stated in the headlines, still valid now or upcoming; never guess a price or date. Tags are DEALS. Tag the chain or organization if it is in the collaborators list. Caption ends with "send this to someone who needs it".' },
   upcoming: { kicker: 'THIS WEEK IN MIAMI 🎟️', feed: 'local', ask: 'An "upcoming in South Florida" carousel: the 5–6 best things happening in the next 7 days that people can actually go to (concerts, festivals, parties, openings, free events, big games, pop-ups). One slide each: what it is, the exact date and time, the venue and city, the price if known, and one line on why it is worth going. Only events whose dates are in the headlines and fall within the next 7 days; skip anything already over. Order by date. Headlines name the event; tags are EVENTS. Caption ends asking who they are taking (tag a friend).' },
 };
 
@@ -90,7 +92,7 @@ function recentPosts(days = 7) {
 
 export async function writeCarousel(kind, { topic, preview } = {}) {
   const spec = KINDS[kind];
-  if (!spec) throw new Error(`Unknown carousel kind "${kind}" (brief|news|world|feature|upcoming)`);
+  if (!spec) throw new Error(`Unknown carousel kind "${kind}" (brief|news|world|feature|upcoming|deals)`);
   const weekday = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })).getDay();
   const feature = kind === 'feature' ? FEATURES[weekday] : null;
   const kicker = feature ? `${feature.name}` : spec.kicker;
@@ -117,6 +119,13 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     for (const t of (choice.wikipedia || []).slice(0, 2)) { const w = await wikiArticle(t, { chars: 3000 }).catch(() => null); if (w) extra.push(`WIKIPEDIA "${w.title}" (background):\n${w.text}`); }
     topic = `ONE story, in depth: ${choice.story}. Use only headlines about this story.`;
   }
+  if (kind === 'deals' && !topic) {
+    const qs = ['free food deal this week', "McDonald's deal this week", 'Chick-fil-A free', 'fast food deals this week', 'national food day deals free', 'Miami free giveaway this weekend', 'South Florida food drive this week', 'Feeding South Florida food distribution', 'Miami free event this week', 'Starbucks Dunkin deal this week'];
+    const found = [];
+    for (const q of qs) found.push(...await searchNews(q, { days: 7, max: 12 }).catch(() => []));
+    news.splice(0, news.length, ...found, ...news.slice(0, 15));
+    console.log(`  deal sources: ${found.length} headlines`);
+  }
   if (kind === 'upcoming' && !topic) {
     // event listings: search the next week's things to do across South Florida
     const qs = ['Miami events this weekend', 'things to do in Miami this week', 'Fort Lauderdale events this weekend', 'Miami concert festival this week', 'South Florida free events this weekend', 'Miami new opening pop-up'];
@@ -137,6 +146,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     topic ? `${spec.pick ? spec.ask + '\n' : ''}The account owner asked for this — follow it: ${topic}` : (feature ? feature.ask : spec.ask),
     kind === 'world' ? 'COVER: the small top line is always "NEWS FROM AROUND THE WORLD" (we add it). Leave "top" empty and make main + highlight + bottom a complete sentence on their own, with its own subject, e.g. main "A NOR\'EASTER PUTS", highlight "50 MILLION", bottom "FROM MAINE TO VIRGINIA IN ITS PATH".' : '',
     `Today (New York): ${new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric' })}`,
+    kind === 'deals' ? `Headlines (date — outlet — headline — summary). Only use deals, freebies and drives that are still valid now or coming up in the next 7 days; skip expired ones:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` :
     kind === 'upcoming' ? `Headlines (date — outlet — headline — summary). Only use events whose date is stated and falls in the next 7 days:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` :
     `Headlines (date — outlet — headline — summary). Only use headlines from the last 3 days about THIS exact event; a search can return an older, similar event (last winter's storm, a past case): ignore those, and if two headlines disagree, leave the detail out:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}`,
     extra.length ? `Fact sources:\n\n${extra.join('\n\n')}` : '',
@@ -176,7 +186,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   }
   post = sanitize(post);
   post.collaborators = cleanCollabs(post.collaborators);
-  const SECTORS = /^(EVENTS|ECONOMY|TRAFFIC|WEATHER|REAL ESTATE|CRIME|DEVELOPMENT|TRANSIT|HISTORY|SPORTS|HEALTH|EDUCATION|CITY HALL|WORLD|USA)$/;
+  const SECTORS = /^(DEALS|EVENTS|ECONOMY|TRAFFIC|WEATHER|REAL ESTATE|CRIME|DEVELOPMENT|TRANSIT|HISTORY|SPORTS|HEALTH|EDUCATION|CITY HALL|WORLD|USA)$/;
   const single = kind === 'feature' || !!topic;
   for (const x of post.slides) {
     if (single && post.sector) x.tag = post.sector;
@@ -359,7 +369,7 @@ async function tiktokWorthy(post, kind) {
   const log = fs.existsSync(path.join(ROOT, 'posted.log')) ? fs.readFileSync(path.join(ROOT, 'posted.log'), 'utf8') : '';
   const today = log.split('\n').filter(l => l.includes(`tiktok:${post.date}-`)).length; // slideshows already sent today
   if (today >= cap) return console.log(`  (TikTok: already ${today} slideshows today)`), false;
-  if (kind === 'upcoming') return true;
+  if (kind === 'upcoming' || kind === 'deals') return true;
   if (kind === 'world') return false;
   const r = await chat([{ role: 'system', content: 'Rate 1–10 how well this South Florida carousel would do on TikTok with 18–35 year olds in Miami. High: things happening now or coming up that people can go to, and genuinely viral stories people share and argue about (a wild video, a shocking local moment, a celebrity in Miami, a huge price shock). Low: politics, court procedure, routine crime, world news, dry data. Reply JSON {"score": n, "why": "short"}.' },
     { role: 'user', content: JSON.stringify({ cover: post.cover, slides: post.slides.map(x => x.headline) }) }]).catch(() => ({ score: 0 }));
