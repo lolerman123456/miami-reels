@@ -10,15 +10,23 @@ const REPO = process.env.GITHUB_REPOSITORY || 'lolerman123456/miami-reels';
 
 export const wantsMusic = episode => !!episode?.music;
 
+// Buffer sometimes answers with an HTML error page (gateway hiccup): retry a few times before giving up.
 async function gql(query, variables = {}) {
-  const res = await fetch(API, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.BUFFER_API_KEY}` },
-    body: JSON.stringify({ query, variables }),
-  });
-  const j = await res.json();
-  if (!res.ok || j.errors) throw new Error(`Buffer API: ${JSON.stringify(j.errors || j).slice(0, 300)}`);
-  return j.data;
+  for (let attempt = 1; ; attempt++) {
+    const res = await fetch(API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json', Authorization: `Bearer ${process.env.BUFFER_API_KEY}` },
+      body: JSON.stringify({ query, variables }),
+    });
+    const txt = await res.text();
+    let j = null;
+    try { j = JSON.parse(txt); } catch {}
+    if (j && res.ok && !j.errors) return j.data;
+    const why = j ? JSON.stringify(j.errors || j).slice(0, 300) : `HTTP ${res.status}: ${txt.replace(/\s+/g, ' ').slice(0, 200)}`;
+    if (attempt >= 4 || (j && res.status < 500 && res.status !== 429)) throw new Error(`Buffer API: ${why}`);
+    console.log(`  (Buffer attempt ${attempt} failed: ${why}; retrying)`);
+    await new Promise(r => setTimeout(r, attempt * 10000));
+  }
 }
 
 async function channelFor(service) {
