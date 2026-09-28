@@ -361,10 +361,10 @@ function coverHTML(post, dir, h) {
     ${c.blur ? `<div class="caps" style="position:absolute;left:0;right:0;top:${h * 0.22}px;text-align:center;font-size:${h > 1400 ? 300 : 250}px">?</div>` : ''}
     ${img ? markSVG(c.mark, h * 0.08, h * 0.42) : ''}
     ${c.credit && !c.blur ? `<div class="credit">${esc(c.credit)}</div>` : ''}
-    ${post.kicker ? `<div style="position:absolute;left:30px;top:24px;background:${BLUE};border-radius:14px;padding:10px 22px;font-weight:900;font-size:30px;letter-spacing:1px">${esc(post.kicker)}</div>` : ''}
+    ${post.kicker && ALIVE.includes(post.kind) ? `<div style="position:absolute;left:30px;top:24px;background:${BLUE};border-radius:14px;padding:10px 22px;font-weight:900;font-size:30px;letter-spacing:1px">${esc(post.kicker)}</div>` : ''}
     <div style="position:absolute;left:40px;right:40px;bottom:${h > 1400 ? 220 : 150}px;text-align:center">
-      ${(c.logoFiles || []).length ? `<div style="display:flex;gap:18px;justify-content:center;margin-bottom:26px">${c.logoFiles.map(f => dataUrl(dir, f)).filter(Boolean).map(u => `<div style="background:#fff;border-radius:18px;width:${c.logoFiles.length > 4 ? 140 : 170}px;height:${c.logoFiles.length > 4 ? 100 : 120}px;padding:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.4)"><img src="${u}" style="width:100%;height:100%;object-fit:contain"></div>`).join('')}</div>` : ''}
-      ${(c.emojis || []).length && !(c.logoFiles || []).length ? `<div style="font-size:64px;margin-bottom:14px;letter-spacing:12px">${c.emojis.slice(0, 4).map(esc).join('')}</div>` : ''}
+      ${(c.logoFiles || []).length && ALIVE.includes(post.kind) ? `<div style="display:flex;gap:18px;justify-content:center;margin-bottom:26px">${c.logoFiles.map(f => dataUrl(dir, f)).filter(Boolean).map(u => `<div style="background:#fff;border-radius:18px;width:${c.logoFiles.length > 4 ? 140 : 170}px;height:${c.logoFiles.length > 4 ? 100 : 120}px;padding:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.4)"><img src="${u}" style="width:100%;height:100%;object-fit:contain"></div>`).join('')}</div>` : ''}
+      ${(c.emojis || []).length && !(c.logoFiles || []).length && ALIVE.includes(post.kind) ? `<div style="font-size:64px;margin-bottom:14px;letter-spacing:12px">${c.emojis.slice(0, 4).map(esc).join('')}</div>` : ''}
       ${c.top ? `<div class="caps" style="font-size:${fit1(c.top, 68)}px;margin-bottom:10px">${esc(c.top)}</div>` : ''}
       ${c.main ? `<div class="caps" style="font-size:${fit1(c.main, 104)}px">${esc(c.main)}</div>` : ''}
       <div class="caps blue" style="font-size:${fit1(c.highlight, 168)}px;margin:4px 0">${esc(c.highlight)}</div>
@@ -373,7 +373,32 @@ function coverHTML(post, dir, h) {
     ${bar(h > 1400 ? `new post on our page ${arrow}` : `swipe for more ${arrow}`)}`;
 }
 
-function slideHTML(s, i, n, dir, post) {
+// classic news look (owner likes it for news: easy on the eyes): full photo on top, black below, blue accents
+function newsSlideHTML(s, i, n, dir) {
+  const img = dataUrl(dir, s.photoFile);
+  const hl = String(s.headline || ''); const k = s.highlight ? hl.toLowerCase().indexOf(String(s.highlight).toLowerCase()) : -1;
+  const headline = k >= 0 ? `${esc(hl.slice(0, k))}<span class="blue">${esc(hl.slice(k, k + s.highlight.length))}</span>${esc(hl.slice(k + s.highlight.length))}` : esc(hl);
+  const size = Math.max(52, Math.min(84, Math.floor(84 * Math.sqrt(48 / Math.max(48, hl.length)))));
+  const red = /CRIME|BREAKING|UPDATE/.test(s.tag || '');
+  return `
+    ${img ? `<div class="bg" style="background-image:url('${img}');bottom:auto;height:760px"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 20%, #2a3a66, #05070d)"></div>`}
+    <div class="shade" style="background:linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(0,0,0,.6) 45%, #000 57%)"></div>
+    ${img ? markSVG(s.mark, 90, 460) : ''}
+    ${s.credit ? `<div class="credit">${esc(s.credit)}</div>` : ''}
+    <div style="position:absolute;left:60px;right:60px;bottom:150px">
+      <span class="tag" style="background:${red ? '#FF3B3B' : BLUE}">${esc(s.tag || 'NEWS')}</span>
+      <div class="caps" style="font-size:${size}px;margin-top:26px">${headline}</div>
+      <div style="margin-top:26px;font-size:42px;font-weight:700;line-height:1.32;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)">${esc(s.body)}</div>
+      <div style="margin-top:24px;font-size:28px;font-weight:800;color:rgba(255,255,255,.6)">${[s.place ? '📍 ' + esc(s.place) : '', s.source ? 'Source: ' + esc(s.source) : ''].filter(Boolean).join('  ·  ')}</div>
+    </div>
+    ${bar(i + 1 < n ? `${i + 1}/${n} ${arrow}` : `${i + 1}/${n}`)}`;
+}
+
+// two looks (owner): deals / upcoming get the colorful Coffee Day style; news, brief, world, feature keep the classic news look
+const ALIVE = ['deals', 'upcoming'];
+const slideHTML = (s, i, n, dir, post) => (ALIVE.includes(post?.kind) ? aliveSlideHTML : newsSlideHTML)(s, i, n, dir, post);
+
+function aliveSlideHTML(s, i, n, dir, post) {
   const img = dataUrl(dir, s.photoFile), logo = dataUrl(dir, s.logoFile);
   const theme = themeOf(s, post), accent = '#FFD24A';
   const hl = String(s.headline || ''); const k = s.highlight ? hl.toLowerCase().indexOf(String(s.highlight).toLowerCase()) : -1;
@@ -401,8 +426,8 @@ function slideHTML(s, i, n, dir, post) {
 function ctaHTML(post, dir) {
   const img = dataUrl(dir, post.cover.photoFile);
   return `
-    <div class="bg" style="background:radial-gradient(circle at 50% 30%, #3d86ff 0%, ${BLUE} 45%, #0b3fb3 100%)"></div>
-    <div class="bgemoji" style="opacity:.12">📍</div>
+    ${ALIVE.includes(post.kind) ? `<div class="bg" style="background:radial-gradient(circle at 50% 30%, #3d86ff 0%, ${BLUE} 45%, #0b3fb3 100%)"></div>
+    <div class="bgemoji" style="opacity:.12">📍</div>` : img ? `<div class="bg" style="background-image:url('${img}');filter:blur(30px) brightness(.45);transform:scale(1.15)"></div>` : ''}
     <div style="position:absolute;left:60px;right:60px;top:300px;text-align:center">
       <div style="font-size:150px">📍</div>
       <div class="caps" style="font-size:120px;margin-top:20px">STAY <span style="color:#FFD24A">NEAR.</span></div>
