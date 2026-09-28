@@ -1,0 +1,186 @@
+{
+  "title": "Scariest haunted houses in South Florida, October 2026",
+  "id": "029-south-florida-haunted-houses-2026",
+  "sources": [
+    "Secret Miami",
+    "WSVN",
+    "Miami Herald"
+  ],
+  "collaborators": [],
+  "format": "EVENTS / GUIDE",
+  "music": true,
+  "tiktok": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "igCaption": "The scariest haunted houses in South Florida this October 🎃\n\nHouse of Horror: Tropical Park, 5 haunts, through Oct 31 (25th year, new home)\nHorrorland: Jungle Island, 6 haunts, through Nov 1\nSounds of Screams: Fair Expo Center, 4 haunts, new this year\nNightmare Village: Xtreme Action Park, Fort Lauderdale, opens Oct 2\nFright Nights: South Florida Fairgrounds, West Palm, Thu–Sat nights from Oct 8\n\nWhich one are you brave enough to try? Tag the friend who's screaming first.\n\n#MiamiHalloween #HauntedHouse #SouthFlorida #MiamiEvents",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "These are the scariest haunted houses in South Florida this October. Number one just moved.",
+      "caption": "These are the scariest haunted houses in South Florida this October. Number one just moved.",
+      "overlay": [
+        "HAUNTED HOUSES",
+        "SOUTH FLORIDA 2026"
+      ],
+      "emojis": [
+        "🎃",
+        "👻",
+        "🔪",
+        "🩸"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "House of Horror turns twenty-five this year. And it has a new home at Tropical Park. Five haunted houses, plus rides. It runs through Halloween night.",
+      "caption": "House of Horror turns 25 this year. And it has a new home at Tropical Park. 5 haunted houses, plus rides. It runs through Halloween night.",
+      "overlay": "TROPICAL PARK",
+      "badge": "5 HAUNTS",
+      "sub": "House of Horror Haunted Carnival",
+      "emoji": "🎪",
+      "source": "Secret Miami",
+      "location": {
+        "name": "Tropical Park",
+        "lat": 25.732,
+        "lon": -80.323,
+        "h": 5
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 30,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Horrorland takes over Jungle Island. That's six haunted houses, plus scare zones and carnival games. It's open through November first.",
+      "caption": "Horrorland takes over Jungle Island. That's 6 haunted houses, plus scare zones and carnival games. It's open through Nov. 1.",
+      "overlay": "JUNGLE ISLAND",
+      "badge": "6 HAUNTS",
+      "sub": "The Horrorland Scream Park",
+      "emoji": "🧟",
+      "source": "Secret Miami",
+      "location": {
+        "name": "Jungle Island",
+        "lat": 25.7861,
+        "lon": -80.1742,
+        "h": 5
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sounds of Screams is brand new. It's at the Fair Expo Center, from the people behind Bayside Haunted Nights. Four haunted houses, through November first.",
+      "caption": "Sounds of Screams is brand new. It's at the Fair Expo Center, from the people behind Bayside Haunted Nights. 4 haunted houses, through Nov. 1.",
+      "overlay": "FAIR EXPO CENTER",
+      "badge": "NEW",
+      "sub": "Sounds of Screams",
+      "emoji": "😱",
+      "source": "Secret Miami",
+      "location": {
+        "name": "Miami-Dade County Fair & Exposition",
+        "lat": 25.7535,
+        "lon": -80.37,
+        "h": 5
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 210,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "In Fort Lauderdale, Nightmare Village opens October second. It's indoors at Xtreme Action Park. Three different haunts.",
+      "caption": "In Fort Lauderdale, Nightmare Village opens Oct. 2. It's indoors at Xtreme Action Park. 3 different haunts.",
+      "overlay": "FORT LAUDERDALE",
+      "badge": "OPENS OCT 2",
+      "sub": "Nightmare Village",
+      "emoji": "🏚️",
+      "source": "Secret Miami",
+      "location": {
+        "name": "Xtreme Action Park",
+        "lat": 26.1993,
+        "lon": -80.1616,
+        "h": 5
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "And up in West Palm, Fright Nights is back at the South Florida Fairgrounds. Thursday to Saturday nights, starting October eighth.",
+      "caption": "And up in West Palm, Fright Nights is back at the South Florida Fairgrounds. Thursday to Saturday nights, starting Oct. 8.",
+      "overlay": "WEST PALM BEACH",
+      "badge": "STARTS OCT 8",
+      "sub": "Fright Nights",
+      "emoji": "🔪",
+      "source": "Secret Miami",
+      "location": {
+        "name": "South Florida Fairgrounds",
+        "lat": 26.6845,
+        "lon": -80.1913,
+        "h": 5
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 60,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "So which one are you brave enough to try? Tag the friend who's screaming first.",
+      "caption": "So which one are you brave enough to try? Tag the friend who's screaming first.",
+      "overlay": "PICK ONE 🎃",
+      "sub": "October 2026",
+      "location": {
+        "name": "Tropical Park",
+        "lat": 25.732,
+        "lon": -80.323,
+        "h": 5
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 45
+      }
+    }
+  ]
+}
