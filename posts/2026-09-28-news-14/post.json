@@ -1,0 +1,115 @@
+{
+  "sector": "SPORTS",
+  "cover": {
+    "top": "REPORTS SAY",
+    "main": "ACHANE WILL MISS THE REST OF THE",
+    "highlight": "SEASON",
+    "bottom": "AFTER TORN ACL VS. CHIEFS",
+    "blur": false,
+    "photo": {
+      "query": "De'Von Achane Miami Dolphins Chiefs game injury",
+      "prompt": "De'Von Achane in a Miami Dolphins uniform during the Chiefs game, tense sideline or on-field moment, stadium lights, dramatic sports photo"
+    },
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration"
+  },
+  "slides": [
+    {
+      "tag": "SPORTS",
+      "headline": "Reports: Achane suffered torn ACL vs. Chiefs",
+      "highlight": "torn ACL",
+      "body": "Dolphins running back De’Von Achane reportedly suffered a torn ACL against Kansas City.",
+      "place": "Miami Gardens",
+      "source": "ESPN",
+      "photo": {
+        "query": "De'Von Achane Miami Dolphins running back Chiefs",
+        "prompt": "De'Von Achane in Miami Dolphins aqua uniform carrying the ball against Kansas City, tight action shot under stadium lights"
+      },
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "That means his 2026 season is over",
+      "highlight": "season is over",
+      "body": "Reports say Achane will miss the rest of the season after the ACL tear.",
+      "place": "Miami Gardens",
+      "source": "NFL.com",
+      "photo": {
+        "query": "Miami Dolphins sideline Hard Rock Stadium football",
+        "prompt": "Miami Dolphins sideline bench at Hard Rock Stadium after a game, helmets and towels on the bench, stadium lights overhead"
+      },
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "That deepens Miami’s 0-3 start",
+      "highlight": "0-3 start",
+      "body": "The injury followed Miami’s loss to the Chiefs and an 0-3 start.",
+      "place": "Miami Gardens",
+      "source": "CBS Sports",
+      "photo": {
+        "query": "Hard Rock Stadium Miami Dolphins field end zone",
+        "prompt": "wide shot of a quiet Miami Dolphins end zone at Hard Rock Stadium after a loss, scoreboard glow in the background"
+      },
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "And it hits a third-round pick from 2023",
+      "highlight": "third-round pick",
+      "body": "Miami selected Achane in the third round, 84th overall, in the 2023 NFL draft.",
+      "place": "Miami Gardens",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "De'Von Achane Miami Dolphins draft 2023",
+        "prompt": "De'Von Achane in Miami Dolphins gear after being drafted, football portrait with aqua and orange background"
+      },
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "Which follows his Week 3 rookie breakout",
+      "highlight": "Week 3",
+      "body": "In Week 3 of 2023, Achane had 203 rushing yards, 30 receiving yards and 4 total touchdowns as Miami beat Denver 70-20.",
+      "place": "Miami Gardens",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "De'Von Achane Dolphins Broncos 70-20 Week 3 2023",
+        "prompt": "De'Von Achane running with the football during the Dolphins 2023 game against Denver at Hard Rock Stadium, crowd behind him"
+      },
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "So the next question is Miami’s RB room",
+      "highlight": "RB room",
+      "body": "Reports are now tracking Miami’s running back depth and possible free-agent options after Achane’s injury.",
+      "place": "Miami Gardens",
+      "source": "Yahoo Sports",
+      "photo": {
+        "query": "Miami Dolphins practice facility football field",
+        "prompt": "Miami Dolphins practice field with blocking sleds and footballs, morning light, no players visible"
+      },
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Reports say Dolphins RB De’Von Achane suffered a torn ACL in the Chiefs loss and will miss the rest of the season.\nWhat should Miami do next at running back?",
+  "hashtags": [
+    "#MiamiDolphins",
+    "#DeVonAchane"
+  ],
+  "collaborators": [
+    "miamidolphins"
+  ],
+  "igCaption": "Reports say Dolphins RB De’Von Achane suffered a torn ACL in the Chiefs loss and will miss the rest of the season.\nWhat should Miami do next at running back?\n\n📰 Sources: ESPN, NFL.com, CBS Sports, Wikipedia, Yahoo Sports\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiDolphins #DeVonAchane #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-09-28",
+  "id": "2026-09-28-news-14"
+}
