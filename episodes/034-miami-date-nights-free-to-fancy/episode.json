@@ -1,0 +1,217 @@
+{
+  "title": "Miami Date Nights From Free to Fancy",
+  "id": "034-miami-date-nights-free-to-fancy",
+  "format": "GUIDE",
+  "sources": [
+    "Miami Tourism Guide",
+    "Pérez Art Museum Miami",
+    "The Rooftop Guide",
+    "EAST Miami"
+  ],
+  "igCaption": "Five Miami date nights, from free to fancy: sunset at South Pointe Park, a free movie at SoundScape Park, free night at PAMM (every 2nd Saturday), salsa at Ball & Chain, and cocktails 40 floors up at Sugar.\n\nWho are you taking? Tag them 👀\n\nSources: Miami Tourism Guide, Pérez Art Museum Miami, The Rooftop Guide, EAST Miami\n\n#miamidatenight #datenight #miami #southflorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Five date nights in Miami, from free to fancy. And the first one costs nothing.",
+      "overlay": [
+        "MIAMI DATE NIGHTS",
+        "FREE TO FANCY"
+      ],
+      "emojis": [
+        "🌅",
+        "🍸",
+        "💃",
+        "❤️"
+      ],
+      "location": {
+        "name": "Miami Beach",
+        "lat": 25.78,
+        "lon": -80.133,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 298
+      },
+      "caption": "Five date nights in Miami, from free to fancy. And the first one costs nothing."
+    },
+    {
+      "kind": "item",
+      "text": "Start free. Watch the sunset from South Pointe Park. It's the very bottom of Miami Beach, where the cruise ships sail out of PortMiami.",
+      "caption": "Start free. Watch the sunset from South Pointe Park. It's the very bottom of Miami Beach, where the cruise ships sail out of PortMiami.",
+      "overlay": "SOUTH POINTE PARK",
+      "badge": "FREE",
+      "sub": "Sunset · Miami Beach",
+      "emoji": "🌅",
+      "location": {
+        "name": "South Pointe Park",
+        "lat": 25.7659229,
+        "lon": -80.1334471,
+        "h": 5
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 700,
+        "pitch": -32,
+        "heading": 250,
+        "degrees": 40,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "$0",
+          "label": "for two"
+        }
+      ],
+      "source": "Miami Tourism Guide"
+    },
+    {
+      "kind": "item",
+      "text": "Still free. Bring a blanket to SoundScape Park. Movies play outdoors on the wall of the New World Center.",
+      "caption": "Still free. Bring a blanket to SoundScape Park. Movies play outdoors on the wall of the New World Center.",
+      "overlay": "SOUNDSCAPE PARK",
+      "badge": "FREE MOVIES",
+      "sub": "Outdoor screen · Miami Beach",
+      "emoji": "🎬",
+      "location": {
+        "name": "SoundScape Park",
+        "lat": 25.7916742,
+        "lon": -80.1325912,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -32,
+        "heading": 60,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "$0",
+          "label": "bring a blanket"
+        }
+      ],
+      "source": "Miami Tourism Guide"
+    },
+    {
+      "kind": "item",
+      "text": "The Pérez Art Museum is free every second Saturday of the month. The next one is October tenth. Otherwise it's sixteen dollars, right on Biscayne Bay.",
+      "caption": "The Pérez Art Museum is free every second Saturday of the month. The next one is October 10. Otherwise it's $16, right on Biscayne Bay.",
+      "overlay": "PAMM",
+      "badge": "FREE · 2ND SATURDAYS",
+      "sub": "Next: Oct 10 · Downtown",
+      "emoji": "🖼️",
+      "location": {
+        "name": "Pérez Art Museum Miami",
+        "lat": 25.7860327,
+        "lon": -80.1863392,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 160,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "$0",
+          "label": "2nd Saturdays"
+        },
+        {
+          "value": "$16",
+          "label": "normal ticket"
+        }
+      ],
+      "source": "PAMM"
+    },
+    {
+      "kind": "item",
+      "text": "Want to dance? Ball and Chain on Calle Ocho has live music and free salsa lessons. Cocktails run about sixteen dollars.",
+      "caption": "Want to dance? Ball & Chain on Calle Ocho has live music and free salsa lessons. Cocktails run about $16.",
+      "overlay": "BALL & CHAIN",
+      "badge": "FREE SALSA",
+      "sub": "Calle Ocho · Little Havana",
+      "emoji": "💃",
+      "location": {
+        "name": "Ball & Chain",
+        "lat": 25.7658335,
+        "lon": -80.2197766,
+        "h": 8
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 600,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 45,
+        "dir": 1
+      },
+      "stats": [
+        {
+          "value": "$16",
+          "label": "cocktails, about"
+        }
+      ],
+      "source": "Miami Tourism Guide"
+    },
+    {
+      "kind": "item",
+      "text": "And to go big, head to Sugar. It's forty floors up, on top of the EAST hotel in Brickell. Go at golden hour on a weekday to skip the crowd.",
+      "caption": "And to go big, head to Sugar. It's 40 floors up, on top of the EAST hotel in Brickell. Go at golden hour on a weekday to skip the crowd.",
+      "overlay": "SUGAR ROOFTOP",
+      "badge": "40 FLOORS UP",
+      "sub": "EAST Miami · Brickell",
+      "emoji": "🍸",
+      "location": {
+        "name": "EAST Miami",
+        "lat": 25.7666577,
+        "lon": -80.1927661,
+        "h": 150
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -30,
+        "heading": 210,
+        "degrees": 45,
+        "dir": -1
+      },
+      "stats": [
+        {
+          "value": "40",
+          "label": "floors up"
+        }
+      ],
+      "source": "The Rooftop Guide",
+      "hit": "explosion"
+    },
+    {
+      "kind": "outro",
+      "text": "Who are you taking? Tag them. No date yet? The NEAR app shows you who walked past you today.",
+      "overlay": "TAG YOUR DATE ❤️",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Brickell",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1700,
+        "pitch": -32,
+        "heading": 214
+      },
+      "caption": "Who are you taking? Tag them. No date yet? The NEAR app shows you who walked past you today."
+    }
+  ],
+  "collaborators": [],
+  "music": true
+}
