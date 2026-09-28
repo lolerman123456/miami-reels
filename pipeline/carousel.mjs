@@ -36,8 +36,8 @@ const KINDS = {
   feature: { feed: 'local' },
   // TikTok-first: things people can actually go to in the next 7 days (the raves Reel was our top post)
   // everyday share bait (owner): food deals, free stuff, giveaways, food drives — things people send to a friend
-  deals: { kicker: 'FREE & CHEAP IN MIAMI 🍔', feed: 'local', ask: 'A "deals and free stuff" carousel for South Florida: the 5–6 best deals, freebies, giveaways and community food drives/distributions happening now or in the next 7 days (fast-food app deals and free-item days, national food day deals, free events, giveaways, church or food bank food drives with the place, date and time). One slide each: what you get, the price or "FREE", where (chain or place, and city for local ones), the exact dates, and how to get it (app, code, bring ID, first come). Only deals and drives stated in the headlines, still valid now or upcoming; never guess a price or date. Tags are DEALS. Tag the chain or organization if it is in the collaborators list. Caption ends with "send this to someone who needs it".' },
-  upcoming: { kicker: 'THIS WEEK IN MIAMI 🎟️', feed: 'local', ask: 'An "upcoming in South Florida" carousel: the 5–6 best things happening in the next 7 days that people can actually go to (concerts, festivals, parties, openings, free events, big games, pop-ups). One slide each: what it is, the exact date and time, the venue and city, the price if known, and one line on why it is worth going. Only events whose dates are in the headlines and fall within the next 7 days; skip anything already over. Order by date. Headlines name the event; tags are EVENTS. Caption ends asking who they are taking (tag a friend).' },
+  deals: { kicker: 'FREE & CHEAP IN MIAMI 🍔', feed: 'local', ask: 'A "deals and free stuff" carousel for South Florida: the 5–6 best deals, freebies, giveaways and community food drives/distributions happening now or in the next 7 days (fast-food app deals and free-item days, national food day deals, free events, giveaways, church or food bank food drives with the place, date and time). One slide each (5–6 slides): what you get, the price or "FREE", WHO by name (the chain, brand, church or group; never "participating chains"), where (city for local ones), the exact dates, and how to get it (app, code, bring ID, first come). Only deals and drives stated in the headlines, still valid now or upcoming; never guess a price or date. Tags are DEALS. Tag the chain or organization if it is in the collaborators list. Caption ends with "send this to someone who needs it".' },
+  upcoming: { kicker: 'THIS WEEK IN MIAMI 🎟️', feed: 'local', ask: 'An "upcoming in South Florida" carousel: the 5–6 best things happening in the next 7 days that people can actually go to (concerts, festivals, parties, openings, free events, big games, pop-ups). One slide each: what it is, the exact date and time, the venue and city, the price if known, and one line on why it is worth going. Use events whose dates are in the headlines and fall within the next 7 days (or ongoing ones, like an exhibit or season that is open this week); skip anything already over. Always return 5–6 slides. Order by date. Headlines name the event; tags are EVENTS. Caption ends asking who they are taking (tag a friend).' },
 };
 
 const SYSTEM = `You write carousel posts for @getnearapp, a South Florida Instagram account: local news, real facts and useful information, community first. You're the friend who always knows what's going on and explains it clearly.
@@ -90,6 +90,17 @@ function recentPosts(days = 7) {
     .map(d => { try { return readJSON(path.join(dir, d, 'post.json')); } catch { return null; } }).filter(Boolean);
 }
 
+// deals/upcoming: pick the 6–7 most specific items from the broad search, then search each one by name so every slide can
+// say exactly who, what, where, when and how much (the first preview said "participating chains").
+async function digDeeper(news, what) {
+  const plan = await chat([{ role: 'system', content: `From these headlines, pick the 6–7 most shareable specific ${what}. Reply JSON {"items":[{"name":"…","search":"a Google News search that finds the details"}]}.` },
+    { role: 'user', content: news.slice(0, 120).map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}`).join('\n') }]).catch(() => ({ items: [] }));
+  const more = [];
+  for (const it of (plan.items || []).slice(0, 7)) more.push(...await searchNews(it.search, { days: 14, max: 8 }).catch(() => []));
+  news.unshift(...more);
+  console.log(`  details: ${(plan.items || []).map(i => i.name).join('; ')} (${more.length} headlines)`);
+}
+
 export async function writeCarousel(kind, { topic, preview } = {}) {
   const spec = KINDS[kind];
   if (!spec) throw new Error(`Unknown carousel kind "${kind}" (brief|news|world|feature|upcoming|deals)`);
@@ -125,6 +136,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     for (const q of qs) found.push(...await searchNews(q, { days: 7, max: 12 }).catch(() => []));
     news.splice(0, news.length, ...found, ...news.slice(0, 15));
     console.log(`  deal sources: ${found.length} headlines`);
+    await digDeeper(news, 'deals, freebies, giveaways or food drives (name the chain or organization, e.g. "Krispy Kreme free coffee National Coffee Day")');
   }
   if (kind === 'upcoming' && !topic) {
     // event listings: search the next week's things to do across South Florida
@@ -133,6 +145,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     for (const q of qs) found.push(...await searchNews(q, { days: 10, max: 15 }).catch(() => []));
     news.splice(0, news.length, ...found, ...news.slice(0, 20));
     console.log(`  event sources: ${found.length} headlines`);
+    await digDeeper(news, 'events or openings in South Florida in the next 7 days (name the event and venue, e.g. "Rolling Loud Miami 2026 dates tickets")');
   }
   if (feature?.wiki || feature?.rent) {
     const plan = await chat([{ role: 'system', content: 'Plan the fact sources for a South Florida Instagram carousel. Return JSON {"wikipedia":["up to 4 exact English Wikipedia article titles"],"rent":["up to 6 South Florida city names or 5-digit ZIPs"]}. Only fill "rent" for rent posts.' },
@@ -166,7 +179,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     const loose = (kind === 'feature' || topic) ? (post?.slides || []).slice(1).filter(x => !CONNECT.test(String(x.headline || '').trim())).length : 0;
     if (loose > 0 && attempt < TRIES) { console.log(`  attempt ${attempt}: ${loose} headlines don't connect — rewriting`); post = null; continue; }
     if (post?.cover?.highlight && post.cover.photo && n >= 3 && n <= 8 && !incomplete) break;
-    console.log(`  attempt ${attempt}: bad shape (${n} slides, ${incomplete} incomplete) — retrying`);
+    console.log(`  attempt ${attempt}: bad shape (${n} slides, ${incomplete} incomplete${n ? '' : `, got ${JSON.stringify(post || {}).slice(0, 160)}`}) — retrying`);
     post = null;
   }
   if (!post) throw new Error('Could not write carousel');
