@@ -40,7 +40,8 @@ logs `music:<id>  <video link>` in `posted.log` instead of posting. **Send the o
 
 **TikTok** goes through the same Buffer (TikTok connected as a Buffer channel). Owner's rule: nothing auto-posts to TikTok
 (music matters). Every Reel (music ones too) becomes a TikTok **reminder** in Buffer right after its Instagram post / hand-off; the owner adds a sound and
-posts (`postToTikTok` in `pipeline/buffer.mjs`). Carousels aren't sent (Buffer can't do reminders for TikTok photo posts).
+posts (`postToTikTok` in `pipeline/buffer.mjs`). Carousels whose kind is in `control.json` → `tiktokCarousels` (default brief 9am +
+feature 5pm) also go to Buffer as TikTok photo-slideshow reminders, so TikTok gets 4 posts a day (2 Reels + 2 slideshows).
 The old direct TikTok app (`pipeline/tiktok.mjs`, `docs/tiktok/`) is no longer needed.
 
 ## Checking on runs & sharing videos (works without gh / without login — the repo is public)

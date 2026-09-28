@@ -66,23 +66,25 @@ export async function handToOwner(file, episode) {
   return url;
 }
 
-// TikTok through Buffer (TikTok connected as a Buffer channel). Owner's rule: nothing auto-posts to TikTok — music matters —
-// so every Reel becomes a TikTok *reminder* in Buffer; the owner adds a trending sound in TikTok and posts.
-// Carousels are skipped: Buffer can only auto-publish TikTok photo posts (no reminders for them).
+// TikTok through Buffer (TikTok connected as a Buffer channel). Owner's rule: nothing auto-posts to TikTok (music matters),
+// so everything goes in as a TikTok *reminder*: Buffer pings the owner, they add a sound in TikTok and post.
+// video → a Reel; images → a photo slideshow (carousels listed in control.json "tiktokCarousels").
 // Never throws: a TikTok problem must not break the Instagram post.
 export async function postToTikTok({ video, images, text = '', label, ai = false }) {
   if (!process.env.BUFFER_API_KEY) return;
-  if (!video) return console.log('  (TikTok: carousels are not sent — Buffer can only auto-post TikTok photo posts)');
   try {
     const channelId = await channelFor('tiktok');
     if (!channelId) return console.log('  (TikTok: not connected in Buffer yet, skipped)');
+    const assets = video
+      ? [{ video: { url: await publicUrl(video), metadata: { thumbnailOffset: 1500 } } }]
+      : await Promise.all(images.slice(0, 10).map(async f => ({ image: { url: await publicUrl(f, 'tiktok', `${label}-${path.basename(f)}`) } })));
+    const title = text.split('\n')[0].replace(/#\w+/g, '').trim().slice(0, 90);
     const post = await create({
-      channelId, text: text.slice(0, 2200), needsApproval: false,
-      assets: [{ video: { url: await publicUrl(video), metadata: { thumbnailOffset: 1500 } } }],
+      channelId, text: text.slice(0, 2200), needsApproval: false, assets,
       schedulingType: 'notification', mode: 'customScheduled', dueAt: new Date(Date.now() + 3 * 60e3).toISOString(),
-      metadata: { tiktok: { isAiGenerated: !!ai } },
+      metadata: { tiktok: { ...(images ? { title } : {}), isAiGenerated: !!ai } },
     });
-    console.log(`✔ TikTok reminder set in Buffer (owner adds music and posts) — ${post.id}`);
+    console.log(`✔ TikTok reminder set in Buffer (${video ? 'video' : `${assets.length}-photo slideshow`}) — ${post.id}`);
     log(`tiktok:${label}`, 'Buffer reminder (owner posts with music)');
   } catch (e) { console.log(`  (TikTok reminder failed: ${e.message.slice(0, 200)})`); }
 }

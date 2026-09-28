@@ -356,5 +356,11 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     const { publishCarousel, publishStory } = await import('./publish.mjs');
     await publishCarousel(slides, post.igCaption, post.id, { collaborators: post.collaborators });
     await publishStory(story, post.id).catch(e => console.log(`(story skipped: ${e.message})`));
+    // the carousel kinds picked for TikTok (control.json "tiktokCarousels") also go to Buffer as a TikTok slideshow reminder
+    const tk = readJSON(path.join(ROOT, 'control.json')).tiktokCarousels || [];
+    if (tk.includes(post.kind || kind)) {
+      const { postToTikTok } = await import('./buffer.mjs');
+      await postToTikTok({ images: slides, text: post.igCaption, label: post.id, ai: [post.cover, ...post.slides].some(x => /^AI /.test(x?.credit || '')) });
+    }
   }
 }
