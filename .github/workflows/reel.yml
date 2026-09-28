@@ -202,6 +202,7 @@ jobs:
           # owner's weekly plan: a run with no topic/episode takes the next line of plan/queue.txt (and removes it)
           if [ -z "$REEL_TOPIC" ] && [ -z "$REEL_EPISODE" ] && [ -s plan/queue.txt ]; then
             REEL_TOPIC=$(grep -v '^\s*#' plan/queue.txt | grep -v '^\s*$' | head -1)
+            REEL_MUSIC=true  # social/events topics: the owner posts these with a trending sound
             if [ -n "$REEL_TOPIC" ]; then
               echo "▶ weekly plan topic: $REEL_TOPIC"
               grep -vxF "$REEL_TOPIC" plan/queue.txt > q.tmp; mv q.tmp plan/queue.txt
