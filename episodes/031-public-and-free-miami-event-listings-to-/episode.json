@@ -1,0 +1,217 @@
+{
+  "title": "Public and Free Miami Event Listings to Check",
+  "sources": [
+    "Secret Miami",
+    "South Florida on the Cheap"
+  ],
+  "collaborators": [],
+  "igCaption": "Karol G's public pop-up runs Oct. 2 and 3, 11 AM to 6 PM, at 555 NW 29th St.\nFree-event listings exist for The Underline and Miami Beach Bandshell. The Bass has a Free Family Fun Day listing, and MOCA North Miami has a free and cheap events listing.\nWhich one should we check for exact dates and RSVP details next?\n\nSources: Secret Miami, South Florida on the Cheap\n\n#MiamiEvents #FreeMiami #MiamiGuide #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need Miami events to check? Start with a public Karol G pop-up and free-event listings that already name the venues.",
+      "overlay": [
+        "MIAMI EVENTS",
+        "PUBLIC AND FREE"
+      ],
+      "emojis": [
+        "🎟️",
+        "🎶",
+        "🎬",
+        "🌴"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Karol G's Viajando Por El Mundo pop-up opens to the public October second and third, from eleven a.m. to six p.m. Find it at five five five Northwest twenty-ninth Street. Entry is first-come, first-served, and space is limited.",
+      "caption": "Karol G's Viajando Por El Mundo pop-up opens to the public Oct. 2 and 3, from 11 AM to 6 PM. Find it at 555 NW 29th St. Entry is first-come, first-served, and space is limited.",
+      "overlay": "KAROL G POP-UP",
+      "badge": "OCT 2 AND 3",
+      "sub": "Public entry, limited space",
+      "emoji": "🌎",
+      "stats": [
+        {
+          "value": "OCT. 2 AND 3",
+          "label": "POP-UP DATES"
+        },
+        {
+          "value": "11 AM TO 6 PM",
+          "label": "HOURS"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "555 NW 29th Street",
+        "lat": 25.8033,
+        "lon": -80.2036,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 50,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Underline in Brickell has a free-events listing dated September seventeenth, twenty twenty-six. Check that listing before you go for current event details.",
+      "caption": "The Underline in Brickell has a free-events listing dated Sept. 17, 2026. Check that listing before you go for current event details.",
+      "overlay": "THE UNDERLINE",
+      "badge": "SEP 17, 2026",
+      "sub": "Free events in Brickell",
+      "emoji": "🚇",
+      "stats": [
+        {
+          "value": "SEP. 17, 2026",
+          "label": "ARTICLE DATE"
+        }
+      ],
+      "source": "South Florida on the Cheap",
+      "location": {
+        "name": "The Underline Brickell",
+        "lat": 25.7601,
+        "lon": -80.1976,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -34,
+        "heading": 40,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami Beach Bandshell has a free-events listing dated September fifteenth, twenty twenty-six. Put this on the concert side of your list, then check the event page before you leave.",
+      "caption": "Miami Beach Bandshell has a free-events listing dated Sept. 15, 2026. Put this on the concert side of your list, then check the event page before you leave.",
+      "overlay": "BANDSHELL",
+      "badge": "SEP 15, 2026",
+      "sub": "Free events venue",
+      "emoji": "🎶",
+      "stats": [
+        {
+          "value": "SEP. 15, 2026",
+          "label": "ARTICLE DATE"
+        }
+      ],
+      "source": "South Florida on the Cheap",
+      "location": {
+        "name": "Miami Beach Bandshell",
+        "lat": 25.8588,
+        "lon": -80.1209,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -30,
+        "heading": 95,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Bass Museum of Art in Miami Beach has a Free Family Fun Day item in a free days and events listing dated August twenty-eighth, twenty twenty-six.",
+      "caption": "The Bass Museum of Art in Miami Beach has a Free Family Fun Day item in a free days and events listing dated Aug. 28, 2026.",
+      "overlay": "THE BASS",
+      "badge": "AUG 28, 2026",
+      "sub": "Free Family Fun Day",
+      "emoji": "🖼️",
+      "stats": [
+        {
+          "value": "AUG. 28, 2026",
+          "label": "ARTICLE DATE"
+        }
+      ],
+      "source": "South Florida on the Cheap",
+      "location": {
+        "name": "The Bass Museum of Art",
+        "lat": 25.7973,
+        "lon": -80.1298,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 210,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "MOCA in North Miami has a free and cheap events listing dated September twenty-second, twenty twenty-six. Check the event page for the current date, start time, and RSVP note.",
+      "caption": "MOCA in North Miami has a free and cheap events listing dated Sept. 22, 2026. Check the event page for the current date, start time, and RSVP note.",
+      "overlay": "MOCA",
+      "badge": "SEP 22, 2026",
+      "sub": "North Miami art stop",
+      "emoji": "🎨",
+      "stats": [
+        {
+          "value": "SEP. 22, 2026",
+          "label": "ARTICLE DATE"
+        }
+      ],
+      "source": "South Florida on the Cheap",
+      "location": {
+        "name": "MOCA North Miami",
+        "lat": 25.8897,
+        "lon": -80.183,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 750,
+        "pitch": -31,
+        "heading": 15,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Comment with the listing you want checked next.",
+      "overlay": "COMMENT NEXT 🎟️",
+      "sub": "Dates, times, RSVP details",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 200
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "031-public-and-free-miami-event-listings-to-"
+}
