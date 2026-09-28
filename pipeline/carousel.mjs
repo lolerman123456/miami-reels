@@ -90,6 +90,17 @@ function recentPosts(days = 7) {
     .map(d => { try { return readJSON(path.join(dir, d, 'post.json')); } catch { return null; } }).filter(Boolean);
 }
 
+async function newsPhoto(p, dir, name) {
+  try {
+    const res = await fetch(p.url, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(20000) });
+    if (!res.ok) return null;
+    const buf = Buffer.from(await res.arrayBuffer());
+    if (buf.length < 20000) return null; // tiny placeholder/logo
+    const file = path.join(dir, `${name}.jpg`); fs.writeFileSync(file, buf);
+    return { file, credit: p.credit, kind: 'news' };
+  } catch { return null; }
+}
+
 // deals/upcoming: pick the 6–7 most specific items from the broad search, then search each one by name so every slide can
 // say exactly who, what, where, when and how much (the first preview said "participating chains").
 async function digDeeper(news, what) {
@@ -104,6 +115,7 @@ async function digDeeper(news, what) {
 export async function writeCarousel(kind, { topic, preview } = {}) {
   const spec = KINDS[kind];
   if (!spec) throw new Error(`Unknown carousel kind "${kind}" (brief|news|world|feature|upcoming|deals)`);
+  let storyPhotos = [];
   const weekday = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })).getDay();
   const feature = kind === 'feature' ? FEATURES[weekday] : null;
   const kicker = feature ? `${feature.name}` : spec.kicker;
@@ -121,9 +133,12 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   }
   // brief/world: pick ONE story, then pull every headline about it so the slides can go deep
   if (spec.pick && !topic) {
-    const choice = await chat([{ role: 'system', content: `Pick ${spec.pick} Return JSON {"story":"one sentence","search":["2–4 Google News searches to find more reporting on that exact story"],"wikipedia":["0–2 exact English Wikipedia titles for background (a country, a conflict, a place)"]}` },
-      { role: 'user', content: `Headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}\n\nAlready posted (pick something else unless there is a big new development):\n${recentPosts(2).map(p => '- ' + [p.cover?.main, p.cover?.highlight].filter(Boolean).join(' ') + ': ' + (p.slides || []).map(x => x.headline).join('; ')).join('\n') || '(none)'}` }]);
+    const choice = await chat([{ role: 'system', content: `Pick ${spec.pick} Return JSON {"story":"one sentence","search":["2–4 Google News searches to find more reporting on that exact story"],"wikipedia":["0–2 exact English Wikipedia titles for background (a country, a conflict, a place)"],"photos":[indexes of headlines marked [PHOTO] that are about this exact story, best first]}` },
+      { role: 'user', content: `Headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.image ? ' [PHOTO]' : ''}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}\n\nAlready posted (pick something else unless there is a big new development):\n${recentPosts(2).map(p => '- ' + [p.cover?.main, p.cover?.highlight].filter(Boolean).join(' ') + ': ' + (p.slides || []).map(x => x.headline).join('; ')).join('\n') || '(none)'}` }]);
     console.log(`  story: ${choice.story}`);
+    // the outlets' own news photos (mugshots, scenes, people in the story) are what make people stop scrolling
+    storyPhotos = (choice.photos || []).map(i => news[i]).filter(n => n?.image).slice(0, 3).map(n => ({ url: n.image, credit: `Photo: ${n.source}` }));
+    if (storyPhotos.length) console.log(`  news photos: ${storyPhotos.map(p => p.credit).join(', ')}`);
     const more = [];
     for (const q of (choice.search || []).slice(0, 4)) more.push(...await searchNews(q, { days: 3, max: 15 }).catch(() => []));
     news.splice(0, news.length, ...more, ...news);
@@ -160,6 +175,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   const ask = [
     topic ? `${spec.pick ? spec.ask + '\n' : ''}The account owner asked for this — follow it: ${topic}` : (feature ? feature.ask : spec.ask),
     kind === 'world' ? 'COVER: the small top line is always "NEWS FROM AROUND THE WORLD" (we add it). Leave "top" empty and make main + highlight + bottom a complete sentence on their own, with its own subject, e.g. main "A NOR\'EASTER PUTS", highlight "50 MILLION", bottom "FROM MAINE TO VIRGINIA IN ITS PATH".' : '',
+    'PHOTOS must stop the scroll: ask for striking, dramatic, specific pictures (the actual person, scene, vehicle, building or moment). You may set "redX": true on the cover or a slide when its photo shows a PUBLIC FIGURE (head of state, official, celebrity, company) who is the target of the story (sanctioned, charged, ousted, blamed) — never a private person, a victim or a child.',
     `Today (New York): ${new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric' })}`,
     ['deals', 'upcoming'].includes(kind) ? 'LIST POST: ignore the rule that headlines chain with transitions (no "THAT\'S…", "AND…", "SO…"). Each headline names the thing itself, e.g. "DUNKIN\': FREE COFFEE TUESDAY" or "KAROL G POP-UP IN WYNWOOD, OCT. 3–4". Take dates, times, venues and prices from the ARTICLE texts. 5–6 DIFFERENT items: never two slides about the same place, event, restaurant or chain. For a national chain the place is "all locations" or "in the app" (only chains with South Florida locations). Prefer South Florida items; skip online shopping deals (Amazon, shipped items).' : '',
     kind === 'deals' ? `Headlines (date — outlet — headline — summary). Only use deals, freebies and drives that are still valid now or coming up in the next 7 days; skip expired ones:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` :
@@ -235,7 +251,8 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   // world: the story's own hook, with "NEWS FROM AROUND THE WORLD" as the small top line (owner's format)
   if (kind === 'world') Object.assign(post.cover, { top: 'NEWS FROM AROUND THE WORLD', blur: false });
   for (const [i, item] of [post.cover, ...post.slides].entries()) {
-    const photo = await getPhoto(item.photo, dir, i ? `photo-${i}` : 'photo-cover',
+    const np = i < storyPhotos.length ? await newsPhoto(storyPhotos[i], dir, i ? `photo-${i}` : 'photo-cover') : null;
+    const photo = np || await getPhoto(item.photo, dir, i ? `photo-${i}` : 'photo-cover',
       { context: i ? item.headline : [item.top, item.main, item.highlight, item.bottom].filter(Boolean).join(' ') });
     if (photo) { item.photoFile = path.basename(photo.file); item.credit = photo.credit; }
     console.log(`  ${i ? '#' + i : 'cover'}: ${photo ? photo.credit : 'no photo'}`);
@@ -278,12 +295,14 @@ function dataUrl(dir, file) {
   return `data:image/${ext};base64,${fs.readFileSync(path.join(dir, file)).toString('base64')}`;
 }
 
+const redX = (on, top, h) => on ? `<svg style="position:absolute;left:50%;top:${top}px;width:${h}px;height:${h}px;transform:translateX(-50%)" viewBox="0 0 100 100"><path d="M12 12L88 88M88 12L12 88" stroke="#FF2A2A" stroke-width="11" stroke-linecap="round"/></svg>` : '';
 function coverHTML(post, dir, h) {
   const c = post.cover; const img = dataUrl(dir, c.photoFile);
   return `
     ${img ? `<div class="bg" style="background-image:url('${img}');${c.blur ? 'filter:blur(26px);transform:scale(1.12)' : ''}"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 30%, #2a3a66, #05070d)"></div>`}
     <div class="shade" style="background:linear-gradient(to bottom, rgba(0,0,0,0) 28%, rgba(0,0,0,.55) 52%, rgba(0,0,0,.93) 76%)"></div>
     ${c.blur ? `<div class="caps" style="position:absolute;left:0;right:0;top:${h * 0.22}px;text-align:center;font-size:${h > 1400 ? 300 : 250}px">?</div>` : ''}
+    ${redX(c.redX && img, h * 0.08, h * 0.42)}
     ${c.credit && !c.blur ? `<div class="credit">${esc(c.credit)}</div>` : ''}
     <div style="position:absolute;left:40px;right:40px;bottom:${h > 1400 ? 220 : 150}px;text-align:center">
       ${c.top ? `<div class="caps" style="font-size:${fit1(c.top, 68)}px;margin-bottom:10px">${esc(c.top)}</div>` : ''}
@@ -303,6 +322,7 @@ function slideHTML(s, i, n, dir) {
   return `
     ${img ? `<div class="bg" style="background-image:url('${img}');bottom:auto;height:760px"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 20%, #2a3a66, #05070d)"></div>`}
     <div class="shade" style="background:linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(0,0,0,.6) 45%, #000 57%)"></div>
+    ${redX(s.redX && img, 90, 460)}
     ${s.credit ? `<div class="credit">${esc(s.credit)}</div>` : ''}
     <div style="position:absolute;left:60px;right:60px;bottom:150px">
       <span class="tag" style="background:${red ? '#FF3B3B' : BLUE}">${esc(s.tag || 'NEWS')}</span>

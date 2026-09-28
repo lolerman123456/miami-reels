@@ -37,7 +37,8 @@ export async function fetchNews(kind = 'local', { hours = 30, max = 60 } = {}) {
         if (!name && title.endsWith(` - ${source}`)) title = title.slice(0, -(source.length + 3));
         const date = Date.parse(tag(block, 'pubDate')) || Date.now();
         if (!title || date < since) continue;
-        items.push({ title, source, date, link: tag(block, 'link'), summary: name ? tag(block, 'description').slice(0, 300) : '' });
+        const img = (/<media:content[^>]*url=["']([^"']+)["']/.exec(block) || /<enclosure[^>]*url=["']([^"']+\.(?:jpe?g|png|webp)[^"']*)["']/i.exec(block) || [])[1];
+        items.push({ title, source, date, link: tag(block, 'link'), summary: name ? tag(block, 'description').slice(0, 300) : '', image: img ? img.replace(/&amp;/g, '&').replace(/&#038;/g, '&') : undefined });
       }
     } catch (e) { console.log(`  (feed failed: ${name || url} — ${e.message})`); }
   }));

@@ -93,7 +93,7 @@ function aiBudgetLeft() {
 
 async function aiPhoto(description, dir, name) {
   if (!process.env.OPENAI_API_KEY) return null;
-  const prompt = `${description}. Photorealistic editorial photo, natural light, shot on a phone camera, South Florida setting. ` +
+  const prompt = `${description}. Striking, dramatic photorealistic news photo that stops the scroll: bold composition, strong light and contrast, real moment, South Florida setting when relevant. ` +
     'No text, no readable numbers, no price signs or price displays, no logos, no watermarks. No identifiable real people or public figures; faces turned away, blurred or out of frame.';
   // cheap first (owner: mini model, ~4-5x cheaper), full model only if the mini one fails
   for (const model of [...new Set([process.env.OPENAI_IMAGE_MODEL || 'gpt-image-1-mini', 'gpt-image-1'])]) {
