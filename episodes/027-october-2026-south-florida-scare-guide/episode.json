@@ -1,0 +1,200 @@
+{
+  "title": "October 2026 South Florida Scare Guide",
+  "sources": [
+    "WSVN",
+    "Miami Herald",
+    "Secret Miami",
+    "Miami New Times",
+    "WIOD",
+    "Wikipedia",
+    "Facebook"
+  ],
+  "collaborators": [],
+  "igCaption": "House of Horror marks 25 years at Tropical Park, with 5 haunted houses.\nThe Horrorland returns to Jungle Island for season 7 across 18 acres.\nThe South Florida Fairgrounds property comprises approximately 135 acres in West Palm Beach.\nPick the one your group can handle.\n\nSources: WSVN, Miami Herald, Secret Miami, Miami New Times, WIOD, Wikipedia, Facebook\n\n#Miami #SouthFlorida #Halloween2026 #HauntedHouse",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Planning an October scare night? Start with House of Horror, The Horrorland, and the West Palm Beach fairgrounds.",
+      "overlay": [
+        "OCTOBER",
+        "SCARE GUIDE"
+      ],
+      "emojis": [
+        "🎃",
+        "👻",
+        "🕸️",
+        "🏚️"
+      ],
+      "location": {
+        "name": "Tropical Park",
+        "lat": 25.7336,
+        "lon": -80.3352,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 215
+      }
+    },
+    {
+      "kind": "item",
+      "text": "House of Horror opened its twenty-fifth season at Tropical Park on Thursday, September twenty-four. It moved after decades at Miami International Mall. This year's setup has five haunted houses, themed nights and a new venue. Confirm tickets before driving.",
+      "caption": "House of Horror opened its 25th season at Tropical Park on Thursday, September 24. It moved after decades at Miami International Mall. This year's setup has 5 haunted houses, themed nights and a new venue. Confirm tickets before driving.",
+      "overlay": "HOUSE OF HORROR",
+      "badge": "25 YEARS",
+      "sub": "Now at Tropical Park",
+      "emoji": "🎪",
+      "stats": [
+        {
+          "value": "25 YEARS",
+          "label": "House of Horror"
+        },
+        {
+          "value": "5",
+          "label": "Haunted houses"
+        }
+      ],
+      "source": "WSVN/Facebook",
+      "location": {
+        "name": "Tropical Park",
+        "lat": 25.7336,
+        "lon": -80.3352,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Horrorland returned to Jungle Island on Watson Island for season seven. The twenty twenty-six run uses eighteen acres. Jungle Island began as Parrot Jungle in nineteen thirty-six and opened at this waterfront site in two thousand three.",
+      "caption": "The Horrorland returned to Jungle Island on Watson Island for season 7. The 2026 run uses 18 acres. Jungle Island began as Parrot Jungle in 1936 and opened at this waterfront site in 2003.",
+      "overlay": "THE HORRORLAND",
+      "badge": "18 ACRES",
+      "sub": "Jungle Island run",
+      "emoji": "🌴",
+      "stats": [
+        {
+          "value": "18 ACRES",
+          "label": "Scream park"
+        },
+        {
+          "value": "7",
+          "label": "Season"
+        }
+      ],
+      "source": "Miami New Times/WIOD/Wikipedia",
+      "location": {
+        "name": "Jungle Island",
+        "lat": 25.7861,
+        "lon": -80.1742,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -34,
+        "heading": 85,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The South Florida Fairgrounds sits in West Palm Beach, at Southern Boulevard and Fairground Road, beside iTHINK Financial Amphitheatre. The property known as the South Florida Fairgrounds comprises approximately one hundred thirty-five acres. The fair began in nineteen twelve under one tent downtown.",
+      "caption": "The South Florida Fairgrounds sits in West Palm Beach, at Southern Boulevard and Fairground Road, beside iTHINK Financial Amphitheatre. The property known as the South Florida Fairgrounds comprises approximately 135 acres. The fair began in 1912 under one tent downtown.",
+      "overlay": "FAIRGROUNDS",
+      "badge": "APPROX. 135 ACRES",
+      "sub": "West Palm Beach",
+      "emoji": "🎡",
+      "stats": [
+        {
+          "value": "APPROX. 135 ACRES",
+          "label": "Fairgrounds property"
+        },
+        {
+          "value": "1912",
+          "label": "Fair began"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "South Florida Fairgrounds",
+        "lat": 26.6845,
+        "lon": -80.1913,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -30,
+        "heading": 305,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami International Mall is the old House of Horror reference point. The Doral mall opened in nineteen eighty-two, half a mile from Dolphin Mall. In twenty twenty-six, phase one and phase two of the former Sears redevelopment were submitted for review.",
+      "caption": "Miami International Mall is the old House of Horror reference point. The Doral mall opened in 1982, half a mile from Dolphin Mall. In 2026, phase 1 and phase 2 of the former Sears redevelopment were submitted for review.",
+      "overlay": "OLD LOCATION",
+      "badge": "OPENED 1982",
+      "sub": "Doral mall context",
+      "emoji": "🛍️",
+      "stats": [
+        {
+          "value": "1982",
+          "label": "Mall opened"
+        },
+        {
+          "value": "2026",
+          "label": "Sears review"
+        }
+      ],
+      "source": "Secret Miami/Wikipedia",
+      "location": {
+        "name": "Miami International Mall",
+        "lat": 25.786638,
+        "lon": -80.364904,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 25,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Pick the one your group can handle. And if someone cute screamed near you, NEAR shows who walked past you earlier.",
+      "overlay": "PICK ONE 🎃",
+      "sub": "October scare night",
+      "location": {
+        "name": "Tropical Park",
+        "lat": 25.7336,
+        "lon": -80.3352,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -34,
+        "heading": 200
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "id": "027-october-2026-south-florida-scare-guide"
+}
