@@ -5,7 +5,7 @@ name: Slideshow
 on:
   push:
     branches: [main]
-    paths: ['requests/slideshow.json']
+    paths: ['requests/slideshow.json', 'requests/buffer-status.json']
 
 permissions:
   contents: write
@@ -21,7 +21,13 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - name: Buffer status (TikTok)
+        if: contains(github.event.head_commit.message, 'Buffer status')
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+        run: node pipeline/buffer.mjs --status
       - name: Send to Buffer
+        if: "!contains(github.event.head_commit.message, 'Buffer status')"
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           GH_TOKEN: ${{ github.token }}

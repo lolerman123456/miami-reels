@@ -97,7 +97,20 @@ export async function postToTikTok({ video, images, text = '', label, ai = false
   } catch (e) { console.log(`  (TikTok reminder failed: ${e.message.slice(0, 200)})`); }
 }
 
+// What Buffer actually has for TikTok (status, notification, errors): node pipeline/buffer.mjs --status
+export async function tiktokStatus(n = 20) {
+  const channelId = await channelFor('tiktok');
+  const { account } = await gql('query { account { organizations { id } } }');
+  for (const org of account.organizations) {
+    const d = await gql(`query($o: OrganizationId!, $c: [ChannelId!]) { posts(first: ${n}, input: { organizationId: $o, filter: { channelIds: $c } }) {
+      edges { node { id status schedulingType notificationStatus dueAt sentAt createdAt text error { message } assets { __typename } } } } }`, { o: org.id, c: [channelId] }).catch(e => ({ err: e.message }));
+    if (d.err) { console.log(d.err); continue; }
+    for (const { node: p } of d.posts.edges) console.log(`${p.createdAt}  ${p.status}  ${p.schedulingType}  notif=${p.notificationStatus || '-'}  due=${p.dueAt}  assets=${(p.assets || []).length}  ${(p.text || '').split('\n')[0].slice(0, 50)}${p.error ? '  ERROR: ' + p.error.message : ''}`);
+  }
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
+  if (process.argv.includes('--status')) { await tiktokStatus(); process.exit(0); }
   const [video, epDir] = process.argv.slice(2);
   if (!video) { console.error('Usage: node pipeline/buffer.mjs out/<id>.mp4 [episodes/<id>]  (TikTok reminder)'); process.exit(1); }
   const ep = readJSON(path.join(epDir || path.join(ROOT, 'episodes', path.basename(video, '.mp4')), 'episode.json'));
