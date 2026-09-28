@@ -1,5 +1,5 @@
 // Narration per scene, stitched into one track with a timeline.
-// Voice: episode.voice = { provider: "openai", voice: "ash" } → OpenAI TTS; otherwise Kokoro (KOKORO_VOICE, default am_adam).
+// Voice: OpenAI TTS (ash) by default, it reads questions like questions; episode.voice = { provider: "kokoro" } → Kokoro (KOKORO_VOICE, default am_adam).
 import fs from 'node:fs';
 import path from 'node:path';
 import { writeWav } from './util.mjs';
@@ -8,14 +8,16 @@ const LEAD_IN = 0.25;   // seconds of silence before the first line
 const GAP = 0.3;        // pause between scenes
 const TAIL = 0.9;       // hold at the end
 
-const OPENAI_STYLE = 'Deep, confident male voice. A fast, energetic Miami storyteller on TikTok: amused, a little disbelieving, full of attitude. ' +
-  'Keep momentum: fast pace, no long pauses, sentences flow into each other, land each punchline quickly and dry. ' +
-  'Never sound like an announcer, a teacher or an ad.';
+const OPENAI_STYLE = 'Warm, confident young male voice from Miami telling a friend what is going on around town. Clear and upbeat, natural pace. ' +
+  'Every sentence is its own sentence: a short natural beat after each period. Questions sound like real questions: the pitch rises at the end, ' +
+  'like you are actually asking the listener. Dates, times and prices are said clearly. Never sound like an announcer, a teacher or an ad.';
 const MAX_PAUSE = 0.28;   // seconds; longer silences inside a line get shortened
 
 export async function makeNarration(episode, outDir) {
   const v = episode.voice || {};
-  const speak = v.provider === 'openai' ? await openaiVoice(v) : await kokoroVoice();
+  // OpenAI's voice is the default (it reads questions like questions); "voice": {"provider": "kokoro"} keeps the old one
+  const openai = v.provider !== 'kokoro' && !!process.env.OPENAI_API_KEY;
+  const speak = openai ? await openaiVoice(v) : await kokoroVoice();
 
   const clips = [];
   let sampleRate = 24000;
@@ -23,7 +25,7 @@ export async function makeNarration(episode, outDir) {
     let { samples, rate } = await speak(scene.text);
     sampleRate = rate;
     samples = shortenPauses(trimSilence(samples, rate), rate);
-    if (v.provider === 'openai') samples = await tempo(samples, rate, v.speed ?? 1.12);
+    if (openai) samples = await tempo(samples, rate, v.speed ?? 1.12);
     clips.push(samples);
     console.log(`  scene ${i + 1}: ${(clips[i].length / rate).toFixed(2)}s`);
   }
