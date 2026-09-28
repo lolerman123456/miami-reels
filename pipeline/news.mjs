@@ -64,3 +64,35 @@ export async function searchNews(query, { days = 7, max = 25 } = {}) {
 if (import.meta.url === `file://${process.argv[1]}`) {
   for (const i of await fetchNews(process.argv[2] || 'local')) console.log(`[${i.source}] ${i.title}`);
 }
+
+// Full-text articles from local blogs/feeds (Google News only gives headlines), for the deals and events carousels so
+// slides can state the date, time, venue and price. kind: 'events' | 'deals'.
+const ARTICLE_FEEDS = {
+  events: [['Secret Miami', 'https://secretmiami.com/feed/'], ['Miami New Times', 'https://www.miaminewtimes.com/miami/Rss.xml'],
+    ['South Florida Reporter', 'https://www.southfloridareporter.com/feed/'], ['Eater Miami', 'https://miami.eater.com/rss/index.xml']],
+  deals: [['Hip2Save', 'https://www.hip2save.com/feed/'], ['Secret Miami', 'https://secretmiami.com/feed/'],
+    ['South Florida Reporter', 'https://www.southfloridareporter.com/feed/'], ['Local 10', 'https://www.local10.com/arc/outboundfeeds/rss/?outputType=xml']],
+};
+const MATCH = {
+  events: /event|festival|concert|this weekend|things to do|opening|opens|pop-up|tickets|fair|market|party|parade|exhibit|brunch|restaurant/i,
+  deals: /free (food|coffee|meal|breakfast|lunch|burger|taco|donut|doughnut|fries|sandwich|pizza|drink|ice cream|chicken)|food drive|food distribution|food pantry|giveaway|national \w+ day|chick-fil-a|mcdonald|wendy|taco bell|dunkin|starbucks|krispy|popeyes|chipotle|burger king|subway|domino|pollo tropical|publix|bogo|\$1 /i,
+};
+const plain = s => decode(decode(s)).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+export async function fetchArticles(kind, { days = 10, max = 14, chars = 1400 } = {}) {
+  const since = Date.now() - days * 86400e3;
+  const out = [];
+  await Promise.all(ARTICLE_FEEDS[kind].map(async ([source, url]) => {
+    try {
+      const xml = await (await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (getnear news bot)' }, redirect: 'follow', signal: AbortSignal.timeout(20000) })).text();
+      for (const b of xml.split(/<item[\s>]|<entry[\s>]/).slice(1)) {
+        const raw = (s) => { const m = new RegExp(`<${s}[^>]*>([\\s\\S]*?)</${s}>`).exec(b); return m ? m[1].replace(/^<!\[CDATA\[|\]\]>$/g, '') : ''; };
+        const title = plain(raw('title'));
+        const date = Date.parse(raw('pubDate') || raw('published') || raw('updated')) || Date.now();
+        const body = plain(raw('content:encoded') || raw('content') || raw('description'));
+        if (!title || date < since || !MATCH[kind].test(title)) continue;
+        out.push({ title, source, date, body: body.slice(0, chars) });
+      }
+    } catch (e) { console.log(`  (article feed failed: ${source} — ${e.message})`); }
+  }));
+  return out.sort((a, b) => b.date - a.date).slice(0, max);
+}

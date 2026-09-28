@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import puppeteer from 'puppeteer';
 import { ROOT, readJSON, writeJSON, step } from './util.mjs';
-import { fetchNews, searchNews } from './news.mjs';
+import { fetchNews, searchNews, fetchArticles } from './news.mjs';
 import { getPhoto, newPost } from './photos.mjs';
 import { aiTells, BANNED } from './generate.mjs';
 import { wikiArticle, rentFacts, gasFacts } from './facts.mjs';
@@ -136,6 +136,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     for (const q of qs) found.push(...await searchNews(q, { days: 7, max: 12 }).catch(() => []));
     news.splice(0, news.length, ...found, ...news.slice(0, 15));
     console.log(`  deal sources: ${found.length} headlines`);
+    for (const a of await fetchArticles('deals', { chars: 3000 }).catch(() => [])) extra.push(`ARTICLE (${a.source}, ${new Date(a.date).toDateString()}): ${a.title}\n${a.body}`);
     await digDeeper(news, 'deals, freebies, giveaways or food drives (name the chain or organization, e.g. "Krispy Kreme free coffee National Coffee Day")');
   }
   if (kind === 'upcoming' && !topic) {
@@ -145,6 +146,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     for (const q of qs) found.push(...await searchNews(q, { days: 10, max: 15 }).catch(() => []));
     news.splice(0, news.length, ...found, ...news.slice(0, 20));
     console.log(`  event sources: ${found.length} headlines`);
+    for (const a of await fetchArticles('events', { chars: 3000 }).catch(() => [])) extra.push(`ARTICLE (${a.source}, ${new Date(a.date).toDateString()}): ${a.title}\n${a.body}`);
     await digDeeper(news, 'events or openings in South Florida in the next 7 days (name the event and venue, e.g. "Rolling Loud Miami 2026 dates tickets")');
   }
   if (feature?.wiki || feature?.rent) {
@@ -159,6 +161,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     topic ? `${spec.pick ? spec.ask + '\n' : ''}The account owner asked for this — follow it: ${topic}` : (feature ? feature.ask : spec.ask),
     kind === 'world' ? 'COVER: the small top line is always "NEWS FROM AROUND THE WORLD" (we add it). Leave "top" empty and make main + highlight + bottom a complete sentence on their own, with its own subject, e.g. main "A NOR\'EASTER PUTS", highlight "50 MILLION", bottom "FROM MAINE TO VIRGINIA IN ITS PATH".' : '',
     `Today (New York): ${new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric' })}`,
+    ['deals', 'upcoming'].includes(kind) ? 'LIST POST: ignore the rule that headlines chain with transitions (no "THAT\'S…", "AND…", "SO…"). Each headline names the thing itself, e.g. "DUNKIN\': FREE COFFEE TUESDAY" or "KAROL G POP-UP IN WYNWOOD, OCT. 3–4". Take dates, times, venues and prices from the ARTICLE texts; only use an item if you have its date and place. Prefer South Florida items and big national chains that have Miami locations; skip online-only shopping deals.' : '',
     kind === 'deals' ? `Headlines (date — outlet — headline — summary). Only use deals, freebies and drives that are still valid now or coming up in the next 7 days; skip expired ones:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` :
     kind === 'upcoming' ? `Headlines (date — outlet — headline — summary). Only use events whose date is stated and falls in the next 7 days:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` :
     `Headlines (date — outlet — headline — summary). Only use headlines from the last 3 days about THIS exact event; a search can return an older, similar event (last winter's storm, a past case): ignore those, and if two headlines disagree, leave the detail out:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}`,
