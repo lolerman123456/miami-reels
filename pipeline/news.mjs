@@ -109,3 +109,34 @@ export async function fetchArticles(kind, { days = 10, max = 14, chars = 1400 } 
   }));
   return top;
 }
+
+// What South Florida is talking about right now (the kind of stories @onlyindade reposts): hot posts on the local
+// subreddits + Google Trends searches in Florida. Only a signal for picking a story; posts are written from news reporting.
+const VIRAL_FEEDS = [
+  ['r/Miami', 'https://www.reddit.com/r/Miami/hot.rss'],
+  ['r/florida', 'https://www.reddit.com/r/florida/hot.rss'],
+  ['r/fortlauderdale', 'https://www.reddit.com/r/fortlauderdale/hot.rss'],
+];
+export async function fetchViral({ perSub = 10 } = {}) {
+  const UA = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36' };
+  const out = [];
+  await Promise.all(VIRAL_FEEDS.map(async ([source, url]) => {
+    try {
+      const res = await fetch(url, { headers: UA, signal: AbortSignal.timeout(15000) });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const xml = await res.text();
+      const titles = [...xml.matchAll(/<entry>[\s\S]*?<title>([^<]*)<\/title>/g)].map(m => plain(m[1]))
+        .filter(t => !/megathread|monthly|weekly|daily (discussion|thread)|jobs thread/i.test(t)).slice(0, perSub);
+      titles.forEach((title, i) => out.push({ source: `${source} (hot #${i + 1})`, title, viral: true }));
+    } catch (e) { console.log(`  (viral feed failed: ${source} — ${e.message})`); }
+  }));
+  try {
+    const xml = await (await fetch('https://trends.google.com/trending/rss?geo=US-FL', { headers: UA, signal: AbortSignal.timeout(15000) })).text();
+    for (const b of xml.split('<item>').slice(1, 16)) {
+      const q = plain((/<title>([^<]*)/.exec(b) || [])[1] || ''), traffic = (/<ht:approx_traffic>([^<]*)/.exec(b) || [])[1] || '';
+      const heads = [...b.matchAll(/<ht:news_item_title>([^<]*)/g)].map(m => plain(m[1])).slice(0, 2);
+      if (q) out.push({ source: `Google Trends Florida (${traffic} searches)`, title: q, summary: heads.join(' / '), viral: true });
+    }
+  } catch (e) { console.log(`  (Google Trends failed: ${e.message})`); }
+  return out;
+}

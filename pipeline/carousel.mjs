@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import puppeteer from 'puppeteer';
 import { ROOT, readJSON, writeJSON, step } from './util.mjs';
-import { fetchNews, searchNews, fetchArticles } from './news.mjs';
+import { fetchNews, searchNews, fetchArticles, fetchViral } from './news.mjs';
 import { getPhoto, newPost } from './photos.mjs';
 import { aiTells, BANNED } from './generate.mjs';
 import { wikiArticle, rentFacts, gasFacts } from './facts.mjs';
@@ -133,8 +133,12 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   }
   // brief/world: pick ONE story, then pull every headline about it so the slides can go deep
   if (spec.pick && !topic) {
+    // news: add what people are sharing/searching right now (local subreddits, Google Trends Florida) as [TRENDING] signals
+    const trending = kind === 'news' ? await fetchViral().catch(() => []) : [];
+    if (trending.length) console.log(`  trending: ${trending.length} (${trending.slice(0, 4).map(t => t.title.slice(0, 40)).join('; ')})`);
+    const TREND = trending.length ? `\n\nTRENDING RIGHT NOW (what South Florida is sharing and searching; a signal only, not a source):\n${trending.map(t => `- ${t.source}: ${t.title}${t.summary ? ' — ' + t.summary : ''}`).join('\n')}\n\nPrefer a headline story that is ALSO trending above. A trending item with no news headline can be picked only if the searches will find real reporting on it; never a private person, a lost pet, a personal post or an unconfirmed Reddit claim.` : '';
     const choice = await chat([{ role: 'system', content: `Pick ${spec.pick} Return JSON {"story":"one sentence","search":["2–4 Google News searches to find more reporting on that exact story"],"wikipedia":["0–2 exact English Wikipedia titles for background (a country, a conflict, a place)"],"photos":[indexes of headlines marked [PHOTO] that are about this exact story, best first]}` },
-      { role: 'user', content: `Headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.image ? ' [PHOTO]' : ''}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}\n\nAlready posted (pick something else unless there is a big new development):\n${recentPosts(2).map(p => '- ' + [p.cover?.main, p.cover?.highlight].filter(Boolean).join(' ') + ': ' + (p.slides || []).map(x => x.headline).join('; ')).join('\n') || '(none)'}` }]);
+      { role: 'user', content: `Headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.image ? ' [PHOTO]' : ''}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}\n\nAlready posted (pick something else unless there is a big new development):\n${recentPosts(2).map(p => '- ' + [p.cover?.main, p.cover?.highlight].filter(Boolean).join(' ') + ': ' + (p.slides || []).map(x => x.headline).join('; ')).join('\n') || '(none)'}${TREND}` }]);
     console.log(`  story: ${choice.story}`);
     // the outlets' own news photos (mugshots, scenes, people in the story) are what make people stop scrolling
     storyPhotos = (choice.photos || []).map(i => news[i]).filter(n => n?.image).slice(0, 3).map(n => ({ url: n.image, credit: `Photo: ${n.source}` }));
