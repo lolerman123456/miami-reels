@@ -175,7 +175,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   const ask = [
     topic ? `${spec.pick ? spec.ask + '\n' : ''}The account owner asked for this — follow it: ${topic}` : (feature ? feature.ask : spec.ask),
     kind === 'world' ? 'COVER: the small top line is always "NEWS FROM AROUND THE WORLD" (we add it). Leave "top" empty and make main + highlight + bottom a complete sentence on their own, with its own subject, e.g. main "A NOR\'EASTER PUTS", highlight "50 MILLION", bottom "FROM MAINE TO VIRGINIA IN ITS PATH".' : '',
-    'PHOTOS must stop the scroll: ask for striking, dramatic, specific pictures (the actual person, scene, vehicle, building or moment). You may set "redX": true on the cover or a slide when its photo shows a PUBLIC FIGURE (head of state, official, celebrity, company) who is the target of the story (sanctioned, charged, ousted, blamed) — never a private person, a victim or a child.',
+    'PHOTOS must stop the scroll: ask for striking, dramatic, specific pictures (the actual person, scene, vehicle, building or moment). Optionally, on AT MOST ONE slide or the cover, and only when it adds meaning, add "mark" to draw on the photo: "circle" (point out the key detail), "arrow" (point at it), "x" (something destroyed, cancelled, banned or a public figure who lost/was ousted), or "stamp: WANTED" / "stamp: ON THE RUN" / "stamp: ARRESTED" / "stamp: CLOSED" / "stamp: SOLD OUT" style labels (few words). Be creative but never mark a private person, a victim or a child, and most posts need no mark.',
     `Today (New York): ${new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric' })}`,
     ['deals', 'upcoming'].includes(kind) ? 'LIST POST: ignore the rule that headlines chain with transitions (no "THAT\'S…", "AND…", "SO…"). Each headline names the thing itself, e.g. "DUNKIN\': FREE COFFEE TUESDAY" or "KAROL G POP-UP IN WYNWOOD, OCT. 3–4". Take dates, times, venues and prices from the ARTICLE texts. 5–6 DIFFERENT items: never two slides about the same place, event, restaurant or chain. For a national chain the place is "all locations" or "in the app" (only chains with South Florida locations). Prefer South Florida items; skip online shopping deals (Amazon, shipped items).' : '',
     kind === 'deals' ? `Headlines (date — outlet — headline — summary). Only use deals, freebies and drives that are still valid now or coming up in the next 7 days; skip expired ones:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` :
@@ -295,14 +295,25 @@ function dataUrl(dir, file) {
   return `data:image/${ext};base64,${fs.readFileSync(path.join(dir, file)).toString('base64')}`;
 }
 
-const redX = (on, top, h) => on ? `<svg style="position:absolute;left:50%;top:${top}px;width:${h}px;height:${h}px;transform:translateX(-50%)" viewBox="0 0 100 100"><path d="M12 12L88 88M88 12L12 88" stroke="#FF2A2A" stroke-width="11" stroke-linecap="round"/></svg>` : '';
+// optional graphic marker on the photo ("mark" on the cover or a slide), used sparingly and only when it adds meaning
+const MARK_RED = '#FF2A2A';
+const markSVG = (mark, top, h) => {
+  if (!mark) return '';
+  const box = `position:absolute;left:50%;top:${top}px;width:${h}px;height:${h}px;transform:translateX(-50%)`;
+  const stamp = t => `<div style="position:absolute;left:50%;top:${top + h * 0.38}px;transform:translateX(-50%) rotate(-8deg);border:10px solid ${MARK_RED};color:${MARK_RED};font-family:'Montserrat';font-weight:900;font-size:${Math.round(h * 0.17)}px;letter-spacing:4px;padding:6px 26px;background:rgba(0,0,0,.35);white-space:nowrap">${esc(t)}</div>`;
+  if (mark === 'x') return `<svg style="${box}" viewBox="0 0 100 100"><path d="M14 14L86 86M86 14L14 86" stroke="${MARK_RED}" stroke-width="10" stroke-linecap="round"/></svg>`;
+  if (mark === 'circle') return `<svg style="${box}" viewBox="0 0 100 100"><ellipse cx="50" cy="50" rx="40" ry="34" fill="none" stroke="${MARK_RED}" stroke-width="5"/></svg>`;
+  if (mark === 'arrow') return `<svg style="position:absolute;left:12%;top:${top + h * 0.1}px;width:${h * 0.5}px;height:${h * 0.5}px" viewBox="0 0 100 100"><path d="M8 8L70 70M70 70L70 34M70 70L34 70" stroke="${MARK_RED}" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>`;
+  if (/^stamp:/i.test(mark)) return stamp(mark.slice(6).trim().toUpperCase().slice(0, 18));
+  return '';
+};
 function coverHTML(post, dir, h) {
   const c = post.cover; const img = dataUrl(dir, c.photoFile);
   return `
     ${img ? `<div class="bg" style="background-image:url('${img}');${c.blur ? 'filter:blur(26px);transform:scale(1.12)' : ''}"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 30%, #2a3a66, #05070d)"></div>`}
     <div class="shade" style="background:linear-gradient(to bottom, rgba(0,0,0,0) 28%, rgba(0,0,0,.55) 52%, rgba(0,0,0,.93) 76%)"></div>
     ${c.blur ? `<div class="caps" style="position:absolute;left:0;right:0;top:${h * 0.22}px;text-align:center;font-size:${h > 1400 ? 300 : 250}px">?</div>` : ''}
-    ${redX(c.redX && img, h * 0.08, h * 0.42)}
+    ${img ? markSVG(c.mark, h * 0.08, h * 0.42) : ''}
     ${c.credit && !c.blur ? `<div class="credit">${esc(c.credit)}</div>` : ''}
     <div style="position:absolute;left:40px;right:40px;bottom:${h > 1400 ? 220 : 150}px;text-align:center">
       ${c.top ? `<div class="caps" style="font-size:${fit1(c.top, 68)}px;margin-bottom:10px">${esc(c.top)}</div>` : ''}
@@ -322,7 +333,7 @@ function slideHTML(s, i, n, dir) {
   return `
     ${img ? `<div class="bg" style="background-image:url('${img}');bottom:auto;height:760px"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 20%, #2a3a66, #05070d)"></div>`}
     <div class="shade" style="background:linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(0,0,0,.6) 45%, #000 57%)"></div>
-    ${redX(s.redX && img, 90, 460)}
+    ${img ? markSVG(s.mark, 90, 460) : ''}
     ${s.credit ? `<div class="credit">${esc(s.credit)}</div>` : ''}
     <div style="position:absolute;left:60px;right:60px;bottom:150px">
       <span class="tag" style="background:${red ? '#FF3B3B' : BLUE}">${esc(s.tag || 'NEWS')}</span>

@@ -38,6 +38,9 @@ if (cmd === 'prepare') {
     dir = await generateEpisode({ topic: opt('--topic') || null, hook: opt('--hook') || null, num: opt('--num') || null });
   }
   dir = path.resolve(ROOT, dir);
+  if (process.argv.includes('--music')) { // owner will post it with a trending sound: never auto-post to Instagram
+    const ep = readJSON(path.join(dir, 'episode.json')); ep.music = ep.tiktok = true; writeJSON(path.join(dir, 'episode.json'), ep);
+  }
   await ensureImages(dir, readJSON(path.join(dir, 'episode.json'))); // AI renders for scenes that show a picture instead of the map
   const { episode, timeline } = await prepareEpisode(dir);
   const pieces = plan(shotsOf(episode, timeline));

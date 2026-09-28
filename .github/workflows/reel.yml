@@ -113,12 +113,14 @@ jobs:
             HOOK=$(jq -r '.hook // ""' requests/run.json)
             NUMBER=$(jq -r '.number // ""' requests/run.json)
             SLOT=$(jq -r '.slot // ""' requests/run.json)
+            MUSIC=$(jq -r 'if .music == true then "true" else "" end' requests/run.json)
           fi
           {
             echo "topic<<EOF"; echo "$TOPIC"; echo "EOF"
             echo "hook<<EOF"; echo "$HOOK"; echo "EOF"
             echo "number=$NUMBER"
             echo "slot=${SLOT:-}"
+            echo "music=${MUSIC:-}"
             echo "episode=$EPISODE"
             echo "publish=$PUBLISH"
             echo "post_video=$POST_VIDEO"
@@ -166,6 +168,7 @@ jobs:
           REEL_TOPIC: ${{ steps.req.outputs.topic }}
           REEL_EPISODE: ${{ steps.req.outputs.episode }}
           REEL_HOOK: ${{ steps.req.outputs.hook }}
+          REEL_MUSIC: ${{ steps.req.outputs.music }}
           REEL_NUMBER: ${{ steps.req.outputs.number }}
           POST_VIDEO: ${{ steps.req.outputs.post_video }}
           GH_TOKEN: ${{ github.token }}
@@ -211,6 +214,7 @@ jobs:
           [ -n "$REEL_TOPIC" ] && ARGS+=(--topic "$REEL_TOPIC")
           [ -n "$REEL_HOOK" ] && ARGS+=(--hook "$REEL_HOOK")
           [ -n "$REEL_NUMBER" ] && ARGS+=(--num "$REEL_NUMBER")
+          [ -n "$REEL_MUSIC" ] && ARGS+=(--music)
           node pipeline/parallel.mjs prepare "${ARGS[@]}"
           echo "render=true" >> "$GITHUB_OUTPUT"
 
