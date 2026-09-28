@@ -1,111 +1,111 @@
 {
-  "sector": "WEATHER",
+  "sector": "WORLD",
   "cover": {
     "top": "NEWS FROM AROUND THE WORLD",
-    "main": "A NOR'EASTER BRINGS RAIN, WIND AND",
-    "highlight": "COASTAL FLOODING",
-    "bottom": "TO TENS OF MILLIONS FROM MAINE TO VIRGINIA",
+    "main": "YEMEN'S WAR IS ESCALATING",
+    "highlight": "AROUND TAIZ",
+    "bottom": "AS HOUTHIS BATTLE PRO-GOVERNMENT FORCES",
     "blur": false,
     "photo": {
-      "query": "Wikimedia Commons coastal flooding New Jersey shore storm",
-      "prompt": "coastal flooding on a New Jersey shore street during a nor'easter with gray skies and high water"
+      "query": "Taiz Yemen city Wikimedia Commons",
+      "prompt": "front-line city street in Yemen with damaged buildings and distant mountains, no people shown clearly"
     },
-    "photoFile": "photo-cover.png",
-    "credit": "AI illustration"
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: AHMAD ALSHIBANI / CC BY-SA 4.0"
   },
   "slides": [
     {
-      "tag": "WEATHER",
-      "headline": "UPDATE: A nor'easter brings rain, wind and coastal flooding",
-      "highlight": "coastal flooding",
-      "body": "Heavy rain and wind battered the Northeast this weekend, with coastal flooding affecting shore communities along the East Coast.",
-      "place": "East Coast",
-      "source": "The New York Times",
+      "tag": "WORLD",
+      "headline": "Houthis battle for control of front-line Taiz",
+      "highlight": "front-line Taiz",
+      "body": "Rare access from inside Yemen’s conflict zone shows pro-government soldiers at the front line as Houthi forces fight around Taiz.",
+      "place": "Taiz, Yemen",
+      "source": "BBC",
       "photo": {
-        "query": "Wikimedia Commons storm clouds Atlantic Ocean East Coast",
-        "prompt": "dark storm clouds over the Atlantic near the U.S. East Coast with rough surf and rain bands offshore"
+        "query": "Taiz Yemen Wikimedia Commons",
+        "prompt": "wide view of Taiz Yemen with damaged urban buildings and mountains in the distance, no identifiable people"
       },
-      "photoFile": "photo-1.png",
-      "credit": "AI illustration"
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Waseem350 / CC0"
     },
     {
-      "tag": "WEATHER",
-      "headline": "That put New York and New Jersey under emergencies",
-      "highlight": "under emergencies",
-      "body": "New York and New Jersey declared states of emergency and told people to avoid travel through the weekend.",
-      "place": "New York and New Jersey",
-      "source": "CNN",
+      "tag": "WORLD",
+      "headline": "That follows a war that began in late 2014",
+      "highlight": "late 2014",
+      "body": "The civil war began after Houthi forces took Sanaa, and the UN says more than 150,000 people have been killed in the conflict.",
+      "place": "Yemen",
+      "source": "Wikipedia",
       "photo": {
-        "query": "Wikimedia Commons New York City rain storm street flooding",
-        "prompt": "rain-soaked New York City street during a coastal storm with standing water and emergency lights in the distance"
+        "query": "Yemen civil war damaged buildings Wikimedia Commons",
+        "prompt": "damaged city block in Yemen after years of war, empty street, no identifiable people"
       },
       "photoFile": "photo-2.png",
       "credit": "AI illustration"
     },
     {
-      "tag": "WEATHER",
-      "headline": "And Atlantic City saw its highest flooding since Sandy",
-      "highlight": "highest flooding",
-      "body": "Flooding in Atlantic City reached its highest point since Superstorm Sandy, and neighborhoods along the Jersey Shore flooded.",
-      "place": "Atlantic City, New Jersey",
-      "source": "NBC News",
+      "tag": "WORLD",
+      "headline": "The reason: Houthis took Sanaa in 2014",
+      "highlight": "Sanaa in 2014",
+      "body": "Houthi forces took Yemen’s capital in September 2014, and rival authorities now claim to govern the country.",
+      "place": "Sanaa, Yemen",
+      "source": "Wikipedia",
       "photo": {
-        "query": "Wikimedia Commons Atlantic City flooding storm surge",
-        "prompt": "flooded street near the Atlantic City shoreline during a coastal storm with water covering the roadway"
+        "query": "Sanaa Yemen old city Wikimedia Commons",
+        "prompt": "historic skyline of Sanaa Yemen with dense buildings and mountains, no people featured"
       },
-      "photoFile": "photo-3.png",
-      "credit": "AI illustration"
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Ibrahim Alqousi / CC BY-SA 4.0"
     },
     {
-      "tag": "WEATHER",
-      "headline": "That sent rescuers to flooded New Jersey motels",
-      "highlight": "flooded motels",
-      "body": "First responders rescued 9 adults and 1 dog from flooded motels in New Jersey on Saturday morning.",
-      "place": "New Jersey",
-      "source": "AP via Spokesman-Review",
+      "tag": "WORLD",
+      "headline": "And about 24 million Yemenis have needed aid",
+      "highlight": "24 million Yemenis",
+      "body": "Yemen has an estimated 34.7 million people, and the UN reported in 2019 that about 24 million needed humanitarian aid.",
+      "place": "Yemen",
+      "source": "Wikipedia",
       "photo": {
-        "query": "Wikimedia Commons New Jersey coastal flooding motel street",
-        "prompt": "floodwater surrounding low-rise motels near the New Jersey shore during a nor'easter"
+        "query": "Yemen humanitarian aid Wikimedia Commons",
+        "prompt": "aid trucks and supplies on a road in Yemen, no identifiable people"
       },
       "photoFile": "photo-4.png",
       "credit": "AI illustration"
     },
     {
-      "tag": "WEATHER",
-      "headline": "And tens of thousands lost power across the region",
-      "highlight": "lost power",
-      "body": "Tens of thousands of people in the Northeast and Mid-Atlantic lost power, and trees came down in New York City.",
-      "place": "Northeast and Mid-Atlantic",
-      "source": "PhillyVoice",
+      "tag": "WORLD",
+      "headline": "Which puts the Red Sea in the conflict",
+      "highlight": "Red Sea",
+      "body": "Yemen borders the Red Sea and the Gulf of Aden, and the conflict now extends into Red Sea security concerns.",
+      "place": "Red Sea",
+      "source": "Council on Foreign Relations",
       "photo": {
-        "query": "Wikimedia Commons downed tree New York City storm",
-        "prompt": "downed tree on a New York City street after a storm with wet pavement and crews nearby"
+        "query": "Red Sea Yemen coastline Wikimedia Commons",
+        "prompt": "cargo ships on the Red Sea near Yemen coastline under hazy sky"
       },
       "photoFile": "photo-5.png",
       "credit": "AI illustration"
     },
     {
-      "tag": "WEATHER",
-      "headline": "So Sunday brings another round of flood risk",
-      "highlight": "flood risk",
-      "body": "The National Weather Service said the storm would intensify again Saturday night into Sunday, with more flooding likely.",
-      "place": "East Coast",
-      "source": "NBC News",
+      "tag": "WORLD",
+      "headline": "So government forces are widening attacks",
+      "highlight": "widening attacks",
+      "body": "Yemen government forces have widened attacks against the Houthis as fighting intensifies around Taiz’s western approaches.",
+      "place": "Yemen",
+      "source": "Al Jazeera",
       "photo": {
-        "query": "Wikimedia Commons waves crashing over seawall storm",
-        "prompt": "large waves crashing over a seawall during a coastal storm with gray sky and spray over the road"
+        "query": "Yemen mountains road Wikimedia Commons",
+        "prompt": "mountain road outside a Yemeni city near a front line, empty and dusty, no people shown"
       },
-      "photoFile": "photo-6.png",
-      "credit": "AI illustration"
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Eman Abdulhameed / CC BY-SA 4.0"
     }
   ],
-  "caption": "UPDATE: A nor’easter is bringing rain, wind and coastal flooding to the East Coast, with emergencies in New York and New Jersey.\nWhat are you seeing from family or friends up north?",
+  "caption": "Yemen’s war is escalating around Taiz, where Houthi forces and pro-government troops are fighting for control of a front-line city.\nWhat part of this conflict do you want explained next?",
   "hashtags": [
-    "#Noreaster",
-    "#EastCoastStorm"
+    "#Yemen",
+    "#WorldNews"
   ],
   "collaborators": [],
-  "igCaption": "UPDATE: A nor’easter is bringing rain, wind and coastal flooding to the East Coast, with emergencies in New York and New Jersey.\nWhat are you seeing from family or friends up north?\n\n📰 Sources: The New York Times, CNN, NBC News, AP via Spokesman-Review, PhillyVoice\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#Noreaster #EastCoastStorm #miami #southflorida",
+  "igCaption": "Yemen’s war is escalating around Taiz, where Houthi forces and pro-government troops are fighting for control of a front-line city.\nWhat part of this conflict do you want explained next?\n\n📰 Sources: BBC, Wikipedia, Council on Foreign Relations, Al Jazeera\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#Yemen #WorldNews #miami #southflorida",
   "kind": "world",
   "kicker": "NEWS FROM AROUND THE WORLD 🌎",
   "date": "2026-09-27",
