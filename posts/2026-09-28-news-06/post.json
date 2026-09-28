@@ -1,0 +1,113 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "JAIL RECORDS SHOW",
+    "main": "R&B SINGER",
+    "highlight": "JACQUEES",
+    "bottom": "WAS ARRESTED IN BROWARD",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Broward County courthouse Fort Lauderdale",
+      "prompt": "Broward County courthouse exterior in Fort Lauderdale with police vehicles nearby, daylight, news photo style"
+    },
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Georgia Guercio / CC BY-SA 3.0"
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Jacquees was arrested in Broward, jail records show",
+      "highlight": "arrested in Broward",
+      "body": "Jail records showed R&B artist Jacquees was arrested in Broward County on Monday.",
+      "place": "Broward County",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Wikimedia Commons Broward County courthouse Fort Lauderdale",
+        "prompt": "Exterior of a Broward County courthouse in Fort Lauderdale, with palm trees and a police cruiser parked outside"
+      },
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "That report followed DUI and officer battery charges",
+      "highlight": "officer battery charges",
+      "body": "The reported charges included DUI and battery on a law enforcement officer.",
+      "place": "Broward County",
+      "source": "AllHipHop",
+      "photo": {
+        "query": "Wikimedia Commons police car Florida night",
+        "prompt": "Police cruiser lights on a South Florida road at night, no people visible, documentary news style"
+      },
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: DanTD / CC BY-SA 4.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "And Baller Alert reported no bond in Broward jail",
+      "highlight": "no bond",
+      "body": "A Monday report said Jacquees remained in Broward jail with no bond after the arrest.",
+      "place": "Broward County",
+      "source": "Baller Alert",
+      "photo": {
+        "query": "Wikimedia Commons Broward County jail Fort Lauderdale",
+        "prompt": "Exterior of a county jail building in Broward County, Florida, with a secure entrance and no people visible"
+      },
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Which puts a Cash Money artist in Broward custody",
+      "highlight": "Cash Money artist",
+      "body": "Jacquees signed with Birdman’s Cash Money Records in 2014 and gained wider recognition with “B.E.D.” in 2016.",
+      "place": "Broward County",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons recording studio mixing console",
+        "prompt": "Close-up of a recording studio mixing console with microphones and dim studio lighting, no people"
+      },
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Cashlee69 / CC BY-SA 4.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "That same song hit No. 69 on Billboard Hot 100",
+      "highlight": "No. 69",
+      "body": "“B.E.D.” peaked at No. 69 on the Billboard Hot 100 and received double platinum certification from the RIAA.",
+      "place": "",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons platinum record music award",
+        "prompt": "A platinum music record award on a wall in a recording studio, close-up, no people"
+      },
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "So the next update is what Broward records show",
+      "highlight": "Broward records",
+      "body": "The public details so far include the Broward arrest, DUI and officer battery charges, and a no-bond report.",
+      "place": "Broward County",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Wikimedia Commons Fort Lauderdale Broward County courthouse",
+        "prompt": "Fort Lauderdale government building exterior with courthouse-style architecture, palm trees, and a clear sky"
+      },
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "R&B singer Jacquees was reported arrested in Broward County, with DUI and officer battery charges cited in recent reports.\nWhat detail are you watching for next?",
+  "hashtags": [
+    "#BrowardCounty",
+    "#Jacquees"
+  ],
+  "collaborators": [],
+  "igCaption": "R&B singer Jacquees was reported arrested in Broward County, with DUI and officer battery charges cited in recent reports.\nWhat detail are you watching for next?\n\n📰 Sources: NBC 6 South Florida, AllHipHop, Baller Alert, Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#BrowardCounty #Jacquees #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-09-28",
+  "id": "2026-09-28-news-06"
+}
