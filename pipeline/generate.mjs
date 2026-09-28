@@ -5,7 +5,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, readJSON, writeJSON } from './util.mjs';
-import { fetchNews, searchNews } from './news.mjs';
+import { fetchNews, searchNews, fetchArticles } from './news.mjs';
 import { wikiArticle, rentFacts } from './facts.mjs';
 import { STYLE, REMINDER, toneLines, sanitize, memeTells, HANDLES_RULE, cleanCollabs } from './style.mjs';
 
@@ -153,6 +153,9 @@ export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
     const hits = await searchNews(q, { days: 400, max: 12 }).catch(() => []);
     hits.forEach(n => sources.push(`NEWS (${n.source}, ${new Date(n.date).toDateString()}): ${n.title}`));
   }
+  // events/guides need real listings (names, dates, venues, prices): headlines alone make the fact-check strip everything
+  if (/EVENT|GUIDE/i.test(plan.format || '')) (await fetchArticles('events', { days: 14, max: 10, chars: 1800 }).catch(() => []))
+    .forEach(a => sources.push(`ARTICLE (${a.source}, ${new Date(a.date).toDateString()}): ${a.title}\n${a.body}`));
   if (plan.rent?.length) (await rentFacts(plan.rent).catch(e => { console.log(`  (rent data: ${e.message})`); return []; })).forEach(r => sources.push(`RENT DATA: ${r}`));
   console.log(`  sources: ${sources.length} (${sources.map(s => s.split(/[:\n]/)[0]).join('; ').slice(0, 300)})`);
   if (!sources.length) throw new Error('No sources found for the planned topic');
