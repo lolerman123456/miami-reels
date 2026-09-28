@@ -191,5 +191,5 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   }
   await publishReel(video, ep.igCaption, { collaborators: ep.collaborators });
   await publishStory(video).catch(e => console.log(`(story skipped: ${e.message})`));
-  await postToTikTok({ video, text: ep.igCaption, label: path.basename(dir), ai });
+  if (ep.tiktok) await postToTikTok({ video, text: ep.igCaption, label: path.basename(dir), ai }); // TikTok: upcoming/viral only
 }

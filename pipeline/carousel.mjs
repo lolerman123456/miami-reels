@@ -34,6 +34,8 @@ const KINDS = {
   news: { kicker: 'MIAMI NEWS 🚨', feed: 'local', pick: 'the single most viral South Florida story right now: the one people are sharing, commenting on and arguing about (a shocking crime or arrest, a wild video, a disaster, a celebrity moment in Miami, a big price or rent shock, a major court case, a huge development). Never a small business closing, a minor traffic item, a routine meeting or a neighborhood-only story. It must be a DIFFERENT story from the ones we already posted (listed below).', ask: 'A news carousel: ONE viral South Florida story told in depth across 5–6 connected slides (what happened, the key details and numbers, how it started, who it affects here, what happens next).' },
   world: { kicker: 'NEWS FROM AROUND THE WORLD 🌎', feed: 'world', pick: 'the single most serious story in the world today: the deadliest, most dangerous or most consequential (war, disaster, attack, crisis). Pick the one with the most facts in the headlines.', ask: 'The night news carousel: ONE world story, the most serious one today, told in depth across 5–6 connected slides (what happened, the scale in numbers, how it started, who is affected, what the world is doing, what happens next, and a Florida/US angle only if there honestly is one).' },
   feature: { feed: 'local' },
+  // TikTok-first: things people can actually go to in the next 7 days (the raves Reel was our top post)
+  upcoming: { kicker: 'THIS WEEK IN MIAMI 🎟️', feed: 'local', ask: 'An "upcoming in South Florida" carousel: the 5–6 best things happening in the next 7 days that people can actually go to (concerts, festivals, parties, openings, free events, big games, pop-ups). One slide each: what it is, the exact date and time, the venue and city, the price if known, and one line on why it is worth going. Only events whose dates are in the headlines and fall within the next 7 days; skip anything already over. Order by date. Headlines name the event; tags are EVENTS. Caption ends asking who they are taking (tag a friend).' },
 };
 
 const SYSTEM = `You write carousel posts for @getnearapp, a South Florida Instagram account: local news, real facts and useful information, community first. You're the friend who always knows what's going on and explains it clearly.
@@ -88,7 +90,7 @@ function recentPosts(days = 7) {
 
 export async function writeCarousel(kind, { topic, preview } = {}) {
   const spec = KINDS[kind];
-  if (!spec) throw new Error(`Unknown carousel kind "${kind}" (brief|news|world|feature)`);
+  if (!spec) throw new Error(`Unknown carousel kind "${kind}" (brief|news|world|feature|upcoming)`);
   const weekday = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })).getDay();
   const feature = kind === 'feature' ? FEATURES[weekday] : null;
   const kicker = feature ? `${feature.name}` : spec.kicker;
@@ -115,6 +117,14 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     for (const t of (choice.wikipedia || []).slice(0, 2)) { const w = await wikiArticle(t, { chars: 3000 }).catch(() => null); if (w) extra.push(`WIKIPEDIA "${w.title}" (background):\n${w.text}`); }
     topic = `ONE story, in depth: ${choice.story}. Use only headlines about this story.`;
   }
+  if (kind === 'upcoming' && !topic) {
+    // event listings: search the next week's things to do across South Florida
+    const qs = ['Miami events this weekend', 'things to do in Miami this week', 'Fort Lauderdale events this weekend', 'Miami concert festival this week', 'South Florida free events this weekend', 'Miami new opening pop-up'];
+    const found = [];
+    for (const q of qs) found.push(...await searchNews(q, { days: 10, max: 15 }).catch(() => []));
+    news.splice(0, news.length, ...found, ...news.slice(0, 20));
+    console.log(`  event sources: ${found.length} headlines`);
+  }
   if (feature?.wiki || feature?.rent) {
     const plan = await chat([{ role: 'system', content: 'Plan the fact sources for a South Florida Instagram carousel. Return JSON {"wikipedia":["up to 4 exact English Wikipedia article titles"],"rent":["up to 6 South Florida city names or 5-digit ZIPs"]}. Only fill "rent" for rent posts.' },
       { role: 'user', content: `Carousel: ${feature.name}\n${topic || feature.ask}\nDon't repeat these recent posts:\n${recentPosts().map(p => '- ' + (p.kicker || '') + ': ' + p.slides.map(x => x.headline).join('; ')).join('\n')}` }]);
@@ -127,6 +137,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     topic ? `${spec.pick ? spec.ask + '\n' : ''}The account owner asked for this — follow it: ${topic}` : (feature ? feature.ask : spec.ask),
     kind === 'world' ? 'COVER: the small top line is always "NEWS FROM AROUND THE WORLD" (we add it). Leave "top" empty and make main + highlight + bottom a complete sentence on their own, with its own subject, e.g. main "A NOR\'EASTER PUTS", highlight "50 MILLION", bottom "FROM MAINE TO VIRGINIA IN ITS PATH".' : '',
     `Today (New York): ${new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric' })}`,
+    kind === 'upcoming' ? `Headlines (date — outlet — headline — summary). Only use events whose date is stated and falls in the next 7 days:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` :
     `Headlines (date — outlet — headline — summary). Only use headlines from the last 3 days about THIS exact event; a search can return an older, similar event (last winter's storm, a past case): ignore those, and if two headlines disagree, leave the detail out:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}`,
     extra.length ? `Fact sources:\n\n${extra.join('\n\n')}` : '',
     recent.length ? `Our posts from the last week (don't repeat these unless there's an update — then tag it UPDATE):\n${recent.flatMap(p => p.slides.map(s => `- ${p.date}: ${s.headline}`)).join('\n')}` : '',
@@ -165,7 +176,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   }
   post = sanitize(post);
   post.collaborators = cleanCollabs(post.collaborators);
-  const SECTORS = /^(ECONOMY|TRAFFIC|WEATHER|REAL ESTATE|CRIME|DEVELOPMENT|TRANSIT|HISTORY|SPORTS|HEALTH|EDUCATION|CITY HALL|WORLD|USA)$/;
+  const SECTORS = /^(EVENTS|ECONOMY|TRAFFIC|WEATHER|REAL ESTATE|CRIME|DEVELOPMENT|TRANSIT|HISTORY|SPORTS|HEALTH|EDUCATION|CITY HALL|WORLD|USA)$/;
   const single = kind === 'feature' || !!topic;
   for (const x of post.slides) {
     if (single && post.sector) x.tag = post.sector;
@@ -342,6 +353,20 @@ async function chat(messages) {
   }
 }
 
+async function tiktokWorthy(post, kind) {
+  const control = readJSON(path.join(ROOT, 'control.json'));
+  const cap = control.tiktokSlideshowsPerDay ?? 3;
+  const log = fs.existsSync(path.join(ROOT, 'posted.log')) ? fs.readFileSync(path.join(ROOT, 'posted.log'), 'utf8') : '';
+  const today = log.split('\n').filter(l => l.includes(`tiktok:${post.date}-`)).length; // slideshows already sent today
+  if (today >= cap) return console.log(`  (TikTok: already ${today} slideshows today)`), false;
+  if (kind === 'upcoming') return true;
+  if (kind === 'world') return false;
+  const r = await chat([{ role: 'system', content: 'Rate 1–10 how well this South Florida carousel would do on TikTok with 18–35 year olds in Miami. High: things happening now or coming up that people can go to, and genuinely viral stories people share and argue about (a wild video, a shocking local moment, a celebrity in Miami, a huge price shock). Low: politics, court procedure, routine crime, world news, dry data. Reply JSON {"score": n, "why": "short"}.' },
+    { role: 'user', content: JSON.stringify({ cover: post.cover, slides: post.slides.map(x => x.headline) }) }]).catch(() => ({ score: 0 }));
+  console.log(`  TikTok score ${r.score}/10: ${r.why || ''}`);
+  return Number(r.score) >= 8;
+}
+
 if (import.meta.url === `file://${process.argv[1]}`) {
   const args = process.argv.slice(2);
   if (args.includes('--ai-photos')) process.env.AI_PHOTOS = '1';
@@ -356,9 +381,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     const { publishCarousel, publishStory } = await import('./publish.mjs');
     await publishCarousel(slides, post.igCaption, post.id, { collaborators: post.collaborators });
     await publishStory(story, post.id).catch(e => console.log(`(story skipped: ${e.message})`));
-    // the carousel kinds picked for TikTok (control.json "tiktokCarousels") also go to Buffer as a TikTok slideshow reminder
-    const tk = readJSON(path.join(ROOT, 'control.json')).tiktokCarousels || [];
-    if (tk.includes(post.kind || kind)) {
+    // TikTok (owner): only upcoming things and very viral stories. Upcoming carousels always go; others are rated and only
+    // strong ones go, at most control.json tiktokSlideshowsPerDay (default 3) a day, as Buffer reminders (owner adds music).
+    if (await tiktokWorthy(post, kind)) {
       const { postToTikTok } = await import('./buffer.mjs');
       await postToTikTok({ images: slides, text: post.igCaption, label: post.id, ai: [post.cover, ...post.slides].some(x => /^AI /.test(x?.credit || '')) });
     }

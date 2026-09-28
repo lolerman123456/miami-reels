@@ -2,7 +2,7 @@
 
 This repo runs **@getnearapp** end to end (the owner handed Claude the account; ChatGPT no longer posts). Daily, New York time:
 2 informational map Reels (~1pm, ~8pm) + carousels (max 10 posts/day total) — `news` 7am/11am/3pm/7pm (the most viral South Florida story right now, one story in depth), `brief` 9am (the biggest South Florida story), `feature` 5pm (rotating informational
-posts: did you know / rent check / history / new builds / by the numbers / follow-up / week recap — FEATURES in `pipeline/carousel.mjs`), `world` 10pm (the most serious world story). Every news carousel is ONE story told in depth with connected slides — never a roundup. Every post is cross-posted to stories. Feed posts stay ≥1 hour apart: before publishing, `pipeline/publish.mjs` checks the account's latest post (including ones the owner posts from the app, which it logs in `posted.log` as manual) and waits out the rest of the hour.
+posts: did you know / rent check / history / new builds / by the numbers / follow-up / week recap — FEATURES in `pipeline/carousel.mjs`), `world` 10pm (the most serious world story), `upcoming` 12pm (things to go to this week, TikTok-first). Every news carousel is ONE story told in depth with connected slides — never a roundup. Every post is cross-posted to stories. Feed posts stay ≥1 hour apart: before publishing, `pipeline/publish.mjs` checks the account's latest post (including ones the owner posts from the app, which it logs in `posted.log` as manual) and waits out the rest of the hour.
 Goal: grow the account. Raise volume slowly as it grows (add carousel slots in `control.json` → `carousels`); the owner audits
 and archives anything bad.
 Everything runs in GitHub Actions (`.github/workflows/reel.yml`) — the owner controls it by chatting with
@@ -38,10 +38,12 @@ slots skip music videos in `plan/videos.txt`; if a generated Reel is a music one
 logs `music:<id>  <video link>` in `posted.log` instead of posting. **Send the owner that link** (check-ins look for new
 `music:` lines) with a suggested post time.
 
-**TikTok** goes through the same Buffer (TikTok connected as a Buffer channel). Owner's rule: nothing auto-posts to TikTok
-(music matters). Every Reel (music ones too) becomes a TikTok **reminder** in Buffer right after its Instagram post / hand-off; the owner adds a sound and
-posts (`postToTikTok` in `pipeline/buffer.mjs`). Carousels whose kind is in `control.json` → `tiktokCarousels` (default brief 9am +
-feature 5pm) also go to Buffer as TikTok photo-slideshow reminders, so TikTok gets 4 posts a day (2 Reels + 2 slideshows).
+**TikTok** goes through the same Buffer (TikTok connected as a Buffer channel). Owner's rules: nothing auto-posts to TikTok
+(music matters: everything is a Buffer **reminder**, the owner adds a sound and posts), and TikTok gets only upcoming things
+and very viral stories, ~4+ a day. Reels: music Reels plus any episode with `"tiktok": true` (EVENTS/GUIDE set both).
+Slideshows: the daily `upcoming` carousel (12pm, "this week in Miami": things to go to in the next 7 days) always goes;
+other carousels are rated for TikTok and only 8+/10 go, max `control.json` → `tiktokSlideshowsPerDay` (3) a day
+(`tiktokWorthy` in `pipeline/carousel.mjs`, `postToTikTok` in `pipeline/buffer.mjs`). World carousels never go.
 The old direct TikTok app (`pipeline/tiktok.mjs`, `docs/tiktok/`) is no longer needed.
 
 ## Checking on runs & sharing videos (works without gh / without login — the repo is public)

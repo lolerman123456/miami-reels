@@ -14,10 +14,8 @@
     ],
     "brief": 9,
     "feature": 17,
-    "world": 22
+    "world": 22,
+    "upcoming": 12
   },
-  "tiktokCarousels": [
-    "brief",
-    "feature"
-  ]
+  "tiktokSlideshowsPerDay": 3
 }

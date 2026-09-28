@@ -133,7 +133,7 @@ if (cmd === 'prepare') {
     const { publishReel, publishStory } = await import('./publish.mjs');
     await publishReel(out, episode.igCaption, { collaborators: episode.collaborators });
     await publishStory(out, episode.id).catch(e => console.log(`(story skipped: ${e.message})`));
-    await postToTikTok({ video: out, text: episode.igCaption, label: episode.id, ai });
+    if (episode.tiktok) await postToTikTok({ video: out, text: episode.igCaption, label: episode.id, ai }); // TikTok: upcoming/viral only
   } else console.log('(dry run) not posted');
 } else {
   console.error('Usage: parallel.mjs prepare|capture …'); process.exit(1);
