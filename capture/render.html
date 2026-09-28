@@ -82,10 +82,11 @@ async function main() {
     // parallel jobs render a slice [from, to) of a shot; t still spans the whole shot so slices join seamlessly
     const start = Math.max(shot.from ?? 0, shot.skip || 0), end = shot.to ?? shot.frames;
     // warm-up pass: visit the slice's path first so its tiles are downloaded and cached before the real frames
-    for (let f = start; f < end; f += 6) { place(shot, f); await renderUntilLoaded(scene, tileset, f === start ? 30000 : 8000); }
+    for (let f = start; f < end; f += 3) { place(shot, f); await renderUntilLoaded(scene, tileset, f === start ? 45000 : 20000); }
     for (let f = start; f < end; f++) {
       place(shot, f);
-      await renderUntilLoaded(scene, tileset, f === start ? 20000 : (job.frameTimeout ?? 1800));
+      // owner's rule: the map must never visibly load mid-video, so every frame waits until all its tiles are in
+      if (!await renderUntilLoaded(scene, tileset, f === start ? 60000 : (job.frameTimeout ?? 30000))) console.warn(`frame ${f} of shot ${shot.index}: tiles still loading after timeout`);
       // first frame of a slice: let lighting/atmosphere settle (otherwise it comes out darker = a visible blink)
       if (f === start) for (let w = 0; w < 12; w++) { scene.render(); await sleep(60); }
       const blob = await new Promise(r => scene.canvas.toBlob(r, 'image/jpeg', 0.93));
@@ -104,9 +105,8 @@ async function renderUntilLoaded(scene, tileset, timeout) {
   while (true) {
     scene.render();
     n++;
-    if (tileset.tilesLoaded) { if (++done >= 2) return; } else done = 0; // loaded on two renders in a row
-    if (n > 400) return;
-    if (performance.now() - start > timeout) return;
+    if (tileset.tilesLoaded) { if (++done >= 3) return true; } else done = 0; // loaded on three renders in a row
+    if (performance.now() - start > timeout) return false;
     await sleep(done ? 20 : 120); // let tiles download/decode without hammering the GPU
   }
 }
