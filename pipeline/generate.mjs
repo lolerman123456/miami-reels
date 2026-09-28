@@ -186,8 +186,8 @@ export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
     break;
   }
   // last resort: park any scene with a bad location on the nearest good one instead of failing the run
-  const good = episode.scenes?.find(s => inFlorida(s.location));
-  if (good) for (const s of episode.scenes) if (!inFlorida(s.location)) { console.log(`  (moved "${s.location?.name}" camera to ${good.location.name})`); s.location = { ...good.location }; }
+  const good = episode.scenes?.find(s => inFlorida(s.location)) || { location: { name: 'Downtown Miami', lat: 25.7743, lon: -80.1937, h: 90 } };
+  if (good) for (const s of episode.scenes) if (!inFlorida(s.location)) { console.log(`  (moved "${s.location?.name || s.location}" camera to ${good.location.name})`); s.location = { ...good.location }; if (s.shot && s.shot.range < 1400) s.shot.range = 1600; }
   validate(episode);
   delete episode.removed;
   episode.collaborators = cleanCollabs(episode.collaborators);
