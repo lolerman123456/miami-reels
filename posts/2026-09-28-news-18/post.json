@@ -1,0 +1,111 @@
+{
+  "sector": "USA",
+  "cover": {
+    "top": "COAST GUARD SAYS",
+    "main": "A FIGHT LED TO",
+    "highlight": "A BOAT CAPSIZING",
+    "bottom": "BEFORE 40 WERE RESCUED",
+    "blur": false,
+    "photo": {
+      "query": "United States Coast Guard small boat rescue rough sea Mona Island",
+      "prompt": "Coast Guard rescue crews near an overturned boat in choppy water off Mona Island"
+    },
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration"
+  },
+  "slides": [
+    {
+      "tag": "USA",
+      "headline": "Coast Guard says 40 were rescued after boat capsized",
+      "highlight": "40 were rescued",
+      "body": "Crews rescued 40 people after a boat capsized off Mona Island on Monday.",
+      "place": "Mona Island",
+      "source": "United States Coast Guard News (.mil)",
+      "photo": {
+        "query": "United States Coast Guard rescue boat Caribbean water",
+        "prompt": "A Coast Guard rescue boat cutting through rough Caribbean water during an emergency response"
+      },
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "USA",
+      "headline": "That also included 2 people recovered dead",
+      "highlight": "2 people",
+      "body": "Partner agencies recovered 2 deceased people during the response off Mona Island.",
+      "place": "Mona Island",
+      "source": "United States Coast Guard News (.mil)",
+      "photo": {
+        "query": "Coast Guard helicopter ocean search rescue",
+        "prompt": "A Coast Guard helicopter flying low over open water during a search and rescue operation"
+      },
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Petty Officer 2nd Class Grant DeVuyst / Public domain"
+    },
+    {
+      "tag": "USA",
+      "headline": "The reason: a fight reportedly broke out onboard",
+      "highlight": "fight reportedly",
+      "body": "Reports said a fight onboard preceded the capsize.",
+      "place": "Mona Island",
+      "source": "miamiherald.com",
+      "photo": {
+        "query": "overturned boat ocean rescue",
+        "prompt": "An overturned boat in open water with rescue crews approaching from a distance"
+      },
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "USA",
+      "headline": "And reports said the boat was carrying 60 people",
+      "highlight": "60 people",
+      "body": "Reports said the boat was carrying 60 people near Puerto Rico when it capsized.",
+      "place": "Puerto Rico",
+      "source": "Times Now",
+      "photo": {
+        "query": "Mona Island Puerto Rico coast sea",
+        "prompt": "Aerial view of rocky Caribbean coastline near Mona Island with deep blue water offshore"
+      },
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "USA",
+      "headline": "Which put multiple agencies in the water response",
+      "highlight": "multiple agencies",
+      "body": "The response included the Coast Guard and partner agencies off Mona Island.",
+      "place": "Mona Island",
+      "source": "United States Coast Guard News (.mil)",
+      "photo": {
+        "query": "Coast Guard cutter Caribbean rescue",
+        "prompt": "A Coast Guard cutter offshore during a maritime emergency response in Caribbean waters"
+      },
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: U.S. Coast Guard photo by [null Courtesy / Public domain"
+    },
+    {
+      "tag": "USA",
+      "headline": "So the Coast Guard search was still continuing",
+      "highlight": "still continuing",
+      "body": "The search continued Monday after 40 rescues and 2 recoveries off Mona Island.",
+      "place": "Mona Island",
+      "source": "United States Coast Guard News (.mil)",
+      "photo": {
+        "query": "Coast Guard search and rescue ocean sunset",
+        "prompt": "Search and rescue crews scanning open water at dusk from a Coast Guard vessel"
+      }
+    }
+  ],
+  "caption": "Crews rescued 40 people and recovered 2 deceased people after a boat capsized off Mona Island. Reports said a fight broke out onboard before the capsize.",
+  "hashtags": [
+    "#CoastGuard",
+    "#PuertoRico"
+  ],
+  "collaborators": [],
+  "igCaption": "Crews rescued 40 people and recovered 2 deceased people after a boat capsized off Mona Island. Reports said a fight broke out onboard before the capsize.\n\n📰 Sources: United States Coast Guard News (.mil), miamiherald.com, Times Now\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#CoastGuard #PuertoRico #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-09-28",
+  "id": "2026-09-28-news-18"
+}
