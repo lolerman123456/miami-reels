@@ -1,0 +1,113 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SOUTH FLORIDA",
+    "main": "HAS",
+    "highlight": "6 EVENTS",
+    "bottom": "THIS WEEK, SEPT. 28 TO OCT. 3",
+    "blur": false,
+    "photo": {
+      "query": "Miami event crowd concert theater pop-up",
+      "prompt": "dramatic collage-style South Florida event scene with a theater marquee, concert lights, disco ball, waterfront dinner table and a colorful merch pop-up storefront"
+    },
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration"
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Bingo After Dark: Uncensored",
+      "highlight": "Bingo After",
+      "body": "Monday, Sept. 28 at 7 p.m. at Ft. Lauderdale Improv in Dania Beach. Admission is free with RSVP for an adult comedy bingo night hosted by Oronde Gadsden and Efendee Studio.",
+      "place": "Dania Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Fort Lauderdale Improv comedy club Dania Beach",
+        "prompt": "comedy club stage with bingo cards on tables, a spotlight, microphone and neon club lights"
+      },
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Buena Vista Social Club",
+      "highlight": "Buena Vista",
+      "body": "Tuesday, Sept. 29 at 7:30 p.m. at the Adrienne Arsht Center in Miami. Tickets cost $52 to $228 for the Broadway in Miami musical.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Adrienne Arsht Center Miami night exterior",
+        "prompt": "the Adrienne Arsht Center glowing at night with theater lights, palm trees and a Broadway marquee"
+      },
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Of Monsters and Men",
+      "highlight": "Monsters and Men",
+      "body": "Wednesday, Sept. 30 at 8 p.m. at the Fillmore Miami Beach. Tickets cost $58.50, and August Ponthier opens the indie-folk show.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Of Monsters and Men concert stage",
+        "prompt": "indie-folk band performing on a dark stage with blue lights, guitars and a packed theater crowd"
+      },
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Karol G’s Carolina dinner",
+      "highlight": "Carolina dinner",
+      "body": "Thursday, Oct. 1, with seatings from 6 to 10 p.m. at Casadonna in Miami. The $150 four-act dinner brings Carolina’s Territorios menu to the waterfront.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Casadonna Miami waterfront restaurant",
+        "prompt": "waterfront Miami restaurant dinner table at night with coastal dishes, cocktails and Biscayne Bay lights"
+      },
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Karol G’s Viajando Por El Mundo pop-up",
+      "highlight": "Viajando Por",
+      "body": "Friday and Saturday, Oct. 2 and 3, from 11 a.m. to 6 p.m. at 555 NW 29th St. Entry is first-come, first-served for tour merch and immersive photo ops.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Wynwood Miami colorful street art storefront",
+        "prompt": "colorful Miami pop-up storefront with passport stamp stations, tour merch racks and Tropicoqueta-style photo sets"
+      },
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Gimme Gimme Disco",
+      "highlight": "Gimme Disco",
+      "body": "Friday, Oct. 2 at 8 p.m. at Lincoln’s Beard in Miami. Tickets cost $20 for an ABBA-focused disco party with Bee Gees, Donna Summer and Cher in the set.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "disco dance floor mirror ball concert",
+        "prompt": "packed disco dance floor with a giant mirror ball, colorful lights, retro outfits and a brewery stage"
+      },
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "This week has free comedy, Broadway, indie-folk, a waterfront dinner, Karol G merch and an ABBA-focused disco night.\nWho are you taking? Tag a friend.",
+  "hashtags": [
+    "#MiamiEvents",
+    "#SouthFloridaEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "This week has free comedy, Broadway, indie-folk, a waterfront dinner, Karol G merch and an ABBA-focused disco night.\nWho are you taking? Tag a friend.\n\n📰 Sources: Miami New Times, Secret Miami\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiEvents #SouthFloridaEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN MIAMI 🎟️",
+  "date": "2026-09-28",
+  "id": "2026-09-28-upcoming"
+}
