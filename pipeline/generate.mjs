@@ -17,6 +17,7 @@ crime stories only rarely, when the owner asks.
   Each item scene = what + when + where + price, in 2–4 SHORT separate sentences (max ~12 words each), e.g. "Monday night, it's
   free. Bingo After Dark at the Improv in Dania Beach. Just RSVP." Never pad an item with background (acreage, founding year,
   a mall's history, redevelopment plans): if a place has no event with a date, drop it and use fewer items (3 is fine).
+  Outro = one short, real question ending in "?" ("Which one are you hitting first?"), then the tag-a-friend line.
   Hook = one or two short punchy sentences ("Here's everything happening in Miami this week. And we're starting with the free stuff.").
 - STORY (preferred): a true, gripping story tied to ONE real South Florida place people can see on the map. Famous people who
   lived or died there, crimes and how they were solved, disasters, scandals, mysteries, celebrity mansions, record-breaking
@@ -201,7 +202,11 @@ export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
   episode.format = plan.format;
   await nearMention(episode, plan);
   // events/guides do best with a trending sound → they go to the owner's Buffer instead of auto-posting (pipeline/buffer.mjs)
-  if (/EVENT|GUIDE/i.test(plan.format || '')) episode.music = episode.tiktok = true;
+  if (/EVENT|GUIDE/i.test(plan.format || '')) {
+    episode.music = episode.tiktok = true;
+    // the owner posts these: OpenAI's voice reads questions like questions (Kokoro keeps them flat)
+    episode.voice ??= { provider: 'openai', voice: 'ash' };
+  }
   const credit = (episode.sources || []).length ? `\n\nSources: ${episode.sources.join(', ')}` : '';
   // max 4 hashtags
   let n = 0; episode.igCaption = (episode.igCaption || '').replace(/#\w+/g, t => (++n <= 4 ? t : '')).replace(/[ \t]+$/gm, '').trim();
