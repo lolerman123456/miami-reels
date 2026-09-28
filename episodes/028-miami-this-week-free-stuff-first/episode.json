@@ -1,0 +1,229 @@
+{
+  "title": "Miami Events This Week: Sept 28 to Oct 3",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Everything happening in Miami this week 🎟️ Free stuff first.\n\nMon: Bingo After Dark, Fort Lauderdale Improv (free with RSVP)\nTue: Buena Vista Social Club opens at the Arsht ($52+)\nWed: Of Monsters and Men at the Fillmore\nThu: Diego Torres at the Fillmore + Karol G's Carolina pop-up dinner at Casadonna ($150)\nFri–Sat: Karol G's Viajando Por El Mundo pop-up, 555 NW 29th St\n\nSave this and tag who you're going with.\n\n#MiamiEvents #MiamiThisWeek #MiamiThingsToDo #SouthFloridaEvents",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Here's everything happening in Miami this week. And we're starting with the free stuff.",
+      "overlay": [
+        "MIAMI THIS WEEK",
+        "FREE STUFF FIRST"
+      ],
+      "emojis": [
+        "🎟️",
+        "🎤",
+        "🍽️",
+        "🌴"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.784,
+        "lon": -80.19,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Monday night, it's free. Bingo After Dark at the Fort Lauderdale Improv in Dania Beach. It starts at seven. Just RSVP.",
+      "caption": "Monday, Sept. 28: Bingo After Dark: Uncensored is at 7 p.m. at Ft. Lauderdale Improv in Dania Beach. Oronde Gadsden and Efendee Studio host the adult-humor bingo night, and admission is free with RSVP.",
+      "overlay": "DANIA BEACH",
+      "badge": "FREE RSVP",
+      "sub": "Ft. Lauderdale Improv",
+      "emoji": "🎱",
+      "stats": [
+        {
+          "value": "FREE",
+          "label": "ADMISSION"
+        },
+        {
+          "value": "7 P.M.",
+          "label": "START"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Ft. Lauderdale Improv",
+        "lat": 26.0527,
+        "lon": -80.1602,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Tuesday, Buena Vista Social Club opens at the Arsht Center. It's the Tony-winning musical. Tickets start at fifty-two dollars.",
+      "caption": "Tuesday, Sept. 29: Buena Vista Social Club opens at the Adrienne Arsht Center at 7:30 p.m. as part of the Broadway in Miami series. The Tony- and Grammy-winning musical follows Omara Portuondo, and tickets cost $52 to $228.",
+      "overlay": "ARSHT CENTER",
+      "badge": "$52 TO $228",
+      "sub": "Broadway in Miami",
+      "emoji": "🎭",
+      "stats": [
+        {
+          "value": "$52 TO $228",
+          "label": "TICKETS"
+        },
+        {
+          "value": "7:30 P.M.",
+          "label": "START"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Adrienne Arsht Center",
+        "lat": 25.7877,
+        "lon": -80.1898,
+        "h": 55
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -34,
+        "heading": 210,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Wednesday, Of Monsters and Men play the Fillmore on Miami Beach. Then on Thursday, Diego Torres takes the same stage.",
+      "caption": "Wednesday, Sept. 30: Of Monsters and Men play the Fillmore Miami Beach at 8 p.m. Tickets cost $58.50. Thursday, Diego Torres brings his Mi Norte & Mi Sur Tour there. Tickets cost $52 to $86.",
+      "overlay": "THE FILLMORE",
+      "badge": "2 SHOWS",
+      "sub": "Miami Beach concerts",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "$58.50",
+          "label": "WED TICKET"
+        },
+        {
+          "value": "$52 TO $86",
+          "label": "THU TICKETS"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "The Fillmore Miami Beach",
+        "lat": 25.7932,
+        "lon": -80.1333,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 75,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Thursday night, Karol G's restaurant from Medellín pops up at Casadonna. It's a one-night dinner. A hundred and fifty dollars a person.",
+      "caption": "Thursday, Oct. 1: Karol G's Medellín restaurant Carolina brings Territorios to Casadonna at 1737 N. Bayshore Drive. Chef Emilio Valencia leads the menu with Chef Lisbeth Mora and Casadonna's team. Seatings run from 6 p.m. to 10 p.m., and dinner costs $150 per person.",
+      "overlay": "CASADONNA",
+      "badge": "$150 PER PERSON",
+      "sub": "Carolina pop-up dinner",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "$150",
+          "label": "PER PERSON"
+        },
+        {
+          "value": "6 P.M. TO 10 P.M.",
+          "label": "SEATINGS"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Casadonna",
+        "lat": 25.7918,
+        "lon": -80.1864,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 155,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Friday and Saturday, Karol G's pop-up opens in Wynwood. Exclusive merch, photo spots, and it's first come, first served.",
+      "caption": "Friday and Saturday, Oct. 2 and 3: Karol G's Viajando Por El Mundo pop-up runs from 11 a.m. to 6 p.m. at 555 NW 29th Street. It includes interactive stops, custom stamps, exclusive merchandise, and first-come, first-served entry.",
+      "overlay": "WYNWOOD",
+      "badge": "OCT 2 AND 3",
+      "sub": "Karol G pop-up",
+      "emoji": "🛍️",
+      "stats": [
+        {
+          "value": "2-DAY",
+          "label": "POP-UP"
+        },
+        {
+          "value": "11 A.M. TO 6 P.M.",
+          "label": "HOURS"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "555 NW 29th Street",
+        "lat": 25.8033,
+        "lon": -80.2046,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 310,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Save this. And tag who you're going with.",
+      "overlay": "PICK ONE 🎟️",
+      "sub": "Sept 28 to Oct 3",
+      "location": {
+        "name": "555 NW 29th Street",
+        "lat": 25.8033,
+        "lon": -80.2046,
+        "h": 10
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 45
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "id": "028-miami-this-week-free-stuff-first"
+}
