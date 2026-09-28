@@ -1,0 +1,114 @@
+{
+  "sector": "TRAFFIC",
+  "cover": {
+    "top": "OCEAN DRIVE",
+    "main": "COULD GO",
+    "highlight": "CAR-FREE",
+    "bottom": "THANKSGIVING TO MARCH 31",
+    "blur": false,
+    "photo": {
+      "query": "Ocean Drive Miami Beach Art Deco neon night",
+      "prompt": "Night photo of Ocean Drive in Miami Beach with Art Deco hotels glowing in neon, palm trees, wet pavement, and an empty street",
+      "mark": "stamp: CAR-FREE"
+    },
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration"
+  },
+  "slides": [
+    {
+      "tag": "TRAFFIC",
+      "headline": "Miami Beach backs car-free Ocean Drive",
+      "highlight": "car-free Ocean",
+      "body": "Commissioners voted 7-0 in September 2026 to seek a car closure on Ocean Drive from 5th to 15th streets, Thanksgiving through March 31.",
+      "place": "Miami Beach",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Ocean Drive Miami Beach Lummus Park daytime",
+        "prompt": "Daytime photo looking down Ocean Drive beside Lummus Park, with Art Deco hotels, sidewalk cafes, palm trees, and the 10-block stretch visible"
+      },
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "TRAFFIC",
+      "headline": "That covers 10 blocks by Lummus Park",
+      "highlight": "10 blocks",
+      "body": "The stretch runs along the Lummus Park side, across from hotels and sidewalk cafes between 5th and 15th streets.",
+      "place": "South Beach",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Lummus Park Ocean Drive Miami Beach hotels cafes",
+        "prompt": "Wide street-level photo of Lummus Park next to Ocean Drive, with hotels, sidewalk cafes, palms, and pedestrians in South Beach"
+      },
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "TRAFFIC",
+      "headline": "That extends the plan past Valentine’s Day",
+      "highlight": "past Valentine’s",
+      "body": "The original proposal reopened the street after Valentine’s Day, and commissioners extended it through March to cover spring break.",
+      "place": "Miami Beach",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Ocean Drive Miami Beach pedestrians night",
+        "prompt": "Night scene on Ocean Drive in South Beach with people walking under neon Art Deco hotel lights and palm trees"
+      },
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "TRAFFIC",
+      "headline": "Which follows years of opening and closing",
+      "highlight": "opening and closing",
+      "body": "Ocean Drive closed to cars in 2020 for outdoor dining and distancing, then reopened to cars on Jan. 24, 2022 after nearly two years.",
+      "place": "Miami Beach",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Ocean Drive Miami Beach outdoor dining street closure",
+        "prompt": "Photo of Ocean Drive set up for outdoor dining, with tables in the street, pedestrians, Art Deco buildings, and no car traffic"
+      },
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "TRAFFIC",
+      "headline": "And cars came back two-way in 2025",
+      "highlight": "two-way in 2025",
+      "body": "In February 2025, Miami Beach reopened Ocean Drive to two-way traffic and removed the bike lanes.",
+      "place": "Miami Beach",
+      "source": "WLRN",
+      "photo": {
+        "query": "Ocean Drive Miami Beach traffic cars Art Deco",
+        "prompt": "Street-level photo of cars moving along Ocean Drive in Miami Beach with Art Deco hotels, palm trees, and busy sidewalks"
+      },
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "TRAFFIC",
+      "headline": "So the county and FDOT decide next",
+      "highlight": "FDOT decide",
+      "body": "Miami-Dade County and FDOT still have to review and permit the closure, while businesses remain divided over foot traffic, hotel access and congestion on parallel streets.",
+      "place": "Miami-Dade County",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Ocean Drive Miami Beach street crowd Lummus Park",
+        "prompt": "Photo of a busy Ocean Drive scene with pedestrians near Lummus Park, hotels in the background, and traffic control signs visible"
+      },
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Ocean Drive may go car-free every winter from Thanksgiving through March 31, pending Miami-Dade County and FDOT review.\nWould you rather walk it or drive it?",
+  "hashtags": [
+    "#OceanDrive",
+    "#MiamiBeach"
+  ],
+  "collaborators": [],
+  "igCaption": "Ocean Drive may go car-free every winter from Thanksgiving through March 31, pending Miami-Dade County and FDOT review.\nWould you rather walk it or drive it?\n\n📰 Sources: Miami Herald, NBC 6 South Florida, WLRN\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#OceanDrive #MiamiBeach #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-09-28",
+  "id": "2026-09-28-news-12"
+}
