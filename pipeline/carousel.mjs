@@ -77,8 +77,8 @@ The cover is a scroll-stopping hook in this exact stacked style (all caps on the
 Every cover and slide needs a photo: {"query":"Wikimedia Commons search for a real stock photo (place, landmark, road, building, vehicle, object, scene — e.g. 'Brightline train Miami', 'Palmetto Expressway traffic', 'police car Miami-Dade', 'Cuban coffee cafecito')","prompt":"AI photo description, used only if no stock photo looks good (e.g. 'police cruiser lights reflecting on a wet Hialeah street at night')"}
   Stock photos are preferred (AI images are budgeted), so write queries likely to find a real, good-looking photo. Never plan a real photo of a person to illustrate a news story.
 
-Return JSON: {"sector":"ECONOMY","cover":{"top":"...","main":"...","highlight":"...","bottom":"...","blur":false,"photo":{...}},"slides":[{"tag":"SECTOR label from the list","headline":"...","highlight":"2-3 word phrase copied exactly from the headline to color blue","body":"...","place":"neighborhood/city or country, optional","source":"outlet or empty for opinion slides","photo":{...}}],"caption":"...","hashtags":["2 specific hashtags for this post"],"collaborators":["handles from the COLLABORATORS list, or empty"]}
-3 to 7 slides. EVERY slide must have tag, headline, highlight, body and photo.`;
+Return JSON: {"sector":"ECONOMY","cover":{"top":"...","main":"...","highlight":"...","bottom":"...","blur":false,"photo":{...},"emojis":["2-4 emojis"],"logos":["domains of the brands/orgs in the post, list posts only, max 6"]},"slides":[{"tag":"SECTOR label from the list","headline":"...","highlight":"2-3 word phrase copied exactly from the headline to color blue","body":"...","place":"neighborhood/city or country, optional","source":"outlet or empty for opinion slides","photo":{...},"color":"#hex brand/team color when the slide is about one brand, team or org (Dolphins #008E97, Dunkin #FF671F), else omit","emoji":"1 emoji for the slide","chip":"key fact ≤16 chars: date, price or number (TUE 9/29, $52+, FREE, 7-0 VOTE)","logo":"official website domain of the brand/team/org the slide is about (dunkindonuts.com, miamidolphins.com, miamidade.gov), else omit; never for people"}],"caption":"...","hashtags":["2 specific hashtags for this post"],"collaborators":["handles from the COLLABORATORS list, or empty"]}
+3 to 7 slides. EVERY slide must have tag, headline, highlight, body, photo, emoji and chip. Slides must look alive (owner's rule): brand colors, logos, emojis and fact chips wherever they fit.`;
 
 const nyDate = (d = new Date()) => d.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
 
@@ -88,6 +88,32 @@ function recentPosts(days = 7) {
   const since = nyDate(new Date(Date.now() - days * 864e5));
   return fs.readdirSync(dir).filter(d => d.slice(0, 10) >= since && !d.endsWith('-preview')).sort()
     .map(d => { try { return readJSON(path.join(dir, d, 'post.json')); } catch { return null; } }).filter(Boolean);
+}
+
+// A brand's logo from its site icon (apple-touch-icon or Google's favicon service); kept only if it is big enough to look sharp.
+export async function getLogo(domain, dir, name) {
+  domain = String(domain || '').replace(/^https?:\/\//, '').replace(/\/.*$/, '').trim();
+  if (!/^[a-z0-9.-]+\.[a-z]{2,}$/i.test(domain)) return null;
+  const sharp = (await import('sharp')).default;
+  // our own logo library first (assets/logos/<domain>.png: clean, full-size logos for the chains we post about most)
+  const ALIAS = { 'dunkin.com': 'dunkindonuts.com', 'burgerking.com': 'bk.com', 'chickfila.com': 'chick-fil-a.com', 'pilotcompany.com': 'pilotflyingj.com' };
+  const key = ALIAS[domain.replace(/^www\./, '').toLowerCase()] || domain.replace(/^www\./, '').toLowerCase();
+  const lib = path.join(ROOT, 'assets/logos', `${key}.png`);
+  if (fs.existsSync(lib)) { const file = `${name}.png`; fs.copyFileSync(lib, path.join(dir, file)); return file; }
+  let best = null;
+  for (const url of [`https://www.${domain.replace(/^www\./, '')}/apple-touch-icon.png`, `https://${domain}/apple-touch-icon.png`, `https://www.google.com/s2/favicons?domain=${domain}&sz=256`]) {
+    try {
+      const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, redirect: 'follow', signal: AbortSignal.timeout(12000) });
+      if (!res.ok || !/image/.test(res.headers.get('content-type') || '')) continue;
+      const buf = Buffer.from(await res.arrayBuffer());
+      const m = await sharp(buf).metadata();
+      if (m.width >= 96 && (!best || m.width > best.w)) best = { buf, w: m.width };
+    } catch {}
+  }
+  if (!best) { console.log(`  (no sharp logo for ${domain})`); return null; }
+  const file = `${name}.png`;
+  await sharp(best.buf).resize(480, 480, { fit: 'inside', kernel: 'lanczos3' }).png().toFile(path.join(dir, file));
+  return file;
 }
 
 async function newsPhoto(p, dir, name) {
@@ -261,6 +287,10 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     if (photo) { item.photoFile = path.basename(photo.file); item.credit = photo.credit; }
     console.log(`  ${i ? '#' + i : 'cover'}: ${photo ? photo.credit : 'no photo'}`);
   }
+  // brand/team/org logos on white cards (owner: every slideshow should look alive, like the Coffee Day one)
+  for (const [i, item] of post.slides.entries()) if (item.logo) item.logoFile = await getLogo(item.logo, dir, `logo-${i + 1}`);
+  post.cover.logoFiles = [];
+  for (const [i, d] of (post.cover.logos || []).slice(0, 6).entries()) { const f = await getLogo(d, dir, `logo-c${i}`); if (f) post.cover.logoFiles.push(f); }
   writeJSON(path.join(dir, 'post.json'), post);
   console.log(`✔ ${kicker}: ${[post.cover.top, post.cover.main, post.cover.highlight, post.cover.bottom].filter(Boolean).join(' / ')}`);
   for (const s of post.slides) console.log(`   [${s.tag}] ${s.headline}${s.source ? ` (${s.source})` : ''}`);
@@ -287,9 +317,21 @@ body { width: 1080px; height: var(--h); overflow: hidden; background: #000; colo
 .credit { position: absolute; right: 20px; top: 20px; font-size: 19px; font-weight: 700; color: rgba(255,255,255,.85);
   background: rgba(0,0,0,.45); padding: 6px 12px; border-radius: 8px; max-width: 700px; }
 .tag { display: inline-block; padding: 10px 22px; border-radius: 10px; font-weight: 900; font-size: 30px; letter-spacing: 1px; }
+.chip { display: inline-block; padding: 10px 24px; border-radius: 14px; font-weight: 900; font-size: 32px; margin-left: 14px; }
+.count { position: absolute; left: 24px; top: 20px; font-size: 26px; font-weight: 900; background: rgba(0,0,0,.5); padding: 6px 16px; border-radius: 20px; }
+.logo { position: absolute; background: #fff; border-radius: 28px; box-shadow: 0 18px 50px rgba(0,0,0,.45); display: flex; align-items: center; justify-content: center; padding: 22px; }
+.logo img { width: 100%; height: 100%; object-fit: contain; }
+.bgemoji { position: absolute; right: -60px; bottom: 60px; font-size: 420px; opacity: .14; transform: rotate(-12deg); }
 `;
 const arrow = `<svg width="64" height="24" viewBox="0 0 64 24"><path d="M0 12h58M48 2l12 10-12 10" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 const bar = right => `<div class="bar"><span class="brand">getnearapp</span><span class="more">${right}</span></div>`;
+// slide themes (owner: every slideshow should look alive): the brand/team color from the writer, else the section's color
+const SECTOR_COLORS = { DEALS: '#FF6B1A', EVENTS: '#8A2BE2', SPORTS: '#008E97', CRIME: '#C8102E', WEATHER: '#0A84C6', TRAFFIC: '#E0A100',
+  TRANSIT: '#2F9E44', ECONOMY: '#1E9E5A', 'REAL ESTATE': '#B8860B', DEVELOPMENT: '#E8590C', HISTORY: '#8B5A2B', HEALTH: '#E03E7A',
+  EDUCATION: '#5F3DC4', 'CITY HALL': '#364FC7', WORLD: '#1C7ED6', USA: '#1C3F94', NEWS: BLUE };
+const hexOk = c => /^#[0-9a-f]{6}$/i.test(String(c || ''));
+const shade = (hex, f) => '#' + [1, 3, 5].map(i => Math.round(parseInt(hex.slice(i, i + 2), 16) * f).toString(16).padStart(2, '0')).join('');
+const themeOf = (s, post) => hexOk(s.color) ? s.color : SECTOR_COLORS[String(s.tag || post?.sector || 'NEWS').toUpperCase()] || BLUE;
 // widest size (px) that fits `text` on one line of `width` px in Montserrat Black caps
 const fit1 = (text, max, width = 980) => Math.min(max, Math.floor(width / (String(text).length * 0.74 + 0.3)));
 
@@ -319,7 +361,10 @@ function coverHTML(post, dir, h) {
     ${c.blur ? `<div class="caps" style="position:absolute;left:0;right:0;top:${h * 0.22}px;text-align:center;font-size:${h > 1400 ? 300 : 250}px">?</div>` : ''}
     ${img ? markSVG(c.mark, h * 0.08, h * 0.42) : ''}
     ${c.credit && !c.blur ? `<div class="credit">${esc(c.credit)}</div>` : ''}
+    ${post.kicker ? `<div style="position:absolute;left:30px;top:24px;background:${BLUE};border-radius:14px;padding:10px 22px;font-weight:900;font-size:30px;letter-spacing:1px">${esc(post.kicker)}</div>` : ''}
     <div style="position:absolute;left:40px;right:40px;bottom:${h > 1400 ? 220 : 150}px;text-align:center">
+      ${(c.logoFiles || []).length ? `<div style="display:flex;gap:18px;justify-content:center;margin-bottom:26px">${c.logoFiles.map(f => dataUrl(dir, f)).filter(Boolean).map(u => `<div style="background:#fff;border-radius:18px;width:${c.logoFiles.length > 4 ? 140 : 170}px;height:${c.logoFiles.length > 4 ? 100 : 120}px;padding:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.4)"><img src="${u}" style="width:100%;height:100%;object-fit:contain"></div>`).join('')}</div>` : ''}
+      ${(c.emojis || []).length && !(c.logoFiles || []).length ? `<div style="font-size:64px;margin-bottom:14px;letter-spacing:12px">${c.emojis.slice(0, 4).map(esc).join('')}</div>` : ''}
       ${c.top ? `<div class="caps" style="font-size:${fit1(c.top, 68)}px;margin-bottom:10px">${esc(c.top)}</div>` : ''}
       ${c.main ? `<div class="caps" style="font-size:${fit1(c.main, 104)}px">${esc(c.main)}</div>` : ''}
       <div class="caps blue" style="font-size:${fit1(c.highlight, 168)}px;margin:4px 0">${esc(c.highlight)}</div>
@@ -328,22 +373,27 @@ function coverHTML(post, dir, h) {
     ${bar(h > 1400 ? `new post on our page ${arrow}` : `swipe for more ${arrow}`)}`;
 }
 
-function slideHTML(s, i, n, dir) {
-  const img = dataUrl(dir, s.photoFile);
+function slideHTML(s, i, n, dir, post) {
+  const img = dataUrl(dir, s.photoFile), logo = dataUrl(dir, s.logoFile);
+  const theme = themeOf(s, post), accent = '#FFD24A';
   const hl = String(s.headline || ''); const k = s.highlight ? hl.toLowerCase().indexOf(String(s.highlight).toLowerCase()) : -1;
-  const headline = k >= 0 ? `${esc(hl.slice(0, k))}<span class="blue">${esc(hl.slice(k, k + s.highlight.length))}</span>${esc(hl.slice(k + s.highlight.length))}` : esc(hl);
+  const headline = k >= 0 ? `${esc(hl.slice(0, k))}<span style="color:${accent}">${esc(hl.slice(k, k + s.highlight.length))}</span>${esc(hl.slice(k + s.highlight.length))}` : esc(hl);
   const size = Math.max(52, Math.min(84, Math.floor(84 * Math.sqrt(48 / Math.max(48, hl.length)))));
   const red = /CRIME|BREAKING|UPDATE/.test(s.tag || '');
   return `
-    ${img ? `<div class="bg" style="background-image:url('${img}');bottom:auto;height:760px"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 20%, #2a3a66, #05070d)"></div>`}
-    <div class="shade" style="background:linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(0,0,0,.6) 45%, #000 57%)"></div>
+    <div class="bg" style="background:radial-gradient(circle at 50% 75%, ${theme} 0%, ${shade(theme, 0.45)} 60%, ${shade(theme, 0.22)} 100%)"></div>
+    ${s.emoji ? `<div class="bgemoji">${esc(s.emoji)}</div>` : ''}
+    ${img ? `<div class="bg" style="background-image:url('${img}');bottom:auto;height:700px"></div>` : ''}
+    <div class="shade" style="bottom:auto;height:720px;background:linear-gradient(to bottom, rgba(0,0,0,0) 45%, ${shade(theme, 0.45)} 100%)"></div>
     ${img ? markSVG(s.mark, 90, 460) : ''}
     ${s.credit ? `<div class="credit">${esc(s.credit)}</div>` : ''}
+    <div class="count">${i + 1}/${n}</div>
+    ${logo ? `<div class="logo" style="right:60px;top:540px;width:300px;height:180px">${`<img src="${logo}">`}</div>` : ''}
     <div style="position:absolute;left:60px;right:60px;bottom:150px">
-      <span class="tag" style="background:${red ? '#FF3B3B' : BLUE}">${esc(s.tag || 'NEWS')}</span>
+      <span class="tag" style="background:${red ? '#FF3B3B' : '#fff'};color:${red ? '#fff' : shade(theme, 0.6)}">${s.emoji ? esc(s.emoji) + ' ' : ''}${esc(s.tag || 'NEWS')}</span>${s.chip ? `<span class="chip" style="background:${accent};color:#111">${esc(String(s.chip).toUpperCase().slice(0, 18))}</span>` : ''}
       <div class="caps" style="font-size:${size}px;margin-top:26px">${headline}</div>
       <div style="margin-top:26px;font-size:42px;font-weight:700;line-height:1.32;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)">${esc(s.body)}</div>
-      <div style="margin-top:24px;font-size:28px;font-weight:800;color:rgba(255,255,255,.6)">${[s.place ? '📍 ' + esc(s.place) : '', s.source ? 'Source: ' + esc(s.source) : ''].filter(Boolean).join('  ·  ')}</div>
+      <div style="margin-top:24px;font-size:28px;font-weight:800;color:rgba(255,255,255,.7)">${[s.place ? '📍 ' + esc(s.place) : '', s.source ? 'Source: ' + esc(s.source) : ''].filter(Boolean).join('  ·  ')}</div>
     </div>
     ${bar(i + 1 < n ? `${i + 1}/${n} ${arrow}` : `${i + 1}/${n}`)}`;
 }
@@ -351,11 +401,12 @@ function slideHTML(s, i, n, dir) {
 function ctaHTML(post, dir) {
   const img = dataUrl(dir, post.cover.photoFile);
   return `
-    ${img ? `<div class="bg" style="background-image:url('${img}');filter:blur(30px) brightness(.45);transform:scale(1.15)"></div>` : ''}
+    <div class="bg" style="background:radial-gradient(circle at 50% 30%, #3d86ff 0%, ${BLUE} 45%, #0b3fb3 100%)"></div>
+    <div class="bgemoji" style="opacity:.12">📍</div>
     <div style="position:absolute;left:60px;right:60px;top:300px;text-align:center">
       <div style="font-size:150px">📍</div>
-      <div class="caps" style="font-size:120px;margin-top:20px">STAY <span class="blue">NEAR.</span></div>
-      <div style="margin-top:40px;font-size:42px;font-weight:700;line-height:1.35">Follow <b class="blue" style="font-weight:900">@getnearapp</b> for what South Florida is actually talking about.</div>
+      <div class="caps" style="font-size:120px;margin-top:20px">STAY <span style="color:#FFD24A">NEAR.</span></div>
+      <div style="margin-top:40px;font-size:42px;font-weight:700;line-height:1.35">Follow <b style="font-weight:900;color:#FFD24A">@getnearapp</b> for what South Florida is actually talking about.</div>
       <div style="margin-top:50px;font-size:34px;font-weight:800;color:rgba(255,255,255,.75)">Got an only-in-Miami moment?<br>Tag us or DM us to get featured.</div>
     </div>
     ${bar(`follow for more ${arrow}`)}`;
@@ -386,7 +437,7 @@ export async function renderCarousel(dir) {
   try {
     const n = post.slides.length;
     const slides = [await shoot(coverHTML(post, dir, 1350), path.join(dir, '00-cover.jpg'), 1350)];
-    for (let i = 0; i < n; i++) slides.push(await shoot(slideHTML(post.slides[i], i, n, dir), path.join(dir, `${String(i + 1).padStart(2, '0')}.jpg`), 1350));
+    for (let i = 0; i < n; i++) slides.push(await shoot(slideHTML(post.slides[i], i, n, dir, post), path.join(dir, `${String(i + 1).padStart(2, '0')}.jpg`), 1350));
     slides.push(await shoot(ctaHTML(post, dir), path.join(dir, '99-cta.jpg'), 1350));
     const story = await shoot(coverHTML(post, dir, 1920), path.join(dir, 'story.jpg'), 1920);
     return { post, slides, story };
