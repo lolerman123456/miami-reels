@@ -24,7 +24,7 @@ Claude from their phone. Your job in a chat is to turn their request into a comm
 | "Pause" / "resume" | `control.json` → `"paused": true/false`. Commit + push. |
 | "Skip tomorrow" / a date | Add `"YYYY-MM-DD"` (New York date) to `control.json` → `skipDates` (skips both posts that day). Commit + push. |
 | "What did we post?" | Read `posted.log` (timestamp, file, Instagram link) and `episodes/*/episode.json`. |
-| "Change the style / voice / tone" | Style prompt: `pipeline/generate.mjs` (PROMPT). Graphics: `src/Reel.tsx`. Voice: repo variable `KOKORO_VOICE` (am_adam default). |
+| "Change the style / voice / tone" | Style prompt: `pipeline/generate.mjs` (PROMPT). Graphics: `src/Reel.tsx`. Voice: OpenAI `ash` by default (style in `pipeline/voice.mjs` OPENAI_STYLE: clear separate sentences, questions rise at the end); `"voice": {"provider": "kokoro"}` in an episode uses the old Kokoro voice (`KOKORO_VOICE`, am_adam). |
 
 Scheduled runs respect `control.json`; runs started by `requests/run.json` or the Run-workflow button always go.
 
@@ -52,7 +52,7 @@ The old direct TikTok app (`pipeline/tiktok.mjs`, `docs/tiktok/`) is no longer n
 - Run status: `curl -s "https://api.github.com/repos/lolerman123456/miami-reels/actions/runs?per_page=5"` (fields: name, event,
   status, conclusion, created_at, html_url). A Reel run is split into jobs: `prepare` (script/voice/captions) → `capture` (the 3D footage, ~16 slices rendered in parallel by `pipeline/parallel.mjs`) → `reel` (stitch, post). ~15 min normal, ~25–30 min with `"quality": "high"` in requests/run.json (full-res, more detail; use for hand-picked Reels).
 - What got posted: `posted.log` (pull first — the bot commits it after each run).
-- A voice other than Adam: add `"voice": {"provider": "openai", "voice": "ash"}` to that episode.json (optional `"speed": 1.15`).
+- Voice: OpenAI ash is the default; another voice: `"voice": {"provider": "openai", "voice": "onyx"}` in that episode.json (optional `"speed": 1.15`), or `{"provider": "kokoro"}` for the old Adam voice.
 
 ## Content rules (keep the account safe)
 No jokes (owner's call — they read as AI): everything is informational, from real sources (news, Wikipedia, Zillow), fact-checked.
