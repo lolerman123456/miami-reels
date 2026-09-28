@@ -120,7 +120,8 @@ const VIRAL_FEEDS = [
 export async function fetchViral({ perSub = 10 } = {}) {
   const UA = { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126 Safari/537.36' };
   const out = [];
-  await Promise.all(VIRAL_FEEDS.map(async ([source, url]) => {
+  for (const [i, [source, url]] of VIRAL_FEEDS.entries()) { // one at a time: Reddit rate-limits parallel requests (HTTP 429)
+    if (i) await new Promise(r => setTimeout(r, 2500));
     try {
       const res = await fetch(url, { headers: UA, signal: AbortSignal.timeout(15000) });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -129,7 +130,7 @@ export async function fetchViral({ perSub = 10 } = {}) {
         .filter(t => !/megathread|monthly|weekly|daily (discussion|thread)|jobs thread/i.test(t)).slice(0, perSub);
       titles.forEach((title, i) => out.push({ source: `${source} (hot #${i + 1})`, title, viral: true }));
     } catch (e) { console.log(`  (viral feed failed: ${source} — ${e.message})`); }
-  }));
+  }
   try {
     const xml = await (await fetch('https://trends.google.com/trending/rss?geo=US-FL', { headers: UA, signal: AbortSignal.timeout(15000) })).text();
     for (const b of xml.split('<item>').slice(1, 16)) {
