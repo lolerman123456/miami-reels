@@ -427,7 +427,7 @@ async function tiktokWorthy(post, kind) {
   const r = await chat([{ role: 'system', content: 'Rate 1–10 how well this South Florida carousel would do on TikTok with 18–35 year olds in Miami. High: things happening now or coming up that people can go to, and genuinely viral stories people share and argue about (a wild video, a shocking local moment, a celebrity in Miami, a huge price shock). Low: politics, court procedure, routine crime, world news, dry data. Reply JSON {"score": n, "why": "short"}.' },
     { role: 'user', content: JSON.stringify({ cover: post.cover, slides: post.slides.map(x => x.headline) }) }]).catch(() => ({ score: 0 }));
   console.log(`  TikTok score ${r.score}/10: ${r.why || ''}`);
-  return Number(r.score) >= 8;
+  return Number(r.score) >= (control.tiktokMinScore ?? 6);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

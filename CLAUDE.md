@@ -42,8 +42,9 @@ logs `music:<id>  <video link>` in `posted.log` instead of posting. **Send the o
 (music matters: everything is a Buffer **reminder**, the owner adds a sound and posts), and TikTok gets only upcoming things
 and very viral stories, ~4+ a day. Reels: music Reels plus any episode with `"tiktok": true` (EVENTS/GUIDE set both).
 Slideshows: the daily `deals` (11am) and `upcoming` (12pm) carousels always go;
-other carousels are rated for TikTok and only 8+/10 go, max `control.json` → `tiktokSlideshowsPerDay` (4) a day
+other carousels are rated for TikTok and those scoring `control.json` → `tiktokMinScore` (6)+/10 go, max `tiktokSlideshowsPerDay` (8) a day (owner: capitalize on slideshows, not just Reels)
 (`tiktokWorthy` in `pipeline/carousel.mjs`, `postToTikTok` in `pipeline/buffer.mjs`). World carousels never go.
+Hand-made slideshows (brand logos, bold colors, e.g. National Coffee Day): `slideshows/<id>/slides.json` + `logos/`, render with `node pipeline/slideshow.mjs render slideshows/<id>`, commit (incl. `out/`), then `requests/slideshow.json` → `{"dir": "slideshows/<id>", "at": "..."}` sends it to Buffer (`.github/workflows/slideshow.yml`).
 The old direct TikTok app (`pipeline/tiktok.mjs`, `docs/tiktok/`) is no longer needed.
 
 ## Checking on runs & sharing videos (works without gh / without login — the repo is public)

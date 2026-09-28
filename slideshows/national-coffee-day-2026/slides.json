@@ -1,0 +1,118 @@
+{
+  "caption": "FREE COFFEE tomorrow ☕ National Coffee Day is Tuesday, Sept 29.\n\n☕ Pilot: free hot coffee, any size, no purchase (app)\n☕ Circle K: free medium coffee (app)\n☕ Dunkin': free medium coffee with any purchase\n☕ Einstein Bros: free iced coffee with any purchase (mention it)\n☕ Paris Baguette: free medium coffee with any purchase (members)\n☕ RaceTrac: $1 small hot coffee through Sept 30\n🍩 Krispy Kreme: new coffee-flavored doughnut\n🧊 Starbucks: new iced Aerocano\n\nSave this and tag your coffee person. At participating locations.\n\n#nationalcoffeeday #freecoffee #miami #miamideals #southflorida",
+  "slides": [
+    {
+      "type": "cover",
+      "kicker": "NATIONAL COFFEE DAY ☕",
+      "title": "FREE",
+      "highlight": "COFFEE",
+      "date": "TUESDAY, SEPT 29",
+      "logos": [
+        "pilot.png",
+        "circlek.png",
+        "dunkin.png",
+        "einstein.png",
+        "parisb.png",
+        "racetrac.png",
+        "krispy.png",
+        "starbucks.png"
+      ],
+      "sub": "8 coffee deals · swipe →"
+    },
+    {
+      "type": "brand",
+      "logo": "pilot.png",
+      "color": "#d71920",
+      "dark": "#7a0c12",
+      "accent": "#ffd27a",
+      "deal": "FREE HOT COFFEE",
+      "detail": "Any size. No purchase needed.",
+      "when": "TUE 9/29 · REDEEM IN THE PILOT APP"
+    },
+    {
+      "type": "brand",
+      "logo": "circlek.png",
+      "color": "#ee3a24",
+      "dark": "#8a1a0e",
+      "accent": "#f89a1c",
+      "deal": "FREE MEDIUM COFFEE",
+      "detail": "Hot or iced, at any Circle K.",
+      "when": "REDEEM IN THE CIRCLE K APP"
+    },
+    {
+      "type": "brand",
+      "logo": "dunkin.png",
+      "color": "#ff671f",
+      "dark": "#b33c05",
+      "accent": "#da1884",
+      "chipText": "#fff",
+      "deal": "FREE MEDIUM COFFEE",
+      "detail": "Hot or iced, with any purchase.",
+      "when": "TUE 9/29"
+    },
+    {
+      "type": "brand",
+      "logo": "einstein.png",
+      "color": "#8a5a33",
+      "dark": "#3d2414",
+      "accent": "#f2a900",
+      "deal": "FREE ICED COFFEE",
+      "detail": "With any purchase.",
+      "when": "TUE 9/29 · MENTION THE DEAL IN STORE",
+      "square": true
+    },
+    {
+      "type": "brand",
+      "logo": "parisb.png",
+      "color": "#1c3c78",
+      "dark": "#0a1f44",
+      "accent": "#c9a45c",
+      "deal": "FREE MEDIUM COFFEE",
+      "detail": "Hot or iced, with any purchase. PB members.",
+      "when": "TUE 9/29",
+      "square": true
+    },
+    {
+      "type": "brand",
+      "logo": "racetrac.png",
+      "color": "#0a4fc2",
+      "dark": "#022a6b",
+      "accent": "#e31837",
+      "chipText": "#fff",
+      "deal": "$1 SMALL HOT COFFEE",
+      "detail": "No rewards membership needed.",
+      "when": "EVERY DAY THROUGH SEPT 30"
+    },
+    {
+      "type": "brand",
+      "logo": "krispy.png",
+      "color": "#1e7b3c",
+      "dark": "#0c3d1c",
+      "accent": "#e2231a",
+      "chipText": "#fff",
+      "deal": "NEW COFFEE DOUGHNUT",
+      "detail": "An Original Glazed Coffee Flavored Doughnut, just for Coffee Day.",
+      "when": "THROUGH TUE 9/29",
+      "icon": "🍩"
+    },
+    {
+      "type": "brand",
+      "logo": "starbucks.png",
+      "color": "#00704a",
+      "dark": "#1e3932",
+      "accent": "#ffffff",
+      "deal": "NEW ICED AEROCANO",
+      "detail": "A new iced espresso drink, plus three new mini pies.",
+      "when": "STARTING TUE 9/29",
+      "square": true,
+      "icon": "🧊"
+    },
+    {
+      "type": "end",
+      "title": "SAVE THIS ☕",
+      "sub": "Tag your coffee person.",
+      "near": "Grabbing coffee tomorrow? The NEAR app shows you who walked past you.",
+      "fine": "At participating locations. Deals can change, so check each brand's app. Source: Mashable, Sept 28, 2026."
+    }
+  ]
+}

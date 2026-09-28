@@ -1,0 +1,32 @@
+name: Slideshow
+
+# Hand-made TikTok photo slideshow → Buffer reminder (the owner adds a sound and posts).
+# Commit slideshows/<id>/ (slides.json, logos/, optional out/*.jpg) and requests/slideshow.json → {"dir": "slideshows/<id>", "at": "<ISO>"}.
+on:
+  push:
+    branches: [main]
+    paths: ['requests/slideshow.json']
+
+permissions:
+  contents: write
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Send to Buffer
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: node pipeline/slideshow.mjs send "$(jq -r .dir requests/slideshow.json)"
+      - name: Save posted.log
+        run: |
+          git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
+          git add posted.log && git commit -qm "Slideshow sent to Buffer" && { for i in 1 2 3 4; do git pull -q --rebase && git push -q && break; sleep $((i*5)); done; } || true
