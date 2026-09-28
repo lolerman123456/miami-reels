@@ -77,7 +77,7 @@ const MATCH = {
   events: /event|festival|concert|this weekend|things to do|opening|opens|pop-up|tickets|fair|market|party|parade|exhibit|brunch|restaurant/i,
   deals: /free (food|coffee|meal|breakfast|lunch|burger|taco|donut|doughnut|fries|sandwich|pizza|drink|ice cream|chicken)|food drive|food distribution|food pantry|giveaway|national \w+ day|chick-fil-a|mcdonald|wendy|taco bell|dunkin|starbucks|krispy|popeyes|chipotle|burger king|subway|domino|pollo tropical|publix|bogo|\$1 /i,
 };
-const plain = s => decode(decode(s)).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+const plain = s => decode(decode(s)).replace(/&rsquo;|&lsquo;/g, "'").replace(/&ldquo;|&rdquo;/g, '"').replace(/&#\d+;|&\w+;/g, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
 export async function fetchArticles(kind, { days = 10, max = 14, chars = 1400 } = {}) {
   const since = Date.now() - days * 86400e3;
   const out = [];
@@ -90,9 +90,21 @@ export async function fetchArticles(kind, { days = 10, max = 14, chars = 1400 } 
         const date = Date.parse(raw('pubDate') || raw('published') || raw('updated')) || Date.now();
         const body = plain(raw('content:encoded') || raw('content') || raw('description'));
         if (!title || date < since || !MATCH[kind].test(title)) continue;
-        out.push({ title, source, date, body: body.slice(0, chars) });
+        if (kind === 'deals' && /amazon|walmart\.com|target\.com|woot|shipped|free shipping|preorder|online|promo code|vitamin shoppe|protein bar/i.test(title)) continue; // online shopping, not local
+        out.push({ title, source, date, link: plain(raw('link')) || (/href="([^"]+)"/.exec(raw('link') || b) || [])[1], body: body.slice(0, chars) });
       }
     } catch (e) { console.log(`  (article feed failed: ${source} — ${e.message})`); }
   }));
-  return out.sort((a, b) => b.date - a.date).slice(0, max);
+  const top = out.sort((a, b) => b.date - a.date).slice(0, max);
+  // feeds that only carry a one-line summary: read the article page itself
+  await Promise.all(top.filter(a => a.body.length < 600 && /^https?:/.test(a.link || '')).map(async a => {
+    try {
+      const html = await (await fetch(a.link, { headers: { 'User-Agent': 'Mozilla/5.0' }, redirect: 'follow', signal: AbortSignal.timeout(15000) })).text();
+      const main = (/<article[\s\S]*?<\/article>/i.exec(html) || [html])[0].replace(/<(script|style|nav|header|footer|aside)[\s\S]*?<\/\1>/gi, ' ');
+      let text = plain(main);
+      const cut = text.search(/SMS More|Share this article|Advertisement/); if (cut > 0 && cut < 1500) text = text.slice(cut + 9);
+      if (text.length > a.body.length) a.body = text.slice(0, chars * 2);
+    } catch {}
+  }));
+  return top;
 }
