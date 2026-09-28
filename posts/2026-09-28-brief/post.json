@@ -1,0 +1,113 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "MIAMI JURY SELECTION",
+    "main": "STARTS IN THE",
+    "highlight": "MOÏSE CASE",
+    "bottom": "AFTER 2021 ASSASSINATION",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Miami federal courthouse downtown",
+      "prompt": "Miami federal courthouse exterior in downtown Miami on a cloudy morning, no people visible"
+    },
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: James E. Scholz / CC BY-SA 4.0"
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Jury selection begins in Miami in the Moïse case",
+      "highlight": "Jury selection",
+      "body": "A man charged in connection with the 2021 assassination of Haitian President Jovenel Moïse is set for trial in Miami.",
+      "place": "Miami",
+      "source": "CBS News",
+      "photo": {
+        "query": "Wikimedia Commons Wilkie D Ferguson Jr courthouse Miami",
+        "prompt": "Federal courthouse building in downtown Miami with palm trees and morning light, no people visible"
+      },
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "That trial follows a killing in Port-au-Prince",
+      "highlight": "Port-au-Prince",
+      "body": "Moïse was assassinated at his residence in Port-au-Prince on July 7, 2021, at 1 a.m. EDT.",
+      "place": "Port-au-Prince",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Port-au-Prince Haiti city street",
+        "prompt": "Port-au-Prince city street near government buildings in daylight, no identifiable people"
+      },
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "And 28 foreign mercenaries were alleged in the attack",
+      "highlight": "28 foreign mercenaries",
+      "body": "A group of 28 foreign mercenaries, mostly from Colombia, are alleged to be responsible, and First Lady Martine Moïse was also shot.",
+      "place": "Haiti",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Haiti police Port-au-Prince",
+        "prompt": "Police vehicles on a Port-au-Prince street after a security incident, no identifiable people"
+      },
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Which led U.S. authorities to arrest 11 suspects",
+      "highlight": "11 suspects",
+      "body": "U.S. authorities arrested 11 suspects alleged to have conspired in the assassination.",
+      "place": "United States",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons United States courthouse courtroom empty",
+        "prompt": "Empty federal courtroom with judge bench, jury box and rows of seats, no people"
+      },
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The reason: Trials over the assassination resumed",
+      "highlight": "Trials resumed",
+      "body": "Trials over the assassination of Haiti’s president resumed in Miami on Monday.",
+      "place": "Miami",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "photo": {
+        "query": "Wikimedia Commons Miami skyline downtown courthouse",
+        "prompt": "Downtown Miami skyline near the federal courthouse district at sunrise, no people visible"
+      },
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Huw Williams (Huwmanbeing) / Public domain"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "So a Florida pastor accused in the plot goes on trial",
+      "highlight": "Florida pastor",
+      "body": "A Florida pastor accused of a role in the Haitian president’s assassination goes on trial Monday.",
+      "place": "Florida",
+      "source": "U.S. News & World Report",
+      "photo": {
+        "query": "Wikimedia Commons Miami courthouse exterior flags",
+        "prompt": "Miami courthouse exterior with U.S. flag and palm trees, no people visible"
+      },
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Michael Rivera / CC BY-SA 4.0"
+    }
+  ],
+  "caption": "Jury selection is set to begin in Miami in a case tied to the 2021 assassination of Haitian President Jovenel Moïse.\nWhat part of this case are you trying to understand better?",
+  "hashtags": [
+    "#MiamiNews",
+    "#HaitiNews"
+  ],
+  "collaborators": [],
+  "igCaption": "Jury selection is set to begin in Miami in a case tied to the 2021 assassination of Haitian President Jovenel Moïse.\nWhat part of this case are you trying to understand better?\n\n📰 Sources: CBS News, Wikipedia, ABC News - Breaking News, Latest News and Videos, U.S. News & World Report\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiNews #HaitiNews #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-09-28",
+  "id": "2026-09-28-brief"
+}
