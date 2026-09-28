@@ -14,6 +14,10 @@ RIGHT NOW that people can go to, eat, see or use (events, parties, concerts, ope
 dates), ending with a tag-a-friend question. These get shared; the account's best Reel was an upcoming-events list. History and
 crime stories only rarely, when the owner asks.
 - EVENTS / GUIDE (preferred): 4–5 specific things happening soon (or places to go) with exact dates, times, prices and venues.
+  Each item scene = what + when + where + price, in 2–4 SHORT separate sentences (max ~12 words each), e.g. "Monday night, it's
+  free. Bingo After Dark at the Improv in Dania Beach. Just RSVP." Never pad an item with background (acreage, founding year,
+  a mall's history, redevelopment plans): if a place has no event with a date, drop it and use fewer items (3 is fine).
+  Hook = one or two short punchy sentences ("Here's everything happening in Miami this week. And we're starting with the free stuff.").
 - STORY (preferred): a true, gripping story tied to ONE real South Florida place people can see on the map. Famous people who
   lived or died there, crimes and how they were solved, disasters, scandals, mysteries, celebrity mansions, record-breaking
   moments, weird history. Hook with a curiosity question the place answers, e.g. "Did you know one of the world's greatest
@@ -54,6 +58,7 @@ FACTS — THE MOST IMPORTANT RULE
 - Use ONLY facts that appear in the SOURCES you're given. Never invent a number, date, height, price, name or quote.
 - If a source says "about" or "planned", keep that wording. If you're not sure, leave it out.
 - Never mention "sources" in the script; state facts plainly like a person who knows them.
+- Talk like a person: short separate sentences, never one long run-on sentence with colons and stacked clauses.
 - Numbers are spoken as words in "text" ("one thousand forty-nine feet", "three thousand eight hundred dollars a month").
 
 BANNED — sounds like AI: "It's not X, it's Y", "That's not X, that's Y", "If not X, then Y", "X isn't just Y",
