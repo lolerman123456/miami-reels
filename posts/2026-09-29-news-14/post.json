@@ -1,0 +1,143 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "POLICE SAY SHE BOARDED",
+    "main": "A 3-DAY BAHAMAS CRUISE",
+    "highlight": "WHILE 4 KIDS",
+    "bottom": "WERE LEFT HOME ALONE",
+    "blur": false,
+    "photo": {
+      "query": "PortMiami Carnival cruise ship police lights dramatic",
+      "prompt": "dramatic photo of a Carnival cruise ship at PortMiami with police lights blurred in the foreground at dusk",
+      "mark": "stamp: POLICE SAY"
+    },
+    "emojis": [
+      "🚢",
+      "🚨",
+      "🏠"
+    ],
+    "logos": [
+      "carnival.com"
+    ],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Police say she boarded a 3-day Bahamas cruise while 4 kids were left home alone",
+      "highlight": "4 kids",
+      "body": "Police said a 29-year-old mother left four young children, including an infant, home alone while she went on a three-day Carnival cruise to the Bahamas.",
+      "place": "North Miami Beach",
+      "source": "WSVN",
+      "photo": {
+        "query": "North Miami Beach police cruiser apartment building night",
+        "prompt": "police cruiser outside a North Miami Beach apartment building at night with red and blue lights reflecting on the street"
+      },
+      "emoji": "🚨",
+      "chip": "4 KIDS",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "That cruise was a 3-day Carnival Bahamas trip",
+      "highlight": "3-day Carnival",
+      "body": "Police accused the Florida mother of leaving the children alone while she took the cruise.",
+      "place": "Bahamas",
+      "source": "WFLA",
+      "photo": {
+        "query": "Carnival cruise ship Bahamas Nassau port dramatic cloudy sky",
+        "prompt": "Carnival cruise ship docked in Nassau, Bahamas under cloudy skies, viewed from the pier"
+      },
+      "color": "#E2231A",
+      "emoji": "🚢",
+      "chip": "3 DAYS",
+      "logo": "carnival.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "And the case centers on North Miami Beach",
+      "highlight": "North Miami Beach",
+      "body": "Police said the North Miami Beach mother left the children at home, including an infant.",
+      "place": "North Miami Beach",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "North Miami Beach Florida residential street police lights night",
+        "prompt": "quiet North Miami Beach residential street at night with police lights in the distance, no people visible"
+      },
+      "emoji": "🏠",
+      "chip": "NMB",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Then police arrested her at PortMiami",
+      "highlight": "PortMiami",
+      "body": "Police arrested the North Miami Beach mother at PortMiami after the cruise.",
+      "place": "PortMiami",
+      "source": "Hoodline",
+      "photo": {
+        "query": "PortMiami cruise terminal police car Carnival ship",
+        "prompt": "police vehicle near a PortMiami cruise terminal with a cruise ship in the background, no people visible"
+      },
+      "emoji": "⚓",
+      "chip": "PORTMIAMI",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Which brought the case before a judge Tuesday",
+      "highlight": "judge Tuesday",
+      "body": "A judge said of the alleged crimes: “You cannot make this up.”",
+      "place": "Miami-Dade",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami-Dade criminal courthouse exterior dramatic sky",
+        "prompt": "exterior of a Miami-Dade courthouse on a gray day with courthouse steps and no people visible"
+      },
+      "emoji": "⚖️",
+      "chip": "TUE 9/29",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "So the next update is the court record",
+      "highlight": "court record",
+      "body": "The case now moves through Miami-Dade court after the arrest.",
+      "place": "Miami-Dade",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami-Dade courthouse records clerk criminal court exterior",
+        "prompt": "exterior of a Miami-Dade courthouse with a close view of courthouse signage and steps, no people visible"
+      },
+      "color": "#E2231A",
+      "emoji": "⚖️",
+      "chip": "NEXT",
+      "logo": "carnival.com",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-6.png"
+    }
+  ],
+  "caption": "Police say a North Miami Beach mother left four young children, including an infant, home alone while she took a three-day Carnival cruise to the Bahamas.\n\nThe case now moves through Miami-Dade court after her arrest at PortMiami.",
+  "hashtags": [
+    "#NorthMiamiBeach",
+    "#PortMiami"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say a North Miami Beach mother left four young children, including an infant, home alone while she took a three-day Carnival cruise to the Bahamas.\n\nThe case now moves through Miami-Dade court after her arrest at PortMiami.\n\n📰 Sources: WSVN, WFLA, NBC 6 South Florida, Hoodline, WPLG Local 10\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#NorthMiamiBeach #PortMiami #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-09-29",
+  "id": "2026-09-29-news-14"
+}
