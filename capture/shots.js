@@ -51,7 +51,7 @@ export function poseAt(shot, t, rad) {
       const p0 = poseAt(shot.prev, 1, rad);
       if (t < k) {
         const u = t / k, e = easeInOutCubic(u), bump = Math.sin(Math.PI * u);
-        const top = Math.max((shot.dist ?? 3000) * 1.1, R * 5, p0.r * 3);
+        const top = Math.min(Math.max((shot.dist ?? 3000) * 1.1, R * 5, p0.r * 3), 9000); // higher than ~9 km the city turns to mush
         const logR = Math.log(p0.r) + (Math.log(R) - Math.log(p0.r)) * e;
         const lift = Math.max(0, Math.log(top) - (Math.log(p0.r) + Math.log(R)) / 2);
         // shortest way round for the heading

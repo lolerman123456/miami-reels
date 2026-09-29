@@ -76,6 +76,8 @@ async function main() {
     const p = poseAt(shot, t, Cesium.Math.toRadians);
     const c = p.c != null && shot.prevCenter ? Cesium.Cartesian3.lerp(shot.prevCenter, shot.center, p.c, scratch) : shot.center;
     viewer.camera.lookAt(c, new Cesium.HeadingPitchRange(p.h, p.p, p.r));
+    // fog hides whole tiles when the camera is high up (long fly-tos): the frame went plain blue. Keep it for low shots only.
+    scene.fog.enabled = viewer.camera.positionCartographic.height < 2500;
   };
 
   for (const shot of job.shots) {
