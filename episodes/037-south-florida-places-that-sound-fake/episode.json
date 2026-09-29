@@ -1,0 +1,160 @@
+{
+  "title": "South Florida places that sound fake (but you can visit)",
+  "id": "037-south-florida-places-that-sound-fake",
+  "sources": [
+    "Wikipedia"
+  ],
+  "collaborators": [],
+  "format": "GUIDE",
+  "music": true,
+  "tiktok": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "igCaption": "South Florida places that sound fake, but you can actually go 🤯\n\nCoral Castle: one man carved it out of multi-ton stones\nStiltsville: houses on stilts in the middle of Biscayne Bay\nMonkey Jungle: 300+ primates since 1933\nNeptune Memorial Reef: an underwater city 40 feet down\n\nSend this to the friend who'd actually go.\n\n#Miami #SouthFlorida #MiamiThingsToDo #HiddenMiami",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "These South Florida places sound fake. But you can actually go to all of them.",
+      "caption": "These South Florida places sound fake. But you can actually go to all of them.",
+      "overlay": [
+        "SOUNDS FAKE",
+        "BUT IT’S REAL"
+      ],
+      "emojis": [
+        "🤯",
+        "🏝️",
+        "🐒",
+        "🌊"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Coral Castle, near Homestead. One man, Edward Leedskalnin, built it by himself. Stones weighing several tons each, carved into walls, tables, chairs and a sundial.",
+      "caption": "Coral Castle, near Homestead. One man, Edward Leedskalnin, built it by himself. Stones weighing several tons each, carved into walls, tables, chairs and a sundial.",
+      "overlay": "CORAL CASTLE",
+      "badge": "1 MAN",
+      "sub": "Homestead area",
+      "emoji": "🗿",
+      "source": "Wikipedia",
+      "location": {
+        "name": "Coral Castle",
+        "lat": 25.50056,
+        "lon": -80.44444,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 40,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Stiltsville. Wooden houses on stilts, in the middle of Biscayne Bay. Crawfish Eddie built one in 1933, when gambling was legal a mile offshore.",
+      "caption": "Stiltsville. Wooden houses on stilts, in the middle of Biscayne Bay. Crawfish Eddie built one in 1933, when gambling was legal a mile offshore.",
+      "overlay": "STILTSVILLE",
+      "badge": "SINCE 1933",
+      "sub": "Biscayne Bay",
+      "emoji": "🏚️",
+      "source": "Wikipedia",
+      "location": {
+        "name": "Stiltsville",
+        "lat": 25.6535,
+        "lon": -80.1715,
+        "h": 2
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Monkey Jungle, in South Miami-Dade. It started in 1933 with six monkeys set free in the forest. Now it's home to more than three hundred primates.",
+      "caption": "Monkey Jungle, in South Miami-Dade. It started in 1933 with six monkeys set free in the forest. Now it's home to more than three hundred primates.",
+      "overlay": "MONKEY JUNGLE",
+      "badge": "300+ PRIMATES",
+      "sub": "Since 1933",
+      "emoji": "🐒",
+      "source": "Wikipedia",
+      "location": {
+        "name": "Monkey Jungle",
+        "lat": 25.566367,
+        "lon": -80.431312,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "And off Key Biscayne, there's a city underwater. The Neptune Memorial Reef sits forty feet down. It has roads, benches and statues.",
+      "caption": "And off Key Biscayne, there's a city underwater. The Neptune Memorial Reef sits forty feet down. It has roads, benches and statues.",
+      "overlay": "NEPTUNE REEF",
+      "badge": "40 FT DOWN",
+      "sub": "Off Key Biscayne",
+      "emoji": "🌊",
+      "source": "Wikipedia",
+      "location": {
+        "name": "Neptune Memorial Reef",
+        "lat": 25.6902,
+        "lon": -80.09075,
+        "h": 0
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 250,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you actually go to? Send this to the friend who'd go with you. And if you meet someone out there, NEAR shows who you crossed paths with.",
+      "caption": "Which one would you actually go to? Send this to the friend who'd go with you. And if you meet someone out there, NEAR shows who you crossed paths with.",
+      "overlay": "SEND THIS 👀",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Biscayne Bay",
+        "lat": 25.7617,
+        "lon": -80.17,
+        "h": 10
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 45
+      }
+    }
+  ]
+}

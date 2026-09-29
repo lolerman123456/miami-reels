@@ -1,0 +1,160 @@
+{
+  "title": "Send this to someone who thinks Miami is just beaches",
+  "id": "039-send-this-to-someone-not-from-miami",
+  "sources": [
+    "Wikipedia"
+  ],
+  "collaborators": [],
+  "format": "GUIDE",
+  "music": true,
+  "tiktok": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "igCaption": "Send this to someone who thinks Miami is just beaches 🌊\n\nMiami is the only major US city founded by a woman\nBiscayne National Park is about 95% water\nElliott Key is made of fossilized coral reef\nKey Largo has the first underwater park in the US\n\nTag someone who didn't know this.\n\n#Miami #SouthFlorida #FloridaKeys #MiamiFacts",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Send this to someone who thinks Miami is just beaches.",
+      "caption": "Send this to someone who thinks Miami is just beaches.",
+      "overlay": [
+        "MIAMI IS NOT",
+        "JUST BEACHES"
+      ],
+      "emojis": [
+        "🌊",
+        "🏝️",
+        "🐠",
+        "👀"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 30
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami was founded by a woman. Julia Tuttle owned the land the city was built on. She's the only woman to found a major American city.",
+      "caption": "Miami was founded by a woman. Julia Tuttle owned the land the city was built on. She's the only woman to found a major American city.",
+      "overlay": "JULIA TUTTLE",
+      "badge": "MOTHER OF MIAMI",
+      "sub": "Downtown Miami",
+      "emoji": "👑",
+      "source": "Wikipedia",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7753,
+        "lon": -80.19,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 250,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "South of Miami, there's a national park that's almost all water. Biscayne National Park covers about a hundred seventy-three thousand acres. Only about nine thousand are land.",
+      "caption": "South of Miami, there's a national park that's almost all water. Biscayne National Park covers about a hundred seventy-three thousand acres. Only about nine thousand are land.",
+      "overlay": "BISCAYNE PARK",
+      "badge": "~95% WATER",
+      "sub": "South of Miami",
+      "emoji": "🌊",
+      "source": "Wikipedia",
+      "location": {
+        "name": "Biscayne National Park",
+        "lat": 25.46944,
+        "lon": -80.18611,
+        "h": 0
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 90,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Inside it is Elliott Key. It's the northernmost true Florida Key. The whole island formed from fossilized coral reef.",
+      "caption": "Inside it is Elliott Key. It's the northernmost true Florida Key. The whole island formed from fossilized coral reef.",
+      "overlay": "ELLIOTT KEY",
+      "badge": "OLD CORAL REEF",
+      "sub": "Biscayne National Park",
+      "emoji": "🏝️",
+      "source": "Wikipedia",
+      "location": {
+        "name": "Elliott Key",
+        "lat": 25.4543,
+        "lon": -80.1965,
+        "h": 2
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 200,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "And in Key Largo is John Pennekamp Coral Reef State Park. It was the first underwater park in the United States.",
+      "caption": "And in Key Largo is John Pennekamp Coral Reef State Park. It was the first underwater park in the United States.",
+      "overlay": "PENNEKAMP PARK",
+      "badge": "1ST IN THE US",
+      "sub": "Key Largo",
+      "emoji": "🐠",
+      "source": "Wikipedia",
+      "location": {
+        "name": "John Pennekamp Coral Reef State Park",
+        "lat": 25.12,
+        "lon": -80.405,
+        "h": 0
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Did you know all of these? Send it to someone who didn't. And next time you're out, NEAR shows who you walked past.",
+      "caption": "Did you know all of these? Send it to someone who didn't. And next time you're out, NEAR shows who you walked past.",
+      "overlay": "SEND THIS 👀",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Biscayne Bay",
+        "lat": 25.7617,
+        "lon": -80.17,
+        "h": 10
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 220
+      }
+    }
+  ]
+}
