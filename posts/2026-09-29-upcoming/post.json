@@ -1,0 +1,140 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "THIS WEEK",
+    "main": "SOUTH FLORIDA",
+    "highlight": "HAS",
+    "bottom": "5 PLANS",
+    "blur": false,
+    "photo": {
+      "query": "Miami night concert crowd waterfront skyline",
+      "prompt": "Dramatic South Florida nightlife collage with the Adrienne Arsht Center lit at night, a waterfront dinner table, a solo synth performer and a disco ball over a dance floor."
+    },
+    "emojis": [
+      "🎭",
+      "🍽️",
+      "🎹",
+      "🎤",
+      "🪩"
+    ],
+    "logos": [
+      "arshtcenter.org",
+      "casadonna.com",
+      "zeyzeymiami.com",
+      "fillmore-miami.com",
+      "lincolnsbeardbrewing.com"
+    ],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: PattayaPatrol / CC BY-SA 4.0",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c2.png",
+      "logo-c3.png",
+      "logo-c4.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Buena Vista Social Club",
+      "highlight": "Buena Vista",
+      "body": "Tuesday, Sept. 29 at 7:30 p.m. at the Adrienne Arsht Center in Miami. Tickets cost $52 to $228 for the Broadway in Miami musical.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Adrienne Arsht Center Miami night theater crowd",
+        "prompt": "Dramatic night photo of the Adrienne Arsht Center in Miami with glowing theater lights, a Broadway-style marquee and people arriving."
+      },
+      "emoji": "🎭",
+      "chip": "TUE 7:30",
+      "logo": "arshtcenter.org",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Karol G’s Carolina dinner",
+      "highlight": "Carolina dinner",
+      "body": "Thursday, Oct. 1, with seatings from 6 to 10 p.m. at Casadonna in Miami. Tickets cost $150 for a four-act dinner from Karol G’s Medellín restaurant.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Miami waterfront restaurant night Biscayne Bay dinner",
+        "prompt": "Dramatic waterfront dinner table at night on Biscayne Bay with cocktails, plated food, pink lighting and Miami skyline views."
+      },
+      "emoji": "🍽️",
+      "chip": "$150",
+      "logo": "casadonna.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Daði Freyr at ZeyZey",
+      "highlight": "Daði Freyr",
+      "body": "Thursday, Oct. 1 at 7 p.m. at ZeyZey in Miami. Tickets cost $32.50 for his one-man show with self-built instruments and hand-crafted visuals.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Daði Freyr concert synth stage lights",
+        "prompt": "Colorful outdoor Miami concert scene with synth gear, neon lights, a solo performer at center stage and a crowd facing the lights."
+      },
+      "emoji": "🎹",
+      "chip": "THU 7 PM",
+      "logo": "zeyzeymiami.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Diego Torres at the Fillmore",
+      "highlight": "Diego Torres",
+      "body": "Thursday, Oct. 1 at 8 p.m. at the Fillmore Miami Beach. Tickets cost $52 to $86 for the Mi Norte & Mi Sur Tour.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Diego Torres singer concert stage",
+        "prompt": "Dramatic Latin pop concert photo with Diego Torres under warm stage lights, a microphone in hand and a theater crowd in front."
+      },
+      "emoji": "🎤",
+      "chip": "$52+",
+      "logo": "fillmore-miami.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Gimme Gimme Disco",
+      "highlight": "Gimme Disco",
+      "body": "Friday, Oct. 2 at 8 p.m. at Lincoln’s Beard in Miami. Tickets cost $20 for an ABBA and disco classics dance night.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "disco ball dance floor colorful lights",
+        "prompt": "Close-up disco ball over a packed dance floor with blue and pink lights, sequins, raised hands and motion blur."
+      },
+      "emoji": "🪩",
+      "chip": "FRI 8 PM",
+      "logo": "lincolnsbeardbrewing.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "Here are 5 South Florida plans from Tuesday through Friday, with prices where listed.\nWho are you taking? Tag a friend.",
+  "hashtags": [
+    "#MiamiEvents",
+    "#SouthFloridaEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "Here are 5 South Florida plans from Tuesday through Friday, with prices where listed.\nWho are you taking? Tag a friend.\n\n📰 Sources: Miami New Times, Secret Miami\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiEvents #SouthFloridaEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN MIAMI 🎟️",
+  "date": "2026-09-29",
+  "id": "2026-09-29-upcoming"
+}
