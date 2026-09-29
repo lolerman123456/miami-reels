@@ -1,0 +1,147 @@
+{
+  "sector": "CITY HALL",
+  "cover": {
+    "top": "",
+    "main": "MIAMI-DADE SEEKS",
+    "highlight": "$750 MILLION",
+    "bottom": "OVER DORAL INCINERATOR FIRE",
+    "blur": false,
+    "photo": {
+      "query": "Doral Florida waste to energy plant fire smoke incinerator Miami-Dade",
+      "prompt": "Aerial view of the fire-damaged Doral waste-to-energy incinerator site with smoke-darkened industrial structures and emergency vehicles nearby",
+      "mark": "x"
+    },
+    "emojis": [
+      "🔥",
+      "🗑️",
+      "🏛️"
+    ],
+    "logos": [
+      "miamidade.gov"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CITY HALL",
+      "headline": "Miami-Dade seeks $750M over Doral incinerator fire",
+      "highlight": "seeks $750M",
+      "body": "Miami-Dade County is seeking $750 million over the fire that destroyed the Doral waste-to-energy incinerator.",
+      "place": "Doral",
+      "source": "IslanderNews.com",
+      "photo": {
+        "query": "Doral waste to energy incinerator Miami-Dade fire",
+        "prompt": "Photo of the Doral waste-to-energy facility after the fire, with charred metal, smoke stains and fire trucks outside"
+      },
+      "emoji": "🔥",
+      "chip": "$750M",
+      "logo": "miamidade.gov",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "That fire destroyed a waste-to-energy incinerator",
+      "highlight": "destroyed a waste-to-energy",
+      "body": "The county’s claim centers on the Doral facility and its role in local trash disposal infrastructure.",
+      "place": "Doral",
+      "source": "IslanderNews.com",
+      "photo": {
+        "query": "waste to energy incinerator facility Florida industrial plant",
+        "prompt": "Close view of a large waste-to-energy incinerator facility with industrial equipment, stacks and damaged exterior walls"
+      },
+      "emoji": "🗑️",
+      "chip": "INCINERATOR",
+      "logo": "miamidade.gov",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "Which puts a county of 2.7M residents in the fight",
+      "highlight": "2.7M residents",
+      "body": "Miami-Dade had 2,701,767 residents in the 2020 census, making it Florida’s most populous county.",
+      "place": "Miami-Dade County",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Miami-Dade County skyline aerial Miami Florida",
+        "prompt": "Wide aerial photo of Miami-Dade County with downtown Miami, highways and dense neighborhoods under a clear sky"
+      },
+      "emoji": "🏙️",
+      "chip": "2.7M",
+      "logo": "miamidade.gov",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Anthony Quintano from Mount Laurel, Unit / CC BY 2.0",
+      "logoFile": null
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "And Doral sits 5 miles west of Miami International",
+      "highlight": "5 miles west",
+      "body": "Doral is 5 miles west of Miami International Airport and 13 miles west of Downtown Miami.",
+      "place": "Doral",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Doral Florida aerial Miami International Airport nearby",
+        "prompt": "Aerial view of Doral’s industrial and business district with airport runways visible in the distance"
+      },
+      "emoji": "✈️",
+      "chip": "5 MI",
+      "logo": "cityofdoral.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "For Doral, that means a city of 75,874 is central",
+      "highlight": "75,874 is central",
+      "body": "Doral had 75,874 residents in 2020 and covers 15 square miles in western Miami-Dade.",
+      "place": "Doral",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Doral Florida city hall downtown street aerial",
+        "prompt": "Street-level photo of Doral, Florida with city buildings, traffic and low-rise business centers on a sunny day"
+      },
+      "emoji": "📍",
+      "chip": "75,874",
+      "logo": "cityofdoral.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "So the next fight is money, trash and infrastructure",
+      "highlight": "money, trash",
+      "body": "The $750 million claim puts the destroyed incinerator inside a county-level fight over public money and trash disposal.",
+      "place": "Miami-Dade County",
+      "source": "IslanderNews.com",
+      "photo": {
+        "query": "Miami-Dade garbage trucks waste management facility",
+        "prompt": "Garbage trucks lined up at a South Florida waste facility with concrete bays, heavy equipment and county infrastructure"
+      },
+      "emoji": "🏛️",
+      "chip": "$750M",
+      "logo": "miamidade.gov",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    }
+  ],
+  "caption": "Miami-Dade is seeking $750 million over the fire that destroyed the Doral waste-to-energy incinerator.\nWhat should the county do next on trash disposal?",
+  "hashtags": [
+    "#MiamiDade",
+    "#Doral"
+  ],
+  "collaborators": [],
+  "igCaption": "Miami-Dade is seeking $750 million over the fire that destroyed the Doral waste-to-energy incinerator.\nWhat should the county do next on trash disposal?\n\n📰 Sources: IslanderNews.com, Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiDade #Doral #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-09-29",
+  "id": "2026-09-29-brief"
+}
