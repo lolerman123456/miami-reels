@@ -59,6 +59,7 @@ Rules:
   "WHICH PUTS FLORIDA NEAR ITS 12-MONTH HIGH", "THE REASON: CRUDE COSTS AND MIDEAST CONFLICT", "AND DIESEL IS WORSE AT $6.34", "SO WHAT HAPPENS NEXT?",
   "FOR DRIVERS IN MIAMI-DADE, THAT MEANS…". Read only the headlines in order and they must tell the whole story. EVERY headline after the first starts with a linking phrase (THAT'S, THAT ALSO MEANS, WHICH, THE REASON:, AND, SO, FOR …, ON TOP OF THAT).
   Include the why (causes named in the headlines/sources) and who it affects when the sources have it, not only numbers.
+- HOOK & SUBSTANCE (owner: never boring): the cover and slide 1 lead with the most surprising concrete detail (the shocking number, the famous name, the wild moment, the price), not the dry procedural angle ("lawsuit filed", "officials discuss", "report released"). Every slide adds at least one NEW hard fact the reader didn't have yet; no slide just restates or summarizes. Build tension: each slide should make the reader want the next one, and the last slide lands the stakes (what it means for people here, or what happens next, with a date if reported).
 - SECTOR: pick ONE section label for the post from: ECONOMY, TRAFFIC, WEATHER, REAL ESTATE, CRIME, DEVELOPMENT, TRANSIT,
   HISTORY, SPORTS, HEALTH, EDUCATION, CITY HALL, WORLD, USA. Single-topic posts use that same label on every slide.
   Never use labels like UPDATE, FACT, MONEY, NEWS.
@@ -163,7 +164,10 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     const trending = kind === 'news' ? await fetchViral().catch(() => []) : [];
     if (trending.length) console.log(`  trending: ${trending.length} (${trending.slice(0, 4).map(t => t.title.slice(0, 40)).join('; ')})`);
     const TREND = trending.length ? `\n\nTRENDING RIGHT NOW (what South Florida is sharing and searching; a signal only, not a source):\n${trending.map(t => `- ${t.source}: ${t.title}${t.summary ? ' — ' + t.summary : ''}`).join('\n')}\n\nPrefer a headline story that is ALSO trending above. A trending item with no news headline can be picked only if the searches will find real reporting on it; never a private person, a lost pet, a personal post or an unconfirmed Reddit claim.` : '';
-    const choice = await chat([{ role: 'system', content: `Pick ${spec.pick} Return JSON {"story":"one sentence","search":["2–4 Google News searches to find more reporting on that exact story"],"wikipedia":["0–2 exact English Wikipedia titles for background (a country, a conflict, a place)"],"photos":[indexes of headlines marked [PHOTO] that are about this exact story, best first]}` },
+    const choice = await chat([{ role: 'system', content: `Pick ${spec.pick}\n` +
+      // owner (Sep 29): stories must not be boring — a hook and real substance, not procedure
+      'BORING TEST: skip stories that are only procedure or paperwork (a lawsuit filed, a meeting, a proposal, a study, a statement, a vote scheduled) unless there is a vivid, surprising detail people would repeat to a friend (a shocking number, a wild moment, a famous name, a big price, a real danger, a twist). Pick the story with the strongest "wait, what?" detail AND enough reported facts to fill 5–6 slides (what happened, key numbers, how it started, who it hits here, what happens next). ' +
+      `Return JSON {"story":"one sentence","hook":"the single most surprising, specific detail in the headlines (a number, name, place or moment) that the cover should lead with","search":["2–4 Google News searches to find more reporting on that exact story"],"wikipedia":["0–2 exact English Wikipedia titles for background (a country, a conflict, a place)"],"photos":[indexes of headlines marked [PHOTO] that are about this exact story, best first]}` },
       { role: 'user', content: `Headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.image ? ' [PHOTO]' : ''}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}\n\nAlready posted (pick something else unless there is a big new development):\n${recentPosts(2).map(p => '- ' + [p.cover?.main, p.cover?.highlight].filter(Boolean).join(' ') + ': ' + (p.slides || []).map(x => x.headline).join('; ')).join('\n') || '(none)'}${TREND}` }]);
     console.log(`  story: ${choice.story}`);
     // the outlets' own news photos (mugshots, scenes, people in the story) are what make people stop scrolling
@@ -173,7 +177,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     for (const q of (choice.search || []).slice(0, 4)) more.push(...await searchNews(q, { days: 3, max: 15 }).catch(() => []));
     news.splice(0, news.length, ...more, ...news);
     for (const t of (choice.wikipedia || []).slice(0, 2)) { const w = await wikiArticle(t, { chars: 3000 }).catch(() => null); if (w) extra.push(`WIKIPEDIA "${w.title}" (background):\n${w.text}`); }
-    topic = `ONE story, in depth: ${choice.story}. Use only headlines about this story.`;
+    topic = `ONE story, in depth: ${choice.story}. Use only headlines about this story.${choice.hook ? ` Lead the cover and slide 1 with the hook: ${choice.hook}` : ''}`;
   }
   if (kind === 'deals' && !topic) {
     const qs = ['free food deal this week', "McDonald's deal this week", 'Chick-fil-A free', 'fast food deals this week', 'national food day deals free', 'Miami free giveaway this weekend', 'South Florida food drive this week', 'Feeding South Florida food distribution', 'Miami free event this week', 'Starbucks Dunkin deal this week'];
@@ -234,7 +238,18 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     post = null;
   }
   if (!post) throw new Error('Could not write carousel');
-  const checked = await chat([{ role: 'system', content: 'You fact-check an Instagram carousel (JSON) against the given headlines and sources. Fix or remove any number, date, name, "tallest/first/biggest" claim or outcome that is not supported. Keep the headline transitions that chain the slides together ("THAT ALSO MEANS…", "WHICH PUTS…"). Remove quirky lists, personification and meme-caption jokes; keep at most one dry, fact-based line per slide; keep it informative. Never mention "sources" in the text. Keep every JSON field and the same structure. Return only the corrected JSON plus "removed": [short notes].' },
+  // boring check (owner, Sep 29): rate the hook and the substance; a weak draft gets one rewrite with the editor's notes
+  if (!['deals', 'upcoming'].includes(kind)) {
+    const ed = await chat([{ role: 'system', content: 'You are a tough Instagram news editor for a South Florida account (18–35 audience). Rate this carousel draft 1–10 on HOOK (would the cover make someone stop scrolling? specific and surprising, not dry or procedural) and SUBSTANCE (does every slide add a new concrete fact, and does the story build to real stakes?). Reply JSON {"hook": n, "substance": n, "fix": "specific notes: which surprising fact from the draft/headlines should lead, which slides are filler and what fact should replace them"}.' },
+      { role: 'user', content: `DRAFT:\n${JSON.stringify({ cover: post.cover, slides: post.slides.map(s => ({ headline: s.headline, body: s.body })) })}` }]).catch(() => null);
+    if (ed) console.log(`  editor: hook ${ed.hook}/10, substance ${ed.substance}/10${ed.fix ? ' — ' + String(ed.fix).slice(0, 200) : ''}`);
+    if (ed && (Number(ed.hook) < 7 || Number(ed.substance) < 7)) {
+      const again = await chat([{ role: 'system', content: `${SYSTEM}\n\n${STYLE}\n\n${toneLines()}\n\n${HANDLES_RULE()}` },
+        { role: 'user', content: `${ask}\n\nYOUR DRAFT:\n${JSON.stringify(post)}\n\nEDITOR (hook ${ed.hook}/10, substance ${ed.substance}/10): ${ed.fix}\nRewrite the whole post so the hook is sharper and every slide carries a new hard fact. Same facts only from the headlines/sources, same JSON shape.\n\n${REMINDER}` }]).catch(() => null);
+      if (again?.cover?.highlight && again.cover.photo && again.slides?.length >= 3 && again.slides.every(s => s?.headline && s?.body && s?.photo)) { console.log('  rewritten after editor notes'); post = again; }
+    }
+  }
+  const checked =await chat([{ role: 'system', content: 'You fact-check an Instagram carousel (JSON) against the given headlines and sources. Fix or remove any number, date, name, "tallest/first/biggest" claim or outcome that is not supported. Keep the headline transitions that chain the slides together ("THAT ALSO MEANS…", "WHICH PUTS…"). Remove quirky lists, personification and meme-caption jokes; keep at most one dry, fact-based line per slide; keep it informative. Never mention "sources" in the text. Keep every JSON field and the same structure. Return only the corrected JSON plus "removed": [short notes].' },
     { role: 'user', content: `${ask}\n\nDRAFT:\n${JSON.stringify(post)}\n\n${STYLE}\n${REMINDER}` }]).catch(() => null);
   if (checked?.slides?.length >= 3 && checked.cover?.highlight) {
     if (checked.removed?.length) console.log(`  fact-check fixed: ${checked.removed.join(' | ').slice(0, 400)}`);
