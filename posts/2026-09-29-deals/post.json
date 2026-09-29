@@ -1,0 +1,168 @@
+{
+  "sector": "DEALS",
+  "cover": {
+    "top": "",
+    "main": "SOUTH FLORIDA DEALS INCLUDE",
+    "highlight": "FREE COFFEE",
+    "bottom": "AND BOGO CAKE SEPT. 29 TO OCT. 4",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons search for coffee cups counter doughnuts cafe",
+      "prompt": "dramatic close-up of hot coffee cups and glazed doughnuts on a cafe counter, morning light, South Florida feel",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "☕",
+      "🍩",
+      "📲"
+    ],
+    "logos": [
+      "dunkindonuts.com",
+      "krispykreme.com",
+      "smoothieking.com",
+      "nothingbundtcakes.com",
+      "cinnabon.com",
+      "circlek.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c2.png",
+      "logo-c3.png",
+      "logo-c4.png",
+      "logo-c5.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "DEALS",
+      "headline": "Dunkin': Free medium coffee today",
+      "highlight": "Free medium coffee",
+      "body": "Dunkin’ Rewards members get a free medium hot or iced coffee with any purchase on Sept. 29 through the Dunkin’ app.",
+      "place": "In the app",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Wikimedia Commons search for Dunkin coffee cup storefront",
+        "prompt": "dramatic close-up of a Dunkin coffee cup on a counter with orange and pink signage blurred behind it"
+      },
+      "color": "#FF671F",
+      "emoji": "☕",
+      "chip": "SEP 29",
+      "logo": "dunkindonuts.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "DEALS",
+      "headline": "Krispy Kreme: Free coffee with any purchase",
+      "highlight": "Free coffee",
+      "body": "Krispy Kreme guests get a free small or medium hot or iced coffee with any purchase on Sept. 29 at participating locations, limit one per guest.",
+      "place": "Participating locations",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Wikimedia Commons search for Krispy Kreme doughnuts coffee",
+        "prompt": "close-up of glazed doughnuts beside an iced coffee cup under Krispy Kreme neon-style lighting"
+      },
+      "color": "#00704A",
+      "emoji": "🍩",
+      "chip": "FREE",
+      "logo": "krispykreme.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "DEALS",
+      "headline": "Smoothie King: Free 12 oz protein coffee",
+      "highlight": "Free 12 oz",
+      "body": "Healthy Rewards members get a free 12 oz Coffee High Protein Almond Mocha Smoothie on Sept. 29 at participating locations, limit one per member.",
+      "place": "Participating locations",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Wikimedia Commons search for smoothie cup counter",
+        "prompt": "dramatic close-up of a chocolate coffee protein smoothie in a clear cup on a bright shop counter"
+      },
+      "color": "#D71920",
+      "emoji": "🥤",
+      "chip": "12 OZ",
+      "logo": "smoothieking.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "DEALS",
+      "headline": "Nothing Bundt Cakes: BOGO Bundtlets to Oct. 4",
+      "highlight": "BOGO Bundtlets",
+      "body": "Check for an email from Nothing Bundt Cakes with a unique BOGO Bundtlets code, valid in-store and online through Oct. 4 at select locations.",
+      "place": "Select locations",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Wikimedia Commons search for bundt cake bakery display",
+        "prompt": "dramatic bakery case close-up with small frosted bundt cakes lined up under warm display lights"
+      },
+      "color": "#7A4A2D",
+      "emoji": "🍰",
+      "chip": "OCT 4",
+      "logo": "nothingbundtcakes.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "DEALS",
+      "headline": "Cinnabon: Free small coffee code in the app",
+      "highlight": "Free small coffee",
+      "body": "Cinnabon loyalty members can enter COFFEEDAY26 in the app on Sept. 29 for a free small coffee reward while supplies last, redeemable through Oct. 31.",
+      "place": "In the app",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Wikimedia Commons search for Cinnabon cinnamon roll coffee",
+        "prompt": "close-up of a frosted cinnamon roll beside a small coffee cup on a mall food court table"
+      },
+      "color": "#004B93",
+      "emoji": "📲",
+      "chip": "CODE",
+      "logo": "cinnabon.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    },
+    {
+      "tag": "DEALS",
+      "headline": "Circle K: Free medium coffee today",
+      "highlight": "Free medium coffee",
+      "body": "Inner Circle members get one free medium hot or iced coffee on Sept. 29 through the Circle K app, limit one redemption per member.",
+      "place": "In the app",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Wikimedia Commons search for Circle K coffee cup store",
+        "prompt": "dramatic close-up of a convenience-store coffee cup beside a self-serve coffee machine with red store signage in the background"
+      },
+      "color": "#E31837",
+      "emoji": "☕",
+      "chip": "SEP 29",
+      "logo": "circlek.com",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-6.png"
+    }
+  ],
+  "caption": "National Coffee Day brings free cups at @dunkin and @krispykreme, plus app offers and a BOGO Bundtlets code running into October.\nsend this to someone who needs it",
+  "hashtags": [
+    "#SouthFloridaDeals",
+    "#NationalCoffeeDay"
+  ],
+  "collaborators": [
+    "dunkin",
+    "krispykreme"
+  ],
+  "igCaption": "National Coffee Day brings free cups at @dunkin and @krispykreme, plus app offers and a BOGO Bundtlets code running into October.\nsend this to someone who needs it\n\n📰 Sources: Hip2Save\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaDeals #NationalCoffeeDay #miami #southflorida",
+  "kind": "deals",
+  "kicker": "FREE & CHEAP IN MIAMI 🍔",
+  "date": "2026-09-29",
+  "id": "2026-09-29-deals"
+}
