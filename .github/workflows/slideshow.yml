@@ -5,7 +5,7 @@ name: Slideshow
 on:
   push:
     branches: [main]
-    paths: ['requests/slideshow.json', 'requests/buffer-status.json']
+    paths: ['requests/slideshow.json', 'requests/buffer-status.json', 'requests/tiktok-batch.json']
 
 permissions:
   contents: write
@@ -26,8 +26,14 @@ jobs:
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
         run: node pipeline/buffer.mjs --status
+      - name: TikTok batch (a day's reminders at set times)
+        if: contains(github.event.head_commit.message, 'TikTok batch')
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: node pipeline/buffer.mjs --batch requests/tiktok-batch.json
       - name: Send to Buffer
-        if: "!contains(github.event.head_commit.message, 'Buffer status')"
+        if: "!contains(github.event.head_commit.message, 'Buffer status') && !contains(github.event.head_commit.message, 'TikTok batch')"
         env:
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           GH_TOKEN: ${{ github.token }}
@@ -35,4 +41,4 @@ jobs:
       - name: Save posted.log
         run: |
           git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
-          git add posted.log && git commit -qm "Slideshow sent to Buffer" && { for i in 1 2 3 4; do git pull -q --rebase && git push -q && break; sleep $((i*5)); done; } || true
+          git add posted.log && git commit -qm "TikTok reminders sent to Buffer" && { for i in 1 2 3 4; do git pull -q --rebase && git push -q && break; sleep $((i*5)); done; } || true

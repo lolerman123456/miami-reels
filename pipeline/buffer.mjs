@@ -110,6 +110,34 @@ export async function postToTikTok({ video, images, text = '', label, ai = false
   } catch (e) { console.log(`  (TikTok reminder failed: ${e.message.slice(0, 200)})`); }
 }
 
+// A whole day's TikTok schedule at once (owner, Sep 29: "too much to track"): each item becomes a Buffer reminder at its time.
+// requests/tiktok-batch.json → {"items":[{"label":"…","video":"URL or path" | "images":["URL or path", …],"text":"caption","at":"ISO"}]}
+export async function tiktokBatch(file) {
+  const { items = [] } = readJSON(file);
+  const channelId = await channelFor('tiktok');
+  if (!channelId) throw new Error('TikTok is not connected in Buffer');
+  const url = (f, tag, name) => /^https?:/.test(f) ? f : publicUrl(path.resolve(ROOT, f), tag, name);
+  let ok = 0;
+  for (const it of items) {
+    try {
+      const assets = it.video
+        ? [{ video: { url: await url(it.video, 'videos', path.basename(it.video)), metadata: { thumbnailOffset: 1500 } } }]
+        : await Promise.all(it.images.slice(0, 10).map(async f => ({ image: { url: await url(f, 'tiktok', `${it.label}-${path.basename(f)}`) } })));
+      const dueAt = new Date(Math.max(Date.parse(it.at) || 0, Date.now() + 3 * 60e3)).toISOString();
+      const title = it.text.split('\n')[0].replace(/#\w+/g, '').trim().slice(0, 90);
+      const post = await create({
+        channelId, text: it.text.slice(0, 2200), needsApproval: false, assets,
+        schedulingType: 'notification', mode: 'customScheduled', dueAt,
+        metadata: { tiktok: { ...(it.images ? { title } : {}), isAiGenerated: false } },
+      });
+      console.log(`✔ ${it.label} → Buffer reminder due ${dueAt} (${post.id})`);
+      log(`tiktok:${it.label}`, `Buffer reminder due ${dueAt}`);
+      ok++;
+    } catch (e) { console.log(`  ✗ ${it.label}: ${e.message.slice(0, 200)}`); }
+  }
+  if (!ok && items.length) throw new Error('No TikTok reminders could be created');
+}
+
 // What Buffer actually has for TikTok (status, notification, errors): node pipeline/buffer.mjs --status
 export async function tiktokStatus(n = 20) {
   const channelId = await channelFor('tiktok');
@@ -124,6 +152,7 @@ export async function tiktokStatus(n = 20) {
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   if (process.argv.includes('--status')) { await tiktokStatus(); process.exit(0); }
+  if (process.argv[2] === '--batch') { await tiktokBatch(process.argv[3] || path.join(ROOT, 'requests/tiktok-batch.json')); await tiktokStatus(12); process.exit(0); }
   const [video, epDir] = process.argv.slice(2);
   if (!video) { console.error('Usage: node pipeline/buffer.mjs out/<id>.mp4 [episodes/<id>]  (TikTok reminder)'); process.exit(1); }
   const ep = readJSON(path.join(epDir || path.join(ROOT, 'episodes', path.basename(video, '.mp4')), 'episode.json'));
