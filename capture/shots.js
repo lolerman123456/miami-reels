@@ -7,6 +7,9 @@ const easeOutExpo = t => t === 1 ? 1 : 1 - Math.pow(2, -10 * t);
 const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
 const lerp = (a, b, t) => a + (b - a) * t;
 const logLerp = (a, b, t) => a * Math.pow(b / a, t);
+// higher than ~9 km the 3D city turns to mush and then plain gray (the owner saw it in hooks): every move stays under it
+const MAX_R = 9000;
+const hi = (R, k) => Math.max(R, Math.min(R * k, MAX_R));
 
 // Where the camera sits at the very end of a shot (flyto starts there so the cut is invisible).
 export function endPose(shot, rad) { return poseAt(shot, 1, rad); }
@@ -24,21 +27,21 @@ export function poseAt(shot, t, rad) {
     }
     case 'dive': { // hook: fast drop from very high up, slams in then settles
       const e = easeOutExpo(t);
-      return { h: H + dir * rad(120) * e, p: lerp(rad(-89), P, e), r: logLerp(R * 60, R, e) };
+      return { h: H + dir * rad(120) * e, p: lerp(rad(-89), P, e), r: logLerp(hi(R, 60), R, e) };
     }
     case 'zoomin': {
       const e = easeInOutCubic(t);
-      return { h: H + dir * rad(60) * e, p: lerp(rad(-85), P, e), r: logLerp(R * 12, R, e) };
+      return { h: H + dir * rad(60) * e, p: lerp(rad(-85), P, e), r: logLerp(hi(R, 12), R, e) };
     }
     case 'pullout': {
       const e = easeInOutCubic(t);
-      return { h: H + dir * rad(60) * e, p: lerp(P, rad(-70), e), r: logLerp(R, R * 10, e) };
+      return { h: H + dir * rad(60) * e, p: lerp(P, rad(-70), e), r: logLerp(R, hi(R, 10), e) };
     }
     case 'arrive': { // fast swoop in from high above (first ~22%), then a slow-motion circle over the place
       const k = shot.fast ?? 0.22;
       if (t < k) {
         const e = easeOutCubic(t / k);
-        return { h: H - dir * rad(50) * (1 - e), p: lerp(rad(-80), P, e), r: logLerp(R * 25, R, e) };
+        return { h: H - dir * rad(50) * (1 - e), p: lerp(rad(-80), P, e), r: logLerp(hi(R, 25), R, e) };
       }
       const u = (t - k) / (1 - k);
       return { h: H + dir * rad(shot.degrees ?? 45) * easeInOutSine(u), p: P, r: R * (1 - 0.1 * u) };
@@ -51,7 +54,7 @@ export function poseAt(shot, t, rad) {
       const p0 = poseAt(shot.prev, 1, rad);
       if (t < k) {
         const u = t / k, e = easeInOutCubic(u), bump = Math.sin(Math.PI * u);
-        const top = Math.min(Math.max((shot.dist ?? 3000) * 1.1, R * 5, p0.r * 3), 9000); // higher than ~9 km the city turns to mush
+        const top = Math.min(Math.max((shot.dist ?? 3000) * 1.1, R * 5, p0.r * 3), MAX_R); // higher than ~9 km the city turns to mush
         const logR = Math.log(p0.r) + (Math.log(R) - Math.log(p0.r)) * e;
         const lift = Math.max(0, Math.log(top) - (Math.log(p0.r) + Math.log(R)) / 2);
         // shortest way round for the heading
