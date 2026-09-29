@@ -18,5 +18,6 @@
     "world": 22
   },
   "tiktokSlideshowsPerDay": 8,
-  "tiktokMinScore": 6
+  "tiktokMinScore": 6,
+  "tiktokBuffer": false
 }

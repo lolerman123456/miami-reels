@@ -79,6 +79,19 @@ export async function handToOwner(file, episode) {
 // video → a Reel; images → a photo slideshow (carousels listed in control.json "tiktokCarousels").
 // Never throws: a TikTok problem must not break the Instagram post.
 export async function postToTikTok({ video, images, text = '', label, ai = false }) {
+  // Owner found Buffer confusing: with control.json "tiktokBuffer": false nothing goes to Buffer. The media goes to the
+  // public release and a "tiktok-pick:" line (label, links, caption's first line) lands in posted.log; Claude sends the owner
+  // a plain TikTok list (links + caption + time) and the owner posts from the phone.
+  let control = {};
+  try { control = readJSON(path.join(ROOT, 'control.json')); } catch {}
+  if (control.tiktokBuffer === false) {
+    try {
+      const links = video ? [await publicUrl(video)] : await Promise.all(images.slice(0, 10).map(f => publicUrl(f, 'tiktok', `${label}-${path.basename(f)}`)));
+      log(`tiktok-pick:${label}`, `${links.join(' ')}\t${text.split('\n')[0].slice(0, 140)}`);
+      console.log(`✔ TikTok pick saved for the owner (${links.length} file${links.length > 1 ? 's' : ''})`);
+    } catch (e) { console.log(`  (TikTok pick failed: ${e.message.slice(0, 200)})`); }
+    return;
+  }
   if (!process.env.BUFFER_API_KEY) return;
   try {
     const channelId = await channelFor('tiktok');

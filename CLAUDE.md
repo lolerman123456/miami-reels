@@ -38,7 +38,7 @@ slots skip music videos in `plan/videos.txt`; if a generated Reel is a music one
 logs `music:<id>  <video link>` in `posted.log` instead of posting. **Send the owner that link** (check-ins look for new
 `music:` lines) with a suggested post time.
 
-**TikTok** goes through the same Buffer (TikTok connected as a Buffer channel). Owner's rules: nothing auto-posts to TikTok
+**TikTok (owner, Sep 29): Buffer is OFF** (`control.json` → `"tiktokBuffer": false`; the owner found it confusing). TikTok picks are logged in `posted.log` as `tiktok-pick:<label>  <links>  <caption>`; send the owner a plain list in chat (link, short TikTok caption with 3–4 hashtags, suggested time) and they post from the phone. Slideshows: the image links in order. (Old setup, only if re-enabled:) TikTok went through Buffer (TikTok connected as a Buffer channel). Owner's rules: nothing auto-posts to TikTok
 (music matters: everything is a Buffer **reminder**, the owner adds a sound and posts), and TikTok gets only upcoming things
 and very viral stories, ~4+ a day. Reels: music Reels plus any episode with `"tiktok": true` (EVENTS/GUIDE set both).
 Slideshows: the daily `deals` (11am) and `upcoming` (12pm) carousels always go;
