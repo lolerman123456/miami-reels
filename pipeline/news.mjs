@@ -139,5 +139,12 @@ export async function fetchViral({ perSub = 10 } = {}) {
       if (q) out.push({ source: `Google Trends Florida (${traffic} searches)`, title: q, summary: heads.join(' / '), viral: true });
     }
   } catch (e) { console.log(`  (Google Trends failed: ${e.message})`); }
+  // the same viral clips pages like @onlyindade repost usually get picked up by local TV within hours ("caught on camera",
+  // "video shows"): search for those instead of scraping Instagram (owner, Sep 29)
+  for (const q of ['Miami caught on camera', 'Miami-Dade video shows', 'Miami viral video', 'Broward caught on camera', 'Hialeah video']) {
+    try {
+      for (const n of (await searchNews(q, { days: 2, max: 6 })).slice(0, 6)) out.push({ source: `${n.source} (viral clip search)`, title: n.title, summary: n.summary, viral: true });
+    } catch (e) { console.log(`  (viral search failed: ${q} — ${e.message})`); }
+  }
   return out;
 }
