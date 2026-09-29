@@ -1,0 +1,149 @@
+{
+  "sector": "REAL ESTATE",
+  "cover": {
+    "top": "MIAMI RENTERS",
+    "main": "ARE WATCHING",
+    "highlight": "REALPAGE",
+    "bottom": "RENT-PRICING CASES",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Miami apartment towers Brickell rental buildings",
+      "prompt": "Dramatic view looking up at dense Miami apartment towers with balconies, evening light, no people"
+    },
+    "emojis": [
+      "🏙️",
+      "💸",
+      "🏠"
+    ],
+    "logos": [
+      "realpage.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "REAL ESTATE",
+      "headline": "RealPage rent-pricing cases draw Miami renters",
+      "highlight": "RealPage",
+      "body": "Lawsuits accuse RealPage of antitrust violations and price fixing tied to rent-pricing software.",
+      "place": "Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Miami apartment building high rise rental",
+        "prompt": "Close street-level view of a Miami high-rise apartment building with stacked balconies and a leasing sign, no people"
+      },
+      "emoji": "💸",
+      "chip": "ANTITRUST",
+      "logo": "realpage.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "REAL ESTATE",
+      "headline": "That case centers on rent-pricing software",
+      "highlight": "rent-pricing software",
+      "body": "RealPage produces property management software for algorithmic rent setting and is headquartered in Texas.",
+      "place": "Texas",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons apartment leasing office computer",
+        "prompt": "Leasing office desk with a laptop showing a generic rent chart, apartment keys and paperwork in sharp focus, no people",
+        "mark": "circle"
+      },
+      "emoji": "💻",
+      "chip": "TEXAS",
+      "logo": "realpage.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "REAL ESTATE",
+      "headline": "And DOJ sued RealPage in 2024",
+      "highlight": "sued RealPage",
+      "body": "The United States Department of Justice sued RealPage in 2024, alleging its software represented a price-fixing scheme to raise rents.",
+      "place": "United States",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons United States Department of Justice building",
+        "prompt": "Exterior of the United States Department of Justice building with columns and the DOJ seal visible, no people"
+      },
+      "emoji": "⚖️",
+      "chip": "2024",
+      "logo": "justice.gov",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Gregory Varnum / CC BY-SA 3.0",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "REAL ESTATE",
+      "headline": "Which puts 24M housing units in the background",
+      "highlight": "24M housing",
+      "body": "RealPage services are used on more than 24 million housing units worldwide across several rental markets.",
+      "place": "Worldwide",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons apartment towers aerial Miami",
+        "prompt": "Aerial view of dense apartment towers and condo buildings in Miami with streets below, late afternoon, no people"
+      },
+      "emoji": "🏢",
+      "chip": "24M+ UNITS",
+      "logo": "realpage.com",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Tortap / CC BY-SA 3.0",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "REAL ESTATE",
+      "headline": "The reason: alleged coordinated rent hikes",
+      "highlight": "rent hikes",
+      "body": "Lawsuits claim RealPage software helped landlords coordinate pricing and pressured customers to follow rent suggestions.",
+      "place": "United States",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons eviction notice apartment door rent",
+        "prompt": "Close-up of apartment rent paperwork and a calculator on a kitchen counter, with a high-rise window view behind it, no people"
+      },
+      "emoji": "📈",
+      "chip": "ANTITRUST",
+      "logo": "realpage.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    },
+    {
+      "tag": "REAL ESTATE",
+      "headline": "So Miami renters are watching the cases",
+      "highlight": "watching the cases",
+      "body": "The next issue is how courts and settlements define any renter claims tied to RealPage pricing tools.",
+      "place": "Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Miami skyline apartment buildings Brickell",
+        "prompt": "Moody sunset view of Miami apartment towers and cranes, with dense residential buildings filling the frame, no people"
+      },
+      "emoji": "🏠",
+      "chip": "RENTERS",
+      "logo": "realpage.com",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-6.png"
+    }
+  ],
+  "caption": "RealPage rent-pricing lawsuits have Miami renters watching whether their building or lease could matter.\nWould you check your old leases if a case included your building?",
+  "hashtags": [
+    "#MiamiRent",
+    "#RealPage"
+  ],
+  "collaborators": [],
+  "igCaption": "RealPage rent-pricing lawsuits have Miami renters watching whether their building or lease could matter.\nWould you check your old leases if a case included your building?\n\n📰 Sources: Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiRent #RealPage #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-09-29",
+  "id": "2026-09-29-news-06"
+}
