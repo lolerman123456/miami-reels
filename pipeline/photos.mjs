@@ -25,7 +25,7 @@ export async function getPhoto(spec, dir, name, { context = '' } = {}) {
   return (spec.query && await attempt(stockPhoto, spec.query, dir, name, context))
     || (simple && simple !== spec.query && simple.split(' ').length >= 1 && await attempt(stockPhoto, simple, dir, name, context))
     || (spec.prompt && aiBudgetLeft() > 0 && aiThisPost < Number(process.env.AI_IMAGES_PER_POST ?? 4) && await attempt(aiPhoto, spec.prompt, dir, name))
-    || (spec.prompt && aiBudgetLeft() > -20 && await attempt(aiPhoto, spec.prompt, dir, name)) // over the normal caps (owner: never post a slide without a picture); hard stop at +20/day
+    || (spec.prompt && aiBudgetLeft() > -30 && await attempt(aiPhoto, spec.prompt, dir, name)) // over the normal caps (owner: never post a slide without a picture); hard stop at +30/day
     || null; // no photo: the slide uses the plain dark background instead of a random, off-topic stock picture
 }
 
@@ -88,7 +88,7 @@ async function judge(list, query, context) {
 function aiBudgetLeft() {
   const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
   const usedToday = fs.existsSync(BUDGET_FILE) ? fs.readFileSync(BUDGET_FILE, 'utf8').split('\n').filter(l => l.startsWith(today)).length : 0;
-  return Number(process.env.AI_IMAGES_PER_DAY ?? 20) - usedToday;
+  return Number(process.env.AI_IMAGES_PER_DAY ?? 60) - usedToday; // ~8 carousels a day × 7 slides
 }
 
 async function aiPhoto(description, dir, name) {

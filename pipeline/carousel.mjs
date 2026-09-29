@@ -517,6 +517,12 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const { post, slides, story } = await renderCarousel(dir);
   if (args.includes('--dry-run') || args.includes('--render-only')) console.log(`(dry run) ${slides.length} slides in ${path.relative(ROOT, dir)}`);
   else {
+    // never post a blank carousel (owner archived one): the cover and most slides must have a picture
+    const withPhoto = post.slides.filter(x => x.photoFile).length;
+    if (!post.cover.photoFile || withPhoto < Math.ceil(post.slides.length / 2)) {
+      console.log(`✖ Not posting: ${post.cover.photoFile ? '' : 'no cover photo, '}${withPhoto}/${post.slides.length} slides have photos`);
+      process.exit(1);
+    }
     const { publishCarousel, publishStory } = await import('./publish.mjs');
     await publishCarousel(slides, post.igCaption, post.id, { collaborators: post.collaborators });
     await publishStory(story, post.id).catch(e => console.log(`(story skipped: ${e.message})`));
