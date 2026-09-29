@@ -9,6 +9,9 @@ const lerp = (a, b, t) => a + (b - a) * t;
 const logLerp = (a, b, t) => a * Math.pow(b / a, t);
 // higher than ~9 km the 3D city turns to mush and then plain gray (the owner saw it in hooks): every move stays under it
 const MAX_R = 9000;
+// between places the camera covers a much wider area than a hook dive: above ~4 km at high quality the tiles don't load in time
+// and the frame goes blank gray (seen in 038, Vizcaya → Venetian Pool). Keep fly-tos lower.
+const FLY_MAX = 4000;
 const hi = (R, k) => Math.max(R, Math.min(R * k, MAX_R));
 
 // Where the camera sits at the very end of a shot (flyto starts there so the cut is invisible).
@@ -54,7 +57,7 @@ export function poseAt(shot, t, rad) {
       const p0 = poseAt(shot.prev, 1, rad);
       if (t < k) {
         const u = t / k, e = easeInOutCubic(u), bump = Math.sin(Math.PI * u);
-        const top = Math.min(Math.max((shot.dist ?? 3000) * 1.1, R * 5, p0.r * 3), MAX_R); // higher than ~9 km the city turns to mush
+        const top = Math.min(Math.max((shot.dist ?? 3000) * 1.1, R * 5, p0.r * 3), FLY_MAX); // higher than ~9 km the city turns to mush
         const logR = Math.log(p0.r) + (Math.log(R) - Math.log(p0.r)) * e;
         const lift = Math.max(0, Math.log(top) - (Math.log(p0.r) + Math.log(R)) / 2);
         // shortest way round for the heading
