@@ -12,15 +12,15 @@
     "provider": "openai",
     "voice": "ash"
   },
-  "igCaption": "Send this to someone who thinks Miami is just beaches 🌊\n\nMiami is the only major US city founded by a woman\nBiscayne National Park is about 95% water\nElliott Key is made of fossilized coral reef\nKey Largo has the first underwater park in the US\n\nTag someone who didn't know this.\n\n#Miami #SouthFlorida #FloridaKeys #MiamiFacts",
+  "igCaption": "Only real Miami people know these 👀 Send this to someone who thinks Miami is just beaches\n\nMiami is the only major US city founded by a woman\nBiscayne National Park is about 95% water\nElliott Key is made of fossilized coral reef\nKey Largo has the first underwater park in the US\n\nHow many did you know? Comment your number.\n\n#Miami #SouthFlorida #FloridaKeys #MiamiFacts",
   "scenes": [
     {
       "kind": "hook",
-      "text": "Send this to someone who thinks Miami is just beaches.",
-      "caption": "Send this to someone who thinks Miami is just beaches.",
+      "text": "Only real Miami people know these. Send this to someone who thinks Miami is just beaches.",
+      "caption": "Only real Miami people know these. Send this to someone who thinks Miami is just beaches.",
       "overlay": [
-        "MIAMI IS NOT",
-        "JUST BEACHES"
+        "ONLY REAL MIAMI",
+        "PEOPLE KNOW THIS"
       ],
       "emojis": [
         "🌊",
@@ -139,9 +139,9 @@
     },
     {
       "kind": "outro",
-      "text": "Did you know all of these? Send it to someone who didn't. And next time you're out, NEAR shows who you walked past.",
-      "caption": "Did you know all of these? Send it to someone who didn't. And next time you're out, NEAR shows who you walked past.",
-      "overlay": "SEND THIS 👀",
+      "text": "How many did you already know? Comment your number. Send it to someone who's not from here. And next time you're out, NEAR shows who you walked past.",
+      "caption": "How many did you already know? Comment your number. Send it to someone who's not from here. And next time you're out, NEAR shows who you walked past.",
+      "overlay": "COMMENT YOUR # 👇",
       "sub": "Follow for more South Florida",
       "location": {
         "name": "Biscayne Bay",

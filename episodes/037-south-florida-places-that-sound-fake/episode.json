@@ -12,15 +12,15 @@
     "provider": "openai",
     "voice": "ash"
   },
-  "igCaption": "South Florida places that sound fake, but you can actually go 🤯\n\nCoral Castle: one man carved it out of multi-ton stones\nStiltsville: houses on stilts in the middle of Biscayne Bay\nMonkey Jungle: 300+ primates since 1933\nNeptune Memorial Reef: an underwater city 40 feet down\n\nSend this to the friend who'd actually go.\n\n#Miami #SouthFlorida #MiamiThingsToDo #HiddenMiami",
+  "igCaption": "Only real Miami locals have been to all 4 of these 👀\n\nCoral Castle: one man carved it out of multi-ton stones\nStiltsville: houses on stilts in the middle of Biscayne Bay\nMonkey Jungle: 300+ primates since 1933\nNeptune Memorial Reef: a city 40 feet underwater\n\nHow many have you been to? Send this to who you're going with.\n\n#Miami #SouthFlorida #MiamiThingsToDo #HiddenMiami",
   "scenes": [
     {
       "kind": "hook",
-      "text": "These South Florida places sound fake. But you can actually go to all of them.",
-      "caption": "These South Florida places sound fake. But you can actually go to all of them.",
+      "text": "If you've been to all four of these, you're a real Miami local. Most people haven't been to one.",
+      "caption": "If you've been to all four of these, you're a real Miami local. Most people haven't been to one.",
       "overlay": [
-        "SOUNDS FAKE",
-        "BUT IT’S REAL"
+        "ONLY REAL LOCALS",
+        "HAVE BEEN HERE"
       ],
       "emojis": [
         "🤯",
@@ -115,8 +115,8 @@
     },
     {
       "kind": "item",
-      "text": "And off Key Biscayne, there's a city underwater. The Neptune Memorial Reef sits forty feet down. It has roads, benches and statues.",
-      "caption": "And off Key Biscayne, there's a city underwater. The Neptune Memorial Reef sits forty feet down. It has roads, benches and statues.",
+      "text": "And off Key Biscayne, there's a whole city underwater. The Neptune Memorial Reef sits forty feet down, with roads, benches and statues.",
+      "caption": "And off Key Biscayne, there's a whole city underwater. The Neptune Memorial Reef sits forty feet down, with roads, benches and statues.",
       "overlay": "NEPTUNE REEF",
       "badge": "40 FT DOWN",
       "sub": "Off Key Biscayne",
@@ -139,9 +139,9 @@
     },
     {
       "kind": "outro",
-      "text": "Which one would you actually go to? Send this to the friend who'd go with you. And if you meet someone out there, NEAR shows who you crossed paths with.",
-      "caption": "Which one would you actually go to? Send this to the friend who'd go with you. And if you meet someone out there, NEAR shows who you crossed paths with.",
-      "overlay": "SEND THIS 👀",
+      "text": "So how many have you been to? Comment your number. Then send this to the friend you're going with. And if you meet someone out there, NEAR shows who you crossed paths with.",
+      "caption": "So how many have you been to? Comment your number. Then send this to the friend you're going with. And if you meet someone out there, NEAR shows who you crossed paths with.",
+      "overlay": "HOW MANY? 👇",
       "sub": "Follow for more South Florida",
       "location": {
         "name": "Biscayne Bay",

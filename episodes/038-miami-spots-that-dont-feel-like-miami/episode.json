@@ -12,15 +12,15 @@
     "provider": "openai",
     "voice": "ash"
   },
-  "igCaption": "Miami spots that don't feel like Miami 🌴\n\nVizcaya: an Italian Renaissance villa and gardens on Biscayne Bay\nVenetian Pool: a public pool from 1924 in Coral Gables\nFairchild: 83 acres of rare tropical plants\nMatheson Hammock: 630 acres of park on Old Cutler Road\n\nTag who you're taking.\n\n#Miami #CoralGables #MiamiThingsToDo #SouthFlorida",
+  "igCaption": "Send this to your friend who says there's nothing to do in Miami 🌴\n\nVizcaya: an Italian Renaissance villa and gardens on Biscayne Bay\nVenetian Pool: a public pool from 1924 you can swim in\nFairchild: 83 acres of rare tropical plants\nMatheson Hammock: 630 acres of park on Old Cutler Road\n\nPick one for this weekend and tag who you're taking.\n\n#Miami #CoralGables #MiamiThingsToDo #SouthFlorida",
   "scenes": [
     {
       "kind": "hook",
-      "text": "These places are in Miami. But they don't feel like Miami at all.",
-      "caption": "These places are in Miami. But they don't feel like Miami at all.",
+      "text": "Send this to your friend who says there's nothing to do in Miami. These places don't even feel like Miami.",
+      "caption": "Send this to your friend who says there's nothing to do in Miami. These places don't even feel like Miami.",
       "overlay": [
-        "NOT LIKE",
-        "MIAMI AT ALL"
+        "SEND THIS TO",
+        "YOUR BORED FRIEND"
       ],
       "emojis": [
         "🌴",
@@ -67,8 +67,8 @@
     },
     {
       "kind": "item",
-      "text": "Venetian Pool, in Coral Gables. It's a public pool, finished in 1924. And yes, you can swim in it.",
-      "caption": "Venetian Pool, in Coral Gables. It's a public pool, finished in 1924. And yes, you can swim in it.",
+      "text": "Venetian Pool, in Coral Gables. It's a public pool, finished in 1924. And yes, you can actually swim in it.",
+      "caption": "Venetian Pool, in Coral Gables. It's a public pool, finished in 1924. And yes, you can actually swim in it.",
       "overlay": "VENETIAN POOL",
       "badge": "SINCE 1924",
       "sub": "Coral Gables",
@@ -139,9 +139,9 @@
     },
     {
       "kind": "outro",
-      "text": "Which one are you going to first? Tag who you're taking. And if you catch someone's eye there, NEAR shows who you crossed paths with.",
-      "caption": "Which one are you going to first? Tag who you're taking. And if you catch someone's eye there, NEAR shows who you crossed paths with.",
-      "overlay": "TAG SOMEONE 🌴",
+      "text": "Screenshot this and pick one for this weekend. Tag who you're taking. And if you catch someone's eye there, NEAR shows who you crossed paths with.",
+      "caption": "Screenshot this and pick one for this weekend. Tag who you're taking. And if you catch someone's eye there, NEAR shows who you crossed paths with.",
+      "overlay": "PICK ONE 👇",
       "sub": "Follow for more South Florida",
       "location": {
         "name": "Coral Gables",
