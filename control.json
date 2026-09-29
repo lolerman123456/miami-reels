@@ -19,5 +19,7 @@
   },
   "tiktokSlideshowsPerDay": 8,
   "tiktokMinScore": 6,
-  "tiktokBuffer": true
+  "tiktokBuffer": true,
+  "storiesPerDay": 2,
+  "storyGapHours": 5
 }

@@ -81,6 +81,19 @@ export async function publishCarousel(imageFiles, caption, label, { collaborator
 
 // Story from a 9:16 JPEG or MP4 (≤60 s).
 export async function publishStory(file, label) {
+  // owner (Sep 29): they repost other people's stories, so the bot only adds one every so often
+  // (control.json "storiesPerDay" / "storyGapHours"; leave storiesPerDay out for a story with every post)
+  let c = {};
+  try { c = readJSON(path.join(ROOT, 'control.json')); } catch {}
+  if (c.storiesPerDay != null) {
+    const ny = d => new Date(d).toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+    const log = fs.existsSync(path.join(ROOT, 'posted.log')) ? fs.readFileSync(path.join(ROOT, 'posted.log'), 'utf8') : '';
+    const stories = log.split('\n').filter(l => l.split('\t')[1]?.startsWith('story:')).map(l => Date.parse(l.split('\t')[0])).filter(Boolean);
+    const today = stories.filter(t => ny(t) === ny(Date.now()));
+    const gap = (c.storyGapHours ?? 5) * 3600e3;
+    if (today.length >= c.storiesPerDay) { console.log(`(story skipped: already ${today.length} today, limit ${c.storiesPerDay})`); return null; }
+    if (stories.length && Date.now() - Math.max(...stories) < gap) { console.log(`(story skipped: last one was under ${c.storyGapHours ?? 5}h ago)`); return null; }
+  }
   const { api, igUser, token } = auth();
   if (file.endsWith('.mp4')) {
     // stories max out at 60 s: post a trimmed, lighter copy of longer Reels
