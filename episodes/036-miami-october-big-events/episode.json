@@ -1,0 +1,160 @@
+{
+  "title": "The biggest things happening in Miami this October",
+  "id": "036-miami-october-big-events",
+  "sources": [
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "format": "EVENTS / GUIDE",
+  "music": true,
+  "tiktok": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "igCaption": "The biggest things happening in Miami this October 🎟️\n\nOct 16–17: III Points festival, Wynwood\nOct 21–24: South Beach Seafood Festival, Lummus Park (stone crab season starts)\nOct 25: Best Baguette & Croissant in Florida, Miami Beach\nAll month: Halloween Candlelight concerts, incl. Jungle Island\n\nWhich one are you going to? Tag who's coming with you.\n\n#MiamiEvents #MiamiOctober #IIIPoints #MiamiThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "These are the biggest things happening in Miami this October. Clear your calendar.",
+      "caption": "These are the biggest things happening in Miami this October. Clear your calendar.",
+      "overlay": [
+        "MIAMI IN OCTOBER",
+        "THE BIG ONES"
+      ],
+      "emojis": [
+        "🎶",
+        "🦀",
+        "🥐",
+        "🎃"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "October sixteenth and seventeenth, III Points takes over Wynwood. It's Miami's own music festival. Two nights of dancing.",
+      "caption": "Oct. 16 and 17, III Points takes over Wynwood. It's Miami's own music festival. Two nights of dancing.",
+      "overlay": "WYNWOOD",
+      "badge": "OCT 16–17",
+      "sub": "III Points Festival",
+      "emoji": "🎶",
+      "source": "Secret Miami",
+      "location": {
+        "name": "III Points, 318 NW 23rd St",
+        "lat": 25.7995,
+        "lon": -80.199,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 30,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "October twenty-first to twenty-fourth, the South Beach Seafood Festival is back at Lummus Park. It kicks off stone crab season.",
+      "caption": "Oct. 21 to 24, the South Beach Seafood Festival is back at Lummus Park. It kicks off stone crab season.",
+      "overlay": "LUMMUS PARK",
+      "badge": "OCT 21–24",
+      "sub": "South Beach Seafood Festival",
+      "emoji": "🦀",
+      "source": "Secret Miami",
+      "location": {
+        "name": "Lummus Park",
+        "lat": 25.7801,
+        "lon": -80.13,
+        "h": 5
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "October twenty-fifth, bakeries from across Florida battle for the best baguette and croissant on Miami Beach. You taste everything and vote.",
+      "caption": "Oct. 25, bakeries from across Florida battle for the best baguette and croissant on Miami Beach. You taste everything and vote.",
+      "overlay": "MIAMI BEACH",
+      "badge": "OCT 25",
+      "sub": "Best Baguette in Florida",
+      "emoji": "🥐",
+      "source": "Secret Miami",
+      "location": {
+        "name": "1677 Collins Avenue",
+        "lat": 25.7922,
+        "lon": -80.129,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 210,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "And all month, Candlelight concerts go spooky. Think Thriller and the Beetlejuice theme, played by candlelight. One of them is at Jungle Island.",
+      "caption": "And all month, Candlelight concerts go spooky. Think Thriller and the Beetlejuice theme, played by candlelight. One of them is at Jungle Island.",
+      "overlay": "JUNGLE ISLAND",
+      "badge": "HALLOWEEN",
+      "sub": "Candlelight Concerts",
+      "emoji": "🕯️",
+      "source": "Secret Miami",
+      "location": {
+        "name": "Jungle Island",
+        "lat": 25.7861,
+        "lon": -80.1742,
+        "h": 5
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "So which one are you going to? Tag who's coming with you.",
+      "caption": "So which one are you going to? Tag who's coming with you.",
+      "overlay": "PICK ONE 🎟️",
+      "sub": "October 2026",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 90
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 45
+      }
+    }
+  ]
+}
