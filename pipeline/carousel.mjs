@@ -283,7 +283,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   for (const [i, item] of [post.cover, ...post.slides].entries()) {
     const np = i < storyPhotos.length ? await newsPhoto(storyPhotos[i], dir, i ? `photo-${i}` : 'photo-cover') : null;
     const photo = np || await getPhoto(item.photo, dir, i ? `photo-${i}` : 'photo-cover',
-      { context: i ? item.headline : [item.top, item.main, item.highlight, item.bottom].filter(Boolean).join(' ') });
+      { context: i ? item.headline : [item.top, item.main, item.highlight, item.bottom].filter(Boolean).join(' '), aiFirst: !ALIVE.includes(kind) });
     if (photo) { item.photoFile = path.basename(photo.file); item.credit = photo.credit; }
     console.log(`  ${i ? '#' + i : 'cover'}: ${photo ? photo.credit : 'no photo'}`);
   }
@@ -357,7 +357,7 @@ function coverHTML(post, dir, h) {
   const c = post.cover; const img = dataUrl(dir, c.photoFile);
   return `
     ${img ? `<div class="bg" style="background-image:url('${img}');${c.blur ? 'filter:blur(26px);transform:scale(1.12)' : ''}"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 30%, #2a3a66, #05070d)"></div>`}
-    <div class="shade" style="background:linear-gradient(to bottom, rgba(0,0,0,0) 28%, rgba(0,0,0,.55) 52%, rgba(0,0,0,.93) 76%)"></div>
+    <div class="shade" style="background:linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,.3) 56%, rgba(0,0,0,.82) 84%)"></div>
     ${c.blur ? `<div class="caps" style="position:absolute;left:0;right:0;top:${h * 0.22}px;text-align:center;font-size:${h > 1400 ? 300 : 250}px">?</div>` : ''}
     ${img ? markSVG(c.mark, h * 0.08, h * 0.42) : ''}
     ${c.credit && !c.blur ? `<div class="credit">${esc(c.credit)}</div>` : ''}
@@ -381,8 +381,9 @@ function newsSlideHTML(s, i, n, dir) {
   const size = Math.max(52, Math.min(84, Math.floor(84 * Math.sqrt(48 / Math.max(48, hl.length)))));
   const red = /CRIME|BREAKING|UPDATE/.test(s.tag || '');
   return `
-    ${img ? `<div class="bg" style="background-image:url('${img}');bottom:auto;height:760px"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 20%, #2a3a66, #05070d)"></div>`}
-    <div class="shade" style="background:linear-gradient(to bottom, rgba(0,0,0,0) 25%, rgba(0,0,0,.6) 45%, #000 57%)"></div>
+    <div class="bg" style="background:linear-gradient(to bottom, #0e1c3d 860px, #081226 100%)"></div>
+    ${img ? `<div class="bg" style="background-image:url('${img}');bottom:auto;height:860px;filter:saturate(1.2) contrast(1.05)"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 20%, #2a4a8f, #081226)"></div>`}
+    <div class="shade" style="bottom:auto;height:862px;background:linear-gradient(to bottom, rgba(14,28,61,0) 38%, rgba(14,28,61,.6) 60%, rgba(14,28,61,.9) 78%, #0e1c3d 100%)"></div>
     ${img ? markSVG(s.mark, 90, 460) : ''}
     ${s.credit ? `<div class="credit">${esc(s.credit)}</div>` : ''}
     <div style="position:absolute;left:60px;right:60px;bottom:150px">
@@ -427,7 +428,7 @@ function ctaHTML(post, dir) {
   const img = dataUrl(dir, post.cover.photoFile);
   return `
     ${ALIVE.includes(post.kind) ? `<div class="bg" style="background:radial-gradient(circle at 50% 30%, #3d86ff 0%, ${BLUE} 45%, #0b3fb3 100%)"></div>
-    <div class="bgemoji" style="opacity:.12">📍</div>` : img ? `<div class="bg" style="background-image:url('${img}');filter:blur(30px) brightness(.45);transform:scale(1.15)"></div>` : ''}
+    <div class="bgemoji" style="opacity:.12">📍</div>` : img ? `<div class="bg" style="background-image:url('${img}');filter:blur(30px) brightness(.6) saturate(1.2);transform:scale(1.15)"></div>` : ''}
     <div style="position:absolute;left:60px;right:60px;top:300px;text-align:center">
       <div style="font-size:150px">📍</div>
       <div class="caps" style="font-size:120px;margin-top:20px">STAY <span style="color:#FFD24A">NEAR.</span></div>

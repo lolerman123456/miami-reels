@@ -16,12 +16,14 @@ const used = new Set(); // don't reuse one photo twice in a post
 let aiThisPost = 0;     // at most AI_IMAGES_PER_POST (default 4) per carousel (owner: AI instead of boring stock)
 export function newPost() { used.clear(); aiThisPost = 0; }
 
-export async function getPhoto(spec, dir, name, { context = '' } = {}) {
+export async function getPhoto(spec, dir, name, { context = '', aiFirst = false } = {}) {
   if (!spec) return null;
   const attempt = async (fn, ...a) => { try { return await fn(...a); } catch (e) { console.log(`  (${fn.name} failed for ${name}: ${e.message.slice(0, 160)})`); return null; } };
   const simple = spec.query?.replace(/\b(miami|dade|florida|south|broward|palm beach|fort lauderdale|fl)\b/gi, '').replace(/\s+/g, ' ').trim();
   // owner asked for AI images on this post: AI first, no budget caps
   if (process.env.AI_PHOTOS === '1' && spec.prompt) { const p = await attempt(aiPhoto, spec.prompt, dir, name); if (p) return p; }
+  // news carousels (owner, Sep 29: stock looks bland): eye-catching AI image first, stock only as a fallback
+  if (aiFirst && spec.prompt && aiBudgetLeft() > -30) { const p = await attempt(aiPhoto, spec.prompt, dir, name); if (p) return p; }
   return (spec.query && await attempt(stockPhoto, spec.query, dir, name, context))
     || (simple && simple !== spec.query && simple.split(' ').length >= 1 && await attempt(stockPhoto, simple, dir, name, context))
     || (spec.prompt && aiBudgetLeft() > 0 && aiThisPost < Number(process.env.AI_IMAGES_PER_POST ?? 4) && await attempt(aiPhoto, spec.prompt, dir, name))
@@ -88,12 +90,12 @@ async function judge(list, query, context) {
 function aiBudgetLeft() {
   const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
   const usedToday = fs.existsSync(BUDGET_FILE) ? fs.readFileSync(BUDGET_FILE, 'utf8').split('\n').filter(l => l.startsWith(today)).length : 0;
-  return Number(process.env.AI_IMAGES_PER_DAY ?? 60) - usedToday; // ~8 carousels a day × 7 slides
+  return Number(process.env.AI_IMAGES_PER_DAY ?? 90) - usedToday; // ~8 carousels a day × 7 slides, news ones AI-first
 }
 
 async function aiPhoto(description, dir, name) {
   if (!process.env.OPENAI_API_KEY) return null;
-  const prompt = `${description}. Striking, dramatic photorealistic news photo that stops the scroll: bold composition, strong light and contrast, real moment, South Florida setting when relevant. ` +
+  const prompt = `${description}. Eye-catching photorealistic editorial photo that stops the scroll: vivid saturated color, bright light (golden hour, neon or strong sun, never dull or gray), bold close or low angle, a clear striking subject with something happening, cinematic depth, South Florida setting when relevant. ` +
     'No text, no readable numbers, no price signs or price displays, no logos, no watermarks. No identifiable real people or public figures; faces turned away, blurred or out of frame.';
   // cheap first (owner: mini model, ~4-5x cheaper), full model only if the mini one fails
   for (const model of [...new Set([process.env.OPENAI_IMAGE_MODEL || 'gpt-image-1-mini', 'gpt-image-1'])]) {
