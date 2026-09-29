@@ -1,0 +1,118 @@
+{
+  "sector": "WORLD",
+  "cover": {
+    "top": "NEWS FROM AROUND THE WORLD",
+    "main": "CONGO'S EBOLA OUTBREAK",
+    "highlight": "TOPS 8,000",
+    "bottom": "CONFIRMED CASES",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Ebola response Democratic Republic of the Congo health workers protective suits",
+      "prompt": "Health workers in full protective suits at an Ebola treatment zone in the Democratic Republic of the Congo, with warning tape and a clinic entrance in the background"
+    },
+    "emojis": [
+      "🌍",
+      "🦠",
+      "🏥"
+    ],
+    "logos": [],
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "WORLD",
+      "headline": "Congo’s Ebola outbreak tops 8,000 confirmed cases",
+      "highlight": "8,000 confirmed",
+      "body": "Congo’s Ebola outbreak has passed 8,000 confirmed cases and remains out of control.",
+      "place": "DR Congo",
+      "source": "AP News",
+      "photo": {
+        "query": "Wikimedia Commons Ebola treatment center Democratic Republic of the Congo",
+        "prompt": "A guarded Ebola treatment center in the Democratic Republic of the Congo with health workers in protective suits and a warning sign at the entrance"
+      },
+      "emoji": "🦠",
+      "chip": "8,000+"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "That also comes with a 48% death rate",
+      "highlight": "48% death",
+      "body": "The outbreak has topped 8,000 cases with a reported 48% death rate.",
+      "place": "DR Congo",
+      "source": "CIDRAP",
+      "photo": {
+        "query": "Wikimedia Commons Ebola health workers PPE Congo",
+        "prompt": "Ebola response workers in yellow protective gear standing outside a field clinic in Central Africa"
+      },
+      "emoji": "🏥",
+      "chip": "48%"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "The reason: response teams are stretched",
+      "highlight": "response teams",
+      "body": "Health worker shortages are worsening as cases pass 8,000.",
+      "place": "DR Congo",
+      "source": "NBC News",
+      "photo": {
+        "query": "Wikimedia Commons Ebola response team Democratic Republic of Congo",
+        "prompt": "A small Ebola response team in protective clothing walking through a rural clinic area in DR Congo"
+      },
+      "emoji": "👩‍⚕️",
+      "chip": "SHORTAGES"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "And the outbreak has spread to two new health zones",
+      "highlight": "two zones",
+      "body": "The outbreak has spread to two new health zones in DR Congo.",
+      "place": "DR Congo",
+      "source": "The Hindu",
+      "photo": {
+        "query": "Wikimedia Commons Ebola response rural Democratic Republic of Congo health zone",
+        "prompt": "A rural Ebola response checkpoint in the Democratic Republic of the Congo, with health workers screening people near a road or clinic entrance"
+      },
+      "emoji": "📍",
+      "chip": "SPREAD"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "Which puts access and aid at the center",
+      "highlight": "access and aid",
+      "body": "Humanitarian access has become a focus of the Ebola emergency response.",
+      "place": "DR Congo",
+      "source": "UN News",
+      "photo": {
+        "query": "Wikimedia Commons humanitarian aid convoy Democratic Republic of Congo",
+        "prompt": "A humanitarian aid convoy on a muddy road in the Democratic Republic of the Congo, with dense forest and relief vehicles"
+      },
+      "emoji": "🚑",
+      "chip": "ACCESS"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "So the US and EU are pledging more support",
+      "highlight": "more support",
+      "body": "The US and EU have pledged further financial support as Ebola cases crossed 8,000.",
+      "place": "DR Congo",
+      "source": "africanews.com",
+      "photo": {
+        "query": "Wikimedia Commons Ebola aid supplies Democratic Republic of Congo",
+        "prompt": "Boxes of medical aid and protective equipment being unloaded for an Ebola response in Central Africa"
+      },
+      "emoji": "🌐",
+      "chip": "US + EU"
+    }
+  ],
+  "caption": "Congo’s Ebola outbreak has passed 8,000 confirmed cases, with worker shortages, spread into new health zones and access problems shaping the response.\nWhat part of this story do you want explained next?",
+  "hashtags": [
+    "#DRCongo",
+    "#EbolaOutbreak"
+  ],
+  "collaborators": [],
+  "igCaption": "Congo’s Ebola outbreak has passed 8,000 confirmed cases, with worker shortages, spread into new health zones and access problems shaping the response.\nWhat part of this story do you want explained next?\n\n📰 Sources: AP News, CIDRAP, NBC News, The Hindu, UN News, africanews.com\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#DRCongo #EbolaOutbreak #miami #southflorida",
+  "kind": "world",
+  "kicker": "NEWS FROM AROUND THE WORLD 🌎",
+  "date": "2026-09-28",
+  "id": "2026-09-28-world"
+}
