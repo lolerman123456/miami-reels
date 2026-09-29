@@ -1,0 +1,160 @@
+{
+  "title": "Free things to do in Miami this October",
+  "id": "035-free-in-miami-october",
+  "sources": [
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "format": "EVENTS / GUIDE",
+  "music": true,
+  "tiktok": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "igCaption": "Everything free in Miami this October 🆓\n\nEvery Wed: free movies at SoundScape Park, Miami Beach\nAll month: Giralda in Bloom umbrella art, Coral Gables\nOct 31: Red Bull Flugtag at Bayfront Park\nOct 31: HalloWYN block party, Wynwood Marketplace, 7pm–3am (RSVP for a free drink)\n\nWhich one are you going to? Tag who's coming with you.\n\n#FreeMiami #MiamiEvents #MiamiHalloween #MiamiThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Here's everything free in Miami this October. You don't have to spend a dollar.",
+      "caption": "Here's everything free in Miami this October. You don't have to spend a dollar.",
+      "overlay": [
+        "FREE IN MIAMI",
+        "THIS OCTOBER"
+      ],
+      "emojis": [
+        "🆓",
+        "🎃",
+        "🎬",
+        "🌸"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Every Wednesday, free movies are back at SoundScape Park on Miami Beach. The movie plays on the wall of the New World Center. Bring a blanket and snacks.",
+      "caption": "Every Wednesday, free movies are back at SoundScape Park on Miami Beach. The movie plays on the wall of the New World Center. Bring a blanket and snacks.",
+      "overlay": "SOUNDSCAPE PARK",
+      "badge": "FREE",
+      "sub": "Every Wednesday",
+      "emoji": "🎬",
+      "source": "Secret Miami",
+      "location": {
+        "name": "SoundScape Park",
+        "lat": 25.7926,
+        "lon": -80.1331,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "In Coral Gables, hundreds of flower umbrellas hang over Giralda Plaza. It's called Giralda in Bloom. It's free, and it's up through October.",
+      "caption": "In Coral Gables, hundreds of flower umbrellas hang over Giralda Plaza. It's called Giralda in Bloom. It's free, and it's up through October.",
+      "overlay": "GIRALDA PLAZA",
+      "badge": "FREE",
+      "sub": "Giralda in Bloom",
+      "emoji": "🌸",
+      "source": "Secret Miami",
+      "location": {
+        "name": "Giralda Plaza",
+        "lat": 25.7505,
+        "lon": -80.2585,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 30,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Halloween night, Red Bull Flugtag lands at Bayfront Park. Teams launch homemade flying machines off a twenty-two foot deck. It's free to watch.",
+      "caption": "Halloween night, Red Bull Flugtag lands at Bayfront Park. Teams launch homemade flying machines off a 22-foot deck. It's free to watch.",
+      "overlay": "BAYFRONT PARK",
+      "badge": "FREE",
+      "sub": "Red Bull Flugtag, Oct. 31",
+      "emoji": "✈️",
+      "source": "Secret Miami",
+      "location": {
+        "name": "Bayfront Park",
+        "lat": 25.7753,
+        "lon": -80.1861,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 210,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Then keep going at HalloWYN. It's Wynwood Marketplace's free Halloween block party, from seven p.m. to three a.m. RSVP and you get a free welcome drink.",
+      "caption": "Then keep going at HalloWYN. It's Wynwood Marketplace's free Halloween block party, from 7 p.m. to 3 a.m. RSVP and you get a free welcome drink.",
+      "overlay": "WYNWOOD",
+      "badge": "FREE",
+      "sub": "HalloWYN, Oct. 31",
+      "emoji": "🎃",
+      "source": "Secret Miami",
+      "location": {
+        "name": "Wynwood Marketplace",
+        "lat": 25.7995,
+        "lon": -80.1976,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "So which one are you going to? Tag who's coming with you.",
+      "caption": "So which one are you going to? Tag who's coming with you.",
+      "overlay": "ALL FREE 🆓",
+      "sub": "October 2026",
+      "location": {
+        "name": "Wynwood Marketplace",
+        "lat": 25.7995,
+        "lon": -80.1976,
+        "h": 10
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 45
+      }
+    }
+  ]
+}
