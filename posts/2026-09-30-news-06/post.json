@@ -1,0 +1,154 @@
+{
+  "sector": "EDUCATION",
+  "cover": {
+    "top": "KEN GRIFFIN",
+    "main": "BACKS MIAMI MOVE WITH",
+    "highlight": "$3 BILLION GIFT",
+    "bottom": "FOR NEW CMU CAMPUS IN WYNWOOD",
+    "blur": false,
+    "photo": {
+      "query": "Wynwood Miami Mana Wynwood warehouse district murals",
+      "prompt": "dramatic aerial-style view of Wynwood warehouses and murals at golden hour with Miami skyline in the distance, no identifiable people",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "🎓",
+      "🏙️",
+      "💸"
+    ],
+    "logos": [
+      "cmu.edu",
+      "citadel.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c1.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EDUCATION",
+      "headline": "Ken Griffin’s $3B CMU gift points to Wynwood",
+      "highlight": "$3B CMU",
+      "body": "Carnegie Mellon announced Ken Griffin’s $3 billion gift Wednesday, with plans tied to a new Miami campus.",
+      "place": "Wynwood",
+      "source": "Reuters",
+      "photo": {
+        "query": "Carnegie Mellon University campus Pittsburgh Hamerschlag Hall",
+        "prompt": "dramatic low-angle photo of Carnegie Mellon University campus buildings at sunset, red brick and campus lawn visible, no identifiable people"
+      },
+      "color": "#C41230",
+      "emoji": "🎓",
+      "chip": "$3B",
+      "logo": "cmu.edu",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EDUCATION",
+      "headline": "That is being called the largest university gift ever",
+      "highlight": "largest university",
+      "body": "Reports described the pledge as the largest university gift ever and the largest single gift to higher education in U.S. history.",
+      "place": "Miami",
+      "source": "The New York Times",
+      "photo": {
+        "query": "Carnegie Mellon University The Fence campus",
+        "prompt": "striking Carnegie Mellon campus scene with the Fence and red brick buildings, dramatic sky, no identifiable faces"
+      },
+      "color": "#C41230",
+      "emoji": "🏛️",
+      "chip": "RECORD",
+      "logo": "cmu.edu",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EDUCATION",
+      "headline": "And the Miami campus is planned for Wynwood",
+      "highlight": "planned for Wynwood",
+      "body": "Carnegie Mellon plans to open a Miami campus in Wynwood.",
+      "place": "Wynwood",
+      "source": "refreshmiami.com",
+      "photo": {
+        "query": "Wynwood Walls Miami street art murals",
+        "prompt": "wide dramatic street-level photo of Wynwood murals and warehouse blocks at dusk, no identifiable people"
+      },
+      "emoji": "🎨",
+      "chip": "WYNWOOD",
+      "logo": "cmu.edu",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EDUCATION",
+      "headline": "Which follows a $1B-plus Mana Wynwood purchase",
+      "highlight": "$1B-plus",
+      "body": "Griffin closed on a $1 billion-plus purchase of Mana Wynwood tied to Carnegie Mellon’s Miami plans.",
+      "place": "Wynwood",
+      "source": "The Real Deal",
+      "photo": {
+        "query": "Mana Wynwood Miami warehouse exterior",
+        "prompt": "dramatic street-level photo of large Wynwood warehouse buildings and arts district streetscape, Miami skyline in background, no private people"
+      },
+      "emoji": "🏗️",
+      "chip": "$1B+",
+      "logo": "manawynwood.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "EDUCATION",
+      "headline": "That also links Miami to Pittsburgh expansion",
+      "highlight": "Pittsburgh expansion",
+      "body": "The gift also funds Carnegie Mellon’s Pittsburgh expansion and programs.",
+      "place": "Miami and Pittsburgh",
+      "source": "Pulse 2.0",
+      "photo": {
+        "query": "Carnegie Mellon University Gates Hillman Complex Pittsburgh",
+        "prompt": "dramatic exterior photo of Carnegie Mellon's Gates Hillman Complex with modern glass architecture and evening light"
+      },
+      "color": "#C41230",
+      "emoji": "📍",
+      "chip": "2 CITIES",
+      "logo": "cmu.edu",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EDUCATION",
+      "headline": "So Miami joins CMU’s global campus map",
+      "highlight": "global campus",
+      "body": "Carnegie Mellon already has degree-granting locations across six continents, including Qatar, Silicon Valley and Kigali.",
+      "place": "Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Carnegie Mellon University campus aerial Pittsburgh",
+        "prompt": "dramatic overhead-style university campus photo with subtle map pins suggesting global campuses, no people in focus"
+      },
+      "color": "#C41230",
+      "emoji": "🌎",
+      "chip": "GLOBAL",
+      "logo": "cmu.edu",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    }
+  ],
+  "caption": "Ken Griffin’s $3 billion Carnegie Mellon gift is tied to a new Miami campus planned for Wynwood, alongside Pittsburgh expansion.\nWhat should CMU bring to Miami first?",
+  "hashtags": [
+    "#WynwoodMiami",
+    "#CarnegieMellon"
+  ],
+  "collaborators": [],
+  "igCaption": "Ken Griffin’s $3 billion Carnegie Mellon gift is tied to a new Miami campus planned for Wynwood, alongside Pittsburgh expansion.\nWhat should CMU bring to Miami first?\n\n📰 Sources: Reuters, The New York Times, refreshmiami.com, The Real Deal, Pulse 2.0, Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#WynwoodMiami #CarnegieMellon #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-09-30",
+  "id": "2026-09-30-news-06"
+}
