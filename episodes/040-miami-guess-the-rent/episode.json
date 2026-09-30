@@ -42,7 +42,17 @@
           "Miami skyline"
         ],
         "at": 0,
-        "style": "fast"
+        "style": "fast",
+        "files": [
+          {
+            "file": "photos/scene-0-0.jpg",
+            "credit": "Gabriel Kaplan / CC BY 3.0"
+          },
+          {
+            "file": "photos/scene-0-1.jpg",
+            "credit": "Matthew T Rader / CC BY-SA 4.0"
+          }
+        ]
       },
       "emojis": [
         "🏠",
@@ -76,7 +86,13 @@
           "Hialeah Park Race Track"
         ],
         "at": 0,
-        "style": "fast"
+        "style": "fast",
+        "files": [
+          {
+            "file": "photos/scene-1-1.jpg",
+            "credit": "Phillip Pessar / CC BY 2.0"
+          }
+        ]
       },
       "badge": null,
       "sub": "Typical rent",
@@ -113,7 +129,17 @@
           "South Beach Miami lifeguard tower"
         ],
         "at": 0,
-        "style": "fast"
+        "style": "fast",
+        "files": [
+          {
+            "file": "photos/scene-2-0.jpg",
+            "credit": "P. Hughes / CC BY 4.0"
+          },
+          {
+            "file": "photos/scene-2-1.jpg",
+            "credit": "Radomianin / CC BY-SA 4.0"
+          }
+        ]
       },
       "badge": null,
       "sub": "Typical rent",
@@ -150,7 +176,17 @@
           "Brickell City Centre"
         ],
         "at": 0,
-        "style": "fast"
+        "style": "fast",
+        "files": [
+          {
+            "file": "photos/scene-3-0.jpg",
+            "credit": "Rhododendrites / CC BY-SA 4.0"
+          },
+          {
+            "file": "photos/scene-3-1.jpg",
+            "credit": "Phillip Pessar / CC BY 2.0"
+          }
+        ]
       },
       "badge": null,
       "sub": "Typical rent",
@@ -187,7 +223,8 @@
           "Peacock Park Coconut Grove"
         ],
         "at": 0,
-        "style": "fast"
+        "style": "fast",
+        "files": []
       },
       "badge": null,
       "sub": "Typical rent",
@@ -224,7 +261,17 @@
           "Cape Florida Lighthouse"
         ],
         "at": 0,
-        "style": "fast"
+        "style": "fast",
+        "files": [
+          {
+            "file": "photos/scene-5-0.jpg",
+            "credit": "Giuseppe Milo / CC BY 3.0"
+          },
+          {
+            "file": "photos/scene-5-1.jpg",
+            "credit": "P. Hughes / CC BY-SA 4.0"
+          }
+        ]
       },
       "badge": null,
       "sub": "Typical rent",
@@ -261,7 +308,13 @@
           "Miami skyline"
         ],
         "at": 0,
-        "style": "fast"
+        "style": "fast",
+        "files": [
+          {
+            "file": "photos/scene-6-1.jpg",
+            "credit": "Wilfredor / CC0"
+          }
+        ]
       },
       "sub": "Follow for more Miami"
     }
