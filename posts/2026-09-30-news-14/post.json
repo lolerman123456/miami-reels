@@ -1,0 +1,127 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "POLICE SAY",
+    "main": "ONE VICTIM DID NOT REMEMBER",
+    "highlight": "THE CAB",
+    "bottom": "AND 8 IPHONES WERE FOUND",
+    "blur": false,
+    "photo": {
+      "query": "Miami Beach taxi cab police lights night",
+      "prompt": "Dramatic close photo of a taxi stopped on a Miami Beach street at night, police lights reflecting in the windows, angle aimed toward the front seat area",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "🚕",
+      "📱",
+      "🚨"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Local 10",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Police say 8 stolen iPhones were found under the driver's seat",
+      "highlight": "8 stolen iPhones",
+      "body": "Miami Beach police arrested Reynoso Osias, 48, after a months-long robbery and fraud investigation tied to passengers' stolen phones and bank accounts.",
+      "place": "Miami Beach",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami Beach taxi interior police lights night",
+        "prompt": "Close-up of a taxi driver's seat area at night with red and blue police lights outside the window, no people visible"
+      },
+      "emoji": "📱",
+      "chip": "8 IPHONES",
+      "logo": "miamibeachfl.gov",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "That came after one victim did not remember getting into the taxi",
+      "highlight": "did not remember",
+      "body": "Police say one victim did not remember getting into the taxi.",
+      "place": "Miami Beach",
+      "source": "Local 10",
+      "photo": {
+        "query": "Ocean Drive Miami Beach taxi night",
+        "prompt": "A taxi driving past Miami Beach hotel lights at night, viewed from the curb with no identifiable passengers"
+      },
+      "emoji": "🚕",
+      "chip": "1 VICTIM",
+      "logo": "miamibeachfl.gov",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "And police say the case involved bank account fraud",
+      "highlight": "bank account fraud",
+      "body": "Police say the investigation involved stolen cellphones and fraudulent financial transactions.",
+      "place": "Miami Beach",
+      "source": "Local 10",
+      "photo": {
+        "query": "smartphone bank cards dark table police lights",
+        "prompt": "Close-up of a smartphone beside bank cards on a dark table, lit by red and blue police-style reflections"
+      },
+      "emoji": "💳",
+      "chip": "ACCOUNTS",
+      "logo": "miamibeachfl.gov",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The reason: a months-long robbery and fraud probe",
+      "highlight": "months-long robbery",
+      "body": "Miami Beach police announced the arrest Wednesday after a months-long investigation into stolen phones and fraudulent financial transactions.",
+      "place": "Miami Beach",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami Beach Police Department vehicle night",
+        "prompt": "Miami Beach police vehicle parked at night with emergency lights on, framed tightly for a crime investigation update"
+      },
+      "emoji": "🚨",
+      "chip": "WED",
+      "logo": "miamibeachfl.gov",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Which led to kidnapping and strong-arm robbery charges",
+      "highlight": "strong-arm robbery",
+      "body": "Osias faces multiple felony charges, including kidnapping and conspiracy to commit strong-arm robbery.",
+      "place": "Miami Beach",
+      "source": "Local 10",
+      "photo": {
+        "query": "Miami-Dade courthouse exterior",
+        "prompt": "Exterior of a Miami-Dade courthouse in daylight with a serious legal-news feel, no people featured"
+      },
+      "emoji": "⚖️",
+      "chip": "FELONIES",
+      "logo": "miamibeachfl.gov",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "Police say a Miami Beach taxi driver was arrested after 8 stolen iPhones were found under the driver's seat in a months-long robbery and fraud investigation.\nOne victim did not remember getting into the taxi, and police say the case involved fraudulent financial transactions.",
+  "hashtags": [
+    "#MiamiBeach",
+    "#SouthFloridaNews"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say a Miami Beach taxi driver was arrested after 8 stolen iPhones were found under the driver's seat in a months-long robbery and fraud investigation.\nOne victim did not remember getting into the taxi, and police say the case involved fraudulent financial transactions.\n\n📰 Sources: WPLG Local 10, Local 10\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiBeach #SouthFloridaNews #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-09-30",
+  "id": "2026-09-30-news-14"
+}
