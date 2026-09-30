@@ -1,19 +1,4 @@
 {
- "items": [
-  {
-   "label": "2026-09-30-upcoming-tt",
-   "images": [
-    "https://github.com/lolerman123456/miami-reels/releases/download/tiktok/2026-09-30-upcoming-00-cover.jpg",
-    "https://github.com/lolerman123456/miami-reels/releases/download/tiktok/2026-09-30-upcoming-01.jpg",
-    "https://github.com/lolerman123456/miami-reels/releases/download/tiktok/2026-09-30-upcoming-02.jpg",
-    "https://github.com/lolerman123456/miami-reels/releases/download/tiktok/2026-09-30-upcoming-03.jpg",
-    "https://github.com/lolerman123456/miami-reels/releases/download/tiktok/2026-09-30-upcoming-04.jpg",
-    "https://github.com/lolerman123456/miami-reels/releases/download/tiktok/2026-09-30-upcoming-05.jpg",
-    "https://github.com/lolerman123456/miami-reels/releases/download/tiktok/2026-09-30-upcoming-06.jpg",
-    "https://github.com/lolerman123456/miami-reels/releases/download/tiktok/2026-09-30-upcoming-99-cta.jpg"
-   ],
-   "text": "This week\u2019s picks include a haunted carnival, Clifford on stage and new restaurants to try around South Florida.\nWho are you taking? Tag a friend.\n\n\ud83d\udcf0 Sources: Miami New Times, Eater Miami\n\n\ud83d\udccd Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
-   "at": "2026-09-30T17:30:00-04:00"
-  }
- ]
+ "clearPending": true,
+ "items": []
 }

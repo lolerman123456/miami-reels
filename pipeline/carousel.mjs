@@ -510,6 +510,7 @@ async function chat(messages) {
 
 async function tiktokWorthy(post, kind) {
   const control = readJSON(path.join(ROOT, 'control.json'));
+  if (control.tiktokSlideshows === false) return console.log('  (TikTok: slideshows off, Reels only)'), false; // owner, Sep 30: slideshows don't perform
   const cap = control.tiktokSlideshowsPerDay ?? 3;
   const log = fs.existsSync(path.join(ROOT, 'posted.log')) ? fs.readFileSync(path.join(ROOT, 'posted.log'), 'utf8') : '';
   const today = log.split('\n').filter(l => l.includes(`tiktok:${post.date}-`)).length; // slideshows already sent today

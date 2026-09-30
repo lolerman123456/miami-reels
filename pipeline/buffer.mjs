@@ -114,9 +114,10 @@ export async function postToTikTok({ video, images, text = '', label, ai = false
 // A whole day's TikTok schedule at once (owner, Sep 29: "too much to track"): each item becomes a Buffer reminder at its time.
 // requests/tiktok-batch.json → {"items":[{"label":"…","video":"URL or path" | "images":["URL or path", …],"text":"caption","at":"ISO"}]}
 export async function tiktokBatch(file) {
-  const { items = [] } = readJSON(file);
+  const { items = [], clearPending = false } = readJSON(file);
   const channelId = await channelFor('tiktok');
   if (!channelId) throw new Error('TikTok is not connected in Buffer');
+  if (clearPending) await clearPendingTikTok(channelId); // "clearPending": true removes reminders not yet due before adding these
   const url = (f, tag, name) => /^https?:/.test(f) ? f : publicUrl(path.resolve(ROOT, f), tag, name);
   let ok = 0;
   for (const it of items) {
@@ -137,6 +138,35 @@ export async function tiktokBatch(file) {
     } catch (e) { console.log(`  ✗ ${it.label}: ${e.message.slice(0, 200)}`); }
   }
   if (!ok && items.length) throw new Error('No TikTok reminders could be created');
+}
+
+// Delete every TikTok reminder in Buffer that isn't due yet (owner: "remove current buffer ones"). The delete mutation is
+// looked up from Buffer's schema so a renamed argument doesn't break it.
+async function clearPendingTikTok(channelId) {
+  const { __schema } = await gql('query { __schema { mutationType { fields { name args { name type { kind name ofType { kind name } } } } } } }');
+  const del = __schema.mutationType.fields.find(f => /^deletePost$/i.test(f.name)) || __schema.mutationType.fields.find(f => /delete.*post/i.test(f.name));
+  if (!del) throw new Error('Buffer has no delete-post mutation');
+  const arg = del.args[0], typeName = arg.type.name || arg.type.ofType?.name;
+  let idField = 'id';
+  if (arg.name === 'input') {
+    const { __type } = await gql('query($n: String!) { __type(name: $n) { inputFields { name } } }', { n: typeName });
+    idField = (__type.inputFields.find(f => /^(id|postId)$/.test(f.name)) || __type.inputFields[0]).name;
+  }
+  const { account } = await gql('query { account { organizations { id } } }');
+  let n = 0;
+  for (const org of account.organizations) {
+    const d = await gql(`query($o: OrganizationId!, $c: [ChannelId!]) { posts(first: 40, input: { organizationId: $o, filter: { channelIds: $c } }) {
+      edges { node { id status dueAt text } } } }`, { o: org.id, c: [channelId] });
+    for (const { node: p } of d.posts.edges) {
+      if (!p.dueAt || Date.parse(p.dueAt) <= Date.now() || /sent|published|error/i.test(p.status || '')) continue;
+      const vars = arg.name === 'input' ? { v: { [idField]: p.id } } : { v: p.id };
+      await gql(`mutation($v: ${arg.type.kind === 'NON_NULL' ? `${typeName}!` : typeName}) { ${del.name}(${arg.name}: $v) { __typename } }`, vars);
+      console.log(`  removed pending reminder due ${p.dueAt}: ${(p.text || '').split('\n')[0].slice(0, 60)}`);
+      log('tiktok-removed', `${p.id} due ${p.dueAt}`);
+      n++;
+    }
+  }
+  console.log(`✔ removed ${n} pending TikTok reminder(s)`);
 }
 
 // What Buffer actually has for TikTok (status, notification, errors): node pipeline/buffer.mjs --status

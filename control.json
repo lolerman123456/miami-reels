@@ -21,5 +21,6 @@
   "tiktokMinScore": 6,
   "tiktokBuffer": true,
   "storiesPerDay": 2,
-  "storyGapHours": 5
+  "storyGapHours": 5,
+  "tiktokSlideshows": false
 }
