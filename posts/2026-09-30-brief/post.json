@@ -1,0 +1,141 @@
+{
+  "sector": "CITY HALL",
+  "cover": {
+    "top": "WATCHDOG REPORT SAYS",
+    "main": "EVERGLADES “ALLIGATOR ALCATRAZ”",
+    "highlight": "COST NEARLY 3X",
+    "bottom": "THE STANDARD RATE",
+    "blur": false,
+    "photo": {
+      "query": "Dade-Collier Training and Transition Airport Everglades runway aerial",
+      "prompt": "dramatic aerial view of the isolated Dade-Collier runway cutting through Everglades wetlands under dark storm clouds",
+      "mark": "stamp: WATCHDOG REPORT"
+    },
+    "emojis": [
+      "🐊",
+      "💸",
+      "📄"
+    ],
+    "logos": [
+      "cbsnews.com",
+      "miamiherald.com",
+      "nbcmiami.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c2.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CITY HALL",
+      "headline": "“Alligator Alcatraz” reportedly cost nearly 3 times the standard rate",
+      "highlight": "nearly 3 times",
+      "body": "A federal watchdog report raised taxpayer spending questions over the South Florida detention facility.",
+      "place": "Everglades",
+      "source": "cbsnews.com",
+      "photo": {
+        "query": "Dade-Collier Training and Transition Airport Everglades aerial runway",
+        "prompt": "wide aerial photo of a long remote runway surrounded by Everglades wetlands with temporary facility structures nearby"
+      },
+      "emoji": "💸",
+      "chip": "3X RATE",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "That also means the contract issue is central",
+      "highlight": "no contract",
+      "body": "The report found ICE spent taxpayer money on the facility without a contract.",
+      "place": "South Florida",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "ICE detention facility fence Florida",
+        "prompt": "security fencing and temporary detention facility structures in a remote Florida wetland area under gray skies"
+      },
+      "emoji": "📄",
+      "chip": "NO CONTRACT",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "The reason: a rapid push to add detention capacity",
+      "highlight": "detention capacity",
+      "body": "A government watchdog found ICE wasted millions of taxpayer dollars while expanding detention capacity.",
+      "place": "United States",
+      "source": "cbsnews.com",
+      "photo": {
+        "query": "ICE transport buses detention facility fence",
+        "prompt": "white government transport buses parked beside tall security fencing at a temporary detention site"
+      },
+      "emoji": "🚌",
+      "chip": "MILLIONS",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "And detainee conditions are part of the report",
+      "highlight": "metal enclosures",
+      "body": "The DHS inspector general found detainees at “Alligator Alcatraz” were confined to small metal enclosures.",
+      "place": "Everglades",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "photo": {
+        "query": "metal detention enclosure chain link fence detention facility",
+        "prompt": "rows of metal enclosure fencing inside a temporary detention facility lit by harsh overhead lights"
+      },
+      "emoji": "🔒",
+      "chip": "DHS IG",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "Which puts an Everglades airport at the center",
+      "highlight": "Everglades airport",
+      "body": "The site uses Dade-Collier Training and Transition Airport, 36 miles west of Miami on Tamiami Trail.",
+      "place": "Collier County",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Tamiami Trail Everglades Collier County Florida road",
+        "prompt": "empty Tamiami Trail running through flat Everglades wetlands with low clouds and no buildings nearby"
+      },
+      "emoji": "🛣️",
+      "chip": "36 MI",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "So the political pressure is now local",
+      "highlight": "political pressure",
+      "body": "An activist confronted Rep. Maria Elvira Salazar over the facility as the DHS report raised concerns.",
+      "place": "Miami",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Rep Maria Elvira Salazar Miami public event",
+        "prompt": "Rep. Maria Elvira Salazar at a Miami public event with cameras and constituents nearby"
+      },
+      "emoji": "🏛️",
+      "chip": "DHS REPORT",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "A federal watchdog report says “Alligator Alcatraz” cost nearly 3 times the standard rate. The report also raised concerns about taxpayer spending, contracting and detainee conditions at the Everglades facility.\nWhat should happen next with the site?",
+  "hashtags": [
+    "#AlligatorAlcatraz",
+    "#Everglades"
+  ],
+  "collaborators": [],
+  "igCaption": "A federal watchdog report says “Alligator Alcatraz” cost nearly 3 times the standard rate. The report also raised concerns about taxpayer spending, contracting and detainee conditions at the Everglades facility.\nWhat should happen next with the site?\n\n📰 Sources: cbsnews.com, Miami Herald, ABC News - Breaking News, Latest News and Videos, Wikipedia, NBC 6 South Florida\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#AlligatorAlcatraz #Everglades #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-09-30",
+  "id": "2026-09-30-brief"
+}
