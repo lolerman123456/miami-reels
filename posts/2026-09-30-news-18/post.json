@@ -1,0 +1,139 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "UM STUDENT IS ARRESTED",
+    "main": "AFTER ROOMMATE FINDS A",
+    "highlight": "HIDDEN CAMERA",
+    "bottom": "IN BEDROOM",
+    "blur": false,
+    "photo": {
+      "query": "University of Miami Coral Gables campus entrance night Wikimedia Commons",
+      "prompt": "dramatic nighttime view of the University of Miami Coral Gables campus entrance with police lights reflecting on pavement, no people",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚨",
+      "📷",
+      "🏫"
+    ],
+    "logos": [
+      "miami.edu"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "UM student arrested after roommate finds hidden camera in bedroom",
+      "highlight": "hidden camera",
+      "body": "Police say a roommate found a hidden camera in a bedroom, leading to the arrest of a University of Miami student.",
+      "place": "South Miami",
+      "source": "WSVN",
+      "photo": {
+        "query": "South Miami residential street night Wikimedia Commons",
+        "prompt": "tense nighttime scene on a South Miami residential street with police lights reflecting on a house window, no people"
+      },
+      "emoji": "📷",
+      "chip": "BEDROOM",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "That follows a hidden camera found in a bedroom",
+      "highlight": "bedroom",
+      "body": "Police say the camera was found in the roommate’s bedroom.",
+      "place": "South Miami",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "South Miami residential street night Wikimedia Commons",
+        "prompt": "nighttime South Miami residential block with police lights reflecting off a home exterior, no identifiable people"
+      },
+      "emoji": "📷",
+      "chip": "CAMERA",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "And police say it happened at a South Miami home",
+      "highlight": "South Miami",
+      "body": "Police say the camera was set up at a South Miami home.",
+      "place": "South Miami",
+      "source": "local10.com",
+      "photo": {
+        "query": "South Miami Florida residential home exterior Wikimedia Commons",
+        "prompt": "close exterior view of a South Miami home at night with a lit bedroom window and police lights outside, no people"
+      },
+      "emoji": "🏠",
+      "chip": "SOUTH MIAMI",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Which puts a UM senior at the center",
+      "highlight": "UM senior",
+      "body": "The arrested student is a University of Miami senior accused of putting a camera in a roommate’s bedroom.",
+      "place": "Coral Gables",
+      "source": "The Miami Hurricane",
+      "photo": {
+        "query": "University of Miami campus walkway Coral Gables Wikimedia Commons",
+        "prompt": "empty University of Miami campus walkway in Coral Gables at dusk with emergency lights in the distance, no people"
+      },
+      "emoji": "🎓",
+      "chip": "SENIOR",
+      "logo": "miami.edu",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "For UM, this reaches a 20,104-student school",
+      "highlight": "20,104 students",
+      "body": "UM enrolled 20,104 students as of 2025, with its main campus in Coral Gables.",
+      "place": "Coral Gables",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "University of Miami Coral Gables campus lake Wikimedia Commons",
+        "prompt": "wide dramatic view of the University of Miami Coral Gables campus lake and buildings with no identifiable people"
+      },
+      "emoji": "🏫",
+      "chip": "20,104",
+      "logo": "miami.edu",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "So the case moves forward after bond",
+      "highlight": "$3,500 bond",
+      "body": "Dylan Long was freed on $3,500 bond in the roommate hidden camera case.",
+      "place": "Miami-Dade County",
+      "source": "hoodline.com",
+      "photo": {
+        "query": "Miami-Dade criminal courthouse exterior Wikimedia Commons",
+        "prompt": "moody exterior of a Miami-Dade criminal courthouse with empty steps and police lights in the street, no people"
+      },
+      "emoji": "📄",
+      "chip": "SEP 30",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Police say a University of Miami student was arrested after a roommate found a hidden camera in a bedroom at a South Miami home. Dylan Long was freed on $3,500 bond.\n\nWhat should colleges do when an off-campus privacy case involves students?",
+  "hashtags": [
+    "#UniversityOfMiami",
+    "#SouthMiami"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say a University of Miami student was arrested after a roommate found a hidden camera in a bedroom at a South Miami home. Dylan Long was freed on $3,500 bond.\n\nWhat should colleges do when an off-campus privacy case involves students?\n\n📰 Sources: WSVN, NBC 6 South Florida, local10.com, The Miami Hurricane, Wikipedia, hoodline.com\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#UniversityOfMiami #SouthMiami #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-09-30",
+  "id": "2026-09-30-news-18"
+}
