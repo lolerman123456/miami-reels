@@ -1,132 +1,136 @@
 {
   "sector": "EVENTS",
   "cover": {
-    "top": "SOUTH FLORIDA",
-    "main": "HAS",
-    "highlight": "6 PLANS",
-    "bottom": "THROUGH OCT. 4",
+    "top": "THIS WEEK",
+    "main": "A 20-FOOT",
+    "highlight": "RED DOG",
+    "bottom": "HITS FORT LAUDERDALE",
     "blur": false,
     "photo": {
-      "query": "Miami Beach concert crowd night",
-      "prompt": "A South Florida night crowd under stage lights with palm trees and a city skyline in the background"
+      "query": "Clifford the Big Red Dog musical stage",
+      "prompt": "A theater stage with a giant red dog character under bright spotlights, with families seated in the audience"
     },
     "emojis": [
-      "🎤",
       "🎭",
-      "🌸"
+      "🐾",
+      "🎟️"
     ],
-    "logos": [],
-    "photoFile": "photo-cover.jpg",
-    "credit": "Photo: PinkBeachPlanet / CC BY-SA 4.0",
+    "logos": [
+      "parkerplayhouse.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
     "logoFiles": []
   },
   "slides": [
     {
       "tag": "EVENTS",
-      "headline": "SILVANA ESTRADA IN MIAMI BEACH",
-      "highlight": "MIAMI BEACH",
-      "body": "Silvana Estrada has a Miami Beach performance listed, but the provided text does not give the event date, time, venue or price.",
-      "place": "Miami Beach",
-      "source": "Artburst Miami",
+      "headline": "HOUSE OF HORROR AT TROPICAL PARK",
+      "highlight": "HOUSE OF HORROR",
+      "body": "Open this week at Tropical Park, 7900 SW 40th St. Hours are 6 to 11 p.m. Sunday to Thursday and 6 p.m. to midnight Friday and Saturday.",
+      "place": "Miami",
+      "source": "Miami New Times",
       "photo": {
-        "query": "Silvana Estrada singer",
-        "prompt": "Mexican singer Silvana Estrada performing on a dark stage with a guitar and one spotlight"
+        "query": "Tropical Park Miami haunted carnival night",
+        "prompt": "A haunted carnival at night in Miami with glowing rides, fog, scare-zone lighting and people walking past ticket booths"
       },
-      "emoji": "🎤",
-      "chip": "CHECK DETAILS",
+      "emoji": "🎃",
+      "chip": "6 PM",
+      "logo": "houseofhorrorcarnival.com",
       "photoFile": "photo-1.png",
-      "credit": "AI illustration"
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
     },
     {
       "tag": "EVENTS",
-      "headline": "WHO KILLED JOAN CRAWFORD?",
-      "highlight": "JOAN CRAWFORD",
-      "body": "Island City Stage presents Michael Leeds’ Who Killed Joan Crawford?, but the provided text does not give the exact date, time or ticket price.",
-      "place": "Wilton Manors",
-      "source": "The Palm Beach Post",
+      "headline": "TAQUIZA RETURNS IN LITTLE RIVER",
+      "highlight": "TAQUIZA RETURNS",
+      "body": "Open now inside its Little River commissary and tortilla factory, with tacos on stone-ground yellow corn tortillas and totopos made with heirloom blue corn.",
+      "place": "Little River",
+      "source": "Eater Miami",
       "photo": {
-        "query": "Island City Stage Wilton Manors theater",
-        "prompt": "A small South Florida theater marquee at night with red curtains and stage lighting inside"
+        "query": "Taquiza Miami tacos blue corn totopos",
+        "prompt": "Fresh tacos on yellow corn tortillas beside blue corn totopos on a casual Miami counter"
       },
-      "emoji": "🎭",
-      "chip": "CHECK DETAILS",
+      "emoji": "🌮",
+      "chip": "OPEN NOW",
       "photoFile": "photo-2.png",
       "credit": "AI illustration"
     },
     {
       "tag": "EVENTS",
-      "headline": "THE POPPY PROJECT AT GALLERIA FORT LAUDERDALE",
-      "highlight": "POPPY PROJECT",
-      "body": "The Poppy Project Pop-Up Living Garden is listed for Galleria Fort Lauderdale, but the provided text does not give dates, hours or price.",
-      "place": "Fort Lauderdale",
-      "source": "The Palm Beach Post",
+      "headline": "EMELINA’S 16-SEAT CUBAN OMAKASE",
+      "highlight": "16-SEAT CUBAN",
+      "body": "Open now at 424 Park Place, Unit 101. The 16-seat restaurant serves a 10-course Cuban tasting menu for $275.",
+      "place": "West Palm Beach",
+      "source": "Eater Miami",
       "photo": {
-        "query": "Galleria Fort Lauderdale mall",
-        "prompt": "An indoor garden pop-up with red poppies inside a bright Fort Lauderdale shopping mall"
-      },
-      "emoji": "🌺",
-      "chip": "CHECK DETAILS",
-      "photoFile": "photo-3.jpg",
-      "credit": "Photo: Rob Olivera / CC BY 2.0"
-    },
-    {
-      "tag": "EVENTS",
-      "headline": "PELOTON FACES OF FITNESS MIAMI",
-      "highlight": "FITNESS MIAMI",
-      "body": "Peloton is giving away Faces of Fitness Miami passes for weekend classes with Tunde, Camila, Rad and Johanna.",
-      "place": "Miami",
-      "source": "pelobuddy.com",
-      "photo": {
-        "query": "Peloton bike fitness class",
-        "prompt": "An indoor cycling class with red and blue lights and rows of bikes facing an instructor"
-      },
-      "emoji": "🚴",
-      "chip": "GIVEAWAY",
-      "logo": "onepeloton.com",
-      "photoFile": "photo-4.png",
-      "credit": "AI illustration",
-      "logoFile": "logo-4.png"
-    },
-    {
-      "tag": "EVENTS",
-      "headline": "LIVING IN HARMONY LUNCHEON",
-      "highlight": "HARMONY LUNCHEON",
-      "body": "Living in Harmony Luncheon is listed in Palm Beach, but the provided text does not give the exact date, time, venue or price.",
-      "place": "Palm Beach",
-      "source": "The Palm Beach Post",
-      "photo": {
-        "query": "Palm Beach Florida luncheon ballroom",
-        "prompt": "A Palm Beach luncheon setup with white tablecloths, floral centerpieces and coastal light"
+        "query": "West Palm Beach fine dining tasting menu seafood",
+        "prompt": "An intimate 16-seat tasting counter with Cuban-inspired seafood plates and warm restaurant lighting"
       },
       "emoji": "🍽️",
-      "chip": "CHECK DETAILS",
-      "photoFile": "photo-5.jpg",
-      "credit": "Photo: Gage Skidmore from Peoria, AZ, United St / CC BY-SA 2.0"
+      "chip": "$275",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
     },
     {
       "tag": "EVENTS",
-      "headline": "PALM BEACH ROUNDUP: OCT. 2 TO 4",
-      "highlight": "OCT. 2",
-      "body": "Palm Beach Roundup covers events happening Oct. 2 to 4, but the provided text does not include individual event times, venues or prices.",
-      "place": "Palm Beach County",
-      "source": "bocaratontribune.com",
+      "headline": "SLIM’S STEAKHOUSE AT BAL HARBOUR SHOPS",
+      "highlight": "SLIM’S STEAKHOUSE",
+      "body": "Open now at 9700 Collins Ave. The steakhouse serves classic sides, a midday menu and pink Champagne cake.",
+      "place": "Bal Harbour",
+      "source": "Eater Miami",
       "photo": {
-        "query": "Boca Raton Mizner Park amphitheater night",
-        "prompt": "A Palm Beach County outdoor plaza at dusk with music, lights and people walking"
+        "query": "Bal Harbour Shops steakhouse interior leather banquettes",
+        "prompt": "A steakhouse dining room with leather banquettes, martinis, steak plates and 1930s Hollywood-style lighting"
       },
-      "emoji": "📍",
-      "chip": "OCT. 2 TO 4",
-      "photoFile": "photo-6.png",
+      "emoji": "🥩",
+      "chip": "OPEN NOW",
+      "photoFile": "photo-4.png",
       "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "EZIO’S IN MIAMI BEACH",
+      "highlight": "EZIO’S",
+      "body": "Open now at 580 72nd St. The Italian steakhouse serves dry-aged steaks, pastas, classic cocktails and mocktails.",
+      "place": "Miami Beach",
+      "source": "Eater Miami",
+      "photo": {
+        "query": "Miami Beach Italian steakhouse pasta ribeye",
+        "prompt": "A Miami Beach Italian steakhouse table with dry-aged ribeye, spaghettini with clams and low cocktail-bar lighting"
+      },
+      "emoji": "🍝",
+      "chip": "OPEN NOW",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "CLIFFORD THE BIG RED DOG: THE MUSICAL",
+      "highlight": "BIG RED DOG",
+      "body": "Sunday, Oct. 4 at 1 p.m. at The Parker, 201 SW Fifth Ave. Tickets cost $23.60, and the show features a 20-foot-tall red pup.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Clifford the Big Red Dog musical stage",
+        "prompt": "A bright children’s theater production with a 20-foot red dog character on stage at a performing arts venue"
+      },
+      "emoji": "🐶",
+      "chip": "OCT 4",
+      "logo": "parkerplayhouse.com",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": null
     }
   ],
-  "caption": "Six South Florida listings on the calendar through Oct. 4. Confirm dates, times and prices before heading out.\nWho are you taking? Tag a friend.",
+  "caption": "This week’s picks include a haunted carnival, Clifford on stage and new restaurants to try around South Florida.\nWho are you taking? Tag a friend.",
   "hashtags": [
     "#SouthFloridaEvents",
     "#MiamiEvents"
   ],
   "collaborators": [],
-  "igCaption": "Six South Florida listings on the calendar through Oct. 4. Confirm dates, times and prices before heading out.\nWho are you taking? Tag a friend.\n\n📰 Sources: Artburst Miami, The Palm Beach Post, pelobuddy.com, bocaratontribune.com\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "igCaption": "This week’s picks include a haunted carnival, Clifford on stage and new restaurants to try around South Florida.\nWho are you taking? Tag a friend.\n\n📰 Sources: Miami New Times, Eater Miami\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
   "kind": "upcoming",
   "kicker": "THIS WEEK IN MIAMI 🎟️",
   "date": "2026-09-30",
