@@ -1,0 +1,134 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SOUTH FLORIDA",
+    "main": "HAS",
+    "highlight": "6 PLANS",
+    "bottom": "THROUGH OCT. 4",
+    "blur": false,
+    "photo": {
+      "query": "Miami Beach concert crowd night",
+      "prompt": "A South Florida night crowd under stage lights with palm trees and a city skyline in the background"
+    },
+    "emojis": [
+      "🎤",
+      "🎭",
+      "🌸"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: PinkBeachPlanet / CC BY-SA 4.0",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "SILVANA ESTRADA IN MIAMI BEACH",
+      "highlight": "MIAMI BEACH",
+      "body": "Silvana Estrada has a Miami Beach performance listed, but the provided text does not give the event date, time, venue or price.",
+      "place": "Miami Beach",
+      "source": "Artburst Miami",
+      "photo": {
+        "query": "Silvana Estrada singer",
+        "prompt": "Mexican singer Silvana Estrada performing on a dark stage with a guitar and one spotlight"
+      },
+      "emoji": "🎤",
+      "chip": "CHECK DETAILS",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "WHO KILLED JOAN CRAWFORD?",
+      "highlight": "JOAN CRAWFORD",
+      "body": "Island City Stage presents Michael Leeds’ Who Killed Joan Crawford?, but the provided text does not give the exact date, time or ticket price.",
+      "place": "Wilton Manors",
+      "source": "The Palm Beach Post",
+      "photo": {
+        "query": "Island City Stage Wilton Manors theater",
+        "prompt": "A small South Florida theater marquee at night with red curtains and stage lighting inside"
+      },
+      "emoji": "🎭",
+      "chip": "CHECK DETAILS",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "THE POPPY PROJECT AT GALLERIA FORT LAUDERDALE",
+      "highlight": "POPPY PROJECT",
+      "body": "The Poppy Project Pop-Up Living Garden is listed for Galleria Fort Lauderdale, but the provided text does not give dates, hours or price.",
+      "place": "Fort Lauderdale",
+      "source": "The Palm Beach Post",
+      "photo": {
+        "query": "Galleria Fort Lauderdale mall",
+        "prompt": "An indoor garden pop-up with red poppies inside a bright Fort Lauderdale shopping mall"
+      },
+      "emoji": "🌺",
+      "chip": "CHECK DETAILS",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Rob Olivera / CC BY 2.0"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "PELOTON FACES OF FITNESS MIAMI",
+      "highlight": "FITNESS MIAMI",
+      "body": "Peloton is giving away Faces of Fitness Miami passes for weekend classes with Tunde, Camila, Rad and Johanna.",
+      "place": "Miami",
+      "source": "pelobuddy.com",
+      "photo": {
+        "query": "Peloton bike fitness class",
+        "prompt": "An indoor cycling class with red and blue lights and rows of bikes facing an instructor"
+      },
+      "emoji": "🚴",
+      "chip": "GIVEAWAY",
+      "logo": "onepeloton.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "LIVING IN HARMONY LUNCHEON",
+      "highlight": "HARMONY LUNCHEON",
+      "body": "Living in Harmony Luncheon is listed in Palm Beach, but the provided text does not give the exact date, time, venue or price.",
+      "place": "Palm Beach",
+      "source": "The Palm Beach Post",
+      "photo": {
+        "query": "Palm Beach Florida luncheon ballroom",
+        "prompt": "A Palm Beach luncheon setup with white tablecloths, floral centerpieces and coastal light"
+      },
+      "emoji": "🍽️",
+      "chip": "CHECK DETAILS",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Gage Skidmore from Peoria, AZ, United St / CC BY-SA 2.0"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "PALM BEACH ROUNDUP: OCT. 2 TO 4",
+      "highlight": "OCT. 2",
+      "body": "Palm Beach Roundup covers events happening Oct. 2 to 4, but the provided text does not include individual event times, venues or prices.",
+      "place": "Palm Beach County",
+      "source": "bocaratontribune.com",
+      "photo": {
+        "query": "Boca Raton Mizner Park amphitheater night",
+        "prompt": "A Palm Beach County outdoor plaza at dusk with music, lights and people walking"
+      },
+      "emoji": "📍",
+      "chip": "OCT. 2 TO 4",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Six South Florida listings on the calendar through Oct. 4. Confirm dates, times and prices before heading out.\nWho are you taking? Tag a friend.",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "Six South Florida listings on the calendar through Oct. 4. Confirm dates, times and prices before heading out.\nWho are you taking? Tag a friend.\n\n📰 Sources: Artburst Miami, The Palm Beach Post, pelobuddy.com, bocaratontribune.com\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN MIAMI 🎟️",
+  "date": "2026-09-30",
+  "id": "2026-09-30-upcoming"
+}
