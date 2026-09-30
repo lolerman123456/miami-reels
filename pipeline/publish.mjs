@@ -183,11 +183,21 @@ async function finish(api, igUser, token, creationId, label) {
   return info.permalink || pub.id;
 }
 
+// Instagram sometimes can't download one file from the temporary tunnel link ("Media download has failed", 2207052 /
+// 9004): retry a few times before failing the whole post (Sep 30: one slide out of 8 sank the 12pm carousel).
 async function call(url, params) {
-  const res = await fetch(url, { method: 'POST', body: new URLSearchParams(params) });
-  const json = await res.json();
-  if (!res.ok || json.error) throw new Error(`${url.split('?')[0]} → ${JSON.stringify(json.error || json)}`);
-  return json;
+  for (let attempt = 1; ; attempt++) {
+    const res = await fetch(url, { method: 'POST', body: new URLSearchParams(params) });
+    const json = await res.json();
+    if (res.ok && !json.error) return json;
+    const err = json.error || json;
+    if (attempt < 4 && (err.error_subcode === 2207052 || err.code === 9004 || err.is_transient)) {
+      console.log(`  (Instagram couldn't fetch the media, retry ${attempt}/3)`);
+      await new Promise(r => setTimeout(r, attempt * 10000));
+      continue;
+    }
+    throw new Error(`${url.split('?')[0]} → ${JSON.stringify(err)}`);
+  }
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
