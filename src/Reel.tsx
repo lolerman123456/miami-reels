@@ -18,7 +18,8 @@ export type Scene = {
   note?: string | null;
   badge?: string | null;
   image?: { file: string; path: { x: number; y: number; zoom: number; at?: number }[] | null; label: string } | null; // AI render instead of the map
-  photos?: { files: { file: string; credit: string }[]; at: number } | null; // real photos after the 3D orbit
+  photos?: { files: { file: string; credit: string }[]; at: number; style?: string | null } | null; // real photos after the 3D orbit ('fast' = TikTok punch cuts)
+  reveal?: { at: number; text: string; label?: string | null } | null; // guess-it game: countdown, then the answer pops
   stats?: { value: string; label: string }[] | null; // big numbers that count up while the narrator says them
   source?: string | null; // where the facts come from, shown small
   hit?: string | null;
@@ -119,7 +120,8 @@ const SceneView: React.FC<{ scene: Scene; index: number }> = ({ scene, index }) 
 // crossfades between them and between the map and the first photo. Calm motion only (no tilt/bounce), credit shown small.
 const PhotoReel: React.FC<{ scene: Scene }> = ({ scene }) => {
   const frame = useCurrentFrame();
-  const { files, at } = scene.photos!;
+  const { files, at, style } = scene.photos!;
+  if (style === 'fast') return <FastPhotos scene={scene} />;
   const start = Math.round(scene.duration * at), X = 10;
   const each = Math.max(24, (scene.duration - start) / files.length);
   const DRIFT = [[-3, -2], [3, -1.5], [-2, 2], [2.5, 2]];
@@ -145,6 +147,69 @@ const PhotoReel: React.FC<{ scene: Scene }> = ({ scene }) => {
         );
       })}
     </AbsoluteFill>
+  );
+};
+
+// TikTok style: hard cuts between photos, each one punches in (quick zoom) with a white flash, then keeps drifting.
+const FastPhotos: React.FC<{ scene: Scene }> = ({ scene }) => {
+  const frame = useCurrentFrame();
+  const { files, at } = scene.photos!;
+  const start = Math.round(scene.duration * at);
+  const each = Math.max(18, (scene.duration - start) / files.length);
+  const k = Math.min(files.length - 1, Math.floor(Math.max(0, frame - start) / each));
+  if (frame < start) return null;
+  const t = frame - start - k * each;
+  const punch = interpolate(t, [0, 8], [1.32, 1.08], { extrapolateRight: 'clamp', easing: x => 1 - Math.pow(1 - x, 3) });
+  const drift = interpolate(t, [8, each], [0, 0.06], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  const flash = interpolate(t, [0, 5], [0.55, 0], { extrapolateRight: 'clamp' });
+  const dir = k % 2 ? 1 : -1;
+  const p = files[k];
+  return (
+    <AbsoluteFill style={{ background: '#000', overflow: 'hidden' }}>
+      <Img src={staticFile(p.file)} style={{
+        width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.25) contrast(1.08) brightness(1.05)',
+        transform: `scale(${punch + drift}) translate(${dir * drift * 30}%, 0)`,
+      }} />
+      <AbsoluteFill style={{ background: '#fff', opacity: flash }} />
+      <div style={{ position: 'absolute', top: 1080, right: 40, background: 'rgba(8,10,16,.55)', padding: '5px 12px', borderRadius: 8, maxWidth: 520 }}>
+        <span style={{ fontFamily: FONT, fontWeight: 700, fontSize: 18, color: '#fff' }}>Photo: {p.credit}</span>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+// Guess-it game: "GUESS 🤔", then 3·2·1 in the last 1.5 s, then the answer slams in with a flash.
+const Reveal: React.FC<{ scene: Scene }> = ({ scene }) => {
+  const frame = useCurrentFrame();
+  const r = scene.reveal!;
+  const at = Math.round(scene.duration * r.at);
+  const before = at - frame;
+  if (before > 0) {
+    const n = Math.ceil(before / 15);
+    const counting = n <= 3;
+    const pulse = counting ? interpolate((before - 1) % 15, [8, 14], [1, 1.35], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }) : 1;
+    return (
+      <div style={{ position: 'absolute', top: 700, left: 0, right: 0, display: 'flex', justifyContent: 'center', opacity: ease(frame, 4, 8) }}>
+        <div style={{ background: counting ? BLUE : GLASS, borderRadius: 999, padding: counting ? '10px 64px' : '16px 40px', boxShadow: SHADOW, transform: `scale(${pulse})` }}>
+          <span style={{ fontFamily: FONT, fontWeight: 900, fontSize: counting ? 150 : 64, color: '#fff' }}>{counting ? n : 'GUESS 🤔'}</span>
+        </div>
+      </div>
+    );
+  }
+  const e = ease(frame, at, 6);
+  const flash = interpolate(frame - at, [0, 6], [0.7, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  return (
+    <>
+      <AbsoluteFill style={{ background: '#fff', opacity: flash }} />
+      <div style={{ position: 'absolute', top: 660, left: 40, right: 40, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
+        <div style={{ background: BLUE, borderRadius: 24, padding: '14px 44px', boxShadow: SHADOW, transform: `scale(${1.3 - 0.3 * e})`, opacity: e }}>
+          <span style={{ fontFamily: FONT, fontWeight: 900, fontSize: fitSize(r.text, 150, 960), color: '#fff', whiteSpace: 'nowrap' }}>{r.text}</span>
+        </div>
+        {r.label && <div style={{ background: GLASS, borderRadius: 12, padding: '8px 22px', opacity: e }}>
+          <span style={{ fontFamily: FONT, fontWeight: 800, fontSize: 36, color: '#fff' }}>{r.label}</span>
+        </div>}
+      </div>
+    </>
   );
 };
 
@@ -247,6 +312,7 @@ const Item: React.FC<{ scene: Scene }> = ({ scene }) => {
       {scene.stats && scene.stats.length > 0 && <Stats scene={scene} />}
       {scene.source && <SourceTag text={scene.source} />}
       {scene.alert && <AlertBanner text={scene.alert} at={ALERT_AT} />}
+      {scene.reveal && <Reveal scene={scene} />}
     </AbsoluteFill>
   );
 };

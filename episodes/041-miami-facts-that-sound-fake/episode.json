@@ -1,0 +1,276 @@
+{
+  "title": "Miami facts that sound fake",
+  "id": "041-miami-facts-that-sound-fake",
+  "sources": [
+    "Wikipedia"
+  ],
+  "collaborators": [],
+  "format": "GUIDE",
+  "music": true,
+  "tiktok": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "igCaption": "Miami facts that sound fake… but every one is real 🤯\n\nFounded by a woman, gators AND crocs, a one-man coral castle, houses in the middle of the bay, a pool in a quarry, a park that's 95% water.\n\nWhich one did you not know? 👇\n\n#Miami #MiamiFacts #SouthFlorida #Florida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "These Miami facts sound fake. But every single one is real. Number four is crazy.",
+      "caption": "These Miami facts sound fake. But every single one is real. Number four is crazy.",
+      "overlay": [
+        "FAKE OR REAL?",
+        "MIAMI EDITION 🤯"
+      ],
+      "location": {
+        "name": "Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 10
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Miami skyline",
+          "Miami Beach aerial"
+        ],
+        "at": 0,
+        "style": "fast"
+      },
+      "emojis": [
+        "🤯",
+        "🐊",
+        "🏝️",
+        "🏰"
+      ]
+    },
+    {
+      "kind": "item",
+      "text": "Miami is the only major American city founded by a woman. Her name was Julia Tuttle. She convinced Henry Flagler to bring his railroad south.",
+      "caption": "Miami is the only major American city founded by a woman. Her name was Julia Tuttle. She convinced Henry Flagler to bring his railroad south.",
+      "overlay": "FOUNDED BY A WOMAN",
+      "location": {
+        "name": "Bayfront Park",
+        "lat": 25.7753,
+        "lon": -80.1861,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Julia Tuttle statue Miami",
+          "Miami River downtown Miami"
+        ],
+        "at": 0,
+        "style": "fast"
+      },
+      "badge": "FACT #1",
+      "sub": null,
+      "emoji": "🤯",
+      "source": "Wikipedia"
+    },
+    {
+      "kind": "item",
+      "text": "South Florida is the only place on Earth where alligators and crocodiles live side by side. Both live in the Everglades.",
+      "caption": "South Florida is the only place on Earth where alligators and crocodiles live side by side. Both live in the Everglades.",
+      "overlay": "GATORS AND CROCS",
+      "location": {
+        "name": "Flamingo, Everglades",
+        "lat": 25.1413,
+        "lon": -80.9235,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "American crocodile Everglades",
+          "American alligator Everglades"
+        ],
+        "at": 0,
+        "style": "fast"
+      },
+      "badge": "FACT #2",
+      "sub": null,
+      "emoji": "🤯",
+      "source": "Wikipedia"
+    },
+    {
+      "kind": "item",
+      "text": "One man built Coral Castle by himself. Edward Leedskalnin carved more than a thousand tons of coral rock. He worked at night, and never let anyone watch.",
+      "caption": "One man built Coral Castle by himself. Edward Leedskalnin carved more than a thousand tons of coral rock. He worked at night, and never let anyone watch.",
+      "overlay": "CORAL CASTLE",
+      "location": {
+        "name": "Coral Castle",
+        "lat": 25.5003,
+        "lon": -80.4442,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Coral Castle Homestead",
+          "Coral Castle Florida"
+        ],
+        "at": 0,
+        "style": "fast"
+      },
+      "badge": "FACT #3",
+      "sub": null,
+      "emoji": "🤯",
+      "source": "Wikipedia"
+    },
+    {
+      "kind": "item",
+      "text": "There are houses standing on stilts in the middle of Biscayne Bay. It's called Stiltsville. Seven of them are still standing today.",
+      "caption": "There are houses standing on stilts in the middle of Biscayne Bay. It's called Stiltsville. Seven of them are still standing today.",
+      "overlay": "HOUSES IN THE OCEAN",
+      "location": {
+        "name": "Stiltsville",
+        "lat": 25.6522,
+        "lon": -80.1756,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Stiltsville Biscayne Bay",
+          "Stiltsville Florida"
+        ],
+        "at": 0,
+        "style": "fast"
+      },
+      "badge": "FACT #4",
+      "sub": null,
+      "emoji": "🤯",
+      "source": "Wikipedia"
+    },
+    {
+      "kind": "item",
+      "text": "The Venetian Pool in Coral Gables was built inside an old coral rock quarry. It's filled with fresh water from an underground aquifer.",
+      "caption": "The Venetian Pool in Coral Gables was built inside an old coral rock quarry. It's filled with fresh water from an underground aquifer.",
+      "overlay": "A POOL IN A QUARRY",
+      "location": {
+        "name": "Venetian Pool",
+        "lat": 25.74611,
+        "lon": -80.27417,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Venetian Pool Coral Gables",
+          "Venetian Pool grotto"
+        ],
+        "at": 0,
+        "style": "fast"
+      },
+      "badge": "FACT #5",
+      "sub": null,
+      "emoji": "🤯",
+      "source": "Wikipedia"
+    },
+    {
+      "kind": "item",
+      "text": "Biscayne National Park is about ninety-five percent water. Most of the park is underwater.",
+      "caption": "Biscayne National Park is about 95% water. Most of the park is underwater.",
+      "overlay": "95% WATER",
+      "location": {
+        "name": "Biscayne National Park",
+        "lat": 25.4824,
+        "lon": -80.2083,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Biscayne National Park",
+          "Boca Chita Key lighthouse"
+        ],
+        "at": 0,
+        "style": "fast"
+      },
+      "badge": "FACT #6",
+      "sub": null,
+      "emoji": "🤯",
+      "source": "Wikipedia"
+    },
+    {
+      "kind": "outro",
+      "text": "Which one did you not know? Comment the number. Follow for more Miami. And to see who you crossed paths with around Miami, there's NEAR.",
+      "caption": "Which one did you not know? Comment the number. Follow for more Miami. And to see who you crossed paths with around Miami, there's NEAR.",
+      "overlay": "WHICH ONE? 👇",
+      "location": {
+        "name": "Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 10
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Miami skyline night",
+          "Miami skyline"
+        ],
+        "at": 0,
+        "style": "fast"
+      },
+      "sub": "Follow for more Miami"
+    }
+  ]
+}

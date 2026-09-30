@@ -1,0 +1,269 @@
+{
+  "title": "Guess the rent in Miami",
+  "id": "040-miami-guess-the-rent",
+  "sources": [
+    "Zillow Observed Rent Index, Aug 2026"
+  ],
+  "collaborators": [],
+  "format": "GUIDE",
+  "music": true,
+  "tiktok": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "igCaption": "Guess the rent in these Miami neighborhoods 🏠 The last one is insane.\n\nHialeah, South Beach, Brickell, Coconut Grove, Key Biscayne. Typical rents from Zillow (Aug 2026).\n\nHow many did you get right? Comment your score 👇\n\n#Miami #MiamiRent #MiamiApartments #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Guess the rent in these Miami neighborhoods. Keep count of how many you get right. The last one is insane.",
+      "caption": "Guess the rent in these Miami neighborhoods. Keep count of how many you get right. The last one is insane.",
+      "overlay": [
+        "GUESS THE RENT",
+        "MIAMI EDITION 🏠"
+      ],
+      "location": {
+        "name": "Brickell",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 10
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Brickell Miami skyline night",
+          "Miami skyline"
+        ],
+        "at": 0,
+        "style": "fast"
+      },
+      "emojis": [
+        "🏠",
+        "💸",
+        "🌴",
+        "😳"
+      ]
+    },
+    {
+      "kind": "item",
+      "text": "First up, Hialeah. One of the biggest cities in Miami-Dade. What's the typical rent here? Lock in your guess. Three. Two. One. About twenty-two hundred dollars a month.",
+      "caption": "First up, Hialeah. One of the biggest cities in Miami-Dade. What's the typical rent here? Lock in your guess. 3. 2. 1. About $2,200 a month.",
+      "overlay": "HIALEAH",
+      "location": {
+        "name": "Hialeah",
+        "lat": 25.8576,
+        "lon": -80.2781,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Hialeah Florida",
+          "Hialeah Park Race Track"
+        ],
+        "at": 0,
+        "style": "fast"
+      },
+      "badge": null,
+      "sub": "Typical rent",
+      "emoji": "🏠",
+      "source": "Zillow",
+      "reveal": {
+        "at": 0.7,
+        "text": "$2,201",
+        "label": "per month · Zillow"
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Next, South Beach. Ocean Drive, the beach, the nightlife. Guess the rent. Three. Two. One. Around twenty-eight hundred and thirty-five a month.",
+      "caption": "Next, South Beach. Ocean Drive, the beach, the nightlife. Guess the rent. 3. 2. 1. Around $2,835 a month.",
+      "overlay": "SOUTH BEACH",
+      "location": {
+        "name": "South Beach",
+        "lat": 25.7826,
+        "lon": -80.1341,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Ocean Drive Miami Beach",
+          "South Beach Miami lifeguard tower"
+        ],
+        "at": 0,
+        "style": "fast"
+      },
+      "badge": null,
+      "sub": "Typical rent",
+      "emoji": "🏠",
+      "source": "Zillow",
+      "reveal": {
+        "at": 0.7,
+        "text": "$2,835",
+        "label": "per month · Zillow"
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Now Brickell. The skyline, the towers, the rooftop bars. Your guess? Three. Two. One. Thirty-eight hundred and thirty-one dollars a month.",
+      "caption": "Now Brickell. The skyline, the towers, the rooftop bars. Your guess? 3. 2. 1. $3,831 a month.",
+      "overlay": "BRICKELL",
+      "location": {
+        "name": "Brickell",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Brickell Miami skyline",
+          "Brickell City Centre"
+        ],
+        "at": 0,
+        "style": "fast"
+      },
+      "badge": null,
+      "sub": "Typical rent",
+      "emoji": "🏠",
+      "source": "Zillow",
+      "reveal": {
+        "at": 0.7,
+        "text": "$3,831",
+        "label": "per month · Zillow"
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Coconut Grove. Big old trees, bayfront parks, sailboats, CocoWalk. Guess. Three. Two. One. Thirty-six hundred and twenty-one a month.",
+      "caption": "Coconut Grove. Big old trees, bayfront parks, sailboats, CocoWalk. Guess. 3. 2. 1. $3,621 a month.",
+      "overlay": "COCONUT GROVE",
+      "location": {
+        "name": "Coconut Grove",
+        "lat": 25.727,
+        "lon": -80.2414,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Coconut Grove Miami",
+          "Peacock Park Coconut Grove"
+        ],
+        "at": 0,
+        "style": "fast"
+      },
+      "badge": null,
+      "sub": "Typical rent",
+      "emoji": "🏠",
+      "source": "Zillow",
+      "reveal": {
+        "at": 0.7,
+        "text": "$3,621",
+        "label": "per month · Zillow"
+      }
+    },
+    {
+      "kind": "item",
+      "text": "And the last one. Key Biscayne. A small island, right across the causeway. Guess. Three. Two. One. Seven thousand, one hundred sixty-two dollars a month. For the typical rental.",
+      "caption": "And the last one. Key Biscayne. A small island, right across the causeway. Guess. 3. 2. 1. $7,162 a month. For the typical rental.",
+      "overlay": "KEY BISCAYNE",
+      "location": {
+        "name": "Key Biscayne",
+        "lat": 25.6937,
+        "lon": -80.1628,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Key Biscayne Florida beach",
+          "Cape Florida Lighthouse"
+        ],
+        "at": 0,
+        "style": "fast"
+      },
+      "badge": null,
+      "sub": "Typical rent",
+      "emoji": "🏠",
+      "source": "Zillow",
+      "reveal": {
+        "at": 0.66,
+        "text": "$7,162",
+        "label": "per month · Zillow"
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "How many did you get right? Comment your score. These are Zillow's typical rents from August. And to see who you crossed paths with around Miami, there's NEAR.",
+      "caption": "How many did you get right? Comment your score. These are Zillow's typical rents from August. And to see who you crossed paths with around Miami, there's NEAR.",
+      "overlay": "COMMENT YOUR SCORE 👇",
+      "location": {
+        "name": "Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 10
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 90,
+        "degrees": 40,
+        "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Miami Beach aerial",
+          "Miami skyline"
+        ],
+        "at": 0,
+        "style": "fast"
+      },
+      "sub": "Follow for more Miami"
+    }
+  ]
+}
