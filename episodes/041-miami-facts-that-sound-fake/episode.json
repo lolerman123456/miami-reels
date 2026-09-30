@@ -42,7 +42,13 @@
           "Miami Beach aerial"
         ],
         "at": 0,
-        "style": "fast"
+        "style": "fast",
+        "files": [
+          {
+            "file": "photos/scene-0-0.jpg",
+            "credit": "Matthew T Rader / CC BY-SA 4.0"
+          }
+        ]
       },
       "emojis": [
         "🤯",
@@ -76,7 +82,17 @@
           "Miami River downtown Miami"
         ],
         "at": 0,
-        "style": "fast"
+        "style": "fast",
+        "files": [
+          {
+            "file": "photos/scene-1-0.jpg",
+            "credit": "Juleskramer / CC BY-SA 4.0"
+          },
+          {
+            "file": "photos/scene-1-1.jpg",
+            "credit": "Phillip Pessar / CC BY 2.0"
+          }
+        ]
       },
       "badge": "FACT #1",
       "sub": null,
@@ -108,7 +124,17 @@
           "American alligator Everglades"
         ],
         "at": 0,
-        "style": "fast"
+        "style": "fast",
+        "files": [
+          {
+            "file": "photos/scene-2-0.jpg",
+            "credit": "Chaputjp / CC BY-SA 3.0"
+          },
+          {
+            "file": "photos/scene-2-1.jpg",
+            "credit": "Trish Hartmann from Tampa, Florida, USA / CC BY 2.0"
+          }
+        ]
       },
       "badge": "FACT #2",
       "sub": null,
@@ -140,7 +166,13 @@
           "Coral Castle Florida"
         ],
         "at": 0,
-        "style": "fast"
+        "style": "fast",
+        "files": [
+          {
+            "file": "photos/scene-3-1.jpg",
+            "credit": "Christina Rutz / CC BY 2.0"
+          }
+        ]
       },
       "badge": "FACT #3",
       "sub": null,
@@ -172,7 +204,13 @@
           "Stiltsville Florida"
         ],
         "at": 0,
-        "style": "fast"
+        "style": "fast",
+        "files": [
+          {
+            "file": "photos/scene-4-1.jpg",
+            "credit": "Justdweezil / CC BY-SA 3.0"
+          }
+        ]
       },
       "badge": "FACT #4",
       "sub": null,
@@ -204,7 +242,13 @@
           "Venetian Pool grotto"
         ],
         "at": 0,
-        "style": "fast"
+        "style": "fast",
+        "files": [
+          {
+            "file": "photos/scene-5-0.jpg",
+            "credit": "Jesper Rautell Balle / CC BY 3.0"
+          }
+        ]
       },
       "badge": "FACT #5",
       "sub": null,
@@ -236,7 +280,17 @@
           "Boca Chita Key lighthouse"
         ],
         "at": 0,
-        "style": "fast"
+        "style": "fast",
+        "files": [
+          {
+            "file": "photos/scene-6-0.jpg",
+            "credit": "National Park Service / Public domain"
+          },
+          {
+            "file": "photos/scene-6-1.jpg",
+            "credit": "Judd Patterson, National Park Service / Public domain"
+          }
+        ]
       },
       "badge": "FACT #6",
       "sub": null,
@@ -268,7 +322,17 @@
           "Miami skyline"
         ],
         "at": 0,
-        "style": "fast"
+        "style": "fast",
+        "files": [
+          {
+            "file": "photos/scene-7-0.jpg",
+            "credit": "Dori / CC BY-SA 3.0"
+          },
+          {
+            "file": "photos/scene-7-1.jpg",
+            "credit": "Wilfredor / CC0"
+          }
+        ]
       },
       "sub": "Follow for more Miami"
     }
