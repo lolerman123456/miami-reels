@@ -42,17 +42,7 @@
           "Miami skyline"
         ],
         "at": 0,
-        "style": "fast",
-        "files": [
-          {
-            "file": "photos/scene-0-0.jpg",
-            "credit": "Gabriel Kaplan / CC BY 3.0"
-          },
-          {
-            "file": "photos/scene-0-1.jpg",
-            "credit": "Matthew T Rader / CC BY-SA 4.0"
-          }
-        ]
+        "style": "fast"
       },
       "emojis": [
         "🏠",
@@ -82,28 +72,18 @@
       },
       "photos": {
         "queries": [
-          "Hialeah Florida",
+          "Hialeah Park Race Track flamingos",
           "Hialeah Park Race Track"
         ],
         "at": 0,
-        "style": "fast",
-        "files": [
-          {
-            "file": "photos/scene-1-0.jpg",
-            "credit": "Phillip Pessar from Miami, USA / CC BY 2.0"
-          },
-          {
-            "file": "photos/scene-1-1.jpg",
-            "credit": "Phillip Pessar / CC BY 2.0"
-          }
-        ]
+        "style": "fast"
       },
       "badge": null,
       "sub": "Typical rent",
       "emoji": "🏠",
       "source": "Zillow",
       "reveal": {
-        "at": 0.7,
+        "at": 0.8,
         "text": "$2,201",
         "label": "per month · Zillow"
       }
@@ -133,24 +113,14 @@
           "South Beach Miami lifeguard tower"
         ],
         "at": 0,
-        "style": "fast",
-        "files": [
-          {
-            "file": "photos/scene-2-0.jpg",
-            "credit": "P. Hughes / CC BY 4.0"
-          },
-          {
-            "file": "photos/scene-2-1.jpg",
-            "credit": "Radomianin / CC BY-SA 4.0"
-          }
-        ]
+        "style": "fast"
       },
       "badge": null,
       "sub": "Typical rent",
       "emoji": "🏠",
       "source": "Zillow",
       "reveal": {
-        "at": 0.7,
+        "at": 0.8,
         "text": "$2,835",
         "label": "per month · Zillow"
       }
@@ -180,24 +150,14 @@
           "Brickell City Centre"
         ],
         "at": 0,
-        "style": "fast",
-        "files": [
-          {
-            "file": "photos/scene-3-0.jpg",
-            "credit": "Rhododendrites / CC BY-SA 4.0"
-          },
-          {
-            "file": "photos/scene-3-1.jpg",
-            "credit": "Phillip Pessar / CC BY 2.0"
-          }
-        ]
+        "style": "fast"
       },
       "badge": null,
       "sub": "Typical rent",
       "emoji": "🏠",
       "source": "Zillow",
       "reveal": {
-        "at": 0.7,
+        "at": 0.8,
         "text": "$3,831",
         "label": "per month · Zillow"
       }
@@ -223,24 +183,18 @@
       },
       "photos": {
         "queries": [
-          "Coconut Grove Miami",
+          "Coconut Grove Miami bayfront",
           "Peacock Park Coconut Grove"
         ],
         "at": 0,
-        "style": "fast",
-        "files": [
-          {
-            "file": "photos/scene-4-0.jpg",
-            "credit": "Larsen9236 / CC BY-SA 4.0"
-          }
-        ]
+        "style": "fast"
       },
       "badge": null,
       "sub": "Typical rent",
       "emoji": "🏠",
       "source": "Zillow",
       "reveal": {
-        "at": 0.7,
+        "at": 0.8,
         "text": "$3,621",
         "label": "per month · Zillow"
       }
@@ -270,24 +224,14 @@
           "Cape Florida Lighthouse"
         ],
         "at": 0,
-        "style": "fast",
-        "files": [
-          {
-            "file": "photos/scene-5-0.jpg",
-            "credit": "Giuseppe Milo / CC BY 3.0"
-          },
-          {
-            "file": "photos/scene-5-1.jpg",
-            "credit": "P. Hughes / CC BY-SA 4.0"
-          }
-        ]
+        "style": "fast"
       },
       "badge": null,
       "sub": "Typical rent",
       "emoji": "🏠",
       "source": "Zillow",
       "reveal": {
-        "at": 0.66,
+        "at": 0.74,
         "text": "$7,162",
         "label": "per month · Zillow"
       }
@@ -317,13 +261,7 @@
           "Miami skyline"
         ],
         "at": 0,
-        "style": "fast",
-        "files": [
-          {
-            "file": "photos/scene-6-1.jpg",
-            "credit": "Wilfredor / CC0"
-          }
-        ]
+        "style": "fast"
       },
       "sub": "Follow for more Miami"
     }
