@@ -103,7 +103,8 @@ export async function postToTikTok({ video, images, text = '', label, ai = false
     const post = await create({
       channelId, text: text.slice(0, 2200), needsApproval: false, assets,
       schedulingType: 'notification', mode: 'customScheduled', dueAt: new Date(Date.now() + 3 * 60e3).toISOString(),
-      metadata: { tiktok: { ...(images ? { title } : {}), isAiGenerated: !!ai } },
+      // TikTok photo posts can't carry the AI-content flag (Buffer rejects the whole post, Sep 30): only videos send it
+      metadata: { tiktok: images ? { title } : { isAiGenerated: !!ai } },
     });
     console.log(`✔ TikTok reminder set in Buffer (${video ? 'video' : `${assets.length}-photo slideshow`}) — ${post.id}`);
     log(`tiktok:${label}`, 'Buffer reminder (owner posts with music)');
@@ -128,7 +129,7 @@ export async function tiktokBatch(file) {
       const post = await create({
         channelId, text: it.text.slice(0, 2200), needsApproval: false, assets,
         schedulingType: 'notification', mode: 'customScheduled', dueAt,
-        metadata: { tiktok: { ...(it.images ? { title } : {}), isAiGenerated: false } },
+        metadata: { tiktok: it.images ? { title } : { isAiGenerated: false } },
       });
       console.log(`✔ ${it.label} → Buffer reminder due ${dueAt} (${post.id})`);
       log(`tiktok:${it.label}`, `Buffer reminder due ${dueAt}`);
