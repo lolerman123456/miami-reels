@@ -1,0 +1,116 @@
+{
+  "sector": "ECONOMY",
+  "cover": {
+    "top": "MCDONALD'S HAS",
+    "main": "$31 IN",
+    "highlight": "FREE FOOD",
+    "bottom": "FOR $2",
+    "blur": false,
+    "photo": {
+      "query": "McDonald's Halloween coupon book McDonald's restaurant counter",
+      "prompt": "A dramatic close-up of a McDonald's Halloween treat coupon booklet on a counter beside fries and a drink, bright restaurant lights, no people"
+    },
+    "emojis": [
+      "🍔",
+      "🎃",
+      "☕"
+    ],
+    "logos": [
+      "mcdonalds.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "DEALS",
+      "headline": "MCDONALD'S: $31 IN COUPONS FOR $2",
+      "highlight": "$31 IN",
+      "body": "Buy the McDonald's Halloween Treats Pack for $2 while supplies last. It includes 12 free food coupons valid through Dec. 31.",
+      "place": "all locations",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "McDonald's Halloween treat coupon book",
+        "prompt": "A sharp close-up of a McDonald's Halloween coupon book opened to food coupons, with a burger box and orange Halloween colors in the background",
+        "mark": "circle"
+      },
+      "color": "#FFC72C",
+      "emoji": "🍔",
+      "chip": "$2",
+      "logo": "mcdonalds.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "DEALS",
+      "headline": "DAIRY QUEEN: $3 SMALL COFFEE COOLER TO NOV. 1",
+      "highlight": "$3 SMALL",
+      "body": "Dairy Queen has a $3 small Coffee Cooler through Nov. 1 in OREO, Salted Caramel or Toasted Marshmallow.",
+      "place": "participating locations",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Dairy Queen coffee cooler drink",
+        "prompt": "A small frozen coffee drink with whipped topping on a Dairy Queen table, with condensation on the cup and a menu board blurred behind it"
+      },
+      "color": "#EE3E42",
+      "emoji": "🥤",
+      "chip": "$3",
+      "logo": "dairyqueen.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "DEALS",
+      "headline": "PEET'S: $30 COLD BREW PASS ENDS TODAY",
+      "highlight": "$30 PASS",
+      "body": "Peetnik Rewards members can buy a $30 Cold Brew Pass through Sept. 30 for one medium cold brew daily for 30 consecutive days.",
+      "place": "participating locations",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Peet's Coffee cold brew cup",
+        "prompt": "A cold brew coffee cup on a cafe table with the Peet's Coffee counter in the background, morning light through the window"
+      },
+      "color": "#6F4E37",
+      "emoji": "🧊",
+      "chip": "SEPT. 30",
+      "logo": "peets.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "DEALS",
+      "headline": "ZIGGI'S: FREE COFFEE DAILY THROUGH OCT. 5",
+      "highlight": "FREE COFFEE",
+      "body": "Ziggi's Rewards members get a free small Daily Brew, Iced Coffee or Cold Brew with any qualifying menu item of $2.50 or more through Oct. 5.",
+      "place": "participating locations",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Ziggi's Coffee iced coffee drive thru",
+        "prompt": "A hand holding an iced coffee at a coffee drive-thru window, with a rewards app open on a phone beside it"
+      },
+      "emoji": "☕",
+      "chip": "OCT. 5",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "McDonald’s has a $2 Halloween Treats Pack with $31 in free food coupons.\nThe other active deals this week include Dairy Queen, Peet’s Coffee and Ziggi’s Coffee. send this to someone who needs it",
+  "hashtags": [
+    "#SouthFloridaDeals",
+    "#MiamiFreebies"
+  ],
+  "collaborators": [
+    "mcdonalds"
+  ],
+  "igCaption": "McDonald’s has a $2 Halloween Treats Pack with $31 in free food coupons.\nThe other active deals this week include Dairy Queen, Peet’s Coffee and Ziggi’s Coffee. send this to someone who needs it\n\n📰 Sources: Hip2Save\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaDeals #MiamiFreebies #miami #southflorida",
+  "kind": "deals",
+  "kicker": "FREE & CHEAP IN MIAMI 🍔",
+  "date": "2026-09-30",
+  "id": "2026-09-30-deals"
+}
