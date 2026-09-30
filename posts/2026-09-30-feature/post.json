@@ -1,0 +1,134 @@
+{
+  "sector": "HISTORY",
+  "cover": {
+    "top": "VIZCAYA'S",
+    "main": "BAYFRONT VILLA",
+    "highlight": "COST $15M",
+    "bottom": "BY 1922 DURING ITS 1914 TO 1923 BUILD",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Vizcaya Museum and Gardens Miami Biscayne Bay villa facade",
+      "prompt": "Golden-hour photo of Vizcaya Museum and Gardens from Biscayne Bay, with the villa, stone barge, palms and water in frame"
+    },
+    "emojis": [
+      "🏛️",
+      "🌴",
+      "💰"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "HISTORY",
+      "headline": "Vizcaya’s villa cost $15M by 1922",
+      "highlight": "$15M villa",
+      "body": "The villa was built mainly from 1914 to 1922, while the gardens and village outbuildings continued into 1923.",
+      "place": "Coconut Grove",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Vizcaya Museum and Gardens aerial Italian Renaissance gardens Miami",
+        "prompt": "Overhead photo of Vizcaya’s formal gardens, villa, coral stone paths and Biscayne Bay shoreline"
+      },
+      "emoji": "🏛️",
+      "chip": "$15M",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "HISTORY",
+      "headline": "That started with James Deering in 1910",
+      "highlight": "James Deering",
+      "body": "Deering bought land in Coconut Grove for Vizcaya after leaving daily work at International Harvester in 1909.",
+      "place": "Coconut Grove",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons James Deering portrait Vizcaya",
+        "prompt": "Historic portrait of James Deering with a dark museum background and a faint Biscayne Bay estate outline behind him"
+      },
+      "emoji": "👤",
+      "chip": "1910",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "HISTORY",
+      "headline": "And the site covered 180 acres on Biscayne Bay",
+      "highlight": "180 acres",
+      "body": "The property included shoreline mangrove wetlands and dense native tropical forest.",
+      "place": "Coconut Grove",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Vizcaya Museum and Gardens Biscayne Bay mangroves Coconut Grove",
+        "prompt": "Wide photo of Vizcaya’s Biscayne Bay shoreline with mangroves, tropical trees and the villa visible beyond the water"
+      },
+      "emoji": "🌿",
+      "chip": "180 ACRES",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "HISTORY",
+      "headline": "Which led to construction in 1912",
+      "highlight": "construction in 1912",
+      "body": "F. Burrall Hoffman was the architect, Paul Chalfin directed the design, and Diego Suarez designed the landscape.",
+      "place": "Coconut Grove",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Vizcaya Museum and Gardens construction historic Miami 1910s",
+        "prompt": "Black-and-white style scene of early 1910s construction at Vizcaya, with workers, stone blocks, scaffolding and Biscayne Bay nearby"
+      },
+      "emoji": "🧱",
+      "chip": "1912",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "HISTORY",
+      "headline": "Then Deering arrived by yacht on Christmas 1916",
+      "highlight": "Christmas 1916",
+      "body": "Deering began occupying Vizcaya on Christmas Day 1916 after arriving aboard his yacht Nepenthe.",
+      "place": "Coconut Grove",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Vizcaya stone barge Biscayne Bay Miami",
+        "prompt": "Low-angle photo of Vizcaya’s stone barge on Biscayne Bay with the villa behind it and dark water in the foreground"
+      },
+      "emoji": "🎄",
+      "chip": "DEC 25",
+      "mark": "arrow",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "HISTORY",
+      "headline": "So the private estate is public today",
+      "highlight": "public today",
+      "body": "Miami-Dade County owns Vizcaya Museum and Gardens, and the property is open to the public in Coconut Grove.",
+      "place": "Coconut Grove",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Vizcaya Museum and Gardens entrance Miami visitors",
+        "prompt": "Present-day photo of the Vizcaya Museum and Gardens entrance, with the villa, gardens and palms framed as a public landmark"
+      },
+      "emoji": "🎟️",
+      "chip": "TODAY",
+      "logo": "",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Vizcaya started as James Deering’s 180-acre Biscayne Bay estate and became a public Miami-Dade museum.\nWhat South Florida landmark should we do next?",
+  "hashtags": [
+    "#VizcayaMiami",
+    "#MiamiHistory"
+  ],
+  "collaborators": [],
+  "igCaption": "Vizcaya started as James Deering’s 180-acre Biscayne Bay estate and became a public Miami-Dade museum.\nWhat South Florida landmark should we do next?\n\n📰 Sources: Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#VizcayaMiami #MiamiHistory #miami #southflorida",
+  "kind": "feature",
+  "kicker": "THE HISTORY OF",
+  "date": "2026-09-30",
+  "id": "2026-09-30-feature"
+}
