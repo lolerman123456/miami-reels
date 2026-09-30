@@ -1,0 +1,132 @@
+{
+  "sector": "WORLD",
+  "cover": {
+    "top": "NEWS FROM AROUND THE WORLD",
+    "main": "UKRAINE’S REMAINING STEELWORKS",
+    "highlight": "HAVE ALL BUT",
+    "bottom": "GROUND TO A HALT UNDER RUSSIAN ATTACKS.",
+    "blur": false,
+    "photo": {
+      "query": "Ukraine steel plant damaged Russian attacks smoke industrial ruins",
+      "prompt": "A dramatic wide photo of a damaged Ukrainian steelworks complex at dusk, with collapsed steel frames, smoke haze and empty rail tracks leading into the plant"
+    },
+    "emojis": [
+      "🇺🇦",
+      "🏭",
+      "🚀"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "WORLD",
+      "headline": "Ukraine’s remaining steelworks have all but stopped",
+      "highlight": "all but stopped",
+      "body": "Ukraine’s remaining steelworks, once a vital economic engine, have all but ground to a halt under relentless Russian attacks.",
+      "place": "Ukraine",
+      "source": "BBC News",
+      "photo": {
+        "query": "Ukraine steel mill idle war damage furnaces",
+        "prompt": "A striking photo of an idle Ukrainian steel mill floor with cold furnaces, damaged machinery and hard industrial light"
+      },
+      "emoji": "🏭",
+      "chip": "NEAR HALT",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "That follows an industry fall from 15% of GDP to zero",
+      "highlight": "15% of GDP",
+      "body": "One assessment framed the collapse as a fall from 15% of GDP to zero, with damage reaching Ukraine’s wider economy.",
+      "place": "Ukraine",
+      "source": "ua.news",
+      "photo": {
+        "query": "Ukraine steel mill empty freight rail cars industrial plant",
+        "prompt": "A dramatic photo of empty freight rail cars outside a Ukrainian industrial plant, with smokestacks and gray sky in the background"
+      },
+      "emoji": "📉",
+      "chip": "15% TO 0",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "The reason: Russia’s missile campaign hit steelworks",
+      "highlight": "missile campaign",
+      "body": "Russian missile attacks have repeatedly targeted Ukraine’s industrial and energy systems, leaving steel production near a halt.",
+      "place": "Ukraine",
+      "source": "BBC News",
+      "photo": {
+        "query": "Ukraine steelworks damaged aerial smoke industrial buildings",
+        "prompt": "A high, dramatic view of a damaged Ukrainian steelworks complex, with broken roofs, dark smoke and long industrial buildings"
+      },
+      "emoji": "🚀",
+      "chip": "RUSSIAN STRIKES",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "And Kryvyi Rih went into survival mode",
+      "highlight": "survival mode",
+      "body": "Kryvyi Rih, a major industrial city, entered survival mode after attacks halted key enterprises.",
+      "place": "Kryvyi Rih, Ukraine",
+      "source": "Корабелов.ІНФО",
+      "photo": {
+        "query": "Kryvyi Rih Ukraine steel plant industrial skyline rail lines",
+        "prompt": "A wide wartime-looking photo of Kryvyi Rih’s industrial skyline, with smokestacks, rail lines and a dark evening sky"
+      },
+      "emoji": "⚠️",
+      "chip": "KRYVYI RIH",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "Which pushes a war economy back toward the brink",
+      "highlight": "toward the brink",
+      "body": "Russia’s strikes are adding pressure as Ukraine heads into a hard winter with industry and energy systems under attack.",
+      "place": "Ukraine",
+      "source": "RBC-Ukraine",
+      "photo": {
+        "query": "Ukraine winter blackout city damaged infrastructure emergency crews",
+        "prompt": "A cold nighttime Ukrainian city scene with mostly dark apartment blocks, a few lit windows and emergency crews near damaged infrastructure"
+      },
+      "emoji": "❄️",
+      "chip": "HARD WINTER",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "So the pressure reaches beyond one industry",
+      "highlight": "beyond one industry",
+      "body": "Ukraine’s economy relies on farmland, industry and mineral resources, and the 2022 full-scale invasion suppressed growth by 18.9%.",
+      "place": "Ukraine",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Ukraine industrial landscape farmland railway steel plant cloudy sky",
+        "prompt": "A dramatic photo showing Ukrainian farmland beside rail lines and an industrial plant in the distance, under a cloudy sky"
+      },
+      "emoji": "🏗️",
+      "chip": "18.9%",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Ukraine’s remaining steelworks have nearly stopped after Russian attacks, threatening a core wartime industry and the wider economy.\n\nWhat part of this story should get more attention?",
+  "hashtags": [
+    "#UkraineWar",
+    "#WorldNews"
+  ],
+  "collaborators": [],
+  "igCaption": "Ukraine’s remaining steelworks have nearly stopped after Russian attacks, threatening a core wartime industry and the wider economy.\n\nWhat part of this story should get more attention?\n\n📰 Sources: BBC News, ua.news, Корабелов.ІНФО, RBC-Ukraine, Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#UkraineWar #WorldNews #miami #southflorida",
+  "kind": "world",
+  "kicker": "NEWS FROM AROUND THE WORLD 🌎",
+  "date": "2026-09-29",
+  "id": "2026-09-29-world"
+}
