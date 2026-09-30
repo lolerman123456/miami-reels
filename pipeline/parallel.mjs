@@ -9,6 +9,7 @@ import { prepareEpisode, buildProps } from './make.mjs';
 import { renderFrames, buildShots } from './capture.mjs';
 import { ensureSfx } from './sfx.mjs';
 import { ensureImages } from './images.mjs';
+import { ensurePhotos } from './scenephotos.mjs';
 import { sfxCues } from '../src/cues.js';
 
 const PIECES = Number(process.env.CAPTURE_PIECES || 20);
@@ -42,6 +43,7 @@ if (cmd === 'prepare') {
     const ep = readJSON(path.join(dir, 'episode.json')); ep.music = ep.tiktok = true; writeJSON(path.join(dir, 'episode.json'), ep);
   }
   await ensureImages(dir, readJSON(path.join(dir, 'episode.json'))); // AI renders for scenes that show a picture instead of the map
+  await ensurePhotos(dir, readJSON(path.join(dir, 'episode.json'))); // real photos shown after the 3D orbit
   const { episode, timeline } = await prepareEpisode(dir);
   const pieces = plan(shotsOf(episode, timeline));
   writeJSON(path.join(dir, 'plan.json'), pieces);

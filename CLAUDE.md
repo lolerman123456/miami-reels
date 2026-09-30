@@ -66,7 +66,7 @@ RENT CHECK / BY THE NUMBERS. Voice at 1.3 speed (KOKORO_SPEED). Graphics: calm f
 Zillow rent data), writes only from those sources, then a fact-check pass fixes anything unsupported.
 Scenes: `hook` (overlay = 2 short lines, 4 emojis, shot `dive`), 3–5× `item` (no rank; `badge` = key stat like "1,049 FT" or
 "$3,831/MO", `overlay` = place, `sub` = context), `outro` (question, shot `pullout`). `text` = spoken (numbers as words),
-`caption` = on-screen version. Locations: use Wikipedia coordinates when available. Camera `range`: 500–900 m low-rise,
+`caption` = on-screen version. Real photos in a Reel: add `"photos": {"queries": ["Venetian Pool Coral Gables", "Venetian Pool grotto"], "at": 0.45}` to an item scene; the prepare job fetches credited Wikimedia photos (`pipeline/scenephotos.mjs`) and the scene cuts from the 3D orbit to them with a slow push/pan (owner, Sep 30). Small places (pools, gardens) need a tight camera `range` (250–450 m) so they actually show. Locations: use Wikipedia coordinates when available. Camera `range`: 500–900 m low-rise,
 **1400–1800 m for skylines** or the camera ends up inside buildings. 140–190 words ≈ 55–70 s.
 
 ## Secrets (repo settings, never commit them)

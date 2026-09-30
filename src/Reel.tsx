@@ -18,6 +18,7 @@ export type Scene = {
   note?: string | null;
   badge?: string | null;
   image?: { file: string; path: { x: number; y: number; zoom: number; at?: number }[] | null; label: string } | null; // AI render instead of the map
+  photos?: { files: { file: string; credit: string }[]; at: number } | null; // real photos after the 3D orbit
   stats?: { value: string; label: string }[] | null; // big numbers that count up while the narrator says them
   source?: string | null; // where the facts come from, shown small
   hit?: string | null;
@@ -102,6 +103,7 @@ const SceneView: React.FC<{ scene: Scene; index: number }> = ({ scene, index }) 
           </Sequence>
         </AbsoluteFill>
       )}
+      {scene.photos && !scene.image && <PhotoReel scene={scene} />}
       <AbsoluteFill style={{
         background: scene.image ? 'linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 80%, rgba(0,0,0,.2) 100%)'
           : 'linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 32%, rgba(0,0,0,0) 58%, rgba(0,0,0,.55) 100%)',
@@ -109,6 +111,39 @@ const SceneView: React.FC<{ scene: Scene; index: number }> = ({ scene, index }) 
       {scene.kind === 'hook' && <Hook scene={scene} />}
       {scene.kind === 'item' && <Item scene={scene} />}
       {scene.kind === 'outro' && <Outro scene={scene} />}
+    </AbsoluteFill>
+  );
+};
+
+// Real photos of the place after the 3D orbit: each one slowly pushes in while drifting a different way, with soft
+// crossfades between them and between the map and the first photo. Calm motion only (no tilt/bounce), credit shown small.
+const PhotoReel: React.FC<{ scene: Scene }> = ({ scene }) => {
+  const frame = useCurrentFrame();
+  const { files, at } = scene.photos!;
+  const start = Math.round(scene.duration * at), X = 10;
+  const each = Math.max(24, (scene.duration - start) / files.length);
+  const DRIFT = [[-3, -2], [3, -1.5], [-2, 2], [2.5, 2]];
+  return (
+    <AbsoluteFill>
+      {files.map((p, k) => {
+        const t0 = start + k * each, t1 = t0 + each + X;
+        if (frame < t0 - 1 || frame > t1 + X) return null;
+        const inE = ease(frame, t0, X + 4), outE = k === files.length - 1 ? 1 : 1 - ease(frame, t0 + each, X);
+        const u = Math.min(1, Math.max(0, (frame - t0) / (each + X)));
+        const e = (1 - Math.cos(Math.PI * u)) / 2;
+        const [dx, dy] = DRIFT[k % DRIFT.length];
+        return (
+          <AbsoluteFill key={k} style={{ opacity: inE * outE, overflow: 'hidden', background: '#000' }}>
+            <Img src={staticFile(p.file)} style={{
+              width: '100%', height: '100%', objectFit: 'cover', filter: 'saturate(1.18) contrast(1.06) brightness(1.04)',
+              transform: `scale(${1.08 + 0.16 * e}) translate(${dx * e}%, ${dy * e}%)`,
+            }} />
+            <div style={{ position: 'absolute', top: 1080, right: 40, background: 'rgba(8,10,16,.55)', padding: '5px 12px', borderRadius: 8, maxWidth: 520 }}>
+              <span style={{ fontFamily: FONT, fontWeight: 700, fontSize: 18, color: '#fff' }}>Photo: {p.credit}</span>
+            </div>
+          </AbsoluteFill>
+        );
+      })}
     </AbsoluteFill>
   );
 };

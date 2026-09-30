@@ -58,11 +58,19 @@
       },
       "shot": {
         "type": "flyto",
-        "range": 700,
-        "pitch": -32,
+        "range": 450,
+        "pitch": -38,
         "heading": 90,
         "degrees": 60,
         "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Vizcaya Museum and Gardens garden",
+          "Vizcaya Museum and Gardens villa",
+          "Vizcaya Museum and Gardens fountain"
+        ],
+        "at": 0.45
       }
     },
     {
@@ -82,11 +90,19 @@
       },
       "shot": {
         "type": "flyto",
-        "range": 600,
-        "pitch": -32,
+        "range": 260,
+        "pitch": -42,
         "heading": 200,
         "degrees": 60,
         "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Venetian Pool Coral Gables",
+          "Venetian Pool grotto",
+          "Venetian Pool waterfall"
+        ],
+        "at": 0.45
       }
     },
     {
@@ -106,11 +122,19 @@
       },
       "shot": {
         "type": "flyto",
-        "range": 800,
-        "pitch": -32,
+        "range": 650,
+        "pitch": -36,
         "heading": 30,
         "degrees": 60,
         "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Fairchild Tropical Botanic Garden",
+          "Fairchild Tropical Botanic Garden palms",
+          "Fairchild Tropical Botanic Garden conservatory"
+        ],
+        "at": 0.45
       }
     },
     {
@@ -130,11 +154,18 @@
       },
       "shot": {
         "type": "flyto",
-        "range": 900,
-        "pitch": -32,
+        "range": 700,
+        "pitch": -36,
         "heading": 120,
         "degrees": 60,
         "dir": 1
+      },
+      "photos": {
+        "queries": [
+          "Matheson Hammock Park atoll pool",
+          "Matheson Hammock Park beach"
+        ],
+        "at": 0.45
       }
     },
     {
