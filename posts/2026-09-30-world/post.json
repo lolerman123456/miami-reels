@@ -1,0 +1,149 @@
+{
+  "sector": "WORLD",
+  "cover": {
+    "top": "NEWS FROM AROUND THE WORLD",
+    "main": "AN ISRAEL-BOUND FLYDUBAI PLANE REPORTEDLY DROPPED MIDAIR AFTER",
+    "highlight": "A COCKPIT STABBING",
+    "bottom": "THEN LANDED SAFELY IN SAUDI ARABIA",
+    "blur": false,
+    "photo": {
+      "query": "Flydubai Boeing 737 cockpit windows close up runway",
+      "prompt": "dramatic close-up of a Flydubai jet nose and cockpit windows on a runway at night with emergency lights in the distance",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "✈️",
+      "🚨",
+      "🌍"
+    ],
+    "logos": [
+      "flydubai.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "WORLD",
+      "headline": "An Israel-bound Flydubai plane reportedly dropped midair after a cockpit stabbing",
+      "highlight": "dropped midair",
+      "body": "The flight from Dubai to Tel Aviv landed safely in Saudi Arabia after passengers and crew overpowered the attacker.",
+      "place": "Dubai to Tel Aviv",
+      "source": "NewsNation",
+      "photo": {
+        "query": "commercial airplane cockpit door cabin interior",
+        "prompt": "inside an airplane cabin looking toward a cockpit door with dim emergency-style lighting and no visible people"
+      },
+      "emoji": "🚪",
+      "chip": "COCKPIT",
+      "logo": "flydubai.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "That came after one pilot allegedly stabbed another in the cockpit",
+      "highlight": "one pilot",
+      "body": "The injured pilot opened the cockpit door, which helped passengers and crew reach the attacker.",
+      "place": "On board",
+      "source": "wsj.com",
+      "photo": {
+        "query": "Flydubai aircraft night airport gate",
+        "prompt": "Flydubai passenger jet parked at an airport gate at night with red and blue emergency lights reflecting on the tarmac"
+      },
+      "emoji": "🩹",
+      "chip": "STABBING",
+      "logo": "flydubai.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "That also sent the plane down thousands of feet",
+      "highlight": "thousands of feet",
+      "body": "Passengers described a rapid descent during the cockpit struggle on the Dubai to Tel Aviv flight.",
+      "place": "On board",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "photo": {
+        "query": "passenger airplane in steep descent dramatic sky",
+        "prompt": "passenger jet descending through dark clouds with a tense, dramatic sky and no airline logo visible"
+      },
+      "emoji": "⬇️",
+      "chip": "DROP",
+      "logo": "flydubai.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "And Israel says passengers foiled an apparent crash attempt",
+      "highlight": "crash attempt",
+      "body": "Israeli officials said passengers intervened after the cockpit stabbing and prevented a disaster.",
+      "place": "Israel",
+      "source": "Reuters",
+      "photo": {
+        "query": "airplane cabin aisle emergency lighting",
+        "prompt": "empty airplane cabin aisle with overhead lights on and a tense emergency atmosphere, no passengers visible"
+      },
+      "emoji": "🛫",
+      "chip": "FOILED",
+      "logo": "flydubai.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "Which ended with a safe landing in Saudi Arabia",
+      "highlight": "Saudi Arabia",
+      "body": "The plane diverted to Saudi Arabia, where a Flydubai pilot was arrested and questioned.",
+      "place": "Saudi Arabia",
+      "source": "BBC",
+      "photo": {
+        "query": "Saudi Arabia airport runway passenger jet night",
+        "prompt": "passenger jet on a Saudi airport runway at night with airport fire trucks parked nearby and flashing lights"
+      },
+      "emoji": "🛬",
+      "chip": "SAFE",
+      "logo": "flydubai.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "So Netanyahu hailed the injured pilot as a hero",
+      "highlight": "injured pilot",
+      "body": "Netanyahu said the pilot and passengers prevented a disaster, and the flight’s passengers later arrived in Israel.",
+      "place": "Israel",
+      "source": "BBC",
+      "photo": {
+        "query": "Benjamin Netanyahu press conference Israel airplane news",
+        "prompt": "dramatic news-style image of a podium and Israeli flags during an official statement, with a blurred aircraft image on a screen behind it"
+      },
+      "emoji": "🚨",
+      "chip": "ARRESTED",
+      "logo": "flydubai.com",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-6.png"
+    }
+  ],
+  "caption": "A Flydubai flight bound for Tel Aviv landed safely in Saudi Arabia after a cockpit stabbing and passenger intervention.\nWhat detail are you still trying to understand about this flight?",
+  "hashtags": [
+    "#Flydubai",
+    "#WorldNews"
+  ],
+  "collaborators": [],
+  "igCaption": "A Flydubai flight bound for Tel Aviv landed safely in Saudi Arabia after a cockpit stabbing and passenger intervention.\nWhat detail are you still trying to understand about this flight?\n\n📰 Sources: NewsNation, wsj.com, ABC News - Breaking News, Latest News and Videos, Reuters, BBC\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#Flydubai #WorldNews #miami #southflorida",
+  "kind": "world",
+  "kicker": "NEWS FROM AROUND THE WORLD 🌎",
+  "date": "2026-09-30",
+  "id": "2026-09-30-world"
+}
