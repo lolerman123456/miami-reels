@@ -1,0 +1,125 @@
+{
+  "sector": "ECONOMY",
+  "cover": {
+    "top": "CARL'S JR. REWARDS",
+    "main": "OFFERS A",
+    "highlight": "FREE CHURRO SHAKE",
+    "bottom": "OCT. 1 ONLY",
+    "blur": false,
+    "photo": {
+      "query": "Carl's Jr restaurant exterior sign Wikimedia Commons",
+      "prompt": "close-up of a churro milkshake on a fast-food counter with a Carl's Jr style red and yellow restaurant sign blurred behind it"
+    },
+    "emojis": [
+      "🥤",
+      "🍟",
+      "💸"
+    ],
+    "logos": [
+      "carlsjr.com",
+      "wendys.com",
+      "publix.com",
+      "starbucks.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c2.png",
+      "logo-c3.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "DEALS",
+      "headline": "Carl's Jr.: Free Churro Shake Oct. 1",
+      "highlight": "Free Churro Shake",
+      "body": "My Rewards members get a free regular Hand-Scooped Churro Ice Cream Shake on Oct. 1 with a $1 or more purchase in the app or online.",
+      "place": "In the app or online",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Carl's Jr restaurant Wikimedia Commons milkshake",
+        "prompt": "close-up of a tall churro ice cream shake with whipped cream and cinnamon on a fast-food tray inside a Carl's Jr restaurant"
+      },
+      "emoji": "🥤",
+      "chip": "FREE 10/1",
+      "logo": "carlsjr.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "DEALS",
+      "headline": "Wendy's: 99¢ Cinnabon Pull-Apart Oct. 4",
+      "highlight": "99¢ Cinnabon",
+      "body": "Wendy's Rewards members can redeem the digital offer Oct. 4 with any purchase at participating U.S. Wendy's locations, with one use per account.",
+      "place": "In the app",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Wendy's restaurant exterior Wikimedia Commons",
+        "prompt": "close-up of a Cinnabon Pull-Apart covered in cream cheese frosting on a Wendy's tray"
+      },
+      "color": "#E2231A",
+      "emoji": "🍥",
+      "chip": "99¢ 10/4",
+      "logo": "wendys.com",
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Ser Amantio di Nicolao / CC BY-SA 4.0",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "DEALS",
+      "headline": "Publix: Red Baron pizzas for 99¢ each",
+      "highlight": "99¢ each",
+      "body": "Buy 2 Red Baron Crunchtime Pizzas at $7.99 each, get one free, then use $3 Ibotta cash back for a $1.99 total final cost.",
+      "place": "Publix",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Publix supermarket exterior Wikimedia Commons",
+        "prompt": "freezer aisle shot with Red Baron pizza boxes stacked beside a green Publix sale tag"
+      },
+      "color": "#3E9A36",
+      "emoji": "🍕",
+      "chip": "99¢ EACH",
+      "logo": "publix.com",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Harrison Keely / CC BY 4.0",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "DEALS",
+      "headline": "Starbucks: 3 mini pies for $6.95",
+      "highlight": "3 mini pies",
+      "body": "Starbucks added Apple Crumble, Pecan and Pumpkin Mini Pies, and all 3 can go in a $6.95 bundle with prices varying by location.",
+      "place": "Starbucks",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Starbucks store exterior Wikimedia Commons bakery case",
+        "prompt": "three small fall pies in a Starbucks bakery case with coffee cups and green branding in the background"
+      },
+      "color": "#006241",
+      "emoji": "🥧",
+      "chip": "$6.95",
+      "logo": "starbucks.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    }
+  ],
+  "caption": "Deals still live this week include a free Carl's Jr. shake today, 99¢ Wendy's on Sunday, Publix pizza math and a Starbucks mini pie bundle.\n\nCheck the app or local store before you go. send this to someone who needs it",
+  "hashtags": [
+    "#SouthFloridaDeals",
+    "#MiamiDeals"
+  ],
+  "collaborators": [
+    "wendys",
+    "mcdonalds",
+    "publix"
+  ],
+  "igCaption": "Deals still live this week include a free Carl's Jr. shake today, 99¢ Wendy's on Sunday, Publix pizza math and a Starbucks mini pie bundle.\n\nCheck the app or local store before you go. send this to someone who needs it\n\n📰 Sources: Hip2Save\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaDeals #MiamiDeals #miami #southflorida",
+  "kind": "deals",
+  "kicker": "FREE & CHEAP IN MIAMI 🍔",
+  "date": "2026-10-01",
+  "id": "2026-10-01-deals"
+}
