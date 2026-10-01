@@ -1,0 +1,133 @@
+{
+  "sector": "ECONOMY",
+  "cover": {
+    "top": "FLORIDA’S MINIMUM WAGE",
+    "main": "IS NOW",
+    "highlight": "$15 AN HOUR",
+    "bottom": "IN THE FINAL SCHEDULED STEP",
+    "blur": false,
+    "photo": {
+      "query": "Florida minimum wage sign retail store cashier",
+      "prompt": "A close-up of a Florida retail checkout counter with a posted $15 minimum wage notice, a time clock and a cashier station"
+    },
+    "emojis": [
+      "💵",
+      "⏰",
+      "🍽️"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "ECONOMY",
+      "headline": "Florida’s minimum wage is now $15 an hour",
+      "highlight": "$15 an hour",
+      "body": "The statewide minimum wage reached $15 an hour after the final scheduled increase took effect.",
+      "place": "Florida",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Florida minimum wage sign retail store cashier",
+        "prompt": "A close-up of a Florida retail checkout counter with a posted $15 minimum wage notice, a time clock and a cashier station"
+      },
+      "emoji": "💵",
+      "chip": "$15",
+      "mark": "circle",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "ECONOMY",
+      "headline": "The last scheduled raise was $1",
+      "highlight": "$1",
+      "body": "The final scheduled increase raised the rate from $14 to $15 an hour.",
+      "place": "South Florida",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Miami restaurant kitchen workers line cooks",
+        "prompt": "A South Florida restaurant kitchen during a lunch rush, with cooks at the line, order tickets and stainless steel counters"
+      },
+      "emoji": "⏰",
+      "chip": "+$1",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "ECONOMY",
+      "headline": "Voters approved the path to $15",
+      "highlight": "Voters approved",
+      "body": "The $15 rate is the final step of a voter-approved plan that lifted Florida’s minimum wage over several years.",
+      "place": "Florida",
+      "source": "Gulf Coast News and Weather",
+      "photo": {
+        "query": "Florida voters polling place voting booths",
+        "prompt": "A sharp photo of a Florida polling place with voting booths and election signs, focused on the room and ballot stations, no identifiable faces"
+      },
+      "emoji": "🗳️",
+      "chip": "FINAL STEP",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "ECONOMY",
+      "headline": "Florida joins the $15 group",
+      "highlight": "18th state",
+      "body": "Florida became the 18th state with a minimum wage of at least $15 an hour.",
+      "place": "Florida",
+      "source": "Restaurant Business Magazine",
+      "photo": {
+        "query": "Florida State Capitol Tallahassee wide exterior",
+        "prompt": "A wide exterior of the Florida State Capitol in Tallahassee under a clear sky, with the building centered and flags visible"
+      },
+      "emoji": "📍",
+      "chip": "18TH",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "ECONOMY",
+      "headline": "Employers now face the new floor",
+      "highlight": "new floor",
+      "body": "Restaurants and other employers must account for the $15 wage while dealing with inflation and operating costs.",
+      "place": "Florida",
+      "source": "fox49.tv",
+      "photo": {
+        "query": "South Florida restaurant owner reviewing payroll laptop",
+        "prompt": "A South Florida restaurant counter with a manager reviewing payroll on a laptop, receipts and a time clock nearby"
+      },
+      "emoji": "🍽️",
+      "chip": "PAYROLL",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "ECONOMY",
+      "headline": "$15 still runs into housing costs",
+      "highlight": "housing costs",
+      "body": "Workers say the higher minimum wage still runs into Florida’s cost of living, especially housing.",
+      "place": "Florida",
+      "source": "Spectrum News",
+      "photo": {
+        "query": "Miami apartment towers traffic Biscayne Boulevard housing",
+        "prompt": "A sunset view of Miami apartment towers over busy traffic, with dense housing and high-rises filling the frame"
+      },
+      "emoji": "🏠",
+      "chip": "COSTS",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Florida’s minimum wage is now $15 an hour, the final scheduled step in the voter-approved increase.\nDoes $15 change anything where you work?",
+  "hashtags": [
+    "#FloridaMinimumWage",
+    "#MiamiDade"
+  ],
+  "collaborators": [],
+  "igCaption": "Florida’s minimum wage is now $15 an hour, the final scheduled step in the voter-approved increase.\nDoes $15 change anything where you work?\n\n📰 Sources: WPLG Local 10, NBC 6 South Florida, Gulf Coast News and Weather, Restaurant Business Magazine, fox49.tv, Spectrum News\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#FloridaMinimumWage #MiamiDade #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-01",
+  "id": "2026-10-01-brief"
+}
