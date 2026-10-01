@@ -29,3 +29,18 @@ fs.writeFileSync(path.join(ROOT, 'state', 'stats.json'), JSON.stringify(out, nul
 console.log(`@${account.username}: ${account.followers_count} followers, ${posts.length} posts in ${days} days`);
 for (const m of [...posts].sort((a, b) => (b.reach || b.views || 0) - (a.reach || a.views || 0)))
   console.log(`${m.timestamp.slice(0, 16)} ${m.media_product_type || m.media_type} reach=${m.reach ?? '?'} views=${m.views ?? '?'} likes=${m.like_count} com=${m.comments_count} saves=${m.saved ?? '?'} shares=${m.shares ?? '?'} ${m.caption}`);
+
+// Peek at another public account's latest posts (owner, Sep 30: "see onlyindade without the Meta developer bs").
+// Uses Instagram's business discovery with our own token; requests/stats.json "peek": "username". Officially it needs a
+// Facebook-login token, so with an Instagram-login token it may be refused — then we say so and keep using fetchViral.
+let peek = null;
+try { peek = JSON.parse(fs.readFileSync(path.join(ROOT, 'requests', 'stats.json'), 'utf8')).peek; } catch {}
+if (peek) {
+  try {
+    const j = await get(`${igUser}?fields=business_discovery.username(${peek}){username,followers_count,media_count,media.limit(12){caption,like_count,comments_count,timestamp,permalink,media_type}}`);
+    const bd = j.business_discovery;
+    fs.writeFileSync(path.join(ROOT, 'state', `peek-${peek}.json`), JSON.stringify({ at: new Date().toISOString(), ...bd }, null, 1) + '\n');
+    console.log(`\n✔ @${bd.username}: ${bd.followers_count} followers; latest posts:`);
+    for (const m of bd.media?.data || []) console.log(`  ${m.timestamp}  ${m.like_count ?? '?'}♥ ${m.comments_count ?? '?'}💬  ${(m.caption || '').split('\n')[0].slice(0, 80)}`);
+  } catch (e) { console.log(`\n✗ business discovery for @${peek} not allowed with this token: ${e.message.slice(0, 200)}`); }
+}
