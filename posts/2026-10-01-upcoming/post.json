@@ -1,0 +1,117 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SOUTH FLORIDA",
+    "main": "HAS SHOWS, FOOD AND",
+    "highlight": "HALLOWEEN",
+    "bottom": "THIS WEEK",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Miami Beach Bandshell concert crowd night",
+      "prompt": "A night concert scene in South Florida with stage lights, an outdoor crowd and palm trees silhouetted behind the venue"
+    },
+    "emojis": [
+      "🎸",
+      "🎭",
+      "🍝",
+      "🌴"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Barchetta opens on the Intracoastal",
+      "highlight": "Barchetta opens",
+      "body": "Thursday, Oct. 1, at 1880 SE 17th St. in Fort Lauderdale. The Italian chophouse has handmade pastas, seafood, steaks and waterfront views.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons Fort Lauderdale Intracoastal restaurant waterfront",
+        "prompt": "A waterfront restaurant on the Fort Lauderdale Intracoastal at sunset, with boats, dining room lights and a polished bar inside"
+      },
+      "emoji": "🍝",
+      "chip": "OCT 1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Airhockey and Augusto at Las Rosas",
+      "highlight": "Airhockey and Augusto",
+      "body": "10 p.m. Saturday, Oct. 3, at Las Rosas, 2898 NW 7th Ave. Admission is free for Airhockey, Augusto, Ana No Duerme, Micelady and Moni Musique.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons Las Rosas Miami bar concert",
+        "prompt": "A Miami rock show inside a small bar, with red lights, guitars, a packed floor and a drummer mid-hit"
+      },
+      "emoji": "🎸",
+      "chip": "SAT 10 PM",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "French Horn Collective at Lummus Park",
+      "highlight": "French Horn Collective",
+      "body": "6 to 7:30 p.m. Sunday, Oct. 4, at Lummus Park, 1130 Ocean Dr. Admission is free for the Ocean Drive Promenade Music Series show.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons Lummus Park Ocean Drive Miami Beach concert",
+        "prompt": "A beachside jazz performance at Lummus Park near Ocean Drive, with musicians, string lights, palm trees and people seated on the grass"
+      },
+      "emoji": "🎺",
+      "chip": "SUN 6 PM",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Clifford the Big Red Dog at The Parker",
+      "highlight": "Clifford the Big Red Dog",
+      "body": "1 p.m. Sunday, Oct. 4, at The Parker, 201 SW Fifth Ave. Tickets cost $23.60 for the family musical based on Norman Bridwell’s character.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons The Parker Playhouse Fort Lauderdale theater",
+        "prompt": "A theater marquee in Fort Lauderdale with families arriving for a children’s musical and a giant red dog silhouette on the stage poster"
+      },
+      "emoji": "🐶",
+      "chip": "$23.60",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "House of Horror at Tropical Park",
+      "highlight": "House of Horror",
+      "body": "Open 6 to 11 p.m. Sunday through Thursday and 6 p.m. to midnight Friday and Saturday at Tropical Park, 7900 SW 40th St. The carnival is closed Oct. 5.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons haunted carnival ferris wheel night",
+        "prompt": "A haunted carnival at night in Miami, with fog, neon ride lights, a dark funhouse entrance and people walking past scare-zone props"
+      },
+      "emoji": "🎃",
+      "chip": "6 PM",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Free concerts, theater, haunted houses and a new waterfront restaurant are on the South Florida calendar this week.\nWho are you taking? Tag a friend.",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiThingsToDo"
+  ],
+  "collaborators": [],
+  "igCaption": "Free concerts, theater, haunted houses and a new waterfront restaurant are on the South Florida calendar this week.\nWho are you taking? Tag a friend.\n\n📰 Sources: Miami New Times\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaEvents #MiamiThingsToDo #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN MIAMI 🎟️",
+  "date": "2026-10-01",
+  "id": "2026-10-01-upcoming"
+}
