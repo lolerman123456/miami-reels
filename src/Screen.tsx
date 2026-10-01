@@ -53,7 +53,7 @@ export const Screen: React.FC<{ spec: ScreenSpec; duration: number }> = ({ spec,
   if (frame < t0 - 1) return null;
   const f = frame;
   const steps = spec.steps;
-  const inE = ease(f, t0, 14);
+  const inE = spec.start === 'results' && spec.at === 0 ? 1 : ease(f, t0, 14); // continuing walkthrough: no re-entry
 
   // ---- state at this frame
   let page: 'blank' | 'search' | 'loading' | 'results' | 'claimed' = spec.start === 'results' ? 'results' : 'blank';
