@@ -1,0 +1,134 @@
+{
+  "sector": "USA",
+  "cover": {
+    "top": "SOUTH FLORIDA",
+    "main": "GETS",
+    "highlight": "5 UPDATES",
+    "bottom": "ON COURT, CRASH REPORTS AND TRANSIT",
+    "blur": false,
+    "photo": {
+      "query": "Miami courthouse TV cameras Amazon cargo plane runway dramatic news scene",
+      "prompt": "A dramatic South Florida news composite feel: TV cameras outside a Miami courthouse, with a cargo plane on a wet runway under dark clouds in the background"
+    },
+    "emojis": [
+      "⚖️",
+      "✈️",
+      "🚆"
+    ],
+    "logos": [
+      "local10.com",
+      "wtap.com",
+      "wsvn.com",
+      "cmu.edu",
+      "tri-rail.com",
+      "miaminewtimes.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c2.png",
+      "logo-c4.png",
+      "logo-c5.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "USA",
+      "headline": "Rick Ross pleaded not guilty after a Miami Beach arrest",
+      "highlight": "not guilty",
+      "body": "A judge denied special treatment in court after Ross faced battery charges tied to a domestic violence accusation.",
+      "place": "Miami Beach",
+      "source": "WTAP",
+      "photo": {
+        "query": "Rick Ross Miami Beach court appearance news cameras courthouse",
+        "prompt": "Rick Ross outside a Miami Beach courthouse with TV cameras, microphones and police vehicles near the entrance",
+        "mark": "stamp: COURT"
+      },
+      "emoji": "⚖️",
+      "chip": "COURT",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "USA",
+      "headline": "A federal report added detail to the Amazon cargo crash",
+      "highlight": "cargo crash",
+      "body": "The preliminary report covers the Sept. 6 crash in Miami and the moments before impact.",
+      "place": "Miami",
+      "source": "Local 10",
+      "photo": {
+        "query": "Amazon cargo plane crash Miami airport emergency vehicles night",
+        "prompt": "Emergency trucks with flashing lights near a damaged cargo aircraft at night by Miami airport runways"
+      },
+      "emoji": "✈️",
+      "chip": "SEPT. 6",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "USA",
+      "headline": "Pilots were not warned about possible strong wind",
+      "highlight": "wind warning",
+      "body": "The report says an air traffic controller failed to give the pilots a required warning about potential strong wind.",
+      "place": "Miami",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Miami International Airport cargo plane storm runway windsock",
+        "prompt": "A cargo plane on a wet Miami runway under dark storm clouds, with a windsock and runway lights visible"
+      },
+      "emoji": "🌬️",
+      "chip": "WIND",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "USA",
+      "headline": "DeSantis promoted Carnegie Mellon’s Miami expansion",
+      "highlight": "Miami expansion",
+      "body": "The Miami campus plan follows Ken Griffin’s $3 billion Carnegie Mellon gift and points to Wynwood.",
+      "place": "Wynwood",
+      "source": "wtwcfox",
+      "photo": {
+        "query": "Wynwood Miami construction cranes murals campus site skyline",
+        "prompt": "Construction cranes over Wynwood warehouses and murals with downtown Miami towers in the background"
+      },
+      "emoji": "🏗️",
+      "chip": "$3B",
+      "logo": "cmu.edu",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "USA",
+      "headline": "Tri-Rail is adding a free PBIA connection",
+      "highlight": "free PBIA",
+      "body": "Tri-Rail customers will soon ride free from the West Palm Beach station to Palm Beach International Airport.",
+      "place": "West Palm Beach",
+      "source": "The Lufkin Daily News",
+      "photo": {
+        "query": "Tri-Rail West Palm Beach station train airport shuttle bus",
+        "prompt": "A Tri-Rail train at West Palm Beach station with an airport shuttle bus waiting beside the platform"
+      },
+      "emoji": "🚆",
+      "chip": "FREE",
+      "logo": "tri-rail.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "Today’s follow-ups hit court, aviation, transit and the Wynwood campus plan.\nWhich update are you watching next?",
+  "hashtags": [
+    "#SouthFloridaNews",
+    "#MiamiUpdates"
+  ],
+  "collaborators": [],
+  "igCaption": "Today’s follow-ups hit court, aviation, transit and the Wynwood campus plan.\nWhich update are you watching next?\n\n📰 Sources: WTAP, Local 10, WSVN 7News, wtwcfox, The Lufkin Daily News\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaNews #MiamiUpdates #miami #southflorida",
+  "kind": "feature",
+  "kicker": "THE FOLLOW-UP",
+  "date": "2026-10-01",
+  "id": "2026-10-01-feature"
+}
