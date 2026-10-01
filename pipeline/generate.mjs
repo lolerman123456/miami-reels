@@ -222,18 +222,27 @@ export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
   return dir;
 }
 
-// Owner's rule: now and then (not every Reel, never on crime/tragedy), the outro ends with one quiet, natural mention of the
-// NEAR app (it shows you who walked past you during the day), tied to the topic, so people get curious. Never a hard sell.
+// Owner's rule (Oct 1): every Reel (never crime/tragedy) carries one quiet NEAR mention (the app shows you who walked
+// past you during the day). It must CONNECT to the topic in one well-built sentence (a real comparison or link, e.g. money
+// you never knew was yours ~ people you pass every day without noticing), never a bolted-on "if you see someone, download
+// NEAR". It goes BEFORE the outro's last sentence so the video still ends on the call to action, not on the app.
 async function nearMention(episode, plan) {
-  if (Math.random() > 0.4 || /CASE FILE|CRIME|STORY/i.test(plan.format || '')) return;
+  if (/CASE FILE|CRIME|STORY/i.test(plan.format || '')) return;
   const outro = episode.scenes.find(s => s.kind === 'outro');
   if (!outro) return;
   try {
-    const r = await chat([{ role: 'system', content: 'You add one short, casual sentence to the end of a South Florida Reel. It quietly mentions the NEAR app, which shows you who walked past you during the day. Tie it to the video topic so it feels natural and makes people curious, like a friend mentioning it in passing. Max 22 words, no hype words, no "download now", no emojis, numbers as words. If the topic is serious, sad or about crime, reply SKIP. Reply JSON {"line":"…"} or {"line":"SKIP"}.' },
+    const r = await chat([{ role: 'system', content: 'You write ONE sentence for the outro of a South Florida Reel that quietly mentions the NEAR app, which shows you the people who walked past you during the day. The sentence must genuinely connect the video topic to what NEAR does through a real parallel or link (for example, for a video about unclaimed money: "Most of what is yours in this city goes unnoticed, like money sitting in a state account or the people you cross paths with every day, and that second one is what NEAR is for."). It should read like a thoughtful aside, subtle, not an ad: no "download", no "if you see someone", no hype words, no emojis, numbers as words, 18–34 words, one complete sentence (not a run-on). If the topic is serious, sad or about crime, reply SKIP. Reply JSON {"line":"…"} or {"line":"SKIP"}.' },
       { role: 'user', content: `Title: ${episode.title}\nOutro so far: ${outro.text}` }]);
     const line = String(r.line || '').trim();
-    if (!line || /^SKIP/i.test(line) || line.split(/\s+/).length > 26) return;
-    outro.text = `${outro.text.trim()} ${line}`;
+    if (!line || /^SKIP/i.test(line) || line.split(/\s+/).length > 38) return;
+    // keep the outro's final sentence (the call to action) last
+    const insert = t => {
+      const parts = t.trim().match(/[^.!?]+[.!?]+["')]*\s*/g) || [t.trim()];
+      const last = parts.length > 1 ? parts.pop() : '';
+      return `${parts.join('').trim()} ${line} ${last}`.replace(/\s+/g, ' ').trim();
+    };
+    outro.text = insert(outro.text);
+    if (outro.caption) outro.caption = insert(outro.caption);
     console.log(`  NEAR mention: ${line}`);
   } catch (e) { console.log(`  (NEAR mention skipped: ${e.message.slice(0, 80)})`); }
 }
