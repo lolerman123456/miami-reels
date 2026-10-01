@@ -1,0 +1,160 @@
+{
+  "title": "Let's go here: South Florida weekend spots",
+  "id": "042-lets-go-here-weekend",
+  "sources": [
+    "Wikipedia"
+  ],
+  "collaborators": [],
+  "format": "GUIDE",
+  "music": true,
+  "tiktok": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "igCaption": "Send this to who you're going with 👀 Let's go here this weekend\n\nOleta River: Florida's biggest urban park, kayaks + bike trails\nCape Florida: beach day + Miami's oldest lighthouse (1825)\nDomino Park: cafecito and dominoes on Calle Ocho\nDeering Estate: historic estate right on Biscayne Bay\n\nWhich one first? Tag who you're taking.\n\n#Miami #MiamiThingsToDo #SouthFlorida #MiamiWeekend",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Send this to the person you're going with this weekend. Let's go here.",
+      "caption": "Send this to the person you're going with this weekend. Let's go here.",
+      "overlay": [
+        "LET'S GO HERE",
+        "THIS WEEKEND 👀"
+      ],
+      "emojis": [
+        "🛶",
+        "🏝️",
+        "☕",
+        "🌅"
+      ],
+      "location": {
+        "name": "Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 10
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "First, Oleta River State Park, in North Miami Beach. It's the largest urban park in Florida. Rent a kayak and paddle the river, or hit the mountain bike trails.",
+      "caption": "First, Oleta River State Park, in North Miami Beach. It's the largest urban park in Florida. Rent a kayak and paddle the river, or hit the mountain bike trails.",
+      "overlay": "OLETA RIVER",
+      "badge": "BIGGEST CITY PARK",
+      "sub": "North Miami Beach",
+      "emoji": "🛶",
+      "source": "Wikipedia",
+      "location": {
+        "name": "Oleta River State Park",
+        "lat": 25.9248,
+        "lon": -80.1376,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -36,
+        "heading": 60,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Next, Bill Baggs Cape Florida, at the tip of Key Biscayne. Spend a beach day, then walk to the lighthouse. It was first built in 1825. It's the oldest standing structure in Miami.",
+      "caption": "Next, Bill Baggs Cape Florida, at the tip of Key Biscayne. Spend a beach day, then walk to the lighthouse. It was first built in 1825. It's the oldest standing structure in Miami.",
+      "overlay": "CAPE FLORIDA",
+      "badge": "SINCE 1825",
+      "sub": "Key Biscayne",
+      "emoji": "🏝️",
+      "source": "Wikipedia",
+      "location": {
+        "name": "Cape Florida Light",
+        "lat": 25.6665,
+        "lon": -80.1557,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 600,
+        "pitch": -36,
+        "heading": 140,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Then Domino Park, on Calle Ocho in Little Havana. Locals have played dominoes here for decades. Grab a cafecito and watch a game.",
+      "caption": "Then Domino Park, on Calle Ocho in Little Havana. Locals have played dominoes here for decades. Grab a cafecito and watch a game.",
+      "overlay": "DOMINO PARK",
+      "badge": "CALLE OCHO",
+      "sub": "Little Havana",
+      "emoji": "☕",
+      "source": "Wikipedia",
+      "location": {
+        "name": "Máximo Gómez Park",
+        "lat": 25.7656,
+        "lon": -80.2195,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 350,
+        "pitch": -36,
+        "heading": 30,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "And the Deering Estate, in Palmetto Bay. Historic houses, nature trails, and a view straight across Biscayne Bay. Stay for the sunset.",
+      "caption": "And the Deering Estate, in Palmetto Bay. Historic houses, nature trails, and a view straight across Biscayne Bay. Stay for the sunset.",
+      "overlay": "DEERING ESTATE",
+      "badge": "ON THE BAY",
+      "sub": "Palmetto Bay",
+      "emoji": "🌅",
+      "source": "Wikipedia",
+      "location": {
+        "name": "Deering Estate",
+        "lat": 25.6153,
+        "lon": -80.308,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 600,
+        "pitch": -36,
+        "heading": 250,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are we doing first? Send this to who you're taking. And if you catch someone's eye there, NEAR shows who you crossed paths with.",
+      "caption": "Which one are we doing first? Send this to who you're taking. And if you catch someone's eye there, NEAR shows who you crossed paths with.",
+      "overlay": "WHICH ONE FIRST? 👇",
+      "sub": "Follow for more South Florida",
+      "location": {
+        "name": "Biscayne Bay",
+        "lat": 25.7,
+        "lon": -80.2,
+        "h": 10
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 300
+      }
+    }
+  ]
+}
