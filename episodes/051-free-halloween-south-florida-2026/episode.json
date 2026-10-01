@@ -1,7 +1,11 @@
 {
   "id": "051-free-halloween-south-florida-2026",
   "title": "Free Halloween in South Florida 2026",
-  "voice": { "provider": "openai", "voice": "ash", "speed": 1.14 },
+  "voice": {
+    "provider": "openai",
+    "voice": "ash",
+    "speed": 1.14
+  },
   "music": true,
   "tiktok": true,
   "scenes": [
@@ -9,10 +13,28 @@
       "kind": "hook",
       "text": "You don't need to spend a dollar this Halloween. Here's what's free in South Florida.",
       "caption": "You don't need to spend a dollar this Halloween. Here's what's free in South Florida.",
-      "overlay": ["FREE HALLOWEEN", "IN SOUTH FLORIDA 🎃"],
-      "emojis": ["🎃", "👻", "🍬", "🦇"],
-      "location": { "name": "Miami", "lat": 25.7743, "lon": -80.1937, "h": 10 },
-      "shot": { "type": "dive", "range": 1600, "pitch": -34, "heading": 30 }
+      "overlay": [
+        "FREE HALLOWEEN",
+        "IN SOUTH FLORIDA 🎃"
+      ],
+      "emojis": [
+        "🎃",
+        "👻",
+        "🍬",
+        "🦇"
+      ],
+      "location": {
+        "name": "Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 10
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 30
+      }
     },
     {
       "kind": "item",
@@ -23,8 +45,20 @@
       "sub": "Christ Church · Fort Lauderdale",
       "emoji": "🚗",
       "source": "South Florida on the Cheap",
-      "location": { "name": "Christ Church Fort Lauderdale", "lat": 26.1873, "lon": -80.1135, "h": 5 },
-      "shot": { "type": "flyto", "range": 700, "pitch": -36, "heading": 60, "degrees": 60, "dir": 1 }
+      "location": {
+        "name": "Christ Church Fort Lauderdale",
+        "lat": 26.1873,
+        "lon": -80.1135,
+        "h": 5
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 1100,
+        "pitch": -38,
+        "heading": 60,
+        "degrees": 50,
+        "dir": 1
+      }
     },
     {
       "kind": "item",
@@ -35,8 +69,20 @@
       "sub": "Cutler Bay · 6–9 p.m. · reserve free tickets",
       "emoji": "🎻",
       "source": "Mommy Poppins",
-      "location": { "name": "The Moss Center", "lat": 25.5720, "lon": -80.3712, "h": 5 },
-      "shot": { "type": "flyto", "range": 650, "pitch": -36, "heading": 140, "degrees": 60, "dir": -1 }
+      "location": {
+        "name": "The Moss Center",
+        "lat": 25.572,
+        "lon": -80.3712,
+        "h": 5
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -36,
+        "heading": 140,
+        "degrees": 60,
+        "dir": -1
+      }
     },
     {
       "kind": "item",
@@ -47,8 +93,20 @@
       "sub": "MDC Hialeah Campus",
       "emoji": "👻",
       "source": "The Miami Guide",
-      "location": { "name": "Miami Dade College Hialeah Campus", "lat": 25.8628, "lon": -80.3205, "h": 5 },
-      "shot": { "type": "flyto", "range": 700, "pitch": -36, "heading": 20, "degrees": 60, "dir": 1 }
+      "location": {
+        "name": "Miami Dade College Hialeah Campus",
+        "lat": 25.8628,
+        "lon": -80.3205,
+        "h": 5
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -36,
+        "heading": 20,
+        "degrees": 60,
+        "dir": 1
+      }
     },
     {
       "kind": "item",
@@ -58,10 +116,27 @@
       "badge": "OCT 31 · FREE",
       "sub": "Miami Beach · 5 p.m.–1 a.m.",
       "emoji": "🎃",
-      "stats": [{ "value": "50,000+", "label": "people usually show up" }],
+      "stats": [
+        {
+          "value": "50,000+",
+          "label": "people usually show up"
+        }
+      ],
       "source": "The Miami Guide",
-      "location": { "name": "Lincoln Road", "lat": 25.7907, "lon": -80.1395, "h": 5 },
-      "shot": { "type": "flyto", "range": 750, "pitch": -34, "heading": 270, "degrees": 60, "dir": -1 }
+      "location": {
+        "name": "Lincoln Road",
+        "lat": 25.7907,
+        "lon": -80.1395,
+        "h": 5
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 750,
+        "pitch": -34,
+        "heading": 270,
+        "degrees": 60,
+        "dir": -1
+      }
     },
     {
       "kind": "item",
@@ -72,8 +147,20 @@
       "sub": "Wynwood Marketplace",
       "emoji": "🦇",
       "source": "The Miami Guide",
-      "location": { "name": "Wynwood Marketplace", "lat": 25.7997, "lon": -80.1990, "h": 5 },
-      "shot": { "type": "flyto", "range": 700, "pitch": -36, "heading": 200, "degrees": 60, "dir": 1 }
+      "location": {
+        "name": "Wynwood Marketplace",
+        "lat": 25.7997,
+        "lon": -80.199,
+        "h": 5
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -36,
+        "heading": 200,
+        "degrees": 60,
+        "dir": 1
+      }
     },
     {
       "kind": "outro",
@@ -81,8 +168,18 @@
       "caption": "Halloween is the one night all of Miami is out in costume, so you never really know who you just walked past, and that's the part NEAR is for. Tag who you're going with.",
       "overlay": "WHICH ONE ARE YOU HITTING? 🎃",
       "sub": "Follow for more South Florida",
-      "location": { "name": "Wynwood", "lat": 25.8010, "lon": -80.1990, "h": 20 },
-      "shot": { "type": "pullout", "range": 1500, "pitch": -32, "heading": 230 }
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.801,
+        "lon": -80.199,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 230
+      }
     }
   ],
   "igCaption": "You don't need to spend a dollar this Halloween 🎃 Free in South Florida:\n\nOct 17: Trunk-or-treat at Christ Church, Fort Lauderdale (5–7:30pm)\nOct 23: Halloween at the Moss Center, Cutler Bay (6–9pm, reserve free tickets)\nOct 29: Halloween party + haunted house at MDC Hialeah Campus (4–8pm)\nOct 31: Lincoln Road block party, Miami Beach (kids 5–7pm, party till 1am)\nOct 31: HalloWYN at Wynwood Marketplace (free)\n\nTag who you're going with 👻\n\n#MiamiHalloween #SouthFlorida #MiamiEvents #FreeThingsToDo",
