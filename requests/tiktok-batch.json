@@ -1,4 +1,10 @@
 {
- "clearPending": true,
- "items": []
+  "items": [
+    {
+      "label": "042-lets-go-here-weekend",
+      "video": "https://github.com/lolerman123456/miami-reels/releases/download/videos/042-lets-go-here-weekend.mp4",
+      "text": "Send this to who you're going with 👀 Let's go here this weekend #Miami #MiamiThingsToDo #SouthFlorida #MiamiWeekend",
+      "at": "2026-10-01T16:30:00-04:00"
+    }
+  ]
 }
