@@ -3,6 +3,7 @@
 //   node pipeline/parallel.mjs capture <episodeDir> <piece>   → renders one slice: 3D frames → clip → finished video part (graphics + captions)
 //   node pipeline/parallel.mjs finish <episodeDir> [--dry-run] → joins the parts, mixes narration + sound effects, posts
 import fs from 'node:fs';
+import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import { ROOT, FPS, WIDTH, HEIGHT, readJSON, writeJSON, run } from './util.mjs';
 import { prepareEpisode, buildProps } from './make.mjs';
@@ -109,6 +110,13 @@ if (cmd === 'prepare') {
   fs.writeFileSync(path.join(partsDir, 'list.txt'), parts.map(f => `file '${f}'`).join('\n'));
   const video = path.join(dir, 'video-silent.mp4');
   await run('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'concat', '-safe', '0', '-i', path.join(partsDir, 'list.txt'), '-c', 'copy', video]);
+  // a corrupt slice makes the concat stop early but still exit 0 (Oct 1: a 63 s Reel came out 24 s) — never ship that
+  const probe = f => parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', f]).toString()) || 0;
+  const got = probe(video);
+  if (got < duration - 1) {
+    const bad = parts.filter(f => { try { return !(probe(path.join(partsDir, f)) > 0); } catch { return true; } });
+    throw new Error(`joined video is ${got.toFixed(1)} s but the narration is ${duration.toFixed(1)} s — a slice is corrupt (${bad.join(', ') || 'unknown'}); re-run`);
+  }
 
   // audio: narration + the same sound-effect cues the composition uses
   const sfxDir = await ensureSfx();
