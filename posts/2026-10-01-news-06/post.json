@@ -1,0 +1,139 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "DEPUTIES SAY",
+    "main": "EX-MDC PROFESSOR AND",
+    "highlight": "MISSING 15-YEAR-OLD",
+    "bottom": "WERE FOUND AT HOTEL",
+    "blur": false,
+    "photo": {
+      "query": "Palm Coast Florida hotel police car night Wikimedia Commons",
+      "prompt": "dramatic night photo of sheriff vehicles outside a Palm Coast hotel, blue lights reflecting across the parking lot, no people visible"
+    },
+    "emojis": [
+      "🚔",
+      "🏨",
+      "⚠️"
+    ],
+    "logos": [
+      "mdc.edu"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "A former Miami Dade College professor was re-arrested",
+      "highlight": "re-arrested",
+      "body": "Richard Tapia, 46, was re-arrested after deputies say he was found with a missing 15-year-old girl at a Palm Coast hotel.",
+      "place": "Palm Coast",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Palm Coast Florida hotel exterior police car Wikimedia Commons",
+        "prompt": "police cruiser with flashing lights parked outside a Florida hotel entrance at night, no people visible"
+      },
+      "emoji": "🚔",
+      "chip": "AGE 46",
+      "logo": "mdc.edu",
+      "mark": "stamp: ARRESTED",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Deputies say the first arrest happened in July",
+      "highlight": "July",
+      "body": "Authorities said Tapia was originally arrested in July after he was found with the missing 15-year-old girl.",
+      "place": "Palm Coast",
+      "source": "facebook.com",
+      "photo": {
+        "query": "Flagler County Sheriff's Office vehicle Palm Coast Wikimedia Commons",
+        "prompt": "Flagler County sheriff vehicle outside a hotel parking lot in Palm Coast, late-night crime scene lighting, no people visible"
+      },
+      "emoji": "📍",
+      "chip": "JULY",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "DNA evidence led to the new charges",
+      "highlight": "DNA evidence",
+      "body": "Investigators said DNA evidence led to Tapia’s new arrest on child sex charges.",
+      "place": "Flagler County",
+      "source": "Observer Local News",
+      "photo": {
+        "query": "forensic DNA evidence laboratory Wikimedia Commons",
+        "prompt": "close-up of forensic evidence bags and DNA testing equipment on a lab table under bright lights"
+      },
+      "emoji": "🧬",
+      "chip": "DNA",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The accusation involves sexual assault",
+      "highlight": "sexual assault",
+      "body": "Tapia is accused of sexually assaulting the missing 15-year-old girl.",
+      "place": "Palm Coast",
+      "source": "WPEC",
+      "photo": {
+        "query": "Florida police crime scene tape hotel Wikimedia Commons",
+        "prompt": "crime scene tape near a Florida hotel hallway with patrol lights in the background, no people visible"
+      },
+      "emoji": "⚠️",
+      "chip": "15 YEARS",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case reaches Miami-Dade through MDC",
+      "highlight": "Miami-Dade",
+      "body": "Tapia was identified as a former Miami Dade College professor, tying the Flagler County case to a public college in Miami-Dade County.",
+      "place": "Miami-Dade County",
+      "source": "News4JAX",
+      "photo": {
+        "query": "Miami Dade College campus building Wikimedia Commons",
+        "prompt": "wide exterior of a Miami Dade College campus building in daylight, no recognizable people"
+      },
+      "emoji": "🏫",
+      "chip": "MDC",
+      "logo": "mdc.edu",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Investigators say more victims are possible",
+      "highlight": "more victims",
+      "body": "Tapia faces child sex charges, and investigators say more victims are possible.",
+      "place": "Florida",
+      "source": "WESH",
+      "photo": {
+        "query": "Florida sheriff patrol lights night Wikimedia Commons",
+        "prompt": "close-up of sheriff patrol lights and crime scene tape on a dark Florida street, no people visible"
+      },
+      "emoji": "🔎",
+      "chip": "SEP 30",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Deputies say former Miami Dade College professor Richard Tapia was re-arrested after investigators connected a Palm Coast hotel encounter with a missing 15-year-old girl to new child sex charges.\nInvestigators say more victims are possible.",
+  "hashtags": [
+    "#MiamiDadeCollege",
+    "#PalmCoast"
+  ],
+  "collaborators": [],
+  "igCaption": "Deputies say former Miami Dade College professor Richard Tapia was re-arrested after investigators connected a Palm Coast hotel encounter with a missing 15-year-old girl to new child sex charges.\nInvestigators say more victims are possible.\n\n📰 Sources: NBC 6 South Florida, facebook.com, Observer Local News, WPEC, News4JAX, WESH\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiDadeCollege #PalmCoast #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-01",
+  "id": "2026-10-01-news-06"
+}
