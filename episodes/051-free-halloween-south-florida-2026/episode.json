@@ -1,0 +1,94 @@
+{
+  "id": "051-free-halloween-south-florida-2026",
+  "title": "Free Halloween in South Florida 2026",
+  "voice": { "provider": "openai", "voice": "ash", "speed": 1.14 },
+  "music": true,
+  "tiktok": true,
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "You don't need to spend a dollar this Halloween. Here's what's free in South Florida.",
+      "caption": "You don't need to spend a dollar this Halloween. Here's what's free in South Florida.",
+      "overlay": ["FREE HALLOWEEN", "IN SOUTH FLORIDA 🎃"],
+      "emojis": ["🎃", "👻", "🍬", "🦇"],
+      "location": { "name": "Miami", "lat": 25.7743, "lon": -80.1937, "h": 10 },
+      "shot": { "type": "dive", "range": 1600, "pitch": -34, "heading": 30 }
+    },
+    {
+      "kind": "item",
+      "text": "Start October seventeenth in Fort Lauderdale. Christ Church throws a free trunk or treat on its field off Commercial Boulevard, from five to seven thirty.",
+      "caption": "Start Oct. 17 in Fort Lauderdale. Christ Church throws a free trunk-or-treat on its field off Commercial Boulevard, from 5 to 7:30 p.m.",
+      "overlay": "TRUNK OR TREAT",
+      "badge": "OCT 17 · FREE",
+      "sub": "Christ Church · Fort Lauderdale",
+      "emoji": "🚗",
+      "source": "South Florida on the Cheap",
+      "location": { "name": "Christ Church Fort Lauderdale", "lat": 26.1873, "lon": -80.1135, "h": 5 },
+      "shot": { "type": "flyto", "range": 700, "pitch": -36, "heading": 60, "degrees": 60, "dir": 1 }
+    },
+    {
+      "kind": "item",
+      "text": "On October twenty third, the Moss Center in Cutler Bay throws a free Halloween night, with a spooky symphony, treats, and costumes. Tickets are free, but reserve them early.",
+      "caption": "On Oct. 23, the Moss Center in Cutler Bay throws a free Halloween night, with a spooky symphony, treats, and costumes. Tickets are free, but reserve them early.",
+      "overlay": "THE MOSS CENTER",
+      "badge": "OCT 23 · FREE",
+      "sub": "Cutler Bay · 6–9 p.m. · reserve free tickets",
+      "emoji": "🎻",
+      "source": "Mommy Poppins",
+      "location": { "name": "The Moss Center", "lat": 25.5720, "lon": -80.3712, "h": 5 },
+      "shot": { "type": "flyto", "range": 650, "pitch": -36, "heading": 140, "degrees": 60, "dir": -1 }
+    },
+    {
+      "kind": "item",
+      "text": "October twenty ninth, Miami Dade College in Hialeah turns into a free Halloween party, with a haunted house, trick or treating, and giveaways, from four to eight.",
+      "caption": "Oct. 29, Miami Dade College in Hialeah turns into a free Halloween party, with a haunted house, trick-or-treating, and giveaways, from 4 to 8 p.m.",
+      "overlay": "HAUNTED HOUSE",
+      "badge": "OCT 29 · FREE",
+      "sub": "MDC Hialeah Campus",
+      "emoji": "👻",
+      "source": "The Miami Guide",
+      "location": { "name": "Miami Dade College Hialeah Campus", "lat": 25.8628, "lon": -80.3205, "h": 5 },
+      "shot": { "type": "flyto", "range": 700, "pitch": -36, "heading": 20, "degrees": 60, "dir": 1 }
+    },
+    {
+      "kind": "item",
+      "text": "On Halloween night, Lincoln Road becomes one giant free block party. Kids trick or treat from five to seven, then the party runs until one a.m. More than fifty thousand people usually show up.",
+      "caption": "On Halloween night, Lincoln Road becomes one giant free block party. Kids trick-or-treat from 5 to 7, then the party runs until 1 a.m. More than 50,000 people usually show up.",
+      "overlay": "LINCOLN ROAD",
+      "badge": "OCT 31 · FREE",
+      "sub": "Miami Beach · 5 p.m.–1 a.m.",
+      "emoji": "🎃",
+      "stats": [{ "value": "50,000+", "label": "people usually show up" }],
+      "source": "The Miami Guide",
+      "location": { "name": "Lincoln Road", "lat": 25.7907, "lon": -80.1395, "h": 5 },
+      "shot": { "type": "flyto", "range": 750, "pitch": -34, "heading": 270, "degrees": 60, "dir": -1 }
+    },
+    {
+      "kind": "item",
+      "text": "And for the adults, Hallo Win takes over Wynwood Marketplace the same night. It's free, with D J's and a whole costume crowd.",
+      "caption": "And for the adults, HalloWYN takes over Wynwood Marketplace the same night. It's free, with DJs and a whole costume crowd.",
+      "overlay": "HALLOWYN",
+      "badge": "OCT 31 · FREE",
+      "sub": "Wynwood Marketplace",
+      "emoji": "🦇",
+      "source": "The Miami Guide",
+      "location": { "name": "Wynwood Marketplace", "lat": 25.7997, "lon": -80.1990, "h": 5 },
+      "shot": { "type": "flyto", "range": 700, "pitch": -36, "heading": 200, "degrees": 60, "dir": 1 }
+    },
+    {
+      "kind": "outro",
+      "text": "Halloween is the one night all of Miami is out in costume, so you never really know who you just walked past, and that's the part NEAR is for. Tag who you're going with.",
+      "caption": "Halloween is the one night all of Miami is out in costume, so you never really know who you just walked past, and that's the part NEAR is for. Tag who you're going with.",
+      "overlay": "WHICH ONE ARE YOU HITTING? 🎃",
+      "sub": "Follow for more South Florida",
+      "location": { "name": "Wynwood", "lat": 25.8010, "lon": -80.1990, "h": 20 },
+      "shot": { "type": "pullout", "range": 1500, "pitch": -32, "heading": 230 }
+    }
+  ],
+  "igCaption": "You don't need to spend a dollar this Halloween 🎃 Free in South Florida:\n\nOct 17: Trunk-or-treat at Christ Church, Fort Lauderdale (5–7:30pm)\nOct 23: Halloween at the Moss Center, Cutler Bay (6–9pm, reserve free tickets)\nOct 29: Halloween party + haunted house at MDC Hialeah Campus (4–8pm)\nOct 31: Lincoln Road block party, Miami Beach (kids 5–7pm, party till 1am)\nOct 31: HalloWYN at Wynwood Marketplace (free)\n\nTag who you're going with 👻\n\n#MiamiHalloween #SouthFlorida #MiamiEvents #FreeThingsToDo",
+  "sources": [
+    "Mommy Poppins: Halloween at The Moss Center, Oct 23 2026, 6–9pm, 10950 SW 211 St, free tickets reserved in advance",
+    "The Miami Guide (Best Halloween Events in Miami 2026): HalloWYN Oct 31 free; Lincoln Road block party Oct 31 5pm–1am, trick-or-treating 5–7, 50,000+ typically; Hialeah Cares party Oct 29 4–8pm MDC Hialeah 1780 W 49th St, free",
+    "South Florida on the Cheap: Christ Church Trunk or Treat, Sat Oct 17 2026, 5–7:30pm, Christ Church Field, Commercial Blvd & 24th Terrace, free"
+  ]
+}
