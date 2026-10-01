@@ -1,0 +1,199 @@
+{
+  "title": "Miami Weekend Guide: October 2 to 4, 2026",
+  "sources": [
+    "Miami New Times: The best free concerts happening in Miami this October",
+    "Miami New Times: The best things to do with family in Miami in October"
+  ],
+  "collaborators": [],
+  "igCaption": "This weekend: House of Horror at Tropical Park runs Friday and Saturday from 6 p.m. to midnight, and Sunday from 6 to 11 p.m.\nFree music picks: Airhockey at Las Rosas Saturday at 10 p.m., and French Horn Collective at Lummus Park Sunday from 6 to 7:30 p.m.\nClifford is at The Parker Sunday at 1 p.m. with tickets at $23.60.\n\nSources: Miami New Times: The best free concerts happening in Miami this October, Miami New Times: The best things to do with family in Miami in October\n\n#MiamiEvents #SouthFlorida #MiamiWeekend #FortLauderdale",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Weekend plans for October second through fourth: Miami has haunted houses, two free concerts, and Clifford in Fort Lauderdale.",
+      "overlay": [
+        "WEEKEND GUIDE",
+        "OCT 2 TO 4"
+      ],
+      "emojis": [
+        "🎃",
+        "🎸",
+        "🎷",
+        "🐾"
+      ],
+      "location": {
+        "name": "Bayfront Park",
+        "lat": 25.7753,
+        "lon": -80.1868,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 120
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Friday and Saturday, House of Horror Haunted Carnival at Tropical Park runs from six p.m. to midnight. On Sunday, it runs six to eleven p.m. It has haunted houses, carnival rides, scare zones, and House of Little Horrors for younger kids. Food and beverages are available for purchase.",
+      "caption": "Friday and Saturday, House of Horror Haunted Carnival at Tropical Park runs from 6 p.m. to midnight. On Sunday, it runs 6 to 11 p.m. It has haunted houses, carnival rides, scare zones, and House of Little Horrors for younger kids. Food and beverages are available for purchase.",
+      "overlay": "TROPICAL PARK",
+      "badge": "6 p.m. OPEN",
+      "sub": "Haunted carnival",
+      "emoji": "🎃",
+      "stats": [
+        {
+          "value": "6 p.m.",
+          "label": "Opens"
+        },
+        {
+          "value": "11 p.m.",
+          "label": "Sunday close"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Tropical Park",
+        "lat": 25.7333,
+        "lon": -80.3202,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 260,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Saturday night starts at Las Rosas on Northwest Seventh Avenue. Airhockey plays at ten p.m. on October third, with Augusto, Ana No Duerme, and DJ sets by Micelady and Moni Musique. The show is free.",
+      "caption": "Saturday night starts at Las Rosas on NW 7th Ave. Airhockey plays at 10 p.m. on Oct. 3, with Augusto, Ana No Duerme, and DJ sets by Micelady and Moni Musique. The show is free.",
+      "overlay": "LAS ROSAS",
+      "badge": "10 p.m.",
+      "sub": "NW 7th Ave",
+      "emoji": "🎸",
+      "stats": [
+        {
+          "value": "10 p.m.",
+          "label": "Start time"
+        },
+        {
+          "value": "Oct. 3",
+          "label": "Show date"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Las Rosas",
+        "lat": 25.8035,
+        "lon": -80.2078,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 30,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sunday on Ocean Drive, French Horn Collective plays the Ocean Drive Promenade Music Series at Lummus Park. The set runs six to seven thirty p.m. on October fourth. Vincent Raffard's group celebrates Francophone music through French Gypsy jazz. Admission is free.",
+      "caption": "Sunday on Ocean Drive, French Horn Collective plays the Ocean Drive Promenade Music Series at Lummus Park. The set runs 6 to 7:30 p.m. on Oct. 4. Vincent Raffard's group celebrates Francophone music through French Gypsy jazz. Admission is free.",
+      "overlay": "LUMMUS PARK",
+      "badge": "Free 6 p.m.",
+      "sub": "Ocean Drive series",
+      "emoji": "🎷",
+      "stats": [
+        {
+          "value": "6 p.m.",
+          "label": "Start time"
+        },
+        {
+          "value": "7:30 p.m.",
+          "label": "End time"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Lummus Park",
+        "lat": 25.7827,
+        "lon": -80.1309,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 210,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For families Sunday, Clifford the Big Red Dog: The Musical is at The Parker in Fort Lauderdale. It starts at one p.m. on October fourth. Tickets cost twenty-three dollars and sixty cents, and every person entering needs a ticket.",
+      "caption": "For families Sunday, Clifford the Big Red Dog: The Musical is at The Parker in Fort Lauderdale. It starts at 1 p.m. on Oct. 4. Tickets cost $23.60, and every person entering needs a ticket.",
+      "overlay": "THE PARKER",
+      "badge": "$23.60",
+      "sub": "Fort Lauderdale",
+      "emoji": "🐾",
+      "stats": [
+        {
+          "value": "1 p.m.",
+          "label": "Start time"
+        },
+        {
+          "value": "$23.60",
+          "label": "Ticket price"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "The Parker",
+        "lat": 26.1199,
+        "lon": -80.1489,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 340,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Tag the friend who needs plans for October second through fourth. If you go, NEAR can show who walked past you between stops.",
+      "overlay": "TAG A FRIEND 🎟️",
+      "sub": "October 2 to 4",
+      "location": {
+        "name": "The Parker",
+        "lat": 26.1199,
+        "lon": -80.1489,
+        "h": 35
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 120
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "043-miami-weekend-guide-october-2-to-4-2026"
+}
