@@ -1,0 +1,125 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "FEDS SAY",
+    "main": "SOUTH FLORIDA SIBLINGS' SUBWAY VENDOR SCHEME COST",
+    "highlight": "ABOUT $80M",
+    "bottom": "",
+    "blur": false,
+    "photo": {
+      "query": "Subway restaurant storefront at night Florida",
+      "prompt": "dramatic night photo of a Subway storefront in a South Florida strip mall, green and yellow sign glowing, wet pavement, no people visible",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "🥪",
+      "💸",
+      "⚖️"
+    ],
+    "logos": [
+      "subway.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Feds say Subway vendor scheme cost about $80M",
+      "highlight": "about $80M",
+      "body": "Federal prosecutors say a South Florida sibling duo steered Subway franchisees into preferred vendors tied to kickbacks, costing owners about $80 million.",
+      "place": "South Florida",
+      "source": "local10.com",
+      "photo": {
+        "query": "Subway restaurant exterior sign strip mall Florida",
+        "prompt": "low-angle photo of a Subway sign on a Florida strip mall storefront with dramatic late-day shadows, no people visible"
+      },
+      "color": "#009743",
+      "emoji": "💸",
+      "chip": "$80M",
+      "logo": "subway.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The siblings were federally charged Thursday",
+      "highlight": "federally charged",
+      "body": "The case was announced Thursday, Oct. 1. Prosecutors describe it as an alleged Subway franchise kickback and bribery scheme.",
+      "place": "South Florida",
+      "source": "WPEC",
+      "photo": {
+        "query": "federal courthouse Miami Florida exterior flags",
+        "prompt": "dramatic exterior of a federal courthouse in South Florida with U.S. flags, courthouse steps and heavy shadows, no people visible"
+      },
+      "emoji": "⚖️",
+      "chip": "THU 10/1",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Prosecutors say owners had to use preferred vendors",
+      "highlight": "preferred vendors",
+      "body": "Prosecutors say Subway restaurant owners were forced to use preferred vendors as part of the alleged kickback scheme.",
+      "place": "South Florida",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "restaurant supply delivery boxes loading dock",
+        "prompt": "restaurant supply boxes stacked beside a delivery truck at a commercial loading area, photographed like evidence, no people visible"
+      },
+      "emoji": "📦",
+      "chip": "VENDORS",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The indictment says franchisees were targeted",
+      "highlight": "franchisees",
+      "body": "The indictment describes an alleged $80 million bribery scheme targeting Subway restaurant owners.",
+      "place": "South Florida",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Subway restaurant counter empty sandwich shop",
+        "prompt": "empty Subway sandwich counter with ingredient trays and register visible, shot from a low angle with newsroom-style contrast"
+      },
+      "color": "#009743",
+      "emoji": "🏪",
+      "chip": "OWNERS",
+      "logo": "subway.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "A Pinecrest woman is part of the case",
+      "highlight": "Pinecrest woman",
+      "body": "A Pinecrest woman was charged in the $80 million Subway kickback case, tying the federal case directly to Miami-Dade.",
+      "place": "Pinecrest",
+      "source": "Hoodline",
+      "photo": {
+        "query": "Pinecrest Florida village sign",
+        "prompt": "dramatic street-level photo of a Pinecrest, Florida neighborhood sign or municipal building exterior, no people visible"
+      },
+      "emoji": "📍",
+      "chip": "PINECREST",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Federal prosecutors say a South Florida sibling duo steered Subway franchisees into preferred vendors tied to kickbacks, costing owners about $80 million.\n\nIf you owned a franchise, what vendor rule would you want explained first?",
+  "hashtags": [
+    "#SouthFloridaNews",
+    "#Subway"
+  ],
+  "collaborators": [],
+  "igCaption": "Federal prosecutors say a South Florida sibling duo steered Subway franchisees into preferred vendors tied to kickbacks, costing owners about $80 million.\n\nIf you owned a franchise, what vendor rule would you want explained first?\n\n📰 Sources: local10.com, WPEC, NBC 6 South Florida, Hoodline\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaNews #Subway #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-01",
+  "id": "2026-10-01-news-18"
+}
