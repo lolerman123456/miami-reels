@@ -35,6 +35,22 @@ export function sfxCues(scenes) {
         add(s.from + statAt(s, i) + 19, hard ? 'impact' : 'pop', hard ? 0.4 : 0.2);
       });
     }
+    if (s.screen) {
+      // how-to walkthrough: window slides in, keys tick while typing, clicks pop, results / claim ding
+      add(s.from + Math.round(s.duration * (s.screen.at ?? 0.15)), 'whoosh', 0.45);
+      (s.screen.steps || []).forEach(st => {
+        const n = st.do === 'url' ? (s.screen.site || '').length : (st.text || '').length;
+        const t0 = s.from + st.t + (st.do === 'url' ? 4 : 6);
+        if (st.do === 'url' || st.do === 'type') {
+          for (let c = 0; c < n; c += 2) add(t0 + c * 2, 'tick', 0.22);
+          if (st.do === 'url') add(t0 + n * 2 + 4, 'pop', 0.4); // enter
+        } else {
+          add(s.from + st.t, 'pop', 0.6);
+          if (st.do === 'click' && st.target !== 'claim') { add(s.from + st.t + 16, 'ding', 0.4); add(s.from + st.t + 20, 'count', 0.35); }
+          if (st.target === 'claim') add(s.from + st.t + 8, 'ding', 0.55);
+        }
+      });
+    }
     if (s === last && s.from > 45) add(s.from - 40, 'riser', hard ? 0.4 : 0.22);
     if (s.alert) add(s.from + ALERT_AT, hard ? 'crash' : 'boom', hard ? 0.6 : 0.3);
     if (s.kind === 'outro') { add(s.from + 3, 'ding', hard ? 0.45 : 0.3); if (hard) add(s.from + 2, 'impact', 0.35); }

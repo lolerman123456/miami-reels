@@ -5,6 +5,7 @@ import {
 } from 'remotion';
 // @ts-ignore plain JS module shared with the node pipeline
 import { sfxCues, statAt } from './cues.js';
+import { Screen, ScreenSpec } from './Screen';
 
 export type Word = { text: string; start: number; end: number; scene: number };
 export type Scene = {
@@ -20,6 +21,7 @@ export type Scene = {
   image?: { file: string; path: { x: number; y: number; zoom: number; at?: number }[] | null; label: string } | null; // AI render instead of the map
   photos?: { files: { file: string; credit: string }[]; at: number; style?: string | null } | null; // real photos after the 3D orbit ('fast' = TikTok punch cuts)
   reveal?: { at: number; text: string; label?: string | null } | null; // guess-it game: countdown, then the answer pops
+  screen?: ScreenSpec | null; // how-to walkthrough: a browser window with typing, clicks and results
   stats?: { value: string; label: string }[] | null; // big numbers that count up while the narrator says them
   source?: string | null; // where the facts come from, shown small
   hit?: string | null;
@@ -283,9 +285,11 @@ const Item: React.FC<{ scene: Scene }> = ({ scene }) => {
   const frame = useCurrentFrame();
   const e1 = ease(frame, 2, 9), e2 = ease(frame, 7, 9), e3 = ease(frame, 12, 9);
   const badge = scene.badge || '';
+  // a how-to screen takes over the frame: the place header fades out as the browser window slides in
+  const hide = scene.screen ? 1 - ease(frame, Math.round(scene.duration * scene.screen.at) - 6, 8) : 1;
   return (
     <AbsoluteFill>
-      <div style={{ position: 'absolute', top: 200, left: 60, right: 60, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 14 }}>
+      <div style={{ position: 'absolute', opacity: hide, top: 200, left: 60, right: 60, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 14 }}>
         {(badge || scene.rank != null) && (
           <div style={{ opacity: e1, transform: `translateX(${(1 - e1) * -40}px)`, display: 'flex', gap: 12 }}>
             {scene.rank != null && (
@@ -313,6 +317,7 @@ const Item: React.FC<{ scene: Scene }> = ({ scene }) => {
       {scene.source && <SourceTag text={scene.source} />}
       {scene.alert && <AlertBanner text={scene.alert} at={ALERT_AT} />}
       {scene.reveal && <Reveal scene={scene} />}
+      {scene.screen && <Screen spec={scene.screen} duration={scene.duration} />}
     </AbsoluteFill>
   );
 };

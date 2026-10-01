@@ -1,0 +1,124 @@
+{
+  "id": "050-florida-might-owe-you-money",
+  "title": "Florida might owe you money",
+  "voice": { "provider": "openai", "voice": "ash", "speed": 1.16 },
+  "music": true,
+  "tiktok": true,
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Florida might owe you money. And you probably have no idea.",
+      "caption": "Florida might owe you money. And you probably have no idea.",
+      "overlay": ["FLORIDA MIGHT", "OWE YOU MONEY 💸"],
+      "emojis": ["💸", "🏦", "💰", "👀"],
+      "location": { "name": "Miami", "lat": 25.7743, "lon": -80.1937, "h": 10 },
+      "shot": { "type": "dive", "range": 1600, "pitch": -34, "heading": 160 }
+    },
+    {
+      "kind": "item",
+      "text": "Right now, the state is holding about four and a half billion dollars that belongs to regular people. That's money for about one in five Floridians.",
+      "caption": "Right now, the state is holding about $4.5 billion that belongs to regular people. That's money for about 1 in 5 Floridians.",
+      "overlay": "TALLAHASSEE",
+      "badge": "$4.5 BILLION",
+      "sub": "Unclaimed money held by the state",
+      "emoji": "🏛️",
+      "stats": [{ "value": "$4.5B", "label": "waiting to be claimed" }, { "value": "1 in 5", "label": "Floridians are owed" }],
+      "source": "Tampa Bay Times",
+      "location": { "name": "Florida State Capitol", "lat": 30.4381, "lon": -84.2816, "h": 30 },
+      "shot": { "type": "flyto", "range": 900, "pitch": -36, "heading": 40, "degrees": 60, "dir": 1 }
+    },
+    {
+      "kind": "item",
+      "text": "It comes from old bank accounts, deposits, refunds, insurance payouts, and checks you never cashed. If a company can't find you for years, it has to hand that money to the state.",
+      "caption": "It comes from old bank accounts, deposits, refunds, insurance payouts, and checks you never cashed. If a company can't find you for years, it has to hand that money to the state.",
+      "overlay": "WHY YOU'RE OWED",
+      "badge": "FORGOTTEN MONEY",
+      "sub": "Old accounts · deposits · refunds · uncashed checks",
+      "emoji": "🏦",
+      "source": "Florida CFO",
+      "location": { "name": "Brickell", "lat": 25.7650, "lon": -80.1936, "h": 20 },
+      "shot": { "type": "flyto", "range": 1600, "pitch": -32, "heading": 300, "degrees": 60, "dir": -1 }
+    },
+    {
+      "kind": "item",
+      "text": "Here's how to check. Go to F L Treasure Hunt dot gov. Type your last name. Then your first name. Leave the city blank, and hit search.",
+      "caption": "Here's how to check. Go to FLTreasureHunt.gov. Type your last name. Then your first name. Leave the city blank, and hit search.",
+      "overlay": "HOW TO CHECK",
+      "badge": "100% FREE",
+      "emoji": "💻",
+      "location": { "name": "Coral Way", "lat": 25.7505, "lon": -80.2310, "h": 10 },
+      "shot": { "type": "flyto", "range": 900, "pitch": -36, "heading": 90, "degrees": 40, "dir": 1 },
+      "screen": {
+        "at": 0.1,
+        "site": "fltreasurehunt.gov",
+        "fields": [{ "label": "Last name" }, { "label": "First name" }, { "label": "City", "hint": "leave blank" }],
+        "steps": [
+          { "do": "url", "cue": "treasure" },
+          { "do": "type", "field": 0, "text": "GARCIA", "cue": "last" },
+          { "do": "type", "field": 1, "text": "MARIA", "cue": "first" },
+          { "do": "click", "target": "search", "cue": "search" }
+        ],
+        "query": "GARCIA MARIA",
+        "results": [
+          { "name": "GARCIA, MARIA", "where": "MIAMI, FL", "kind": "Bank account", "amount": "$1,248.37" },
+          { "name": "GARCIA, MARIA", "where": "HIALEAH, FL", "kind": "Utility deposit", "amount": "$312.00" },
+          { "name": "GARCIA, MARIA E", "where": "MIAMI, FL", "kind": "Insurance payout", "amount": "$4,906.12" }
+        ]
+      }
+    },
+    {
+      "kind": "item",
+      "text": "If your name pops up, check the box, hit claim, and upload your ID. It's completely free, and claims usually take thirty to ninety days. Never pay anyone to search for you.",
+      "caption": "If your name pops up, check the box, hit claim, and upload your ID. It's completely free, and claims usually take 30 to 90 days. Never pay anyone to search for you.",
+      "overlay": "CLAIM IT",
+      "badge": "30–90 DAYS",
+      "emoji": "✅",
+      "location": { "name": "Coral Way", "lat": 25.7505, "lon": -80.2310, "h": 10 },
+      "shot": { "type": "orbit", "range": 900, "pitch": -36, "heading": 130, "degrees": 40, "dir": 1 },
+      "screen": {
+        "at": 0.02,
+        "start": "results",
+        "site": "fltreasurehunt.gov",
+        "query": "GARCIA MARIA",
+        "results": [
+          { "name": "GARCIA, MARIA", "where": "MIAMI, FL", "kind": "Bank account", "amount": "$1,248.37" },
+          { "name": "GARCIA, MARIA", "where": "HIALEAH, FL", "kind": "Utility deposit", "amount": "$312.00" },
+          { "name": "GARCIA, MARIA E", "where": "MIAMI, FL", "kind": "Insurance payout", "amount": "$4,906.12" }
+        ],
+        "steps": [
+          { "do": "check", "row": 2, "cue": "box" },
+          { "do": "click", "target": "claim", "cue": "claim" }
+        ]
+      }
+    },
+    {
+      "kind": "item",
+      "text": "And people are cashing in. In March, Florida returned a record ninety two million dollars. Eighteen million of that went to the Miami area. Some people even get back jewelry and coins from old safe deposit boxes.",
+      "caption": "And people are cashing in. In March, Florida returned a record $92 million. $18 million of that went to the Miami area. Some people even get back jewelry and coins from old safe deposit boxes.",
+      "overlay": "PEOPLE ARE CASHING IN",
+      "badge": "RECORD MONTH",
+      "sub": "Miami area, March 2026",
+      "emoji": "💰",
+      "stats": [{ "value": "$92M", "label": "returned in March" }, { "value": "$18M", "label": "to the Miami area" }],
+      "source": "Florida CFO",
+      "location": { "name": "Downtown Miami", "lat": 25.7753, "lon": -80.1901, "h": 20 },
+      "shot": { "type": "flyto", "range": 1700, "pitch": -32, "heading": 200, "degrees": 60, "dir": 1 }
+    },
+    {
+      "kind": "outro",
+      "text": "Most of what's yours in this city goes unnoticed, like money sitting in a state account, or the people you cross paths with every day, and that second one is what NEAR is for. Now check your name, and send this to someone who needs it.",
+      "caption": "Most of what's yours in this city goes unnoticed, like money sitting in a state account, or the people you cross paths with every day, and that second one is what NEAR is for. Now check your name, and send this to someone who needs it.",
+      "overlay": "CHECK YOUR NAME 👀",
+      "sub": "Follow for more South Florida",
+      "location": { "name": "Brickell", "lat": 25.7617, "lon": -80.1918, "h": 20 },
+      "shot": { "type": "pullout", "range": 1600, "pitch": -32, "heading": 250 }
+    }
+  ],
+  "igCaption": "Florida might owe you money 💸 and most people never check.\n\nThe state is holding about $4.5 billion in unclaimed money: old bank accounts, deposits, refunds, insurance payouts, uncashed checks. About 1 in 5 Floridians has some.\n\nHow to check (free):\n1. Go to FLTreasureHunt.gov\n2. Type your last + first name, leave city blank\n3. If you show up: check the box → Claim → upload your ID\nClaims take about 30–90 days. Never pay anyone to search for you.\n\nIn March alone Florida returned a record $92M, $18M of it to the Miami area.\n\nSend this to someone who needs to check 👀\n\n#Miami #SouthFlorida #Florida #MoneyTips",
+  "sources": [
+    "Tampa Bay Times, Sep 20 2026: $4.5 billion held, ~4 million Floridians (1 in 5)",
+    "Florida CFO press release, Apr 16 2026: record $92M returned in March, $18M Miami area",
+    "WPTV / Florida CFO, Aug 2026: property types, FLTreasureHunt.gov, no cost to search or claim",
+    "FLTreasureHunt.gov FAQ; claims typically 30–90 days (Tampa Bay Times summary)"
+  ]
+}

@@ -75,12 +75,37 @@ export function buildProps(episode, timeline, duration, captions, videos, music 
       image: s.image?.file ? { file: s.image.file, path: timeFocus(s.image, i, captions, timeline), label: s.image.label ?? 'AI RENDER' } : null,
       photos: s.photos?.files?.length ? { files: s.photos.files, at: s.photos.at ?? 0.4, style: s.photos.style ?? null } : null,
       reveal: s.reveal ?? null,
+      screen: s.screen ? timeScreen(s.screen, i, captions, timeline) : null,
       stats: s.stats ?? null, source: s.source ?? null, hit: s.hit ?? null, shotType: s.shot?.type ?? null, sfx: episode.sfx ?? 'hard',
       from: Math.round(timeline[i].start * FPS),
       duration: Math.round(timeline[i].duration * FPS),
       video: videos[i],
     })),
   };
+}
+
+// How-to screens: each step happens on the word the narrator says ("cue"), typing a few frames early so the letters land
+// with the word; steps never overlap. Without a matching word (or without captions) steps are spread evenly.
+function timeScreen(screen, sceneIndex, captions, timeline) {
+  const words = (captions || []).filter(w => w.scene === sceneIndex);
+  const start = timeline[sceneIndex].start, dur = Math.round(timeline[sceneIndex].duration * FPS);
+  const norm = t => String(t).toLowerCase().replace(/[^a-z0-9]/g, '');
+  const open = Math.round(dur * (screen.at ?? 0.15)) + 16;
+  const steps = screen.steps || [];
+  const len = s => (s.do === 'url' ? (screen.site || '').length : (s.text || '').length);
+  const endOf = (s, t) => t + (s.do === 'url' ? 12 + len(s) * 2 : s.do === 'type' ? 6 + len(s) * 2 : 8);
+  let from = 0, free = open;
+  const out = steps.map((s, k) => {
+    const key = norm(s.cue || '');
+    const hit = key ? words.findIndex((w, j) => j >= from && norm(w.text).startsWith(key.slice(0, 6))) : -1;
+    const lead = s.do === 'url' || s.do === 'type' ? 8 : 4;
+    let t = hit >= 0 ? Math.round((words[hit].start - start) * FPS) - lead : Math.round(open + ((dur - 20 - open) * k) / Math.max(1, steps.length));
+    if (hit >= 0) from = hit + 1;
+    t = Math.max(t, free + 14); // room for the cursor to glide over
+    free = endOf(s, t);
+    return { ...s, t };
+  });
+  return { ...screen, steps: out };
 }
 
 // Image scenes: move the camera to each focus spot exactly when the narrator says it. Each spot (after the opening full

@@ -112,7 +112,8 @@ if (cmd === 'prepare') {
 
   // audio: narration + the same sound-effect cues the composition uses
   const sfxDir = await ensureSfx();
-  const props = buildProps(episode, timeline, duration, [], []);
+  const capFile = path.join(dir, 'captions.json');
+  const props = buildProps(episode, timeline, duration, fs.existsSync(capFile) ? readJSON(capFile) : [], []); // captions time the how-to screens
   const cues = sfxCues(props.scenes);
   const inputs = ['-i', path.join(dir, 'narration.wav')];
   const chains = ['[1:a]aresample=48000,aformat=channel_layouts=stereo[a0]']; // input 0 is the video
