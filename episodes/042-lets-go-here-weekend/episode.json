@@ -144,16 +144,16 @@
       "overlay": "WHICH ONE FIRST? 👇",
       "sub": "Follow for more South Florida",
       "location": {
-        "name": "Biscayne Bay",
-        "lat": 25.7,
-        "lon": -80.2,
-        "h": 10
+        "name": "Brickell",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 20
       },
       "shot": {
         "type": "pullout",
-        "range": 1500,
-        "pitch": -34,
-        "heading": 300
+        "range": 1600,
+        "pitch": -32,
+        "heading": 250
       }
     }
   ]
