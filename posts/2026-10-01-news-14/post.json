@@ -1,0 +1,133 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "RICK ROSS",
+    "main": "WAS BOOKED IN MIAMI-DADE ON A",
+    "highlight": "FELONY STRANGULATION",
+    "bottom": "CHARGE, THEN SAID “I’M TOTALLY INNOCENT”",
+    "blur": false,
+    "photo": {
+      "query": "Rick Ross rapper outside Miami-Dade jail TGK",
+      "prompt": "dramatic news-style photo of Rick Ross outside a Miami-Dade jail entrance with camera flashes and police lights",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚔",
+      "⚖️",
+      "📍"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Rick Ross left TGK saying “I’m totally innocent”",
+      "highlight": "totally innocent",
+      "body": "Ross bonded out Thursday after his Miami-Dade booking in a domestic violence case.",
+      "place": "Miami-Dade",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Turner Guilford Knight Correctional Center Miami-Dade jail exterior",
+        "prompt": "tight nighttime shot of Miami-Dade's Turner Guilford Knight Correctional Center entrance with flashing police lights"
+      },
+      "emoji": "🚔",
+      "chip": "THU 10/1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police say an ex accused him at a Miami Beach home",
+      "highlight": "Miami Beach home",
+      "body": "Police say a woman accused Ross of strangling and hitting her during a domestic dispute at a Miami Beach home.",
+      "place": "Miami Beach",
+      "source": "CBS News",
+      "photo": {
+        "query": "Miami Beach residential street night police car",
+        "prompt": "Miami Beach residential street at night with a police cruiser parked outside a gated home"
+      },
+      "emoji": "🏠",
+      "chip": "EX-GF",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case includes felony battery by strangulation",
+      "highlight": "felony battery",
+      "body": "Ross faced a felony battery-by-strangulation charge, along with battery and domestic violence charges.",
+      "place": "Miami Beach",
+      "source": "WINK News",
+      "photo": {
+        "query": "Miami Beach Police Department vehicle night",
+        "prompt": "Miami Beach police SUV with red and blue lights outside a home at night"
+      },
+      "emoji": "⚖️",
+      "chip": "FELONY",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Ross is William Leonard Roberts II",
+      "highlight": "William Leonard Roberts II",
+      "body": "The rapper, born in Mississippi and raised in Carol City, built his career in South Florida before founding Maybach Music Group.",
+      "place": "South Florida",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Rick Ross rapper performing concert close up",
+        "prompt": "close-up concert photo of Rick Ross onstage with a microphone and dark stage lighting"
+      },
+      "emoji": "🎤",
+      "chip": "BACKGROUND",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Ross entered a not guilty plea",
+      "highlight": "not guilty",
+      "body": "Ross pleaded not guilty after the Miami Beach arrest on battery and domestic violence charges.",
+      "place": "Miami Beach",
+      "source": "Billboard",
+      "photo": {
+        "query": "Miami-Dade County courthouse exterior",
+        "prompt": "Miami-Dade courthouse exterior with steps, columns and a cloudy afternoon sky"
+      },
+      "emoji": "📄",
+      "chip": "PLEA",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case moved into court Thursday",
+      "highlight": "court Thursday",
+      "body": "Ross appeared in court after the arrest, and the case now proceeds through Miami-Dade.",
+      "place": "Miami-Dade",
+      "source": "abcnews.com",
+      "photo": {
+        "query": "Miami-Dade courtroom hallway courthouse",
+        "prompt": "Miami-Dade courthouse hallway with benches, fluorescent lights and a closed courtroom door"
+      },
+      "emoji": "🏛️",
+      "chip": "COURT",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Rick Ross was booked in Miami-Dade after police say his ex-girlfriend accused him of strangling and hitting her at a Miami Beach home. He bonded out, pleaded not guilty and denied the accusation outside TGK.\n\nWhat detail are you watching for next in this case?",
+  "hashtags": [
+    "#MiamiBeach",
+    "#RickRoss"
+  ],
+  "collaborators": [],
+  "igCaption": "Rick Ross was booked in Miami-Dade after police say his ex-girlfriend accused him of strangling and hitting her at a Miami Beach home. He bonded out, pleaded not guilty and denied the accusation outside TGK.\n\nWhat detail are you watching for next in this case?\n\n📰 Sources: WPLG Local 10, CBS News, WINK News, Wikipedia, Billboard, abcnews.com\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiBeach #RickRoss #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-01",
+  "id": "2026-10-01-news-14"
+}
