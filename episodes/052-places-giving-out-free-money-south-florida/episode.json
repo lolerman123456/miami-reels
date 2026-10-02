@@ -1,0 +1,84 @@
+{
+  "id": "052-places-giving-out-free-money-south-florida",
+  "title": "Places giving out free money in South Florida",
+  "voice": { "provider": "openai", "voice": "ash", "speed": 1.14 },
+  "music": true,
+  "tiktok": true,
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "These places in South Florida are giving out money, and most people have no idea.",
+      "caption": "These places in South Florida are giving out money, and most people have no idea.",
+      "overlay": ["PLACES GIVING OUT", "FREE MONEY 💸"],
+      "emojis": ["💸", "🏠", "💵", "👀"],
+      "location": { "name": "Miami", "lat": 25.7743, "lon": -80.1937, "h": 10 },
+      "shot": { "type": "dive", "range": 1600, "pitch": -34, "heading": 120 }
+    },
+    {
+      "kind": "item",
+      "text": "The City of Miami will put up to two hundred thousand dollars toward a first home in District Five, for buyers who qualify. It's a zero percent loan with no monthly payments, and it's forgiven if you keep the home for thirty years.",
+      "caption": "The City of Miami will put up to $200,000 toward a first home in District 5, for buyers who qualify. It's a 0% loan with no monthly payments, and it's forgiven if you keep the home for 30 years.",
+      "overlay": "CITY OF MIAMI",
+      "badge": "UP TO $200K",
+      "sub": "District 5 · first-time buyers",
+      "emoji": "🏠",
+      "stats": [{ "value": "$200,000", "label": "toward your first home" }, { "value": "0%", "label": "interest" }],
+      "source": "miami.gov",
+      "location": { "name": "Liberty City", "lat": 25.8320, "lon": -80.2120, "h": 5 },
+      "shot": { "type": "flyto", "range": 900, "pitch": -36, "heading": 40, "degrees": 60, "dir": 1 }
+    },
+    {
+      "kind": "item",
+      "text": "Broward County gives first time buyers up to eighty thousand dollars. There are no monthly payments, and after fifteen years in the home, it turns into a grant you never pay back.",
+      "caption": "Broward County gives first-time buyers up to $80,000. There are no monthly payments, and after 15 years in the home, it turns into a grant you never pay back.",
+      "overlay": "BROWARD COUNTY",
+      "badge": "UP TO $80K",
+      "sub": "Homebuyer Purchase Assistance",
+      "emoji": "🔑",
+      "stats": [{ "value": "$80,000", "label": "for first-time buyers" }, { "value": "15 YRS", "label": "then it's a grant" }],
+      "source": "NBC 6 / Broward County",
+      "location": { "name": "Downtown Fort Lauderdale", "lat": 26.1213, "lon": -80.1440, "h": 5 },
+      "shot": { "type": "arrive", "range": 1300, "pitch": -34, "heading": 200, "degrees": 50, "dir": -1 }
+    },
+    {
+      "kind": "item",
+      "text": "The University of Miami pays people to take part in research. Most psychology study visits take thirty minutes to an hour, and they're paid.",
+      "caption": "The University of Miami pays people to take part in research. Most psychology study visits take 30 minutes to an hour, and they're paid.",
+      "overlay": "UNIVERSITY OF MIAMI",
+      "badge": "GET PAID",
+      "sub": "Research studies · Coral Gables",
+      "emoji": "🧠",
+      "source": "UM Psychology",
+      "location": { "name": "University of Miami", "lat": 25.7190, "lon": -80.2790, "h": 5 },
+      "shot": { "type": "arrive", "range": 900, "pitch": -36, "heading": 300, "degrees": 50, "dir": 1 }
+    },
+    {
+      "kind": "item",
+      "text": "And plasma centers pay too. Centers in Hialeah and on Calle Ocho pay about fifty to eighty dollars a visit, and new donors can earn hundreds more in bonuses their first month.",
+      "caption": "And plasma centers pay too. Centers in Hialeah and on Calle Ocho pay about $50 to $80 a visit, and new donors can earn hundreds more in bonuses their first month.",
+      "overlay": "PLASMA CENTERS",
+      "badge": "$50–$80 A VISIT",
+      "sub": "Hialeah · Calle Ocho",
+      "emoji": "💵",
+      "source": "PlasmaPayCalculator",
+      "location": { "name": "Little Havana", "lat": 25.7655, "lon": -80.2190, "h": 5 },
+      "shot": { "type": "flyto", "range": 800, "pitch": -36, "heading": 90, "degrees": 60, "dir": -1 }
+    },
+    {
+      "kind": "outro",
+      "text": "Money like this sits right in your own neighborhood and most people never notice it, just like most of the people they pass every day, and that second part is what NEAR is for. Send this to someone who's trying to buy a house.",
+      "caption": "Money like this sits right in your own neighborhood and most people never notice it, just like most of the people they pass every day, and that second part is what NEAR is for. Send this to someone who's trying to buy a house.",
+      "overlay": "SEND THIS TO SOMEONE 💸",
+      "sub": "Follow for more South Florida",
+      "location": { "name": "Brickell", "lat": 25.7617, "lon": -80.1918, "h": 20 },
+      "shot": { "type": "pullout", "range": 1600, "pitch": -32, "heading": 250 }
+    }
+  ],
+  "igCaption": "Places giving out free money in South Florida 💸\n\n🏠 City of Miami: up to $200,000 toward a first home in District 5 (0% loan, no monthly payments, forgiven after 30 years) — 305-416-2080\n🔑 Broward County: up to $80,000 for first-time buyers, becomes a grant after 15 years\n🧠 University of Miami: paid research studies (30–60 min visits)\n💵 Plasma centers (Hialeah, Calle Ocho): about $50–$80 a visit + new donor bonuses\n\nIncome limits apply for the home programs. Send this to someone who's trying to buy a house 👀\n\n#Miami #SouthFlorida #FirstTimeHomeBuyer #MoneyTips",
+  "sources": [
+    "miami.gov District 5 Expanded First-Time Homebuyer Program: up to $200,000, 30-year deferred 0% loan, repaid if sold before 30 years, 120% AMI (140% first responders), $500k max price, 305-416-2080",
+    "NBC 6 Responds: Broward HPA up to $80,000, 15-year 0% second mortgage with no monthly payments that converts to a grant after 15 years, 80% AMI",
+    "University of Miami Psychology, Research Participation: most visits 30–60 minutes and compensated",
+    "PlasmaPayCalculator 2026: CSL Plasma Hialeah $50–75/visit, Octapharma Calle Ocho $50–80/visit, new donor bonuses"
+  ]
+}

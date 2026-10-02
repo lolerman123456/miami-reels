@@ -1,0 +1,93 @@
+{
+  "id": "053-miami-museums-that-are-free",
+  "title": "Miami museums that are free",
+  "voice": { "provider": "openai", "voice": "ash", "speed": 1.14 },
+  "music": true,
+  "tiktok": true,
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "These Miami museums are free, and most people pay anyway.",
+      "caption": "These Miami museums are free, and most people pay anyway.",
+      "overlay": ["MIAMI MUSEUMS", "THAT ARE FREE 🖼️"],
+      "emojis": ["🖼️", "🏛️", "🎨", "🗿"],
+      "location": { "name": "Miami", "lat": 25.7743, "lon": -80.1937, "h": 10 },
+      "shot": { "type": "dive", "range": 1600, "pitch": -34, "heading": 60 }
+    },
+    {
+      "kind": "item",
+      "text": "This weekend, October third and fourth, Bank of America cardholders get in free at the Freedom Tower, PAMM, the Bass, and MOCA. Just bring your card and your ID.",
+      "caption": "This weekend, Oct. 3 and 4, Bank of America cardholders get in free at the Freedom Tower, PAMM, the Bass, and MOCA. Just bring your card and your ID.",
+      "overlay": "FREEDOM TOWER",
+      "badge": "OCT 3–4 · FREE",
+      "sub": "Bank of America cardholders · Museums on Us",
+      "emoji": "💳",
+      "source": "Bank of America",
+      "location": { "name": "Freedom Tower", "lat": 25.7795, "lon": -80.1893, "h": 10 },
+      "shot": { "type": "flyto", "range": 1200, "pitch": -34, "heading": 250, "degrees": 60, "dir": 1 }
+    },
+    {
+      "kind": "item",
+      "text": "ICA Miami in the Design District is free every single day. Three floors of contemporary art, plus a sculpture garden.",
+      "caption": "ICA Miami in the Design District is free every single day. Three floors of contemporary art, plus a sculpture garden.",
+      "overlay": "ICA MIAMI",
+      "badge": "ALWAYS FREE",
+      "sub": "Miami Design District",
+      "emoji": "🎨",
+      "source": "Miami & Beaches",
+      "location": { "name": "ICA Miami", "lat": 25.8135, "lon": -80.1925, "h": 5 },
+      "shot": { "type": "flyto", "range": 650, "pitch": -36, "heading": 30, "degrees": 60, "dir": -1 }
+    },
+    {
+      "kind": "item",
+      "text": "On Miami Beach, the Wolfsonian is always free for Florida residents. Just show your ID.",
+      "caption": "On Miami Beach, the Wolfsonian is always free for Florida residents. Just show your ID.",
+      "overlay": "THE WOLFSONIAN",
+      "badge": "FREE WITH FL ID",
+      "sub": "South Beach",
+      "emoji": "🏛️",
+      "source": "Miami & Beaches",
+      "location": { "name": "The Wolfsonian-FIU", "lat": 25.7794, "lon": -80.1320, "h": 5 },
+      "shot": { "type": "flyto", "range": 650, "pitch": -36, "heading": 120, "degrees": 60, "dir": 1 }
+    },
+    {
+      "kind": "item",
+      "text": "The Lowe Art Museum at the University of Miami has free general admission, all year.",
+      "caption": "The Lowe Art Museum at the University of Miami has free general admission, all year.",
+      "overlay": "LOWE ART MUSEUM",
+      "badge": "ALWAYS FREE",
+      "sub": "Coral Gables · UM campus",
+      "emoji": "🗿",
+      "source": "Miami & Beaches",
+      "location": { "name": "Lowe Art Museum", "lat": 25.7215, "lon": -80.2790, "h": 5 },
+      "shot": { "type": "arrive", "range": 650, "pitch": -36, "heading": 200, "degrees": 50, "dir": -1 }
+    },
+    {
+      "kind": "item",
+      "text": "And PAMM, right on the bay, is free for everyone on the second Saturday of every month. The next one is October tenth.",
+      "caption": "And PAMM, right on the bay, is free for everyone on the second Saturday of every month. The next one is Oct. 10.",
+      "overlay": "PÉREZ ART MUSEUM",
+      "badge": "OCT 10 · FREE",
+      "sub": "Museum Park · second Saturdays",
+      "emoji": "🌊",
+      "source": "Miami & Beaches",
+      "location": { "name": "Pérez Art Museum Miami", "lat": 25.7859, "lon": -80.1863, "h": 5 },
+      "shot": { "type": "arrive", "range": 900, "pitch": -34, "heading": 80, "degrees": 50, "dir": 1 }
+    },
+    {
+      "kind": "outro",
+      "text": "A museum is full of people looking at the same art as you that you'll never actually meet, and NEAR shows you who they were after you leave. Tag who you're taking.",
+      "caption": "A museum is full of people looking at the same art as you that you'll never actually meet, and NEAR shows you who they were after you leave. Tag who you're taking.",
+      "overlay": "WHO ARE YOU TAKING? 🖼️",
+      "sub": "Follow for more South Florida",
+      "location": { "name": "Museum Park", "lat": 25.7850, "lon": -80.1870, "h": 20 },
+      "shot": { "type": "pullout", "range": 1500, "pitch": -32, "heading": 230 }
+    }
+  ],
+  "igCaption": "Miami museums that are FREE 🖼️ (most people pay anyway)\n\n💳 This weekend (Oct 3–4): Bank of America cardholders get in free at the Freedom Tower, PAMM, the Bass and MOCA (card + ID)\n🎨 ICA Miami (Design District): always free\n🏛️ The Wolfsonian (Miami Beach): always free for Florida residents with ID\n🗿 Lowe Art Museum (UM, Coral Gables): free general admission\n🌊 PAMM: free for everyone every second Saturday — next one Oct 10\n\nTag who you're taking 👀\n\n#Miami #MiamiMuseums #FreeThingsToDo #SouthFlorida",
+  "sources": [
+    "Bank of America Museums on Us partners: Freedom Tower at MDC, Miami Children's Museum, MOCA, PAMM, The Bass; first full weekend of every month, one free general admission per cardholder",
+    "Miami & Beaches (GMCVB) Free Museum Days: ICA Miami always free; Lowe free general admission; Wolfsonian free for Florida residents; PAMM free second Saturday",
+    "Cultureowl: ICA three floors + sculpture garden"
+  ]
+}
