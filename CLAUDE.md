@@ -39,6 +39,7 @@ then it downloads each, watches the whole video (frames + transcript), safety-ch
 If no video qualifies, the slot posts a `news` carousel instead. Downloads need the `YOUTUBE_COOKIES` secret (owner's cookies.txt; if
 downloads start failing with "Sign in to confirm you're not a bot", the owner must export fresh cookies into that secret).
 News/brief carousels (owner, Oct 2): if an agency released video of that exact story (`videoForStory` in `clip.mjs`), it goes in as slide 2 and the carousel is only 4 slides (cover, video, 2 slides, no CTA); otherwise max 5 slides (people won't read long ones). Photos: real ones first — the outlets' feed photos and the articles' lead images (`ogImage`, usually the mugshot), each reused at most twice — then place stock, AI only as a last resort (owner: "too much AI is annoying").
+Video sources for that slide (owner, Oct 2): agency channels AND TV stations (`STATIONS` in `clip.mjs`: WSVN, Local 10, NBC 6, CBS Miami, WPTV, WPBF) — any station clip, credited "🎥 Video: <station>". **Fallback if a copyright claim/strike or takedown happens:** switch to raw police-released footage only (surveillance/bodycam/phone video cut out of the station report, never anchor/reporter segments, ≤30 s) — the owner's pre-approved plan B. Standalone clip slots stay agency-only.
 Manual: `requests/clip.json` → `{"publish": true|false, "url": "optional YouTube link", "at": "..."}` (`.github/workflows/clip.yml`).
 
 ## Reels with music (owner posts them)
