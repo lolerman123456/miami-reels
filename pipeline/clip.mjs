@@ -83,10 +83,11 @@ async function pick(videos) {
   const r = await chat([{ role: 'system', content: 'You run a South Florida news page like @onlyindade. Pick the ONE agency video that would go most viral as a '
     + '"hook + video" post, or none. ' + RULES + ' Write the cover like onlyindade: 2 short punchy lines in plain words, the second line is the shock '
     + '(e.g. "MIAMI-DADE DEPUTIES" / "STOP A WRONG-WAY DRIVER ON I-95"), no clickbait lies, only what the title/description supports. '
-    + 'Return JSON {"index": number or -1, "kicker": "2–3 word label like BODYCAM, CAUGHT ON CAMERA, CHASE, BUSTED, RESCUE", "line1": "≤28 chars", '
-    + '"line2": "≤40 chars, the shock", "caption": "2–4 short lines: what happened (accused/charged wording), where, credit line \\"🎥 Video: <agency>\\", then 3 hashtags", "why": "…"}' },
+    + 'Rank up to 4 candidates, best first (fewer or none if nothing qualifies). '
+    + 'Return JSON {"picks": [{"index": number, "kicker": "2–3 word label like BODYCAM, CAUGHT ON CAMERA, CHASE, BUSTED, RESCUE", "line1": "≤28 chars", '
+    + '"line2": "≤40 chars, the shock", "caption": "2–4 short lines: what happened (accused/charged wording), where, credit line \\"🎥 Video: <agency>\\", then 3 hashtags", "why": "…"}]}' },
   { role: 'user', content: videos.map((v, i) => `${i}. [${v.agency}] ${v.title} (${v.published.slice(0, 10)}, ${v.views} views) — ${v.description}`).join('\n') }]);
-  return r;
+  return (r.picks || []).filter(x => videos[x.index]);
 }
 
 // last look at the actual frames before anything is posted
@@ -134,6 +135,24 @@ function chipHTML(agency) {
   <body><div class="c">🎥 Video: ${esc(agency)}</div><div class="h">@getnearapp</div></body></html>`;
 }
 
+// YouTube answers some player clients with "the page needs to be reloaded" for signed-in sessions: try a few.
+// The JS challenge solver (yt-dlp-ejs + deno) unlocks the real formats; --remote-components is the fallback source for it
+async function download(url, raw) {
+  let lastErr;
+  const ejs = ['--remote-components', 'ejs:github'];
+  for (const client of ['default', 'web_safari', 'mweb', 'tv', 'web_embedded', 'ios']) {
+    try {
+      await run('yt-dlp', [...ytdlpArgs(), ...ejs, '--extractor-args', `youtube:player_client=${client}`,
+        '-f', 'bv*[height<=1080]+ba/b[height<=1080]/bv*+ba/b', '-S', 'ext', '--merge-output-format', 'mp4',
+        '--download-sections', `*0-${MAX_SECONDS + 2}`, '-o', raw, url]);
+      console.log(`  downloaded (player client: ${client})`); return;
+    } catch (e) { lastErr = e; console.log(`  (client ${client} failed: ${e.message.split('\n').find(l => /ERROR/.test(l)) || e.message.slice(0, 120)})`); fs.rmSync(raw, { force: true }); }
+  }
+  try { console.log(execFileSync('yt-dlp', [...ytdlpArgs(), ...ejs, '-v', '--list-formats', url], { stdio: ['ignore', 'pipe', 'pipe'] }).toString().slice(-3000)); }
+  catch (e) { console.log(String(e.stderr || e.message).slice(-3000)); }
+  throw lastErr;
+}
+
 export async function makeClip({ url, dryRun } = {}) {
   const date = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
   step('Finding agency videos');
@@ -144,45 +163,36 @@ export async function makeClip({ url, dryRun } = {}) {
   }
   console.log(`  ${videos.length} recent videos`);
   if (!videos.length) { console.log('No agency videos — nothing to post.'); return null; }
-  const p = await pick(videos);
-  console.log(`  pick: ${p.index} — ${p.why}`);
-  if (!(p.index >= 0) || !videos[p.index]) { console.log('Nothing share-worthy right now — not posting.'); return null; }
-  const v = videos[p.index];
-  console.log(`  ${v.agency}: ${v.title}\n  cover: [${p.kicker}] ${p.line1} / ${p.line2}`);
-
-  const dir = path.join(ROOT, 'out', 'clips', `${date}-${v.id}`);
-  fs.mkdirSync(dir, { recursive: true });
-  step('Downloading');
-  const raw = path.join(dir, 'raw.mp4');
-  // YouTube answers some player clients with "the page needs to be reloaded" for signed-in sessions: try a few
-  let lastErr;
-  // The JS challenge solver (yt-dlp-ejs + deno) unlocks the real formats; --remote-components is the fallback source for it
-  const ejs = ['--remote-components', 'ejs:github'];
-  for (const client of ['default', 'web_safari', 'mweb', 'tv', 'web_embedded', 'ios']) {
-    try {
-      await run('yt-dlp', [...ytdlpArgs(), ...ejs, '--extractor-args', `youtube:player_client=${client}`,
-        '-f', 'bv*[height<=1080]+ba/b[height<=1080]/bv*+ba/b', '-S', 'ext', '--merge-output-format', 'mp4',
-        '--download-sections', `*0-${MAX_SECONDS + 2}`, '-o', raw, v.url]);
-      lastErr = null; console.log(`  downloaded (player client: ${client})`); break;
-    } catch (e) { lastErr = e; console.log(`  (client ${client} failed: ${e.message.split('\n').find(l => /ERROR/.test(l)) || e.message.slice(0, 120)})`); fs.rmSync(raw, { force: true }); }
+  // videos already posted or rejected by the frame check are not offered again
+  const seenFile = path.join(ROOT, 'state', 'clips-seen.txt');
+  const seen = new Set(fs.existsSync(seenFile) ? fs.readFileSync(seenFile, 'utf8').split('\n').map(l => l.split(/\s/)[0]).filter(Boolean) : []);
+  const markSeen = (id, why) => { fs.mkdirSync(path.dirname(seenFile), { recursive: true }); fs.appendFileSync(seenFile, `${id}  ${why}\n`); };
+  if (!url) videos = videos.filter(v => !seen.has(v.id));
+  const picks = await pick(videos);
+  if (!picks.length) { console.log('Nothing share-worthy right now — not posting.'); return null; }
+  let p, v, dir, raw, dur, check;
+  for (const cand of picks) {
+    p = cand; v = videos[cand.index];
+    console.log(`\n  pick: ${v.agency}: ${v.title} — ${p.why}\n  cover: [${p.kicker}] ${p.line1} / ${p.line2}`);
+    dir = path.join(ROOT, 'out', 'clips', `${date}-${v.id}`);
+    fs.mkdirSync(dir, { recursive: true });
+    step('Downloading');
+    raw = path.join(dir, 'raw.mp4');
+    try { await download(v.url, raw); } catch (e) { console.log(`  download failed: ${e.message.slice(0, 300)}`); continue; }
+    dur = Math.min(MAX_SECONDS, parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', raw]).toString().trim()) || MAX_SECONDS);
+    step('Checking frames');
+    const frames = [];
+    for (let i = 0; i < 6; i++) {
+      const f = path.join(dir, `f${i}.jpg`);
+      await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(((i + 0.5) * dur) / 6), '-i', raw, '-frames:v', '1', '-vf', 'scale=720:-2', f]);
+      frames.push(f);
+    }
+    check = await framesOk(frames);
+    console.log(`  frames: ${check.ok ? 'ok' : 'REJECTED'} — ${check.why}`);
+    if (check.ok) break;
+    markSeen(v.id, 'rejected'); fs.rmSync(dir, { recursive: true, force: true }); check = null;
   }
-  if (lastErr) {
-    try { console.log(execFileSync('yt-dlp', [...ytdlpArgs(), ...ejs, '-v', '--list-formats', v.url], { stdio: ['ignore', 'pipe', 'pipe'] }).toString().slice(-3000)); }
-    catch (e) { console.log(String(e.stderr || e.message).slice(-3000)); }
-    throw lastErr;
-  }
-  const dur = Math.min(MAX_SECONDS, parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', raw]).toString().trim()) || MAX_SECONDS);
-
-  step('Checking frames');
-  const frames = [];
-  for (let i = 0; i < 6; i++) {
-    const f = path.join(dir, `f${i}.jpg`);
-    await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(((i + 0.5) * dur) / 6), '-i', raw, '-frames:v', '1', '-vf', 'scale=720:-2', f]);
-    frames.push(f);
-  }
-  const check = await framesOk(frames);
-  console.log(`  frames: ${check.ok ? 'ok' : 'REJECTED'} — ${check.why}`);
-  if (!check.ok) { console.log('Not posting this one.'); return null; }
+  if (!check) { console.log('No candidate passed — not posting.'); return null; }
   const coverFrame = path.join(dir, 'cover-frame.jpg');
   await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(((Math.max(0, Math.min(5, check.cover ?? 1)) + 0.5) * dur) / 6), '-i', raw, '-frames:v', '1', coverFrame]);
 
@@ -202,6 +212,7 @@ export async function makeClip({ url, dryRun } = {}) {
   if (dryRun) { console.log('(dry run) not posted'); return post; }
   const { publishCarousel } = await import('./publish.mjs');
   await publishCarousel([cover, video], p.caption, post.id);
+  markSeen(v.id, 'posted');
   return post;
 }
 
