@@ -156,15 +156,21 @@ export async function makeClip({ url, dryRun } = {}) {
   const raw = path.join(dir, 'raw.mp4');
   // YouTube answers some player clients with "the page needs to be reloaded" for signed-in sessions: try a few
   let lastErr;
-  for (const client of ['default', 'web_safari', 'mweb', 'tv', 'web_embedded']) {
+  // The JS challenge solver (yt-dlp-ejs + deno) unlocks the real formats; --remote-components is the fallback source for it
+  const ejs = ['--remote-components', 'ejs:github'];
+  for (const client of ['default', 'web_safari', 'mweb', 'tv', 'web_embedded', 'ios']) {
     try {
-      await run('yt-dlp', [...ytdlpArgs(), '--extractor-args', `youtube:player_client=${client}`,
-        '-f', 'bv*[height<=1080][ext=mp4]+ba[ext=m4a]/b[ext=mp4]/bv*+ba/b', '--merge-output-format', 'mp4',
-        '--download-sections', `*0-${MAX_SECONDS + 2}`, '--force-keyframes-at-cuts', '-o', raw, v.url]);
+      await run('yt-dlp', [...ytdlpArgs(), ...ejs, '--extractor-args', `youtube:player_client=${client}`,
+        '-f', 'bv*[height<=1080]+ba/b[height<=1080]/bv*+ba/b', '-S', 'ext', '--merge-output-format', 'mp4',
+        '--download-sections', `*0-${MAX_SECONDS + 2}`, '-o', raw, v.url]);
       lastErr = null; console.log(`  downloaded (player client: ${client})`); break;
     } catch (e) { lastErr = e; console.log(`  (client ${client} failed: ${e.message.split('\n').find(l => /ERROR/.test(l)) || e.message.slice(0, 120)})`); fs.rmSync(raw, { force: true }); }
   }
-  if (lastErr) throw lastErr;
+  if (lastErr) {
+    try { console.log(execFileSync('yt-dlp', [...ytdlpArgs(), ...ejs, '-v', '--list-formats', v.url], { stdio: ['ignore', 'pipe', 'pipe'] }).toString().slice(-3000)); }
+    catch (e) { console.log(String(e.stderr || e.message).slice(-3000)); }
+    throw lastErr;
+  }
   const dur = Math.min(MAX_SECONDS, parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', raw]).toString().trim()) || MAX_SECONDS);
 
   step('Checking frames');
