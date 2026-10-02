@@ -1,0 +1,131 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "FHP DASHCAM SHOWS",
+    "main": "TROOPERS SAID THE CHASE TOPPED",
+    "highlight": "115 MPH",
+    "bottom": "BEFORE THE STOP IN MIAMI-DADE",
+    "blur": false,
+    "photo": {
+      "query": "Florida Highway Patrol cruiser Miami-Dade pursuit dashcam police lights",
+      "prompt": "dramatic dashcam-style view from a Florida Highway Patrol cruiser during a Miami-Dade pursuit, flashing lights ahead on a roadway, no people or readable plates visible",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "🚔",
+      "📹",
+      "💨"
+    ],
+    "logos": [
+      "flhsmv.gov"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Troopers said the chase topped 115 mph",
+      "highlight": "over 115 mph",
+      "body": "Troopers said an accused carjacker led FHP on a pursuit that reached speeds over 115 mph before the stop in Miami-Dade.",
+      "place": "Miami-Dade",
+      "source": "WSVN",
+      "photo": {
+        "query": "Florida Highway Patrol dashcam pursuit Miami-Dade roadway",
+        "prompt": "dashcam view from a patrol car chasing a vehicle on a Miami-Dade roadway, blue and red lights reflecting on the road, no faces or license plates visible"
+      },
+      "emoji": "🚔",
+      "chip": "115+ MPH",
+      "logo": "flhsmv.gov",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "FHP used a PIT maneuver to end the pursuit",
+      "highlight": "PIT maneuver",
+      "body": "Newly released dashcam video shows troopers PIT-stopping the accused carjacker after the pursuit.",
+      "place": "Miami-Dade",
+      "source": "WSVN",
+      "photo": {
+        "query": "police PIT maneuver highway patrol car dashcam",
+        "prompt": "dashcam-style frame of a patrol car making contact during a PIT maneuver on a South Florida roadway, motion blur, no people visible"
+      },
+      "emoji": "📹",
+      "chip": "PIT STOP",
+      "logo": "flhsmv.gov",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The chase went through Hialeah and northwest Miami-Dade",
+      "highlight": "Hialeah",
+      "body": "The pursuit ran through Hialeah and northwest Miami-Dade before troopers stopped the accused carjacker.",
+      "place": "Hialeah",
+      "source": "WSVN",
+      "photo": {
+        "query": "Hialeah Florida road police lights traffic",
+        "prompt": "police lights on a busy Hialeah road with traffic signals and cars in the distance, no identifiable people"
+      },
+      "emoji": "📍",
+      "chip": "HIALEAH",
+      "logo": "wsvn.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The pursuit happened the morning of Sept. 24",
+      "highlight": "Sept. 24",
+      "body": "Authorities said the chase happened the morning of Sept. 24, and the dashcam video came out this week.",
+      "place": "Miami-Dade",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Miami-Dade morning road traffic police car",
+        "prompt": "early morning traffic on a northwest Miami-Dade road with a patrol car and flashing lights in the distance, no people visible"
+      },
+      "emoji": "🌅",
+      "chip": "SEPT. 24",
+      "logo": "nbcmiami.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The video shows the arrest after the stop",
+      "highlight": "the arrest",
+      "body": "The dashcam captured the arrest after troopers stopped the accused carjacker in Miami-Dade.",
+      "place": "Miami-Dade",
+      "source": "WSVN",
+      "photo": {
+        "query": "Florida Highway Patrol traffic stop police lights Miami-Dade",
+        "prompt": "Florida Highway Patrol cruiser with flashing lights behind a stopped vehicle on a Miami-Dade road, no people visible"
+      },
+      "emoji": "🚨",
+      "chip": "ARREST",
+      "logo": "wsvn.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "New FHP dashcam video shows a Sept. 24 pursuit that troopers said topped 115 mph before a PIT maneuver stopped an accused carjacker in Miami-Dade.",
+  "hashtags": [
+    "#MiamiDade",
+    "#Hialeah"
+  ],
+  "collaborators": [],
+  "igCaption": "New FHP dashcam video shows a Sept. 24 pursuit that troopers said topped 115 mph before a PIT maneuver stopped an accused carjacker in Miami-Dade.\n\n📰 Sources: WSVN, NBC 6 South Florida\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiDade #Hialeah #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-01",
+  "id": "2026-10-01-news-22"
+}
