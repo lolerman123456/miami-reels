@@ -322,10 +322,12 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   // real photos first (owner, Oct 2: "too much AI is annoying"): the outlets' photos, reused across slides before any AI
   const real = [];
   for (const [i, sp] of storyPhotos.entries()) { const np = await newsPhoto(sp, dir, `news-${i}`); if (np) real.push(np); }
+  // news-style posts with real photos: no AI at all — the real photos carry every slide, and the post gets shorter so a
+  // photo doesn't repeat too often (1 photo → cover + 3 slides)
+  if (real.length && !ALIVE.includes(kind) && !post.video) post.slides = post.slides.slice(0, Math.max(3, real.length * 2));
   let r = 0;
   for (const [i, item] of [post.cover, ...post.slides].entries()) {
-    // each real photo at most twice (a third repeat looks lazy); then place stock, AI last
-    const reuse = real.length && (i < real.length || (!ALIVE.includes(kind) && r < real.length * 2)) ? real[r++ % real.length] : null;
+    const reuse = real.length && (i < real.length || !ALIVE.includes(kind)) ? real[r++ % real.length] : null;
     const photo = reuse || await getPhoto(item.photo, dir, i ? `photo-${i}` : 'photo-cover',
       { context: i ? item.headline : [item.top, item.main, item.highlight, item.bottom].filter(Boolean).join(' '), aiFirst: false });
     if (photo) { item.photoFile = path.basename(photo.file); item.credit = photo.credit; }
