@@ -1,0 +1,116 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "MIAMI-DADE DEATH CASE:",
+    "main": "PROSECUTORS SAY A MOTHER AND 2 GIRLS SUFFERED A",
+    "highlight": "“SLOW DEATH”",
+    "bottom": "BY SUFFOCATION",
+    "blur": false,
+    "photo": {
+      "query": "Miami-Dade criminal courthouse exterior at night police lights",
+      "prompt": "dramatic exterior of a Miami-Dade courthouse at night, police lights reflecting on wet pavement, no people visible"
+    },
+    "emojis": [
+      "⚖️",
+      "🚔",
+      "🕯️"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Prosecutors say mother and 2 girls suffered a “slow death” by suffocation",
+      "highlight": "“slow death”",
+      "body": "Evidence at a Miami-Dade sentencing hearing focused on suffocation in the killings of a mother and her 2 young daughters.",
+      "place": "Miami-Dade",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "empty courtroom evidence table dramatic lighting",
+        "prompt": "empty courtroom evidence table under harsh overhead light, sealed folders and legal pads visible, no names, no people"
+      },
+      "emoji": "⚖️",
+      "chip": "2 GIRLS",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The man was convicted of murdering his wife and her 2 daughters",
+      "highlight": "wife and 2 daughters",
+      "body": "The sentencing hearing continued Friday for the Miami-Dade man convicted in the murders.",
+      "place": "Miami-Dade",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Miami-Dade courthouse hallway courtroom doors",
+        "prompt": "empty Miami-Dade courthouse hallway with closed courtroom doors, fluorescent lights, serious news photo style, no people"
+      },
+      "emoji": "🏛️",
+      "chip": "FRI 10/2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The killings date back nearly 14 years",
+      "highlight": "nearly 14 years",
+      "body": "The case involves a confession to suffocating and killing his wife and her 2 young daughters nearly 14 years ago.",
+      "place": "Miami-Dade",
+      "source": "facebook.com",
+      "photo": {
+        "query": "Miami-Dade police crime scene tape night house",
+        "prompt": "crime scene tape outside a South Florida home at night, blue and red police lights in the distance, no people visible"
+      },
+      "emoji": "🕯️",
+      "chip": "14 YEARS",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "A detective testified in the sentencing trial",
+      "highlight": "detective testified",
+      "body": "Detective testimony became part of the sentencing trial Thursday.",
+      "place": "Miami-Dade",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "detective case files courtroom table close up",
+        "prompt": "close-up of case files, evidence folders and a notepad on a courtroom table, badge partly visible, no names, no people"
+      },
+      "emoji": "📁",
+      "chip": "THU 10/1",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "A jury may decide whether he gets the death penalty",
+      "highlight": "death penalty",
+      "body": "The jury will weigh the punishment after the murder convictions.",
+      "place": "Miami-Dade",
+      "source": "facebook.com",
+      "photo": {
+        "query": "empty jury box courtroom dramatic shadows",
+        "prompt": "empty jury box in a courtroom with dramatic shadows, wooden railings and judge bench visible, no people"
+      },
+      "emoji": "🧑‍⚖️",
+      "chip": "JURY",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Prosecutors say evidence in a Miami-Dade sentencing hearing showed a mother and her 2 young daughters suffered a “slow death” by suffocation.\n\nA jury may decide whether the convicted killer gets the death penalty.",
+  "hashtags": [
+    "#MiamiDade",
+    "#SouthFloridaNews"
+  ],
+  "collaborators": [],
+  "igCaption": "Prosecutors say evidence in a Miami-Dade sentencing hearing showed a mother and her 2 young daughters suffered a “slow death” by suffocation.\n\nA jury may decide whether the convicted killer gets the death penalty.\n\n📰 Sources: Miami Herald, NBC 6 South Florida, facebook.com\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiDade #SouthFloridaNews #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-02",
+  "id": "2026-10-02-news-19"
+}
