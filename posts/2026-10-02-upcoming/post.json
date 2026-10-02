@@ -1,0 +1,161 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "THE NEXT 7 DAYS",
+    "main": "BRING",
+    "highlight": "KAROL G,",
+    "bottom": "CHUCHO VALDÉS, AND 4 MORE.",
+    "blur": false,
+    "photo": {
+      "query": "Karol G concert Hard Rock Stadium Miami Gardens",
+      "prompt": "Karol G performing under pink and blue stadium lights at Hard Rock Stadium in Miami Gardens, packed crowd with phones raised"
+    },
+    "emojis": [
+      "🎤",
+      "🎹",
+      "🪩"
+    ],
+    "logos": [
+      "hardrockstadium.com",
+      "arshtcenter.org",
+      "zeyzeymiami.com",
+      "jointherevolution.net",
+      "actorsplayhouse.org"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c2.png",
+      "logo-c4.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Karol G at Hard Rock Stadium",
+      "highlight": "Karol G",
+      "body": "Friday, Oct. 2 at 7 p.m. at Hard Rock Stadium in Miami Gardens. Tickets cost $266 to $569, and Elena Rose opens the two-night stadium run.",
+      "place": "Miami Gardens",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Karol G concert stadium performance",
+        "prompt": "Karol G on a stadium stage with tropical colors, giant screens, dancers and a packed Miami Gardens crowd at night"
+      },
+      "color": "#E83E8C",
+      "emoji": "🎤",
+      "chip": "FRI 7 PM",
+      "logo": "hardrockstadium.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Chucho Valdés at the Arsht Center",
+      "highlight": "Chucho Valdés",
+      "body": "Saturday, Oct. 3 at 8 p.m. at the Adrienne Arsht Center in Miami. Tickets cost $52 to $158 for his 85th birthday show with Joe Lovano and Terence Blanchard.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Chucho Valdes piano concert",
+        "prompt": "Chucho Valdés at a grand piano under warm stage lights, jazz musicians behind him in a concert hall"
+      },
+      "color": "#B48A2C",
+      "emoji": "🎹",
+      "chip": "$52+",
+      "logo": "arshtcenter.org",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Electric Feels at ZeyZey",
+      "highlight": "Electric Feels",
+      "body": "Saturday, Oct. 3 at 9 p.m. at ZeyZey in Miami. Tickets cost $18 for a DJ party built around late-aughts and early 2010s dance music.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "ZeyZey Miami outdoor concert crowd",
+        "prompt": "Outdoor dance party at ZeyZey in Miami with neon lights, DJ booth, palm trees and a crowd dancing at night"
+      },
+      "color": "#7B2CFF",
+      "emoji": "🪩",
+      "chip": "$18",
+      "logo": "zeyzeymiami.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Absolute Bands Live! in Aventura",
+      "highlight": "Absolute Bands",
+      "body": "Saturday, Oct. 3 at 3 and 7 p.m. at Aventura Arts & Cultural Center in Aventura. Tickets cost $45 to $71 for Bo Bice and songs by Queen, Def Leppard, Journey and Bon Jovi.",
+      "place": "Aventura",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Aventura Arts Cultural Center concert stage",
+        "prompt": "Rock band performing onstage at Aventura Arts & Cultural Center with bright spotlights, guitars and a singer at center stage"
+      },
+      "color": "#C1121F",
+      "emoji": "🎸",
+      "chip": "3 & 7 PM",
+      "logo": "aventuracenter.org",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Mariachi El Bronx at Revolution Live",
+      "highlight": "Mariachi El Bronx",
+      "body": "Sunday, Oct. 4 at 7 p.m. at Revolution Live in Fort Lauderdale. Tickets cost $38.50 for the You Ese Tour with Bedouin Soundclash and Max Diaz.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Mariachi El Bronx live concert",
+        "prompt": "Mariachi El Bronx performing live with mariachi suits, brass instruments and punk-concert lighting on a Fort Lauderdale stage"
+      },
+      "color": "#111111",
+      "emoji": "🎺",
+      "chip": "$38.50",
+      "logo": "jointherevolution.net",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Jekyll & Hyde at Actors’ Playhouse",
+      "highlight": "Jekyll & Hyde",
+      "body": "Wednesday, Oct. 7 through Sunday, Nov. 1 at Actors’ Playhouse at the Miracle Theatre in Coral Gables. Tickets cost $40 to $100 for the pop-rock musical.",
+      "place": "Coral Gables",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Actors' Playhouse Miracle Theatre Coral Gables",
+        "prompt": "The Miracle Theatre in Coral Gables lit up at night with a dramatic theater marquee for Jekyll & Hyde"
+      },
+      "color": "#3B0A45",
+      "emoji": "🎭",
+      "chip": "OCT 7",
+      "logo": "actorsplayhouse.org",
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Rob Olivera / CC BY 2.0",
+      "logoFile": "logo-6.png"
+    }
+  ],
+  "caption": "Karol G, Chucho Valdés, Electric Feels and more are on the South Florida calendar through Oct. 7.\nWho are you taking? Tag a friend.",
+  "hashtags": [
+    "#MiamiEvents",
+    "#SouthFloridaEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "Karol G, Chucho Valdés, Electric Feels and more are on the South Florida calendar through Oct. 7.\nWho are you taking? Tag a friend.\n\n📰 Sources: Miami New Times\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiEvents #SouthFloridaEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN MIAMI 🎟️",
+  "date": "2026-10-02",
+  "id": "2026-10-02-upcoming"
+}
