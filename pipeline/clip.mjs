@@ -75,15 +75,16 @@ async function chat(messages) {
 }
 
 const RULES = 'Content rules (hard): never a video whose point is a victim, a child or a dead/injured person; no graphic violence, gore or nudity; '
-  + 'no ceremonies, promotions, PSAs, recruiting, budget talks or other PR — only footage people would actually share (bodycam, dashcam, chases, arrests, '
-  + 'busts with seized cash/drugs/guns, rescues, wild moments, big fraud takedowns announced by prosecutors). Say "accused"/"charged" unless convicted; '
+  + 'no ceremonies, meetings, interviews/officer profiles, promotions, PSAs, recruiting, budget talks or other PR — only footage people would actually share: '
+  + 'bodycam/dashcam (including traffic stops with a funny, heated or wild exchange — e.g. Traffic Thursdays/Traffic Tuesday episodes), chases, arrests, '
+  + 'busts with seized cash/drugs/guns, rescues, wild moments, big fraud takedowns announced by prosecutors. Say "accused"/"charged" unless convicted; '
   + 'never name or show a victim.';
 
 async function pick(videos) {
-  const r = await chat([{ role: 'system', content: 'You run a South Florida news page like @onlyindade. Pick the ONE agency video that would go most viral as a '
-    + '"hook + video" post, or none. ' + RULES + ' Write the cover like onlyindade: 2 short punchy lines in plain words, the second line is the shock '
+  const r = await chat([{ role: 'system', content: 'You run a South Florida news page like @onlyindade. Pick the agency videos that would go most viral as a '
+    + '"hook + video" post (view counts are a strong signal). ' + RULES + ' Write the cover like onlyindade: 2 short punchy lines in plain words, the second line is the shock '
     + '(e.g. "MIAMI-DADE DEPUTIES" / "STOP A WRONG-WAY DRIVER ON I-95"), no clickbait lies, only what the title/description supports. '
-    + 'Rank up to 4 candidates, best first (fewer or none if nothing qualifies). '
+    + 'Rank up to 4 candidates, best first (fewer or none only if nothing qualifies). The cover can quote the best line from the title. '
     + 'Return JSON {"picks": [{"index": number, "kicker": "2–3 word label like BODYCAM, CAUGHT ON CAMERA, CHASE, BUSTED, RESCUE", "line1": "≤28 chars", '
     + '"line2": "≤40 chars, the shock", "caption": "2–4 short lines: what happened (accused/charged wording), where, credit line \\"🎥 Video: <agency>\\", then 3 hashtags", "why": "…"}]}' },
   { role: 'user', content: videos.map((v, i) => `${i}. [${v.agency}] ${v.title} (${v.published.slice(0, 10)}, ${v.views} views) — ${v.description}`).join('\n') }]);
