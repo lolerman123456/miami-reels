@@ -11,3 +11,4 @@ episodes/*/*
 posts/*/*.jpg
 posts/*/*.png
 !episodes/*/images/
+.yt-cookies.txt

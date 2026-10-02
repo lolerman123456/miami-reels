@@ -65,7 +65,9 @@ export async function publishCarousel(imageFiles, caption, label, { collaborator
     console.log(`▶ Instagram: creating carousel (${imageFiles.length} slides)`);
     const children = [];
     for (const url of tunnel.urls) {
-      const c = await call(`${api}/${igUser}/media`, { image_url: url, is_carousel_item: 'true', access_token: token });
+      // a slide can also be a video (hook + clip posts): Instagram fetches it the same way
+      const media = /\.mp4$/i.test(url) ? { media_type: 'VIDEO', video_url: url } : { image_url: url };
+      const c = await call(`${api}/${igUser}/media`, { ...media, is_carousel_item: 'true', access_token: token });
       children.push(c.id);
     }
     for (const id of children) await waitReady(api, token, id);
