@@ -27,7 +27,19 @@ export const CHANNELS = [
   ['Boca Raton Police', 'UCl6Odacm7g41cqVb6JRhuSQ'],
   ['Miami-Dade Fire Rescue', 'UCsuPEhHBlgvtDw1O8tE64IQ'],
   ['Florida Dept. of Law Enforcement', 'UCzmvxYTiJcAvX-9bAkC8Ftg'],
+  ['Palm Beach County Sheriff\'s Office', 'UCSNqKQOHU13DSsb0dskeJQA'],
+  // statewide (owner, Oct 2: "more crazy", 4 a day) — the Florida sheriffs whose bodycam goes viral
+  ['Volusia Sheriff\'s Office', 'UCf6knOGCVA6bqEB1EwdrYrw'],
+  ['Polk County Sheriff\'s Office', 'UC9A_wj7G-zjcyELg32NVntw'],
+  ['Brevard County Sheriff\'s Office', 'UCD0Hhji5wUmIsHkePQFOBcA'],
+  ['Pinellas County Sheriff\'s Office', 'UCoeSYnnPKATQPHe_AJW6ZAg'],
+  ['Marion County Sheriff\'s Office', 'UC6hlPotOVDSj6zNevNON0LA'],
+  ['Orange County Sheriff\'s Office', 'UC_rDxhSLCiwHo4jBBdUwd_A'],
+  ['Lee County Sheriff\'s Office', 'UCR5aSsmi0J0mp3uO4pfyF5Q'],
+  ['Osceola County Sheriff\'s Office', 'UCOij53snR6I7KTIcbaDZa-A'],
+  ['Florida Fish and Wildlife (FWC)', 'UCkDj8yIrlrHB1hkU93uEZQg'],
 ];
+const MIN_CRAZY = 7; // owner, Oct 2: "viral videos need to be more crazy" — 1–10 score from the full-video look
 const MAX_SECONDS = 58; // Instagram carousel videos max out at 60 s
 const FONT = path.join(ROOT, 'assets', 'fonts');
 
@@ -82,7 +94,9 @@ const RULES = 'Content rules (hard): never a video whose point is a victim, a ch
 
 async function pick(videos) {
   const r = await chat([{ role: 'system', content: 'You run a South Florida news page like @onlyindade. Pick the agency videos that would go most viral as a '
-    + '"hook + video" post (view counts are a strong signal). ' + RULES + ' Write the cover like onlyindade: 2 short punchy lines in plain words, the second line is the shock '
+    + '"hook + video" post. The owner wants CRAZY: jaw-dropping, wild, "no way this happened" footage (chases, bodycam meltdowns, '
+    + 'wild arrests, gators/pythons, insane rescues, outrageous traffic stops) — skip anything mild or merely informative. '
+    + 'View counts are a strong signal. Florida-wide is fine; South Florida first when equally crazy. ' + RULES + ' Write the cover like onlyindade: 2 short punchy lines in plain words, the second line is the shock '
     + '(e.g. "MIAMI-DADE DEPUTIES" / "STOP A WRONG-WAY DRIVER ON I-95"), no clickbait lies, only what the title/description supports. '
     + 'Rank up to 4 candidates, best first (fewer or none only if nothing qualifies). The cover can quote the best line from the title. '
     + 'Return JSON {"picks": [{"index": number, "kicker": "2–3 word label like BODYCAM, CAUGHT ON CAMERA, CHASE, BUSTED, RESCUE", "line1": "≤28 chars", '
@@ -91,12 +105,41 @@ async function pick(videos) {
   return (r.picks || []).filter(x => videos[x.index]);
 }
 
-// last look at the actual frames before anything is posted
-async function framesOk(frames) {
-  const content = [{ type: 'text', text: 'These are frames from a police/government video we want to repost on a local news page. ' + RULES
-    + ' Reply JSON {"ok": true|false, "why": "…", "cover": index of the most gripping frame that shows no victim/child/gore}.' }];
-  for (const f of frames) content.push({ type: 'image_url', image_url: { url: `data:image/jpeg;base64,${fs.readFileSync(f).toString('base64')}` } });
+// Watch the whole video (frames every few seconds + the transcript): safety check, how crazy it is, the best ≤58 s
+// moment to cut, the cover frame, and the hook written from what actually happens (not just the title)
+async function analyze(frames, transcript, v, p) {
+  const content = [{ type: 'text', text: `Frames from "${v.title}" (${v.agency}), each labeled with its time in seconds, plus the transcript. `
+    + 'We repost agency footage on a South Florida news page like @onlyindade: slide 1 = hook cover, slide 2 = the clip. ' + RULES
+    + ` Draft hook: [${p.kicker}] ${p.line1} / ${p.line2}. Pick the single craziest continuous moment, ${Math.round(MAX_SECONDS * 0.6)}–${MAX_SECONDS} s long, `
+    + 'starting right before the action (skip intros, title cards, interviews, talking heads). '
+    + 'Reply JSON {"ok": true|false, "why": "…", "crazy": 1-10 (10 = everyone would share it), "start": seconds, "end": seconds, '
+    + '"cover": seconds of the most gripping frame (no victim/child/gore), "kicker": "2–3 words", "line1": "≤28 chars", "line2": "≤40 chars, the shock", '
+    + '"caption": "2–4 short lines: what happens (accused/charged wording), where, \\"🎥 Video: <agency>\\", then 3 hashtags"}' }];
+  for (const f of frames) {
+    content.push({ type: 'text', text: `t=${f.t}s` });
+    content.push({ type: 'image_url', image_url: { url: `data:image/jpeg;base64,${fs.readFileSync(f.file).toString('base64')}`, detail: 'low' } });
+  }
+  content.push({ type: 'text', text: `Transcript:\n${transcript || '(none)'}` });
   return chat([{ role: 'user', content }]);
+}
+
+// auto/official English subtitles → "[t] text" lines (best effort)
+async function transcriptOf(url, dir) {
+  try {
+    await run('yt-dlp', [...ytdlpArgs(), '--remote-components', 'ejs:github', '--skip-download', '--write-subs', '--write-auto-subs',
+      '--sub-langs', 'en.*,en', '--sub-format', 'vtt', '-o', path.join(dir, 'subs'), url], { quiet: true });
+    const f = fs.readdirSync(dir).find(n => n.startsWith('subs') && n.endsWith('.vtt'));
+    if (!f) return '';
+    const out = []; let t = null, last = '';
+    for (const line of fs.readFileSync(path.join(dir, f), 'utf8').split('\n')) {
+      const m = /^(\d+):(\d+):(\d+)\.\d+ -->/.exec(line);
+      if (m) { t = +m[1] * 3600 + +m[2] * 60 + +m[3]; continue; }
+      const txt = line.replace(/<[^>]+>/g, '').trim();
+      if (t == null || !txt || txt === last || /^(WEBVTT|Kind:|Language:)/.test(txt)) continue;
+      out.push(`[${t}] ${txt}`); last = txt;
+    }
+    return out.join('\n').slice(0, 14000);
+  } catch { return ''; }
 }
 
 async function shoot(html, file, width, height) {
@@ -145,7 +188,7 @@ async function download(url, raw) {
     try {
       await run('yt-dlp', [...ytdlpArgs(), ...ejs, '--extractor-args', `youtube:player_client=${client}`,
         '-f', 'bv*[height<=1080]+ba/b[height<=1080]/bv*+ba/b', '-S', 'ext', '--merge-output-format', 'mp4',
-        '--download-sections', `*0-${MAX_SECONDS + 2}`, '-o', raw, url]);
+        '--download-sections', '*0-900', '-o', raw, url]);
       console.log(`  downloaded (player client: ${client})`); return;
     } catch (e) { lastErr = e; console.log(`  (client ${client} failed: ${e.message.split('\n').find(l => /ERROR/.test(l)) || e.message.slice(0, 120)})`); fs.rmSync(raw, { force: true }); }
   }
@@ -171,42 +214,51 @@ export async function makeClip({ url, dryRun } = {}) {
   if (!url) videos = videos.filter(v => !seen.has(v.id));
   const picks = await pick(videos);
   if (!picks.length) { console.log('Nothing share-worthy right now — not posting.'); return null; }
-  let p, v, dir, raw, dur, check;
+  let p, v, dir, raw, start = 0, dur, check;
   for (const cand of picks) {
     p = cand; v = videos[cand.index];
-    console.log(`\n  pick: ${v.agency}: ${v.title} — ${p.why}\n  cover: [${p.kicker}] ${p.line1} / ${p.line2}`);
+    console.log(`\n  pick: ${v.agency}: ${v.title} — ${p.why}\n  draft cover: [${p.kicker}] ${p.line1} / ${p.line2}`);
     dir = path.join(ROOT, 'out', 'clips', `${date}-${v.id}`);
     fs.mkdirSync(dir, { recursive: true });
     step('Downloading');
     raw = path.join(dir, 'raw.mp4');
     try { await download(v.url, raw); } catch (e) { console.log(`  download failed: ${e.message.slice(0, 300)}`); continue; }
-    dur = Math.min(MAX_SECONDS, parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', raw]).toString().trim()) || MAX_SECONDS);
-    step('Checking frames');
+    const total = parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', raw]).toString().trim()) || MAX_SECONDS;
+    step(`Watching (${Math.round(total)} s)`);
+    const every = Math.max(2, Math.ceil(total / 48));
     const frames = [];
-    for (let i = 0; i < 6; i++) {
-      const f = path.join(dir, `f${i}.jpg`);
-      await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(((i + 0.5) * dur) / 6), '-i', raw, '-frames:v', '1', '-vf', 'scale=720:-2', f]);
-      frames.push(f);
+    for (let t = 1; t < total - 0.5; t += every) {
+      const file = path.join(dir, `f${String(frames.length).padStart(2, '0')}.jpg`);
+      await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(t), '-i', raw, '-frames:v', '1', '-vf', 'scale=480:-2', file]);
+      if (fs.existsSync(file)) frames.push({ t, file });
     }
-    check = await framesOk(frames);
-    console.log(`  frames: ${check.ok ? 'ok' : 'REJECTED'} — ${check.why}`);
-    if (check.ok) break;
-    markSeen(v.id, 'rejected'); fs.rmSync(dir, { recursive: true, force: true }); check = null;
+    const transcript = await transcriptOf(v.url, dir);
+    check = await analyze(frames, transcript, v, p);
+    console.log(`  ${check.ok ? 'ok' : 'REJECTED'} · crazy ${check.crazy}/10 · ${check.start}–${check.end} s — ${check.why}`);
+    if (check.ok && (url || check.crazy >= MIN_CRAZY)) {
+      start = Math.max(0, Math.min(total - 5, +check.start || 0));
+      dur = Math.min(MAX_SECONDS, Math.max(10, (+check.end || start + MAX_SECONDS) - start), total - start);
+      for (const k of ['kicker', 'line1', 'line2', 'caption']) if (check[k]) p[k] = check[k];
+      break;
+    }
+    markSeen(v.id, check.ok ? `not crazy enough (${check.crazy})` : 'rejected'); fs.rmSync(dir, { recursive: true, force: true }); check = null;
   }
   if (!check) { console.log('No candidate passed — not posting.'); return null; }
+  console.log(`  cut: ${start}–${(start + dur).toFixed(1)} s\n  cover: [${p.kicker}] ${p.line1} / ${p.line2}`);
   const coverFrame = path.join(dir, 'cover-frame.jpg');
-  await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(((Math.max(0, Math.min(5, check.cover ?? 1)) + 0.5) * dur) / 6), '-i', raw, '-frames:v', '1', coverFrame]);
+  const coverAt = Number.isFinite(+check.cover) ? Math.max(0, +check.cover) : start + dur / 3;
+  await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(coverAt), '-i', raw, '-frames:v', '1', coverFrame]);
 
   step('Rendering');
   const cover = await shoot(coverHTML(coverFrame, p, v.agency), path.join(dir, '01-cover.jpg'), 1080, 1350);
   const chip = await shoot(chipHTML(v.agency), path.join(dir, 'chip.png'), 1080, 140);
   const video = path.join(dir, '02-video.mp4');
   // 4:5 frame: blurred copy fills the background, the clip sits sharp in the middle, credit chip on top
-  await run('ffmpeg', ['-y', '-loglevel', 'error', '-t', String(dur), '-i', raw, '-i', chip, '-filter_complex',
+  await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(start), '-t', String(dur), '-i', raw, '-i', chip, '-filter_complex',
     '[0:v]scale=1080:1350:force_original_aspect_ratio=increase,crop=1080:1350,boxblur=24:2,eq=brightness=-0.12[bg];'
     + '[0:v]scale=1080:1350:force_original_aspect_ratio=decrease[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2[v1];[v1][1:v]overlay=0:0,fps=30,format=yuv420p[v]',
     '-map', '[v]', '-map', '0:a?', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-c:a', 'aac', '-b:a', '160k', '-ar', '44100', '-movflags', '+faststart', video]);
-  const post = { id: `${date}-clip`, agency: v.agency, source: v.url, title: v.title, ...p, cover, video };
+  const post = { id: `${date}-clip-${v.id}`, agency: v.agency, source: v.url, title: v.title, start, ...p, crazy: check.crazy, cover, video };
   writeJSON(path.join(dir, 'post.json'), post);
   console.log(`✔ ${cover}\n✔ ${video}`);
 

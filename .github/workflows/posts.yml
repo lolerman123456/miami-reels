@@ -97,6 +97,14 @@ jobs:
           sudo curl -sSL -o /usr/local/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
           sudo chmod +x /usr/local/bin/cloudflared
 
+      - name: Video tools (clip slots)
+        if: needs.gate.outputs.kind == 'clip'
+        run: |
+          sudo apt-get install -y -qq ffmpeg > /dev/null
+          pip install -q -U "yt-dlp[default]"
+          curl -fsSL https://deno.land/install.sh | sh -s -- -y > /dev/null 2>&1 || true
+          echo "$HOME/.deno/bin" >> "$GITHUB_PATH"
+
       - name: Cache browsers
         uses: actions/cache@v4
         with:
@@ -112,6 +120,7 @@ jobs:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
           GH_TOKEN: ${{ github.token }}
           CLOUDFLARED_BIN: /usr/local/bin/cloudflared
           EVENT: ${{ github.event_name }}
@@ -131,7 +140,29 @@ jobs:
           [ -n "$TOPIC" ] && ARGS+=(--topic "$TOPIC")
           [ "$PUBLISH" = "false" ] && ARGS+=(--dry-run)
           if [ "${WAIT:-0}" -gt 0 ]; then echo "waiting $((WAIT / 60)) min to post on the hour"; sleep "$WAIT"; fi
+          if [ "$KIND" = "clip" ]; then
+            # hook + agency video (pipeline/clip.mjs); if nothing is crazy enough, the slot posts a news carousel instead
+            CARGS=(); [ "$PUBLISH" = "false" ] && CARGS+=(--dry-run)
+            OK=0; node pipeline/clip.mjs "${CARGS[@]}" || OK=$?
+            rm -f .yt-cookies.txt
+            # a clip was made: done (or a real failure while posting it — don't double-post a carousel on top)
+            if ls out/clips/*/post.json >/dev/null 2>&1; then exit $OK; fi
+            echo "no clip → news carousel"; ARGS[0]=news
+          fi
           node pipeline/carousel.mjs "${ARGS[@]}"
+
+      - name: Clip preview links
+        if: always() && needs.gate.outputs.kind == 'clip'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -f .yt-cookies.txt
+          D=$(ls -d out/clips/*/ 2>/dev/null | tail -1); [ -n "$D" ] || exit 0
+          N=$(basename "$D")
+          for f in 01-cover.jpg 02-video.mp4; do [ -f "$D$f" ] && cp "$D$f" "/tmp/clip-$N-$f"; done
+          ls /tmp/clip-$N-* >/dev/null 2>&1 || exit 0
+          gh release upload videos /tmp/clip-$N-* --clobber
+          for f in /tmp/clip-$N-*; do echo "▶ https://github.com/${{ github.repository }}/releases/download/videos/$(basename $f)" | tee -a "$GITHUB_STEP_SUMMARY"; done
 
       - name: Preview links
         if: always()
@@ -158,7 +189,7 @@ jobs:
         run: |
           git config user.name "reel-bot"
           git config user.email "reel-bot@users.noreply.github.com"
-          for f in posts/*/post.json posted.log state/ai-images.txt; do [ -e "$f" ] && git add "$f"; done; true
+          for f in posts/*/post.json posted.log state/ai-images.txt state/clips-seen.txt; do [ -e "$f" ] && git add "$f"; done; true
           git reset -q -- 'posts/*-preview/*' 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "Post run ${{ github.run_number }} ($(date -u +%F))"
