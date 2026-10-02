@@ -351,6 +351,16 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   // world carousels: fixed cover title, lead story's photo behind it (owner's format)
   // world: the story's own hook, with "NEWS FROM AROUND THE WORLD" as the small top line (owner's format)
   if (kind === 'world') Object.assign(post.cover, { top: 'NEWS FROM AROUND THE WORLD', blur: false });
+  // owner's own topic (no story pick): still look for real photos of it
+  if (topic && !storyPhotos.length && !ALIVE.includes(kind)) {
+    for (const a of await bingArticles(topic)) {
+      const img = await ogImage(a.url);
+      if (img && !storyPhotos.some(x => x.url === img)) storyPhotos.push({ url: img, credit: `Photo: ${a.source}` });
+      if (storyPhotos.length >= 6) break;
+    }
+    storyPhotos = await realPhotosOnly(storyPhotos, topic);
+    if (storyPhotos.length) console.log(`  real photos: ${storyPhotos.map(p => p.credit).join(', ')}`);
+  }
   // owner (Oct 2): if the agency released video of this story, it goes in as slide 2 and the carousel shrinks to 4 slides
   if ((storyText || topic) && !ALIVE.includes(kind)) {
     const { videoForStory } = await import('./clip.mjs');

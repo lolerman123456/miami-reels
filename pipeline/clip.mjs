@@ -128,9 +128,14 @@ async function pick(videos) {
 
 // Watch the whole video (frames every few seconds + the transcript): safety check, how crazy it is, the best ≤58 s
 // moment to cut, the cover frame, and the hook written from what actually happens (not just the title)
-async function analyze(frames, transcript, v, p) {
+// news-carousel video slide (owner, Oct 2: "add the actual surveillance footage"): news footage of the story is the point,
+// so only block what Instagram won't take or we never show
+const STORY_RULES = 'This is the video slide of a news carousel about this story; real news footage (surveillance, bodycam, phone video, the scene, '
+  + 'a TV report) is fine even when it shows a crime happening. ok=false only for gore/blood, graphic injuries, a dead body, nudity, a child\'s face, '
+  + 'or footage that is not about this story. "crazy" can be any value.';
+async function analyze(frames, transcript, v, p, mode = 'clip') {
   const content = [{ type: 'text', text: `Frames from "${v.title}" (${v.agency}), each labeled with its time in seconds, plus the transcript. `
-    + 'We repost agency footage on a South Florida news page like @onlyindade: slide 1 = hook cover, slide 2 = the clip. ' + RULES
+    + 'We repost footage on a South Florida news page like @onlyindade. ' + (mode === 'story' ? STORY_RULES : 'Slide 1 = hook cover, slide 2 = the clip. ' + RULES)
     + ` Draft hook: [${p.kicker}] ${p.line1} / ${p.line2}. Pick the single craziest continuous moment, ${Math.round(MAX_SECONDS * 0.6)}–${MAX_SECONDS} s long, `
     + 'starting right before the action (skip intros, title cards, interviews, talking heads; in a TV report, cut the part that shows the actual surveillance/bodycam/phone footage, not the anchor or reporter). '
     + 'Reply JSON {"ok": true|false, "why": "…", "crazy": 1-10 (10 = everyone would share it), "start": seconds, "end": seconds, '
@@ -219,7 +224,7 @@ async function download(url, raw) {
 }
 
 // download + watch one agency video: safety check, crazy score and the best ≤58 s moment. null if the download failed.
-async function watch(v, p, dir) {
+async function watch(v, p, dir, mode = 'clip') {
   fs.mkdirSync(dir, { recursive: true });
   step('Downloading');
   const raw = path.join(dir, 'raw.mp4');
@@ -234,7 +239,7 @@ async function watch(v, p, dir) {
     if (fs.existsSync(file)) frames.push({ t, file });
   }
   const transcript = await transcriptOf(v.url, dir);
-  const check = await analyze(frames, transcript, v, p);
+  const check = await analyze(frames, transcript, v, p, mode);
   console.log(`  ${check.ok ? 'ok' : 'REJECTED'} · crazy ${check.crazy}/10 · ${check.start}–${check.end} s — ${check.why}`);
   const start = Math.max(0, Math.min(total - 5, +check.start || 0));
   const dur = Math.min(MAX_SECONDS, Math.max(10, (+check.end || start + MAX_SECONDS) - start), total - start);
@@ -261,13 +266,13 @@ export async function videoForStory(story, dir) {
     if (!videos.length) return null;
     const r = await chat([{ role: 'system', content: 'Which official agency video (if any) shows THIS exact news story — the same incident, arrest or case? '
       + 'Real footage of it: the police/agency video, or a TV station report that shows the actual footage (surveillance, bodycam, phone video, the scene) — prefer the one with the most actual footage; never a different case, never generic PR. '
-      + RULES + ' Reply JSON {"index": number or -1, "why": "…"}' },
+      + 'Reply JSON {"index": number or -1, "why": "…"}' },
       { role: 'user', content: `STORY: ${story}\n\nVIDEOS:\n${videos.map((v, i) => `${i}. [${v.agency}] ${v.title} (${v.published.slice(0, 10)}) — ${v.description}`).join('\n')}` }]);
     const v = videos[r.index];
     if (!(r.index >= 0) || !v) { console.log('  (no agency video of this story)'); return null; }
     console.log(`  story video: ${v.agency}: ${v.title} — ${r.why}`);
     const vdir = path.join(dir, 'video');
-    const w = await watch(v, { kicker: '', line1: story.slice(0, 28), line2: '' }, vdir);
+    const w = await watch(v, { kicker: '', line1: story.slice(0, 28), line2: '' }, vdir, 'story');
     if (!w?.check?.ok) return null;
     const file = await renderVideo(w.raw, w.start, w.dur, v.agency, path.join(dir, 'story-video.mp4'), vdir);
     fs.rmSync(vdir, { recursive: true, force: true });
