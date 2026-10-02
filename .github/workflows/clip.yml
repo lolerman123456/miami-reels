@@ -66,6 +66,7 @@ jobs:
           D=$(ls -d out/clips/*/ 2>/dev/null | tail -1); [ -n "$D" ] || exit 0
           N=$(basename "$D")
           for f in 01-cover.jpg 02-video.mp4; do [ -f "$D$f" ] && cp "$D$f" "/tmp/clip-$N-$f"; done
+          ls /tmp/clip-$N-* >/dev/null 2>&1 || exit 0
           gh release upload videos /tmp/clip-$N-* --clobber
           for f in /tmp/clip-$N-*; do echo "▶ https://github.com/${{ github.repository }}/releases/download/videos/$(basename $f)" | tee -a "$GITHUB_STEP_SUMMARY"; done
       - name: Save log

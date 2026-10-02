@@ -154,8 +154,17 @@ export async function makeClip({ url, dryRun } = {}) {
   fs.mkdirSync(dir, { recursive: true });
   step('Downloading');
   const raw = path.join(dir, 'raw.mp4');
-  await run('yt-dlp', [...ytdlpArgs(), '-f', 'bv*[height<=1080][ext=mp4]+ba[ext=m4a]/b[ext=mp4]/bv*+ba/b', '--merge-output-format', 'mp4',
-    '--download-sections', `*0-${MAX_SECONDS + 2}`, '--force-keyframes-at-cuts', '-o', raw, v.url]);
+  // YouTube answers some player clients with "the page needs to be reloaded" for signed-in sessions: try a few
+  let lastErr;
+  for (const client of ['default', 'web_safari', 'mweb', 'tv', 'web_embedded']) {
+    try {
+      await run('yt-dlp', [...ytdlpArgs(), '--extractor-args', `youtube:player_client=${client}`,
+        '-f', 'bv*[height<=1080][ext=mp4]+ba[ext=m4a]/b[ext=mp4]/bv*+ba/b', '--merge-output-format', 'mp4',
+        '--download-sections', `*0-${MAX_SECONDS + 2}`, '--force-keyframes-at-cuts', '-o', raw, v.url]);
+      lastErr = null; console.log(`  downloaded (player client: ${client})`); break;
+    } catch (e) { lastErr = e; console.log(`  (client ${client} failed: ${e.message.split('\n').find(l => /ERROR/.test(l)) || e.message.slice(0, 120)})`); fs.rmSync(raw, { force: true }); }
+  }
+  if (lastErr) throw lastErr;
   const dur = Math.min(MAX_SECONDS, parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', raw]).toString().trim()) || MAX_SECONDS);
 
   step('Checking frames');
