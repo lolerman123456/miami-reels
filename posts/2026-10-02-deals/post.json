@@ -1,0 +1,159 @@
+{
+  "sector": "ECONOMY",
+  "cover": {
+    "top": "TACO BELL DROPS",
+    "main": "A FREE",
+    "highlight": "DUOLINGO PLUSHIE",
+    "bottom": "OCT. 6",
+    "blur": false,
+    "photo": {
+      "query": "Taco Bell restaurant exterior night Wikimedia Commons",
+      "prompt": "dramatic close-up of a Taco Bell counter with a small green owl plush beside a taco wrapper, bright purple lighting"
+    },
+    "emojis": [
+      "🌮",
+      "🦉",
+      "🎁"
+    ],
+    "logos": [
+      "tacobell.com",
+      "duolingo.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c1.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "DEALS",
+      "headline": "Taco Bell: Free Duolingo plushie Oct. 6",
+      "highlight": "Free Duolingo plushie",
+      "body": "Rewards members can try Tuesday Drops at 2 PM PT for a free Taco Bell x Duolingo plushie while supplies last. Find it in the Taco Bell app.",
+      "place": "In the app",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Taco Bell restaurant exterior night Wikimedia Commons",
+        "prompt": "dramatic close-up of a Taco Bell app screen next to a taco and a green owl plush on a purple-lit table"
+      },
+      "color": "#702082",
+      "emoji": "🌮",
+      "chip": "FREE",
+      "logo": "tacobell.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "DEALS",
+      "headline": "Home Depot: Free Witch Candy Box Oct. 3",
+      "highlight": "Free Witch Candy Box",
+      "body": "Kids can make a Witch Candy Box at The Home Depot on Oct. 3. Register online first, with spots first come, first served.",
+      "place": "All locations",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Home Depot store exterior Wikimedia Commons",
+        "prompt": "bright orange Home Depot kids workshop table with small wooden candy boxes, paint cups and Halloween decorations"
+      },
+      "color": "#F96302",
+      "emoji": "🧰",
+      "chip": "OCT. 3",
+      "logo": "homedepot.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "DEALS",
+      "headline": "Bank of America: Free museum entry Oct. 3 and 4",
+      "highlight": "Free museum entry",
+      "body": "Bank of America and Merrill cardholders get free admission during Museums on Us weekend at more than 225 locations nationwide.",
+      "place": "Nationwide",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Perez Art Museum Miami exterior Wikimedia Commons",
+        "prompt": "dramatic wide photo of a Miami museum entrance with a bank card held in the foreground"
+      },
+      "color": "#E31837",
+      "emoji": "🎟️",
+      "chip": "OCT. 3, 4",
+      "logo": "bankofamerica.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "DEALS",
+      "headline": "Cinnabon: $1 Classic Roll on Oct. 4",
+      "highlight": "$1 Classic Roll",
+      "body": "Cinnabon Rewards members can get a Classic Cinnamon Roll for $1 on Oct. 4 from 1 to 4 PM. The deal is in-store only, limit one per person.",
+      "place": "All locations",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Cinnabon cinnamon roll Wikimedia Commons",
+        "prompt": "close-up of a warm Cinnabon Classic Cinnamon Roll with frosting dripping under mall food court lights"
+      },
+      "color": "#005BBB",
+      "emoji": "🍥",
+      "chip": "$1",
+      "logo": "cinnabon.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "DEALS",
+      "headline": "McDonald’s: Monopoly prizes start Oct. 6",
+      "highlight": "Monopoly prizes",
+      "body": "McDonald’s Monopoly starts Oct. 6 with peel-off game pieces and prizes including free food, Rewards points, $1 million cash and a 2027 Jeep Cherokee.",
+      "place": "In the app",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "McDonald's restaurant exterior Wikimedia Commons",
+        "prompt": "dramatic close-up of McDonald's fries and drink with Monopoly game pieces being peeled under golden arches lighting"
+      },
+      "color": "#FFC72C",
+      "emoji": "🍟",
+      "chip": "OCT. 6",
+      "logo": "mcdonalds.com",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Steffen Mokosch / CC BY-SA 3.0",
+      "logoFile": "logo-5.png"
+    },
+    {
+      "tag": "DEALS",
+      "headline": "Dunkin’: More than 85,000 arcade prizes to Nov. 13",
+      "highlight": "85,000+ arcade prizes",
+      "body": "Dunkin’ At Home Extras members can play arcade games for instant prizes through Nov. 13. No purchase is needed, and 7 play days earns 25 bonus points.",
+      "place": "Online",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Dunkin' coffee cup Wikimedia Commons",
+        "prompt": "Dunkin' iced coffee beside a retro arcade screen showing prize icons in pink and orange light"
+      },
+      "color": "#FF671F",
+      "emoji": "☕",
+      "chip": "85,000+",
+      "logo": "dunkindonuts.com",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-6.png"
+    }
+  ],
+  "caption": "Free plushie, free kids workshop, free museum entry and cheap food deals run between Oct. 3 and Oct. 6.\nWhich one are you using first? send this to someone who needs it",
+  "hashtags": [
+    "#SouthFloridaDeals",
+    "#MiamiFreebies"
+  ],
+  "collaborators": [
+    "tacobell",
+    "mcdonalds",
+    "dunkin"
+  ],
+  "igCaption": "Free plushie, free kids workshop, free museum entry and cheap food deals run between Oct. 3 and Oct. 6.\nWhich one are you using first? send this to someone who needs it\n\n📰 Sources: Hip2Save\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaDeals #MiamiFreebies #miami #southflorida",
+  "kind": "deals",
+  "kicker": "FREE & CHEAP IN MIAMI 🍔",
+  "date": "2026-10-02",
+  "id": "2026-10-02-deals"
+}
