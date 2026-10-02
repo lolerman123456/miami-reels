@@ -114,6 +114,37 @@ export async function getLogo(domain, dir, name) {
   return file;
 }
 
+async function bingArticles(q) {
+  try {
+    const x = await (await fetch(`https://www.bing.com/news/search?q=${encodeURIComponent(q)}&format=rss`, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(15000) })).text();
+    return x.split('<item>').slice(1, 7).map(it => {
+      const link = (/<link>([^<]+)/.exec(it)?.[1] || '').replace(/&amp;/g, '&');
+      const url = new URL(link, 'https://www.bing.com').searchParams.get('url') || link;
+      const source = /<News:Source>([^<]+)/.exec(it)?.[1] || new URL(url).hostname.replace(/^www\./, '');
+      return { url, source };
+    }).filter(a => /^https?:/.test(a.url));
+  } catch { return []; }
+}
+
+// keep only real photos that fit a news slide: mugshots, the scene, the place, the accused — no logos/text cards/graphics,
+// no victims or children (a cheap low-detail vision check)
+async function realPhotosOnly(list, story) {
+  if (!list.length || !process.env.OPENAI_API_KEY) return list;
+  const sharp = (await import('sharp')).default;
+  const got = [];
+  for (const p of list) {
+    try {
+      const res = await fetch(p.url, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(15000) });
+      const buf = Buffer.from(await res.arrayBuffer());
+      if (res.ok && buf.length > 20000) got.push({ ...p, b64: (await sharp(buf).resize(512, 512, { fit: 'inside' }).jpeg().toBuffer()).toString('base64') });
+    } catch {}
+  }
+  if (!got.length) return [];
+  const r = await chat([{ role: 'user', content: [{ type: 'text', text: `News story: ${story}\nWhich of these images are REAL photos that fit an Instagram news slide about it (a mugshot/booking photo, the accused, the scene, the building/place, police at the scene)? Exclude logos, text cards, graphics, generic stock, unrelated images, any victim, any child. Reply JSON {"keep": [indexes, best first]}.` },
+    ...got.flatMap((g, i) => [{ type: 'text', text: `Image ${i} (${g.credit})` }, { type: 'image_url', image_url: { url: `data:image/jpeg;base64,${g.b64}`, detail: 'low' } }])] }]).catch(() => ({ keep: got.map((_, i) => i) }));
+  return (r.keep || []).map(i => got[i]).filter(Boolean).map(({ b64, ...p }) => p);
+}
+
 // an article's lead image (og:image) — for crime stories usually the booking photo
 async function ogImage(url) {
   try {
@@ -186,6 +217,17 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
       const img = await ogImage(n.link);
       if (img && !storyPhotos.some(x => x.url === img)) storyPhotos.push({ url: img, credit: `Photo: ${n.source}` });
     }
+    // Google News links hide the article, so also look the story up on Bing News (direct links) for more real photos
+    for (const q of (choice.search || []).slice(0, 2)) {
+      if (storyPhotos.length >= 6) break;
+      for (const a of await bingArticles(q)) {
+        const img = await ogImage(a.url);
+        if (img && !storyPhotos.some(x => x.url === img)) storyPhotos.push({ url: img, credit: `Photo: ${a.source}` });
+        if (storyPhotos.length >= 6) break;
+      }
+    }
+    storyPhotos = await realPhotosOnly(storyPhotos, storyText);
+    if (storyPhotos.length) console.log(`  real photos: ${storyPhotos.map(p => p.credit).join(', ')}`);
     if (storyPhotos.length) console.log(`  news photos: ${storyPhotos.map(p => p.credit).join(', ')}`);
     const more = [];
     for (const q of (choice.search || []).slice(0, 4)) more.push(...await searchNews(q, { days: 3, max: 15 }).catch(() => []));
