@@ -1,0 +1,133 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "A MIAMI-DADE JAIL OFFICER",
+    "main": "IS ACCUSED OF JOINING A",
+    "highlight": "DRUGS, GAMBLING",
+    "bottom": "AND FIREARMS RING",
+    "blur": false,
+    "photo": {
+      "query": "Miami-Dade Corrections and Rehabilitation jail exterior police lights",
+      "prompt": "dramatic night photo of a Miami-Dade jail exterior with red and blue police lights reflecting on wet pavement",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚨",
+      "⚖️",
+      "🔒"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "A Miami-Dade jail officer is accused of being part of a drugs, gambling and firearms crime ring",
+      "highlight": "crime ring",
+      "body": "A Miami-Dade Corrections officer was arrested on federal charges tied to an alleged ring involving drugs, illegal gambling and firearms.",
+      "place": "Miami-Dade County",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Miami-Dade Corrections and Rehabilitation jail building night police car",
+        "prompt": "dramatic photo of a county jail exterior in Miami-Dade at night with a police cruiser parked near the entrance"
+      },
+      "emoji": "🚨",
+      "chip": "FEDERAL",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The arrest was reported Oct. 1",
+      "highlight": "Oct. 1",
+      "body": "The federal case centers on one Miami-Dade Corrections officer.",
+      "place": "Miami-Dade County",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "United States federal courthouse Miami Florida exterior",
+        "prompt": "low-angle photo of a federal courthouse in Miami with security barriers and police vehicles outside"
+      },
+      "emoji": "⚖️",
+      "chip": "OCT 1",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The allegation names drugs, illegal gambling and firearms",
+      "highlight": "drugs, gambling",
+      "body": "The reported federal charges link the alleged ring to drugs, illegal gambling and firearms.",
+      "place": "Miami-Dade County",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "police evidence table firearms cash evidence bags",
+        "prompt": "close-up of sealed evidence bags, cash and a firearm case on a police evidence table, no people shown"
+      },
+      "emoji": "📦",
+      "chip": "3 AREAS",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The accusation reaches the county jail system",
+      "highlight": "county jail",
+      "body": "The accused officer worked for Miami-Dade Corrections, the county agency that operates local jails.",
+      "place": "Miami-Dade County",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Miami-Dade County correctional facility exterior patrol car",
+        "prompt": "wide photo of a Miami-Dade correctional facility exterior with a patrol car in the foreground"
+      },
+      "emoji": "🔒",
+      "chip": "MDCR",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Miami-Dade is Florida’s most populous county",
+      "highlight": "2,701,767",
+      "body": "Miami-Dade had 2,701,767 residents in the 2020 census and includes Miami plus 34 incorporated cities.",
+      "place": "Miami-Dade County",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Miami-Dade County downtown Miami aerial skyline",
+        "prompt": "aerial photo of downtown Miami and surrounding Miami-Dade neighborhoods at dusk"
+      },
+      "emoji": "🏙️",
+      "chip": "2.7M",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The federal case now moves through court",
+      "highlight": "through court",
+      "body": "The next confirmed details will come from filings, hearings or official statements in the case.",
+      "place": "Miami-Dade County",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Miami federal courthouse steps exterior justice building",
+        "prompt": "photo of federal courthouse steps in Miami with courthouse doors, columns and security barriers"
+      },
+      "emoji": "📄",
+      "chip": "NEXT",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "A Miami-Dade Corrections officer is accused in a federal case tied to drugs, illegal gambling and firearms.\n\nWe’ll update when filings or hearings add confirmed details.",
+  "hashtags": [
+    "#MiamiDade",
+    "#MiamiCrime"
+  ],
+  "collaborators": [],
+  "igCaption": "A Miami-Dade Corrections officer is accused in a federal case tied to drugs, illegal gambling and firearms.\n\nWe’ll update when filings or hearings add confirmed details.\n\n📰 Sources: NBC 6 South Florida, Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiDade #MiamiCrime #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-01",
+  "id": "2026-10-01-news-20"
+}
