@@ -1,0 +1,133 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "MIAMI DEVELOPER",
+    "main": "RISHI KAPOOR GOT",
+    "highlight": "11 YEARS",
+    "bottom": "IN PRISON FOR $89M INVESTOR SCAM",
+    "blur": false,
+    "photo": {
+      "query": "Rishi Kapoor Miami developer federal courthouse",
+      "prompt": "dramatic news photo of Miami federal courthouse exterior with downtown high-rises and construction cranes in the background",
+      "mark": "stamp: SENTENCED"
+    },
+    "emojis": [
+      "⚖️",
+      "🏗️",
+      "💸"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Miami developer Rishi Kapoor got 11 years in prison",
+      "highlight": "11 years",
+      "body": "Prosecutors said Kapoor ran an $89 million investor fraud tied to his development business and used money to fund a lavish lifestyle.",
+      "place": "Miami",
+      "source": "The American Bazaar",
+      "photo": {
+        "query": "Rishi Kapoor Miami developer",
+        "prompt": "news-style photo of Miami federal courthouse steps with TV cameras outside, downtown towers behind it, no private people identifiable"
+      },
+      "emoji": "⚖️",
+      "chip": "11 YEARS",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case centered on an $89 million investor fraud",
+      "highlight": "$89 million",
+      "body": "The sentencing followed allegations that investor money connected to Kapoor’s real estate development business was misused.",
+      "place": "Miami",
+      "source": "Realtor.com",
+      "photo": {
+        "query": "Miami condominium construction cranes Brickell skyline",
+        "prompt": "Miami condo construction cranes over Brickell towers at sunset, with legal paperwork in the foreground"
+      },
+      "emoji": "🏗️",
+      "chip": "$89M",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Prosecutors said the money funded lavish spending",
+      "highlight": "lavish spending",
+      "body": "The investor scam was tied to Kapoor’s development business and prosecutors said proceeds supported a luxury lifestyle.",
+      "place": "Miami",
+      "source": "Realtor.com",
+      "photo": {
+        "query": "Miami luxury yacht Biscayne Bay skyline",
+        "prompt": "luxury yacht on Biscayne Bay with Miami condo towers in the background, shot like a financial crime investigation"
+      },
+      "emoji": "🛥️",
+      "chip": "LIFESTYLE",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "A tax scheme was part of the case",
+      "highlight": "tax scheme",
+      "body": "Kapoor was sentenced in a federal case involving investor fraud and a tax scheme.",
+      "place": "Miami",
+      "source": "Floridian Press",
+      "photo": {
+        "query": "IRS tax forms courthouse gavel",
+        "prompt": "tax forms, calculator and gavel on a desk with a blurred courthouse entrance in the background"
+      },
+      "emoji": "🧾",
+      "chip": "TAX CASE",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The sentence came down on Oct. 1",
+      "highlight": "Oct. 1",
+      "body": "Reports on Thursday said Kapoor received 11 years in prison in the $89 million investor fraud case.",
+      "place": "Miami",
+      "source": "The American Bazaar",
+      "photo": {
+        "query": "federal prison fence barbed wire Florida",
+        "prompt": "federal prison fence with barbed wire under harsh afternoon light, no people visible"
+      },
+      "emoji": "🔒",
+      "chip": "OCT 1",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case moves from sentencing to prison",
+      "highlight": "to prison",
+      "body": "Kapoor faces the prison term after prosecutors connected the investor fraud to Miami real estate development and luxury spending.",
+      "place": "Miami",
+      "source": "The American Bazaar",
+      "photo": {
+        "query": "Miami federal courthouse downtown skyline construction cranes",
+        "prompt": "Miami federal courthouse exterior with downtown skyline and construction cranes behind it at dusk"
+      },
+      "emoji": "🏛️",
+      "chip": "PRISON",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Miami developer Rishi Kapoor was sentenced to 11 years in prison after prosecutors said an $89 million investor fraud funded a lavish lifestyle.\n\nWhat part of this case do you want explained next?",
+  "hashtags": [
+    "#MiamiRealEstate",
+    "#FederalCourt"
+  ],
+  "collaborators": [],
+  "igCaption": "Miami developer Rishi Kapoor was sentenced to 11 years in prison after prosecutors said an $89 million investor fraud funded a lavish lifestyle.\n\nWhat part of this case do you want explained next?\n\n📰 Sources: The American Bazaar, Realtor.com, Floridian Press\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiRealEstate #FederalCourt #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-02",
+  "id": "2026-10-02-news-06"
+}
