@@ -1,0 +1,154 @@
+{
+  "sector": "DEVELOPMENT",
+  "cover": {
+    "top": "THIS MIAMI TOWER",
+    "main": "STACKS",
+    "highlight": "NINE CUBES",
+    "bottom": "TO 1,049 FEET",
+    "blur": false,
+    "photo": {
+      "query": "Waldorf Astoria Miami construction Biscayne Boulevard Bayfront Park cranes",
+      "prompt": "dramatic low-angle photo of Waldorf Astoria Miami under construction on Biscayne Boulevard, stacked cube tower rising over Bayfront Park with cranes above downtown Miami"
+    },
+    "emojis": [
+      "🏗️",
+      "🏙️",
+      "📏"
+    ],
+    "logos": [
+      "waldorfastoriamia.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "DEVELOPMENT",
+      "headline": "Two-bedroom units now start at $3.3 million",
+      "highlight": "$3.3 million",
+      "body": "All one-bedroom apartments sold before construction finished, and the five-story penthouse also sold.",
+      "place": "Downtown Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Waldorf Astoria Miami construction close up Biscayne Boulevard",
+        "prompt": "striking close-up photo of Waldorf Astoria Miami construction with cranes, glass towers around it and Biscayne Boulevard below"
+      },
+      "color": "#1B365D",
+      "emoji": "💰",
+      "chip": "$3.3M+",
+      "logo": "waldorfastoriamia.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "DEVELOPMENT",
+      "headline": "Waldorf Astoria Miami is planned for 1,049 feet",
+      "highlight": "1,049 feet",
+      "body": "The tower is rising on Biscayne Boulevard between NE 3rd and 4th Streets, across from Bayfront Park.",
+      "place": "Downtown Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Biscayne Boulevard Bayfront Park Miami skyline construction cranes",
+        "prompt": "dramatic street photo from Bayfront Park looking toward Biscayne Boulevard with a supertall tower construction site and cranes in the skyline"
+      },
+      "color": "#1B365D",
+      "emoji": "🏗️",
+      "chip": "1,049 FT",
+      "logo": "waldorfastoriamia.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "DEVELOPMENT",
+      "headline": "It is planned to become Florida’s tallest building",
+      "highlight": "Florida’s tallest",
+      "body": "At 1,049 feet above sea level, the tower is planned to pass Panorama Tower and the 940-foot Cipriani Residences Miami.",
+      "place": "Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Miami skyline Panorama Tower Brickell sunset",
+        "prompt": "dramatic Miami skyline photo with Panorama Tower standing above Brickell at sunset, viewed from across Biscayne Bay"
+      },
+      "color": "#1B365D",
+      "emoji": "📏",
+      "chip": "940 FT",
+      "logo": "waldorfastoriamia.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "DEVELOPMENT",
+      "headline": "It is planned to top the Southern United States",
+      "highlight": "Southern United States",
+      "body": "The tower is planned to surpass Atlanta’s 1,020-foot Bank of America Plaza and Austin’s 1,030-foot Waterline tower.",
+      "place": "Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "downtown Miami skyline Biscayne Bay supertall construction cranes",
+        "prompt": "wide dramatic photo of downtown Miami from Biscayne Bay with cranes and a supertall construction site changing the skyline"
+      },
+      "color": "#1B365D",
+      "emoji": "🌆",
+      "chip": "1,030 FT",
+      "logo": "waldorfastoriamia.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "DEVELOPMENT",
+      "headline": "The design stacks nearly 100 stories",
+      "highlight": "nearly 100 stories",
+      "body": "Nine stacked and cantilevered cubes hold condo and hotel space, with 10 to 11 floors in each cube.",
+      "place": "Downtown Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Waldorf Astoria Miami rendering stacked cubes skyscraper",
+        "prompt": "dramatic architectural image of a stacked cube supertall skyscraper rising over downtown Miami with Biscayne Bay behind it"
+      },
+      "color": "#1B365D",
+      "emoji": "🧊",
+      "chip": "9 CUBES",
+      "logo": "waldorfastoriamia.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    },
+    {
+      "tag": "DEVELOPMENT",
+      "headline": "Construction started in late 2022",
+      "highlight": "late 2022",
+      "body": "The building is expected to top out in 2026 and be completed by January 2028.",
+      "place": "Downtown Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Waldorf Astoria Miami construction cranes night downtown Miami",
+        "prompt": "dramatic night photo of a downtown Miami supertall construction site with cranes lit above Biscayne Boulevard and Bayfront Park nearby"
+      },
+      "color": "#1B365D",
+      "emoji": "🗓️",
+      "chip": "JAN 2028",
+      "logo": "waldorfastoriamia.com",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-6.png"
+    }
+  ],
+  "caption": "Waldorf Astoria Miami is planned for 1,049 feet, with nine stacked cubes and two-bedroom units starting at $3.3 million.\nWould this tower change how you see the downtown skyline?",
+  "hashtags": [
+    "#WaldorfAstoriaMiami",
+    "#MiamiDevelopment"
+  ],
+  "collaborators": [],
+  "igCaption": "Waldorf Astoria Miami is planned for 1,049 feet, with nine stacked cubes and two-bedroom units starting at $3.3 million.\nWould this tower change how you see the downtown skyline?\n\n📰 Sources: Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#WaldorfAstoriaMiami #MiamiDevelopment #miami #southflorida",
+  "kind": "feature",
+  "kicker": "NEW IN SOUTH FLORIDA",
+  "date": "2026-10-02",
+  "id": "2026-10-02-feature"
+}
