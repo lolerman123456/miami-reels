@@ -1,0 +1,149 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "POLICE SAY",
+    "main": "THE ABUSE STARTED WHEN",
+    "highlight": "SHE WAS 15",
+    "bottom": "AND LASTED TWO YEARS",
+    "blur": true,
+    "photo": {
+      "query": "Miami Shores police car night",
+      "prompt": "dramatic police cruiser lights outside a quiet Miami Shores neighborhood at night, no people visible"
+    },
+    "emojis": [
+      "🚔",
+      "⚖️",
+      "📍"
+    ],
+    "logos": [
+      "local10.com"
+    ],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Local 10",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Police say the abuse went on for two years, starting when the girl was 15",
+      "highlight": "starting when the girl was 15",
+      "body": "Police arrested a 20-year-old Miami Shores man accused of sexually abusing a teenage girl.",
+      "place": "Miami Shores",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami Shores Florida police car night",
+        "prompt": "close-up of police lights on a patrol car in a quiet Miami Shores street at night, no faces visible"
+      },
+      "emoji": "🚔",
+      "chip": "AGE 15",
+      "logo": "local10.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police accuse him of repeated abuse",
+      "highlight": "repeated abuse",
+      "body": "The accusation covers repeated sexual abuse over a two-year period.",
+      "place": "Miami-Dade County",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami-Dade police cruiser lights night",
+        "prompt": "Miami-Dade police cruiser lights reflecting on wet pavement at night, no people or identifying details"
+      },
+      "emoji": "⏳",
+      "chip": "2 YEARS",
+      "logo": "local10.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The accused man is from Miami Shores",
+      "highlight": "from Miami Shores",
+      "body": "The report identifies the accused as a 20-year-old man from Miami Shores.",
+      "place": "Miami Shores",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami Shores Florida street sign",
+        "prompt": "nighttime view of a Miami Shores street sign with police lights blurred in the background, no people visible"
+      },
+      "emoji": "📍",
+      "chip": "AGE 20",
+      "logo": "local10.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case is in Miami-Dade",
+      "highlight": "in Miami-Dade",
+      "body": "The arrest involves a Miami-Dade case and a girl who was 15 when police say the abuse started.",
+      "place": "Miami-Dade County",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami-Dade County courthouse exterior dusk",
+        "prompt": "exterior of a Miami-Dade courthouse at dusk with police vehicle lights nearby, no people visible"
+      },
+      "emoji": "🗓️",
+      "chip": "MIAMI-DADE",
+      "logo": "local10.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police say the abuse continued over time",
+      "highlight": "continued over time",
+      "body": "The allegation centers on conduct police say happened repeatedly across two years.",
+      "place": "Miami-Dade County",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "police tape Miami-Dade night",
+        "prompt": "yellow police tape across a dark Miami-Dade residential scene with patrol lights in the distance, no people visible"
+      },
+      "emoji": "⚖️",
+      "chip": "REPEATED",
+      "logo": "local10.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case moves forward after the arrest",
+      "highlight": "after the arrest",
+      "body": "Police have accused him in a case involving a girl who was 15 when the alleged abuse began.",
+      "place": "Miami-Dade County",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami-Dade courthouse police car",
+        "prompt": "police vehicle parked outside a Miami-Dade courthouse under an overcast sky, no people visible"
+      },
+      "emoji": "🏛️",
+      "chip": "ARRESTED",
+      "logo": "local10.com",
+      "mark": "stamp: ARRESTED",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-6.png"
+    }
+  ],
+  "caption": "Police say the abuse started when the girl was 15 and continued for two years. A 20-year-old Miami Shores man was arrested in the case.",
+  "hashtags": [
+    "#MiamiShores",
+    "#MiamiDade"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say the abuse started when the girl was 15 and continued for two years. A 20-year-old Miami Shores man was arrested in the case.\n\n📰 Sources: WPLG Local 10\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiShores #MiamiDade #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-02",
+  "id": "2026-10-02-news-14"
+}
