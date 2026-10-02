@@ -109,7 +109,7 @@ async function pick(videos) {
     + 'wild arrests, gators/pythons, insane rescues, outrageous traffic stops) — skip anything mild or merely informative. '
     + 'View counts are a strong signal. Florida-wide is fine; South Florida first when equally crazy. ' + RULES + ' Write the cover like onlyindade: 2 short punchy lines in plain words, the second line is the shock '
     + '(e.g. "MIAMI-DADE DEPUTIES" / "STOP A WRONG-WAY DRIVER ON I-95"), no clickbait lies, only what the title/description supports. '
-    + 'Rank up to 4 candidates, best first (fewer or none only if nothing qualifies). The cover can quote the best line from the title. '
+    + 'Only actual footage counts (bodycam, dashcam, surveillance, helicopter, phone video) — never a sheriff/official talking to camera, even about a wild case. Rank up to 6 candidates, best first (fewer or none only if nothing qualifies). The cover can quote the best line from the title. '
     + 'Return JSON {"picks": [{"index": number, "kicker": "one of CAUGHT ON CAMERA, BODYCAM, DASHCAM, CHASE, ARRESTED, BUSTED, RESCUE, WILD FLORIDA, CRAZY", "line1": "≤28 chars", '
     + '"line2": "≤40 chars, the shock", "caption": "2–4 short lines: what happened (accused/charged wording), where, credit line \\"🎥 Video: <agency>\\", then 3 hashtags", "why": "…"}]}' },
   { role: 'user', content: videos.map((v, i) => `${i}. [${v.agency}] ${v.title} (${v.published.slice(0, 10)}, ${v.views} views) — ${v.description}`).join('\n') }]);
@@ -280,7 +280,9 @@ export async function makeClip({ url, dryRun } = {}) {
   const seenFile = path.join(ROOT, 'state', 'clips-seen.txt');
   const seen = new Set(fs.existsSync(seenFile) ? fs.readFileSync(seenFile, 'utf8').split('\n').map(l => l.split(/\s/)[0]).filter(Boolean) : []);
   const markSeen = (id, why) => { fs.mkdirSync(path.dirname(seenFile), { recursive: true }); fs.appendFileSync(seenFile, `${id}  ${why}\n`); };
-  if (!url) videos = videos.filter(v => !seen.has(v.id));
+  // talking heads are never clips (the 6pm slot on Oct 2 wasted all its tries on Polk "Morning briefing" desk videos)
+  const TALK = /\b(briefing|press conference|news conference|meeting|ceremony|awards?|graduation|interview|podcast|budget|council|commission|town hall|recruit|hiring|join the team|wrap[- ]?up|case update|found guilty|sentenced|birthday|anniversary|memorial|remember)\b/i;
+  if (!url) videos = videos.filter(v => !seen.has(v.id) && !TALK.test(v.title));
   const picks = await pick(videos);
   if (!picks.length) { console.log('Nothing share-worthy right now — not posting.'); return null; }
   let p, v, dir, w, start = 0, dur, check;
