@@ -1,0 +1,133 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "FORMER MIAMI CONGRESSMAN",
+    "main": "DAVID RIVERA FACES SENTENCING IN",
+    "highlight": "$50M PDVSA CASE",
+    "bottom": "",
+    "blur": false,
+    "photo": {
+      "query": "David Rivera congressman official portrait Wikimedia Commons",
+      "prompt": "dramatic close-up of David Rivera outside a federal courthouse in Miami, press cameras in foreground, serious legal news lighting",
+      "mark": "stamp: SENTENCING"
+    },
+    "emojis": [
+      "⚖️",
+      "🏛️",
+      "🇻🇪"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "David Rivera faces sentencing in $50M PDVSA case",
+      "highlight": "$50M PDVSA",
+      "body": "A former Miami congressman faces sentencing over a $50 million Venezuela lobbying deal tied to PDVSA.",
+      "place": "Miami",
+      "source": "CBS News",
+      "photo": {
+        "query": "David Rivera congressman official portrait Wikimedia Commons",
+        "prompt": "former Miami congressman arriving at a federal courthouse in downtown Miami, press cameras outside, serious legal news scene"
+      },
+      "emoji": "⚖️",
+      "chip": "FRI 10/2",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The accusation: secret lobbying for Venezuela oil",
+      "highlight": "secret lobbying",
+      "body": "The federal case accused Rivera of secretly lobbying for Venezuela’s state oil company through the consulting deal.",
+      "place": "Miami",
+      "source": "CBS News",
+      "photo": {
+        "query": "PDVSA oil refinery Venezuela Wikimedia Commons",
+        "prompt": "Venezuelan oil refinery with storage tanks and heavy clouds, documentary news photo with no people"
+      },
+      "emoji": "🛢️",
+      "chip": "$50M DEAL",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Rivera was arrested on foreign-agent charges",
+      "highlight": "foreign-agent charges",
+      "body": "Rivera was arrested Dec. 5, 2022, and charged with failure to register as a foreign agent and money laundering conspiracy.",
+      "place": "Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wilkie D Ferguson Jr United States Courthouse Miami Wikimedia Commons",
+        "prompt": "federal courthouse entrance in downtown Miami with flags, courthouse steps and police vehicles nearby at dusk"
+      },
+      "emoji": "🚔",
+      "chip": "DEC 5 2022",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "PDVSA is Venezuela’s state oil company",
+      "highlight": "state oil company",
+      "body": "PDVSA explores, produces, refines and exports oil, and Venezuela holds the world’s largest oil reserves.",
+      "place": "Venezuela",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "PDVSA gas station Venezuela Wikimedia Commons",
+        "prompt": "PDVSA-branded oil infrastructure in Venezuela, storage tanks and pipelines under a gray sky"
+      },
+      "emoji": "🇻🇪",
+      "chip": "PDVSA",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case follows Rivera’s Miami-Dade career",
+      "highlight": "Miami-Dade career",
+      "body": "Rivera served in Florida’s House from 2002 to 2010, then represented Florida’s 25th congressional district from 2011 to 2013.",
+      "place": "Miami-Dade",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Florida House of Representatives chamber Tallahassee Wikimedia Commons",
+        "prompt": "Florida legislative chamber with empty desks, warm lights and state seal visible, political background image"
+      },
+      "emoji": "🗳️",
+      "chip": "2011-2013",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Friends and former lawmakers rallied before sentencing",
+      "highlight": "before sentencing",
+      "body": "Friends and former lawmakers rallied behind Rivera ahead of federal sentencing.",
+      "place": "Miami",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Miami federal courthouse exterior Wikimedia Commons",
+        "prompt": "small group gathered outside a downtown Miami federal courthouse before a sentencing hearing, faces not identifiable, documentary style"
+      },
+      "emoji": "📄",
+      "chip": "SENTENCING",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Former Miami Congressman David Rivera faces sentencing Friday in a federal case tied to a $50 million PDVSA lobbying deal.\nWhat detail are you watching closest as this case reaches sentencing?",
+  "hashtags": [
+    "#MiamiPolitics",
+    "#DavidRivera"
+  ],
+  "collaborators": [],
+  "igCaption": "Former Miami Congressman David Rivera faces sentencing Friday in a federal case tied to a $50 million PDVSA lobbying deal.\nWhat detail are you watching closest as this case reaches sentencing?\n\n📰 Sources: CBS News, Wikipedia, Miami Herald\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiPolitics #DavidRivera #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-02",
+  "id": "2026-10-02-brief"
+}
