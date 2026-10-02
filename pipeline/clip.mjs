@@ -49,6 +49,16 @@ export const CHANNELS = [
   ['St. Johns County Sheriff\'s Office', 'UC7afBe33n-XSRqN9JU4eNYQ'],
   ['Escambia County Sheriff\'s Office', 'UCmNjE4cybjpmJgH9IrkGUqA'],
 ];
+// TV stations' channels — only for the video slide inside news carousels (owner, Oct 2: "any station clip", credited;
+// they can file copyright claims, owner accepted that). Never used for the standalone clip slots.
+export const STATIONS = [
+  ['WSVN 7News', 'UCnquIO-KeazvWWR38jvdu0A'],
+  ['WPLG Local 10', 'UCgVZ0mrM3liHNhRYC5Mchgg'],
+  ['NBC 6 South Florida', 'UCBgcPSn61UQ4l_-FvcEgLQA'],
+  ['CBS News Miami', 'UCXJryYh6xcW5iEeJGzK191A'],
+  ['WPTV News', 'UC0bCUnP5RrkJZUtd3bBz6Kw'],
+  ['WPBF 25 News', 'UCeD5NwvPbEZKcu02_v8tUZQ'],
+];
 const KICKERS = ['CAUGHT ON CAMERA', 'BODYCAM', 'DASHCAM', 'CHASE', 'ARRESTED', 'BUSTED', 'RESCUE', 'WILD FLORIDA', 'CRAZY'];
 const MIN_CRAZY = 7; // owner, Oct 2: "viral videos need to be more crazy" — 1–10 score from the full-video look
 const MAX_SECONDS = 58; // Instagram carousel videos max out at 60 s
@@ -66,9 +76,9 @@ const ytdlpArgs = () => {
 const clean = s => String(s || '').replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&lt;/g, '<').replace(/&gt;/g, '>');
 
 // recent uploads from every agency channel (public RSS, no key needed)
-export async function recentAgencyVideos({ days = 14 } = {}) {
+export async function recentAgencyVideos({ days = 14, channels = CHANNELS } = {}) {
   const out = [];
-  for (const [agency, id] of CHANNELS) {
+  for (const [agency, id] of channels) {
     try {
       const xml = await (await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${id}`)).text();
       for (const e of xml.split('<entry>').slice(1)) {
@@ -122,7 +132,7 @@ async function analyze(frames, transcript, v, p) {
   const content = [{ type: 'text', text: `Frames from "${v.title}" (${v.agency}), each labeled with its time in seconds, plus the transcript. `
     + 'We repost agency footage on a South Florida news page like @onlyindade: slide 1 = hook cover, slide 2 = the clip. ' + RULES
     + ` Draft hook: [${p.kicker}] ${p.line1} / ${p.line2}. Pick the single craziest continuous moment, ${Math.round(MAX_SECONDS * 0.6)}–${MAX_SECONDS} s long, `
-    + 'starting right before the action (skip intros, title cards, interviews, talking heads). '
+    + 'starting right before the action (skip intros, title cards, interviews, talking heads; in a TV report, cut the part that shows the actual surveillance/bodycam/phone footage, not the anchor or reporter). '
     + 'Reply JSON {"ok": true|false, "why": "…", "crazy": 1-10 (10 = everyone would share it), "start": seconds, "end": seconds, '
     + '"cover": seconds of the most gripping frame (no victim/child/gore), "kicker": one of CAUGHT ON CAMERA | BODYCAM | DASHCAM | CHASE | ARRESTED | BUSTED | RESCUE | WILD FLORIDA | CRAZY, "line1": "≤28 chars", "line2": "≤40 chars, the shock", '
     + '"caption": "2–4 short lines: what happens (accused/charged wording), where, \\"🎥 Video: <agency>\\", then 3 hashtags"}' }];
@@ -247,10 +257,10 @@ async function renderVideo(raw, start, dur, agency, out, dir) {
 export async function videoForStory(story, dir) {
   if (!process.env.YOUTUBE_COOKIES) return null;
   try {
-    const videos = await recentAgencyVideos({ days: 10 });
+    const videos = await recentAgencyVideos({ days: 10, channels: [...CHANNELS, ...STATIONS] });
     if (!videos.length) return null;
     const r = await chat([{ role: 'system', content: 'Which official agency video (if any) shows THIS exact news story — the same incident, arrest or case? '
-      + 'Only real footage of it (bodycam, dashcam, surveillance, the arrest, the scene, a press conference showing evidence); never a different case, never generic PR. '
+      + 'Real footage of it: the police/agency video, or a TV station report that shows the actual footage (surveillance, bodycam, phone video, the scene) — prefer the one with the most actual footage; never a different case, never generic PR. '
       + RULES + ' Reply JSON {"index": number or -1, "why": "…"}' },
       { role: 'user', content: `STORY: ${story}\n\nVIDEOS:\n${videos.map((v, i) => `${i}. [${v.agency}] ${v.title} (${v.published.slice(0, 10)}) — ${v.description}`).join('\n')}` }]);
     const v = videos[r.index];

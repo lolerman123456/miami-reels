@@ -352,9 +352,9 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   // world: the story's own hook, with "NEWS FROM AROUND THE WORLD" as the small top line (owner's format)
   if (kind === 'world') Object.assign(post.cover, { top: 'NEWS FROM AROUND THE WORLD', blur: false });
   // owner (Oct 2): if the agency released video of this story, it goes in as slide 2 and the carousel shrinks to 4 slides
-  if (storyText && !ALIVE.includes(kind)) {
+  if ((storyText || topic) && !ALIVE.includes(kind)) {
     const { videoForStory } = await import('./clip.mjs');
-    const v = await videoForStory(storyText, dir);
+    const v = await videoForStory(storyText || topic, dir);
     if (v) {
       post.video = { file: path.basename(v.file), agency: v.agency, url: v.url };
       post.slides = post.slides.slice(0, 2);
