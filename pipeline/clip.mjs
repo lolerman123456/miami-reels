@@ -38,6 +38,16 @@ export const CHANNELS = [
   ['Lee County Sheriff\'s Office', 'UCR5aSsmi0J0mp3uO4pfyF5Q'],
   ['Osceola County Sheriff\'s Office', 'UCOij53snR6I7KTIcbaDZa-A'],
   ['Florida Fish and Wildlife (FWC)', 'UCkDj8yIrlrHB1hkU93uEZQg'],
+  ['Jacksonville Sheriff\'s Office', 'UCu7DiFkpfeNUGIQNs_czJXg'],
+  ['Collier County Sheriff\'s Office', 'UCmTd9dBHVK4R6x_25AGdSvg'],
+  ['Lake County Sheriff\'s Office', 'UCVvmNy7eZzEuZxVYSDxb4Vw'],
+  ['Manatee County Sheriff\'s Office', 'UCa09caxXzsxrobn1xGF1VuA'],
+  ['Indian River County Sheriff\'s Office', 'UCTRtJe3b8FoBmuoVzw4y5VA'],
+  ['Citrus County Sheriff\'s Office', 'UCybuwLy4DIvh_dOt6GeacBw'],
+  ['Flagler County Sheriff\'s Office', 'UCJgQBK-0dhTYayolB-swPzA'],
+  ['Bay County Sheriff\'s Office', 'UCvLKPfk3ZCQxrF3nC_N6BZQ'],
+  ['St. Johns County Sheriff\'s Office', 'UC7afBe33n-XSRqN9JU4eNYQ'],
+  ['Escambia County Sheriff\'s Office', 'UCmNjE4cybjpmJgH9IrkGUqA'],
 ];
 const KICKERS = ['CAUGHT ON CAMERA', 'BODYCAM', 'DASHCAM', 'CHASE', 'ARRESTED', 'BUSTED', 'RESCUE', 'WILD FLORIDA', 'CRAZY'];
 const MIN_CRAZY = 7; // owner, Oct 2: "viral videos need to be more crazy" — 1–10 score from the full-video look
@@ -198,6 +208,64 @@ async function download(url, raw) {
   throw lastErr;
 }
 
+// download + watch one agency video: safety check, crazy score and the best ≤58 s moment. null if the download failed.
+async function watch(v, p, dir) {
+  fs.mkdirSync(dir, { recursive: true });
+  step('Downloading');
+  const raw = path.join(dir, 'raw.mp4');
+  try { await download(v.url, raw); } catch (e) { console.log(`  download failed: ${e.message.slice(0, 300)}`); return null; }
+  const total = parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', raw]).toString().trim()) || MAX_SECONDS;
+  step(`Watching (${Math.round(total)} s)`);
+  const every = Math.max(2, Math.ceil(total / 48));
+  const frames = [];
+  for (let t = 1; t < total - 0.5; t += every) {
+    const file = path.join(dir, `f${String(frames.length).padStart(2, '0')}.jpg`);
+    await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(t), '-i', raw, '-frames:v', '1', '-vf', 'scale=480:-2', file]);
+    if (fs.existsSync(file)) frames.push({ t, file });
+  }
+  const transcript = await transcriptOf(v.url, dir);
+  const check = await analyze(frames, transcript, v, p);
+  console.log(`  ${check.ok ? 'ok' : 'REJECTED'} · crazy ${check.crazy}/10 · ${check.start}–${check.end} s — ${check.why}`);
+  const start = Math.max(0, Math.min(total - 5, +check.start || 0));
+  const dur = Math.min(MAX_SECONDS, Math.max(10, (+check.end || start + MAX_SECONDS) - start), total - start);
+  return { check, raw, total, start, dur };
+}
+
+// 4:5 frame: blurred copy fills the background, the clip sits sharp in the middle (zoomed 1.25× so wide footage
+// fills more of the post), credit chip on top
+async function renderVideo(raw, start, dur, agency, out, dir) {
+  const chip = await shoot(chipHTML(agency), path.join(dir, 'chip.png'), 1080, 140);
+  await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(start), '-t', String(dur), '-i', raw, '-i', chip, '-filter_complex',
+    '[0:v]scale=1080:1350:force_original_aspect_ratio=increase,crop=1080:1350,boxblur=24:2,eq=brightness=-0.12[bg];'
+    + '[0:v]scale=1080:1350:force_original_aspect_ratio=decrease,scale=iw*1.25:-2,crop=min(iw\\,1080):ih[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2[v1];[v1][1:v]overlay=0:0,fps=30,format=yuv420p[v]',
+    '-map', '[v]', '-map', '0:a?', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-c:a', 'aac', '-b:a', '160k', '-ar', '44100', '-movflags', '+faststart', out]);
+  return out;
+}
+
+// News carousels (owner, Oct 2): when an agency released video of THIS story (bodycam, arrest, press conference with
+// footage), put it in the carousel as slide 2. Returns { file, agency, url } or null. Needs YOUTUBE_COOKIES.
+export async function videoForStory(story, dir) {
+  if (!process.env.YOUTUBE_COOKIES) return null;
+  try {
+    const videos = await recentAgencyVideos({ days: 10 });
+    if (!videos.length) return null;
+    const r = await chat([{ role: 'system', content: 'Which official agency video (if any) shows THIS exact news story — the same incident, arrest or case? '
+      + 'Only real footage of it (bodycam, dashcam, surveillance, the arrest, the scene, a press conference showing evidence); never a different case, never generic PR. '
+      + RULES + ' Reply JSON {"index": number or -1, "why": "…"}' },
+      { role: 'user', content: `STORY: ${story}\n\nVIDEOS:\n${videos.map((v, i) => `${i}. [${v.agency}] ${v.title} (${v.published.slice(0, 10)}) — ${v.description}`).join('\n')}` }]);
+    const v = videos[r.index];
+    if (!(r.index >= 0) || !v) { console.log('  (no agency video of this story)'); return null; }
+    console.log(`  story video: ${v.agency}: ${v.title} — ${r.why}`);
+    const vdir = path.join(dir, 'video');
+    const w = await watch(v, { kicker: '', line1: story.slice(0, 28), line2: '' }, vdir);
+    if (!w?.check?.ok) return null;
+    const file = await renderVideo(w.raw, w.start, w.dur, v.agency, path.join(dir, 'story-video.mp4'), vdir);
+    fs.rmSync(vdir, { recursive: true, force: true });
+    return { file, agency: v.agency, url: v.url };
+  } catch (e) { console.log(`  (story video skipped: ${e.message.slice(0, 200)})`); return null; }
+  finally { fs.rmSync(path.join(ROOT, '.yt-cookies.txt'), { force: true }); }
+}
+
 export async function makeClip({ url, dryRun } = {}) {
   const date = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
   step('Finding agency videos');
@@ -215,37 +283,24 @@ export async function makeClip({ url, dryRun } = {}) {
   if (!url) videos = videos.filter(v => !seen.has(v.id));
   const picks = await pick(videos);
   if (!picks.length) { console.log('Nothing share-worthy right now — not posting.'); return null; }
-  let p, v, dir, raw, start = 0, dur, check;
+  let p, v, dir, w, start = 0, dur, check;
   for (const cand of picks) {
     p = cand; v = videos[cand.index];
     console.log(`\n  pick: ${v.agency}: ${v.title} — ${p.why}\n  draft cover: [${p.kicker}] ${p.line1} / ${p.line2}`);
     dir = path.join(ROOT, 'out', 'clips', `${date}-${v.id}`);
-    fs.mkdirSync(dir, { recursive: true });
-    step('Downloading');
-    raw = path.join(dir, 'raw.mp4');
-    try { await download(v.url, raw); } catch (e) { console.log(`  download failed: ${e.message.slice(0, 300)}`); continue; }
-    const total = parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', raw]).toString().trim()) || MAX_SECONDS;
-    step(`Watching (${Math.round(total)} s)`);
-    const every = Math.max(2, Math.ceil(total / 48));
-    const frames = [];
-    for (let t = 1; t < total - 0.5; t += every) {
-      const file = path.join(dir, `f${String(frames.length).padStart(2, '0')}.jpg`);
-      await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(t), '-i', raw, '-frames:v', '1', '-vf', 'scale=480:-2', file]);
-      if (fs.existsSync(file)) frames.push({ t, file });
-    }
-    const transcript = await transcriptOf(v.url, dir);
-    check = await analyze(frames, transcript, v, p);
-    console.log(`  ${check.ok ? 'ok' : 'REJECTED'} · crazy ${check.crazy}/10 · ${check.start}–${check.end} s — ${check.why}`);
-    if (check.ok && (url || check.crazy >= MIN_CRAZY)) {
-      start = Math.max(0, Math.min(total - 5, +check.start || 0));
-      dur = Math.min(MAX_SECONDS, Math.max(10, (+check.end || start + MAX_SECONDS) - start), total - start);
+    w = await watch(v, p, dir);
+    check = w?.check;
+    if (check?.ok && (url || check.crazy >= MIN_CRAZY)) {
+      ({ start, dur } = w);
       for (const k of ['kicker', 'line1', 'line2', 'caption']) if (check[k]) p[k] = check[k];
       if (!KICKERS.includes(String(p.kicker).toUpperCase())) p.kicker = 'CAUGHT ON CAMERA';
       break;
     }
-    markSeen(v.id, check.ok ? `not crazy enough (${check.crazy})` : 'rejected'); fs.rmSync(dir, { recursive: true, force: true }); check = null;
+    if (w) markSeen(v.id, check.ok ? `not crazy enough (${check.crazy})` : 'rejected');
+    fs.rmSync(dir, { recursive: true, force: true }); check = null;
   }
   if (!check) { console.log('No candidate passed — not posting.'); return null; }
+  const raw = w.raw;
   console.log(`  cut: ${start}–${(start + dur).toFixed(1)} s\n  cover: [${p.kicker}] ${p.line1} / ${p.line2}`);
   const coverFrame = path.join(dir, 'cover-frame.jpg');
   const coverAt = Number.isFinite(+check.cover) ? Math.max(0, +check.cover) : start + dur / 3;
@@ -253,14 +308,7 @@ export async function makeClip({ url, dryRun } = {}) {
 
   step('Rendering');
   const cover = await shoot(coverHTML(coverFrame, p, v.agency), path.join(dir, '01-cover.jpg'), 1080, 1350);
-  const chip = await shoot(chipHTML(v.agency), path.join(dir, 'chip.png'), 1080, 140);
-  const video = path.join(dir, '02-video.mp4');
-  // 4:5 frame: blurred copy fills the background, the clip sits sharp in the middle (zoomed 1.25× so wide footage
-  // fills more of the post), credit chip on top
-  await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(start), '-t', String(dur), '-i', raw, '-i', chip, '-filter_complex',
-    '[0:v]scale=1080:1350:force_original_aspect_ratio=increase,crop=1080:1350,boxblur=24:2,eq=brightness=-0.12[bg];'
-    + '[0:v]scale=1080:1350:force_original_aspect_ratio=decrease,scale=iw*1.25:-2,crop=min(iw\\,1080):ih[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2[v1];[v1][1:v]overlay=0:0,fps=30,format=yuv420p[v]',
-    '-map', '[v]', '-map', '0:a?', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-c:a', 'aac', '-b:a', '160k', '-ar', '44100', '-movflags', '+faststart', video]);
+  const video = await renderVideo(raw, start, dur, v.agency, path.join(dir, '02-video.mp4'), dir);
   const post = { id: `${date}-clip-${v.id}`, agency: v.agency, source: v.url, title: v.title, start, ...p, crazy: check.crazy, cover, video };
   writeJSON(path.join(dir, 'post.json'), post);
   console.log(`✔ ${cover}\n✔ ${video}`);

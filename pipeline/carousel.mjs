@@ -114,6 +114,17 @@ export async function getLogo(domain, dir, name) {
   return file;
 }
 
+// an article's lead image (og:image) — for crime stories usually the booking photo
+async function ogImage(url) {
+  try {
+    const html = await (await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' }, redirect: 'follow', signal: AbortSignal.timeout(15000) })).text();
+    const m = /<meta[^>]+(?:property|name)=["'](?:og:image|twitter:image)["'][^>]+content=["']([^"']+)/i.exec(html)
+      || /<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["'](?:og:image|twitter:image)["']/i.exec(html);
+    const img = m?.[1]?.replace(/&amp;/g, '&');
+    return img && /^https?:/.test(img) && !/logo|placeholder|default|favicon/i.test(img) ? img : null;
+  } catch { return null; }
+}
+
 async function newsPhoto(p, dir, name) {
   try {
     const res = await fetch(p.url, { headers: { 'User-Agent': 'Mozilla/5.0' }, signal: AbortSignal.timeout(20000) });
@@ -139,7 +150,7 @@ async function digDeeper(news, what) {
 export async function writeCarousel(kind, { topic, preview } = {}) {
   const spec = KINDS[kind];
   if (!spec) throw new Error(`Unknown carousel kind "${kind}" (brief|news|world|feature|upcoming|deals)`);
-  let storyPhotos = [];
+  let storyPhotos = [], storyText = '';
   const weekday = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })).getDay();
   const feature = kind === 'feature' ? FEATURES[weekday] : null;
   const kicker = feature ? `${feature.name}` : spec.kicker;
@@ -164,11 +175,17 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     const choice = await chat([{ role: 'system', content: `Pick ${spec.pick}\n` +
       // owner (Sep 29): stories must not be boring — a hook and real substance, not procedure
       'BORING TEST: skip stories that are only procedure or paperwork (a lawsuit filed, a meeting, a proposal, a study, a statement, a vote scheduled) unless there is a vivid, surprising detail people would repeat to a friend (a shocking number, a wild moment, a famous name, a big price, a real danger, a twist). Pick the story with the strongest "wait, what?" detail AND enough reported facts to fill 5–6 slides (what happened, key numbers, how it started, who it hits here, what happens next). ' +
-      `Return JSON {"story":"one sentence","hook":"the single most surprising, specific detail in the headlines (a number, name, place or moment) that the cover should lead with","search":["2–4 Google News searches to find more reporting on that exact story"],"wikipedia":["0–2 exact English Wikipedia titles for background (a country, a conflict, a place)"],"photos":[indexes of headlines marked [PHOTO] that are about this exact story, best first]}` },
+      `Return JSON {"story":"one sentence","hook":"the single most surprising, specific detail in the headlines (a number, name, place or moment) that the cover should lead with","search":["2–4 Google News searches to find more reporting on that exact story"],"wikipedia":["0–2 exact English Wikipedia titles for background (a country, a conflict, a place)"],"photos":[indexes of headlines marked [PHOTO] that are about this exact story, best first — mugshots and real scene photos first],"articles":[indexes of ALL headlines about this exact story]}` },
       { role: 'user', content: `Headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.image ? ' [PHOTO]' : ''}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}\n\nAlready posted (pick something else unless there is a big new development):\n${recentPosts(2).map(p => '- ' + [p.cover?.main, p.cover?.highlight].filter(Boolean).join(' ') + ': ' + (p.slides || []).map(x => x.headline).join('; ')).join('\n') || '(none)'}${TREND}` }]);
     console.log(`  story: ${choice.story}`);
     // the outlets' own news photos (mugshots, scenes, people in the story) are what make people stop scrolling
-    storyPhotos = (choice.photos || []).map(i => news[i]).filter(n => n?.image).slice(0, 3).map(n => ({ url: n.image, credit: `Photo: ${n.source}` }));
+    storyText = `${choice.story} ${choice.hook || ''}`.trim();
+    storyPhotos = (choice.photos || []).map(i => news[i]).filter(n => n?.image).slice(0, 6).map(n => ({ url: n.image, credit: `Photo: ${n.source}` }));
+    // owner (Oct 2): real photos — the articles' own lead images (often the mugshot) — instead of AI
+    for (const n of (choice.articles || []).map(i => news[i]).filter(n => /^https?:/.test(n?.link || '') && !/news\.google\./.test(n.link)).slice(0, 6)) {
+      const img = await ogImage(n.link);
+      if (img && !storyPhotos.some(x => x.url === img)) storyPhotos.push({ url: img, credit: `Photo: ${n.source}` });
+    }
     if (storyPhotos.length) console.log(`  news photos: ${storyPhotos.map(p => p.credit).join(', ')}`);
     const more = [];
     for (const q of (choice.search || []).slice(0, 4)) more.push(...await searchNews(q, { days: 3, max: 15 }).catch(() => []));
@@ -269,7 +286,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     if (!SECTORS.test(String(x.tag || '').toUpperCase())) x.tag = post.sector || 'NEWS';
     x.tag = String(x.tag).toUpperCase();
   }
-  post.slides = post.slides.slice(0, 7);
+  post.slides = post.slides.slice(0, ALIVE.includes(kind) ? 7 : 5); // owner, Oct 2: people won't read long news carousels
 
   const sources = [...new Set(post.slides.map(s => s.source).filter(Boolean))];
   // max 4 hashtags: 2 of the post's own + #miami #southflorida
@@ -292,10 +309,25 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   // world carousels: fixed cover title, lead story's photo behind it (owner's format)
   // world: the story's own hook, with "NEWS FROM AROUND THE WORLD" as the small top line (owner's format)
   if (kind === 'world') Object.assign(post.cover, { top: 'NEWS FROM AROUND THE WORLD', blur: false });
+  // owner (Oct 2): if the agency released video of this story, it goes in as slide 2 and the carousel shrinks to 4 slides
+  if (storyText && !ALIVE.includes(kind)) {
+    const { videoForStory } = await import('./clip.mjs');
+    const v = await videoForStory(storyText, dir);
+    if (v) {
+      post.video = { file: path.basename(v.file), agency: v.agency, url: v.url };
+      post.slides = post.slides.slice(0, 2);
+      post.igCaption = post.igCaption.replace(/\n\n(📍)/, `\n\n🎥 Video: ${v.agency}\n\n$1`);
+    }
+  }
+  // real photos first (owner, Oct 2: "too much AI is annoying"): the outlets' photos, reused across slides before any AI
+  const real = [];
+  for (const [i, sp] of storyPhotos.entries()) { const np = await newsPhoto(sp, dir, `news-${i}`); if (np) real.push(np); }
+  let r = 0;
   for (const [i, item] of [post.cover, ...post.slides].entries()) {
-    const np = i < storyPhotos.length ? await newsPhoto(storyPhotos[i], dir, i ? `photo-${i}` : 'photo-cover') : null;
-    const photo = np || await getPhoto(item.photo, dir, i ? `photo-${i}` : 'photo-cover',
-      { context: i ? item.headline : [item.top, item.main, item.highlight, item.bottom].filter(Boolean).join(' '), aiFirst: !ALIVE.includes(kind) });
+    // each real photo at most twice (a third repeat looks lazy); then place stock, AI last
+    const reuse = real.length && (i < real.length || (!ALIVE.includes(kind) && r < real.length * 2)) ? real[r++ % real.length] : null;
+    const photo = reuse || await getPhoto(item.photo, dir, i ? `photo-${i}` : 'photo-cover',
+      { context: i ? item.headline : [item.top, item.main, item.highlight, item.bottom].filter(Boolean).join(' '), aiFirst: false });
     if (photo) { item.photoFile = path.basename(photo.file); item.credit = photo.credit; }
     console.log(`  ${i ? '#' + i : 'cover'}: ${photo ? photo.credit : 'no photo'}`);
   }
@@ -476,7 +508,8 @@ export async function renderCarousel(dir) {
     const n = post.slides.length;
     const slides = [await shoot(coverHTML(post, dir, 1350), path.join(dir, '00-cover.jpg'), 1350)];
     for (let i = 0; i < n; i++) slides.push(await shoot(slideHTML(post.slides[i], i, n, dir, post), path.join(dir, `${String(i + 1).padStart(2, '0')}.jpg`), 1350));
-    slides.push(await shoot(ctaHTML(post, dir), path.join(dir, '99-cta.jpg'), 1350));
+    if (post.video && fs.existsSync(path.join(dir, post.video.file))) slides.splice(1, 0, path.join(dir, post.video.file)); // cover, video, 2 slides
+    else slides.push(await shoot(ctaHTML(post, dir), path.join(dir, '99-cta.jpg'), 1350));
     const story = await shoot(coverHTML(post, dir, 1920), path.join(dir, 'story.jpg'), 1920);
     return { post, slides, story };
   } finally {
