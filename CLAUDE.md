@@ -1,7 +1,7 @@
 # Miami Reels — operating guide for Claude
 
 This repo runs **@getnearapp** end to end (the owner handed Claude the account; ChatGPT no longer posts). Daily, New York time:
-2 informational map Reels (~1pm, ~8pm) + carousels (max 10 posts/day total) — `news` 7am/3pm/7pm/9pm/11pm (the most viral South Florida story right now, one story in depth; the picker also sees what's hot on r/Miami, r/florida, r/fortlauderdale and Google Trends Florida via `fetchViral` in `pipeline/news.mjs`, our stand-in for watching @onlyindade), `brief` 9am (the biggest South Florida story), `feature` 5pm (rotating informational
+2 informational map Reels (~1pm, ~8pm) + carousels + 4 viral clips (owner, Oct 2: ~15 posts/day, every post ≥1 hour apart) — `clip` 10am/2pm/6pm/10pm (see **Viral clips** below), `news` 7am/3pm/7pm/9pm/11pm (the most viral South Florida story right now, one story in depth; the picker also sees what's hot on r/Miami, r/florida, r/fortlauderdale and Google Trends Florida via `fetchViral` in `pipeline/news.mjs`, our stand-in for watching @onlyindade), `brief` 9am (the biggest South Florida story), `feature` 5pm (rotating informational
 posts: did you know / rent check / history / new builds / by the numbers / follow-up / week recap — FEATURES in `pipeline/carousel.mjs`), `world` (off since Sep 30: the 10pm slot became local news), `upcoming` 12pm (things to go to this week, TikTok-first), `deals` 11am (food deals, freebies, giveaways, food drives; tags the chain/org from `voice/handles.json`). Every news carousel is ONE story told in depth with connected slides — never a roundup. Stories (owner, Sep 29): the owner reposts other accounts' stories, so the bot adds only a few of its own — `control.json` → `storiesPerDay` (2) at least `storyGapHours` (5) apart; remove `storiesPerDay` to cross-post every post again. Feed posts stay ≥1 hour apart: before publishing, `pipeline/publish.mjs` checks the account's latest post (including ones the owner posts from the app, which it logs in `posted.log` as manual) and waits out the rest of the hour.
 Goal: grow the account. Raise volume slowly as it grows (add carousel slots in `control.json` → `carousels`); the owner audits
 and archives anything bad.
@@ -19,7 +19,7 @@ Claude from their phone. Your job in a chat is to turn their request into a comm
 | "Post a carousel now" | `requests/post.json` → `{"kind": "brief|world|feature", "topic": "optional angle", "publish": true, "at": "..."}`. Live in ~8 min (`.github/workflows/posts.yml`). |
 | "Post these videos over the week" | One episode id per line in `plan/videos.txt`; each scheduled slot posts the next already-rendered one on the hour (no re-render). Remove a line to drop it. |
 | "This week's Reels are…" | Add one topic per line to `plan/queue.txt`; each scheduled Reel takes the next line. |
-| "Change carousel times" / "add a carousel" | `control.json` → `carousels` = `{"kind": hour}` or `{"kind": [hours]}` (e.g. `"news": [7, 11, 15, 19]`). Keep the day at ≤10 posts including Reels. |
+| "Change carousel times" / "add a carousel" | `control.json` → `carousels` = `{"kind": hour}` or `{"kind": [hours]}` (e.g. `"news": [7, 11, 15, 19]`; `clip` = viral video posts). Keep every post ≥1 hour apart (one per hour slot). |
 | "Change the post times" / "add a third post" | `control.json` → `postHours` = New York post hours, 24h (e.g. `[13, 20]`). A check every 30 min in `reel.yml` starts a run ~1 hour before each (up to 4 retries; `state/slots.txt` prevents double posts). Commit + push. |
 | "Pause" / "resume" | `control.json` → `"paused": true/false`. Commit + push. |
 | "Skip tomorrow" / a date | Add `"YYYY-MM-DD"` (New York date) to `control.json` → `skipDates` (skips both posts that day). Commit + push. |
@@ -29,6 +29,16 @@ Claude from their phone. Your job in a chat is to turn their request into a comm
 Scheduled runs respect `control.json`; runs started by `requests/run.json` or the Run-workflow button always go.
 
 The owner can also do all of this without Claude: GitHub app → Actions → **Control** → Run workflow (`.github/workflows/control.yml`).
+
+## Viral clips (hook + video, owner Oct 2)
+`clip` slots (`control.json` → `carousels.clip`) post a 2-slide carousel like @onlyindade: slide 1 = big hook over a frame, slide 2 = the
+agency's own footage (≤58 s, credited "🎥 Video: <agency>"). `pipeline/clip.mjs`: recent uploads from official agency YouTube channels
+(`CHANNELS`: South Florida + the Florida sheriffs whose bodycam goes viral — Volusia, Polk, Brevard, Pinellas…), an LLM ranks the craziest,
+then it downloads each, watches the whole video (frames + transcript), safety-checks it, scores it 1–10 for "crazy" (owner: "more crazy";
+`MIN_CRAZY` 7) and cuts the best moment. Never TV-station clips, victims, kids or gore. Rejected/posted ids go in `state/clips-seen.txt`.
+If no video qualifies, the slot posts a `news` carousel instead. Downloads need the `YOUTUBE_COOKIES` secret (owner's cookies.txt; if
+downloads start failing with "Sign in to confirm you're not a bot", the owner must export fresh cookies into that secret).
+Manual: `requests/clip.json` → `{"publish": true|false, "url": "optional YouTube link", "at": "..."}` (`.github/workflows/clip.yml`).
 
 ## Reels with music (owner posts them)
 The Instagram API can't add music. An episode with `"music": true` is never auto-posted to Instagram: the owner posts it

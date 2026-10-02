@@ -39,6 +39,7 @@ export const CHANNELS = [
   ['Osceola County Sheriff\'s Office', 'UCOij53snR6I7KTIcbaDZa-A'],
   ['Florida Fish and Wildlife (FWC)', 'UCkDj8yIrlrHB1hkU93uEZQg'],
 ];
+const KICKERS = ['CAUGHT ON CAMERA', 'BODYCAM', 'DASHCAM', 'CHASE', 'ARRESTED', 'BUSTED', 'RESCUE', 'WILD FLORIDA', 'CRAZY'];
 const MIN_CRAZY = 7; // owner, Oct 2: "viral videos need to be more crazy" — 1–10 score from the full-video look
 const MAX_SECONDS = 58; // Instagram carousel videos max out at 60 s
 const FONT = path.join(ROOT, 'assets', 'fonts');
@@ -99,7 +100,7 @@ async function pick(videos) {
     + 'View counts are a strong signal. Florida-wide is fine; South Florida first when equally crazy. ' + RULES + ' Write the cover like onlyindade: 2 short punchy lines in plain words, the second line is the shock '
     + '(e.g. "MIAMI-DADE DEPUTIES" / "STOP A WRONG-WAY DRIVER ON I-95"), no clickbait lies, only what the title/description supports. '
     + 'Rank up to 4 candidates, best first (fewer or none only if nothing qualifies). The cover can quote the best line from the title. '
-    + 'Return JSON {"picks": [{"index": number, "kicker": "2–3 word label like BODYCAM, CAUGHT ON CAMERA, CHASE, BUSTED, RESCUE", "line1": "≤28 chars", '
+    + 'Return JSON {"picks": [{"index": number, "kicker": "one of CAUGHT ON CAMERA, BODYCAM, DASHCAM, CHASE, ARRESTED, BUSTED, RESCUE, WILD FLORIDA, CRAZY", "line1": "≤28 chars", '
     + '"line2": "≤40 chars, the shock", "caption": "2–4 short lines: what happened (accused/charged wording), where, credit line \\"🎥 Video: <agency>\\", then 3 hashtags", "why": "…"}]}' },
   { role: 'user', content: videos.map((v, i) => `${i}. [${v.agency}] ${v.title} (${v.published.slice(0, 10)}, ${v.views} views) — ${v.description}`).join('\n') }]);
   return (r.picks || []).filter(x => videos[x.index]);
@@ -113,7 +114,7 @@ async function analyze(frames, transcript, v, p) {
     + ` Draft hook: [${p.kicker}] ${p.line1} / ${p.line2}. Pick the single craziest continuous moment, ${Math.round(MAX_SECONDS * 0.6)}–${MAX_SECONDS} s long, `
     + 'starting right before the action (skip intros, title cards, interviews, talking heads). '
     + 'Reply JSON {"ok": true|false, "why": "…", "crazy": 1-10 (10 = everyone would share it), "start": seconds, "end": seconds, '
-    + '"cover": seconds of the most gripping frame (no victim/child/gore), "kicker": "2–3 words", "line1": "≤28 chars", "line2": "≤40 chars, the shock", '
+    + '"cover": seconds of the most gripping frame (no victim/child/gore), "kicker": one of CAUGHT ON CAMERA | BODYCAM | DASHCAM | CHASE | ARRESTED | BUSTED | RESCUE | WILD FLORIDA | CRAZY, "line1": "≤28 chars", "line2": "≤40 chars, the shock", '
     + '"caption": "2–4 short lines: what happens (accused/charged wording), where, \\"🎥 Video: <agency>\\", then 3 hashtags"}' }];
   for (const f of frames) {
     content.push({ type: 'text', text: `t=${f.t}s` });
@@ -239,6 +240,7 @@ export async function makeClip({ url, dryRun } = {}) {
       start = Math.max(0, Math.min(total - 5, +check.start || 0));
       dur = Math.min(MAX_SECONDS, Math.max(10, (+check.end || start + MAX_SECONDS) - start), total - start);
       for (const k of ['kicker', 'line1', 'line2', 'caption']) if (check[k]) p[k] = check[k];
+      if (!KICKERS.includes(String(p.kicker).toUpperCase())) p.kicker = 'CAUGHT ON CAMERA';
       break;
     }
     markSeen(v.id, check.ok ? `not crazy enough (${check.crazy})` : 'rejected'); fs.rmSync(dir, { recursive: true, force: true }); check = null;
@@ -253,10 +255,11 @@ export async function makeClip({ url, dryRun } = {}) {
   const cover = await shoot(coverHTML(coverFrame, p, v.agency), path.join(dir, '01-cover.jpg'), 1080, 1350);
   const chip = await shoot(chipHTML(v.agency), path.join(dir, 'chip.png'), 1080, 140);
   const video = path.join(dir, '02-video.mp4');
-  // 4:5 frame: blurred copy fills the background, the clip sits sharp in the middle, credit chip on top
+  // 4:5 frame: blurred copy fills the background, the clip sits sharp in the middle (zoomed 1.25× so wide footage
+  // fills more of the post), credit chip on top
   await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(start), '-t', String(dur), '-i', raw, '-i', chip, '-filter_complex',
     '[0:v]scale=1080:1350:force_original_aspect_ratio=increase,crop=1080:1350,boxblur=24:2,eq=brightness=-0.12[bg];'
-    + '[0:v]scale=1080:1350:force_original_aspect_ratio=decrease[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2[v1];[v1][1:v]overlay=0:0,fps=30,format=yuv420p[v]',
+    + '[0:v]scale=1080:1350:force_original_aspect_ratio=decrease,scale=iw*1.25:-2,crop=min(iw\\,1080):ih[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2[v1];[v1][1:v]overlay=0:0,fps=30,format=yuv420p[v]',
     '-map', '[v]', '-map', '0:a?', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-c:a', 'aac', '-b:a', '160k', '-ar', '44100', '-movflags', '+faststart', video]);
   const post = { id: `${date}-clip-${v.id}`, agency: v.agency, source: v.url, title: v.title, start, ...p, crazy: check.crazy, cover, video };
   writeJSON(path.join(dir, 'post.json'), post);
