@@ -1,0 +1,133 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "SURVEILLANCE VIDEO SHOWED",
+    "main": "A HIALEAH WOMAN",
+    "highlight": "REPEATEDLY STRIKING A SMALL FOSTER DOG",
+    "bottom": "POLICE SAY",
+    "blur": false,
+    "photo": {
+      "query": "Hialeah apartment building exterior police lights surveillance camera",
+      "prompt": "dramatic photo of a Hialeah apartment building entrance at night with a visible security camera and police lights reflecting on glass, no people visible",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚨",
+      "🐶",
+      "🎥"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Surveillance video showed a Hialeah woman repeatedly striking a small foster dog, police say",
+      "highlight": "repeatedly striking",
+      "body": "A front desk employee checked apartment surveillance cameras and called Hialeah police after seeing the video, according to police.",
+      "place": "Hialeah",
+      "source": "Local 10",
+      "photo": {
+        "query": "Hialeah apartment front desk surveillance monitors police",
+        "prompt": "dramatic apartment building front desk with surveillance monitors glowing behind the counter, no people visible"
+      },
+      "emoji": "🎥",
+      "chip": "ON VIDEO",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police say the dog was a small foster dog",
+      "highlight": "small foster dog",
+      "body": "Police described the animal in the apartment building video as a small foster dog.",
+      "place": "Hialeah",
+      "source": "WSVN",
+      "photo": {
+        "query": "small foster dog apartment hallway security camera",
+        "prompt": "low-angle dramatic photo of a small dog in an apartment hallway under a visible security camera, no people visible"
+      },
+      "emoji": "🐶",
+      "chip": "FOSTER DOG",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case centers on an apartment building video",
+      "highlight": "apartment building video",
+      "body": "Police said videos showed the dog being abused inside the Hialeah apartment building.",
+      "place": "Hialeah",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "security camera apartment hallway close up",
+        "prompt": "close-up dramatic photo of an apartment hallway security camera pointed down a corridor, no people visible"
+      },
+      "emoji": "🏢",
+      "chip": "HIALEAH",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Miriam Yilian De La Rosa, 42, was booked Friday",
+      "highlight": "booked Friday",
+      "body": "Jail records showed Miriam Yilian De La Rosa, 42, was booked early Friday.",
+      "place": "Hialeah",
+      "source": "facebook.com",
+      "photo": {
+        "query": "Miami-Dade jail exterior police car night",
+        "prompt": "dramatic exterior photo of a Miami-Dade jail booking area at night with police vehicle lights, no people visible"
+      },
+      "emoji": "🚔",
+      "chip": "42",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Records showed 3 animal cruelty counts",
+      "highlight": "3 animal cruelty counts",
+      "body": "Records showed De La Rosa was booked on three counts of animal cruelty.",
+      "place": "Hialeah",
+      "source": "facebook.com",
+      "photo": {
+        "query": "court gavel animal cruelty police report folder",
+        "prompt": "close-up photo of a court gavel beside an unlabeled police report folder, dramatic lighting, no names shown"
+      },
+      "emoji": "⚖️",
+      "chip": "3 COUNTS",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case moves forward after the arrest",
+      "highlight": "moves forward",
+      "body": "Police said De La Rosa faces animal cruelty charges in Hialeah after the videos.",
+      "place": "Hialeah",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Miami-Dade courthouse exterior cloudy sky",
+        "prompt": "dramatic exterior photo of a Miami-Dade courthouse entrance under cloudy sky, no people visible"
+      },
+      "emoji": "📄",
+      "chip": "OCT 2",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Police say a Hialeah front desk employee checked surveillance cameras, saw a small foster dog being hit, and called police.\nMiriam Yilian De La Rosa, 42, was booked early Friday on three animal cruelty counts, records showed.",
+  "hashtags": [
+    "#Hialeah",
+    "#AnimalCruelty"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say a Hialeah front desk employee checked surveillance cameras, saw a small foster dog being hit, and called police.\nMiriam Yilian De La Rosa, 42, was booked early Friday on three animal cruelty counts, records showed.\n\n📰 Sources: Local 10, WSVN, NBC 6 South Florida, facebook.com\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#Hialeah #AnimalCruelty #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-02",
+  "id": "2026-10-02-news-17"
+}
