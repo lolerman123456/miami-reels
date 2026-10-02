@@ -206,7 +206,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     const choice = await chat([{ role: 'system', content: `Pick ${spec.pick}\n` +
       // owner (Sep 29): stories must not be boring — a hook and real substance, not procedure
       'BORING TEST: skip stories that are only procedure or paperwork (a lawsuit filed, a meeting, a proposal, a study, a statement, a vote scheduled) unless there is a vivid, surprising detail people would repeat to a friend (a shocking number, a wild moment, a famous name, a big price, a real danger, a twist). Pick the story with the strongest "wait, what?" detail AND enough reported facts to fill 5–6 slides (what happened, key numbers, how it started, who it hits here, what happens next). ' +
-      `Return JSON {"story":"one sentence","hook":"the single most surprising, specific detail in the headlines (a number, name, place or moment) that the cover should lead with","search":["2–4 Google News searches to find more reporting on that exact story"],"wikipedia":["0–2 exact English Wikipedia titles for background (a country, a conflict, a place)"],"photos":[indexes of headlines marked [PHOTO] that are about this exact story, best first — mugshots and real scene photos first],"articles":[indexes of ALL headlines about this exact story]}` },
+      `Return JSON {"story":"one sentence","hook":"the single most surprising, specific detail in the headlines (a number, name, place or moment) that the cover should lead with","search":["2–4 Google News searches to find more reporting on that exact story"],"wikipedia":["0–2 exact English Wikipedia titles for background (a country, a conflict, a place)"],"photos":[indexes of headlines marked [PHOTO] that are about this exact story, best first — mugshots and real scene photos first],"articles":[indexes of ALL headlines about this exact story],"accused":"full name of the person accused/charged/arrested, or empty"}\nPHOTOS MATTER (owner: no AI images): when two stories are close, pick the one with a [PHOTO] headline or a named accused person (their booking photo is public).` },
       { role: 'user', content: `Headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.image ? ' [PHOTO]' : ''}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}\n\nAlready posted (pick something else unless there is a big new development):\n${recentPosts(2).map(p => '- ' + [p.cover?.main, p.cover?.highlight].filter(Boolean).join(' ') + ': ' + (p.slides || []).map(x => x.headline).join('; ')).join('\n') || '(none)'}${TREND}` }]);
     console.log(`  story: ${choice.story}`);
     // the outlets' own news photos (mugshots, scenes, people in the story) are what make people stop scrolling
@@ -217,8 +217,9 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
       const img = await ogImage(n.link);
       if (img && !storyPhotos.some(x => x.url === img)) storyPhotos.push({ url: img, credit: `Photo: ${n.source}` });
     }
+    const bingQs = [...(choice.accused ? [`${choice.accused} arrested`, `${choice.accused} mugshot`] : []), ...(choice.search || []).slice(0, 2)];
     // Google News links hide the article, so also look the story up on Bing News (direct links) for more real photos
-    for (const q of (choice.search || []).slice(0, 2)) {
+    for (const q of bingQs) {
       if (storyPhotos.length >= 6) break;
       for (const a of await bingArticles(q)) {
         const img = await ogImage(a.url);
