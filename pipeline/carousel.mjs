@@ -391,6 +391,13 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   }
   // no cover photo (AI budget spent, no stock fit): the best slide photo carries the cover rather than skipping the post
   if (!post.cover.photoFile) { const s = post.slides.find(x => x.photoFile); if (s) { post.cover.photoFile = s.photoFile; post.cover.credit = s.credit; console.log(`  cover: reusing ${s.credit}`); } }
+  // never a slide without a picture (owner, Oct 3: "3 photos and then the following slides stopped having photos"):
+  // drop photo-less slides while at least 3 remain, otherwise reuse this post's photos
+  const bare = post.slides.filter(x => !x.photoFile && !x.video);
+  if (bare.length) {
+    if (post.slides.length - bare.length >= 3) { post.slides = post.slides.filter(x => x.photoFile || x.video); console.log(`  dropped ${bare.length} slide(s) without a photo`); }
+    else { const pool = [post.cover, ...post.slides].filter(x => x.photoFile); bare.forEach((x, i) => { if (pool.length) { const src = pool[i % pool.length]; x.photoFile = src.photoFile; x.credit = src.credit; } }); }
+  }
   // brand/team/org logos on white cards (owner: every slideshow should look alive, like the Coffee Day one)
   for (const [i, item] of post.slides.entries()) if (item.logo) item.logoFile = await getLogo(item.logo, dir, `logo-${i + 1}`);
   post.cover.logoFiles = [];

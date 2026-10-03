@@ -41,6 +41,7 @@ then it downloads each, watches the whole video (frames + transcript), safety-ch
 `MIN_CRAZY` 7) and cuts the best moment. Never TV-station clips, victims, kids or gore. Rejected/posted ids go in `state/clips-seen.txt`.
 If no video qualifies, the slot posts a `news` carousel instead. Downloads need the `YOUTUBE_COOKIES` secret (owner's cookies.txt; if
 downloads start failing with "Sign in to confirm you're not a bot", the owner must export fresh cookies into that secret).
+**Reference post (owner, Oct 3: "perfect, amazing story, amazing format"):** `posts/2026-10-02-news-17` — the Hialeah woman striking a foster dog: one niche local arrest told in connected slides (what the video showed → who → charges → what's next), a photo on every slide. A slide never goes without a photo: photo-less slides are dropped (or reuse the post's photos if fewer than 3 would remain).
 News/brief carousels (owner, Oct 2): if an agency released video of that exact story (`videoForStory` in `clip.mjs`), it goes in as slide 2 and the carousel is only 4 slides (cover, video, 2 slides, no CTA); otherwise max 5 slides (people won't read long ones). Photos: real ones first — the outlets' feed photos and the articles' lead images (`ogImage`, usually the mugshot), each reused at most twice — then place stock, AI only as a last resort (owner: "too much AI is annoying").
 Video sources for that slide (owner, Oct 2): agency channels AND TV stations (`STATIONS` in `clip.mjs`: WSVN, Local 10, NBC 6, CBS Miami, WPTV, WPBF) — any station clip, credited "🎥 Video: <station>". **Fallback if a copyright claim/strike or takedown happens:** switch to raw police-released footage only (surveillance/bodycam/phone video cut out of the station report, never anchor/reporter segments, ≤30 s) — the owner's pre-approved plan B. Standalone clip slots stay agency-only.
 Manual: `requests/clip.json` → `{"publish": true|false, "url": "optional YouTube link", "at": "..."}` (`.github/workflows/clip.yml`).
@@ -87,7 +88,7 @@ Scenes: `hook` (overlay = 2 short lines, 4 emojis, shot `dive`), 3–5× `item` 
 ## OpenAI cost (owner, Oct 3: keep it under ~$2/day)
 All chat calls go through `pipeline/llm.mjs`: tier `mini` (`OPENAI_MINI_MODEL`, default gpt-5.4-mini) for picking, video/photo checks,
 captions and fact checks; tier `write` (`OPENAI_WRITER_MODEL`, default gpt-5.5) only for the carousel copy and Reel scripts; low
-reasoning effort everywhere. AI images max 2/day (`AI_IMAGES_PER_DAY`; owner Oct 3: $25 must last 1–2 weeks, target ≤ $2/day), gpt-image-1-mini. Each run prints `OpenAI usage: …` at the end
+reasoning effort everywhere. AI images max 10/day (`AI_IMAGES_PER_DAY`; ~1–2¢ each — at 2/day slides went blank; owner Oct 3: $25 must last 1–2 weeks, target ≤ $2/day), gpt-image-1-mini. Each run prints `OpenAI usage: …` at the end
 (read the logs to estimate the day's cost). Out of credits → runs stop instead of posting half-checked content (Oct 3 the 10am viral
 Reel posted with TV graphics because its cleanup calls failed); pause with `control.json` → `paused` until credits are added.
 
