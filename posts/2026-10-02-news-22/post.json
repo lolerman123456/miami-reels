@@ -1,0 +1,85 @@
+{
+  "sector": "TRAFFIC",
+  "cover": {
+    "top": "",
+    "main": "TWO AIRBOATS COLLIDED IN A",
+    "highlight": "REMOTE EVERGLADES",
+    "bottom": "AREA, LEAVING 1 DEAD AND 1 INJURED",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Everglades airboat sawgrass storm clouds",
+      "prompt": "airboat moving through Everglades sawgrass under dark clouds, low angle, no identifiable people",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "🚤",
+      "🌾",
+      "🚨"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "TRAFFIC",
+      "headline": "Two airboats collided in a remote Everglades area, leaving 1 dead and 1 injured",
+      "highlight": "1 dead, 1 injured",
+      "body": "Authorities said two airboats collided in a remote part of the Everglades in western Broward County.",
+      "place": "Western Broward County",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Wikimedia Commons Everglades airboat sawgrass marsh Florida",
+        "prompt": "airboat in a narrow Everglades water trail surrounded by tall sawgrass, no identifiable people"
+      },
+      "emoji": "🚨",
+      "chip": "1 DEAD",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    },
+    {
+      "tag": "TRAFFIC",
+      "headline": "The crash happened in western Broward",
+      "highlight": "western Broward",
+      "body": "The reported location puts the collision in Broward County’s Everglades area.",
+      "place": "Everglades",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Wikimedia Commons Everglades aerial sawgrass remote wetland",
+        "prompt": "wide aerial view of remote Everglades sawgrass and water channels with no buildings visible"
+      },
+      "emoji": "🌾",
+      "chip": "REMOTE",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    },
+    {
+      "tag": "TRAFFIC",
+      "headline": "The Everglades is flooded grasslands",
+      "highlight": "flooded grasslands",
+      "body": "The Everglades is a natural region of flooded grasslands in South Florida, with water moving south toward Florida Bay.",
+      "place": "Everglades",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons Everglades river of grass aerial Florida",
+        "prompt": "aerial view of the Everglades river of grass stretching to the horizon, water trails visible"
+      },
+      "emoji": "🗺️",
+      "chip": "WETLAND",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    }
+  ],
+  "caption": "Two airboats collided in a remote Everglades area of western Broward County, leaving 1 person dead and 1 injured.\nAuthorities are investigating the crash.",
+  "hashtags": [
+    "#Everglades",
+    "#BrowardCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "Two airboats collided in a remote Everglades area of western Broward County, leaving 1 person dead and 1 injured.\nAuthorities are investigating the crash.\n\n📰 Sources: WSVN 7News, Wikipedia, NBC 6 South Florida\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#Everglades #BrowardCounty #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-02",
+  "id": "2026-10-02-news-22"
+}
