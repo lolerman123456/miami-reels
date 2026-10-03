@@ -57,6 +57,7 @@ jobs:
           if [ -f requests/viral.json ]; then
             [ "$(jq -r 'if .publish == true then "y" else "n" end' requests/viral.json)" = "y" ] || ARGS+=(--dry-run)
             U=$(jq -r '.url // ""' requests/viral.json); [ -n "$U" ] && ARGS+=(--url "$U")
+            HN=$(jq -r '.hint // ""' requests/viral.json); [ -n "$HN" ] && ARGS+=(--hint "$HN")
             NB=$(jq -r '.notBefore // ""' requests/viral.json)
             if [ -n "$NB" ]; then W=$(( $(date -d "$NB" +%s) - $(date +%s) - 300 )); [ $W -gt 0 ] && [ $W -lt 3600 ] && { echo "waiting $((W/60)) min"; sleep $W; }; fi
           else ARGS+=(--dry-run); fi

@@ -14,12 +14,12 @@ const FPS = 30;
 const SEEN = path.join(ROOT, 'state', 'clips-seen.txt');
 const TALK = /\b(briefing|press conference|news conference|meeting|ceremony|awards?|graduation|interview|podcast|budget|council|commission|town hall|recruit|hiring|wrap[- ]?up|full (show|episode|broadcast)|live:|livestream|newscast|debate|speech|weather|forecast)\b/i;
 
-async function pickVideos(videos) {
+async function pickVideos(videos, hint = '') {
   const r = await chat([{ role: 'system', content: 'You run a viral news page like @onlyindade (South Florida, but nationwide/worldwide viral clips pop too). '
     + 'From these YouTube uploads, rank up to 6 that contain RAW viral footage people would share: dashcam, bodycam, surveillance, doorbell cam, phone video, '
     + 'helicopter footage of chases, wild arrests, crashes, road rage, rescues, animals (gators, bears), insane weather moments. Prefer high views and South Florida '
     + 'when equally good. Skip talking heads, politics, press conferences, full newscasts, anything about a dead child. '
-    + 'Reply JSON {"picks": [{"index": n, "why": "…"}]}' },
+    + (hint ? `THIS TIME the owner wants: ${hint}. ` : '') + 'Reply JSON {"picks": [{"index": n, "why": "…"}]}' },
   { role: 'user', content: videos.map((v, i) => `${i}. [${v.agency}] ${v.title} (${v.published.slice(0, 10)}, ${v.views} views)${v.description ? ' — ' + v.description.slice(0, 160) : ''}`).join('\n') }]);
   return (r.picks || []).filter(x => videos[x.index]);
 }
@@ -36,7 +36,7 @@ async function labelsFor(frameFile, check) {
     .map(l => ({ text: String(l.text).replace(/perpetrator|criminal/i, 'SUSPECT').slice(0, 18), x: +l.x, y: +l.y }));
 }
 
-export async function makeViralReel({ url, dryRun } = {}) {
+export async function makeViralReel({ url, dryRun, hint } = {}) {
   const date = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
   step('Finding viral videos');
   let videos;
@@ -49,7 +49,7 @@ export async function makeViralReel({ url, dryRun } = {}) {
       .filter(v => !seen.has(v.id) && !TALK.test(v.title));
   }
   console.log(`  ${videos.length} candidates`);
-  const picks = url ? [{ index: 0, why: 'owner link' }] : await pickVideos(videos);
+  const picks = url ? [{ index: 0, why: 'owner link' }] : await pickVideos(videos, hint);
   for (const pk of picks) {
     const v = videos[pk.index];
     console.log(`\n  pick: [${v.agency}] ${v.title} — ${pk.why}`);
@@ -68,7 +68,11 @@ export async function makeViralReel({ url, dryRun } = {}) {
 
     step('Cutting');
     const clip = path.join(dir, 'clip.mp4');
-    await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(start), '-t', String(end - start), '-i', w.raw, '-vf', 'fps=30,scale=trunc(iw/2)*2:trunc(ih/2)*2',
+    // keep only the raw footage (drop TV graphics / blurred pillarbox bars around a phone video)
+    const cr = c.crop && c.crop.w > 0.2 && c.crop.h > 0.2 && (c.crop.w < 0.95 || c.crop.h < 0.95) ? c.crop : null;
+    const crop = cr ? `crop=iw*${Math.min(1, cr.w).toFixed(3)}:ih*${Math.min(1, cr.h).toFixed(3)}:iw*${Math.max(0, cr.x).toFixed(3)}:ih*${Math.max(0, cr.y).toFixed(3)},` : '';
+    if (cr) console.log(`  crop to raw footage: ${JSON.stringify(cr)}`);
+    await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(start), '-t', String(end - start), '-i', w.raw, '-vf', `${crop}fps=30,scale=trunc(iw/2)*2:trunc(ih/2)*2`,
       '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-c:a', 'aac', '-b:a', '160k', '-ar', '44100', '-movflags', '+faststart', clip]);
     const [vw, vh] = execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', clip]).toString().trim().split(',').map(Number);
     const clipFrames = Math.floor((end - start) * FPS) - 1;
@@ -114,6 +118,6 @@ export async function makeViralReel({ url, dryRun } = {}) {
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const args = process.argv.slice(2);
-  const i = args.indexOf('--url');
-  await makeViralReel({ url: i >= 0 ? args[i + 1] : null, dryRun: args.includes('--dry-run') });
+  const i = args.indexOf('--url'), h = args.indexOf('--hint');
+  await makeViralReel({ url: i >= 0 ? args[i + 1] : null, hint: h >= 0 ? args[h + 1] : '', dryRun: args.includes('--dry-run') });
 }
