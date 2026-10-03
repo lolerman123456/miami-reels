@@ -1,0 +1,127 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "DEPUTIES SAY",
+    "main": "A TOM-AND-JERRY-STAMPED",
+    "highlight": "COCAINE KILO",
+    "bottom": "WASHED UP IN KEYS MANGROVES",
+    "blur": false,
+    "photo": {
+      "query": "Florida Keys mangroves shoreline Monroe County water",
+      "prompt": "a dramatic low-angle photo of Florida Keys mangrove roots at the shoreline, shallow blue water, a wrapped rectangular package shape partly caught in the roots, no people",
+      "mark": "circle"
+    },
+    "emojis": [
+      "🌴",
+      "🚨",
+      "📦"
+    ],
+    "logos": [
+      "keysso.net"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "A Tom-and-Jerry-stamped kilo of cocaine washed up in Florida Keys mangroves, deputies say",
+      "highlight": "Tom-and-Jerry-stamped",
+      "body": "The Monroe County Sheriff’s Office said deputies found the cocaine kilo in mangroves in the Florida Keys.",
+      "place": "Florida Keys",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Florida Keys mangrove roots shoreline water Monroe County",
+        "prompt": "a tense close-up of mangrove roots along a Florida Keys shoreline, shallow water moving through the roots, a wrapped package shape near the waterline, no people"
+      },
+      "emoji": "🚨",
+      "chip": "1 KILO",
+      "logo": "keysso.net",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Deputies described a logo on the package",
+      "highlight": "logo",
+      "body": "MCSO said the kilo carried a Tom and Jerry stamp.",
+      "place": "Florida Keys",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Monroe County Sheriff Florida Keys patrol vehicle road mangroves",
+        "prompt": "a Monroe County sheriff patrol vehicle on a Florida Keys road near mangroves and water, emergency lights off, no people"
+      },
+      "emoji": "👮",
+      "chip": "MCSO",
+      "logo": "keysso.net",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The Keys begin about 15 miles south of Miami",
+      "highlight": "15 miles",
+      "body": "The Florida Keys start about 15 miles south of Miami and arc toward Key West and the Dry Tortugas.",
+      "place": "Florida Keys",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Florida Keys aerial island chain south of Miami",
+        "prompt": "a wide aerial photo of the Florida Keys island chain stretching through blue water south of the Florida peninsula, bridges and mangroves visible"
+      },
+      "emoji": "🗺️",
+      "chip": "15 MI",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Most Keys land sits in Monroe County",
+      "highlight": "95%+",
+      "body": "More than 95% of the Florida Keys’ land area lies in Monroe County, with a small portion extending into Miami-Dade County.",
+      "place": "Monroe County",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Monroe County Florida Keys aerial mangroves bridges",
+        "prompt": "an aerial view of Monroe County in the Florida Keys, with narrow islands, mangrove coastlines and the Overseas Highway crossing blue water"
+      },
+      "emoji": "📍",
+      "chip": "95%+",
+      "logo": "keysso.net",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The islands line the Florida Straits",
+      "highlight": "Florida Straits",
+      "body": "The Keys sit along the Florida Straits, with the Atlantic Ocean to the east, the Gulf of Mexico to the northwest and Florida Bay along one edge.",
+      "place": "Florida Keys",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Florida Straits Florida Keys aerial Atlantic Gulf of Mexico",
+        "prompt": "a high aerial view of the Florida Keys between open ocean and gulf-side waters, with reefs, shallow flats and mangrove islands visible"
+      },
+      "emoji": "🌊",
+      "chip": "STRAITS",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Deputies say a Tom-and-Jerry-stamped kilo of cocaine washed ashore in Florida Keys mangroves.\nWhat is the strangest thing you’ve seen wash up in South Florida?",
+  "hashtags": [
+    "#FloridaKeys",
+    "#MonroeCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "Deputies say a Tom-and-Jerry-stamped kilo of cocaine washed ashore in Florida Keys mangroves.\nWhat is the strangest thing you’ve seen wash up in South Florida?\n\n📰 Sources: Miami Herald, Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#FloridaKeys #MonroeCounty #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-02",
+  "id": "2026-10-02-news-21"
+}
