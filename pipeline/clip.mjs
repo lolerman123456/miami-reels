@@ -59,12 +59,24 @@ export const STATIONS = [
   ['WPTV News', 'UC0bCUnP5RrkJZUtd3bBz6Kw'],
   ['WPBF 25 News', 'UCeD5NwvPbEZKcu02_v8tUZQ'],
 ];
+// owner, Oct 3: mainstream / nationwide / worldwide viral is what pops — used by the clip slots and the viral Reels
+export const MAINSTREAM = [
+  ['ABC News', 'UCBi2mrWuNuyYy4gbM6fU18Q'],
+  ['NBC News', 'UCeY0bbntWzzVIaj2z3QigXg'],
+  ['CBS News', 'UC8p1vwvWtl6T73JiExfWs1g'],
+  ['Inside Edition', 'UC9k-yiEpRHMNVOnOi_aQK8w'],
+  ['FOX 13 Tampa Bay', 'UC13mSI38YWz5zfvxXDPpePA'],
+  ['WFLA News Channel 8', 'UCDvJcb8Adv-_bOrtnRLmiDw'],
+  ['FOX 35 Orlando', 'UCuXT13wiqK56NR7QSfDWpvg'],
+  ['WESH 2 News', 'UCD9nZ3qeRGbPuHJaJduiQxA'],
+  ['WKMG News 6', 'UCjpzEgbbDUg4YC6vpSrzsyg'],
+];
 const KICKERS = ['CAUGHT ON CAMERA', 'BODYCAM', 'DASHCAM', 'CHASE', 'ARRESTED', 'BUSTED', 'RESCUE', 'WILD FLORIDA', 'CRAZY'];
 const MIN_CRAZY = 7; // owner, Oct 2: "viral videos need to be more crazy" — 1–10 score from the full-video look
 const MAX_SECONDS = 58; // Instagram carousel videos max out at 60 s
 const FONT = path.join(ROOT, 'assets', 'fonts');
 
-const ytdlpArgs = () => {
+export const ytdlpArgs = () => {
   const args = ['--no-warnings', '--no-playlist'];
   if (process.env.YOUTUBE_COOKIES) {
     const f = path.join(ROOT, '.yt-cookies.txt');
@@ -130,7 +142,7 @@ async function pageVideos(agency, id, days) {
   return out;
 }
 
-async function chat(messages) {
+export async function chat(messages) {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       const res = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -170,6 +182,7 @@ const STORY_RULES = 'This is the video slide of a news carousel about this story
   + 'a TV report) is fine even when it shows a crime happening. ok=false only for gore/blood, graphic injuries, a dead body, nudity, a child\'s face, '
   + 'or footage that is not about this story. "crazy" can be any value.';
 async function analyze(frames, transcript, v, p, mode = 'clip') {
+  if (mode === 'reel') return analyzeReel(frames, transcript, v);
   const content = [{ type: 'text', text: `Frames from "${v.title}" (${v.agency}), each labeled with its time in seconds, plus the transcript. `
     + 'We repost footage on a South Florida news page like @onlyindade. ' + (mode === 'story' ? STORY_RULES : 'Slide 1 = hook cover, slide 2 = the clip. ' + RULES)
     + ` Draft hook: [${p.kicker}] ${p.line1} / ${p.line2}. Pick the single craziest continuous moment, ${Math.round(MAX_SECONDS * 0.6)}–${MAX_SECONDS} s long, `
@@ -177,6 +190,28 @@ async function analyze(frames, transcript, v, p, mode = 'clip') {
     + 'Reply JSON {"ok": true|false, "why": "…", "crazy": 1-10 (10 = everyone would share it), "start": seconds, "end": seconds, '
     + '"cover": seconds of the most gripping frame (no victim/child/gore), "kicker": one of CAUGHT ON CAMERA | BODYCAM | DASHCAM | CHASE | ARRESTED | BUSTED | RESCUE | WILD FLORIDA | CRAZY, "line1": "≤28 chars", "line2": "≤40 chars, the shock", '
     + '"caption": "2–4 short lines: what happens (accused/charged wording), where, \\"🎥 Video: <agency>\\", then 3 hashtags"}' }];
+  for (const f of frames) {
+    content.push({ type: 'text', text: `t=${f.t}s` });
+    content.push({ type: 'image_url', image_url: { url: `data:image/jpeg;base64,${fs.readFileSync(f.file).toString('base64')}`, detail: 'low' } });
+  }
+  content.push({ type: 'text', text: `Transcript:\n${transcript || '(none)'}` });
+  return chat([{ role: 'user', content }]);
+}
+
+// viral Reel (owner, Oct 3): the raw footage only (dashcam/bodycam/surveillance/phone video), cut at the hooking part,
+// with a freeze-frame moment to label who is who, short "what's happening" captions and a typed hook
+const REEL_RULES = 'Never a dead body, gore, nudity or a child\'s face; no anchors, reporters or talking heads in the cut (only the raw footage). '
+  + 'Say suspect/accused, never "perpetrator" or "criminal" unless convicted.';
+async function analyzeReel(frames, transcript, v) {
+  const content = [{ type: 'text', text: `Frames from "${v.title}" (${v.agency}), each labeled with its time in seconds, plus the transcript. `
+    + 'We turn the raw footage in it into a viral Instagram Reel like @onlyindade: a blurred 3 s intro with a typed hook, then the footage with a situation box on top, '
+    + 'short captions at the bottom saying what is happening, and ONE freeze-frame where labels point at who is who (SUSPECT, VICTIM\'S CAR, OFFICER, DRIVER…). ' + REEL_RULES
+    + ' Pick the most hooking continuous part of the RAW footage, 12–45 s, starting right before the action. Reply JSON {"ok": true|false, "why": "…", "crazy": 1-10, '
+    + '"start": s, "end": s, "sensitive": true if it shows violence/a crash/an injury (adds "viewer discretion is advised"), '
+    + '"hook": "≤55 chars, the typed intro title, plain words, the shock", "sub": "≤70 chars under it (where/when, or what the viewer is about to see)", '
+    + '"banner": "≤80 chars, the situation box on top, starts with an emoji", "captions": [{"t": seconds (absolute, inside start–end), "text": "≤45 chars"} — 2–4 of them], '
+    + '"freeze": seconds (absolute) of the frame where the people/vehicles to label are clearly visible, or null, '
+    + '"caption": "Instagram caption: 2–4 short lines (accused wording), where, \\"🎥 Video: <source>\\", 3 hashtags"}' }];
   for (const f of frames) {
     content.push({ type: 'text', text: `t=${f.t}s` });
     content.push({ type: 'image_url', image_url: { url: `data:image/jpeg;base64,${fs.readFileSync(f.file).toString('base64')}`, detail: 'low' } });
@@ -260,7 +295,7 @@ async function download(url, raw) {
 }
 
 // download + watch one agency video: safety check, crazy score and the best ≤58 s moment. null if the download failed.
-async function watch(v, p, dir, mode = 'clip') {
+export async function watch(v, p, dir, mode = 'clip') {
   fs.mkdirSync(dir, { recursive: true });
   step('Downloading');
   const raw = path.join(dir, 'raw.mp4');

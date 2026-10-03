@@ -1,0 +1,81 @@
+name: Viral Reel
+
+# Viral clip Reel with edits (pipeline/viralreel.mjs + src/Viral.tsx). From a chat: commit requests/viral.json
+# {"publish": true|false, "url": "optional YouTube link", "notBefore": "optional ISO time", "at": "..."}
+on:
+  push:
+    branches: [main]
+    paths: ['requests/viral.json']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  viral:
+    concurrency:
+      group: posts
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji > /dev/null
+          sudo curl -sSL -o /usr/local/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
+          sudo chmod +x /usr/local/bin/cloudflared
+          pip install -q -U "yt-dlp[default]"
+          curl -fsSL https://deno.land/install.sh | sh -s -- -y > /dev/null 2>&1 || true
+          echo "$HOME/.deno/bin" >> "$GITHUB_PATH"
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/puppeteer
+          key: puppeteer-${{ hashFiles('package-lock.json') }}
+      - run: npm ci
+      - name: Cache Remotion browser
+        uses: actions/cache@v4
+        with:
+          path: node_modules/.remotion
+          key: remotion-browser-${{ hashFiles('package-lock.json') }}
+      - name: Find, edit and post
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.5' }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+          YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
+          CLOUDFLARED_BIN: /usr/local/bin/cloudflared
+        run: |
+          [ -n "$YOUTUBE_COOKIES" ] && echo "cookies: set ($(echo "$YOUTUBE_COOKIES" | wc -l) lines)" || echo "cookies: MISSING"
+          ARGS=()
+          if [ -f requests/viral.json ]; then
+            [ "$(jq -r 'if .publish == true then "y" else "n" end' requests/viral.json)" = "y" ] || ARGS+=(--dry-run)
+            U=$(jq -r '.url // ""' requests/viral.json); [ -n "$U" ] && ARGS+=(--url "$U")
+            NB=$(jq -r '.notBefore // ""' requests/viral.json)
+            if [ -n "$NB" ]; then W=$(( $(date -d "$NB" +%s) - $(date +%s) - 300 )); [ $W -gt 0 ] && [ $W -lt 3600 ] && { echo "waiting $((W/60)) min"; sleep $W; }; fi
+          else ARGS+=(--dry-run); fi
+          node pipeline/viralreel.mjs "${ARGS[@]}"
+          rm -f .yt-cookies.txt
+      - name: Preview links
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -f .yt-cookies.txt
+          D=$(ls -d out/viral/*/ 2>/dev/null | tail -1); [ -n "$D" ] && [ -f "${D}reel.mp4" ] || exit 0
+          N=$(basename "$D")
+          cp "${D}reel.mp4" "/tmp/viral-$N.mp4"
+          gh release upload videos "/tmp/viral-$N.mp4" --clobber
+          echo "▶ https://github.com/${{ github.repository }}/releases/download/videos/viral-$N.mp4" | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Save log
+        if: always()
+        run: |
+          git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
+          git add posted.log 2>/dev/null || true; git add state/clips-seen.txt 2>/dev/null || true
+          if ! git diff --cached --quiet; then git add out/viral/*/post.json 2>/dev/null || true; git commit -qm "Viral Reel post"; for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done; fi

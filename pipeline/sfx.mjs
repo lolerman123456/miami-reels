@@ -22,6 +22,9 @@ const SFX = {
               '-af', 'highpass=f=40,volume=1.6,alimiter=limit=0.95'],
   swoosh:    ['-f', 'lavfi', '-i', 'anoisesrc=d=1.1:c=pink:a=1',
               '-af', "bandpass=f=900:width_type=o:w=2.5,afade=t=in:d=0.55:curve=exp,afade=t=out:st=0.6:d=0.5,volume=3,alimiter=limit=0.95"],
+  // one keyboard key (typing text on screen, owner Oct 3)
+  key:       ['-f', 'lavfi', '-i', "aevalsrc='(random(0)*2-1)*exp(-260*t)*0.9+0.5*sin(2*PI*3200*t)*exp(-180*t)':d=0.06:s=44100",
+              '-af', 'highpass=f=1200,lowpass=f=7000,volume=1.3'],
   count:     ['-f', 'lavfi', '-i', "aevalsrc='0.55*sin(2*PI*2600*t)*exp(-120*(t-0.045*floor(t/0.045)))*lt(t,0.62)':d=0.7:s=44100"],
 };
 
