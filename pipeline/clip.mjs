@@ -186,9 +186,9 @@ async function analyze(frames, transcript, v, p, mode = 'clip') {
   const content = [{ type: 'text', text: `Frames from "${v.title}" (${v.agency}), each labeled with its time in seconds, plus the transcript. `
     + 'We repost footage on a South Florida news page like @onlyindade. ' + (mode === 'story' ? STORY_RULES : 'Slide 1 = hook cover, slide 2 = the clip. ' + RULES)
     + ` Draft hook: [${p.kicker}] ${p.line1} / ${p.line2}. Pick the single craziest continuous moment, ${Math.round(MAX_SECONDS * 0.6)}–${MAX_SECONDS} s long, `
-    + 'starting right before the action (skip intros, title cards, interviews, talking heads; in a TV report, cut the part that shows the actual surveillance/bodycam/phone footage, not the anchor or reporter). '
+    + 'starting right at the most hooking moment so the first second grabs (skip intros, title cards, interviews, talking heads; in a TV report, cut the part that shows the actual surveillance/bodycam/phone footage, not the anchor or reporter). '
     + 'Reply JSON {"ok": true|false, "why": "…", "crazy": 1-10 (10 = everyone would share it), "start": seconds, "end": seconds, '
-    + '"cover": seconds of the most gripping frame (no victim/child/gore), "kicker": one of CAUGHT ON CAMERA | BODYCAM | DASHCAM | CHASE | ARRESTED | BUSTED | RESCUE | WILD FLORIDA | CRAZY, "line1": "≤28 chars", "line2": "≤40 chars, the shock", '
+    + '"cover": seconds of the most gripping frame (no victim/child/gore), "kicker": one of CAUGHT ON CAMERA | BODYCAM | DASHCAM | CHASE | ARRESTED | BUSTED | RESCUE | WILD FLORIDA | CRAZY, "line1": "≤28 chars", "line2": "≤40 chars, the shock", "hook": "ONE clean hook sentence for the cover, ≤60 chars, plain words, the shock (e.g. Driver flees cops at 120 mph through Hialeah)", "highlight": "1–3 words copied exactly from hook to highlight", '
     + '"caption": "2–4 short lines: what happens (accused/charged wording), where, \\"🎥 Video: <agency>\\", then 3 hashtags"}' }];
   for (const f of frames) {
     content.push({ type: 'text', text: `t=${f.t}s` });
@@ -255,18 +255,21 @@ async function shoot(html, file, width, height) {
 const fontCSS = () => ['700', '800', '900'].map(w => `@font-face{font-family:M;font-weight:${w};src:url(data:font/woff2;base64,${fs.readFileSync(path.join(FONT, `Montserrat-${w}.woff2`)).toString('base64')})}`).join('');
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;');
 
+// owner, Oct 3: ONE hook, clean and easy on the eye — one big sentence with one highlighted phrase, nothing else competing
 function coverHTML(img, p, agency) {
+  const hook = String(p.hook || [p.line1, p.line2].filter(Boolean).join(' ')).toUpperCase();
+  const hi = String(p.highlight || p.line2 || '').toUpperCase();
+  const i = hi ? hook.indexOf(hi) : -1;
+  const body = i >= 0 ? `${esc(hook.slice(0, i))}<span class="hi">${esc(hi)}</span>${esc(hook.slice(i + hi.length))}` : esc(hook);
+  const size = hook.length > 60 ? 74 : hook.length > 40 ? 86 : 98;
   return `<html><head><style>${fontCSS()}*{margin:0;box-sizing:border-box}body{width:1080px;height:1350px;overflow:hidden;font-family:M,sans-serif;background:#000}
   .bg{position:absolute;inset:0;background:url(data:image/jpeg;base64,${fs.readFileSync(img).toString('base64')}) center/cover}
-  .fade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,14,34,0) 30%,rgba(6,14,34,.55) 55%,rgba(6,14,34,.96) 82%)}
-  .box{position:absolute;left:60px;right:60px;bottom:120px}
-  .k{display:inline-block;background:#E5252A;color:#fff;font-weight:900;font-size:34px;letter-spacing:2px;padding:10px 20px;border-radius:10px}
-  .l1{color:#fff;font-weight:900;font-size:76px;line-height:1.02;margin-top:22px;text-transform:uppercase;letter-spacing:-1px}
-  .l2{color:#4D8DFF;font-weight:900;font-size:76px;line-height:1.02;margin-top:6px;text-transform:uppercase;letter-spacing:-1px}
-  .foot{position:absolute;left:60px;right:60px;bottom:44px;display:flex;justify-content:space-between;color:#fff;font-weight:800;font-size:26px;opacity:.92}
-  .play{position:absolute;top:44px;right:44px;background:rgba(0,0,0,.55);color:#fff;font-weight:900;font-size:30px;padding:12px 22px;border-radius:999px}
-  </style></head><body><div class="bg"></div><div class="fade"></div><div class="play">▶ WATCH →</div>
-  <div class="box"><span class="k">${esc(p.kicker || 'CAUGHT ON CAMERA')}</span><div class="l1">${esc(p.line1)}</div><div class="l2">${esc(p.line2)}</div></div>
+  .fade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 38%,rgba(0,0,0,.6) 60%,rgba(0,0,0,.92) 86%)}
+  .hook{position:absolute;left:64px;right:64px;bottom:130px;color:#fff;font-weight:900;font-size:${size}px;line-height:1.04;letter-spacing:-1.5px;text-shadow:0 6px 30px rgba(0,0,0,.55)}
+  .hi{background:#1769FF;padding:0 14px;border-radius:12px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+  .foot{position:absolute;left:64px;right:64px;bottom:50px;display:flex;justify-content:space-between;color:rgba(255,255,255,.85);font-weight:800;font-size:24px}
+  </style></head><body><div class="bg"></div><div class="fade"></div>
+  <div class="hook">${body}</div>
   <div class="foot"><span>🎥 ${esc(agency)}</span><span>@getnearapp</span></div></body></html>`;
 }
 function chipHTML(agency) {
@@ -355,7 +358,8 @@ export async function videoForStory(story, dir) {
 export async function makeClip({ url, dryRun } = {}) {
   const date = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
   step('Finding agency videos');
-  let videos = url ? [] : await recentAgencyVideos();
+  // owner, Oct 3: 'a lot of the times we gotta use mainstream' — agencies + TV stations + national news
+  let videos = url ? [] : await recentAgencyVideos({ days: 4, channels: [...CHANNELS, ...STATIONS, ...MAINSTREAM] });
   if (url) {
     const meta = JSON.parse(execFileSync('yt-dlp', [...ytdlpArgs(), '-J', url], { maxBuffer: 64e6 }).toString());
     videos = [{ agency: CHANNELS.find(c => c[1] === meta.channel_id)?.[0] || meta.channel, id: meta.id, url, published: new Date().toISOString(), title: meta.title, description: (meta.description || '').slice(0, 400), views: meta.view_count || 0 }];
@@ -380,7 +384,7 @@ export async function makeClip({ url, dryRun } = {}) {
     check = w?.check;
     if (check?.ok && (url || check.crazy >= MIN_CRAZY)) {
       ({ start, dur } = w);
-      for (const k of ['kicker', 'line1', 'line2', 'caption']) if (check[k]) p[k] = check[k];
+      for (const k of ['kicker', 'line1', 'line2', 'hook', 'highlight', 'caption']) if (check[k]) p[k] = check[k];
       if (!KICKERS.includes(String(p.kicker).toUpperCase())) p.kicker = 'CAUGHT ON CAMERA';
       break;
     }

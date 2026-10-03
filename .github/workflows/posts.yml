@@ -98,12 +98,19 @@ jobs:
           sudo chmod +x /usr/local/bin/cloudflared
 
       - name: Video tools (clip slots; agency video inside news carousels)
-        if: contains(fromJSON('["clip","news","brief"]'), needs.gate.outputs.kind)
+        if: contains(fromJSON('["clip","viral","news","brief"]'), needs.gate.outputs.kind)
         run: |
           sudo apt-get install -y -qq ffmpeg > /dev/null
           pip install -q -U "yt-dlp[default]"
           curl -fsSL https://deno.land/install.sh | sh -s -- -y > /dev/null 2>&1 || true
           echo "$HOME/.deno/bin" >> "$GITHUB_PATH"
+
+      - name: Cache Remotion browser (viral Reels)
+        if: needs.gate.outputs.kind == 'viral'
+        uses: actions/cache@v4
+        with:
+          path: node_modules/.remotion
+          key: remotion-browser-${{ hashFiles('package-lock.json') }}
 
       - name: Cache browsers
         uses: actions/cache@v4
@@ -140,6 +147,14 @@ jobs:
           [ -n "$TOPIC" ] && ARGS+=(--topic "$TOPIC")
           [ "$PUBLISH" = "false" ] && ARGS+=(--dry-run)
           if [ "${WAIT:-0}" -gt 0 ]; then echo "waiting $((WAIT / 60)) min to post on the hour"; sleep "$WAIT"; fi
+          if [ "$KIND" = "viral" ]; then
+            # viral clip Reel with edits (pipeline/viralreel.mjs); nothing good → a hook + video post instead
+            VARGS=(); [ "$PUBLISH" = "false" ] && VARGS+=(--dry-run)
+            OK=0; node pipeline/viralreel.mjs "${VARGS[@]}" || OK=$?
+            rm -f .yt-cookies.txt
+            if ls out/viral/*/post.json >/dev/null 2>&1; then exit $OK; fi
+            echo "no viral Reel → hook + video"; KIND=clip
+          fi
           if [ "$KIND" = "clip" ]; then
             # hook + agency video (pipeline/clip.mjs); if nothing is crazy enough, the slot posts a news carousel instead
             CARGS=(); [ "$PUBLISH" = "false" ] && CARGS+=(--dry-run)
@@ -152,11 +167,14 @@ jobs:
           node pipeline/carousel.mjs "${ARGS[@]}"
 
       - name: Clip preview links
-        if: always() && needs.gate.outputs.kind == 'clip'
+        if: always() && (needs.gate.outputs.kind == 'clip' || needs.gate.outputs.kind == 'viral')
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
           rm -f .yt-cookies.txt
+          V=$(ls -d out/viral/*/ 2>/dev/null | tail -1)
+          if [ -n "$V" ] && [ -f "${V}reel.mp4" ]; then cp "${V}reel.mp4" "/tmp/viral-$(basename "$V").mp4"; gh release upload videos "/tmp/viral-$(basename "$V").mp4" --clobber
+            echo "▶ https://github.com/${{ github.repository }}/releases/download/videos/viral-$(basename "$V").mp4" | tee -a "$GITHUB_STEP_SUMMARY"; exit 0; fi
           D=$(ls -d out/clips/*/ 2>/dev/null | tail -1); [ -n "$D" ] || exit 0
           N=$(basename "$D")
           for f in 01-cover.jpg 02-video.mp4; do [ -f "$D$f" ] && cp "$D$f" "/tmp/clip-$N-$f"; done

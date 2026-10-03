@@ -6,24 +6,21 @@
   ],
   "skipDates": [],
   "carousels": {
-    "news": [
-      7,
-      15,
-      19,
-      21,
-      23
-    ],
-    "brief": 9,
-    "deals": 11,
-    "upcoming": 12,
-    "feature": 17,
     "clip": [
       8,
-      10,
-      14,
-      16,
-      18,
+      11,
+      15,
+      17,
       22
+    ],
+    "brief": 9,
+    "viral": [
+      10,
+      18
+    ],
+    "upcoming": 12,
+    "news": [
+      19
     ]
   },
   "tiktokSlideshowsPerDay": 8,
