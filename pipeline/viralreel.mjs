@@ -85,11 +85,13 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
       if (labels.length) freeze = { at: Math.round((c.freeze - start) * FPS), hold: 90, labels };
       console.log(`  freeze @${c.freeze}s: ${labels.map(l => l.text).join(', ') || '(no labels)'}`);
     }
-    const intro = c.sensitive ? 140 : 90; // warning card (2.5 s) + typed hook
+    // warning card (2.5 s) + the hook typed out (1 char/frame) and held ~1 s + the pause-to-read card
+    const hookFrames = Math.max(60, String(c.hook || v.title).length + 34);
+    const intro = (c.sensitive ? 75 : 0) + hookFrames + (c.context ? 66 : 0);
     const props = {
       durationInFrames: intro + clipFrames + (freeze ? freeze.hold : 0), video: 'clip.mp4', videoW: vw, videoH: vh, clipFrames,
       fill: !!c.fill, focusX: Number.isFinite(+c.focusX) ? Math.min(1, Math.max(0, +c.focusX)) : 0.5,
-      intro: { frames: intro, warning: !!c.sensitive, title: c.hook || v.title, sub: c.sub || '' },
+      intro: { frames: intro, warning: !!c.sensitive, title: c.hook || v.title, sub: c.sub || '', context: String(c.context || '').slice(0, 240) },
       banner: c.banner || '', freeze, credit: `Video: ${v.agency}`,
       captions: (c.captions || []).filter(x => x.t >= start && x.t < end).map(x => ({ at: Math.round((x.t - start) * FPS), text: String(x.text) })),
     };

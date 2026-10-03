@@ -14,7 +14,7 @@ export type ViralProps = {
   durationInFrames: number;
   video: string; videoW: number; videoH: number; clipFrames: number;
   fill?: boolean; focusX?: number; // owner, Oct 3: full 9:16 when the action fits a vertical crop (focusX = where to center it)
-  intro: { frames: number; warning: boolean; title: string; sub?: string };
+  intro: { frames: number; warning: boolean; title: string; sub?: string; context?: string }; // context = the pause-to-read card
   banner: string;
   captions: { at: number; text: string }[]; // at = frame in the clip
   freeze: { at: number; hold: number; labels: ViralLabel[] } | null;
@@ -60,6 +60,8 @@ const typed = (text: string, frame: number, start: number, perChar = 1.3) => tex
 // owner, Oct 3: black brand card instead of the blurred frame — wordmark on top, a WARNING card (Near blue) for sensitive
 // footage, then the hook typed in
 export const warnFrames = (p: ViralProps) => (p.intro.warning ? 75 : 0);
+export const CONTEXT_FRAMES = 66; // owner, Oct 3: a quick black card explaining what happened, "pause to read"
+const contextAt = (p: ViralProps) => (p.intro.context ? p.intro.frames - CONTEXT_FRAMES : p.intro.frames);
 const Intro: React.FC<{ p: ViralProps }> = ({ p }) => {
   const f = useCurrentFrame();
   const W0 = warnFrames(p);
@@ -79,16 +81,22 @@ const Intro: React.FC<{ p: ViralProps }> = ({ p }) => {
           </div>
         </AbsoluteFill>
       )}
-      {f >= W0 && (
+      {f >= W0 && f < contextAt(p) && (
         <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', padding: '0 80px', opacity: hookOp }}>
           <div style={{ color: '#fff', fontWeight: 900, fontSize: 80, lineHeight: 1.05, textTransform: 'uppercase', letterSpacing: -1, minHeight: 250 }}>
-            {typed(p.intro.title, f, W0 + 4)}<span style={{ color: BLUE, opacity: f % 16 < 8 ? 1 : 0 }}>|</span>
+            {typed(p.intro.title, f, W0 + 4, 1)}<span style={{ color: BLUE, opacity: f % 16 < 8 ? 1 : 0 }}>|</span>
           </div>
           {p.intro.sub && (
             <div style={{ marginTop: 34, color: 'rgba(255,255,255,.8)', fontWeight: 700, fontSize: 34, lineHeight: 1.3, opacity: interpolate(f, [W0 + 30, W0 + 45], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }) }}>
               {p.intro.sub}
             </div>
           )}
+        </AbsoluteFill>
+      )}
+      {p.intro.context && f >= contextAt(p) && (
+        <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', padding: '0 90px', opacity: interpolate(f, [contextAt(p), contextAt(p) + 5], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }) }}>
+          <div style={{ border: `3px solid ${BLUE}`, color: BLUE, fontWeight: 900, fontSize: 34, letterSpacing: 3, padding: '10px 24px', borderRadius: 12, marginBottom: 40 }}>⏸ PAUSE TO READ</div>
+          <div style={{ color: '#fff', fontWeight: 700, fontSize: 44, lineHeight: 1.38, textAlign: 'left' }}>{p.intro.context}</div>
         </AbsoluteFill>
       )}
     </AbsoluteFill>
@@ -154,7 +162,8 @@ export const viralCues = (p: ViralProps) => {
   const keys = (start: number, n: number, per: number) => { for (let i = 0; i < n; i += 2) cues.push({ at: Math.round(start + i * per), file: 'sfx/key.wav', volume: 0.5 }); };
   cues.push({ at: 0, file: 'sfx/boom.wav', volume: 0.45 });
   if (p.intro.warning) cues.push({ at: warnFrames(p), file: 'sfx/whoosh.wav', volume: 0.3 });
-  keys(warnFrames(p) + 4, Math.min(p.intro.title.length, 60), 1.3);
+  if (p.intro.context) cues.push({ at: contextAt(p), file: 'sfx/pop.wav', volume: 0.4 });
+  keys(warnFrames(p) + 4, Math.min(p.intro.title.length, 60), 1);
   const I = p.intro.frames;
   cues.push({ at: I - 4, file: 'sfx/whoosh.wav', volume: 0.4 });
   keys(I + 8, Math.min(p.banner.length, 70), 1);
