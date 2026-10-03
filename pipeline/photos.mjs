@@ -1,7 +1,7 @@
 // Photos for carousel slides — stock first, AI only when stock would look bad.
 //   1. Wikimedia Commons (free license, credited on the slide). A cheap vision check picks the best candidate
 //      or rejects them all if none fits / looks good.
-//   2. OpenAI image — when stock is missing or boring, within today's AI budget (AI_IMAGES_PER_DAY, default 20).
+//   2. OpenAI image — when stock is missing or boring, within today's AI budget (AI_IMAGES_PER_DAY, default 2).
 //   3. A generic South Florida stock photo, so a slide never goes without an image.
 // Real photos are for places/things; people in news stories are never illustrated with a real photo.
 import fs from 'node:fs';
@@ -90,7 +90,7 @@ async function judge(list, query, context) {
 function aiBudgetLeft() {
   const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
   const usedToday = fs.existsSync(BUDGET_FILE) ? fs.readFileSync(BUDGET_FILE, 'utf8').split('\n').filter(l => l.startsWith(today)).length : 0;
-  return Number(process.env.AI_IMAGES_PER_DAY ?? 8) - usedToday; // ~8 carousels a day × 7 slides, news ones AI-first
+  return Number(process.env.AI_IMAGES_PER_DAY ?? 2) - usedToday; // owner Oct 3: $2/day budget — real photos + stock first, AI only as a rare last resort
 }
 
 async function aiPhoto(description, dir, name) {
