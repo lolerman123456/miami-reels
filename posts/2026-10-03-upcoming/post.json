@@ -1,149 +1,111 @@
 {
   "sector": "EVENTS",
   "cover": {
-    "top": "THIS WEEK",
-    "main": "SOUTH FLORIDA HAS",
-    "highlight": "6 NIGHTS OUT",
-    "bottom": "FROM $18 TO $569",
+    "top": "THIS WEEK IN",
+    "main": "SOUTH FLORIDA",
+    "highlight": "5 EVENTS",
+    "bottom": "STARTING NOW",
     "blur": false,
     "photo": {
-      "query": "dramatic Miami stadium concert crowd night stage lights",
-      "prompt": "dramatic night concert crowd in South Florida with stage lights, raised hands, and a glowing stadium"
+      "query": "Wikimedia Commons search for Miami concert venue night crowd",
+      "prompt": "dramatic night photo of a packed Miami concert venue with bright stage lights, people walking in at the entrance, and a city glow in the background"
     },
     "emojis": [
-      "🎤",
+      "🎟️",
+      "🎶",
       "🎭",
-      "🎸",
-      "🎶"
+      "📍"
     ],
-    "logos": [
-      "hardrockstadium.com",
-      "arshtcenter.org",
-      "zeyzeymiami.com",
-      "jointherevolution.net",
-      "aventuracenter.org",
-      "fundarte.us"
-    ],
-    "logoFiles": [
-      "logo-c0.png",
-      "logo-c1.png",
-      "logo-c2.png",
-      "logo-c5.png"
-    ]
+    "logos": [],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Sgt. Austin Hazard / Public domain",
+    "logoFiles": []
   },
   "slides": [
     {
       "tag": "EVENTS",
-      "headline": "Karol G at Hard Rock Stadium",
-      "highlight": "Karol G",
-      "body": "Saturday, Oct. 3, 7 p.m. at Hard Rock Stadium in Miami Gardens. Tickets cost $266 to $569, with Elena Rose opening.",
-      "place": "Miami Gardens",
-      "source": "Miami New Times",
-      "photo": {
-        "query": "Karol G performing stadium concert night Miami",
-        "prompt": "Karol G on a stadium stage with pink and blue lights, a packed crowd, and giant screens"
-      },
-      "color": "#F7A6C8",
-      "emoji": "💗",
-      "chip": "OCT. 3, 7 PM",
-      "logo": "hardrockstadium.com",
-      "photoFile": "photo-1.jpg",
-      "credit": "Photo: Programas Telemedellín / CC BY 3.0",
-      "logoFile": "logo-1.png"
-    },
-    {
-      "tag": "EVENTS",
       "headline": "Chucho Valdés at the Arsht Center",
       "highlight": "Chucho Valdés",
-      "body": "Saturday, Oct. 3, 8 p.m. at the Adrienne Arsht Center in Miami. The concert marks his 85th birthday with Joe Lovano and Terence Blanchard.",
+      "body": "Saturday, Oct. 3 at 8 p.m. at the Adrienne Arsht Center in Miami. Tickets are $52 to $158. The show marks his 85th birthday and includes Joe Lovano and Terence Blanchard.",
       "place": "Miami",
       "source": "Miami New Times",
       "photo": {
-        "query": "Chucho Valdés playing piano concert hall stage",
-        "prompt": "Chucho Valdés at a grand piano on a concert hall stage with warm spotlight and a jazz ensemble behind him"
+        "query": "Wikimedia Commons search for jazz pianist on stage under blue lights",
+        "prompt": "dramatic photo of a jazz pianist at a grand piano under blue stage lights inside a concert hall"
       },
-      "color": "#8A1538",
       "emoji": "🎹",
-      "chip": "OCT. 3, 8 PM",
-      "logo": "arshtcenter.org",
-      "logoFile": "logo-2.png"
+      "chip": "OCT 3, 8PM",
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Jorfer / Public domain"
     },
     {
       "tag": "EVENTS",
       "headline": "Absolute Bands Live! in Aventura",
       "highlight": "Absolute Bands Live!",
-      "body": "Saturday, Oct. 3, at 3 p.m. and 7 p.m. at Aventura Arts and Cultural Center. Bo Bice joins a Queen, Def Leppard, Journey, and Bon Jovi set.",
+      "body": "Saturday, Oct. 3 at 3 p.m. and 7 p.m. at Aventura Arts & Cultural Center in Aventura. Tickets are $45 to $71. The setlist leans on Queen, Journey, Def Leppard, and Bon Jovi.",
       "place": "Aventura",
       "source": "Miami New Times",
       "photo": {
-        "query": "rock concert singer audience spotlight stage",
-        "prompt": "rock band onstage under bright white lights with a singer at the front and an audience singing along"
+        "query": "Wikimedia Commons search for rock band concert lights theater stage",
+        "prompt": "dramatic rock concert photo with a guitarist under red and white lights, crowd silhouettes, and a theater stage"
       },
       "emoji": "🎸",
-      "chip": "$45+",
-      "logo": "aventuracenter.org",
-      "logoFile": null
+      "chip": "3PM, 7PM",
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: TonyDiehl / CC BY-SA 3.0"
     },
     {
       "tag": "EVENTS",
       "headline": "Electric Feels at ZeyZey",
       "highlight": "Electric Feels",
-      "body": "Saturday, Oct. 3, 9 p.m. at ZeyZey in Miami. The dance party brings a late-2000s and early-2010s indie set to Little River.",
+      "body": "Saturday, Oct. 3 at 9 p.m. at ZeyZey in Miami. Tickets are $18. The party brings a DJ lineup and a full stage production.",
       "place": "Miami",
       "source": "Miami New Times",
       "photo": {
-        "query": "DJ party Miami outdoor venue colorful lights",
-        "prompt": "DJ booth at an outdoor Miami venue with purple lights, a packed dance floor, and palms in the background"
+        "query": "Wikimedia Commons search for outdoor DJ party neon lights crowd",
+        "prompt": "high-energy night photo of a DJ booth, neon lights, fog, and a packed outdoor Miami dance crowd"
       },
-      "color": "#6A00FF",
       "emoji": "🪩",
-      "chip": "$18",
-      "logo": "zeyzeymiami.com",
-      "logoFile": "logo-4.png"
+      "chip": "$18"
     },
     {
       "tag": "EVENTS",
       "headline": "Mariachi El Bronx at Revolution Live",
       "highlight": "Mariachi El Bronx",
-      "body": "Sunday, Oct. 4, 7 p.m. at Revolution Live in Fort Lauderdale. The mariachi side project returns after a 10-year hiatus.",
+      "body": "Sunday, Oct. 4 at 7 p.m. at Revolution Live in Fort Lauderdale. Tickets are $38.50. The show is on the band's You Ese Tour with Bedouin Soundclash and Max Diaz.",
       "place": "Fort Lauderdale",
       "source": "Miami New Times",
       "photo": {
-        "query": "mariachi band live stage trumpets guitars crowd",
-        "prompt": "mariachi band on a club stage with trumpets, guitars, red lighting, and a close crowd"
+        "query": "Wikimedia Commons search for mariachi band live concert stage",
+        "prompt": "dramatic concert photo of a mariachi band performing under warm stage lights with brass instruments and a packed club crowd"
       },
       "emoji": "🎺",
-      "chip": "$38.50",
-      "logo": "jointherevolution.net",
-      "logoFile": null
+      "chip": "OCT 4, 7PM"
     },
     {
       "tag": "EVENTS",
-      "headline": "The Dog in the Manger in Aventura",
-      "highlight": "Dog in the Manger",
-      "body": "Friday, Oct. 9, 8 p.m. at Aventura Arts and Cultural Center. Fundarte stages Lope de Vega’s comedy in a contemporary adaptation.",
-      "place": "Aventura",
+      "headline": "James Turrell’s Blue Sea Sky at Superblue Miami",
+      "highlight": "Blue Sea Sky",
+      "body": "Open this week at Superblue Miami in Miami. Admission requires a complimentary on-site reservation, first come, first served. The room-sized installation uses shifting fields of color.",
+      "place": "Miami",
       "source": "Miami New Times",
       "photo": {
-        "query": "theater actors dramatic lighting red curtain",
-        "prompt": "Spanish theater performance on a dark stage with actors in dramatic lighting and a rich red curtain"
+        "query": "Wikimedia Commons search for immersive light installation museum room",
+        "prompt": "dramatic photo of a dark immersive art room filled with glowing color fields and a single visitor walking through the space"
       },
-      "color": "#C8102E",
-      "emoji": "🎭",
-      "chip": "$45.51+",
-      "logo": "fundarte.us",
-      "photoFile": "photo-6.jpg",
-      "credit": "Photo: Eva Rinaldi / CC BY-SA 2.0",
-      "logoFile": "logo-6.png"
+      "emoji": "🎨",
+      "chip": "OPEN THIS WEEK",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Yeti-Hunter / CC BY-SA 4.0"
     }
   ],
-  "caption": "South Florida has concerts, theater, and a dance party packed into this week.\nWho are they taking? Tag a friend.",
+  "caption": "Five South Florida plans for this week, from concerts to an immersive art installation.\nWho are you taking? Tag a friend.",
   "hashtags": [
-    "#MiamiEvents",
-    "#SouthFloridaEvents"
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
   ],
   "collaborators": [],
-  "igCaption": "South Florida has concerts, theater, and a dance party packed into this week.\nWho are they taking? Tag a friend.\n\n📰 Sources: Miami New Times\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiEvents #SouthFloridaEvents #miami #southflorida",
+  "igCaption": "Five South Florida plans for this week, from concerts to an immersive art installation.\nWho are you taking? Tag a friend.\n\n📰 Sources: Miami New Times\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
   "kind": "upcoming",
   "kicker": "THIS WEEK IN MIAMI 🎟️",
   "date": "2026-10-03",
