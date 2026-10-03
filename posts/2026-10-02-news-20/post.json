@@ -1,0 +1,73 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "NEAR FLL,",
+    "main": "A MASKED MAN",
+    "highlight": "WITH AN AXE",
+    "bottom": "ASKED “ARE YOU READY?”",
+    "blur": true,
+    "photo": {
+      "query": "Fort Lauderdale-Hollywood International Airport curb police lights",
+      "prompt": "dramatic scene outside Fort Lauderdale-Hollywood International Airport, airport curb and roadway, police lights in the distance, no identifiable people"
+    },
+    "emojis": [
+      "🪓",
+      "🚔",
+      "✈️"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: CBS News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Masked man allegedly asked, “Are you ready?”",
+      "highlight": "Are you ready?",
+      "body": "A couple said a masked man walked up near Fort Lauderdale airport Friday morning, raised an axe and asked, “Are you ready?”",
+      "place": "Fort Lauderdale",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Fort Lauderdale-Hollywood International Airport arrivals curb night",
+        "prompt": "dramatic airport arrivals curb near Fort Lauderdale-Hollywood International Airport, harsh overhead lights, empty sidewalk, police lights reflecting on pavement"
+      },
+      "emoji": "🪓",
+      "chip": "FRI AM",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Jason Morgan described a horror-movie moment",
+      "highlight": "horror-movie moment",
+      "body": "Jason Morgan said the encounter felt like something out of a horror movie.",
+      "place": "Fort Lauderdale",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Fort Lauderdale airport road police lights",
+        "prompt": "empty airport access road near Fort Lauderdale-Hollywood International Airport, wet pavement, blue and red police lights in the background"
+      },
+      "emoji": "🎥",
+      "chip": "ACCOUNT",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News"
+    }
+  ],
+  "caption": "A couple told NBC 6 a masked man with an axe confronted them near Fort Lauderdale-Hollywood International Airport Friday morning.\n\nIf you use FLL often, where do you feel least safe around the airport?",
+  "hashtags": [
+    "#FortLauderdale",
+    "#BrowardCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "A couple told NBC 6 a masked man with an axe confronted them near Fort Lauderdale-Hollywood International Airport Friday morning.\n\nIf you use FLL often, where do you feel least safe around the airport?\n\n📰 Sources: NBC 6 South Florida, Wikipedia\n\n🎥 Video: CBS News Miami\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#FortLauderdale #BrowardCounty #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-02",
+  "id": "2026-10-02-news-20",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "CBS News Miami",
+    "url": "https://www.youtube.com/watch?v=mQ50GGDIAfw"
+  }
+}
