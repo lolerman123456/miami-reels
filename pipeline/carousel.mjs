@@ -389,6 +389,8 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     if (photo) { item.photoFile = path.basename(photo.file); item.credit = photo.credit; }
     console.log(`  ${i ? '#' + i : 'cover'}: ${photo ? photo.credit : 'no photo'}`);
   }
+  // no cover photo (AI budget spent, no stock fit): the best slide photo carries the cover rather than skipping the post
+  if (!post.cover.photoFile) { const s = post.slides.find(x => x.photoFile); if (s) { post.cover.photoFile = s.photoFile; post.cover.credit = s.credit; console.log(`  cover: reusing ${s.credit}`); } }
   // brand/team/org logos on white cards (owner: every slideshow should look alive, like the Coffee Day one)
   for (const [i, item] of post.slides.entries()) if (item.logo) item.logoFile = await getLogo(item.logo, dir, `logo-${i + 1}`);
   post.cover.logoFiles = [];

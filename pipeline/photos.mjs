@@ -32,6 +32,7 @@ export async function getPhoto(spec, dir, name, { context = '', aiFirst = false 
     || (spec.query && await attempt(stockPhoto, spec.query, dir, name, context, true))
     || (simple && simple !== spec.query && await attempt(stockPhoto, simple, dir, name, context, true))
     || await properNames(spec.query, dir, name, context)
+    || await properNames(context, dir, name, context) // the slide's own headline names the venue ("Chucho Valdés at the Arsht Center")
     || null; // no photo: the slide uses the plain dark background instead of a random, off-topic stock picture
 }
 
