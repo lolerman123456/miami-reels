@@ -142,6 +142,39 @@ async function pageVideos(agency, id, days) {
   return out;
 }
 
+// owner, Oct 3: "look for a viral clip" — what the whole country is watching this week: YouTube searches for released
+// footage (short videos, uploaded this week), news channels only (no compilation / licensing-agency reuploads)
+const VIRAL_QUERIES = ['police release video', 'bodycam video shows', 'surveillance video shows', 'dashcam video', 'caught on camera',
+  'doorbell camera video', 'road rage video', 'police chase video', 'Florida caught on camera', 'Miami caught on camera'];
+const NEWSY = /news|tv\b|\bwsvn|wplg|nbc|abc|cbs|fox|cnn|\bap\b|associated press|reuters|eyewitness|local ?\d|\d+ ?news|inside edition|wesh|wfla|wkmg|wptv|wpbf|ktla|wsb|kfor|wral|wfaa|khou|kare|wgn/i;
+const AGGREGATORS = /viralhog|storyful|jukin|newsflare|caters|rumble viral|fails|compilation|moments|top ?\d|chills|scary|accident news|한문철/i;
+export async function searchViral({ queries = VIRAL_QUERIES } = {}) {
+  const out = [], seen = new Set();
+  const num = s => { const m = /([\d,.]+)\s*([KM])?/i.exec(s || ''); return m ? Math.round(parseFloat(m[1].replace(/,/g, '')) * ({ K: 1e3, M: 1e6 }[String(m[2]).toUpperCase()] || 1)) : 0; };
+  const UNIT = { minute: 6e4, hour: 36e5, day: 864e5, week: 6048e5 };
+  for (const q of queries) {
+    try {
+      const html = await (await fetch(`https://www.youtube.com/results?search_query=${encodeURIComponent(q)}&sp=EgYIAxABGAE%253D`, { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'en' } })).text();
+      const m = /var ytInitialData = (\{.*?\});<\/script>/s.exec(html);
+      if (!m) continue;
+      const vids = [];
+      const walk = o => { if (Array.isArray(o)) o.forEach(walk); else if (o && typeof o === 'object') { if (o.videoRenderer) vids.push(o.videoRenderer); Object.values(o).forEach(walk); } };
+      walk(JSON.parse(m[1]));
+      for (const v of vids) {
+        const channel = v.ownerText?.runs?.[0]?.text || '';
+        const title = v.title?.runs?.[0]?.text || '';
+        if (!v.videoId || seen.has(v.videoId) || !NEWSY.test(channel) || AGGREGATORS.test(channel + ' ' + title)) continue;
+        seen.add(v.videoId);
+        const age = /(\d+)\s*(minute|hour|day|week)/i.exec(v.publishedTimeText?.simpleText || '');
+        out.push({ agency: channel, id: v.videoId, url: `https://www.youtube.com/watch?v=${v.videoId}`, title,
+          published: new Date(Date.now() - (age ? +age[1] * UNIT[age[2].toLowerCase()] : 0)).toISOString(),
+          description: (v.detailedSnippets?.[0]?.snippetText?.runs || []).map(r => r.text).join('').slice(0, 300), views: num(v.viewCountText?.simpleText) });
+      }
+    } catch (e) { console.log(`  (search "${q}": ${e.message})`); }
+  }
+  return out.sort((a, b) => b.views - a.views);
+}
+
 export async function chat(messages) {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {

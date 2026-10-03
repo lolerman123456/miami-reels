@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { ROOT, run, step, writeJSON } from './util.mjs';
-import { CHANNELS, STATIONS, MAINSTREAM, recentAgencyVideos, chat, watch, ytdlpArgs } from './clip.mjs';
+import { CHANNELS, STATIONS, MAINSTREAM, recentAgencyVideos, searchViral, chat, watch, ytdlpArgs } from './clip.mjs';
 
 const FPS = 30;
 const SEEN = path.join(ROOT, 'state', 'clips-seen.txt');
@@ -19,6 +19,8 @@ async function pickVideos(videos, hint = '') {
     + 'helicopter footage of chases, wild arrests, crashes, road rage, rescues, animals (gators, bears), insane weather moments. Prefer high views and South Florida '
     + 'when equally good. Skip talking heads, politics, press conferences, full newscasts, anything about a dead child. '
     + 'Prefer CLEAR footage (owner, Oct 3): a few big, distinct subjects (one car, one person, one animal) — not cramped, crowded or far-away shots. '
+    + 'It must be GENUINELY viral — something you can\'t stop watching where something big visibly happens on camera (an arrest everyone is talking about, a crash, a fight, a wild animal, a rescue); '
+    + 'skip routine footage where nothing visible happens (dark chases with just taillights, parked cars, empty streets). High view counts matter. '
     + (hint ? `THIS TIME the owner wants: ${hint}. ` : '') + 'Reply JSON {"picks": [{"index": n, "why": "…"}]}' },
   { role: 'user', content: videos.map((v, i) => `${i}. [${v.agency}] ${v.title} (${v.published.slice(0, 10)}, ${v.views} views)${v.description ? ' — ' + v.description.slice(0, 160) : ''}`).join('\n') }]);
   return (r.picks || []).filter(x => videos[x.index]);
@@ -60,8 +62,11 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     videos = [{ agency: meta.channel, id: meta.id, url, published: new Date().toISOString(), title: meta.title, description: (meta.description || '').slice(0, 400), views: meta.view_count || 0 }];
   } else {
     const seen = new Set(fs.existsSync(SEEN) ? fs.readFileSync(SEEN, 'utf8').split('\n').map(l => l.split(/\s/)[0]) : []);
-    videos = (await recentAgencyVideos({ days: 3, channels: [...MAINSTREAM, ...STATIONS, ...CHANNELS] }))
-      .filter(v => !seen.has(v.id) && !TALK.test(v.title));
+    // this week's nationally viral released footage first, then our news/agency channels
+    const viral = await searchViral();
+    const ours = await recentAgencyVideos({ days: 3, channels: [...MAINSTREAM, ...STATIONS, ...CHANNELS] });
+    const ids = new Set();
+    videos = [...viral, ...ours].filter(v => !ids.has(v.id) && ids.add(v.id) && !seen.has(v.id) && !TALK.test(v.title)).slice(0, 180);
   }
   console.log(`  ${videos.length} candidates`);
   const picks = url ? [{ index: 0, why: 'owner link' }] : await pickVideos(videos, hint);
@@ -71,7 +76,7 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     const dir = path.join(ROOT, 'out', 'viral', `${date}-${v.id}`);
     const w = await watch(v, {}, dir, 'reel');
     const c = w?.check;
-    if (!c?.ok || (!url && c.crazy < 6)) {
+    if (!c?.ok || (!url && c.crazy < 8)) {
       console.log(`  skip (${c ? (c.ok ? `crazy ${c.crazy}` : 'not ok') : 'no download'})`);
       if (w) fs.appendFileSync(SEEN, `${v.id}  reel-skip\n`);
       fs.rmSync(dir, { recursive: true, force: true });
@@ -99,15 +104,15 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
       const ff = path.join(dir, 'freeze.jpg');
       await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(c.freeze - start), '-i', clip, '-frames:v', '1', ff]);
       const labels = await labelsFor(ff, c, dir, vw, vh);
-      if (labels.length) freeze = { at: Math.round((c.freeze - start) * FPS), hold: 100, labels };
+      if (labels.length) freeze = { at: Math.round((c.freeze - start) * FPS), hold: 54, labels };
       console.log(`  freeze @${c.freeze}s: ${labels.map(l => l.text).join(', ') || '(no labels)'}`);
     }
     // black intro (owner, Oct 3): WARNING card fades in/out (sensitive only), then the story card (headline + context) ~4 s
-    const intro = (c.sensitive ? 75 : 0) + (c.context ? 125 : 75);
+    const intro = c.context ? 84 : 45; // owner, Oct 3: fast — no warning card, story card ~2.8 s
     const props = {
       durationInFrames: intro + clipFrames + (freeze ? freeze.hold : 0), video: 'clip.mp4', videoW: vw, videoH: vh, clipFrames,
       fill: !!c.fill, focusX: Number.isFinite(+c.focusX) ? Math.min(1, Math.max(0, +c.focusX)) : 0.5,
-      intro: { frames: intro, warning: !!c.sensitive, title: c.hook || v.title, sub: c.sub || '', context: String(c.context || '').slice(0, 240) },
+      intro: { frames: intro, warning: false, title: c.hook || v.title, sub: c.sub || '', context: String(c.context || '').slice(0, 240) },
       banner: c.banner || '', freeze, credit: `Video: ${v.agency}`,
       captions: (c.captions || []).filter(x => x.t >= start && x.t < end).map(x => ({ at: Math.round((x.t - start) * FPS), text: String(x.text) })),
     };

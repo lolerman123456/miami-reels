@@ -64,7 +64,7 @@ const VideoLayer: React.FC<{ p: ViralProps; muted?: boolean; startFrom?: number 
   );
 };
 
-const fade = (f: number, a: number, b: number, len = 12) =>
+const fade = (f: number, a: number, b: number, len = 6) =>
   interpolate(f, [a, a + len, b - len, b], [0, 1, 1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
 
 const Wordmark: React.FC = () => (
@@ -78,16 +78,16 @@ const Intro: React.FC<{ p: ViralProps }> = ({ p }) => {
   const W0 = p.intro.warning ? WARN_FRAMES : 0;
   return (
     <AbsoluteFill style={{ background: '#000', textAlign: 'center' }}>
-      <div style={{ opacity: interpolate(f, [0, 12, p.intro.frames - 10, p.intro.frames], [0, 1, 1, 0], { extrapolateRight: 'clamp' }) }}><Wordmark /></div>
+      <div style={{ opacity: interpolate(f, [0, 6, p.intro.frames - 6, p.intro.frames], [0, 1, 1, 0], { extrapolateRight: 'clamp' }) }}><Wordmark /></div>
       {W0 > 0 && (
-        <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', padding: '0 90px', opacity: fade(f, 0, W0, 14) }}>
+        <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', padding: '0 90px', opacity: fade(f, 0, W0, 6) }}>
           <div style={{ color: BLUE, fontFamily: HEAD, fontWeight: 700, fontSize: 112, letterSpacing: 8 }}>WARNING</div>
           <div style={{ marginTop: 26, color: '#fff', fontFamily: TEXT, fontWeight: 500, fontSize: 44, lineHeight: 1.4 }}>
             Some viewers may find the following video disturbing.<br />Viewer discretion is advised.
           </div>
         </AbsoluteFill>
       )}
-      <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', padding: '0 84px', opacity: fade(f, W0, p.intro.frames, 14) }}>
+      <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', padding: '0 84px', opacity: fade(f, W0, p.intro.frames, 6) }}>
         <div style={{ color: '#fff', fontFamily: HEAD, fontWeight: 700, fontSize: 84, lineHeight: 1.08, textTransform: 'uppercase' }}>{p.intro.title}</div>
         <div style={{ width: 120, height: 8, background: BLUE, borderRadius: 4, margin: '34px 0' }} />
         {p.intro.context
@@ -102,7 +102,7 @@ const Intro: React.FC<{ p: ViralProps }> = ({ p }) => {
 const Banner: React.FC<{ text: string }> = ({ text }) => {
   const f = useCurrentFrame();
   return (
-    <div style={{ position: 'absolute', top: 210, left: 50, right: 50, opacity: interpolate(f, [0, 12], [0, 1], { extrapolateRight: 'clamp' }),
+    <div style={{ position: 'absolute', top: 210, left: 50, right: 50, opacity: interpolate(f, [0, 6], [0, 1], { extrapolateRight: 'clamp' }),
       background: 'rgba(6,14,34,.88)', borderLeft: `12px solid ${BLUE}`, borderRadius: 14, padding: '20px 28px',
       color: '#fff', fontFamily: HEAD, fontWeight: 600, fontSize: 46, lineHeight: 1.2, textTransform: 'uppercase', boxShadow: '0 14px 40px rgba(0,0,0,.45)' }}>
       {text}
@@ -113,7 +113,7 @@ const Banner: React.FC<{ text: string }> = ({ text }) => {
 const Caption: React.FC<{ text: string; bottom: number }> = ({ text, bottom }) => {
   const f = useCurrentFrame();
   return (
-    <div style={{ position: 'absolute', bottom, left: 70, right: 70, textAlign: 'center', opacity: interpolate(f, [0, 8], [0, 1], { extrapolateRight: 'clamp' }) }}>
+    <div style={{ position: 'absolute', bottom, left: 70, right: 70, textAlign: 'center', opacity: interpolate(f, [0, 4], [0, 1], { extrapolateRight: 'clamp' }) }}>
       <span style={{ background: 'rgba(0,0,0,.75)', color: '#fff', fontFamily: TEXT, fontWeight: 700, fontSize: 46, lineHeight: 1.45, padding: '6px 18px', borderRadius: 10, boxDecorationBreak: 'clone', WebkitBoxDecorationBreak: 'clone' }}>{text}</span>
     </div>
   );
@@ -128,13 +128,13 @@ const Markers: React.FC<{ p: ViralProps }> = ({ p }) => {
   const placed: { x: number; y: number }[] = [];
   return (
     <AbsoluteFill>
-      <AbsoluteFill style={{ background: `rgba(0,0,0,${interpolate(f, [0, 10], [0, 0.3], { extrapolateRight: 'clamp' })})` }} />
+      <AbsoluteFill style={{ background: `rgba(0,0,0,${interpolate(f, [0, 5], [0, 0.3], { extrapolateRight: 'clamp' })})` }} />
       {(p.freeze?.labels || []).map((l, i) => {
         let x = r.left + l.x * r.width, y = r.top + l.y * r.height;
         if (x < 50 || x > W - 50) return null;
         for (const q of placed) if (Math.hypot(q.x - x, q.y - y) < 90) { y = q.y + 90; }
         placed.push({ x, y });
-        const k = interpolate(f, [8 + i * 10, 18 + i * 10], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+        const k = interpolate(f, [2 + i * 5, 7 + i * 5], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
         return (
           <div key={i} style={{ position: 'absolute', left: x - 38, top: y - 38, width: 76, height: 76, borderRadius: 38, background: BLUE, border: '5px solid #fff',
             color: '#fff', fontFamily: HEAD, fontWeight: 700, fontSize: 40, display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -148,11 +148,12 @@ const Markers: React.FC<{ p: ViralProps }> = ({ p }) => {
 // who's who strip: stills cropped from the footage, numbered to match the markers
 const Legend: React.FC<{ p: ViralProps; bottom: number }> = ({ p, bottom }) => {
   const f = useCurrentFrame();
+  const outK = interpolate(f, [(p.freeze?.hold || 60) - 6, p.freeze?.hold || 60], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
   const labels = (p.freeze?.labels || []).slice(0, 3);
   return (
     <div style={{ position: 'absolute', bottom, left: 0, right: 0, display: 'flex', justifyContent: 'center', gap: 22 }}>
       {labels.map((l, i) => {
-        const k = interpolate(f, [10 + i * 10, 22 + i * 10], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+        const k = Math.min(outK, interpolate(f, [3 + i * 5, 9 + i * 5], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }));
         return (
           <div key={i} style={{ width: 300, background: 'rgba(6,14,34,.9)', borderRadius: 16, overflow: 'hidden', opacity: k, transform: `translateY(${(1 - k) * 30}px)`, boxShadow: '0 10px 30px rgba(0,0,0,.5)' }}>
             {l.thumb && <Img src={staticFile(l.thumb)} style={{ width: 300, height: 170, objectFit: 'cover', display: 'block' }} />}
@@ -176,7 +177,7 @@ export const Viral: React.FC<ViralProps> = (p) => {
   const after = F !== null ? p.clipFrames - F : 0;
   const caps = [...p.captions].sort((a, b) => a.at - b.at);
   const at = (cf: number) => I + cf + (F !== null && cf >= F ? Hd : 0); // clip frame → composition frame
-  const legendBottom = 380, captionBottom = hasFreeze ? 650 : 420;
+  const legendBottom = 560, captionBottom = 420;
   return (
     <AbsoluteFill style={{ background: '#000' }}>
       {(F ?? p.clipFrames) > 0 && <Sequence from={I} durationInFrames={F ?? p.clipFrames}><VideoLayer p={p} /></Sequence>}
@@ -184,7 +185,7 @@ export const Viral: React.FC<ViralProps> = (p) => {
         <Sequence from={I + F} durationInFrames={Hd}><Freeze frame={F}><VideoLayer p={p} muted /></Freeze></Sequence>
         {after > 0 && <Sequence from={I + F + Hd} durationInFrames={after}><VideoLayer p={p} startFrom={F} /></Sequence>}
         <Sequence from={I + F} durationInFrames={Hd}><Markers p={p} /></Sequence>
-        <Sequence from={I + F}><Legend p={p} bottom={legendBottom} /></Sequence>
+        <Sequence from={I + F} durationInFrames={Hd}><Legend p={p} bottom={legendBottom} /></Sequence>
       </>}
       <Sequence durationInFrames={I}><Intro p={p} /></Sequence>
       <Sequence from={I}><Banner text={p.banner} /></Sequence>
