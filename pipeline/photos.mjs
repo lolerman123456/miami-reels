@@ -31,7 +31,24 @@ export async function getPhoto(spec, dir, name, { context = '', aiFirst = false 
     // AI budget spent (owner Oct 3: $2/day): take the best-matching free stock photo without the picky looks check
     || (spec.query && await attempt(stockPhoto, spec.query, dir, name, context, true))
     || (simple && simple !== spec.query && await attempt(stockPhoto, simple, dir, name, context, true))
+    || await properNames(spec.query, dir, name, context)
     || null; // no photo: the slide uses the plain dark background instead of a random, off-topic stock picture
+}
+
+// Long queries ("Karol G Hard Rock Stadium Miami Gardens concert night") find nothing on Wikimedia: try the
+// proper names in them ("Hard Rock Stadium", "Karol G") one by one, venues/places first.
+async function properNames(query, dir, name, context) {
+  const runs = (query || '').match(/\b[A-Z][\w'’.-]*(?:\s+(?:of|the|de|la|el)?\s*[A-Z][\w'’.-]*)+/g) || [];
+  const venue = /stadium|center|centre|arena|park|theat(er|re)|hall|beach|museum|garden|live|club|bay|island|village|plaza|square/i;
+  // a run can hold several names ("Hard Rock Stadium Adrienne Arsht Center ZeyZey"): try its 2–4 word spans,
+  // ones ending in a venue word first, longer first, at most 8 searches
+  const spans = new Set();
+  for (const r of runs) { const w = r.trim().split(/\s+/); for (let n = Math.min(4, w.length); n >= 2; n--) for (let i = 0; i + n <= w.length; i++) spans.add(w.slice(i, i + n).join(' ')); }
+  const venueEnd = q => venue.test(q.split(' ').pop()) ? 1 : 0;
+  for (const q of [...spans].sort((a, b) => venueEnd(b) - venueEnd(a) || b.split(' ').length - a.split(' ').length).slice(0, 8)) {
+    try { const p = await stockPhoto(q, dir, name, context, true); if (p) return p; } catch {}
+  }
+  return null;
 }
 
 async function candidates(query) {
@@ -60,7 +77,7 @@ async function stockPhoto(query, dir, name, context, anyOk = false) {
   }
   const ok = list.filter(c => c.data);
   if (!ok.length) return null;
-  const pick = anyOk ? 0 : await judge(ok, query, context);
+  const pick = await judge(ok, query, context, anyOk);
   if (pick < 0) { console.log(`  stock rejected for "${query}"`); return null; }
   const c = ok[pick];
   const file = path.join(dir, `${name}.jpg`);
@@ -70,9 +87,14 @@ async function stockPhoto(query, dir, name, context, anyOk = false) {
 }
 
 // Ask a vision model which candidate would look good behind this slide (or none). Low-detail images: fractions of a cent.
-async function judge(list, query, context) {
+async function judge(list, query, context, lenient = false) {
   if (!process.env.OPENAI_API_KEY) return 0;
-  const content = [
+  // lenient (fallback once the AI budget is spent): any decent photo that really shows this place/subject
+  const content = lenient ? [
+    { type: 'text', text: `Instagram carousel slide about: "${context || query}" (South Florida). Wanted photo: "${query}".\n` +
+      `Pick the candidate that really shows this exact place or subject (the right venue/city, not a different place with a similar name) and is a decent, sharp photo. No close-ups of identifiable people, no documents or old postcards. If none shows it, answer -1. Reply JSON {"pick": index}.` },
+    ...list.flatMap((c, i) => [{ type: 'text', text: `Candidate ${i}: ${c.title}` }, { type: 'image_url', image_url: { url: `data:image/jpeg;base64,${c.data.toString('base64')}`, detail: 'low' } }]),
+  ] : [
     { type: 'text', text: `Instagram carousel slide about: "${context || query}". Wanted photo: "${query}".\n` +
       `Pick the ONE candidate that clearly shows that subject and looks like an attractive, sharp, modern social-media photo ` +
       `(no documents, no old/grainy/tilted snapshots, no random interiors, no close-ups of identifiable people, no vintage postcards or old illustrations, nothing BORING: no flat gray skies over generic streets, no plain parking lots or buildings with nothing happening, no photos of a different city than the story, no photo a person would scroll past — only pick one that is striking and clearly about this exact story; small price signs in the background are fine, but not a big close-up price/number that could clash with the post). ` +
