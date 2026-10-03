@@ -1,0 +1,230 @@
+{
+  "title": "Sunday, Oct. 4 Miami Guide",
+  "sources": [
+    "Miami New Times",
+    "Eater Miami",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Sunday, Oct. 4 has a few Miami options with prices attached: complimentary reservations at Superblue, $8 to $15 museum tickets, and a $275 tasting menu in West Palm Beach.\nDowntown also has late-night Brightline service after the Kaseya Center event.\nWhich Sunday plan would you actually do?\n\nSources: Miami New Times, Eater Miami, Secret Miami\n\n#MiamiEvents #MiamiGuide #MiamiWeekend #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Sunday, October fourth has Miami plans with real prices attached: complimentary art reservations, museum tickets, and one dinner that costs two hundred seventy-five dollars.",
+      "overlay": [
+        "SUNDAY GUIDE",
+        "OCT 4"
+      ],
+      "emojis": [
+        "☀️",
+        "🍳",
+        "🎨",
+        "🚆"
+      ],
+      "location": {
+        "name": "Superblue Miami",
+        "lat": 25.8029,
+        "lon": -80.2132,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start at Superblue Miami. James Turrell’s Blue Sea Sky is a room-sized installation made for the immersive art space. Access requires a complimentary on-site reservation, available first-come, first-served.",
+      "caption": "Start at Superblue Miami. James Turrell’s Blue Sea Sky is a room-sized installation made for the immersive art space. Access requires a complimentary on-site reservation, available first-come, first-served.",
+      "overlay": "SUPERBLUE",
+      "badge": "COMPLIMENTARY RSVP",
+      "sub": "Miami art stop",
+      "emoji": "🎨",
+      "stats": [
+        {
+          "value": "COMPLIMENTARY",
+          "label": "reservation"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Superblue Miami",
+        "lat": 25.8029,
+        "lon": -80.2132,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "On Miami Beach, the Bass has Yuko Mohri’s Unviolated Imperfection on view through May thirtieth, twenty twenty-seven. It spans three galleries, and tickets cost eight to fifteen dollars.",
+      "caption": "On Miami Beach, the Bass has Yuko Mohri’s Unviolated Imperfection on view through May 30, 2027. It spans three galleries, and tickets cost $8 to $15.",
+      "overlay": "THE BASS",
+      "badge": "$8 to $15",
+      "sub": "Miami Beach museum",
+      "emoji": "🖼️",
+      "stats": [
+        {
+          "value": "$8 to $15",
+          "label": "tickets"
+        },
+        {
+          "value": "3",
+          "label": "galleries"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "The Bass",
+        "lat": 25.7973,
+        "lon": -80.1295,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 750,
+        "pitch": -32,
+        "heading": 75,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Downtown, the Museum of Miami is showing Caught in the Eye: Remembering the nineteen twenty-six Hurricane. It uses photos, newspapers, films, and letters. Tickets cost eight to fifteen dollars.",
+      "caption": "Downtown, the Museum of Miami is showing Caught in the Eye: Remembering the 1926 Hurricane. It uses photos, newspapers, films, and letters. Tickets cost $8 to $15.",
+      "overlay": "MUSEUM MIAMI",
+      "badge": "$8 to $15",
+      "sub": "Downtown history",
+      "emoji": "🌀",
+      "stats": [
+        {
+          "value": "1926",
+          "label": "hurricane"
+        },
+        {
+          "value": "$8 to $15",
+          "label": "tickets"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Museum of Miami",
+        "lat": 25.7743,
+        "lon": -80.1967,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -34,
+        "heading": 215,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For dinner, Emelina’s in West Palm Beach has a sixteen-seat Cuban omakase. The ten-course tasting menu costs two hundred seventy-five dollars. The team includes chefs Osmel González and Camila Salazar.",
+      "caption": "For dinner, Emelina’s in West Palm Beach has a 16-seat Cuban omakase. The 10-course tasting menu costs $275. The team includes chefs Osmel González and Camila Salazar.",
+      "overlay": "EMELINA'S",
+      "badge": "$275",
+      "sub": "West Palm tasting menu",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "$275",
+          "label": "tasting menu"
+        },
+        {
+          "value": "16",
+          "label": "seats"
+        }
+      ],
+      "source": "Eater Miami",
+      "location": {
+        "name": "Emelina's",
+        "lat": 26.7153,
+        "lon": -80.0534,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 310,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "If your Sunday ends near Kaseya Center, Brightline has late-night trains from MiamiCentral after the Don Omar concert. The station sits less than a mile from the arena, about a fifteen-minute walk.",
+      "caption": "If your Sunday ends near Kaseya Center, Brightline has late-night trains from MiamiCentral after the Don Omar concert. The station sits less than a mile from the arena, about a 15-minute walk.",
+      "overlay": "MIAMICENTRAL",
+      "badge": "15 MIN WALK",
+      "sub": "Late-night trains",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "15 MIN",
+          "label": "walk"
+        },
+        {
+          "value": "<1 MI",
+          "label": "to arena"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "MiamiCentral",
+        "lat": 25.785,
+        "lon": -80.1956,
+        "h": 40
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -34,
+        "heading": 155,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Pick your first Sunday stop. A good Sunday in Miami is partly about where you go, and partly about the people moving through the same places, which is the quiet idea behind NEAR.",
+      "overlay": "PICK ONE ☀️",
+      "sub": "Tell us your plan",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7781,
+        "lon": -80.19,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 240
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "055-sunday-oct-4-miami-guide"
+}
