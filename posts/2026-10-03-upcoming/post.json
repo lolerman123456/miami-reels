@@ -1,0 +1,132 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "THIS WEEK",
+    "main": "MIAMI GETS KAROL G",
+    "highlight": "KAROL G",
+    "bottom": "PLUS 4 MORE PLANS",
+    "blur": false,
+    "photo": {
+      "query": "Karol G concert Hard Rock Stadium Miami Gardens",
+      "prompt": "Karol G performing on a stadium stage in Miami Gardens, bright concert lights, dancers, and a packed nighttime crowd"
+    },
+    "emojis": [
+      "🎤",
+      "🎹",
+      "🎭",
+      "🚆"
+    ],
+    "logos": [
+      "hardrockstadium.com",
+      "arshtcenter.org",
+      "zeyzeymiami.com",
+      "jointherevolution.net"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c2.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Karol G at Hard Rock Stadium",
+      "highlight": "Karol G",
+      "body": "Saturday, Oct. 3 at 7 p.m. at Hard Rock Stadium, Miami Gardens. Tickets are $266 to $569, with Elena Rose opening.",
+      "place": "Miami Gardens",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Karol G performing concert stadium",
+        "prompt": "Karol G on a stadium stage with bright tropical colors, dancers, and a packed nighttime crowd"
+      },
+      "color": "#E83E8C",
+      "emoji": "🎤",
+      "chip": "OCT 3, 7 PM",
+      "logo": "hardrockstadium.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Absolute Bands Live! in Aventura",
+      "highlight": "Absolute Bands",
+      "body": "Saturday, Oct. 3 at 3 p.m. and 7 p.m. at Aventura Arts & Cultural Center, Aventura. Tickets are $45 to $71 for a Queen, Journey, and Bon Jovi set.",
+      "place": "Aventura",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Aventura Arts & Cultural Center concert crowd",
+        "prompt": "A theater stage with rock band silhouettes, bright spotlights, and a crowd singing along in a packed auditorium"
+      },
+      "emoji": "🎸",
+      "chip": "3 PM, 7 PM",
+      "logo": "aventuracenter.org",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Chucho Valdés at the Arsht Center",
+      "highlight": "Chucho Valdés",
+      "body": "Saturday, Oct. 3 at 8 p.m. at the Adrienne Arsht Center, Miami. Tickets are $52 to $158 for his birthday show with Joe Lovano and Terence Blanchard.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Chucho Valdés jazz concert piano",
+        "prompt": "Chucho Valdés at a grand piano under a single spotlight, with jazz musicians behind him on a dark theater stage"
+      },
+      "color": "#7A1E3A",
+      "emoji": "🎹",
+      "chip": "OCT 3, 8 PM",
+      "logo": "arshtcenter.org",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Electric Feels at ZeyZey",
+      "highlight": "Electric Feels",
+      "body": "Saturday, Oct. 3 at 9 p.m. at ZeyZey, Miami. Tickets are $18 for the DJ party series.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "ZeyZey Miami outdoor dance party night",
+        "prompt": "An outdoor Miami dance party at night with neon lights, DJs on stage, and a packed courtyard crowd"
+      },
+      "color": "#FF4F8B",
+      "emoji": "🪩",
+      "chip": "OCT 3, 9 PM",
+      "logo": "zeyzeymiami.com",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Mariachi El Bronx at Revolution Live",
+      "highlight": "Mariachi El Bronx",
+      "body": "Sunday, Oct. 4 at 7 p.m. at Revolution Live, Fort Lauderdale. Tickets are $38.50, with Bedouin Soundclash and Max Diaz on the bill.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Mariachi El Bronx live concert",
+        "prompt": "A mariachi-punk band on a club stage with trumpets, guitars, red lighting, and a packed Fort Lauderdale crowd"
+      },
+      "color": "#C1121F",
+      "emoji": "🎺",
+      "chip": "OCT 4, 7 PM",
+      "logo": "jointherevolution.net",
+      "logoFile": null
+    }
+  ],
+  "caption": "Five South Florida plans for the next 7 days. Who are they taking? Tag a friend.",
+  "hashtags": [
+    "#MiamiEvents",
+    "#SouthFloridaEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "Five South Florida plans for the next 7 days. Who are they taking? Tag a friend.\n\n📰 Sources: Miami New Times\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiEvents #SouthFloridaEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN MIAMI 🎟️",
+  "date": "2026-10-03",
+  "id": "2026-10-03-upcoming"
+}
