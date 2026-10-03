@@ -1,0 +1,73 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "38-YEAR-OLD LIONEL MELAKI TIMMS",
+    "main": "WAS CAUGHT ON VIDEO",
+    "highlight": "BREAKING IN",
+    "bottom": "TO CARS IN MIAMI SPRINGS",
+    "blur": false,
+    "photo": {
+      "query": "Lionel Melaki Timms mugshot Miami Springs arrest",
+      "prompt": "dramatic booking mugshot beside a quiet Miami Springs street with parked cars and early morning police lights"
+    },
+    "emojis": [
+      "🚓",
+      "📹",
+      "🚗"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Police say video showed Timms trying to break into cars",
+      "highlight": "trying to break into cars",
+      "body": "Police say 38-year-old Lionel Melaki Timms was caught on video Saturday morning in Miami Springs.",
+      "place": "Miami Springs",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Miami Springs Florida police car residential street sunrise",
+        "prompt": "police lights on a quiet Miami Springs residential street with parked cars before sunrise"
+      },
+      "emoji": "📹",
+      "chip": "VIDEO",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: NBC 6 South Florida"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Timms was arrested after the video surfaced",
+      "highlight": "arrested",
+      "body": "Police arrested Timms after the reported video. NBC Miami said he is accused of trying to burglarize cars in Miami Springs.",
+      "place": "Miami Springs",
+      "source": "nbcmiami.com",
+      "photo": {
+        "query": "Miami Springs Police Department patrol car",
+        "prompt": "Miami Springs police patrol car parked near a row of parked cars on a residential block"
+      },
+      "emoji": "🚓",
+      "chip": "ARREST",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    }
+  ],
+  "caption": "Police say Lionel Melaki Timms, 38, was caught on video trying to break into cars in Miami Springs Saturday morning.",
+  "hashtags": [
+    "#MiamiSprings",
+    "#SouthFloridaCrime"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say Lionel Melaki Timms, 38, was caught on video trying to break into cars in Miami Springs Saturday morning.\n\n📰 Sources: WSVN 7News, nbcmiami.com\n\n🎥 Video: NBC 6 South Florida\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiSprings #SouthFloridaCrime #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-03",
+  "id": "2026-10-03-news-18",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "NBC 6 South Florida",
+    "url": "https://www.youtube.com/watch?v=mREiN6x9ax0"
+  }
+}
