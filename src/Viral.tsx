@@ -13,6 +13,7 @@ export type ViralLabel = { text: string; x: number; y: number };
 export type ViralProps = {
   durationInFrames: number;
   video: string; videoW: number; videoH: number; clipFrames: number;
+  fill?: boolean; focusX?: number; // owner, Oct 3: full 9:16 when the action fits a vertical crop (focusX = where to center it)
   intro: { frames: number; warning: boolean; title: string; sub?: string };
   banner: string;
   captions: { at: number; text: string }[]; // at = frame in the clip
@@ -32,14 +33,19 @@ const useFonts = () => {
 };
 
 // where the sharp video sits: full width, a bit above center (wide footage) or full screen (vertical footage)
-export const videoRect = (vw: number, vh: number) => {
-  if (vw / vh < 0.7) return { left: 0, top: 0, width: W, height: H };
+export const videoRect = (vw: number, vh: number, fill = false, focusX = 0.5) => {
+  if (fill || vw / vh < 0.8) { // cover the whole 9:16 frame, centered on the action
+    const scale = Math.max(W / vw, H / vh);
+    const width = Math.round(vw * scale), height = Math.round(vh * scale);
+    const left = Math.round(Math.min(0, Math.max(W - width, W / 2 - focusX * width)));
+    return { left, top: Math.round((H - height) / 2), width, height };
+  }
   const height = Math.round((W * vh) / vw);
   return { left: 0, top: Math.round((H - height) / 2) - 60, width: W, height };
 };
 
 const VideoLayer: React.FC<{ p: ViralProps; muted?: boolean; startFrom?: number; blurAll?: boolean }> = ({ p, muted, startFrom = 0, blurAll }) => {
-  const r = videoRect(p.videoW, p.videoH);
+  const r = videoRect(p.videoW, p.videoH, p.fill, p.focusX);
   const src = staticFile(p.video);
   return (
     <AbsoluteFill style={{ background: '#000', filter: blurAll ? 'blur(28px) brightness(0.55)' : undefined }}>
@@ -97,18 +103,19 @@ const Caption: React.FC<{ text: string }> = ({ text }) => {
 
 const Labels: React.FC<{ p: ViralProps }> = ({ p }) => {
   const f = useCurrentFrame();
-  const r = videoRect(p.videoW, p.videoH);
+  const r = videoRect(p.videoW, p.videoH, p.fill, p.focusX);
   const dim = interpolate(f, [0, 8], [0, 0.35], { extrapolateRight: 'clamp' });
   return (
     <AbsoluteFill style={{ fontFamily: 'Montserrat' }}>
       <AbsoluteFill style={{ background: `rgba(0,0,0,${dim})` }} />
-      <div style={{ position: 'absolute', top: r.top + 24, right: 40, color: '#fff', fontWeight: 900, fontSize: 30, background: 'rgba(0,0,0,.55)', padding: '8px 16px', borderRadius: 10, opacity: f % 30 < 20 ? 1 : 0.4 }}>❚❚ PAUSED</div>
+      <div style={{ position: 'absolute', top: Math.max(r.top + 24, 330), right: 40, color: '#fff', fontWeight: 900, fontSize: 30, background: 'rgba(0,0,0,.55)', padding: '8px 16px', borderRadius: 10, opacity: f % 30 < 20 ? 1 : 0.4 }}>❚❚ PAUSED</div>
       {(p.freeze?.labels || []).map((l, i) => {
         const s = 10 + i * 22;
         const k = interpolate(f, [s, s + 8], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
         const px = r.left + l.x * r.width, py = r.top + l.y * r.height;
+        if (px < 40 || px > W - 40 || py < 300 || py > H - 300) return null; // cropped out in full-screen mode
         const above = py - r.top > 260;
-        const lx = Math.min(W - 330, Math.max(30, px - 150)), ly = above ? py - 230 : py + 130;
+        const lx = Math.min(W - 330, Math.max(30, px - 150)), ly = Math.min(H - 520, Math.max(380, above ? py - 230 : py + 130));
         return (
           <React.Fragment key={i}>
             <svg width={W} height={H} style={{ position: 'absolute', inset: 0, opacity: k }}>

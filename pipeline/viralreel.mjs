@@ -64,7 +64,7 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     }
     const start = Math.max(0, Math.min(w.total - 5, +c.start || 0));
     const end = Math.min(w.total, Math.max(start + 8, +c.end || start + 30), start + 45);
-    console.log(`  crazy ${c.crazy}/10 · cut ${start}–${end} s · ${c.hook}`);
+    console.log(`  crazy ${c.crazy}/10 · cut ${start}–${end} s · ${c.fill ? `full 9:16 (focus ${c.focusX})` : 'blurred top/bottom'} · ${c.hook}`);
 
     step('Cutting');
     const clip = path.join(dir, 'clip.mp4');
@@ -88,6 +88,7 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     const intro = 90;
     const props = {
       durationInFrames: intro + clipFrames + (freeze ? freeze.hold : 0), video: 'clip.mp4', videoW: vw, videoH: vh, clipFrames,
+      fill: !!c.fill, focusX: Number.isFinite(+c.focusX) ? Math.min(1, Math.max(0, +c.focusX)) : 0.5,
       intro: { frames: intro, warning: !!c.sensitive, title: c.hook || v.title, sub: c.sub || '' },
       banner: c.banner || '', freeze, credit: `Video: ${v.agency}`,
       captions: (c.captions || []).filter(x => x.t >= start && x.t < end).map(x => ({ at: Math.round((x.t - start) * FPS), text: String(x.text) })),

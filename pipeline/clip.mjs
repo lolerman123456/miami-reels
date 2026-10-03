@@ -211,6 +211,7 @@ async function analyzeReel(frames, transcript, v) {
     + '"hook": "≤55 chars, the typed intro title, plain words, the shock", "sub": "≤70 chars under it (where/when, or what the viewer is about to see)", '
     + '"banner": "≤80 chars, the situation box on top, starts with an emoji", "captions": [{"t": seconds (absolute, inside start–end), "text": "≤45 chars"} — 2–4 of them], '
     + '"freeze": seconds (absolute) of the frame where the people/vehicles to label are clearly visible, or null, '
+    + '"fill": true if the important action stays inside a vertical 9:16 window for the whole cut (so the video can fill the phone screen without cutting anything important), "focusX": 0-1 horizontal center of that window (of the cropped footage), '
     + '"crop": {"x":0-1,"y":0-1,"w":0-1,"h":0-1} the box (normalized, top-left origin) of the RAW footage inside the frame, leaving out TV graphics, tickers, logos and blurred side bars (a vertical phone video shown inside a TV frame → just that phone video), or null if it already fills the frame, '
     + '"caption": "Instagram caption: 2–4 short lines (accused wording), where, \\"🎥 Video: <source>\\", 3 hashtags"}' }];
   for (const f of frames) {
