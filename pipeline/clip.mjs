@@ -78,20 +78,56 @@ const clean = s => String(s || '').replace(/&amp;/g, '&').replace(/&quot;/g, '"'
 // recent uploads from every agency channel (public RSS, no key needed)
 export async function recentAgencyVideos({ days = 14, channels = CHANNELS } = {}) {
   const out = [];
+  let rssDown = false;
   for (const [agency, id] of channels) {
     try {
-      const xml = await (await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${id}`)).text();
-      for (const e of xml.split('<entry>').slice(1)) {
-        const vid = /<yt:videoId>([^<]+)/.exec(e)?.[1];
-        const published = /<published>([^<]+)/.exec(e)?.[1];
-        if (!vid || Date.now() - Date.parse(published) > days * 864e5) continue;
-        out.push({ agency, id: vid, url: `https://www.youtube.com/watch?v=${vid}`, published,
-          title: clean(/<media:title>([^<]*)/.exec(e)?.[1]), description: clean(/<media:description>([^<]*)/.exec(e)?.[1]).slice(0, 400),
-          views: +(/<media:statistics views="(\d+)"/.exec(e)?.[1] || 0) });
-      }
+      let got = rssDown ? null : await rssVideos(agency, id, days);
+      if (!got) { rssDown = true; got = await pageVideos(agency, id, days); } // YouTube's RSS sometimes 404s for every channel
+      out.push(...got);
     } catch (e) { console.log(`  (${agency}: ${e.message})`); }
   }
+  if (rssDown) console.log('  (YouTube RSS down — read the channels\' Videos pages instead)');
   return out.sort((a, b) => Date.parse(b.published) - Date.parse(a.published));
+}
+
+async function rssVideos(agency, id, days) {
+  const res = await fetch(`https://www.youtube.com/feeds/videos.xml?channel_id=${id}`);
+  if (!res.ok) return null;
+  const xml = await res.text();
+  const out = [];
+  for (const e of xml.split('<entry>').slice(1)) {
+    const vid = /<yt:videoId>([^<]+)/.exec(e)?.[1];
+    const published = /<published>([^<]+)/.exec(e)?.[1];
+    if (!vid || Date.now() - Date.parse(published) > days * 864e5) continue;
+    out.push({ agency, id: vid, url: `https://www.youtube.com/watch?v=${vid}`, published,
+      title: clean(/<media:title>([^<]*)/.exec(e)?.[1]), description: clean(/<media:description>([^<]*)/.exec(e)?.[1]).slice(0, 400),
+      views: +(/<media:statistics views="(\d+)"/.exec(e)?.[1] || 0) });
+  }
+  return out;
+}
+
+// fallback: the channel's Videos tab (ytInitialData lockups: title, "32K" views, "3d ago")
+async function pageVideos(agency, id, days) {
+  const html = await (await fetch(`https://www.youtube.com/channel/${id}/videos`, { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'en' } })).text();
+  const m = /var ytInitialData = (\{.*?\});<\/script>/s.exec(html);
+  if (!m) return [];
+  const lockups = [];
+  const walk = o => { if (Array.isArray(o)) o.forEach(walk); else if (o && typeof o === 'object') { if (o.lockupViewModel) lockups.push(o.lockupViewModel); Object.values(o).forEach(walk); } };
+  walk(JSON.parse(m[1]));
+  const UNIT = { m: 60e3, min: 60e3, h: 36e5, d: 864e5, w: 6048e5, mo: 2592e6, y: 31536e6 };
+  const num = s => { const r = /([\d.]+)\s*([KMB])?/i.exec(s || ''); return r ? Math.round(+r[1] * ({ K: 1e3, M: 1e6, B: 1e9 }[String(r[2]).toUpperCase()] || 1)) : 0; };
+  const out = [];
+  for (const lv of lockups) {
+    const md = lv.metadata?.lockupMetadataViewModel;
+    const parts = (md?.metadata?.contentMetadataViewModel?.metadataRows || []).flatMap(r => (r.metadataParts || []).map(p => p.text?.content || ''));
+    const age = parts.map(t => /(\d+)\s*(mo|min|m|h|d|w|y)\w*\s+ago/i.exec(t)).find(Boolean);
+    if (!lv.contentId || !md || !age) continue;
+    const ms = +age[1] * UNIT[age[2].toLowerCase()];
+    if (ms > days * 864e5) continue;
+    out.push({ agency, id: lv.contentId, url: `https://www.youtube.com/watch?v=${lv.contentId}`, published: new Date(Date.now() - ms).toISOString(),
+      title: md.title?.content || '', description: '', views: num(parts.find(t => !/ago/i.test(t))) });
+  }
+  return out;
 }
 
 async function chat(messages) {
