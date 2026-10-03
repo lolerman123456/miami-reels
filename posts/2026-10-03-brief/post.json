@@ -1,0 +1,95 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "IN POMPANO BEACH,",
+    "main": "1 PERSON IS DEAD AND 1 IS HURT AFTER A",
+    "highlight": "DOUBLE SHOOTING",
+    "bottom": "WITH A SUSPECT IN CUSTODY",
+    "blur": false,
+    "photo": {
+      "query": "Broward Sheriff Office police lights night Pompano Beach",
+      "prompt": "Broward Sheriff's Office cruisers with flashing red and blue lights blocking a dark Pompano Beach street after a late-night shooting"
+    },
+    "emojis": [
+      "🚨",
+      "🚔",
+      "📍"
+    ],
+    "logos": [
+      "sheriff.org",
+      "local10.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN",
+    "logoFiles": [
+      "logo-c1.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "1 dead, 1 hurt, suspect in custody after a Pompano Beach double shooting",
+      "highlight": "1 dead, 1 hurt",
+      "body": "The Broward Sheriff’s Office reported a late-Friday double shooting in Pompano Beach.",
+      "place": "Pompano Beach",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Pompano Beach police lights night street shooting investigation",
+        "prompt": "Police lights reflecting across a dark Pompano Beach street during a late-night shooting investigation"
+      },
+      "emoji": "🚨",
+      "chip": "DOUBLE SHOOTING",
+      "logo": "sheriff.org",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "One man was killed",
+      "highlight": "killed",
+      "body": "BSO said one man died in the shooting.",
+      "place": "Pompano Beach",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "crime scene tape police lights night Broward County",
+        "prompt": "Crime scene tape across a dark Broward County street with sheriff's lights glowing behind it"
+      },
+      "emoji": "🚨",
+      "chip": "1 DEAD",
+      "logo": "sheriff.org",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Another man was injured",
+      "highlight": "injured",
+      "body": "BSO said a second man was hurt in the same shooting.",
+      "place": "Pompano Beach",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "ambulance police lights night Broward County shooting response",
+        "prompt": "An ambulance and sheriff's vehicles parked under streetlights during a nighttime shooting response in Broward County"
+      },
+      "emoji": "🚑",
+      "chip": "1 HURT",
+      "logo": "sheriff.org",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN",
+      "logoFile": null
+    }
+  ],
+  "caption": "1 dead, 1 hurt, suspect in custody after a Pompano Beach double shooting.\n\nBSO reported the shooting happened late Friday.",
+  "hashtags": [
+    "#PompanoBeach",
+    "#BrowardCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "1 dead, 1 hurt, suspect in custody after a Pompano Beach double shooting.\n\nBSO reported the shooting happened late Friday.\n\n📰 Sources: WPLG Local 10, Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#PompanoBeach #BrowardCounty #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-03",
+  "id": "2026-10-03-brief"
+}
