@@ -57,24 +57,39 @@ const VideoLayer: React.FC<{ p: ViralProps; muted?: boolean; startFrom?: number;
 
 const typed = (text: string, frame: number, start: number, perChar = 1.3) => text.slice(0, Math.max(0, Math.floor((frame - start) / perChar)));
 
+// owner, Oct 3: black brand card instead of the blurred frame — wordmark on top, a WARNING card (Near blue) for sensitive
+// footage, then the hook typed in
+export const warnFrames = (p: ViralProps) => (p.intro.warning ? 75 : 0);
 const Intro: React.FC<{ p: ViralProps }> = ({ p }) => {
   const f = useCurrentFrame();
-  const fade = interpolate(f, [0, 8], [0, 1], { extrapolateRight: 'clamp' });
+  const W0 = warnFrames(p);
   const out = interpolate(f, [p.intro.frames - 8, p.intro.frames], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  const warnOp = W0 ? interpolate(f, [0, 8, W0 - 8, W0], [0, 1, 1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }) : 0;
+  const hookOp = interpolate(f, [W0, W0 + 6], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
   return (
-    <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', padding: '0 80px', opacity: fade * out, textAlign: 'center', fontFamily: 'Montserrat' }}>
-      {p.intro.warning && (
-        <div style={{ background: 'rgba(255,193,7,0.95)', color: '#111', fontWeight: 900, fontSize: 34, letterSpacing: 2, padding: '14px 28px', borderRadius: 14, marginBottom: 46 }}>
-          ⚠️ VIEWER DISCRETION IS ADVISED
-        </div>
-      )}
-      <div style={{ color: '#fff', fontWeight: 900, fontSize: 78, lineHeight: 1.05, textTransform: 'uppercase', letterSpacing: -1, textShadow: '0 6px 30px rgba(0,0,0,.6)', minHeight: 250 }}>
-        {typed(p.intro.title, f, 6)}<span style={{ color: BLUE, opacity: f % 16 < 8 ? 1 : 0 }}>|</span>
+    <AbsoluteFill style={{ background: '#000', opacity: out, fontFamily: 'Montserrat', textAlign: 'center' }}>
+      <div style={{ position: 'absolute', top: 300, left: 0, right: 0, display: 'flex', justifyContent: 'center', opacity: interpolate(f, [0, 10], [0, 1], { extrapolateRight: 'clamp' }) }}>
+        <span style={{ background: BLUE, color: '#fff', fontWeight: 800, fontStyle: 'italic', fontSize: 46, padding: '12px 34px', borderRadius: 999 }}>getnearapp</span>
       </div>
-      {p.intro.sub && (
-        <div style={{ marginTop: 34, color: 'rgba(255,255,255,.85)', fontWeight: 700, fontSize: 34, lineHeight: 1.3, opacity: interpolate(f, [30, 45], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }) }}>
-          {p.intro.sub}
-        </div>
+      {W0 > 0 && f < W0 && (
+        <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', padding: '0 90px', opacity: warnOp }}>
+          <div style={{ color: BLUE, fontWeight: 900, fontSize: 104, letterSpacing: 6 }}>WARNING</div>
+          <div style={{ marginTop: 34, color: '#fff', fontWeight: 700, fontSize: 40, lineHeight: 1.4 }}>
+            Some viewers may find the following video disturbing.<br />Viewer discretion is advised.
+          </div>
+        </AbsoluteFill>
+      )}
+      {f >= W0 && (
+        <AbsoluteFill style={{ justifyContent: 'center', alignItems: 'center', padding: '0 80px', opacity: hookOp }}>
+          <div style={{ color: '#fff', fontWeight: 900, fontSize: 80, lineHeight: 1.05, textTransform: 'uppercase', letterSpacing: -1, minHeight: 250 }}>
+            {typed(p.intro.title, f, W0 + 4)}<span style={{ color: BLUE, opacity: f % 16 < 8 ? 1 : 0 }}>|</span>
+          </div>
+          {p.intro.sub && (
+            <div style={{ marginTop: 34, color: 'rgba(255,255,255,.8)', fontWeight: 700, fontSize: 34, lineHeight: 1.3, opacity: interpolate(f, [W0 + 30, W0 + 45], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }) }}>
+              {p.intro.sub}
+            </div>
+          )}
+        </AbsoluteFill>
       )}
     </AbsoluteFill>
   );
@@ -138,7 +153,8 @@ export const viralCues = (p: ViralProps) => {
   const cues: { at: number; file: string; volume: number }[] = [];
   const keys = (start: number, n: number, per: number) => { for (let i = 0; i < n; i += 2) cues.push({ at: Math.round(start + i * per), file: 'sfx/key.wav', volume: 0.5 }); };
   cues.push({ at: 0, file: 'sfx/boom.wav', volume: 0.45 });
-  keys(6, Math.min(p.intro.title.length, 60), 1.3);
+  if (p.intro.warning) cues.push({ at: warnFrames(p), file: 'sfx/whoosh.wav', volume: 0.3 });
+  keys(warnFrames(p) + 4, Math.min(p.intro.title.length, 60), 1.3);
   const I = p.intro.frames;
   cues.push({ at: I - 4, file: 'sfx/whoosh.wav', volume: 0.4 });
   keys(I + 8, Math.min(p.banner.length, 70), 1);
@@ -162,7 +178,6 @@ export const Viral: React.FC<ViralProps> = (p) => {
   const at = (cf: number) => I + cf + (F !== null && cf >= F ? Hd : 0);
   return (
     <AbsoluteFill style={{ background: '#000' }}>
-      <Sequence durationInFrames={I}><Freeze frame={0}><VideoLayer p={p} muted blurAll /></Freeze></Sequence>
       <Sequence from={I} durationInFrames={F ?? p.clipFrames}><VideoLayer p={p} /></Sequence>
       {F !== null && <>
         <Sequence from={I + F} durationInFrames={Hd}><Freeze frame={F}><VideoLayer p={p} muted /></Freeze></Sequence>
@@ -175,10 +190,12 @@ export const Viral: React.FC<ViralProps> = (p) => {
         const from = at(c.at), to = i + 1 < caps.length ? at(caps[i + 1].at) : p.durationInFrames;
         return to > from ? <Sequence key={i} from={from} durationInFrames={to - from}><Caption text={c.text} /></Sequence> : null;
       })}
+      <Sequence from={I}>
       <div style={{ position: 'absolute', bottom: 300, left: 0, right: 0, display: 'flex', justifyContent: 'center', gap: 16, fontFamily: 'Montserrat' }}>
         <span style={{ background: 'rgba(6,14,34,.8)', color: '#fff', fontWeight: 800, fontSize: 28, padding: '10px 18px', borderRadius: 10 }}>🎥 {p.credit}</span>
         <span style={{ background: BLUE, color: '#fff', fontWeight: 800, fontSize: 28, padding: '10px 18px', borderRadius: 10 }}>@getnearapp</span>
       </div>
+      </Sequence>
       {viralCues(p).map((c, i) => <Sequence key={`a${i}`} from={c.at} durationInFrames={45}><Audio src={staticFile(c.file)} volume={c.volume} /></Sequence>)}
     </AbsoluteFill>
   );

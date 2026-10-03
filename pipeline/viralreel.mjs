@@ -85,7 +85,7 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
       if (labels.length) freeze = { at: Math.round((c.freeze - start) * FPS), hold: 90, labels };
       console.log(`  freeze @${c.freeze}s: ${labels.map(l => l.text).join(', ') || '(no labels)'}`);
     }
-    const intro = 90;
+    const intro = c.sensitive ? 140 : 90; // warning card (2.5 s) + typed hook
     const props = {
       durationInFrames: intro + clipFrames + (freeze ? freeze.hold : 0), video: 'clip.mp4', videoW: vw, videoH: vh, clipFrames,
       fill: !!c.fill, focusX: Number.isFinite(+c.focusX) ? Math.min(1, Math.max(0, +c.focusX)) : 0.5,
