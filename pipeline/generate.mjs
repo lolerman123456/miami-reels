@@ -1,3 +1,4 @@
+import { chatJSON } from './llm.mjs';
 // Write the next map Reel: an informational South Florida explainer (no jokes, no fake rankings).
 // 1. plan  — pick a topic + which sources to pull (news, Wikipedia articles, Zillow rent data)
 // 2. write — a script that may ONLY use facts from those sources, with exact coordinates for each place
@@ -248,20 +249,7 @@ async function nearMention(episode, plan) {
 }
 
 async function chat(messages) {
-  for (let attempt = 1; ; attempt++) {
-    try {
-      const res = await fetch('https://api.openai.com/v1/chat/completions', {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ model: process.env.OPENAI_MODEL || 'gpt-5.5', response_format: { type: 'json_object' }, messages }),
-      });
-      if (!res.ok) throw new Error(`OpenAI ${res.status}: ${await res.text()}`);
-      return JSON.parse((await res.json()).choices[0].message.content);
-    } catch (e) {
-      if (attempt >= 3) throw e;
-      console.log(`  (OpenAI attempt ${attempt} failed: ${e.message.slice(0, 120)} — retrying)`);
-    }
-  }
+  return chatJSON(messages, 'write'); // pipeline/llm.mjs (low reasoning effort, usage logged)
 }
 
 const inFlorida = l => l && l.lat > 24.3 && l.lat < 31.1 && l.lon > -87.7 && l.lon < -79.8;

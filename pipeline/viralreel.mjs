@@ -34,7 +34,7 @@ async function labelsFor(frameFile, check, dir, vw, vh) {
       + 'the victim\'s car, the officer, the animal…) with a SHORT label (1–3 words: SUSPECT, SUSPECT\'S CAR, VICTIM\'S CAR, OFFICER, THE GATOR) and its bounding box '
       + '(normalized x,y,w,h from 0 to 1, origin top-left) in THIS image. Use SUSPECT (never perpetrator/criminal). Only subjects that are clearly visible and '
       + 'reasonably big; never label a child or a person who is a victim. Reply JSON {"labels": [{"text": "…", "box": {"x":0,"y":0,"w":0,"h":0}}]}' },
-    { type: 'image_url', image_url: { url: `data:image/jpeg;base64,${fs.readFileSync(frameFile).toString('base64')}`, detail: 'high' } }] }]).catch(() => ({ labels: [] }));
+    { type: 'image_url', image_url: { url: `data:image/jpeg;base64,${fs.readFileSync(frameFile).toString('base64')}`, detail: 'high' } }] }]).catch(e => { if (/credits/i.test(e.message)) throw e; return { labels: [] }; });
   const out = [];
   for (const l of (r.labels || []).slice(0, 3)) {
     const b = l.box || {};
@@ -55,7 +55,7 @@ async function labelsFor(frameFile, check, dir, vw, vh) {
 
 async function refineCut(raw, dir, a, b, total, c) {
   const from = Math.max(0, a - 3), to = Math.min(total, b + 3);
-  const step = Math.max(0.5, (to - from) / 70);
+  const step = Math.max(0.75, (to - from) / 36);
   const frames = [];
   for (let t = from; t < to; t += step) {
     const file = path.join(dir, `r${String(frames.length).padStart(3, '0')}.jpg`);
@@ -67,7 +67,7 @@ async function refineCut(raw, dir, a, b, total, c) {
     + 'all RAW footage (dashcam/bodycam/surveillance/phone video) and contain the main action — no studio, anchor, reporter, title cards, promo graphics, maps, '
     + 'still photos or mugshot graphics inside the run. Reply JSON {"start": seconds of the first raw frame, "end": seconds of the last raw frame, "action": seconds of the key moment}' }];
   for (const f of frames) { content.push({ type: 'text', text: `t=${f.t}` }); content.push({ type: 'image_url', image_url: { url: `data:image/jpeg;base64,${fs.readFileSync(f.file).toString('base64')}`, detail: 'low' } }); }
-  const r = await chat([{ role: 'user', content }]).catch(() => null);
+  const r = await chat([{ role: 'user', content }]).catch(e => { if (/credits/i.test(e.message)) throw e; return null; });
   for (const f of frames) fs.rmSync(f.file, { force: true });
   if (!r || !(r.end - r.start >= 5)) return null;
   return { start: Math.max(0, +r.start + 0.2), end: Math.min(total, +r.end - 0.2) };
@@ -86,7 +86,7 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     const viral = await searchViral();
     const ours = await recentAgencyVideos({ days: 3, channels: [...MAINSTREAM, ...STATIONS, ...CHANNELS] });
     const ids = new Set();
-    videos = [...viral, ...ours].filter(v => !ids.has(v.id) && ids.add(v.id) && !seen.has(v.id) && !TALK.test(v.title)).slice(0, 180);
+    videos = [...viral, ...ours].filter(v => !ids.has(v.id) && ids.add(v.id) && !seen.has(v.id) && !TALK.test(v.title)).slice(0, 100);
   }
   console.log(`  ${videos.length} candidates`);
   const picks = url ? [{ index: 0, why: 'owner link' }] : await pickVideos(videos, hint);

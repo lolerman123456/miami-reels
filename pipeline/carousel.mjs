@@ -7,6 +7,7 @@ import puppeteer from 'puppeteer';
 import { ROOT, readJSON, writeJSON, step } from './util.mjs';
 import { fetchNews, searchNews, fetchArticles, fetchViral } from './news.mjs';
 import { getPhoto, newPost } from './photos.mjs';
+import { chatJSON } from './llm.mjs';
 import { aiTells, BANNED } from './generate.mjs';
 import { wikiArticle, rentFacts, gasFacts } from './facts.mjs';
 import { STYLE, REMINDER, toneLines, sanitize, memeTells, HANDLES_RULE, cleanCollabs } from './style.mjs';
@@ -279,7 +280,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   let post;
   const TRIES = 5;
   for (let attempt = 1; attempt <= TRIES; attempt++) {
-    post = await chat([{ role: 'system', content: `${SYSTEM}\n\n${STYLE}\n\n${toneLines()}\n\n${HANDLES_RULE()}` }, { role: 'user', content: `${ask}\n\n${REMINDER}` }]);
+    post = await chat([{ role: 'system', content: `${SYSTEM}\n\n${STYLE}\n\n${toneLines()}\n\n${HANDLES_RULE()}` }, { role: 'user', content: `${ask}\n\n${REMINDER}` }], 'write');
     const n = post?.slides?.length || 0;
     const copy = JSON.stringify([post?.caption, ...(post?.slides || []).map(x => [x.headline, x.body])]);
     const tells = [...aiTells(copy), ...memeTells(copy), ...(copy.match(BANNED) || []).slice(0, 1)];
@@ -302,7 +303,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     if (ed) console.log(`  editor: hook ${ed.hook}/10, substance ${ed.substance}/10${ed.fix ? ' — ' + String(ed.fix).slice(0, 200) : ''}`);
     if (ed && (Number(ed.hook) < 7 || Number(ed.substance) < 7)) {
       const again = await chat([{ role: 'system', content: `${SYSTEM}\n\n${STYLE}\n\n${toneLines()}\n\n${HANDLES_RULE()}` },
-        { role: 'user', content: `${ask}\n\nYOUR DRAFT:\n${JSON.stringify(post)}\n\nEDITOR (hook ${ed.hook}/10, substance ${ed.substance}/10): ${ed.fix}\nRewrite the whole post so the hook is sharper and every slide carries a new hard fact. Same facts only from the headlines/sources, same JSON shape.\n\n${REMINDER}` }]).catch(() => null);
+        { role: 'user', content: `${ask}\n\nYOUR DRAFT:\n${JSON.stringify(post)}\n\nEDITOR (hook ${ed.hook}/10, substance ${ed.substance}/10): ${ed.fix}\nRewrite the whole post so the hook is sharper and every slide carries a new hard fact. Same facts only from the headlines/sources, same JSON shape.\n\n${REMINDER}` }], 'write').catch(() => null);
       if (again?.cover?.highlight && again.cover.photo && again.slides?.length >= 3 && again.slides.every(s => s?.headline && s?.body && s?.photo)) { console.log('  rewritten after editor notes'); post = again; }
     }
   }
@@ -572,25 +573,8 @@ export async function renderCarousel(dir) {
   }
 }
 
-async function chat(messages) {
-  // Low reasoning effort keeps it well under Node's 5-min header timeout; retry network hiccups.
-  let effort = 'low';
-  for (let attempt = 1; attempt <= 3; attempt++) {
-    try {
-      const res = await fetch('https://api.openai.com/v1/chat/completions', {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ model: process.env.OPENAI_MODEL || 'gpt-5.5', response_format: { type: 'json_object' }, messages,
-          ...(effort ? { reasoning_effort: effort } : {}) }),
-      });
-      if (res.status === 400 && effort) { const t = await res.text(); if (/reasoning/i.test(t)) { effort = null; attempt--; continue; } throw new Error(`OpenAI 400: ${t}`); }
-      if (!res.ok) throw new Error(`OpenAI ${res.status}: ${await res.text()}`);
-      return JSON.parse((await res.json()).choices[0].message.content);
-    } catch (e) {
-      if (attempt === 3) throw e;
-      console.log(`  (OpenAI attempt ${attempt} failed: ${e.message.slice(0, 120)} — retrying)`);
-    }
-  }
+async function chat(messages, tier = 'mini') {
+  return chatJSON(messages, tier); // pipeline/llm.mjs: mini model by default, the writer model only for the copy itself
 }
 
 async function tiktokWorthy(post, kind) {

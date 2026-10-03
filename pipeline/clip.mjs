@@ -8,6 +8,7 @@ import { execFileSync } from 'node:child_process';
 import path from 'node:path';
 import puppeteer from 'puppeteer';
 import { ROOT, run, step, writeJSON } from './util.mjs';
+import { chatJSON } from './llm.mjs';
 
 // official agency YouTube channels (their own uploads only)
 export const CHANNELS = [
@@ -176,16 +177,7 @@ export async function searchViral({ queries = VIRAL_QUERIES } = {}) {
 }
 
 export async function chat(messages) {
-  for (let attempt = 1; attempt <= 3; attempt++) {
-    try {
-      const res = await fetch('https://api.openai.com/v1/chat/completions', {
-        method: 'POST', headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ model: process.env.OPENAI_MODEL || 'gpt-5.5', response_format: { type: 'json_object' }, messages }),
-      });
-      if (!res.ok) throw new Error(`OpenAI ${res.status}: ${(await res.text()).slice(0, 200)}`);
-      return JSON.parse((await res.json()).choices[0].message.content);
-    } catch (e) { if (attempt === 3) throw e; console.log(`  (OpenAI retry: ${e.message.slice(0, 100)})`); }
-  }
+  return chatJSON(messages, 'mini'); // pipeline/llm.mjs: cheap model for picking + video checks
 }
 
 const RULES = 'Content rules (hard): never a video whose point is a victim, a child or a dead/injured person; no graphic violence, gore or nudity; '
@@ -341,7 +333,7 @@ export async function watch(v, p, dir, mode = 'clip') {
   try { await download(v.url, raw); } catch (e) { console.log(`  download failed: ${e.message.slice(0, 300)}`); return null; }
   const total = parseFloat(execFileSync('ffprobe', ['-v', 'error', '-show_entries', 'format=duration', '-of', 'csv=p=0', raw]).toString().trim()) || MAX_SECONDS;
   step(`Watching (${Math.round(total)} s)`);
-  const every = Math.max(2, Math.ceil(total / 48));
+  const every = Math.max(2, Math.ceil(total / 24)); // ~24 frames (cost)
   const frames = [];
   for (let t = 1; t < total - 0.5; t += every) {
     const file = path.join(dir, `f${String(frames.length).padStart(2, '0')}.jpg`);
@@ -409,7 +401,7 @@ export async function makeClip({ url, dryRun } = {}) {
   // talking heads are never clips (the 6pm slot on Oct 2 wasted all its tries on Polk "Morning briefing" desk videos)
   const TALK = /\b(briefing|press conference|news conference|meeting|ceremony|awards?|graduation|interview|podcast|budget|council|commission|town hall|recruit|hiring|join the team|wrap[- ]?up|case update|found guilty|sentenced|birthday|anniversary|memorial|remember)\b/i;
   if (!url) videos = videos.filter(v => !seen.has(v.id) && !TALK.test(v.title));
-  const picks = await pick(videos);
+  const picks = await pick(videos.slice(0, 120));
   if (!picks.length) { console.log('Nothing share-worthy right now — not posting.'); return null; }
   let p, v, dir, w, start = 0, dur, check;
   for (const cand of picks) {

@@ -28,7 +28,7 @@ export async function ensureImages(epDir, episode) {
 
 async function render(prompt) {
   const full = `${prompt}. Clean 3D architectural render, soft studio lighting, pure white seamless background, no text, no logos, no people, no watermark.`;
-  for (const model of [process.env.OPENAI_IMAGE_MODEL, 'gpt-image-1'].filter(Boolean)) {
+  for (const model of [process.env.OPENAI_IMAGE_MODEL || 'gpt-image-1-mini', 'gpt-image-1']) {
     const res = await fetch('https://api.openai.com/v1/images/generations', {
       method: 'POST', headers: { Authorization: `Bearer ${KEY()}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({ model, prompt: full, size: '1024x1536', quality: 'high', n: 1 }),
@@ -46,7 +46,7 @@ async function locate(file, focus) {
   try {
     const res = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST', headers: { Authorization: `Bearer ${KEY()}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model: process.env.OPENAI_VISION_MODEL || process.env.OPENAI_MODEL || 'gpt-5.5', response_format: { type: 'json_object' },
+      body: JSON.stringify({ model: process.env.OPENAI_VISION_MODEL || process.env.OPENAI_MINI_MODEL || 'gpt-5.4-mini', response_format: { type: 'json_object' },
         messages: [{ role: 'user', content: [
           { type: 'text', text: `For each of these parts of the building in the image, give the center as fractions of the image width/height (0 = left/top, 1 = right/bottom) and a zoom (1.6–2.6) that frames that part nicely. Parts: ${JSON.stringify(focus)}. Reply JSON {"spots":[{"part":"…","x":0.5,"y":0.5,"zoom":2}]}` },
           { type: 'image_url', image_url: { url: `data:image/png;base64,${fs.readFileSync(file).toString('base64')}` } },
