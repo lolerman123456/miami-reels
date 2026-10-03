@@ -1,130 +1,102 @@
 {
   "sector": "EVENTS",
   "cover": {
-    "top": "THIS WEEK",
-    "main": "MIAMI GETS KAROL G",
-    "highlight": "KAROL G",
-    "bottom": "PLUS 4 MORE PLANS",
+    "top": "",
+    "main": "SOUTH FLORIDA HAS",
+    "highlight": "5 EVENTS",
+    "bottom": "THIS WEEK THROUGH OCT. 9",
     "blur": false,
     "photo": {
-      "query": "Karol G concert Hard Rock Stadium Miami Gardens",
-      "prompt": "Karol G performing on a stadium stage in Miami Gardens, bright concert lights, dancers, and a packed nighttime crowd"
+      "query": "Miami concert crowd at night Hard Rock Stadium Adrienne Arsht Center ZeyZey",
+      "prompt": "dramatic South Florida night scene with a lit concert venue, palm trees, and a crowd moving toward the entrance"
     },
     "emojis": [
       "🎤",
-      "🎹",
-      "🎭",
-      "🚆"
+      "🎷",
+      "🎭"
     ],
-    "logos": [
-      "hardrockstadium.com",
-      "arshtcenter.org",
-      "zeyzeymiami.com",
-      "jointherevolution.net"
-    ],
-    "photoFile": "photo-cover.png",
-    "credit": "AI illustration",
-    "logoFiles": [
-      "logo-c0.png",
-      "logo-c1.png",
-      "logo-c2.png"
-    ]
+    "logos": [],
+    "logoFiles": []
   },
   "slides": [
     {
       "tag": "EVENTS",
       "headline": "Karol G at Hard Rock Stadium",
       "highlight": "Karol G",
-      "body": "Saturday, Oct. 3 at 7 p.m. at Hard Rock Stadium, Miami Gardens. Tickets are $266 to $569, with Elena Rose opening.",
+      "body": "Saturday, Oct. 3 at 7 p.m. at Hard Rock Stadium in Miami Gardens. Tickets cost $266 to $569.",
       "place": "Miami Gardens",
       "source": "Miami New Times",
       "photo": {
-        "query": "Karol G performing concert stadium",
-        "prompt": "Karol G on a stadium stage with bright tropical colors, dancers, and a packed nighttime crowd"
+        "query": "Karol G Hard Rock Stadium Miami Gardens concert night",
+        "prompt": "dramatic concert photo of Karol G on a huge stadium stage with bright lights, a packed crowd, and the Hard Rock Stadium backdrop"
       },
-      "color": "#E83E8C",
       "emoji": "🎤",
-      "chip": "OCT 3, 7 PM",
-      "logo": "hardrockstadium.com",
-      "photoFile": "photo-1.png",
-      "credit": "AI illustration",
-      "logoFile": "logo-1.png"
-    },
-    {
-      "tag": "EVENTS",
-      "headline": "Absolute Bands Live! in Aventura",
-      "highlight": "Absolute Bands",
-      "body": "Saturday, Oct. 3 at 3 p.m. and 7 p.m. at Aventura Arts & Cultural Center, Aventura. Tickets are $45 to $71 for a Queen, Journey, and Bon Jovi set.",
-      "place": "Aventura",
-      "source": "Miami New Times",
-      "photo": {
-        "query": "Aventura Arts & Cultural Center concert crowd",
-        "prompt": "A theater stage with rock band silhouettes, bright spotlights, and a crowd singing along in a packed auditorium"
-      },
-      "emoji": "🎸",
-      "chip": "3 PM, 7 PM",
-      "logo": "aventuracenter.org",
-      "logoFile": null
+      "chip": "$266+"
     },
     {
       "tag": "EVENTS",
       "headline": "Chucho Valdés at the Arsht Center",
       "highlight": "Chucho Valdés",
-      "body": "Saturday, Oct. 3 at 8 p.m. at the Adrienne Arsht Center, Miami. Tickets are $52 to $158 for his birthday show with Joe Lovano and Terence Blanchard.",
+      "body": "Saturday, Oct. 3 at 8 p.m. at the Adrienne Arsht Center in Miami. Tickets cost $52 to $158.",
       "place": "Miami",
       "source": "Miami New Times",
       "photo": {
-        "query": "Chucho Valdés jazz concert piano",
-        "prompt": "Chucho Valdés at a grand piano under a single spotlight, with jazz musicians behind him on a dark theater stage"
+        "query": "Chucho Valdes piano stage Miami Arsht Center",
+        "prompt": "dramatic photo of Chucho Valdés at a grand piano under blue stage lights with a seated audience"
       },
-      "color": "#7A1E3A",
       "emoji": "🎹",
-      "chip": "OCT 3, 8 PM",
-      "logo": "arshtcenter.org",
-      "logoFile": "logo-3.png"
+      "chip": "$52+"
     },
     {
       "tag": "EVENTS",
       "headline": "Electric Feels at ZeyZey",
       "highlight": "Electric Feels",
-      "body": "Saturday, Oct. 3 at 9 p.m. at ZeyZey, Miami. Tickets are $18 for the DJ party series.",
+      "body": "Saturday, Oct. 3 at 9 p.m. at ZeyZey in Miami. Tickets cost $18.",
       "place": "Miami",
       "source": "Miami New Times",
       "photo": {
-        "query": "ZeyZey Miami outdoor dance party night",
-        "prompt": "An outdoor Miami dance party at night with neon lights, DJs on stage, and a packed courtyard crowd"
+        "query": "ZeyZey Miami DJ party night crowd",
+        "prompt": "high-energy night photo of a DJ set with bright lights, dancing crowd, and palm trees at an outdoor venue"
       },
-      "color": "#FF4F8B",
       "emoji": "🪩",
-      "chip": "OCT 3, 9 PM",
-      "logo": "zeyzeymiami.com",
-      "logoFile": "logo-4.png"
+      "chip": "9 PM"
     },
     {
       "tag": "EVENTS",
       "headline": "Mariachi El Bronx at Revolution Live",
       "highlight": "Mariachi El Bronx",
-      "body": "Sunday, Oct. 4 at 7 p.m. at Revolution Live, Fort Lauderdale. Tickets are $38.50, with Bedouin Soundclash and Max Diaz on the bill.",
+      "body": "Sunday, Oct. 4 at 7 p.m. at Revolution Live in Fort Lauderdale. Tickets cost $38.50.",
       "place": "Fort Lauderdale",
       "source": "Miami New Times",
       "photo": {
-        "query": "Mariachi El Bronx live concert",
-        "prompt": "A mariachi-punk band on a club stage with trumpets, guitars, red lighting, and a packed Fort Lauderdale crowd"
+        "query": "Mariachi El Bronx live performance Revolution Live Fort Lauderdale",
+        "prompt": "dramatic live band photo with mariachi brass, guitars, and red stage lighting in a packed club"
       },
-      "color": "#C1121F",
       "emoji": "🎺",
-      "chip": "OCT 4, 7 PM",
-      "logo": "jointherevolution.net",
-      "logoFile": null
+      "chip": "SUN 7 PM"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "The Dog in the Manger in Aventura",
+      "highlight": "Dog in the Manger",
+      "body": "Friday, Oct. 9 at 8 p.m. at Aventura Arts & Cultural Center in Aventura. Tickets cost $45.51 to $50.",
+      "place": "Aventura",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Aventura Arts Cultural Center theater stage Spanish play",
+        "prompt": "dramatic theater scene with warm spotlight, period costumes, and an intimate audience"
+      },
+      "emoji": "🎭",
+      "chip": "OCT 9"
     }
   ],
-  "caption": "Five South Florida plans for the next 7 days. Who are they taking? Tag a friend.",
+  "caption": "Karol G, jazz, dance party, rock mariachi, and theater are all happening in South Florida this week.\nWho are you taking? Tag a friend.",
   "hashtags": [
-    "#MiamiEvents",
-    "#SouthFloridaEvents"
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
   ],
   "collaborators": [],
-  "igCaption": "Five South Florida plans for the next 7 days. Who are they taking? Tag a friend.\n\n📰 Sources: Miami New Times\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiEvents #SouthFloridaEvents #miami #southflorida",
+  "igCaption": "Karol G, jazz, dance party, rock mariachi, and theater are all happening in South Florida this week.\nWho are you taking? Tag a friend.\n\n📰 Sources: Miami New Times\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
   "kind": "upcoming",
   "kicker": "THIS WEEK IN MIAMI 🎟️",
   "date": "2026-10-03",
