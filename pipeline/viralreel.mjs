@@ -8,7 +8,6 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { ROOT, run, step, writeJSON } from './util.mjs';
 import { CHANNELS, STATIONS, MAINSTREAM, recentAgencyVideos, chat, watch, ytdlpArgs } from './clip.mjs';
-import { ensureSfx } from './sfx.mjs';
 
 const FPS = 30;
 const SEEN = path.join(ROOT, 'state', 'clips-seen.txt');
@@ -19,21 +18,37 @@ async function pickVideos(videos, hint = '') {
     + 'From these YouTube uploads, rank up to 6 that contain RAW viral footage people would share: dashcam, bodycam, surveillance, doorbell cam, phone video, '
     + 'helicopter footage of chases, wild arrests, crashes, road rage, rescues, animals (gators, bears), insane weather moments. Prefer high views and South Florida '
     + 'when equally good. Skip talking heads, politics, press conferences, full newscasts, anything about a dead child. '
+    + 'Prefer CLEAR footage (owner, Oct 3): a few big, distinct subjects (one car, one person, one animal) — not cramped, crowded or far-away shots. '
     + (hint ? `THIS TIME the owner wants: ${hint}. ` : '') + 'Reply JSON {"picks": [{"index": n, "why": "…"}]}' },
   { role: 'user', content: videos.map((v, i) => `${i}. [${v.agency}] ${v.title} (${v.published.slice(0, 10)}, ${v.views} views)${v.description ? ' — ' + v.description.slice(0, 160) : ''}`).join('\n') }]);
   return (r.picks || []).filter(x => videos[x.index]);
 }
 
-// where on the freeze frame to point the labels (normalized 0–1 of the video frame)
-async function labelsFor(frameFile, check) {
+// who's who on the freeze frame: a box per subject (normalized 0–1) → a numbered marker at its center + a still cropped
+// from the footage for the bottom strip. Never a person who is a victim (cars/places are fine), never a child.
+async function labelsFor(frameFile, check, dir, vw, vh) {
   const r = await chat([{ role: 'user', content: [
-    { type: 'text', text: `Freeze-frame from a viral video. Situation: ${check.banner}. Mark up to 3 things viewers should see (the suspect/the car that caused it, `
-      + 'the victim\'s car, the officer, the animal…) with a SHORT label (1–3 words, e.g. SUSPECT, VICTIM\'S CAR, OFFICER, THE GATOR) and the normalized center point '
-      + '(x,y from 0 to 1, origin top-left) of that thing in THIS image. Use SUSPECT (never perpetrator/criminal). Only label what is clearly visible; never label a child. '
-      + 'Reply JSON {"labels": [{"text": "…", "x": 0-1, "y": 0-1}]}' },
+    { type: 'text', text: `Freeze-frame from a viral video. Situation: ${check.banner}. Pick up to 3 subjects viewers should know (the suspect / the car that caused it, `
+      + 'the victim\'s car, the officer, the animal…) with a SHORT label (1–3 words: SUSPECT, SUSPECT\'S CAR, VICTIM\'S CAR, OFFICER, THE GATOR) and its bounding box '
+      + '(normalized x,y,w,h from 0 to 1, origin top-left) in THIS image. Use SUSPECT (never perpetrator/criminal). Only subjects that are clearly visible and '
+      + 'reasonably big; never label a child or a person who is a victim. Reply JSON {"labels": [{"text": "…", "box": {"x":0,"y":0,"w":0,"h":0}}]}' },
     { type: 'image_url', image_url: { url: `data:image/jpeg;base64,${fs.readFileSync(frameFile).toString('base64')}`, detail: 'high' } }] }]).catch(() => ({ labels: [] }));
-  return (r.labels || []).filter(l => l.text && l.x >= 0 && l.x <= 1 && l.y >= 0 && l.y <= 1).slice(0, 3)
-    .map(l => ({ text: String(l.text).replace(/perpetrator|criminal/i, 'SUSPECT').slice(0, 18), x: +l.x, y: +l.y }));
+  const out = [];
+  for (const l of (r.labels || []).slice(0, 3)) {
+    const b = l.box || {};
+    if (!l.text || !(b.w > 0.02 && b.h > 0.02) || b.x < 0 || b.y < 0 || b.x + b.w > 1.02 || b.y + b.h > 1.02) continue;
+    if (/victim(?!'s car|s' car)/i.test(l.text) && !/car|truck|suv|vehicle|home|house/i.test(l.text)) continue; // no victim people
+    // still for the strip: the box with some margin, 300:170 aspect
+    const cx = (b.x + b.w / 2) * vw, cy = (b.y + b.h / 2) * vh;
+    let cw = Math.max(b.w * vw * 1.6, 160), ch = cw * 170 / 300;
+    if (ch < b.h * vh * 1.3) { ch = b.h * vh * 1.3; cw = ch * 300 / 170; }
+    cw = Math.min(cw, vw); ch = Math.min(ch, vh);
+    const x0 = Math.max(0, Math.min(vw - cw, cx - cw / 2)), y0 = Math.max(0, Math.min(vh - ch, cy - ch / 2));
+    const thumb = `thumb-${out.length}.jpg`;
+    await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', frameFile, '-vf', `crop=${Math.round(cw)}:${Math.round(ch)}:${Math.round(x0)}:${Math.round(y0)},scale=600:340:force_original_aspect_ratio=increase,crop=600:340`, path.join(dir, thumb)]);
+    out.push({ text: String(l.text).replace(/perpetrator|criminal/i, 'SUSPECT').slice(0, 18), x: b.x + b.w / 2, y: b.y + b.h / 2, thumb: fs.existsSync(path.join(dir, thumb)) ? thumb : null });
+  }
+  return out;
 }
 
 export async function makeViralReel({ url, dryRun, hint } = {}) {
@@ -62,8 +77,10 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
       fs.rmSync(dir, { recursive: true, force: true });
       continue;
     }
-    const start = Math.max(0, Math.min(w.total - 5, +c.start || 0));
-    const end = Math.min(w.total, Math.max(start + 8, +c.end || start + 30), start + 45);
+    let start = Math.max(0, Math.min(w.total - 5, +c.start || 0));
+    // owner, Oct 3: the who's-who freeze goes at the BEGINNING — start the cut ~1 s before the freeze frame
+    if (c.freeze != null && c.freeze - start > 3) start = Math.max(0, c.freeze - 1);
+    const end = Math.min(w.total, Math.max(start + 12, +c.end || start + 30), start + 45);
     console.log(`  crazy ${c.crazy}/10 · cut ${start}–${end} s · ${c.fill ? `full 9:16 (focus ${c.focusX})` : 'blurred top/bottom'} · ${c.hook}`);
 
     step('Cutting');
@@ -81,13 +98,12 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     if (c.freeze != null && c.freeze >= start && c.freeze < end - 1) {
       const ff = path.join(dir, 'freeze.jpg');
       await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', String(c.freeze - start), '-i', clip, '-frames:v', '1', ff]);
-      const labels = await labelsFor(ff, c);
-      if (labels.length) freeze = { at: Math.round((c.freeze - start) * FPS), hold: 90, labels };
+      const labels = await labelsFor(ff, c, dir, vw, vh);
+      if (labels.length) freeze = { at: Math.round((c.freeze - start) * FPS), hold: 100, labels };
       console.log(`  freeze @${c.freeze}s: ${labels.map(l => l.text).join(', ') || '(no labels)'}`);
     }
-    // warning card (2.5 s) + the hook typed out (1 char/frame) and held ~1 s + the pause-to-read card
-    const hookFrames = Math.max(60, String(c.hook || v.title).length + 34);
-    const intro = (c.sensitive ? 75 : 0) + hookFrames + (c.context ? 66 : 0);
+    // black intro (owner, Oct 3): WARNING card fades in/out (sensitive only), then the story card (headline + context) ~4 s
+    const intro = (c.sensitive ? 75 : 0) + (c.context ? 125 : 75);
     const props = {
       durationInFrames: intro + clipFrames + (freeze ? freeze.hold : 0), video: 'clip.mp4', videoW: vw, videoH: vh, clipFrames,
       fill: !!c.fill, focusX: Number.isFinite(+c.focusX) ? Math.min(1, Math.max(0, +c.focusX)) : 0.5,
@@ -97,7 +113,6 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     };
     writeJSON(path.join(dir, 'props.json'), props);
     fs.cpSync(path.join(ROOT, 'assets', 'fonts'), path.join(dir, 'fonts'), { recursive: true });
-    fs.cpSync(await ensureSfx(), path.join(dir, 'sfx'), { recursive: true });
 
     step('Rendering');
     const out = path.join(dir, 'reel.mp4');
