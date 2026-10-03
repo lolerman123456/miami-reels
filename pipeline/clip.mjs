@@ -200,7 +200,7 @@ async function analyze(frames, transcript, v, p, mode = 'clip') {
 
 // viral Reel (owner, Oct 3): the raw footage only (dashcam/bodycam/surveillance/phone video), cut at the hooking part,
 // with a freeze-frame moment to label who is who, short "what's happening" captions and a typed hook
-const REEL_RULES = 'Never a dead body, gore, nudity or a child\'s face; no anchors, reporters or talking heads in the cut (only the raw footage). '
+const REEL_RULES = 'Never a dead body, gore, nudity or a child\'s face; no anchors, reporters or talking heads in the cut (only the raw footage). Never name a victim anywhere (hook, context, captions, caption) — say "a man", "the victim". '
   + 'Say suspect/accused, never "perpetrator" or "criminal" unless convicted.';
 async function analyzeReel(frames, transcript, v) {
   const content = [{ type: 'text', text: `Frames from "${v.title}" (${v.agency}), each labeled with its time in seconds, plus the transcript. `
@@ -210,7 +210,7 @@ async function analyzeReel(frames, transcript, v) {
     + '"start": s, "end": s, "sensitive": true if it shows violence/a crash/an injury (adds "viewer discretion is advised"), '
     + '"hook": "≤55 chars, the typed intro title, plain words, the shock", "sub": "≤70 chars under it (where/when, or what the viewer is about to see)", '
     + '"banner": "≤80 chars, the situation box on top, starts with an emoji", '
-    + '"context": "the pause-to-read card: 2–3 short plain sentences, ≤200 chars total — who, where, when, what happened and what police say (accused wording)", "captions": [{"t": seconds (absolute, inside start–end), "text": "≤45 chars"} — 2–4 of them], '
+    + '"context": "the pause-to-read card: 2–3 short plain sentences, ≤200 chars total — who (the accused may be named, a victim never), where, when, what happened and what police say (accused wording)", "captions": [{"t": seconds (absolute, inside start–end), "text": "≤45 chars"} — 2–4 of them], '
     + '"freeze": seconds (absolute) of the frame where the people/vehicles to label are clearly visible, or null, '
     + '"fill": true if the important action stays inside a vertical 9:16 window for the whole cut (so the video can fill the phone screen without cutting anything important), "focusX": 0-1 horizontal center of that window (of the cropped footage), '
     + '"crop": {"x":0-1,"y":0-1,"w":0-1,"h":0-1} the box (normalized, top-left origin) of the RAW footage inside the frame, leaving out TV graphics, tickers, logos and blurred side bars (a vertical phone video shown inside a TV frame → just that phone video), or null if it already fills the frame, '
