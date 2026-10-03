@@ -1,0 +1,199 @@
+{
+  "title": "Miami Weekend Guide: Oct. 3 and 4",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Tonight has Kany García at Kaseya Center, Chucho Valdés at the Adrienne Arsht Center, Electric Feels at ZeyZey, and Karol G at Hard Rock Stadium.\nSunday has Don Omar at Kaseya Center and Mariachi El Bronx at Revolution Live.\nWhich one would you try to make this weekend?\n\nSources: Miami New Times, Secret Miami\n\n#MiamiEvents #ThingsToDoMiami #MiamiWeekend #SouthFloridaEvents",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need plans tonight or Sunday? Miami has concerts, a DJ party, and late-night Brightline trains after scheduled Kaseya Center concerts.",
+      "overlay": [
+        "THIS WEEKEND",
+        "MIAMI PLANS"
+      ],
+      "emojis": [
+        "🎟️",
+        "🎶",
+        "🚆",
+        "🌴"
+      ],
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.781401,
+        "lon": -80.187689,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Tonight, Kany García plays Kaseya Center. Sunday, Don Omar plays the same arena. Brightline runs late-night trains from MiamiCentral after scheduled concerts, and the station sits less than a mile away.",
+      "caption": "Tonight, Kany García plays Kaseya Center. Sunday, Don Omar plays the same arena. Brightline runs late-night trains from MiamiCentral after scheduled concerts, and the station sits less than a mile away.",
+      "overlay": "KASEYA CENTER",
+      "badge": "2 SHOWS",
+      "sub": "Late trains after concerts",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "2",
+          "label": "Kaseya shows"
+        },
+        {
+          "value": "<1 MI",
+          "label": "to station"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.781401,
+        "lon": -80.187689,
+        "h": 90
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 120,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "At eight tonight, Chucho Valdés celebrates his eighty-fifth birthday at the Adrienne Arsht Center. He has seven Grammys and seven Latin Grammys. Joe Lovano and Terence Blanchard join him. Tickets run fifty-two to one hundred fifty-eight dollars.",
+      "caption": "At 8 tonight, Chucho Valdés celebrates his 85th birthday at the Adrienne Arsht Center. He has 7 Grammys and 7 Latin Grammys. Joe Lovano and Terence Blanchard join him. Tickets run $52 to $158.",
+      "overlay": "ARSHT CENTER",
+      "badge": "$52 to $158",
+      "sub": "Chucho Valdés at 8",
+      "emoji": "🎹",
+      "stats": [
+        {
+          "value": "85",
+          "label": "birthday show"
+        },
+        {
+          "value": "$52",
+          "label": "tickets from"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Adrienne Arsht Center",
+        "lat": 25.787684,
+        "lon": -80.189974,
+        "h": 75
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 45,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Electric Feels starts at nine tonight at ZeyZey on Northeast Sixty-First Street. The Los Angeles-based party brings a rotating lineup of DJs and a stage production. Tickets cost eighteen dollars.",
+      "caption": "Electric Feels starts at 9 tonight at ZeyZey on NE 61st St. The Los Angeles-based party brings a rotating lineup of DJs and a stage production. Tickets cost $18.",
+      "overlay": "ZEYZEY",
+      "badge": "$18",
+      "sub": "Party starts at 9",
+      "emoji": "🪩",
+      "stats": [
+        {
+          "value": "$18",
+          "label": "ticket price"
+        },
+        {
+          "value": "9 PM",
+          "label": "start time"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "ZeyZey",
+        "lat": 25.83235,
+        "lon": -80.19298,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 310,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sunday at seven, Mariachi El Bronx plays Revolution Live in Fort Lauderdale. The band is on its You Ese Tour after a ten-year hiatus, with Bedouin Soundclash and Max Diaz. Tickets cost thirty-eight dollars and fifty cents.",
+      "caption": "Sunday at 7, Mariachi El Bronx plays Revolution Live in Fort Lauderdale. The band is on its You Ese Tour after a 10-year hiatus, with Bedouin Soundclash and Max Diaz. Tickets cost $38.50.",
+      "overlay": "REVOLUTION",
+      "badge": "$38.50",
+      "sub": "Sunday at 7",
+      "emoji": "🎺",
+      "stats": [
+        {
+          "value": "10 YEARS",
+          "label": "hiatus"
+        },
+        {
+          "value": "$38.50",
+          "label": "ticket price"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Revolution Live",
+        "lat": 26.12112,
+        "lon": -80.14658,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -32,
+        "heading": 180,
+        "degrees": 75,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you picking, tonight or Sunday? Weekends here are mostly deciding where to be, while NEAR quietly shows the other side of that choice: the people who were there too.",
+      "overlay": "WHAT'S THE MOVE? 🎟️",
+      "sub": "Drop your plan",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.77427,
+        "lon": -80.19366,
+        "h": 120
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -35,
+        "heading": 205
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "054-miami-weekend-guide-oct-3-and-4"
+}
