@@ -146,7 +146,7 @@ export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
     '"rent":["up to 12 South Florida city names or 5-digit ZIPs for Zillow rent data, only for rent/cost topics"],"news":[indexes of the relevant headlines],' +
     '"search":["up to 4 Google News searches for facts the other sources will not have: recent sales, events, crime data, case updates"]}' },
     { role: 'user', content: `Today: ${new Date().toDateString()}\n${topic ? `The account owner asked for: ${topic}\n` : ''}${HOOK}` +
-      `Past videos:\n${past.map(t => '- ' + t).join('\n') || '(none)'}\n\nRecent South Florida headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` }]);
+      `Past videos:\n${past.map(t => '- ' + t).join('\n') || '(none)'}\n\nRecent South Florida headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` }], 'mini');
   console.log(`  plan: [${plan.format}] ${plan.angle}`);
 
   // 2. gather sources
@@ -173,7 +173,7 @@ export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
   for (let attempt = 1; attempt <= 3; attempt++) {
     const draft = await chat([{ role: 'system', content: `${NARRATOR}\n\n${STYLE}\n\n${toneLines()}\n\n${HANDLES_RULE()}\n\n${FORMAT}` },
       { role: 'user', content: `Format: ${plan.format}\nAngle: ${plan.angle}\n${topic ? `Owner's request: ${topic}\n` : ''}${HOOK}\n${SOURCES}\n\nWrite the episode.\n${REMINDER}` }]);
-    episode = sanitize(await chat([{ role: 'system', content: `${CHECKER}\n\n${STYLE}` }, { role: 'user', content: `${SOURCES}\n\nDRAFT:\n${JSON.stringify(draft)}\n\n${REMINDER}` }]));
+    episode = sanitize(await chat([{ role: 'system', content: `${CHECKER}\n\n${STYLE}` }, { role: 'user', content: `${SOURCES}\n\nDRAFT:\n${JSON.stringify(draft)}\n\n${REMINDER}` }], 'mini'));
     if (episode.removed?.length) console.log(`  fact-check fixed: ${episode.removed.join(' | ').slice(0, 400)}`);
     const spoken = (episode.scenes || []).map(s => s.text).join(' ');
     const checked = (episode.scenes || []).filter((s, i) => !(hook && i === 0)).map(s => s.text).join(' '); // the owner's own hook is never rewritten
@@ -233,7 +233,7 @@ async function nearMention(episode, plan) {
   if (!outro) return;
   try {
     const r = await chat([{ role: 'system', content: 'You write ONE sentence for the outro of a South Florida Reel that quietly mentions the NEAR app, which shows you the people who walked past you during the day. The sentence must genuinely connect the video topic to what NEAR does through a real parallel or link (for example, for a video about unclaimed money: "Most of what is yours in this city goes unnoticed, like money sitting in a state account or the people you cross paths with every day, and that second one is what NEAR is for."). It should read like a thoughtful aside, subtle, not an ad: no "download", no "if you see someone", no hype words, no emojis, numbers as words, 18–34 words, one complete sentence (not a run-on). If the topic is serious, sad or about crime, reply SKIP. Reply JSON {"line":"…"} or {"line":"SKIP"}.' },
-      { role: 'user', content: `Title: ${episode.title}\nOutro so far: ${outro.text}` }]);
+      { role: 'user', content: `Title: ${episode.title}\nOutro so far: ${outro.text}` }], 'mini');
     const line = String(r.line || '').trim();
     if (!line || /^SKIP/i.test(line) || line.split(/\s+/).length > 38) return;
     // keep the outro's final sentence (the call to action) last
@@ -248,8 +248,8 @@ async function nearMention(episode, plan) {
   } catch (e) { console.log(`  (NEAR mention skipped: ${e.message.slice(0, 80)})`); }
 }
 
-async function chat(messages) {
-  return chatJSON(messages, 'write'); // pipeline/llm.mjs (low reasoning effort, usage logged)
+async function chat(messages, tier = 'write') {
+  return chatJSON(messages, tier); // pipeline/llm.mjs (low reasoning effort, usage logged)
 }
 
 const inFlorida = l => l && l.lat > 24.3 && l.lat < 31.1 && l.lon > -87.7 && l.lon < -79.8;

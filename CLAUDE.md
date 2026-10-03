@@ -87,7 +87,7 @@ Scenes: `hook` (overlay = 2 short lines, 4 emojis, shot `dive`), 3–5× `item` 
 
 ## OpenAI cost (owner, Oct 3: keep it under ~$2/day)
 All chat calls go through `pipeline/llm.mjs`: tier `mini` (`OPENAI_MINI_MODEL`, default gpt-5.4-mini) for picking, video/photo checks,
-captions and fact checks; tier `write` (`OPENAI_WRITER_MODEL`, default gpt-5.5) only for the carousel copy and Reel scripts; low
+captions and fact checks; tier `write` (`OPENAI_WRITER_MODEL`, default gpt-5.5) only for the carousel copy and the Reel script draft (Reel planning, fact-check and NEAR line run on mini); low
 reasoning effort everywhere. AI images max 10/day (`AI_IMAGES_PER_DAY`; ~1–2¢ each — at 2/day slides went blank; owner Oct 3: $25 must last 1–2 weeks, target ≤ $2/day), gpt-image-1-mini. Each run prints `OpenAI usage: …` at the end
 (read the logs to estimate the day's cost). Out of credits → runs stop instead of posting half-checked content (Oct 3 the 10am viral
 Reel posted with TV graphics because its cleanup calls failed); pause with `control.json` → `paused` until credits are added.
