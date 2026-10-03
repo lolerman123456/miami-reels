@@ -317,6 +317,8 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   const lines = c => [kind === 'world' ? 'NEWS FROM AROUND THE WORLD:' : c.top, c.main, c.highlight, c.bottom].filter(Boolean).join(' / ');
   const cv = await chat([{ role: 'system', content: 'You check an Instagram carousel cover made of stacked lines. Read them in order as one sentence. If it is not a clear, complete, grammatical sentence with a subject (or starts with a dangling verb like "PUTS"), rewrite main/highlight/bottom (and top, unless it is fixed) so it is, keeping the same facts, all caps, highlight 1–3 words. Reply JSON {"ok": true|false, "top": "", "main": "", "highlight": "", "bottom": ""}.' },
     { role: 'user', content: `${kind === 'world' ? 'The top line is fixed: NEWS FROM AROUND THE WORLD (do not include it in main).\n' : ''}Cover: ${lines(post.cover)}\nFirst slide: ${post.slides?.[0]?.headline}` }]).catch(() => null);
+  // the highlight is its own line: drop it from main if the fix repeated it there ("MIAMI GETS KAROL G / KAROL G")
+  if (cv?.main && cv.highlight && cv.main.toUpperCase().includes(cv.highlight.toUpperCase())) cv.main = cv.main.replace(new RegExp(`\\s*${cv.highlight.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\s*$`, 'i'), '').trim() || cv.main;
   if (cv && cv.ok === false && cv.main && cv.highlight) {
     console.log(`  cover fixed: "${lines(post.cover)}" → "${lines(cv)}"`);
     Object.assign(post.cover, { ...(kind === 'world' ? {} : { top: cv.top || '' }), main: cv.main, highlight: cv.highlight, bottom: cv.bottom || '' });
