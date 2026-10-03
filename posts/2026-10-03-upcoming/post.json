@@ -1,102 +1,149 @@
 {
   "sector": "EVENTS",
   "cover": {
-    "top": "",
+    "top": "THIS WEEK",
     "main": "SOUTH FLORIDA HAS",
-    "highlight": "5 EVENTS",
-    "bottom": "THIS WEEK THROUGH OCT. 9",
+    "highlight": "6 NIGHTS OUT",
+    "bottom": "FROM $18 TO $569",
     "blur": false,
     "photo": {
-      "query": "Miami concert crowd at night Hard Rock Stadium Adrienne Arsht Center ZeyZey",
-      "prompt": "dramatic South Florida night scene with a lit concert venue, palm trees, and a crowd moving toward the entrance"
+      "query": "dramatic Miami stadium concert crowd night stage lights",
+      "prompt": "dramatic night concert crowd in South Florida with stage lights, raised hands, and a glowing stadium"
     },
     "emojis": [
       "🎤",
-      "🎷",
-      "🎭"
+      "🎭",
+      "🎸",
+      "🎶"
     ],
-    "logos": [],
-    "logoFiles": []
+    "logos": [
+      "hardrockstadium.com",
+      "arshtcenter.org",
+      "zeyzeymiami.com",
+      "jointherevolution.net",
+      "aventuracenter.org",
+      "fundarte.us"
+    ],
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c2.png",
+      "logo-c5.png"
+    ]
   },
   "slides": [
     {
       "tag": "EVENTS",
       "headline": "Karol G at Hard Rock Stadium",
       "highlight": "Karol G",
-      "body": "Saturday, Oct. 3 at 7 p.m. at Hard Rock Stadium in Miami Gardens. Tickets cost $266 to $569.",
+      "body": "Saturday, Oct. 3, 7 p.m. at Hard Rock Stadium in Miami Gardens. Tickets cost $266 to $569, with Elena Rose opening.",
       "place": "Miami Gardens",
       "source": "Miami New Times",
       "photo": {
-        "query": "Karol G Hard Rock Stadium Miami Gardens concert night",
-        "prompt": "dramatic concert photo of Karol G on a huge stadium stage with bright lights, a packed crowd, and the Hard Rock Stadium backdrop"
+        "query": "Karol G performing stadium concert night Miami",
+        "prompt": "Karol G on a stadium stage with pink and blue lights, a packed crowd, and giant screens"
       },
-      "emoji": "🎤",
-      "chip": "$266+"
+      "color": "#F7A6C8",
+      "emoji": "💗",
+      "chip": "OCT. 3, 7 PM",
+      "logo": "hardrockstadium.com",
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Programas Telemedellín / CC BY 3.0",
+      "logoFile": "logo-1.png"
     },
     {
       "tag": "EVENTS",
       "headline": "Chucho Valdés at the Arsht Center",
       "highlight": "Chucho Valdés",
-      "body": "Saturday, Oct. 3 at 8 p.m. at the Adrienne Arsht Center in Miami. Tickets cost $52 to $158.",
+      "body": "Saturday, Oct. 3, 8 p.m. at the Adrienne Arsht Center in Miami. The concert marks his 85th birthday with Joe Lovano and Terence Blanchard.",
       "place": "Miami",
       "source": "Miami New Times",
       "photo": {
-        "query": "Chucho Valdes piano stage Miami Arsht Center",
-        "prompt": "dramatic photo of Chucho Valdés at a grand piano under blue stage lights with a seated audience"
+        "query": "Chucho Valdés playing piano concert hall stage",
+        "prompt": "Chucho Valdés at a grand piano on a concert hall stage with warm spotlight and a jazz ensemble behind him"
       },
+      "color": "#8A1538",
       "emoji": "🎹",
-      "chip": "$52+"
+      "chip": "OCT. 3, 8 PM",
+      "logo": "arshtcenter.org",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Absolute Bands Live! in Aventura",
+      "highlight": "Absolute Bands Live!",
+      "body": "Saturday, Oct. 3, at 3 p.m. and 7 p.m. at Aventura Arts and Cultural Center. Bo Bice joins a Queen, Def Leppard, Journey, and Bon Jovi set.",
+      "place": "Aventura",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "rock concert singer audience spotlight stage",
+        "prompt": "rock band onstage under bright white lights with a singer at the front and an audience singing along"
+      },
+      "emoji": "🎸",
+      "chip": "$45+",
+      "logo": "aventuracenter.org",
+      "logoFile": null
     },
     {
       "tag": "EVENTS",
       "headline": "Electric Feels at ZeyZey",
       "highlight": "Electric Feels",
-      "body": "Saturday, Oct. 3 at 9 p.m. at ZeyZey in Miami. Tickets cost $18.",
+      "body": "Saturday, Oct. 3, 9 p.m. at ZeyZey in Miami. The dance party brings a late-2000s and early-2010s indie set to Little River.",
       "place": "Miami",
       "source": "Miami New Times",
       "photo": {
-        "query": "ZeyZey Miami DJ party night crowd",
-        "prompt": "high-energy night photo of a DJ set with bright lights, dancing crowd, and palm trees at an outdoor venue"
+        "query": "DJ party Miami outdoor venue colorful lights",
+        "prompt": "DJ booth at an outdoor Miami venue with purple lights, a packed dance floor, and palms in the background"
       },
+      "color": "#6A00FF",
       "emoji": "🪩",
-      "chip": "9 PM"
+      "chip": "$18",
+      "logo": "zeyzeymiami.com",
+      "logoFile": "logo-4.png"
     },
     {
       "tag": "EVENTS",
       "headline": "Mariachi El Bronx at Revolution Live",
       "highlight": "Mariachi El Bronx",
-      "body": "Sunday, Oct. 4 at 7 p.m. at Revolution Live in Fort Lauderdale. Tickets cost $38.50.",
+      "body": "Sunday, Oct. 4, 7 p.m. at Revolution Live in Fort Lauderdale. The mariachi side project returns after a 10-year hiatus.",
       "place": "Fort Lauderdale",
       "source": "Miami New Times",
       "photo": {
-        "query": "Mariachi El Bronx live performance Revolution Live Fort Lauderdale",
-        "prompt": "dramatic live band photo with mariachi brass, guitars, and red stage lighting in a packed club"
+        "query": "mariachi band live stage trumpets guitars crowd",
+        "prompt": "mariachi band on a club stage with trumpets, guitars, red lighting, and a close crowd"
       },
       "emoji": "🎺",
-      "chip": "SUN 7 PM"
+      "chip": "$38.50",
+      "logo": "jointherevolution.net",
+      "logoFile": null
     },
     {
       "tag": "EVENTS",
       "headline": "The Dog in the Manger in Aventura",
       "highlight": "Dog in the Manger",
-      "body": "Friday, Oct. 9 at 8 p.m. at Aventura Arts & Cultural Center in Aventura. Tickets cost $45.51 to $50.",
+      "body": "Friday, Oct. 9, 8 p.m. at Aventura Arts and Cultural Center. Fundarte stages Lope de Vega’s comedy in a contemporary adaptation.",
       "place": "Aventura",
       "source": "Miami New Times",
       "photo": {
-        "query": "Aventura Arts Cultural Center theater stage Spanish play",
-        "prompt": "dramatic theater scene with warm spotlight, period costumes, and an intimate audience"
+        "query": "theater actors dramatic lighting red curtain",
+        "prompt": "Spanish theater performance on a dark stage with actors in dramatic lighting and a rich red curtain"
       },
+      "color": "#C8102E",
       "emoji": "🎭",
-      "chip": "OCT 9"
+      "chip": "$45.51+",
+      "logo": "fundarte.us",
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Eva Rinaldi / CC BY-SA 2.0",
+      "logoFile": "logo-6.png"
     }
   ],
-  "caption": "Karol G, jazz, dance party, rock mariachi, and theater are all happening in South Florida this week.\nWho are you taking? Tag a friend.",
+  "caption": "South Florida has concerts, theater, and a dance party packed into this week.\nWho are they taking? Tag a friend.",
   "hashtags": [
-    "#SouthFloridaEvents",
-    "#MiamiEvents"
+    "#MiamiEvents",
+    "#SouthFloridaEvents"
   ],
   "collaborators": [],
-  "igCaption": "Karol G, jazz, dance party, rock mariachi, and theater are all happening in South Florida this week.\nWho are you taking? Tag a friend.\n\n📰 Sources: Miami New Times\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "igCaption": "South Florida has concerts, theater, and a dance party packed into this week.\nWho are they taking? Tag a friend.\n\n📰 Sources: Miami New Times\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiEvents #SouthFloridaEvents #miami #southflorida",
   "kind": "upcoming",
   "kicker": "THIS WEEK IN MIAMI 🎟️",
   "date": "2026-10-03",
