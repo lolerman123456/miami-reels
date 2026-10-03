@@ -79,7 +79,7 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     }
     let start = Math.max(0, Math.min(w.total - 5, +c.start || 0));
     // owner, Oct 3: the who's-who freeze goes at the BEGINNING — start the cut ~1 s before the freeze frame
-    if (c.freeze != null && c.freeze - start > 3) start = Math.max(0, c.freeze - 1);
+    if (c.freeze != null && (c.freeze - start > 3 || c.freeze - start < 0.7)) start = Math.max(0, c.freeze - 1);
     const end = Math.min(w.total, Math.max(start + 12, +c.end || start + 30), start + 45);
     console.log(`  crazy ${c.crazy}/10 · cut ${start}–${end} s · ${c.fill ? `full 9:16 (focus ${c.focusX})` : 'blurred top/bottom'} · ${c.hook}`);
 

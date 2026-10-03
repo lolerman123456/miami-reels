@@ -179,10 +179,10 @@ export const Viral: React.FC<ViralProps> = (p) => {
   const legendBottom = 380, captionBottom = hasFreeze ? 650 : 420;
   return (
     <AbsoluteFill style={{ background: '#000' }}>
-      <Sequence from={I} durationInFrames={F ?? p.clipFrames}><VideoLayer p={p} /></Sequence>
+      {(F ?? p.clipFrames) > 0 && <Sequence from={I} durationInFrames={F ?? p.clipFrames}><VideoLayer p={p} /></Sequence>}
       {F !== null && <>
         <Sequence from={I + F} durationInFrames={Hd}><Freeze frame={F}><VideoLayer p={p} muted /></Freeze></Sequence>
-        <Sequence from={I + F + Hd} durationInFrames={after}><VideoLayer p={p} startFrom={F} /></Sequence>
+        {after > 0 && <Sequence from={I + F + Hd} durationInFrames={after}><VideoLayer p={p} startFrom={F} /></Sequence>}
         <Sequence from={I + F} durationInFrames={Hd}><Markers p={p} /></Sequence>
         <Sequence from={I + F}><Legend p={p} bottom={legendBottom} /></Sequence>
       </>}
