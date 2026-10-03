@@ -53,6 +53,26 @@ async function labelsFor(frameFile, check, dir, vw, vh) {
   return out;
 }
 
+async function refineCut(raw, dir, a, b, total, c) {
+  const from = Math.max(0, a - 3), to = Math.min(total, b + 3);
+  const step = Math.max(0.5, (to - from) / 70);
+  const frames = [];
+  for (let t = from; t < to; t += step) {
+    const file = path.join(dir, `r${String(frames.length).padStart(3, '0')}.jpg`);
+    await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', t.toFixed(2), '-i', raw, '-frames:v', '1', '-vf', 'scale=320:-2', file]);
+    if (fs.existsSync(file)) frames.push({ t: +t.toFixed(2), file });
+  }
+  if (frames.length < 6) return null;
+  const content = [{ type: 'text', text: `Frames every ${step.toFixed(1)} s from a news upload. Story: ${c.banner}. Find the longest CONTIGUOUS run of frames that are `
+    + 'all RAW footage (dashcam/bodycam/surveillance/phone video) and contain the main action — no studio, anchor, reporter, title cards, promo graphics, maps, '
+    + 'still photos or mugshot graphics inside the run. Reply JSON {"start": seconds of the first raw frame, "end": seconds of the last raw frame, "action": seconds of the key moment}' }];
+  for (const f of frames) { content.push({ type: 'text', text: `t=${f.t}` }); content.push({ type: 'image_url', image_url: { url: `data:image/jpeg;base64,${fs.readFileSync(f.file).toString('base64')}`, detail: 'low' } }); }
+  const r = await chat([{ role: 'user', content }]).catch(() => null);
+  for (const f of frames) fs.rmSync(f.file, { force: true });
+  if (!r || !(r.end - r.start >= 5)) return null;
+  return { start: Math.max(0, +r.start + 0.2), end: Math.min(total, +r.end - 0.2) };
+}
+
 export async function makeViralReel({ url, dryRun, hint } = {}) {
   const date = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
   step('Finding viral videos');
@@ -83,10 +103,13 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
       continue;
     }
     let start = Math.max(0, Math.min(w.total - 5, +c.start || 0));
+    // second, precise pass: frames every 0.5 s around the pick → keep only the stretch of RAW footage (no graphics/anchor/studio)
+    const rf = await refineCut(w.raw, dir, start, Math.min(w.total, +c.end || start + 30), w.total, c);
+    if (rf) { console.log(`  refined cut: ${rf.start}–${rf.end} s (was ${start}–${c.end})`); start = rf.start; c.end = rf.end; }
     // owner, Oct 3: the who's-who freeze goes at the BEGINNING — start the cut ~1 s before the freeze frame
     // the who's-who freeze only if it falls in the first ~3.5 s of the cut — never move the cut (that once skipped the crash itself)
     if (c.freeze != null && (c.freeze - start > 3.5 || c.freeze - start < 0.5)) { console.log(`  (freeze @${c.freeze}s not at the start of the cut — no freeze)`); c.freeze = null; }
-    const end = Math.min(w.total, Math.max(start + 12, +c.end || start + 30), start + 45);
+    const end = Math.min(w.total, Math.max(start + 6, +c.end || start + 30), start + 45);
     console.log(`  crazy ${c.crazy}/10 · cut ${start}–${end} s · ${c.fill ? `full 9:16 (focus ${c.focusX})` : 'blurred top/bottom'} · ${c.hook}`);
 
     step('Cutting');
@@ -112,7 +135,7 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     const intro = c.context ? 84 : 45; // owner, Oct 3: fast — no warning card, story card ~2.8 s
     const props = {
       durationInFrames: intro + clipFrames + (freeze ? freeze.hold : 0), video: 'clip.mp4', videoW: vw, videoH: vh, clipFrames,
-      fill: !!c.fill, focusX: Number.isFinite(+c.focusX) ? Math.min(1, Math.max(0, +c.focusX)) : 0.5,
+      fill: !!c.fill && vw / vh <= 1.3, focusX: Number.isFinite(+c.focusX) ? Math.min(1, Math.max(0, +c.focusX)) : 0.5,
       intro: { frames: intro, warning: false, title: c.hook || v.title, sub: c.sub || '', context: String(c.context || '').slice(0, 240) },
       banner: c.banner || '', freeze, credit: `Video: ${v.agency}`,
       captions: (c.captions || []).filter(x => x.t >= start && x.t < end).map(x => ({ at: Math.round((x.t - start) * FPS), text: String(x.text) })),
