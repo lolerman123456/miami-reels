@@ -124,7 +124,8 @@ if (cmd === 'prepare') {
   const props = buildProps(episode, timeline, duration, fs.existsSync(capFile) ? readJSON(capFile) : [], []); // captions time the how-to screens
   const cues = sfxCues(props.scenes);
   const inputs = ['-i', path.join(dir, 'narration.wav')];
-  const chains = ['[1:a]aresample=48000,aformat=channel_layouts=stereo[a0]']; // input 0 is the video
+  // owner, Oct 4: voice was way too quiet (-21 LUFS) — compress + normalize the narration to ~-10 LUFS, as loud as it gets without clipping
+  const chains = ['[1:a]aresample=48000,aformat=channel_layouts=stereo,acompressor=threshold=0.1:ratio=3:attack=5:release=80:makeup=2,loudnorm=I=-9:TP=-1:LRA=7,aresample=48000[a0]']; // input 0 is the video
   cues.forEach((c, i) => {
     inputs.push('-i', path.join(sfxDir, path.basename(c.file)));
     const ms = Math.round((c.at / FPS) * 1000);

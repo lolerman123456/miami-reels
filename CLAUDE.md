@@ -78,7 +78,7 @@ Never target ethnic groups, nationalities, religions, races, or real private peo
 ## Episode JSON essentials
 Map Reels are **informational, no jokes** (owner's call). **Default: upcoming / happening-now things people can go to** (events, parties, guides with dates, prices, venues + a tag-a-friend outro and venue collab tags) — the raves Reel was the top performer. History/crime only rarely. Older default was STORY: a gripping true story tied to one
 place (e.g. "Did you know one of the world's greatest designers died here?" → Versace mansion). Also NEW BUILD / HISTORY / DID YOU KNOW /
-RENT CHECK / BY THE NUMBERS. Voice at 1.3 speed (KOKORO_SPEED). Graphics: calm fades/slides, Near blue #1769FF + white, no bounce/tilt, getnearapp tag. `pipeline/generate.mjs` plans a topic, pulls real sources (news, Wikipedia via `pipeline/facts.mjs`,
+RENT CHECK / BY THE NUMBERS. Voice at 1.3 speed (KOKORO_SPEED); narration is compressed + loudness-normalized to ~-10 LUFS in `pipeline/parallel.mjs` (owner Oct 4: voice was way too quiet). Graphics: calm fades/slides, Near blue #1769FF + white, no bounce/tilt, getnearapp tag. `pipeline/generate.mjs` plans a topic, pulls real sources (news, Wikipedia via `pipeline/facts.mjs`,
 Zillow rent data), writes only from those sources, then a fact-check pass fixes anything unsupported.
 Scenes: `hook` (overlay = 2 short lines, 4 emojis, shot `dive`), 3–5× `item` (no rank; `badge` = key stat like "1,049 FT" or
 "$3,831/MO", `overlay` = place, `sub` = context), `outro` (question, shot `pullout`). `text` = spoken (numbers as words),
