@@ -1,0 +1,140 @@
+{
+  "sector": "ECONOMY",
+  "cover": {
+    "top": "THIS IS",
+    "main": "WHERE SOUTH FLORIDA IS GOING OUT THIS WEEKEND",
+    "highlight": "WHERE",
+    "bottom": "OCT. 4 TO 11",
+    "blur": false,
+    "photo": {
+      "query": "South Florida concert crowd at night with arena lights",
+      "prompt": "dramatic nighttime crowd scene outside a South Florida arena, bright stage lights spilling out, people heading in, palm trees visible"
+    },
+    "emojis": [
+      "👀",
+      "🎟️",
+      "🎤"
+    ],
+    "logos": [
+      "hardrockstadium.com",
+      "arshtcenter.org",
+      "superblue.com",
+      "thebass.org",
+      "museumofmiami.org"
+    ],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Raskuly / CC BY-SA 4.0",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c2.png",
+      "logo-c3.png",
+      "logo-c4.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Don Omar at Kaseya Center",
+      "highlight": "Don Omar",
+      "body": "Sunday, Oct. 4 at 7 p.m. at Kaseya Center in Miami. Tickets run $266 to $569. Brightline is running late-night trains after the show.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Don Omar concert stage in arena",
+        "prompt": "reggaeton concert stage in a packed arena with red lights, smoke, and a performer at center stage"
+      },
+      "emoji": "🎤",
+      "chip": "OCT. 4, 7 PM",
+      "logo": "kaseyacenter.com",
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Phillip Pessar / CC BY 2.0",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Mariachi El Bronx at Revolution Live",
+      "highlight": "Mariachi El Bronx",
+      "body": "Sunday, Oct. 4 at 7 p.m. at Revolution Live in Fort Lauderdale. Tickets cost $38.50.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Revolution Live Fort Lauderdale concert crowd",
+        "prompt": "night photo of a live concert crowd inside a club venue, stage lights in orange and blue, phones up, dense audience"
+      },
+      "emoji": "🎭",
+      "chip": "OCT. 4, 7 PM",
+      "logo": "jointherevolution.net",
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Msherrill77 / CC BY-SA 4.0",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "James Turrell's Blue Sea Sky at Superblue Miami",
+      "highlight": "Blue Sea Sky",
+      "body": "On view this week at Superblue Miami in Miami. Access requires a complimentary on-site reservation.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "immersive light installation room",
+        "prompt": "immersive color-installation room with glowing blue and orange light, visitors standing inside and looking at the walls"
+      },
+      "emoji": "🖼️",
+      "chip": "OPEN THIS WEEK",
+      "logo": "superblue.com",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Dean Hochman / CC BY 2.0",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Caught in the Eye at the Museum of Miami",
+      "highlight": "Caught in the Eye",
+      "body": "On view this week through April 11, 2027, at the Museum of Miami in Miami. Admission costs $8 to $15.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Museum of Miami exhibit gallery",
+        "prompt": "museum gallery photo with archival hurricane photos and display cases, visitors reading wall text under soft lighting"
+      },
+      "emoji": "🏛️",
+      "chip": "OPEN THIS WEEK",
+      "logo": "museumofmiami.org",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Turgoart / Public domain",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Jekyll & Hyde at Actors’ Playhouse",
+      "highlight": "Jekyll & Hyde",
+      "body": "It opens Wednesday, Oct. 7 at the Miracle Theatre in Coral Gables. Tickets cost $40 to $100.",
+      "place": "Coral Gables",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miracle Theatre Coral Gables marquee at night",
+        "prompt": "night exterior of the Miracle Theatre in Coral Gables with a bright marquee and people arriving for a show"
+      },
+      "emoji": "🎟️",
+      "chip": "OCT. 7",
+      "logo": "actorsplayhouse.org",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Rob Olivera / CC BY 2.0",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "South Florida has concerts, theater, and museum stops all week.\nWho are you taking? Tag a friend.",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [
+    "gobrightline"
+  ],
+  "igCaption": "South Florida has concerts, theater, and museum stops all week.\nWho are you taking? Tag a friend.\n\n📰 Sources: Miami New Times\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-04",
+  "id": "2026-10-04-upcoming"
+}
