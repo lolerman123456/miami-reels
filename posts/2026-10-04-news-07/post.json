@@ -1,0 +1,117 @@
+{
+  "sector": "HEALTH",
+  "cover": {
+    "top": "FLORIDA'S",
+    "main": "DENGUE OUTBREAK IS NOW THE",
+    "highlight": "LARGEST",
+    "bottom": "IN DECADES IN THE CONTINENTAL U.S.",
+    "blur": false,
+    "photo": {
+      "query": "Aedes aegypti mosquito macro biting skin Wikimedia Commons dengue",
+      "prompt": "dramatic macro photo of an Aedes aegypti mosquito on human skin, striped legs visible, dark Florida backyard background",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "🦟",
+      "⚠️",
+      "🌴"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: CBS News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "HEALTH",
+      "headline": "Florida’s dengue outbreak is the largest in decades",
+      "highlight": "largest in decades",
+      "body": "Florida now has the largest dengue outbreak in the continental U.S. in decades. The concern is local mosquito-borne spread as cases keep rising.",
+      "place": "Florida",
+      "source": "WUSF",
+      "photo": {
+        "query": "Aedes aegypti mosquito close up Wikimedia Commons dengue fever",
+        "prompt": "sharp close-up of an Aedes aegypti mosquito with striped legs on skin, high contrast lighting"
+      },
+      "emoji": "🦟",
+      "chip": "DECADES",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "HEALTH",
+      "headline": "Florida dengue cases hit a record 252",
+      "highlight": "record 252",
+      "body": "Florida reached 252 reported dengue cases on Oct. 2. The case count is still climbing.",
+      "place": "Florida",
+      "source": "Sarasota Herald-Tribune",
+      "photo": {
+        "query": "mosquito control spraying Florida neighborhood Wikimedia Commons",
+        "prompt": "mosquito control truck spraying a palm-lined Florida residential street at dusk"
+      },
+      "emoji": "📈",
+      "chip": "252",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: AS USA"
+    },
+    {
+      "tag": "HEALTH",
+      "headline": "Locally acquired cases rose to 252",
+      "highlight": "Locally acquired",
+      "body": "Florida had 252 locally acquired dengue cases on Oct. 2. Local transmission means people caught the virus in Florida.",
+      "place": "Florida",
+      "source": "Outbreak News Today",
+      "photo": {
+        "query": "Florida backyard standing water mosquito larvae Wikimedia Commons",
+        "prompt": "close photo of standing water in a backyard container with mosquito larvae visible after rain in Florida"
+      },
+      "emoji": "📍",
+      "chip": "LOCAL",
+      "photoFile": "news-3.jpg",
+      "credit": "Photo: Yahoo"
+    },
+    {
+      "tag": "HEALTH",
+      "headline": "Over 250 cases were reported by Oct. 2",
+      "highlight": "Over 250",
+      "body": "CBS News reported more than 250 cases on Oct. 2. WUSF said the outbreak is the largest in the continental U.S. in decades.",
+      "place": "Florida",
+      "source": "CBS News",
+      "photo": {
+        "query": "dengue fever blood sample laboratory Wikimedia Commons",
+        "prompt": "clinical lab close-up with blood vials and viral testing equipment under bright lab lights"
+      },
+      "emoji": "🩸",
+      "chip": "OCT. 2",
+      "photoFile": "news-4.jpg",
+      "credit": "Photo: Miami New Times"
+    },
+    {
+      "tag": "HEALTH",
+      "headline": "Underreporting is now part of the concern",
+      "highlight": "Underreporting",
+      "body": "ABC News reported concerns about underreporting as dengue keeps rising in Florida. Dengue infections can be mild or have no symptoms.",
+      "place": "Florida",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "photo": {
+        "query": "hospital waiting room Florida clinic Wikimedia Commons",
+        "prompt": "quiet clinic waiting room with mosquito-borne illness information on a wall and lab check-in counter"
+      },
+      "emoji": "🏥",
+      "chip": "RISING",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News"
+    }
+  ],
+  "caption": "Florida’s dengue outbreak is now the largest in the continental U.S. in decades, with 252 reported cases.\nMosquito control and bite prevention matter now.",
+  "hashtags": [
+    "#FloridaDengue",
+    "#SouthFloridaHealth"
+  ],
+  "collaborators": [],
+  "igCaption": "Florida’s dengue outbreak is now the largest in the continental U.S. in decades, with 252 reported cases.\nMosquito control and bite prevention matter now.\n\n📰 Sources: WUSF, Sarasota Herald-Tribune, Outbreak News Today, CBS News, ABC News - Breaking News, Latest News and Videos\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#FloridaDengue #SouthFloridaHealth #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-04",
+  "id": "2026-10-04-news-07"
+}
