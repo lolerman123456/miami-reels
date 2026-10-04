@@ -225,7 +225,7 @@ async function analyze(frames, transcript, v, p, mode = 'clip') {
 
 // viral Reel (owner, Oct 3): the raw footage only (dashcam/bodycam/surveillance/phone video), cut at the hooking part,
 // with a freeze-frame moment to label who is who, short "what's happening" captions and a typed hook
-const REEL_RULES = 'Never a dead body, gore, nudity or a child\'s face; no anchors, reporters or talking heads in the cut (only the raw footage). Never name a victim anywhere (hook, context, captions, caption) — say "a man", "the victim". '
+const REEL_RULES = 'Set ok=false when children/students/minors are the main people on camera (school buses, classrooms, kids\' sports), and when the incident is old (before last month — it must be news from the last few weeks, not a 2023 clip resurfacing). Never a dead body, gore, nudity or a child\'s face; no anchors, reporters or talking heads in the cut (only the raw footage). Never name a victim anywhere (hook, context, captions, caption) — say "a man", "the victim". '
   + 'Say suspect/accused, never "perpetrator" or "criminal" unless convicted.';
 async function analyzeReel(frames, transcript, v) {
   const content = [{ type: 'text', text: `Frames from "${v.title}" (${v.agency}), each labeled with its time in seconds, plus the transcript. `

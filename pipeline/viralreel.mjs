@@ -110,6 +110,8 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     // the who's-who freeze only if it falls in the first ~3.5 s of the cut — never move the cut (that once skipped the crash itself)
     if (c.freeze != null && (c.freeze - start > 3.5 || c.freeze - start < 0.5)) { console.log(`  (freeze @${c.freeze}s not at the start of the cut — no freeze)`); c.freeze = null; }
     const end = Math.min(w.total, Math.max(start + 6, +c.end || start + 30), start + 45);
+    // Oct 3 8pm: a 7 s cut went out (11 s Reel with the intro) — too short to be worth watching; try the next video
+    if (end - start < 10) { console.log(`  skip (only ${(end - start).toFixed(1)} s of raw footage)`); continue; }
     console.log(`  crazy ${c.crazy}/10 · cut ${start}–${end} s · ${c.fill ? `full 9:16 (focus ${c.focusX})` : 'blurred top/bottom'} · ${c.hook}`);
 
     step('Cutting');
