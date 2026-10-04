@@ -1,0 +1,234 @@
+{
+  "title": "South Florida Events This Week: Free and Cheap First",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami",
+    "Eventbrite",
+    "Local 10",
+    "Wikipedia"
+  ],
+  "collaborators": [
+    "gobrightline"
+  ],
+  "igCaption": "Free first: James Turrell’s “Blue Sea Sky” at Superblue Miami uses complimentary on-site reservations.\nCheap museum stop: Yuko Mohri’s first solo U.S. museum exhibition is at the Bass through May 30, 2027.\nBrightline is running late-night trains after over 15 Kaseya Center concerts. What should we cover next?\n\nSources: Miami New Times, Secret Miami, Eventbrite, Local 10, Wikipedia\n\n#MiamiEvents #SouthFlorida #MiamiGuide #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Free art, late-night trains, sunflowers, and a centennial festival are on the South Florida calendar this week.",
+      "overlay": [
+        "THIS WEEK",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🎨",
+        "🚆",
+        "🌻",
+        "🎉"
+      ],
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start free at Superblue Miami. James Turrell’s “Blue Sea Sky” is a room-sized color installation at 1101 NW 23rd St. Access requires a complimentary on-site reservation, first come, first served.",
+      "caption": "Start free at Superblue Miami. James Turrell’s “Blue Sea Sky” is a room-sized color installation at 1101 NW 23rd St. Access requires a complimentary on-site reservation, first come, first served.",
+      "overlay": "SUPERBLUE",
+      "badge": "FREE RSVP",
+      "sub": "James Turrell installation",
+      "emoji": "🎨",
+      "stats": [
+        {
+          "value": "1101",
+          "label": "NW 23rd St."
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Superblue Miami",
+        "lat": 25.7996,
+        "lon": -80.2137,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a low-cost museum stop, the Bass has Yuko Mohri’s “Unviolated Imperfection.” It is her first solo U.S. museum exhibition, spread across three galleries, with tickets from $8 to $15 through May 30, 2027.",
+      "caption": "For a low-cost museum stop, the Bass has Yuko Mohri’s “Unviolated Imperfection.” It is her first solo U.S. museum exhibition, spread across 3 galleries, with tickets from $8 to $15 through May 30, 2027.",
+      "overlay": "THE BASS",
+      "badge": "$8 TO $15",
+      "sub": "On view through May 2027",
+      "emoji": "🖼️",
+      "stats": [
+        {
+          "value": "$8-$15",
+          "label": "tickets"
+        },
+        {
+          "value": "3",
+          "label": "galleries"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "The Bass",
+        "lat": 25.7973,
+        "lon": -80.129,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 85,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Brightline brought back late-night service for Kaseya Center shows through the end of the year. MiamiCentral sits less than a mile from the arena, and riders should book the Concert Connect return trip. If you’re on that Brightline run, check NEAR after the show for familiar faces.",
+      "caption": "Brightline brought back late-night service for Kaseya Center shows through the end of the year. MiamiCentral sits less than 1 mile from the arena, and riders should book the Concert Connect return trip. If you’re on that Brightline run, check NEAR after the show for familiar faces.",
+      "overlay": "MIAMICENTRAL",
+      "badge": "OVER 15 SHOWS",
+      "sub": "Late trains after concerts",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "over 15",
+          "label": "concerts"
+        },
+        {
+          "value": "<1 MI",
+          "label": "to arena"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "MiamiCentral",
+        "lat": 25.7867,
+        "lon": -80.1958,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 220,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Pepper Ranch has its Sunflower Viewing Event from Friday, October 2, through Sunday, October 11. The daily window runs 9 AM to 2 PM.",
+      "caption": "Pepper Ranch has its Sunflower Viewing Event from Friday, Oct. 2, through Sunday, Oct. 11. The daily window runs 9 AM to 2 PM.",
+      "overlay": "PEPPER RANCH",
+      "badge": "OCT 2-11",
+      "sub": "Sunflower viewing",
+      "emoji": "🌻",
+      "stats": [
+        {
+          "value": "OCT 2-11",
+          "label": "event dates"
+        },
+        {
+          "value": "9AM-2PM",
+          "label": "daily window"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Pepper Ranch Preserve",
+        "lat": 26.3039,
+        "lon": -81.2387,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 2000,
+        "pitch": -28,
+        "heading": 310,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "North Miami Beach is celebrating 100 years with a centennial festival focused on its diverse communities. The city was originally named Fulford-by-the-Sea in 1926 and renamed North Miami Beach in 1931.",
+      "caption": "North Miami Beach is celebrating 100 years with a centennial festival focused on its diverse communities. The city was originally named Fulford-by-the-Sea in 1926 and renamed North Miami Beach in 1931.",
+      "overlay": "NMB",
+      "badge": "100 YEARS",
+      "sub": "Centennial festival",
+      "emoji": "🎉",
+      "stats": [
+        {
+          "value": "100",
+          "label": "years"
+        },
+        {
+          "value": "1931",
+          "label": "renamed NMB"
+        }
+      ],
+      "source": "Local 10",
+      "location": {
+        "name": "North Miami Beach",
+        "lat": 25.93027778,
+        "lon": -80.16583333,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -32,
+        "heading": 40,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you doing, and what should we cover next? It’s funny how you can spend a whole night at a South Florida event and still never catch the name of the person standing next to you—that’s the kind of gap NEAR fills.",
+      "overlay": "COMMENT 👇",
+      "sub": "Tell us your pick",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -32,
+        "heading": 200
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "059-south-florida-events-this-week-free-and-"
+}
