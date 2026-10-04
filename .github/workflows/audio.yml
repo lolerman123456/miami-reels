@@ -18,12 +18,20 @@ jobs:
           IG_USER: ${{ secrets.INSTAGRAM_USER_ID }}
         run: |
           Q=$(jq -r '.query // ""' requests/audio.json)
+          if [ -n "$FB_TOKEN" ]; then
+            echo "== FB_ACCESS_TOKEN check (type: $(case "$FB_TOKEN" in EAA*) echo Facebook-Login;; IG*) echo Instagram-Login;; *) echo other;; esac))"
+            curl -s -G https://graph.facebook.com/v22.0/me --data-urlencode "fields=id,name" --data-urlencode "access_token=$FB_TOKEN" | jq -c '{me: (.name // .error.message)}' | tee -a "$GITHUB_STEP_SUMMARY"
+            curl -s -G https://graph.facebook.com/v22.0/debug_token --data-urlencode "input_token=$FB_TOKEN" --data-urlencode "access_token=$FB_TOKEN" | jq -c '.data | {valid: .is_valid, app: .application, expires: (.expires_at // 0 | if . == 0 then "never" else todate end), scopes}' | tee -a "$GITHUB_STEP_SUMMARY"
+            curl -s -G https://graph.facebook.com/v22.0/me/accounts --data-urlencode "fields=name,instagram_business_account{id,username}" --data-urlencode "access_token=$FB_TOKEN" | jq -c '[.data[]? | {page: .name, ig: .instagram_business_account}] // .error.message' | tee -a "$GITHUB_STEP_SUMMARY"
+            FBIG=$(curl -s -G https://graph.facebook.com/v22.0/me/accounts --data-urlencode "fields=instagram_business_account" --data-urlencode "access_token=$FB_TOKEN" | jq -r '[.data[]?.instagram_business_account.id | select(.)][0] // empty')
+            [ -n "$FBIG" ] && IG_USER_FB="$FBIG"
+          fi
           for name in IG_TOKEN FB_TOKEN; do
             T="${!name}"; [ -n "$T" ] || { echo "$name: not set"; continue; }
             case "$T" in IG*) KIND="Instagram-Login";; EAA*) KIND="Facebook-Login";; *) KIND="other";; esac
             for host in graph.facebook.com graph.instagram.com; do
               echo "== $name ($KIND) @ $host"
-              curl -s -G "https://$host/v22.0/ig_audio" --data-urlencode "audio_type=music" --data-urlencode "user_id=$IG_USER" \
+              curl -s -G "https://$host/v22.0/ig_audio" --data-urlencode "audio_type=music" --data-urlencode "user_id=${IG_USER_FB:-$IG_USER}" \
                 ${Q:+--data-urlencode "search_query=$Q"} --data-urlencode "access_token=$T" \
                 | jq -c 'if .error then {error: .error.message, code: .error.code} else [.data[]? | {audio_id, title, display_artist}] | .[0:15] end' | tee -a "$GITHUB_STEP_SUMMARY"
             done
