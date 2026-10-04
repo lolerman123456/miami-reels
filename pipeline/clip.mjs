@@ -149,6 +149,38 @@ const VIRAL_QUERIES = ['police release video', 'bodycam video shows', 'surveilla
   'doorbell camera video', 'road rage video', 'police chase video', 'Florida caught on camera', 'Miami caught on camera'];
 const NEWSY = /news|tv\b|\bwsvn|wplg|nbc|abc|cbs|fox|cnn|\bap\b|associated press|reuters|eyewitness|local ?\d|\d+ ?news|inside edition|wesh|wfla|wkmg|wptv|wpbf|ktla|wsb|kfor|wral|wfaa|khou|kare|wgn/i;
 const AGGREGATORS = /viralhog|storyful|jukin|newsflare|caters|rumble viral|fails|compilation|moments|top ?\d|chills|scary|accident news|한문철/i;
+// vertical 9:16 sources (owner, Oct 4: "no more blur top and bottom", "not only news — streamer clips, good viral hooks"):
+// this week's YouTube Shorts for these searches; compilations/aggregators are dropped by title
+export const SHORTS_QUERIES = ['bodycam arrest', 'police bodycam', 'dashcam', 'road rage', 'caught on camera', 'security camera', 'doorbell camera',
+  'police chase', 'Florida man', 'Miami', 'streamer moment', 'Kai Cenat stream', 'IShowSpeed stream', 'streamer caught', 'live stream gone wrong', 'wild arrest'];
+const JUNK = /compilation|ranking|top ?\d+|best .*moments|moments (ever|caught)|\b#?\d+\s*$|part \d+|incredible moments|astonishing|unbelievable moments|that seem impossible/i;
+export async function searchShorts({ queries = SHORTS_QUERIES } = {}) {
+  const out = [], seen = new Set();
+  const num = s => { const m = /([\d,.]+)\s*(K|M|thousand|million)?/i.exec(s || ''); return m ? Math.round(parseFloat(m[1].replace(/,/g, '')) * ({ k: 1e3, thousand: 1e3, m: 1e6, million: 1e6 }[String(m[2]).toLowerCase()] || 1)) : 0; };
+  for (const q of queries) {
+    try {
+      // sp = uploaded this week + type Shorts
+      const html = await (await fetch(`https://www.youtube.com/results?search_query=${encodeURIComponent(q)}&sp=EgQIAxAJ`, { headers: { 'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'en' } })).text();
+      const m = /var ytInitialData = (\{.*?\});<\/script>/s.exec(html);
+      if (!m) continue;
+      const items = [];
+      const walk = o => { if (Array.isArray(o)) o.forEach(walk); else if (o && typeof o === 'object') {
+        if (o.shortsLockupViewModel) { const s = o.shortsLockupViewModel; const t = /^(.*), ([\d.,]+ (?:thousand |million )?views?)/.exec(s.accessibilityText || '');
+          items.push({ id: s.onTap?.innertubeCommand?.reelWatchEndpoint?.videoId, title: t ? t[1] : (s.accessibilityText || '').split(', ')[0], views: num(t?.[2]), agency: '' }); }
+        if (o.videoRenderer && /^\/shorts\//.test(o.videoRenderer.navigationEndpoint?.commandMetadata?.webCommandMetadata?.url || '')) { const v = o.videoRenderer;
+          items.push({ id: v.videoId, title: v.title?.runs?.[0]?.text || '', views: num(v.viewCountText?.simpleText), agency: v.ownerText?.runs?.[0]?.text || '' }); }
+        Object.values(o).forEach(walk); } };
+      walk(JSON.parse(m[1]));
+      for (const it of items) {
+        if (!it.id || seen.has(it.id) || JUNK.test(it.title) || AGGREGATORS.test(it.agency + ' ' + it.title)) continue;
+        seen.add(it.id);
+        out.push({ ...it, agency: it.agency || 'YouTube', url: `https://www.youtube.com/shorts/${it.id}`, published: new Date().toISOString(), description: `(YouTube Short, search "${q}")`, vertical: true });
+      }
+    } catch (e) { console.log(`  (shorts "${q}": ${e.message})`); }
+  }
+  return out.sort((a, b) => b.views - a.views);
+}
+
 export async function searchViral({ queries = VIRAL_QUERIES } = {}) {
   const out = [], seen = new Set();
   const num = s => { const m = /([\d,.]+)\s*([KM])?/i.exec(s || ''); return m ? Math.round(parseFloat(m[1].replace(/,/g, '')) * ({ K: 1e3, M: 1e6 }[String(m[2]).toUpperCase()] || 1)) : 0; };
@@ -231,9 +263,9 @@ async function analyzeReel(frames, transcript, v) {
   const content = [{ type: 'text', text: `Frames from "${v.title}" (${v.agency}), each labeled with its time in seconds, plus the transcript. `
     + 'We turn the raw footage in it into a viral Instagram Reel like @onlyindade: a blurred 3 s intro with a typed hook, then the footage with a situation box on top, '
     + 'short captions at the bottom saying what is happening, and ONE freeze-frame where labels point at who is who (SUSPECT, VICTIM\'S CAR, OFFICER, DRIVER…). ' + REEL_RULES
-    + ' Pick the most hooking continuous part of the RAW footage, 12–45 s, starting right before the action. Set ok=false for cramped, crowded or far-away footage where the subjects are tiny (owner wants clear shots). Reply JSON {"ok": true|false, "why": "…", "crazy": 1-10, '
+    + ' SUBSTANCE (owner, Oct 4: a 10 s clip of kids on a bus with no reporting and no resolution is useless): the cut must tell a whole mini-story — setup, the big moment, and the payoff/resolution (the arrest, the save, the crash aftermath, the comeback) — and the context card must say how it ended; set ok=false if the footage has no clear payoff or there is under 30 s of it. Pick the most hooking continuous part of the footage, 30–60 s, starting right before the action. Streamer/creator clips are fine when something genuinely wild happens on stream (credit the streamer). Set ok=false for cramped, crowded or far-away footage where the subjects are tiny (owner wants clear shots). Reply JSON {"ok": true|false, "why": "…", "crazy": 1-10, '
     + '"start": s, "end": s, "sensitive": true if it shows violence/a crash/an injury (adds "viewer discretion is advised"), '
-    + '"hook": "≤55 chars, the typed intro title, plain words, the shock", "sub": "≤70 chars under it (where/when, or what the viewer is about to see)", '
+    + '"hook": "≤55 chars, the intro title: a specific, curiosity-gap hook that names the wild thing and makes people stay to see how it ends (e.g. \"HE TRIED TO OUTRUN 6 COP CARS ON I-95\", \"SHE DIDN\'T KNOW HER DOORBELL WAS RECORDING\") — never vague (\"WATCH THIS\", \"STUDENTS STOP A BUS\")", "sub": "≤70 chars under it (where/when, or what the viewer is about to see)", '
     + '"banner": "≤70 chars, the situation box on top, news-headline style, no emoji", '
     + '"context": "the pause-to-read card: 2–3 short plain sentences, ≤200 chars total — who (the accused may be named, a victim never), where, when, what happened and what police say (accused wording)", "captions": [{"t": seconds (absolute, inside start–end), "text": "≤45 chars"} — 2–4 of them], '
     + '"freeze": seconds (absolute) of an EARLY frame 1–3 s after your start (start the cut ~1 s before the subjects are clearly visible, but never after the main action) where the main people/vehicles are clearly visible and big, or null, '

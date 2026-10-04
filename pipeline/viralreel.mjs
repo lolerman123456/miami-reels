@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { ROOT, run, step, writeJSON } from './util.mjs';
-import { CHANNELS, STATIONS, MAINSTREAM, recentAgencyVideos, searchViral, chat, watch, ytdlpArgs } from './clip.mjs';
+import { CHANNELS, STATIONS, MAINSTREAM, recentAgencyVideos, searchViral, searchShorts, chat, watch, ytdlpArgs } from './clip.mjs';
 
 const FPS = 30;
 const SEEN = path.join(ROOT, 'state', 'clips-seen.txt');
@@ -19,6 +19,7 @@ async function pickVideos(videos, hint = '') {
     + 'helicopter footage of chases, wild arrests, crashes, road rage, rescues, animals (gators, bears), insane weather moments. Prefer high views and South Florida '
     + 'when equally good. Skip talking heads, politics, press conferences, full newscasts, anything about a dead child. '
     + 'Prefer CLEAR footage (owner, Oct 3): a few big, distinct subjects (one car, one person, one animal) — not cramped, crowded or far-away shots. '
+    + 'Streamer/creator clips count too when something wild happens on stream. It needs SUBSTANCE (owner, Oct 4): a full mini-story with a payoff (arrest, karma, save, crash, comeback) and 30 s+ of footage — skip 10-second snippets, compilations and clips with no resolution. '
     + 'It must be GENUINELY viral — something you can\'t stop watching where something big visibly happens on camera (an arrest everyone is talking about, a crash, a fight, a wild animal, a rescue); '
     + 'skip routine footage where nothing visible happens (dark chases with just taillights, parked cars, empty streets). High view counts matter. '
     + (hint ? `THIS TIME the owner wants: ${hint}. ` : '') + 'Reply JSON {"picks": [{"index": n, "why": "…"}]}' },
@@ -83,10 +84,12 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
   } else {
     const seen = new Set(fs.existsSync(SEEN) ? fs.readFileSync(SEEN, 'utf8').split('\n').map(l => l.split(/\s/)[0]) : []);
     // this week's nationally viral released footage first, then our news/agency channels
+    const shorts = await searchShorts(); // vertical 9:16 first (owner, Oct 4: no blurred top/bottom)
     const viral = await searchViral();
     const ours = await recentAgencyVideos({ days: 3, channels: [...MAINSTREAM, ...STATIONS, ...CHANNELS] });
     const ids = new Set();
-    videos = [...viral, ...ours].filter(v => !ids.has(v.id) && ids.add(v.id) && !seen.has(v.id) && !TALK.test(v.title)).slice(0, 100);
+    // vertical Shorts only when there are enough (saves downloading/checking wide news videos that would be skipped anyway)
+    videos = [...(shorts.length >= 10 ? shorts : [...shorts, ...viral, ...ours])].filter(v => !ids.has(v.id) && ids.add(v.id) && !seen.has(v.id) && !TALK.test(v.title)).slice(0, 100);
   }
   console.log(`  ${videos.length} candidates`);
   const picks = url ? [{ index: 0, why: 'owner link' }] : await pickVideos(videos, hint);
@@ -94,6 +97,7 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     const v = videos[pk.index];
     console.log(`\n  pick: [${v.agency}] ${v.title} — ${pk.why}`);
     const dir = path.join(ROOT, 'out', 'viral', `${date}-${v.id}`);
+    if (v.agency === 'YouTube') { try { v.agency = execFileSync('yt-dlp', [...ytdlpArgs(), '--skip-download', '--print', 'channel', v.url]).toString().trim() || v.agency; } catch {} } // credit the real channel/streamer
     const w = await watch(v, {}, dir, 'reel');
     const c = w?.check;
     if (!c?.ok || (!url && c.crazy < 8)) {
@@ -102,6 +106,10 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
       fs.rmSync(dir, { recursive: true, force: true });
       continue;
     }
+    // owner, Oct 4: no blurred top/bottom and nothing important cropped out — only vertical (9:16-ish) footage
+    const [rw, rh] = execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', w.raw]).toString().trim().split(',').map(Number);
+    const cw = rw * (c.crop?.w || 1), ch = rh * (c.crop?.h || 1);
+    if (!url && cw / ch > 0.8) { console.log(`  skip (not vertical: ${Math.round(cw)}x${Math.round(ch)})`); fs.appendFileSync(SEEN, `${v.id}  reel-wide\n`); fs.rmSync(dir, { recursive: true, force: true }); continue; }
     let start = Math.max(0, Math.min(w.total - 5, +c.start || 0));
     // second, precise pass: frames every 0.5 s around the pick → keep only the stretch of RAW footage (no graphics/anchor/studio)
     const rf = await refineCut(w.raw, dir, start, Math.min(w.total, +c.end || start + 30), w.total, c);
@@ -109,9 +117,9 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     // owner, Oct 3: the who's-who freeze goes at the BEGINNING — start the cut ~1 s before the freeze frame
     // the who's-who freeze only if it falls in the first ~3.5 s of the cut — never move the cut (that once skipped the crash itself)
     if (c.freeze != null && (c.freeze - start > 3.5 || c.freeze - start < 0.5)) { console.log(`  (freeze @${c.freeze}s not at the start of the cut — no freeze)`); c.freeze = null; }
-    const end = Math.min(w.total, Math.max(start + 6, +c.end || start + 30), start + 45);
-    // Oct 3 8pm: a 7 s cut went out (11 s Reel with the intro) — too short to be worth watching; try the next video
-    if (end - start < 10) { console.log(`  skip (only ${(end - start).toFixed(1)} s of raw footage)`); continue; }
+    const end = Math.min(w.total, Math.max(start + 6, +c.end || start + 40), start + 60);
+    // Oct 3 8pm: a 7 s cut went out; owner Oct 4: at least 30 s with a payoff (11 s Reel with the intro) — too short to be worth watching; try the next video
+    if (end - start < 30 && !url) { console.log(`  skip (only ${(end - start).toFixed(1)} s of footage — owner wants 30 s+ with a payoff)`); fs.appendFileSync(SEEN, `${v.id}  reel-short\n`); fs.rmSync(dir, { recursive: true, force: true }); continue; }
     console.log(`  crazy ${c.crazy}/10 · cut ${start}–${end} s · ${c.fill ? `full 9:16 (focus ${c.focusX})` : 'blurred top/bottom'} · ${c.hook}`);
 
     step('Cutting');
@@ -137,7 +145,8 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     const intro = c.context ? 84 : 45; // owner, Oct 3: fast — no warning card, story card ~2.8 s
     const props = {
       durationInFrames: intro + clipFrames + (freeze ? freeze.hold : 0), video: 'clip.mp4', videoW: vw, videoH: vh, clipFrames,
-      fill: !!c.fill && vw / vh <= 1.3, focusX: Number.isFinite(+c.focusX) ? Math.min(1, Math.max(0, +c.focusX)) : 0.5,
+      // vertical footage always fills the screen (owner, Oct 4: no blurred top/bottom)
+      fill: vw / vh <= 0.8 || (!!c.fill && vw / vh <= 1.3), focusX: Number.isFinite(+c.focusX) ? Math.min(1, Math.max(0, +c.focusX)) : 0.5,
       intro: { frames: intro, warning: false, title: c.hook || v.title, sub: c.sub || '', context: String(c.context || '').slice(0, 240) },
       banner: c.banner || '', freeze, credit: `Video: ${v.agency}`,
       captions: (c.captions || []).filter(x => x.t >= start && x.t < end).map(x => ({ at: Math.round((x.t - start) * FPS), text: String(x.text) })),
