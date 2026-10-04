@@ -1,0 +1,229 @@
+{
+  "title": "Top 5 South Florida Nightlife Picks and What to Wear",
+  "sources": [
+    "Shotgun",
+    "Wikipedia E11EVEN",
+    "Wikipedia LIV",
+    "Wikipedia Bayside Marketplace",
+    "Florida Atlantic University",
+    "University of Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Necrodanse is the Halloween party pick, E11EVEN and LIV are the club picks, and PIER 5 brings the waterfront option.\nFor costumes: vampire, devil, angel, bunny, cowgirl, firefighter, or anything built for photos and walking.\nWhich one would you actually go to?\n\nSources: Shotgun, Wikipedia E11EVEN, Wikipedia LIV, Wikipedia Bayside Marketplace, Florida Atlantic University, University of Miami\n\n#MiamiHalloween #SouthFloridaEvents #MiamiNightlife #HalloweenPartyGuide",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "TOP 5 SOUTH FLORIDA NIGHTLIFE PICKS + WHAT TO WEAR TO EACH",
+      "overlay": [
+        "TOP 5",
+        "NIGHTLIFE"
+      ],
+      "emojis": [
+        "🎃",
+        "👻",
+        "🪩",
+        "🧛"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7847,
+        "lon": -80.1935,
+        "h": 120
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number five is Necrodanse Halloween Party in Miami. The listing comes from Shotgun for 2026. Wear vampire, black angel, or full gothic devil.",
+      "caption": "Number 5 is Necrodanse Halloween Party in Miami. The listing comes from Shotgun for 2026. Wear vampire, black angel, or full gothic devil.",
+      "overlay": "NECRODANSE",
+      "badge": "2026",
+      "sub": "Miami Halloween party",
+      "emoji": "🧛",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "Event year"
+        }
+      ],
+      "source": "Shotgun",
+      "location": {
+        "name": "Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number four is E11EVEN in downtown Miami. It opened on February 5, 2014, and runs as a 24-hour ultraclub near Club Space. Wear sexy cop, devil, or firefighter. Comfortable shoes count as planning.",
+      "caption": "Number 4 is E11EVEN in downtown Miami. It opened on February 5, 2014, and runs as a 24-hour ultraclub near Club Space. Wear sexy cop, devil, or firefighter. Comfortable shoes count as planning.",
+      "overlay": "E11EVEN",
+      "badge": "OPENED 2014",
+      "sub": "24-hour ultraclub",
+      "emoji": "🚨",
+      "stats": [
+        {
+          "value": "2014",
+          "label": "Opened"
+        },
+        {
+          "value": "24 HRS",
+          "label": "Club format"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "E11EVEN Miami",
+        "lat": 25.7847,
+        "lon": -80.1935,
+        "h": 100
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 40,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number three is LIV at the Fontainebleau Miami Beach. LIV opened in 2008, and the Miami room has 19,000 square feet under an 80-foot dome. Wear angel, bunny, or a chrome cowgirl look. If you're at LIV, open NEAR after—see who else was under that dome.",
+      "caption": "Number 3 is LIV at the Fontainebleau Miami Beach. LIV opened in 2008, and the Miami room has 19,000 square feet under an 80-foot dome. Wear angel, bunny, or a chrome cowgirl look. If you're at LIV, open NEAR after—see who else was under that dome.",
+      "overlay": "LIV",
+      "badge": "19,000 SQ FT",
+      "sub": "Fontainebleau club",
+      "emoji": "😇",
+      "stats": [
+        {
+          "value": "19,000",
+          "label": "Square feet"
+        },
+        {
+          "value": "80 FT",
+          "label": "Dome height"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "LIV Miami",
+        "lat": 25.8177,
+        "lon": -80.1229,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 115,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number two is PIER 5 at Bayside Marketplace. Bayside opened on April 8, 1987, and PIER 5 opened in January 2024 with DJs and live performances. Wear sailor, mermaid, or cowgirl by the bay.",
+      "caption": "Number 2 is PIER 5 at Bayside Marketplace. Bayside opened on April 8, 1987, and PIER 5 opened in January 2024 with DJs and live performances. Wear sailor, mermaid, or cowgirl by the bay.",
+      "overlay": "PIER 5",
+      "badge": "OPENED 2024",
+      "sub": "Bayside waterfront",
+      "emoji": "🧜",
+      "stats": [
+        {
+          "value": "1987",
+          "label": "Bayside opened"
+        },
+        {
+          "value": "2024",
+          "label": "PIER 5 opened"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "Bayside Marketplace",
+        "lat": 25.77831,
+        "lon": -80.186452,
+        "h": 70
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -30,
+        "heading": 260,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "And number one is FAU’s Night of the Giving Dead. Florida Atlantic listed the Halloween costume party as a benefit for student scholarships. Go nurse, angel, devil, or firefighter. The costume does some good this time.",
+      "caption": "And number 1 is FAU’s Night of the Giving Dead. Florida Atlantic listed the Halloween costume party as a benefit for student scholarships. Go nurse, angel, devil, or firefighter. The costume does some good this time.",
+      "overlay": "FAU PARTY",
+      "badge": "SCHOLARSHIPS",
+      "sub": "Costume benefit party",
+      "emoji": "🎓",
+      "stats": [
+        {
+          "value": "2025",
+          "label": "Listed by FAU"
+        }
+      ],
+      "source": "Florida Atlantic University",
+      "location": {
+        "name": "Florida Atlantic University",
+        "lat": 26.3723,
+        "lon": -80.1028,
+        "h": 40
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -30,
+        "heading": 20,
+        "degrees": 75,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one gets your costume this year, and what should we cover next? If you spotted someone across the room and never learned their name, NEAR is the app that shows you who crossed paths with you that night.",
+      "overlay": "PICK ONE 🎃",
+      "sub": "Drop your costume plan",
+      "location": {
+        "name": "South Florida",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 120
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -32,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "056-top-5-south-florida-nightlife-picks-and-"
+}
