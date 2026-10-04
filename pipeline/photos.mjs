@@ -119,6 +119,9 @@ function aiBudgetLeft() {
   return Number(process.env.AI_IMAGES_PER_DAY ?? 10) - usedToday; // ~1–2¢ each (gpt-image-1-mini): cheap next to the text calls; real photos + stock still go first
 }
 
+// AI picture for a Reel scene (owner, Oct 4: costume photos in the Halloween Reel) — same budget file as carousels
+export async function aiImage(description, dir, name) { return aiPhoto(description, dir, name); }
+
 async function aiPhoto(description, dir, name) {
   if (!process.env.OPENAI_API_KEY) return null;
   const prompt = `${description}. Eye-catching photorealistic editorial photo that stops the scroll: vivid saturated color, bright light (golden hour, neon or strong sun, never dull or gray), bold close or low angle, a clear striking subject with something happening, cinematic depth, South Florida setting when relevant. ` +
