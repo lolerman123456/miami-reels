@@ -1,0 +1,81 @@
+{
+  "sector": "EDUCATION",
+  "cover": {
+    "top": "KEN GRIFFIN IS BRINGING A",
+    "main": "CARNEGIE MELLON CAMPUS",
+    "highlight": "TO MIAMI",
+    "bottom": "SOUTH FLORIDA",
+    "blur": false,
+    "photo": {
+      "query": "Wynwood Miami skyline construction cranes dramatic photo",
+      "prompt": "dramatic aerial photo of Wynwood in Miami with construction cranes, colorful murals, and downtown towers in the distance"
+    },
+    "emojis": [
+      "🎓",
+      "🏗️",
+      "💻"
+    ],
+    "logos": [
+      "cmu.edu"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Bisnow",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EDUCATION",
+      "headline": "The billionaire’s Carnegie Mellon campus is coming to South Florida",
+      "highlight": "coming to South Florida",
+      "body": "Miami Herald reported that Ken Griffin is backing a new Carnegie Mellon campus in Miami.",
+      "place": "Miami",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Wynwood Miami construction cranes dramatic street scene",
+        "prompt": "low-angle photo of Wynwood construction cranes rising above mural-covered warehouse buildings with Miami towers behind them"
+      },
+      "color": "#C41230",
+      "emoji": "🎓",
+      "chip": "MIAMI",
+      "logo": "cmu.edu",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Bisnow",
+      "logoFile": null
+    },
+    {
+      "tag": "EDUCATION",
+      "headline": "The campus is planned for Wynwood",
+      "highlight": "Wynwood",
+      "body": "The Real Deal said the campus plan centers on Wynwood, with Griffin’s investment reshaping the neighborhood.",
+      "place": "Wynwood",
+      "source": "The Real Deal",
+      "photo": {
+        "query": "Wynwood Walls Miami murals street photo",
+        "prompt": "striking street photo of Wynwood Walls murals, warehouse facades, and pedestrians under bright daylight"
+      },
+      "color": "#C41230",
+      "emoji": "🏗️",
+      "chip": "WYNWOOD",
+      "logo": "cmu.edu",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Bisnow",
+      "logoFile": null
+    }
+  ],
+  "caption": "Ken Griffin is backing a Carnegie Mellon campus in Miami, with Wynwood at the center of the plan.\nIt could add a major education and tech foothold in South Florida.",
+  "hashtags": [
+    "#WynwoodMiami",
+    "#CarnegieMellon"
+  ],
+  "collaborators": [],
+  "igCaption": "Ken Griffin is backing a Carnegie Mellon campus in Miami, with Wynwood at the center of the plan.\nIt could add a major education and tech foothold in South Florida.\n\n📰 Sources: Miami Herald, The Real Deal, The Business Journals, Wikipedia, Sun Sentinel\n\n🎥 Video: WSVN 7News\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#WynwoodMiami #CarnegieMellon #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-04",
+  "id": "2026-10-04-brief",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "WSVN 7News",
+    "url": "https://www.youtube.com/watch?v=rqvvmZYTfF4"
+  }
+}
