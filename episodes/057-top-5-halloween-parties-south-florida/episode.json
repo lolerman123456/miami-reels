@@ -68,7 +68,13 @@
         "prompts": [
           "Styled product flat lay of two matching women's sexy police officer Halloween costumes and two red devil costumes with horns, laid out on a dark bar counter with neon purple and orange light, no people"
         ],
-        "at": 0.5
+        "at": 0.5,
+        "files": [
+          {
+            "file": "photos/scene-1-ai0.png",
+            "credit": "AI image"
+          }
+        ]
       }
     },
     {
@@ -98,7 +104,13 @@
         "prompts": [
           "Fashion product photo of a black angel Halloween costume with black feathered wings and a black corset dress on a mannequin, on a rooftop at night with a glowing city skyline behind, no people"
         ],
-        "at": 0.5
+        "at": 0.5,
+        "files": [
+          {
+            "file": "photos/scene-2-ai0.png",
+            "credit": "AI image"
+          }
+        ]
       }
     },
     {
@@ -112,8 +124,8 @@
       "source": "Wicked Manors / Pride Center",
       "location": {
         "name": "Wilton Drive, Wilton Manors",
-        "lat": 26.1590,
-        "lon": -80.1360,
+        "lat": 26.159,
+        "lon": -80.136,
         "h": 10
       },
       "shot": {
@@ -128,7 +140,13 @@
         "prompts": [
           "Product photo of an ornate gold and black Venetian masquerade mask with feathers and a dramatic red masquerade gown on a mannequin, festive street lights bokeh behind, no people"
         ],
-        "at": 0.5
+        "at": 0.5,
+        "files": [
+          {
+            "file": "photos/scene-3-ai0.png",
+            "credit": "AI image"
+          }
+        ]
       }
     },
     {
@@ -143,7 +161,7 @@
       "location": {
         "name": "Factory Town, 4800 NW 37th Ave",
         "lat": 25.8186,
-        "lon": -80.2630,
+        "lon": -80.263,
         "h": 10
       },
       "shot": {
@@ -158,7 +176,13 @@
         "prompts": [
           "Product flat lay of a rave Halloween outfit: pink bunny ears headband, sparkly rhinestone bodysuit, white cowgirl hat and silver cowboy boots, on a dark floor lit by colorful festival lasers, no people"
         ],
-        "at": 0.5
+        "at": 0.5,
+        "files": [
+          {
+            "file": "photos/scene-4-ai0.png",
+            "credit": "AI image"
+          }
+        ]
       }
     },
     {
@@ -188,7 +212,13 @@
         "prompts": [
           "Product photo of a women's sexy police officer Halloween costume: black fitted mini dress with a badge, police hat, aviator sunglasses and toy handcuffs, on a mannequin in front of a colorful Wynwood-style graffiti mural at night, no people"
         ],
-        "at": 0.5
+        "at": 0.5,
+        "files": [
+          {
+            "file": "photos/scene-5-ai0.png",
+            "credit": "AI image"
+          }
+        ]
       }
     },
     {
