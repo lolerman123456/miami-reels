@@ -1,0 +1,74 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "POLICE SAY",
+    "main": "HE WAS HELD WITHOUT BOND ON SECOND-DEGREE MURDER AND ATTEMPTED MURDER CHARGES",
+    "highlight": "DOUBLE SHOOTING",
+    "bottom": "AFTER A DOUBLE SHOOTING IN POMPANO BEACH",
+    "blur": false,
+    "photo": {
+      "query": "Broward County courthouse Fort Lauderdale exterior night police lights",
+      "prompt": "dramatic low-angle photo of the Broward County courthouse at night with red and blue police lights reflecting on wet pavement",
+      "mark": "stamp: HELD NO BOND"
+    },
+    "emojis": [
+      "🚨",
+      "⚖️",
+      "🎲"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Local 10",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Rau Davis appeared in court Sunday",
+      "highlight": "held without bond",
+      "body": "Local 10 reported Davis faces second-degree murder and attempted murder charges after the Pompano Beach shooting.",
+      "place": "Pompano Beach",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Broward County courthouse Fort Lauderdale exterior police lights",
+        "prompt": "tight dramatic photo of a courthouse entrance with Broward sheriff vehicles outside and police lights across the steps"
+      },
+      "emoji": "⚖️",
+      "chip": "OCT 4",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: WSVN 7News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The shooting left 1 man dead and 1 injured",
+      "highlight": "1 dead",
+      "body": "BSO said the double shooting happened in Pompano Beach and left another person wounded.",
+      "place": "Pompano Beach",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Broward Sheriff Office vehicle crime scene tape night Florida",
+        "prompt": "crime scene tape across a Pompano Beach street at night with Broward sheriff lights flashing in the background"
+      },
+      "emoji": "🚔",
+      "chip": "1 DEAD",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: CBS News"
+    }
+  ],
+  "caption": "Police say a Pompano Beach gambling dispute ended in a double shooting that left 1 person dead and another injured. Rau Davis was ordered held without bond Sunday.\n\nWhat happens next in court will follow the bond ruling.",
+  "hashtags": [
+    "#PompanoBeach",
+    "#BrowardCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say a Pompano Beach gambling dispute ended in a double shooting that left 1 person dead and another injured. Rau Davis was ordered held without bond Sunday.\n\nWhat happens next in court will follow the bond ruling.\n\n📰 Sources: WPLG Local 10, Miami Herald, NBC 6 South Florida\n\n🎥 Video: WPLG Local 10\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#PompanoBeach #BrowardCounty #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-04",
+  "id": "2026-10-04-news-19",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "WPLG Local 10",
+    "url": "https://www.youtube.com/watch?v=c16Gh3CA668"
+  }
+}
