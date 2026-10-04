@@ -1,10 +1,4 @@
 {
-  "items": [
-    {
-      "label": "059-south-florida-events-this-week-free-and-",
-      "video": "https://github.com/lolerman123456/miami-reels/releases/download/videos/059-south-florida-events-this-week-free-and-.mp4",
-      "text": "Free and cheap things to do in South Florida this week 🌻 save this for the weekend #SouthFlorida #ThingsToDo #FreeEvents #MiamiEvents",
-      "at": "2026-10-04T14:30:00-04:00"
-    }
-  ]
+  "clearPending": true,
+  "items": []
 }
