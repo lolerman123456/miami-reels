@@ -1,0 +1,30 @@
+name: Instagram audio check
+
+# Lists trending / searched Instagram Reel audio via the Audio API (no posting). Trigger: push requests/audio.json.
+on:
+  push:
+    branches: [main]
+    paths: ['requests/audio.json']
+  workflow_dispatch:
+
+jobs:
+  audio:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - env:
+          IG_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          FB_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+          IG_USER: ${{ secrets.INSTAGRAM_USER_ID }}
+        run: |
+          Q=$(jq -r '.query // ""' requests/audio.json)
+          for name in IG_TOKEN FB_TOKEN; do
+            T="${!name}"; [ -n "$T" ] || { echo "$name: not set"; continue; }
+            case "$T" in IG*) KIND="Instagram-Login";; EAA*) KIND="Facebook-Login";; *) KIND="other";; esac
+            for host in graph.facebook.com graph.instagram.com; do
+              echo "== $name ($KIND) @ $host"
+              curl -s -G "https://$host/v22.0/ig_audio" --data-urlencode "audio_type=music" --data-urlencode "user_id=$IG_USER" \
+                ${Q:+--data-urlencode "search_query=$Q"} --data-urlencode "access_token=$T" \
+                | jq -c 'if .error then {error: .error.message, code: .error.code} else [.data[]? | {audio_id, title, display_artist}] | .[0:15] end' | tee -a "$GITHUB_STEP_SUMMARY"
+            done
+          done
