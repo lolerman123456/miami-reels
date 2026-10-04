@@ -1,0 +1,103 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "MASSACHUSETTS REPORT",
+    "main": "LINKS CHILD SEX CHARGES TO A",
+    "highlight": "REPORT",
+    "bottom": "AGAINST A 22-YEAR-OLD LOCAL",
+    "blur": false,
+    "photo": {
+      "query": "Palm Beach County Sheriff's Office patrol car Florida night",
+      "prompt": "dramatic night photo of a Palm Beach County sheriff patrol car outside an official building, blue lights reflecting on wet pavement, no people visible",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚔",
+      "⚖️",
+      "📍"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Michael Kagdis / CC BY-SA 3.0",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "A 22-year-old Palm Beach Gardens man was charged",
+      "highlight": "was charged",
+      "body": "Hoodline reported Sunday that the child sex abuse case is tied to a Massachusetts report.",
+      "place": "Palm Beach Gardens",
+      "source": "Hoodline",
+      "photo": {
+        "query": "Palm Beach Gardens Florida police car night",
+        "prompt": "dramatic photo of a police cruiser near a Palm Beach Gardens street sign at night, blue lights visible, no people"
+      },
+      "emoji": "🚔",
+      "chip": "AGE 22",
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Globetrotter19 / CC BY-SA 3.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "PBSO says he faces child sex abuse charges",
+      "highlight": "child sex abuse",
+      "body": "WPBF reported Sunday that the Palm Beach Gardens man faces child sex abuse charges, according to PBSO.",
+      "place": "Palm Beach County",
+      "source": "WPBF",
+      "photo": {
+        "query": "Palm Beach County Sheriff's Office headquarters Florida",
+        "prompt": "close dramatic photo of a sheriff office sign and patrol vehicle lights outside an official building, no people visible"
+      },
+      "emoji": "⚖️",
+      "chip": "PBSO SAYS",
+      "logo": "pbso.org",
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Farragutful / CC BY-SA 4.0",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case is tied to a Massachusetts report",
+      "highlight": "Massachusetts report",
+      "body": "The reported link reaches across state lines, but the headlines do not name the Massachusetts agency, city or date.",
+      "place": "Massachusetts",
+      "source": "Hoodline",
+      "photo": {
+        "query": "Massachusetts State Police cruiser Boston night",
+        "prompt": "dramatic photo of a Massachusetts police cruiser near a government building at night, blue emergency lights, no people visible"
+      },
+      "emoji": "🗺️",
+      "chip": "MASS. LINK",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: TUFKAAP / CC BY-SA 4.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Palm Beach Gardens is the local end of the case",
+      "highlight": "local end",
+      "body": "Palm Beach Gardens sits in Palm Beach County, about 80 miles north of Miami.",
+      "place": "Palm Beach Gardens",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Palm Beach Gardens Florida aerial city streets",
+        "prompt": "high-contrast aerial photo of Palm Beach Gardens roads and neighborhoods under storm clouds, no people visible"
+      },
+      "emoji": "📍",
+      "chip": "80 MI",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Farragutful / CC BY-SA 4.0"
+    }
+  ],
+  "caption": "A 22-year-old Palm Beach Gardens man was charged in a child sex abuse case tied to a Massachusetts report.\nThe headlines point to the charge, the local defendant and the cross-state link.",
+  "hashtags": [
+    "#PalmBeachGardens",
+    "#PalmBeachCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "A 22-year-old Palm Beach Gardens man was charged in a child sex abuse case tied to a Massachusetts report.\nThe headlines point to the charge, the local defendant and the cross-state link.\n\n📰 Sources: Hoodline, WPBF, Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#PalmBeachGardens #PalmBeachCounty #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-04",
+  "id": "2026-10-04-news-14"
+}
