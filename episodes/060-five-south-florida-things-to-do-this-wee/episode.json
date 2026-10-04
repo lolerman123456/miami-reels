@@ -1,0 +1,224 @@
+{
+  "title": "Five South Florida things to do this week",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami",
+    "Florida Weekly",
+    "Haute Living",
+    "Wikipedia"
+  ],
+  "collaborators": [],
+  "igCaption": "Start with the free and cheaper picks this week: James Turrell at Superblue, king tide parking help, and late-night Brightline trains after Kaseya Center shows.\nPartners Pink Run is October 10, and Habibi Miami is marking two years on the Miami River.\nWhich one are you doing this week?\n\nSources: Miami New Times, Secret Miami, Florida Weekly, Haute Living, Wikipedia\n\n#MiamiEvents #SouthFlorida #ThingsToDoMiami #MiamiGuide",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need something to do this week without paying for a ticket? Start with these five.",
+      "overlay": [
+        "THIS WEEK",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🎟️",
+        "🚆",
+        "🎨",
+        "🌊"
+      ],
+      "location": {
+        "name": "Superblue Miami",
+        "lat": 25.8026,
+        "lon": -80.2127,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number five: James Turrell’s “Blue Sea Sky” is at Superblue Miami on Northwest Twenty-Third Street. Access requires a complimentary on-site reservation, first come, first served. The room-sized work was created for the immersive art space.",
+      "caption": "Number 5: James Turrell’s “Blue Sea Sky” is at Superblue Miami on NW 23rd St. Access requires a complimentary on-site reservation, first come, first served. The room-sized work was created for the immersive art space.",
+      "overlay": "SUPERBLUE",
+      "badge": "FREE RSVP",
+      "sub": "NW 23rd Street",
+      "emoji": "🎨",
+      "stats": [
+        {
+          "value": "FREE",
+          "label": "reservation"
+        },
+        {
+          "value": "1ST",
+          "label": "come served"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Superblue Miami",
+        "lat": 25.8026,
+        "lon": -80.2127,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number four: check Miami’s 2026 king tide guide before you park near the water. Secret Miami has the season dates, flood zones, and where to park for free.",
+      "caption": "Number 4: check Miami’s 2026 king tide guide before you park near the water. Secret Miami has the season dates, flood zones, and where to park for free.",
+      "overlay": "KING TIDES",
+      "badge": "FREE PARKING",
+      "sub": "Flood zones guide",
+      "emoji": "🌊",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "season guide"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Brickell Bay Drive",
+        "lat": 25.7595,
+        "lon": -80.1902,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -35,
+        "heading": 88,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number three: Brightline late-night trains are running after scheduled Kaseya Center concerts through the end of the year. This week has Don Omar on October fourth, Jonas Brothers on October fifth, and Camilo on October ninth. If you take Brightline, check NEAR to see who rode over too.",
+      "caption": "Number 3: Brightline late-night trains are running after scheduled Kaseya Center concerts through the end of the year. This week has Don Omar on Oct. 4, Jonas Brothers on Oct. 5, and Camilo on Oct. 9. If you take Brightline, check NEAR to see who rode over too.",
+      "overlay": "KASEYA CENTER",
+      "badge": "LATE TRAINS",
+      "sub": "After arena shows",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "15+",
+          "label": "concerts"
+        },
+        {
+          "value": "OCT 9",
+          "label": "Camilo"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.7814,
+        "lon": -80.187,
+        "h": 70
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 250,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number two: register for the Partners Pink Run on October tenth. Florida Weekly says registration is open now.",
+      "caption": "Number 2: register for the Partners Pink Run on Oct. 10. Florida Weekly says registration is open now.",
+      "overlay": "PINK RUN",
+      "badge": "OCT 10",
+      "sub": "Registration open",
+      "emoji": "🏃",
+      "stats": [
+        {
+          "value": "OCT 10",
+          "label": "run date"
+        }
+      ],
+      "source": "Florida Weekly",
+      "location": {
+        "name": "Downtown Fort Lauderdale",
+        "lat": 26.1224,
+        "lon": -80.1373,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -30,
+        "heading": 18,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "And number one: Habibi Miami is celebrating its second anniversary with a Marrakech Souk on the Miami River. The party marks two years since it opened.",
+      "caption": "And number 1: Habibi Miami is celebrating its second anniversary with a Marrakech Souk on the Miami River. The party marks two years since it opened.",
+      "overlay": "HABIBI MIAMI",
+      "badge": "2 YEARS",
+      "sub": "Miami River event",
+      "emoji": "🛶",
+      "stats": [
+        {
+          "value": "2",
+          "label": "anniversary"
+        }
+      ],
+      "source": "Haute Living",
+      "location": {
+        "name": "Habibi Miami",
+        "lat": 25.7717,
+        "lon": -80.1977,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 305,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you doing, and what should we cover next? And if one of those spots leaves you wondering who that person was you kept passing but never met, NEAR shows you the people who walked past you.",
+      "overlay": "WHAT'S NEXT? 👇",
+      "sub": "Tell us in the comments",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1900,
+        "pitch": -32,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "060-five-south-florida-things-to-do-this-wee"
+}
