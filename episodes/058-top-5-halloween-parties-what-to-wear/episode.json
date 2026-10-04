@@ -1,0 +1,219 @@
+{
+  "title": "Top 5 Halloween Parties in South Florida + What to Wear",
+  "format": "EVENTS / GUIDE",
+  "music": true,
+  "tiktok": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "sources": [
+    "Eventbrite",
+    "Factory Town",
+    "Wicked Manors / Pride Center"
+  ],
+  "collaborators": [],
+  "igCaption": "Top 5 Halloween parties in South Florida + what to wear to each 🎃 (yes, the flamingo squad is mandatory)\n\n5. Halloween Bar Crawl, Barsecco (Brickell), Sat 10/31, 4–10pm, 21+\n4. Haunted W Miami Rooftop, 485 Brickell Ave, 9pm–2am\n3. Wicked Manors, Wilton Drive, 6–11pm, \"Masquerade of Mayhem\"\n2. Hocus Pocus at Factory Town, Oct 30–Nov 1, 18+, from $65\n1. HalloWYN, Wynwood Marketplace, FREE, 7pm–3am\n\nTag who you're matching costumes with 👀\n\nSources: Eventbrite, Factory Town, Wicked Manors\n\n#SouthFloridaHalloween #HalloweenParty #SouthFloridaEvents #HalloweenCostume",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Top five Halloween parties in South Florida. And exactly what to wear to each one.",
+      "overlay": [
+        "TOP 5 HALLOWEEN PARTIES",
+        "+ WHAT TO WEAR 🎃"
+      ],
+      "emojis": [
+        "🎃",
+        "😈",
+        "👮‍♀️",
+        "🐰"
+      ],
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.7997,
+        "lon": -80.1996,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number five. The Halloween Bar Crawl starts at Barsecco in Brickell. Saturday, October thirty-first, four to ten p.m. Twenty-one and up. Wear a group costume. The whole squad as inflatable flamingos. Nobody loses you in the crowd.",
+      "caption": "Number five. The Halloween Bar Crawl starts at Barsecco in Brickell. Saturday, Oct. 31, 4 to 10 p.m. 21 and up. Wear a group costume. The whole squad as inflatable flamingos. Nobody loses you in the crowd.",
+      "overlay": "HALLOWEEN BAR CRAWL",
+      "badge": "21+ · 4–10PM",
+      "sub": "Barsecco, Brickell · Sat 10/31",
+      "emoji": "🍻",
+      "source": "Eventbrite",
+      "location": {
+        "name": "Barsecco, 1421 S Miami Ave",
+        "lat": 25.7601,
+        "lon": -80.1937,
+        "h": 30
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1400,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      },
+      "photos": {
+        "prompts": [
+          "four matching inflatable pink flamingo full-body Halloween costumes with heart-shaped sunglasses, standing in a row like a squad"
+        ],
+        "at": 0.35,
+        "style": "float"
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number four. The Haunted W Miami rooftop party. Fifteen floors up on Brickell Avenue, nine p.m. to two a.m. Wear a disco-ball devil. Mirror sequins, light-up horns. You'll outshine the skyline.",
+      "caption": "Number four. The Haunted W Miami rooftop party. 15 floors up on Brickell Avenue, 9 p.m. to 2 a.m. Wear a disco-ball devil. Mirror sequins, light-up horns. You'll outshine the skyline.",
+      "overlay": "HAUNTED W ROOFTOP",
+      "badge": "9PM–2AM",
+      "sub": "W Miami, 485 Brickell Ave",
+      "emoji": "🌃",
+      "source": "Eventbrite",
+      "location": {
+        "name": "W Miami, 485 Brickell Ave",
+        "lat": 25.7692,
+        "lon": -80.1894,
+        "h": 60
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1600,
+        "pitch": -30,
+        "heading": 200,
+        "degrees": 70,
+        "dir": 1
+      },
+      "photos": {
+        "prompts": [
+          "a women's devil Halloween costume covered head to toe in mirrored disco-ball sequins, glowing red LED horns and a sparkly pitchfork tail, on an invisible mannequin"
+        ],
+        "at": 0.35,
+        "style": "float"
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number three. Wicked Manors. Wilton Drive shuts down for the biggest Halloween street party in the Southeast. Six to eleven p.m. This year's theme is Masquerade of Mayhem. Go huge. A six-foot peacock masquerade look. If you go, open NEAR and see who else is on the street with you.",
+      "caption": "Number three. Wicked Manors. Wilton Drive shuts down for the biggest Halloween street party in the Southeast. 6 to 11 p.m. This year's theme is Masquerade of Mayhem. Go huge. A 6-foot peacock masquerade look. If you go, open NEAR and see who else is on the street with you.",
+      "overlay": "WICKED MANORS",
+      "badge": "6–11PM",
+      "sub": "Wilton Drive, Wilton Manors",
+      "emoji": "🎭",
+      "source": "Wicked Manors / Pride Center",
+      "location": {
+        "name": "Wilton Drive, Wilton Manors",
+        "lat": 26.159,
+        "lon": -80.136,
+        "h": 10
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 160,
+        "degrees": 70,
+        "dir": 1
+      },
+      "photos": {
+        "prompts": [
+          "an over-the-top peacock masquerade costume: a giant six-foot fan of iridescent peacock feathers, a jeweled gold masquerade mask and a dramatic teal ball gown, on an invisible mannequin"
+        ],
+        "at": 0.35,
+        "style": "float"
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number two. Hocus Pocus at Factory Town. Three days, five stages, Eric Prydz headlining. October thirtieth to November first. Eighteen and up, single days from sixty-five dollars. Wear the inflatable alien abducting you. It's a rave, nobody will question it. Just skip the cop costume. They ban anything that looks like law enforcement.",
+      "caption": "Number two. Hocus Pocus at Factory Town. 3 days, 5 stages, Eric Prydz headlining. Oct. 30 to Nov. 1. 18 and up, single days from $65. Wear the inflatable alien abducting you. It's a rave, nobody will question it. Just skip the cop costume. They ban anything that looks like law enforcement.",
+      "overlay": "HOCUS POCUS",
+      "badge": "FROM $65",
+      "sub": "Factory Town · Oct 30–Nov 1",
+      "emoji": "🎧",
+      "source": "Factory Town",
+      "location": {
+        "name": "Factory Town, 4800 NW 37th Ave",
+        "lat": 25.8186,
+        "lon": -80.263,
+        "h": 10
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 70,
+        "dir": 1
+      },
+      "photos": {
+        "prompts": [
+          "an inflatable 'alien abduction' illusion Halloween costume: a big green cartoon alien carrying a person under its arm, with glowing rave glow sticks"
+        ],
+        "at": 0.35,
+        "style": "float"
+      }
+    },
+    {
+      "kind": "item",
+      "text": "And number one. HalloWYN in Wynwood. It's free. Saturday night, seven p.m. to three a.m. at Wynwood Marketplace. RSVP and your first drink is free. Wear the cop costume, Miami Vice edition. Neon pink, giant fake mustache, toy handcuffs.",
+      "caption": "And number one. HalloWYN in Wynwood. It's free. Saturday night, 7 p.m. to 3 a.m. at Wynwood Marketplace. RSVP and your first drink is free. Wear the cop costume, Miami Vice edition. Neon pink, giant fake mustache, toy handcuffs.",
+      "overlay": "HALLOWYN",
+      "badge": "FREE",
+      "sub": "Wynwood Marketplace · 7PM–3AM",
+      "emoji": "👮‍♀️",
+      "source": "Eventbrite",
+      "location": {
+        "name": "Wynwood Marketplace, 2250 NW 2nd Ave",
+        "lat": 25.7997,
+        "lon": -80.1996,
+        "h": 15
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 220,
+        "degrees": 70,
+        "dir": 1
+      },
+      "photos": {
+        "prompts": [
+          "a neon pink 1980s Miami Vice style women's police officer Halloween costume: pink fitted uniform dress with a gold badge, police cap, aviator sunglasses, an oversized fake mustache on a stick and fluffy pink toy handcuffs, on an invisible mannequin"
+        ],
+        "at": 0.35,
+        "style": "float"
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which party are you hitting? Tag who you're matching costumes with. And if you lock eyes with someone and never get their name, that's exactly what NEAR is for.",
+      "overlay": "WHICH ONE? 🎃",
+      "sub": "Tag your costume partner",
+      "location": {
+        "name": "South Florida",
+        "lat": 25.95,
+        "lon": -80.2,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 240
+      }
+    }
+  ],
+  "id": "058-top-5-halloween-parties-what-to-wear"
+}

@@ -124,6 +124,7 @@ const PhotoReel: React.FC<{ scene: Scene }> = ({ scene }) => {
   const frame = useCurrentFrame();
   const { files, at, style } = scene.photos!;
   if (style === 'fast') return <FastPhotos scene={scene} />;
+  if (style === 'float') return <FloatPhotos scene={scene} />;
   const start = Math.round(scene.duration * at), X = 10;
   const each = Math.max(24, (scene.duration - start) / files.length);
   const DRIFT = [[-3, -2], [3, -1.5], [-2, 2], [2.5, 2]];
@@ -146,6 +147,36 @@ const PhotoReel: React.FC<{ scene: Scene }> = ({ scene }) => {
               <span style={{ fontFamily: FONT, fontWeight: 700, fontSize: 18, color: '#fff' }}>Photo: {p.credit}</span>
             </div>
           </AbsoluteFill>
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
+// Floating product cards (owner, Oct 4): the 3D map keeps playing behind; the picture floats in the middle on a premium
+// white card (soft shadow, gentle bob), fades/rises in, and fades out before the next one. Used for costume renders.
+const FloatPhotos: React.FC<{ scene: Scene }> = ({ scene }) => {
+  const frame = useCurrentFrame();
+  const { files, at } = scene.photos!;
+  const start = Math.round(scene.duration * at);
+  const each = Math.max(30, (scene.duration - start) / files.length);
+  return (
+    <AbsoluteFill>
+      {files.map((p, k) => {
+        const t0 = start + k * each, t1 = t0 + each;
+        if (frame < t0 || frame > t1) return null;
+        const t = frame - t0;
+        const inE = ease(frame, t0, 12), outE = k === files.length - 1 ? 1 - ease(frame, scene.duration - 8, 8) : 1 - ease(frame, t1 - 10, 10);
+        const bob = Math.sin(t / 14) * 10;
+        return (
+          <div key={k} style={{ position: 'absolute', left: 0, right: 0, top: 520, display: 'flex', justifyContent: 'center', opacity: inE * outE,
+            transform: `translateY(${(1 - inE) * 60 + bob}px) scale(${0.94 + 0.06 * inE})` }}>
+            <div style={{ width: 540, height: 640, borderRadius: 40, background: 'linear-gradient(180deg,#ffffff 0%,#f1f3f7 100%)',
+              boxShadow: '0 40px 90px rgba(0,0,0,.45), 0 0 0 1px rgba(255,255,255,.6) inset', overflow: 'hidden', position: 'relative' }}>
+              <Img src={staticFile(p.file)} style={{ width: '100%', height: '100%', objectFit: 'contain', transform: `scale(${1.02 + 0.04 * Math.min(1, t / each)})` }} />
+              {p.credit === 'AI image' && <div style={{ position: 'absolute', bottom: 16, right: 18, fontFamily: FONT, fontWeight: 700, fontSize: 16, color: 'rgba(0,0,0,.35)' }}>AI render</div>}
+            </div>
+          </div>
         );
       })}
     </AbsoluteFill>

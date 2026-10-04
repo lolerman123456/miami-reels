@@ -24,7 +24,7 @@ export async function ensurePhotos(epDir, episode) {
       if (p?.kind === 'stock') files.push({ file: path.relative(epDir, p.file), credit: p.credit.replace(/^Photo: /, '') });
     }
     for (const [j, prompt] of prompts.entries()) {
-      const p = await aiImage(prompt, dir, `scene-${i}-ai${j}`).catch(e => { console.log(`  (AI image failed: ${e.message.slice(0, 100)})`); return null; });
+      const p = await aiImage(s.photos.style === 'float' ? `Premium studio product render of ${prompt}, floating, isolated on a pure white seamless background, soft natural shadow, crisp detail, high-end fashion catalog look` : prompt, dir, `scene-${i}-ai${j}`, s.photos.style === 'float').catch(e => { console.log(`  (AI image failed: ${e.message.slice(0, 100)})`); return null; });
       if (p) files.push({ file: path.relative(epDir, p.file), credit: 'AI image' });
     }
     console.log(`  scene ${i}: ${files.length}/${want.length + prompts.length} photos`);

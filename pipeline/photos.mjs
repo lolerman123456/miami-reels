@@ -120,11 +120,12 @@ function aiBudgetLeft() {
 }
 
 // AI picture for a Reel scene (owner, Oct 4: costume photos in the Halloween Reel) — same budget file as carousels
-export async function aiImage(description, dir, name) { return aiPhoto(description, dir, name); }
+export async function aiImage(description, dir, name, raw = false) { return aiPhoto(description, dir, name, raw); }
 
-async function aiPhoto(description, dir, name) {
+async function aiPhoto(description, dir, name, raw = false) {
   if (!process.env.OPENAI_API_KEY) return null;
-  const prompt = `${description}. Eye-catching photorealistic editorial photo that stops the scroll: vivid saturated color, bright light (golden hour, neon or strong sun, never dull or gray), bold close or low angle, a clear striking subject with something happening, cinematic depth, South Florida setting when relevant. ` +
+  // raw: the caller's prompt as is (studio product renders for floating Reel cards), only the safety line added
+  const prompt = raw ? `${description}. No text, no logos, no watermarks, no real people or faces.` : `${description}. Eye-catching photorealistic editorial photo that stops the scroll: vivid saturated color, bright light (golden hour, neon or strong sun, never dull or gray), bold close or low angle, a clear striking subject with something happening, cinematic depth, South Florida setting when relevant. ` +
     'No text, no readable numbers, no price signs or price displays, no logos, no watermarks. No identifiable real people or public figures; faces turned away, blurred or out of frame.';
   // cheap first (owner: mini model, ~4-5x cheaper), full model only if the mini one fails
   for (const model of [...new Set([process.env.OPENAI_IMAGE_MODEL || 'gpt-image-1-mini', 'gpt-image-1'])]) {
