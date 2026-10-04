@@ -151,12 +151,12 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
       console.log(`  freeze @${c.freeze}s: ${labels.map(l => l.text).join(', ') || '(no labels)'}`);
     }
     // black intro (owner, Oct 3): WARNING card fades in/out (sensitive only), then the story card (headline + context) ~4 s
-    const intro = c.context ? 84 : 45; // owner, Oct 3: fast — no warning card, story card ~2.8 s
+    const intro = 36; // owner, Oct 4: the black card took way too long — just the hook, ~1.2 s, no pause-to-read text
     const props = {
       durationInFrames: intro + clipFrames + (freeze ? freeze.hold : 0), video: 'clip.mp4', videoW: vw, videoH: vh, clipFrames,
       // vertical footage always fills the screen (owner, Oct 4: no blurred top/bottom)
       fill: vw / vh <= 0.8 || (!!c.fill && vw / vh <= 1.3), focusX: Number.isFinite(+c.focusX) ? Math.min(1, Math.max(0, +c.focusX)) : 0.5,
-      intro: { frames: intro, warning: false, title: c.hook || v.title, sub: c.sub || '', context: String(c.context || '').slice(0, 240) },
+      intro: { frames: intro, warning: false, title: c.hook || v.title, sub: c.sub || '', context: '' },
       banner: c.banner || '', freeze, credit: `Video: ${v.agency}`,
       captions: (c.captions || []).filter(x => x.t >= start && x.t < end).map(x => ({ at: Math.round((x.t - start) * FPS), text: String(x.text) })),
     };
