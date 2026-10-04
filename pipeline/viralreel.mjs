@@ -115,6 +115,8 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     }
     // owner, Oct 4: no blurred top/bottom and nothing important cropped out — only vertical (9:16-ish) footage
     const [rw, rh] = execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', w.raw]).toString().trim().split(',').map(Number);
+    const [rw0, rh0] = execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', w.raw]).toString().trim().split(',').map(Number);
+    if (rw0 / rh0 <= 0.8) v.vertical = true; // owner links to Shorts too: a vertical source always fills the screen
     if (v.vertical) c.crop = null; // keep the Short whole (cropping its caption bars made a 9:16 clip 608x756)
     const cw = rw * (c.crop?.w || 1), ch = rh * (c.crop?.h || 1);
     if (!url && cw / ch > 0.8) { console.log(`  skip (not vertical: ${Math.round(cw)}x${Math.round(ch)})`); fs.appendFileSync(SEEN, `${v.id}  reel-wide\n`); fs.rmSync(dir, { recursive: true, force: true }); continue; }
