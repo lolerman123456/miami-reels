@@ -15,7 +15,7 @@ const TALK = /\b(briefing|press conference|news conference|meeting|ceremony|awar
 
 async function pickVideos(videos, hint = '') {
   const r = await chat([{ role: 'system', content: 'You run a viral news page like @onlyindade (South Florida, but nationwide/worldwide viral clips pop too). '
-    + 'From these YouTube uploads, rank up to 6 that contain RAW viral footage people would share: dashcam, bodycam, surveillance, doorbell cam, phone video, '
+    + 'From these YouTube uploads, rank up to 10 that contain RAW viral footage people would share: dashcam, bodycam, surveillance, doorbell cam, phone video, '
     + 'helicopter footage of chases, wild arrests, crashes, road rage, rescues, animals (gators, bears), insane weather moments. Prefer high views and South Florida '
     + 'when equally good. Skip talking heads, politics, press conferences, full newscasts, anything about a dead child. '
     + 'Prefer CLEAR footage (owner, Oct 3): a few big, distinct subjects (one car, one person, one animal) — not cramped, crowded or far-away shots. '
@@ -97,7 +97,14 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     const v = videos[pk.index];
     console.log(`\n  pick: [${v.agency}] ${v.title} — ${pk.why}`);
     const dir = path.join(ROOT, 'out', 'viral', `${date}-${v.id}`);
-    if (v.agency === 'YouTube') { try { v.agency = execFileSync('yt-dlp', [...ytdlpArgs(), '--skip-download', '--print', 'channel', v.url]).toString().trim() || v.agency; } catch {} } // credit the real channel/streamer
+    // Shorts: real channel for the credit + length check before any download/AI (most Shorts are under 30 s)
+    if (v.vertical) {
+      try {
+        const [ch, dur] = execFileSync('yt-dlp', [...ytdlpArgs(), '--skip-download', '--print', 'channel', '--print', 'duration', v.url]).toString().trim().split('\n');
+        if (v.agency === 'YouTube' && ch) v.agency = ch;
+        if (!url && +dur < 30) { console.log(`  skip (${dur} s Short — owner wants 30 s+)`); fs.appendFileSync(SEEN, `${v.id}  reel-short\n`); continue; }
+      } catch {}
+    }
     const w = await watch(v, {}, dir, 'reel');
     const c = w?.check;
     if (!c?.ok || (!url && c.crazy < 8)) {
@@ -108,6 +115,7 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     }
     // owner, Oct 4: no blurred top/bottom and nothing important cropped out — only vertical (9:16-ish) footage
     const [rw, rh] = execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', w.raw]).toString().trim().split(',').map(Number);
+    if (v.vertical) c.crop = null; // keep the Short whole (cropping its caption bars made a 9:16 clip 608x756)
     const cw = rw * (c.crop?.w || 1), ch = rh * (c.crop?.h || 1);
     if (!url && cw / ch > 0.8) { console.log(`  skip (not vertical: ${Math.round(cw)}x${Math.round(ch)})`); fs.appendFileSync(SEEN, `${v.id}  reel-wide\n`); fs.rmSync(dir, { recursive: true, force: true }); continue; }
     let start = Math.max(0, Math.min(w.total - 5, +c.start || 0));
