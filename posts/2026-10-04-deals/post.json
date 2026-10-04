@@ -1,0 +1,102 @@
+{
+  "sector": "ECONOMY",
+  "cover": {
+    "top": "IN SOUTH FLORIDA",
+    "main": "TARGET STARBUCKS OFFERS",
+    "highlight": "FREE FOOD",
+    "bottom": "THIS WEEK ON OCT. 6",
+    "blur": false,
+    "photo": {
+      "query": "Starbucks inside Target store coffee counter",
+      "prompt": "A dramatic close-up of a Starbucks coffee counter inside a Target store, with red Target branding and iced coffee cups in front"
+    },
+    "emojis": [
+      "☕",
+      "🎯"
+    ],
+    "logos": [
+      "target.com",
+      "starbucks.com"
+    ],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: BoringJim USA Maine location map.svg: Al / Public domain",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "DEALS",
+      "headline": "KFC: Free bucket with $15 purchase through Oct. 11",
+      "highlight": "Free bucket",
+      "body": "Use code KFSPEED at checkout through Oct. 11 with a $15 purchase at participating KFC locations.",
+      "place": "KFC app or online",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "KFC bucket fried chicken restaurant",
+        "prompt": "A close-up of a KFC chicken bucket on a counter with red restaurant signage behind it"
+      },
+      "color": "#E4002B",
+      "emoji": "🍗",
+      "chip": "KFSPEED",
+      "logo": "kfc.com",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: m01229 from USA / CC BY-SA 2.0",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "DEALS",
+      "headline": "Taco Bell: Free Duolingo plushie Oct. 6",
+      "highlight": "Free plushie",
+      "body": "Taco Bell Rewards members can try for a free Taco Bell x Duolingo plushie on Oct. 6 at 2 p.m. PT in the Tuesday Drops section of the app.",
+      "place": "Taco Bell app",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Taco Bell Duolingo plushie in app giveaway",
+        "prompt": "A dramatic Taco Bell counter with a small plushie and the Taco Bell app open on a phone"
+      },
+      "color": "#702082",
+      "emoji": "🦉",
+      "chip": "2 PM PT",
+      "logo": "tacobell.com",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Wikilester1999 / CC BY-SA 4.0",
+      "logoFile": null
+    },
+    {
+      "tag": "DEALS",
+      "headline": "Cinnabon: Classic Roll for $1 today",
+      "highlight": "$1 roll",
+      "body": "Cinnabon Rewards members can get a Classic Cinnamon Roll for $1 today at participating locations, in-store only, while supplies last.",
+      "place": "Cinnabon",
+      "source": "Hip2Save",
+      "photo": {
+        "query": "Cinnabon cinnamon roll close-up",
+        "prompt": "A close-up of a Cinnabon Classic Cinnamon Roll in a bakery display case with icing and warm lighting"
+      },
+      "color": "#8C4A2F",
+      "emoji": "🥐",
+      "chip": "$1",
+      "logo": "cinnabon.com",
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Bahnfrend / CC BY-SA 4.0",
+      "logoFile": "logo-3.png"
+    }
+  ],
+  "caption": "Free coffee at Target Starbucks, 99 cent Wendy's, a free KFC bucket deal and more are live in South Florida this week.\nsend this to someone who needs it",
+  "hashtags": [
+    "#DEALS",
+    "#SouthFlorida"
+  ],
+  "collaborators": [
+    "starbucks",
+    "wendys",
+    "tacobell"
+  ],
+  "igCaption": "Free coffee at Target Starbucks, 99 cent Wendy's, a free KFC bucket deal and more are live in South Florida this week.\nsend this to someone who needs it\n\n📰 Sources: Hip2Save\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#DEALS #SouthFlorida #miami #southflorida",
+  "kind": "deals",
+  "kicker": "FREE & CHEAP IN SOUTH FLORIDA 🍔",
+  "date": "2026-10-04",
+  "id": "2026-10-04-deals"
+}
