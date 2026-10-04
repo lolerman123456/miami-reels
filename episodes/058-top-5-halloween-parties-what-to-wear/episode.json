@@ -69,7 +69,13 @@
           "four matching inflatable pink flamingo full-body Halloween costumes with heart-shaped sunglasses, standing in a row like a squad"
         ],
         "at": 0.35,
-        "style": "float"
+        "style": "float",
+        "files": [
+          {
+            "file": "photos/scene-1-ai0.png",
+            "credit": "AI image"
+          }
+        ]
       }
     },
     {
@@ -100,7 +106,13 @@
           "a women's devil Halloween costume covered head to toe in mirrored disco-ball sequins, glowing red LED horns and a sparkly pitchfork tail, on an invisible mannequin"
         ],
         "at": 0.35,
-        "style": "float"
+        "style": "float",
+        "files": [
+          {
+            "file": "photos/scene-2-ai0.png",
+            "credit": "AI image"
+          }
+        ]
       }
     },
     {
@@ -131,7 +143,13 @@
           "an over-the-top peacock masquerade costume: a giant six-foot fan of iridescent peacock feathers, a jeweled gold masquerade mask and a dramatic teal ball gown, on an invisible mannequin"
         ],
         "at": 0.35,
-        "style": "float"
+        "style": "float",
+        "files": [
+          {
+            "file": "photos/scene-3-ai0.png",
+            "credit": "AI image"
+          }
+        ]
       }
     },
     {
@@ -162,7 +180,13 @@
           "an inflatable 'alien abduction' illusion Halloween costume: a big green cartoon alien carrying a person under its arm, with glowing rave glow sticks"
         ],
         "at": 0.35,
-        "style": "float"
+        "style": "float",
+        "files": [
+          {
+            "file": "photos/scene-4-ai0.png",
+            "credit": "AI image"
+          }
+        ]
       }
     },
     {
@@ -193,7 +217,13 @@
           "a neon pink 1980s Miami Vice style women's police officer Halloween costume: pink fitted uniform dress with a gold badge, police cap, aviator sunglasses, an oversized fake mustache on a stick and fluffy pink toy handcuffs, on an invisible mannequin"
         ],
         "at": 0.35,
-        "style": "float"
+        "style": "float",
+        "files": [
+          {
+            "file": "photos/scene-5-ai0.png",
+            "credit": "AI image"
+          }
+        ]
       }
     },
     {
