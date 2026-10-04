@@ -112,14 +112,15 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     if (!url && cw / ch > 0.8) { console.log(`  skip (not vertical: ${Math.round(cw)}x${Math.round(ch)})`); fs.appendFileSync(SEEN, `${v.id}  reel-wide\n`); fs.rmSync(dir, { recursive: true, force: true }); continue; }
     let start = Math.max(0, Math.min(w.total - 5, +c.start || 0));
     // second, precise pass: frames every 0.5 s around the pick → keep only the stretch of RAW footage (no graphics/anchor/studio)
-    const rf = await refineCut(w.raw, dir, start, Math.min(w.total, +c.end || start + 30), w.total, c);
+    // Shorts are already edited vertical clips (text overlays are part of them): the raw-footage-only pass would cut them to seconds
+    const rf = v.vertical ? null : await refineCut(w.raw, dir, start, Math.min(w.total, +c.end || start + 30), w.total, c);
     if (rf) { console.log(`  refined cut: ${rf.start}–${rf.end} s (was ${start}–${c.end})`); start = rf.start; c.end = rf.end; }
     // owner, Oct 3: the who's-who freeze goes at the BEGINNING — start the cut ~1 s before the freeze frame
     // the who's-who freeze only if it falls in the first ~3.5 s of the cut — never move the cut (that once skipped the crash itself)
     if (c.freeze != null && (c.freeze - start > 3.5 || c.freeze - start < 0.5)) { console.log(`  (freeze @${c.freeze}s not at the start of the cut — no freeze)`); c.freeze = null; }
     const end = Math.min(w.total, Math.max(start + 6, +c.end || start + 40), start + 60);
     // Oct 3 8pm: a 7 s cut went out; owner Oct 4: at least 30 s with a payoff (11 s Reel with the intro) — too short to be worth watching; try the next video
-    if (end - start < 30 && !url) { console.log(`  skip (only ${(end - start).toFixed(1)} s of footage — owner wants 30 s+ with a payoff)`); fs.appendFileSync(SEEN, `${v.id}  reel-short\n`); fs.rmSync(dir, { recursive: true, force: true }); continue; }
+    if (end - start < 28 && !url) { console.log(`  skip (only ${(end - start).toFixed(1)} s of footage — owner wants 30 s+ with a payoff)`); fs.appendFileSync(SEEN, `${v.id}  reel-short\n`); fs.rmSync(dir, { recursive: true, force: true }); continue; }
     console.log(`  crazy ${c.crazy}/10 · cut ${start}–${end} s · ${c.fill ? `full 9:16 (focus ${c.focusX})` : 'blurred top/bottom'} · ${c.hook}`);
 
     step('Cutting');
