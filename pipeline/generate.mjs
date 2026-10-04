@@ -19,7 +19,11 @@ crime stories only rarely, when the owner asks.
   free. Bingo After Dark at the Improv in Dania Beach. Just RSVP." Never pad an item with background (acreage, founding year,
   a mall's history, redevelopment plans): if a place has no event with a date, drop it and use fewer items (3 is fine).
   Outro = one short, real question ending in "?" ("Which one are you hitting first?"), then the tag-a-friend line.
-  Hook = one or two short punchy sentences ("Here's everything happening in Miami this week. And we're starting with the free stuff.").
+  Hook = one or two short punchy sentences ("Here's everything happening in South Florida this week. And we're starting with the free stuff.").
+  Owner-approved hook styles (Oct 4): "5 THINGS TO DO IN SOUTH FLORIDA THIS WEEKEND", "SOUTH FLORIDA CONCERTS YOU'LL REGRET MISSING THIS MONTH",
+  "THE PARTIES NOBODY'S TELLING YOU ABOUT", "WHERE SOUTH FLORIDA IS GOING OUT THIS FRIDAY", "CHEAPEST NIGHTS OUT THIS WEEK (UNDER $20)",
+  "SAVE THIS: EVERY BIG EVENT COMING TO SOUTH FLORIDA IN <MONTH>", "TOP 5 HALLOWEEN PARTIES IN SOUTH FLORIDA + WHAT TO WEAR TO EACH".
+  Also: new restaurant openings, concerts, festivals, pop-ups. Say "South Florida" or "Florida", not "Miami", unless the place is actually in Miami (owner, Oct 4).
 - STORY (preferred): a true, gripping story tied to ONE real South Florida place people can see on the map. Famous people who
   lived or died there, crimes and how they were solved, disasters, scandals, mysteries, celebrity mansions, record-breaking
   moments, weird history. Hook with a curiosity question the place answers, e.g. "Did you know one of the world's greatest
@@ -232,7 +236,7 @@ async function nearMention(episode, plan) {
   const outro = episode.scenes.find(s => s.kind === 'outro');
   if (!outro) return;
   try {
-    const r = await chat([{ role: 'system', content: 'You write ONE sentence for the outro of a South Florida Reel that quietly mentions the NEAR app, which shows you the people who walked past you during the day. The sentence must genuinely connect the video topic to what NEAR does through a real parallel or link (for example, for a video about unclaimed money: "Most of what is yours in this city goes unnoticed, like money sitting in a state account or the people you cross paths with every day, and that second one is what NEAR is for."). It should read like a thoughtful aside, subtle, not an ad: no "download", no "if you see someone", no hype words, no emojis, numbers as words, 18–34 words, one complete sentence (not a run-on). If the topic is serious, sad or about crime, reply SKIP. Reply JSON {"line":"…"} or {"line":"SKIP"}.' },
+    const r = await chat([{ role: 'system', content: 'You write ONE sentence for the outro of a South Florida Reel that mentions the NEAR app, which shows you the people who walked past you during the day — the sentence must make the whole concept clear (someone you saw but never talked to → NEAR shows you who they were), e.g. for a party Reel: "Saw someone at the party and never got their name? That is exactly what NEAR is for.". The sentence must genuinely connect the video topic to what NEAR does through a real parallel or link (for example, for a video about unclaimed money: "Most of what is yours in this city goes unnoticed, like money sitting in a state account or the people you cross paths with every day, and that second one is what NEAR is for."). It should read like a thoughtful aside, subtle, not an ad: no "download", no "if you see someone", no hype words, no emojis, numbers as words, 18–34 words, one complete sentence (not a run-on). If the topic is serious, sad or about crime, reply SKIP. Reply JSON {"line":"…"} or {"line":"SKIP"}.' },
       { role: 'user', content: `Title: ${episode.title}\nOutro so far: ${outro.text}` }], 'mini');
     const line = String(r.line || '').trim();
     if (!line || /^SKIP/i.test(line) || line.split(/\s+/).length > 38) return;
@@ -246,6 +250,21 @@ async function nearMention(episode, plan) {
     if (outro.caption) outro.caption = insert(outro.caption);
     console.log(`  NEAR mention: ${line}`);
   } catch (e) { console.log(`  (NEAR mention skipped: ${e.message.slice(0, 80)})`); }
+  // owner, Oct 4: also a very subtle one in the MIDDLE of event/party/nightlife Reels, so viewers catch the concept
+  // ("if you're at the party, open your phone and see who's on NEAR") — one short aside tacked onto a middle item
+  if (!/EVENTS|GUIDE/i.test(plan.format || '')) return;
+  const items = episode.scenes.filter(s => s.kind === 'item');
+  const mid = items[Math.floor(items.length / 2)];
+  if (!mid) return;
+  try {
+    const r = await chat([{ role: 'system', content: 'Write ONE very short spoken aside (8–16 words) for the middle of a South Florida events Reel, tacked onto this item, that subtly plants the NEAR app (it shows you the people who were at the same place as you). It must sound natural and specific to this item, like a friend tip, e.g. "If you go, open NEAR and see who else is in the room." or "Lock eyes with someone there? They might be on NEAR." No "download", no hype, no emojis, numbers as words. Reply JSON {"line": "…"}.' },
+      { role: 'user', content: `Reel: ${episode.title}\nThis item: ${mid.text}` }], 'mini');
+    const aside = String(r.line || '').trim();
+    if (!aside || aside.split(/\s+/).length > 18 || !/NEAR/.test(aside)) return;
+    mid.text = `${mid.text.trim()} ${aside}`;
+    if (mid.caption) mid.caption = `${mid.caption.trim()} ${aside}`;
+    console.log(`  NEAR aside (middle): ${aside}`);
+  } catch (e) { console.log(`  (NEAR aside skipped: ${e.message.slice(0, 80)})`); }
 }
 
 async function chat(messages, tier = 'write') {
