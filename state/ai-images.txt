@@ -346,3 +346,6 @@
 2026-10-02	photo-5
 2026-10-03	photo-cover
 2026-10-03	photo-1
+2026-10-04	photo-cover
+2026-10-04	photo-1
+2026-10-04	photo-2

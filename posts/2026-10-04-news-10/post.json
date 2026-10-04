@@ -1,0 +1,73 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "AUTHORITIES SAY",
+    "main": "AN ARGUMENT DURING A GAME LED TO A SHOOTING THAT",
+    "highlight": "KILLED",
+    "bottom": "A FORT LAUDERDALE MAN IN POMPANO BEACH",
+    "blur": false,
+    "photo": {
+      "query": "Pompano Beach night crime scene tape patrol lights Broward sheriff",
+      "prompt": "dramatic nighttime Pompano Beach crime scene with Broward sheriff patrol lights, yellow tape, and a quiet residential street",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚨",
+      "📍"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "An argument during a game led to the shooting",
+      "highlight": "argument during a game",
+      "body": "CBS News said authorities linked the shooting to a gambling argument. TAPinto described it as an argument during a game.",
+      "place": "Pompano Beach",
+      "source": "CBS News",
+      "photo": {
+        "query": "playing cards poker chips table close-up harsh light",
+        "prompt": "close-up of playing cards and poker chips on a table under harsh overhead light"
+      },
+      "emoji": "🎲",
+      "chip": "GAME",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "BSO said two people were shot",
+      "highlight": "two people",
+      "body": "WPLG Local 10 reported Broward deputies said the Pompano Beach shooting left one man dead and another injured.",
+      "place": "Pompano Beach",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Broward Sheriff emergency lights Pompano Beach street night",
+        "prompt": "Broward sheriff emergency lights reflecting across a Pompano Beach street after a shooting"
+      },
+      "emoji": "🚨",
+      "chip": "1 DEAD",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Authorities say a gambling argument came before a Pompano Beach shooting that left a Fort Lauderdale man dead and another person hurt.\nWhat happens next in Broward court?",
+  "hashtags": [
+    "#PompanoBeach",
+    "#BrowardCrime"
+  ],
+  "collaborators": [],
+  "igCaption": "Authorities say a gambling argument came before a Pompano Beach shooting that left a Fort Lauderdale man dead and another person hurt.\nWhat happens next in Broward court?\n\n📰 Sources: CBS News, WPLG Local 10, Sun Sentinel, Margate Talk\n\n🎥 Video: WPLG Local 10\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#PompanoBeach #BrowardCrime #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-04",
+  "id": "2026-10-04-news-10",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "WPLG Local 10",
+    "url": "https://www.youtube.com/watch?v=RlRtnzyXQEQ"
+  }
+}
