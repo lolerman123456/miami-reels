@@ -1,0 +1,101 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "POLICE SAY",
+    "main": "THE NAKED PHOTOS EXCUSE BACKFIRED",
+    "highlight": "NAKED PHOTOS",
+    "bottom": "IN A WEST PALM BEACH DRUG BUST",
+    "blur": false,
+    "photo": {
+      "query": "West Palm Beach police lights dark street Florida",
+      "prompt": "dramatic close-up of red and blue police lights reflecting off a wet West Palm Beach street at night, no people visible",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚓",
+      "📱",
+      "👀"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Eden, Janine and Jim / CC BY 2.0",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Police say ‘naked photos’ excuse backfired",
+      "highlight": "naked photos",
+      "body": "WPEC reported Sunday that a suspect tried to explain evidence by pointing to “naked photos” on his phone during a West Palm Beach drug bust.",
+      "place": "West Palm Beach",
+      "source": "WPEC",
+      "photo": {
+        "query": "smartphone on police evidence table red blue lights Florida",
+        "prompt": "close-up of a smartphone on a police evidence table with red and blue lights in the background, no faces or personal images visible"
+      },
+      "emoji": "📱",
+      "chip": "OCT 4",
+      "photoFile": "photo-cover.jpg",
+      "credit": "Photo: Eden, Janine and Jim / CC BY 2.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The bust turned into an arrest anyway",
+      "highlight": "arrest",
+      "body": "Police say the excuse did not stop the arrest.",
+      "place": "West Palm Beach",
+      "source": "WPEC",
+      "photo": {
+        "query": "handcuffs on patrol car hood night Florida",
+        "prompt": "dramatic photo of handcuffs on the hood of a patrol car under flashing red and blue lights, no person visible"
+      },
+      "emoji": "🔒",
+      "chip": "ARRESTED",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Andrew Bain / CC BY-SA 3.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "WPEC says the story went viral",
+      "highlight": "viral",
+      "body": "The headline says the excuse backfired during the bust and became an embarrassment for the suspect.",
+      "place": "West Palm Beach",
+      "source": "WPEC",
+      "photo": {
+        "query": "west palm beach police scene night flashing lights",
+        "prompt": "wide night scene of a West Palm Beach street with police lights and taped-off area, no people visible"
+      },
+      "emoji": "🚨",
+      "chip": "VIRAL",
+      "photoFile": "photo-cover.jpg",
+      "credit": "Photo: Eden, Janine and Jim / CC BY 2.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The headline does not list the charges",
+      "highlight": "charges",
+      "body": "The report headline does not give the drug, the charge or the court outcome.",
+      "place": "West Palm Beach",
+      "source": "WPEC",
+      "photo": {
+        "query": "Palm Beach County courthouse exterior West Palm Beach Florida",
+        "prompt": "sharp exterior shot of the Palm Beach County courthouse in West Palm Beach at dusk, no people in focus"
+      },
+      "emoji": "⚖️",
+      "chip": "NEXT",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Andrew Bain / CC BY-SA 3.0"
+    }
+  ],
+  "caption": "Police say a West Palm Beach drug bust turned embarrassing when a suspect pointed to “naked photos” on his phone. WPEC reported the excuse backfired and he was arrested anyway.\n\nThe headline does not list the charge or the court result.",
+  "hashtags": [
+    "#WestPalmBeach",
+    "#PalmBeachCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say a West Palm Beach drug bust turned embarrassing when a suspect pointed to “naked photos” on his phone. WPEC reported the excuse backfired and he was arrested anyway.\n\nThe headline does not list the charge or the court result.\n\n📰 Sources: WPEC\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#WestPalmBeach #PalmBeachCounty #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-04",
+  "id": "2026-10-04-news-16"
+}
