@@ -1,0 +1,209 @@
+{
+  "title": "South Florida Events This Week",
+  "sources": [
+    "WSVN 7News",
+    "Wikipedia: Carnival",
+    "Wikipedia: Tamarac, Florida",
+    "Sports Business Journal",
+    "Wikipedia: Miami Heat",
+    "Wikipedia: Kaseya Center",
+    "Secret Miami",
+    "Miami New Times",
+    "NBC 6 South Florida"
+  ],
+  "collaborators": [
+    "miamiheat",
+    "gobrightline"
+  ],
+  "igCaption": "Miami Carnival runs all week after Jr. Carnival and Pan Jamboree kicked things off in Tamarac.\nThe @miamiheat have a Night in Vice City coming against the Bucks, and @gobrightline is running late-night trains after over 15 Kaseya Center shows.\nWhich one are you tagging your friends for?\n\nSources: WSVN 7News, Wikipedia: Carnival, Wikipedia: Tamarac, Florida, Sports Business Journal, Wikipedia: Miami Heat, Wikipedia: Kaseya Center, Secret Miami, Miami New Times, NBC 6 South Florida\n\n#MiamiEvents #SouthFlorida #MiamiCarnival #MiamiHeat",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "South Florida has Carnival all week, a Heat Vice City night, and fall stops to plan before the weekend.",
+      "overlay": [
+        "THIS WEEK",
+        "IN SOUTH FL"
+      ],
+      "emojis": [
+        "🎭",
+        "🏀",
+        "🎃",
+        "🚆"
+      ],
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.78138889,
+        "lon": -80.18805556,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami Carnival is celebrating Caribbean music, culture and food all week long. The Jr. Carnival and Pan Jamboree kicked it off in Tamarac, a Broward city with 71,897 people in the 2020 census.",
+      "caption": "Miami Carnival is celebrating Caribbean music, culture and food all week long. The Jr. Carnival and Pan Jamboree kicked it off in Tamarac, a Broward city with 71,897 people in the 2020 census.",
+      "overlay": "TAMARAC",
+      "badge": "ALL WEEK",
+      "sub": "Carnival kicks off",
+      "emoji": "🎭",
+      "stats": [
+        {
+          "value": "71,897",
+          "label": "2020 population"
+        },
+        {
+          "value": "all week long",
+          "label": "Carnival events"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Tamarac",
+        "lat": 26.20138889,
+        "lon": -80.23833333,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -30,
+        "heading": 45,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Heat will host Night in Vice City against the Bucks to promote Grand Theft Auto VI. Kaseya Center holds 19,500 people, and the franchise has won three NBA championships.",
+      "caption": "The Heat will host Night in Vice City against the Bucks to promote Grand Theft Auto VI. Kaseya Center holds 19,500 people, and the franchise has won 3 NBA championships.",
+      "overlay": "KASEYA CENTER",
+      "badge": "19,500 SEATS",
+      "sub": "Heat theme night",
+      "emoji": "🏀",
+      "stats": [
+        {
+          "value": "19,500",
+          "label": "arena capacity"
+        },
+        {
+          "value": "3",
+          "label": "Heat titles"
+        }
+      ],
+      "source": "Sports Business Journal",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.78138889,
+        "lon": -80.18805556,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 155,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Brightline brought back late-night trains for Kaseya Center concerts and select live events through the end of the year. MiamiCentral sits less than a mile from the arena, about a 15-minute walk after the show. If you're heading out, open NEAR after—see who else was at the show.",
+      "caption": "Brightline brought back late-night trains for Kaseya Center concerts and select live events through the end of the year. MiamiCentral sits less than 1 mile from the arena, about a 15-minute walk after the show. If you're heading out, open NEAR after—see who else was at the show.",
+      "overlay": "MIAMICENTRAL",
+      "badge": "15-MIN WALK",
+      "sub": "Late trains return",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "15 MIN",
+          "label": "walk to station"
+        },
+        {
+          "value": "over 15",
+          "label": "Kaseya shows"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "MiamiCentral",
+        "lat": 25.7867,
+        "lon": -80.1958,
+        "h": 55
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 280,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Fall plans are also stacking up. NBC 6 has South Florida pumpkin patches for the season, while Superblue Miami has James Turrell’s Blue Sea Sky on view in October at 1101 NW 23rd St.",
+      "caption": "Fall plans are also stacking up. NBC 6 has South Florida pumpkin patches for the season, while Superblue Miami has James Turrell’s Blue Sea Sky on view in October at 1101 NW 23rd St.",
+      "overlay": "SUPERBLUE",
+      "badge": "OCT 2026",
+      "sub": "Fall art stop",
+      "emoji": "🎃",
+      "stats": [
+        {
+          "value": "OCT 2026",
+          "label": "on view"
+        },
+        {
+          "value": "1101",
+          "label": "NW 23rd St."
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Superblue Miami",
+        "lat": 25.7993,
+        "lon": -80.2139,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -28,
+        "heading": 25,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you sending to the group chat first? For the festival crowd you passed on the way in but never met, NEAR is the part that lets you figure out who they were.",
+      "overlay": "TAG A FRIEND 👇",
+      "sub": "Carnival, Heat, trains, fall",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.78138889,
+        "lon": -80.18805556,
+        "h": 100
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "061-south-florida-events-this-week"
+}
