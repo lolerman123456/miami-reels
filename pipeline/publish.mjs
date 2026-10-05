@@ -59,7 +59,7 @@ export async function publishReel(videoFile, caption, { collaborators = [] } = {
 
 // Map Reels with a trending song (owner, Oct 5): the Instagram Audio API only works with a Facebook-Login token
 // (FB_ACCESS_TOKEN, NEAR Social Publisher app, Jacobo's account with access to the "NEAR APP" Page linked to @getnearapp).
-// Picks a trending song from /ig_audio not used in the last 20 music posts, keeps the voice on top (song at 25%).
+// Picks a trending song from /ig_audio not used in the last 20 music posts, keeps the voice on top (song at 14%, owner Oct 5).
 export async function publishReelWithMusic(videoFile, caption, { collaborators = [] } = {}) {
   const token = process.env.FB_ACCESS_TOKEN;
   if (!token) throw new Error('FB_ACCESS_TOKEN not set');
@@ -74,7 +74,7 @@ export async function publishReelWithMusic(videoFile, caption, { collaborators =
   const used = new Set((fs.existsSync(logFile) ? fs.readFileSync(logFile, 'utf8') : '').split('\n').filter(l => l.includes('\taudio:')).slice(-20).map(l => l.split('\taudio:')[1].split('\t')[0]));
   const song = songs.slice(0, 15).find(a => !used.has(String(a.audio_id))) || songs[0];
   console.log(`▶ Instagram: trending song "${song.title}" by ${song.display_artist || '?'} (${song.audio_id})`);
-  const audio = JSON.stringify({ audio_id: String(song.audio_id), audio_volume: 25, video_volume: 100 });
+  const audio = JSON.stringify({ audio_id: String(song.audio_id), audio_volume: 14, video_volume: 100 });
   console.log('▶ Instagram: creating Reel container (with music)');
   const create = await withCollabs(collaborators, extra => call(`${api}/${igUser}/media`, {
     media_type: 'REELS', upload_type: 'resumable', caption, share_to_feed: 'true', audio_configuration: audio, access_token: token, ...extra,
