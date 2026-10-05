@@ -1,0 +1,230 @@
+{
+  "title": "South Florida this week: FSU at Miami, Halloween bars, and a new speakeasy",
+  "sources": [
+    "seminoles.com",
+    "Orlando Sentinel",
+    "Haute Living",
+    "Miami New Times",
+    "WebWire"
+  ],
+  "collaborators": [
+    "intermiamicf"
+  ],
+  "igCaption": "FSU at Miami has a 7 p.m. kickoff on October 17, and Halloween events are rolling in Fort Lauderdale.\nRoom 901 runs its Carrie takeover October 8 through 31, and Hogwharf returns after a three-year hiatus.\n@intermiamicf hosts open training for season ticket members at Nu Stadium on October 21.\n\nSources: seminoles.com, Orlando Sentinel, Haute Living, Miami New Times, WebWire\n\n#MiamiEvents #FortLauderdale #SouthFlorida #HalloweenMiami",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "FSU at Miami has a kickoff time, and South Florida has Halloween events lined up in Fort Lauderdale.",
+      "overlay": [
+        "THIS WEEK",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🏈",
+        "🍸",
+        "🎃",
+        "⚽"
+      ],
+      "location": {
+        "name": "Hard Rock Stadium area",
+        "lat": 25.958,
+        "lon": -80.2389,
+        "h": 70
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 210
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Florida State at Miami is set for seven p.m. on October seventeenth. The Orlando Sentinel lists Miami as number four.",
+      "caption": "Florida State at Miami is set for 7:00 p.m. on October 17. The Orlando Sentinel lists Miami as No. 4.",
+      "overlay": "FSU AT MIAMI",
+      "badge": "OCT 17",
+      "sub": "7 p.m. kickoff",
+      "emoji": "🏈",
+      "stats": [
+        {
+          "value": "7 PM",
+          "label": "kickoff"
+        },
+        {
+          "value": "OCT 17",
+          "label": "game date"
+        }
+      ],
+      "source": "seminoles.com",
+      "location": {
+        "name": "Hard Rock Stadium area",
+        "lat": 25.958,
+        "lon": -80.2389,
+        "h": 70
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 145,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Marc Anthony has a private speakeasy at HQ Residences Miami. Haute Living posted it on October fifth.",
+      "caption": "Marc Anthony has a private speakeasy at HQ Residences Miami. Haute Living posted it on October 5.",
+      "overlay": "HQ RESIDENCES",
+      "badge": "OCT 5",
+      "sub": "Marc Anthony project",
+      "emoji": "🍸",
+      "stats": [
+        {
+          "value": "OCT 5",
+          "label": "posted"
+        }
+      ],
+      "source": "Haute Living",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 120
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -33,
+        "heading": 95,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Room 901 inside Hyatt Centric Las Olas turns into a Carrie-inspired 1970s prom from October eighth through Halloween. The setup has red-and-black décor, candlelight, dramatic florals, and Prom Punch. If you end up at Room 901, NEAR shows who else was there.",
+      "caption": "Room 901 inside Hyatt Centric Las Olas turns into a Carrie-inspired 1970s prom from October 8 through Halloween. The setup has red-and-black décor, candlelight, dramatic florals, and Prom Punch. If you end up at Room 901, NEAR shows who else was there.",
+      "overlay": "ROOM 901",
+      "badge": "OCT 8-31",
+      "sub": "Hyatt Centric Las Olas",
+      "emoji": "🩸",
+      "stats": [
+        {
+          "value": "OCT 8-31",
+          "label": "run dates"
+        },
+        {
+          "value": "1970S",
+          "label": "prom theme"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Room 901 at Hyatt Centric Las Olas",
+        "lat": 26.1195,
+        "lon": -80.1431,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 40,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Hogwharf returns to the Wharf Fort Lauderdale from October ninth through eleventh after a three-year hiatus. Expect floating candles, house flags, a Chamber of Secrets photo wall, and four specialty cocktails.",
+      "caption": "Hogwharf returns to the Wharf Fort Lauderdale from October 9 through 11 after a three-year hiatus. Expect floating candles, house flags, a Chamber of Secrets photo wall, and four specialty cocktails.",
+      "overlay": "HOGWHARF",
+      "badge": "3-YR RETURN",
+      "sub": "The Wharf Fort Lauderdale",
+      "emoji": "🪄",
+      "stats": [
+        {
+          "value": "3 YEARS",
+          "label": "hiatus"
+        },
+        {
+          "value": "4",
+          "label": "cocktails"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "The Wharf Fort Lauderdale",
+        "lat": 26.119,
+        "lon": -80.1445,
+        "h": 20
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 700,
+        "pitch": -30,
+        "heading": 285,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Inter Miami hosts open training for season ticket members at Nu Stadium on Wednesday, October twenty-first.",
+      "caption": "Inter Miami hosts open training for season ticket members at Nu Stadium on Wednesday, October 21.",
+      "overlay": "NU STADIUM",
+      "badge": "OCT 21",
+      "sub": "Season ticket members",
+      "emoji": "⚽",
+      "stats": [
+        {
+          "value": "OCT 21",
+          "label": "open training"
+        }
+      ],
+      "source": "WebWire",
+      "location": {
+        "name": "Nu Stadium",
+        "lat": 25.7933,
+        "lon": -80.256,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 160,
+        "degrees": 75,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you going to, and what should we cover next? A night like this is full of faces you recognize but never meet, and NEAR is what shows you who that person walking past you actually was.",
+      "overlay": "WHAT'S NEXT? 🎃",
+      "sub": "Tell us in the comments",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 120
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1900,
+        "pitch": -32,
+        "heading": 120
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "064-south-florida-this-week-fsu-at-miami-hal"
+}
