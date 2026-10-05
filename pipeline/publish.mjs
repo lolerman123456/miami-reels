@@ -97,7 +97,7 @@ export async function publishReelWithMusic(videoFile, caption, { collaborators =
 export async function postMusicReel(videoFile, episode) {
   let on = true;
   try { on = readJSON(path.join(ROOT, 'control.json')).igMusic !== false; } catch {}
-  if (!on || !process.env.FB_ACCESS_TOKEN) return false;
+  if (!on || !process.env.FB_ACCESS_TOKEN) { console.log(`  (music Reel not auto-posted: igMusic=${on}, FB_ACCESS_TOKEN ${process.env.FB_ACCESS_TOKEN ? 'set' : 'missing'})`); return false; }
   try { await publishReelWithMusic(videoFile, episode.igCaption, { collaborators: episode.collaborators }); return true; }
   catch (e) { console.log(`  (music post failed: ${e.message.slice(0, 300)}; handing it to the owner)`); return false; }
 }

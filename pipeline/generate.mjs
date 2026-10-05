@@ -163,7 +163,9 @@ export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
   for (const i of plan.news || []) if (news[i]) sources.push(`NEWS (${news[i].source}, ${new Date(news[i].date).toDateString()}): ${news[i].title}${news[i].summary ? ' — ' + news[i].summary : ''}`);
   for (const t of (plan.wikipedia || []).slice(0, 5)) {
     const w = await wikiArticle(t).catch(e => { console.log(`  (wikipedia "${t}": ${e.message})`); return null; });
-    if (w) sources.push(`WIKIPEDIA "${w.title}"${w.lat ? ` — coordinates ${w.lat}, ${w.lon}` : ''}:\n${w.text}`);
+    // event/guide Reels: Wikipedia only for map coordinates — its text became filler (census counts, titles won) on Oct 5
+    if (w && /EVENTS|GUIDE/i.test(plan.format || '')) { if (w.lat) sources.push(`LOCATION "${w.title}" — coordinates ${w.lat}, ${w.lon} (for the map only)`); }
+    else if (w) sources.push(`WIKIPEDIA "${w.title}"${w.lat ? ` — coordinates ${w.lat}, ${w.lon}` : ''}:\n${w.text}`);
   }
   for (const q of (plan.search || []).slice(0, 4)) {
     const hits = await searchNews(q, { days: 400, max: 12 }).catch(() => []);

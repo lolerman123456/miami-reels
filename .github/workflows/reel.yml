@@ -323,6 +323,7 @@ jobs:
         run: |
           ARGS=()
           [ "$PUBLISH" = "false" ] && ARGS+=(--dry-run)
+          echo "FB_ACCESS_TOKEN: ${FB_ACCESS_TOKEN:+set}"
           node pipeline/parallel.mjs finish "${{ needs.prepare.outputs.dir }}" "${ARGS[@]}"
 
       - name: Keep Instagram token alive
