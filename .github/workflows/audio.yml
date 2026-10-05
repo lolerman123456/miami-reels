@@ -26,6 +26,13 @@ jobs:
             FBIG=$(curl -s -G https://graph.facebook.com/v22.0/me/accounts --data-urlencode "fields=instagram_business_account" --data-urlencode "access_token=$FB_TOKEN" | jq -r '[.data[]?.instagram_business_account.id | select(.)][0] // empty')
             [ -n "$FBIG" ] && IG_USER_FB="$FBIG"
           fi
+          if [ -n "$FB_TOKEN" ] && [ -n "${IG_USER_FB:-}" ]; then
+            for v in v22.0 v23.0 v24.0; do for t in music original_sound; do
+              echo "== raw FB_TOKEN $v $t"
+              curl -s -G "https://graph.facebook.com/$v/ig_audio" --data-urlencode "audio_type=$t" --data-urlencode "user_id=$IG_USER_FB" \
+                ${Q:+--data-urlencode "search_query=$Q"} --data-urlencode "access_token=$FB_TOKEN" | head -c 700; echo
+            done; done
+          fi
           for name in IG_TOKEN FB_TOKEN; do
             T="${!name}"; [ -n "$T" ] || { echo "$name: not set"; continue; }
             case "$T" in IG*) KIND="Instagram-Login";; EAA*) KIND="Facebook-Login";; *) KIND="other";; esac
