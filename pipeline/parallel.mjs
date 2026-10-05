@@ -136,6 +136,17 @@ if (cmd === 'prepare') {
   fs.mkdirSync(path.dirname(out), { recursive: true });
   await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', video, ...inputs, '-filter_complex', mix,
     '-map', '0:v', '-map', '[a]', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k', '-shortest', '-movflags', '+faststart', out]);
+  // owner, Oct 5: "always speed up video 1.3x" — the whole Reel (picture + voice) plays faster; control.json "reelSpeed" (default 1.3, 1 = off)
+  let speed = 1.3;
+  try { const c = readJSON(path.join(ROOT, 'control.json')); if (c.reelSpeed) speed = +c.reelSpeed; } catch {}
+  if (speed && speed !== 1) {
+    const fast = out.replace(/\.mp4$/, '.fast.mp4');
+    await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', out, '-filter_complex', `[0:v]setpts=PTS/${speed}[v];[0:a]atempo=${speed}[a]`,
+      '-map', '[v]', '-map', '[a]', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '18', '-pix_fmt', 'yuv420p', '-r', String(FPS),
+      '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', fast]);
+    fs.renameSync(fast, out);
+    console.log(`  sped up ${speed}x`);
+  }
   console.log(`✔ Video: ${out}`);
   if (!args.includes('--dry-run')) {
     const { wantsMusic, handToOwner, postToTikTok } = await import('./buffer.mjs');
