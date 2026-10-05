@@ -1,0 +1,161 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "THIS WEEK,",
+    "main": "SOUTH FLORIDA IS",
+    "highlight": "GOING OUT",
+    "bottom": "TO SEE THE JONAS BROTHERS AT KASEYA CENTER 👀",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons search for South Florida concert crowd at night",
+      "prompt": "dramatic wide photo of a South Florida concert crowd at night with stage lights and an arena exterior in the background"
+    },
+    "emojis": [
+      "🎟️",
+      "🎸",
+      "🎬",
+      "🏀"
+    ],
+    "logos": [
+      "kaseyacenter.com",
+      "miamiheat.com",
+      "arshtcenter.org",
+      "jointherevolution.net",
+      "iiipoints.com"
+    ],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Phillip Pessar / CC BY 2.0",
+    "logoFiles": [
+      "logo-c1.png",
+      "logo-c2.png",
+      "logo-c4.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Jonas Brothers at Kaseya Center",
+      "highlight": "Jonas Brothers",
+      "body": "Monday, Oct. 5 at 7:30 p.m. at Kaseya Center in Miami. Tickets are $51 to $336. The show brings the Burning Up Tour All Over Again to downtown Miami.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons search for Jonas Brothers concert",
+        "prompt": "dramatic concert photo of the Jonas Brothers onstage under bright lights with a packed arena crowd"
+      },
+      "color": "#111111",
+      "emoji": "🎤",
+      "chip": "MON 7:30",
+      "logo": "kaseyacenter.com",
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Gatorfan252525 / CC BY-SA 4.0",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Miami Heat Red, White & Pink Game",
+      "highlight": "Red, White",
+      "body": "Tuesday, Oct. 6 at 6:30 p.m. at Kaseya Center in Miami. Tickets cost $10, and proceeds benefit cancer care and research at Baptist Health Herbert Wertheim Cancer Institute.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons search for Miami Heat basketball game court",
+        "prompt": "dramatic photo of the Miami Heat court inside Kaseya Center with bright red arena lighting"
+      },
+      "color": "#98002E",
+      "emoji": "🏀",
+      "chip": "$10",
+      "logo": "miamiheat.com",
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Chris Green (Chrisg21090 at en.wikipedia / Public domain",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Infinity Song at Revolution Live",
+      "highlight": "Infinity Song",
+      "body": "Wednesday, Oct. 7 at 7 p.m. at Revolution Live in Fort Lauderdale. Tickets cost $40. The sibling band brings its harmony-heavy set and viral hit, Hater's Anthem.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons search for Revolution Live Fort Lauderdale",
+        "prompt": "moody live music photo of a band performing under purple lights at Revolution Live in Fort Lauderdale"
+      },
+      "color": "#111111",
+      "emoji": "🎶",
+      "chip": "WED 7 PM",
+      "logo": "jointherevolution.net",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Msherrill77 / CC BY-SA 4.0",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Sips & Shorts at Pinecrest Gardens",
+      "highlight": "Sips & Shorts",
+      "body": "Thursday, Oct. 8 at 7 p.m. at Pinecrest Gardens in Pinecrest. Tickets cost $10. City Theatre stages four short plays in one hour, with live music from Hola Hi.",
+      "place": "Pinecrest",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons search for Pinecrest Gardens outdoor stage",
+        "prompt": "striking evening photo of Pinecrest Gardens with an outdoor stage, warm lights, and tropical greenery"
+      },
+      "color": "#2E7D32",
+      "emoji": "🎭",
+      "chip": "$10",
+      "logo": "pinecrestgardens.org",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Ebyabe / CC BY-SA 3.0",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Patti Smith at the Adrienne Arsht Center",
+      "highlight": "Patti Smith",
+      "body": "Friday, Oct. 9 at 7 p.m. at the Adrienne Arsht Center in Miami. Tickets are $40.02. The set is billed as an evening of songs and stories tied to her new memoir, Bread of Angels.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons search for Patti Smith performing live",
+        "prompt": "black-and-white concert photo of Patti Smith singing onstage with a microphone and a single spotlight"
+      },
+      "color": "#111111",
+      "emoji": "📖",
+      "chip": "FRI 7 PM",
+      "logo": "arshtcenter.org",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Elekes Andor / CC BY-SA 4.0",
+      "logoFile": "logo-5.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Arcángel at Kaseya Center",
+      "highlight": "Arcángel",
+      "body": "Sunday, Oct. 11 at 8 p.m. at Kaseya Center in Miami. Tickets run $51.45 to $168. The show celebrates his La 8va Maravilla World Tour 20 Aniversario.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons search for reggaeton concert lights",
+        "prompt": "dramatic reggaeton concert photo of Arcángel onstage with red lights, smoke, and a packed arena"
+      },
+      "color": "#D71920",
+      "emoji": "🔥",
+      "chip": "SUN 8 PM",
+      "logo": "kaseyacenter.com",
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: DXR / CC BY-SA 4.0",
+      "logoFile": null
+    }
+  ],
+  "caption": "South Florida has arena shows, a $10 Heat exhibition, theater in Pinecrest, and live music from Miami to Fort Lauderdale.\nWho are you taking? Tag a friend.",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has arena shows, a $10 Heat exhibition, theater in Pinecrest, and live music from Miami to Fort Lauderdale.\nWho are you taking? Tag a friend.\n\n📰 Sources: Miami New Times\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-05",
+  "id": "2026-10-05-upcoming"
+}
