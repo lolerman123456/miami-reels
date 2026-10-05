@@ -2,14 +2,13 @@
   "paused": false,
   "postHours": [
     13,
+    16,
     20
   ],
   "skipDates": [],
   "carousels": {
     "clip": [
       8,
-      11,
-      15,
       17,
       22
     ],
@@ -18,11 +17,7 @@
       10,
       18
     ],
-    "upcoming": 12,
-    "news": [
-      19
-    ],
-    "deals": 14
+    "upcoming": 12
   },
   "tiktokSlideshowsPerDay": 8,
   "tiktokMinScore": 6,
