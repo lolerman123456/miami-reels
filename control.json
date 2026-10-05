@@ -24,5 +24,6 @@
   "tiktokBuffer": true,
   "storiesPerDay": 2,
   "storyGapHours": 5,
-  "tiktokSlideshows": false
+  "tiktokSlideshows": false,
+  "igMusic": true
 }

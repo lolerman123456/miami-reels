@@ -57,6 +57,51 @@ export async function publishReel(videoFile, caption, { collaborators = [] } = {
   return finish(api, igUser, token, create.id, path.basename(videoFile));
 }
 
+// Map Reels with a trending song (owner, Oct 5): the Instagram Audio API only works with a Facebook-Login token
+// (FB_ACCESS_TOKEN, NEAR Social Publisher app, Jacobo's account with access to the "NEAR APP" Page linked to @getnearapp).
+// Picks a trending song from /ig_audio not used in the last 20 music posts, keeps the voice on top (song at 25%).
+export async function publishReelWithMusic(videoFile, caption, { collaborators = [] } = {}) {
+  const token = process.env.FB_ACCESS_TOKEN;
+  if (!token) throw new Error('FB_ACCESS_TOKEN not set');
+  const api = `https://graph.facebook.com/${VERSION}`;
+  const pages = await (await fetch(`${api}/me/accounts?fields=instagram_business_account&access_token=${token}`)).json();
+  const igUser = (pages.data || []).map(p => p.instagram_business_account?.id).find(Boolean);
+  if (!igUser) throw new Error('No Instagram account linked to the token\'s Pages: ' + JSON.stringify(pages.error || pages).slice(0, 200));
+  const list = await (await fetch(`${api}/ig_audio?audio_type=music&user_id=${igUser}&access_token=${token}`)).json();
+  const songs = list.audio || list.data || [];
+  if (!songs.length) throw new Error('No trending audio: ' + JSON.stringify(list.error || list).slice(0, 200));
+  const logFile = path.join(ROOT, 'posted.log');
+  const used = new Set((fs.existsSync(logFile) ? fs.readFileSync(logFile, 'utf8') : '').split('\n').filter(l => l.includes('\taudio:')).slice(-20).map(l => l.split('\taudio:')[1].split('\t')[0]));
+  const song = songs.slice(0, 15).find(a => !used.has(String(a.audio_id))) || songs[0];
+  console.log(`▶ Instagram: trending song "${song.title}" by ${song.display_artist || '?'} (${song.audio_id})`);
+  const audio = JSON.stringify({ audio_id: String(song.audio_id), audio_volume: 25, video_volume: 100 });
+  console.log('▶ Instagram: creating Reel container (with music)');
+  const create = await withCollabs(collaborators, extra => call(`${api}/${igUser}/media`, {
+    media_type: 'REELS', upload_type: 'resumable', caption, share_to_feed: 'true', audio_configuration: audio, access_token: token, ...extra,
+  }));
+  console.log('▶ Instagram: uploading video');
+  const data = fs.readFileSync(videoFile);
+  const up = await fetch(create.uri || `https://rupload.facebook.com/ig-api-upload/${VERSION}/${create.id}`, {
+    method: 'POST', headers: { Authorization: `OAuth ${token}`, offset: '0', file_size: String(data.length) }, body: data,
+  });
+  if (!up.ok) throw new Error(`Upload failed ${up.status}: ${await up.text()}`);
+  console.log('▶ Instagram: waiting for processing');
+  await waitReady(api, token, create.id);
+  const link = await finish(api, igUser, token, create.id, path.basename(videoFile));
+  fs.appendFileSync(logFile, `${new Date().toISOString()}\taudio:${song.audio_id}\t${song.title} — ${song.display_artist || ''}\t${path.basename(videoFile, '.mp4')}\n`);
+  return link;
+}
+
+// Music Reels: post with a trending song when the Audio API is set up (control.json "igMusic" not false + FB_ACCESS_TOKEN),
+// else (or if it fails) hand them to the owner like before. Returns true if posted.
+export async function postMusicReel(videoFile, episode) {
+  let on = true;
+  try { on = readJSON(path.join(ROOT, 'control.json')).igMusic !== false; } catch {}
+  if (!on || !process.env.FB_ACCESS_TOKEN) return false;
+  try { await publishReelWithMusic(videoFile, episode.igCaption, { collaborators: episode.collaborators }); return true; }
+  catch (e) { console.log(`  (music post failed: ${e.message.slice(0, 300)}; handing it to the owner)`); return false; }
+}
+
 // Carousel of 2–10 JPEGs (Instagram only accepts JPEG for images).
 export async function publishCarousel(imageFiles, caption, label, { collaborators = [] } = {}) {
   const { api, igUser, token } = auth();
@@ -209,8 +254,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const ep = readJSON(path.join(dir, 'episode.json'));
   const { wantsMusic, handToOwner, postToTikTok } = await import('./buffer.mjs');
   const ai = ep.scenes?.some(s => s.image);
-  if (wantsMusic(ep)) { // owner posts it on Instagram with a trending sound; TikTok gets a Buffer reminder
-    await handToOwner(video, ep);
+  if (wantsMusic(ep)) { // posted with a trending song via the Audio API, else the owner posts it; TikTok gets a Buffer reminder
+    if (await postMusicReel(video, ep)) await publishStory(video).catch(e => console.log(`(story skipped: ${e.message})`));
+    else await handToOwner(video, ep);
     await postToTikTok({ video: video, text: ep.igCaption, label: path.basename(dir), ai });
     process.exit(0);
   }

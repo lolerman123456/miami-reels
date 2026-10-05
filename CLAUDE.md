@@ -46,8 +46,10 @@ News/brief carousels (owner, Oct 2): if an agency released video of that exact s
 Video sources for that slide (owner, Oct 2): agency channels AND TV stations (`STATIONS` in `clip.mjs`: WSVN, Local 10, NBC 6, CBS Miami, WPTV, WPBF) — any station clip, credited "🎥 Video: <station>". **Fallback if a copyright claim/strike or takedown happens:** switch to raw police-released footage only (surveillance/bodycam/phone video cut out of the station report, never anchor/reporter segments, ≤30 s) — the owner's pre-approved plan B. Standalone clip slots stay agency-only.
 Manual: `requests/clip.json` → `{"publish": true|false, "url": "optional YouTube link", "at": "..."}` (`.github/workflows/clip.yml`).
 
-## Reels with music (owner posts them)
-The Instagram API can't add music. An episode with `"music": true` is never auto-posted to Instagram: the owner posts it
+## Reels with music
+**Since Oct 5 the bot posts music Reels itself with a trending song** (`publishReelWithMusic` / `postMusicReel` in `pipeline/publish.mjs`): Instagram Audio API (`/ig_audio`, response key `audio`) + `audio_configuration` (song 25%, voice 100%), needs the `FB_ACCESS_TOKEN` secret (Facebook-Login token from Jacobo's account on the NEAR Social Publisher app; it sees the "NEAR APP" Page linked to @getnearapp — Fabian's account runs the ads, don't relink anything). Songs used are logged as `audio:<id>` lines in `posted.log` (no repeats within 20). `control.json` → `"igMusic": false` turns it off; if it fails, the old hand-off below kicks in.
+
+Old flow (fallback): the Instagram-Login API can't add music. An episode with `"music": true` is never auto-posted to Instagram: the owner posts it
 from the app with a trending sound. Use it for Reels that would do well with music (events, parties, guides, lifestyle
 lists) — `generate.mjs` sets it automatically for EVENTS/GUIDE; informational/history ones keep auto-posting. Scheduled
 slots skip music videos in `plan/videos.txt`; if a generated Reel is a music one, `handToOwner()` (`pipeline/buffer.mjs`)

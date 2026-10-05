@@ -140,8 +140,10 @@ if (cmd === 'prepare') {
   if (!args.includes('--dry-run')) {
     const { wantsMusic, handToOwner, postToTikTok } = await import('./buffer.mjs');
     const ai = episode.scenes?.some(s => s.image);
-    if (wantsMusic(episode)) { // owner posts it on Instagram with a trending sound; TikTok gets a Buffer reminder
-      await handToOwner(out, episode);
+    if (wantsMusic(episode)) { // posted with a trending song via the Audio API, else the owner posts it; TikTok gets a Buffer reminder
+      const { postMusicReel, publishStory } = await import('./publish.mjs');
+      if (await postMusicReel(out, episode)) await publishStory(out, episode.id).catch(e => console.log(`(story skipped: ${e.message})`));
+      else await handToOwner(out, episode);
       await postToTikTok({ video: out, text: episode.igCaption, label: episode.id, ai });
       process.exit(0);
     }
