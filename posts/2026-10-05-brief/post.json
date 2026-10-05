@@ -1,0 +1,131 @@
+{
+  "sector": "USA",
+  "cover": {
+    "top": "CHILDREN FROM MIAMI",
+    "main": "REUNITED WITH THEIR PARENTS",
+    "highlight": "IN GUATEMALA",
+    "bottom": "AFTER DEPORTATION",
+    "blur": false,
+    "photo": {
+      "query": "Guatemala airport arrival family reunion dramatic documentary photo Wikimedia Commons",
+      "prompt": "A dramatic Guatemala airport arrival or reunion scene with suitcases, relatives embracing in the background, warm natural light, no identifiable faces"
+    },
+    "emojis": [
+      "✈️",
+      "🇬🇹",
+      "🧳"
+    ],
+    "logos": [
+      "local10.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "USA",
+      "headline": "Children from Miami reunited with deported parents in Guatemala",
+      "highlight": "reunited in Guatemala",
+      "body": "Local 10 said the children traveled from Miami for an emotional reunion with their deported parents in Guatemala.",
+      "place": "Miami, Guatemala",
+      "source": "local10.com",
+      "photo": {
+        "query": "Guatemala airport arrivals family reunion Wikimedia Commons",
+        "prompt": "A striking Guatemala arrival scene with a child walking toward waiting relatives, luggage carts nearby, no identifiable faces"
+      },
+      "emoji": "✈️",
+      "chip": "OCT 5",
+      "logo": "local10.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "USA",
+      "headline": "Local 10 said the journey began in Miami",
+      "highlight": "from Miami",
+      "body": "The trip turned a deportation case into a cross-border family reunion story.",
+      "place": "Miami",
+      "source": "local10.com",
+      "photo": {
+        "query": "Miami International Airport departures terminal dramatic Wikimedia Commons",
+        "prompt": "A wide airport departures view in Miami with rolling suitcases and travelers seen from behind, bright terminal lighting"
+      },
+      "emoji": "🧳",
+      "chip": "MIAMI",
+      "logo": "local10.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "USA",
+      "headline": "A second Local 10 headline said the children reunited with their mother",
+      "highlight": "with their mother",
+      "body": "One report said the reunion in Guatemala involved the children and their mother after deportation.",
+      "place": "Guatemala",
+      "source": "local10.com",
+      "photo": {
+        "query": "Guatemala City family reunion airport Wikimedia Commons",
+        "prompt": "A documentary-style reunion moment outside an airport in Guatemala with relatives meeting near the curb, no identifiable faces"
+      },
+      "emoji": "💔",
+      "chip": "MOTHER",
+      "logo": "local10.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "USA",
+      "headline": "The parents were deported before the children arrived",
+      "highlight": "deported parents",
+      "body": "The headlines put the parents in Guatemala first, then the children came from Miami to reunite with them.",
+      "place": "Guatemala",
+      "source": "local10.com",
+      "photo": {
+        "query": "map Miami to Guatemala route Wikimedia Commons",
+        "prompt": "A clean map of the route from Miami to Guatemala with a simple route line and an arrow toward Guatemala"
+      },
+      "emoji": "🗺️",
+      "chip": "ROUTE",
+      "logo": "local10.com",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Wikimedia Commons / Public domain",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "USA",
+      "headline": "The story points to South Florida families split by enforcement",
+      "highlight": "South Florida families",
+      "body": "The case shows how immigration enforcement can separate families across borders and leave children traveling to meet deported parents.",
+      "place": "South Florida",
+      "source": "local10.com",
+      "photo": {
+        "query": "Miami family immigration protest or airport documentary photo Wikimedia Commons",
+        "prompt": "A serious South Florida related airport or family scene with strong documentary framing, no identifiable faces"
+      },
+      "emoji": "🛂",
+      "chip": "SOUTH FLORIDA",
+      "logo": "local10.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "Children from Miami reunited with deported parents in Guatemala after an emotional cross-border trip.\nThe case shows how immigration enforcement can split South Florida families.",
+  "hashtags": [
+    "#Miami",
+    "#Guatemala",
+    "#Immigration"
+  ],
+  "collaborators": [],
+  "igCaption": "Children from Miami reunited with deported parents in Guatemala after an emotional cross-border trip.\nThe case shows how immigration enforcement can split South Florida families.\n\n📰 Sources: local10.com\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#Miami #Guatemala #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-05",
+  "id": "2026-10-05-brief"
+}
