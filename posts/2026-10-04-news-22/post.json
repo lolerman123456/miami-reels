@@ -1,0 +1,92 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "POLICE SAY THE",
+    "main": "NAKED PHOTOS",
+    "highlight": "EXCUSE",
+    "bottom": "BACKFIRED DURING A WEST PALM BEACH DRUG BUST",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons police evidence bag smartphone patrol car night",
+      "prompt": "dramatic close-up of a smartphone in a clear evidence bag on a patrol car hood, red and blue police lights reflecting at night, no people visible",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚔",
+      "📱",
+      "🧪"
+    ],
+    "logos": [
+      "cbs12.com",
+      "pbso.org"
+    ],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Eden, Janine and Jim / CC BY 2.0",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Months of undercover meth buys led to arrest",
+      "highlight": "meth buys",
+      "body": "A second WPEC headline says months of undercover meth buys ended in a West Palm Beach woman’s arrest.",
+      "place": "West Palm Beach",
+      "source": "WPEC",
+      "photo": {
+        "query": "Wikimedia Commons Palm Beach County Sheriff's Office vehicle night",
+        "prompt": "Palm Beach County sheriff vehicle parked on a dark West Palm Beach street with police lights on, no people visible"
+      },
+      "emoji": "🧪",
+      "chip": "MONTHS",
+      "logo": "pbso.org",
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Michael Rivera / CC BY-SA 4.0",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "PBSO is the agency named in the case",
+      "highlight": "PBSO",
+      "body": "WPEC attributed the arrest detail to PBSO, the Palm Beach County sheriff’s office.",
+      "place": "Palm Beach County",
+      "source": "WPEC",
+      "photo": {
+        "query": "Wikimedia Commons Palm Beach County Sheriff's Office patrol car",
+        "prompt": "close-up of a Palm Beach County Sheriff's Office patrol vehicle with lights flashing at night, no people visible"
+      },
+      "emoji": "🚓",
+      "chip": "PBSO",
+      "logo": "pbso.org",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: CZmarlin — Christopher Ziemnowicz, relea / Public domain",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "West Palm Beach is the county seat",
+      "highlight": "West Palm Beach",
+      "body": "West Palm Beach is Palm Beach County’s county seat and largest city.",
+      "place": "West Palm Beach",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Wikimedia Commons West Palm Beach skyline at night",
+        "prompt": "wide nighttime view of the West Palm Beach skyline with police lights in the foreground, no people visible"
+      },
+      "emoji": "🏙️",
+      "chip": "WPB",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Andyxox / CC BY-SA 4.0"
+    }
+  ],
+  "caption": "Police say a West Palm Beach drug bust turned into a ‘naked photos’ explanation that did not help the suspect.\nThe case spread fast after WPEC reported the arrest and the undercover-buy detail.",
+  "hashtags": [
+    "#WestPalmBeach",
+    "#PalmBeachCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say a West Palm Beach drug bust turned into a ‘naked photos’ explanation that did not help the suspect.\nThe case spread fast after WPEC reported the arrest and the undercover-buy detail.\n\n📰 Sources: WPEC, Wikipedia\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#WestPalmBeach #PalmBeachCounty #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-04",
+  "id": "2026-10-04-news-22"
+}
