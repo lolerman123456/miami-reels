@@ -1,0 +1,233 @@
+{
+  "title": "5 Things to Do in South Florida This Week",
+  "sources": [
+    "Miami New Times",
+    "Miami New Times Concerts"
+  ],
+  "collaborators": [],
+  "igCaption": "Start with the free one: Vice City Pillow Talk Live is Monday at Books & Books in Coral Gables.\nThis week also has Infinity Song in Fort Lauderdale, Sips & Shorts in Pinecrest, Patti Smith downtown, and Black Country, New Road in North Beach.\nWhich one would you actually go to this week?\n\nSources: Miami New Times, Miami New Times Concerts\n\n#MiamiEvents #SouthFlorida #FortLauderdale #MiamiBeach",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need plans this week? Start with the free one in Coral Gables, then work your way to Friday night.",
+      "overlay": [
+        "THIS WEEK",
+        "START FREE"
+      ],
+      "emojis": [
+        "📅",
+        "🎭",
+        "🎶",
+        "📍"
+      ],
+      "location": {
+        "name": "Books & Books Coral Gables",
+        "lat": 25.7504,
+        "lon": -80.2595,
+        "h": 12
+      },
+      "shot": {
+        "type": "dive",
+        "range": 700,
+        "pitch": -32,
+        "heading": 95
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Monday at six thirty, Miami New Times and We Met in Miami bring Vice City Pillow Talk Live to Books and Books on Aragon Avenue. Admission is free with RSVP. The topic is dating, money, gender, sex, and Miami.",
+      "caption": "Monday at 6:30, Miami New Times and We Met in Miami bring Vice City Pillow Talk Live to Books & Books on Aragon Avenue. Admission is free with RSVP. The topic is dating, money, gender, sex, and Miami.",
+      "overlay": "BOOKS & BOOKS",
+      "badge": "FREE RSVP",
+      "sub": "Monday in Coral Gables",
+      "emoji": "📚",
+      "stats": [
+        {
+          "value": "6:30 PM",
+          "label": "start time"
+        },
+        {
+          "value": "FREE",
+          "label": "with RSVP"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Books & Books Coral Gables",
+        "lat": 25.7504,
+        "lon": -80.2595,
+        "h": 12
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 650,
+        "pitch": -30,
+        "heading": 130,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Wednesday at seven, Infinity Song plays Revolution Live on Southwest Third Avenue in Fort Lauderdale. The Roc-Nation-signed siblings grew up on classical music, gospel, and jazz. Tickets cost forty dollars through Ticketmaster.",
+      "caption": "Wednesday at 7, Infinity Song plays Revolution Live on SW 3rd Avenue in Fort Lauderdale. The Roc-Nation-signed siblings grew up on classical music, gospel, and jazz. Tickets cost $40 through Ticketmaster.",
+      "overlay": "REVOLUTION LIVE",
+      "badge": "$40",
+      "sub": "Wednesday in Fort Lauderdale",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "7 PM",
+          "label": "start time"
+        },
+        {
+          "value": "$40",
+          "label": "ticket price"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Revolution Live",
+        "lat": 26.1218,
+        "lon": -80.1466,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 210,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Thursday, Pinecrest Gardens hosts Sips & Shorts with City Theatre, the producers of Miami's Summer Shorts Festival. The setup gives you four plays for the price of one. If you go, open NEAR later and see who else was there.",
+      "caption": "Thursday, Pinecrest Gardens hosts Sips & Shorts with City Theatre, the producers of Miami's Summer Shorts Festival. The setup gives you 4 plays for the price of 1. If you go, open NEAR later and see who else was there.",
+      "overlay": "PINECREST",
+      "badge": "4 PLAYS",
+      "sub": "Thursday at the gardens",
+      "emoji": "🎭",
+      "stats": [
+        {
+          "value": "4",
+          "label": "plays"
+        },
+        {
+          "value": "1",
+          "label": "ticket setup"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Pinecrest Gardens",
+        "lat": 25.669,
+        "lon": -80.2849,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 35,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Friday at seven, Patti Smith takes the Ziff Ballet Opera House stage at the Adrienne Arsht Center. The night is billed as songs and stories, with inspiration from her new memoir, Bread of Angels. Tickets cost forty dollars and two cents.",
+      "caption": "Friday at 7, Patti Smith takes the Ziff Ballet Opera House stage at the Adrienne Arsht Center. The night is billed as songs and stories, with inspiration from her new memoir, Bread of Angels. Tickets cost $40.02.",
+      "overlay": "ARSHT CENTER",
+      "badge": "$40.02",
+      "sub": "Friday on Biscayne Boulevard",
+      "emoji": "🎼",
+      "stats": [
+        {
+          "value": "7 PM",
+          "label": "start time"
+        },
+        {
+          "value": "$40.02",
+          "label": "tickets"
+        }
+      ],
+      "source": "Miami New Times Concerts",
+      "location": {
+        "name": "Adrienne Arsht Center",
+        "lat": 25.7877,
+        "lon": -80.1898,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -34,
+        "heading": 165,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Also Friday at eight, Black Country, New Road plays the Miami Beach Bandshell on Collins Avenue. The English rock band released its third album, Forever Howlong, last year. Tickets cost forty-four dollars and ten cents through AXS.",
+      "caption": "Also Friday at 8, Black Country, New Road plays the Miami Beach Bandshell on Collins Avenue. The English rock band released its third album, Forever Howlong, last year. Tickets cost $44.10 through AXS.",
+      "overlay": "BANDSHELL",
+      "badge": "$44.10",
+      "sub": "Friday in North Beach",
+      "emoji": "🎸",
+      "stats": [
+        {
+          "value": "8 PM",
+          "label": "start time"
+        },
+        {
+          "value": "$44.10",
+          "label": "tickets"
+        }
+      ],
+      "source": "Miami New Times Concerts",
+      "location": {
+        "name": "Miami Beach Bandshell",
+        "lat": 25.8584,
+        "lon": -80.1208,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 750,
+        "pitch": -32,
+        "heading": 285,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you picking this week? At a packed South Florida event, you might keep passing the same person without knowing their name, and NEAR is the part that tells you who they were.",
+      "overlay": "COMMENT 📍",
+      "sub": "Tell us your plan",
+      "location": {
+        "name": "Miami Beach Bandshell",
+        "lat": 25.8584,
+        "lon": -80.1208,
+        "h": 10
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -30,
+        "heading": 20
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "063-5-things-to-do-in-south-florida-this-wee"
+}
