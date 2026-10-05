@@ -1,0 +1,203 @@
+{
+  "title": "This Week in South Florida: Jobs, Rivalry Football, Vice City and a $1.7B Groundbreaking",
+  "sources": [
+    "WPTV",
+    "Sports Business Journal",
+    "news-press.com",
+    "Tallahassee Democrat",
+    "The Business Journals",
+    "Wikipedia Hard Rock Stadium",
+    "Wikipedia Miami Heat",
+    "Wikipedia Palm Beach County, Florida"
+  ],
+  "collaborators": [
+    "miamiheat"
+  ],
+  "igCaption": "South Florida has a two-day hospitality and tourism job fair in Palm Beach County, a Miami FSU kickoff set for 7 p.m. on ESPN, and a Heat Vice City night tied to GTA VI.\nA Mandarin Oriental condo project also broke ground in Miami after reaching $1.7B in sales.\nWhich one are you watching this week?\n\nSources: WPTV, Sports Business Journal, news-press.com, Tallahassee Democrat, The Business Journals, Wikipedia Hard Rock Stadium, Wikipedia Miami Heat, Wikipedia Palm Beach County, Florida\n\n#SouthFlorida #MiamiEvents #MiamiSports #PalmBeachCounty",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "This week has a two-day job fair, a Heat Vice City night, and Miami versus Florida State at seven.",
+      "overlay": [
+        "THIS WEEK",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🏈",
+        "🏀",
+        "💼",
+        "🏗️"
+      ],
+      "location": {
+        "name": "Hard Rock Stadium",
+        "lat": 25.95805556,
+        "lon": -80.23888889,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Palm Beach County hosts a two-day hospitality and tourism job fair in Lake Worth Beach and Greenacres. The county had 1,492,191 residents in 2020.",
+      "caption": "Palm Beach County hosts a 2-day hospitality and tourism job fair in Lake Worth Beach and Greenacres. The county had 1,492,191 residents in 2020.",
+      "overlay": "PALM BEACH",
+      "badge": "2 DAYS",
+      "sub": "Hospitality job fair",
+      "emoji": "💼",
+      "stats": [
+        {
+          "value": "2 DAYS",
+          "label": "job fair"
+        },
+        {
+          "value": "1,492,191",
+          "label": "2020 residents"
+        }
+      ],
+      "source": "WPTV",
+      "location": {
+        "name": "Lake Worth Beach",
+        "lat": 26.6168,
+        "lon": -80.0684,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami and Florida State kick off at 7 p.m. on October 17 on ESPN. Hard Rock Stadium has been Miami's home field since 2008.",
+      "caption": "Miami and Florida State kick off at 7 p.m. on October 17 on ESPN. Hard Rock Stadium has been Miami's home field since 2008.",
+      "overlay": "HARD ROCK",
+      "badge": "7 PM ESPN",
+      "sub": "Miami vs. FSU",
+      "emoji": "🏈",
+      "stats": [
+        {
+          "value": "7 PM",
+          "label": "kickoff"
+        },
+        {
+          "value": "2008",
+          "label": "Canes moved"
+        }
+      ],
+      "source": "news-press.com",
+      "location": {
+        "name": "Hard Rock Stadium",
+        "lat": 25.95805556,
+        "lon": -80.23888889,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1700,
+        "pitch": -35,
+        "heading": 40,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Heat host a Night in Vice City against the Bucks to promote Grand Theft Auto VI. The franchise began play in the 1988-89 season and has won three NBA championships. If you're at Vice City night, open NEAR and see who's there.",
+      "caption": "The Heat host a Night in Vice City against the Bucks to promote Grand Theft Auto VI. The franchise began play in the 1988-89 season and has won 3 NBA championships. If you're at Vice City night, open NEAR and see who's there.",
+      "overlay": "MIAMI HEAT",
+      "badge": "GTA VI NIGHT",
+      "sub": "Heat vs. Bucks",
+      "emoji": "🏀",
+      "stats": [
+        {
+          "value": "3",
+          "label": "NBA titles"
+        },
+        {
+          "value": "1988-89",
+          "label": "first season"
+        }
+      ],
+      "source": "Sports Business Journal",
+      "location": {
+        "name": "Miami Heat Home Arena",
+        "lat": 25.7814,
+        "lon": -80.187,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 255,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "A Mandarin Oriental condo project broke ground in Miami after reaching $1.7B in sales.",
+      "caption": "A Mandarin Oriental condo project broke ground in Miami after reaching $1.7B in sales.",
+      "overlay": "MANDARIN",
+      "badge": "$1.7B SALES",
+      "sub": "Condo project breaks ground",
+      "emoji": "🏗️",
+      "stats": [
+        {
+          "value": "$1.7B",
+          "label": "sales reached"
+        }
+      ],
+      "source": "The Business Journals",
+      "location": {
+        "name": "Mandarin Oriental Miami",
+        "lat": 25.7651,
+        "lon": -80.1859,
+        "h": 100
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -36,
+        "heading": 310,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you going to follow this week? In a week packed with jobs, football, and downtown changes, NEAR is what makes the people you passed on the way feel a little less like strangers.",
+      "overlay": "WHAT'S YOUR PICK? 👇",
+      "sub": "Jobs, sports, or real estate",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 110
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1900,
+        "pitch": -32,
+        "heading": 185
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "062-this-week-in-south-florida-jobs-rivalry-"
+}
