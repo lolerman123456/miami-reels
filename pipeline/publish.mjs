@@ -75,18 +75,22 @@ export async function publishReelWithMusic(videoFile, caption, { collaborators =
   const song = songs.slice(0, 15).find(a => !used.has(String(a.audio_id))) || songs[0];
   console.log(`▶ Instagram: trending song "${song.title}" by ${song.display_artist || '?'} (${song.audio_id})`);
   const audio = JSON.stringify({ audio_id: String(song.audio_id), audio_volume: 14, video_volume: 100 });
-  console.log('▶ Instagram: creating Reel container (with music)');
-  const create = await withCollabs(collaborators, extra => call(`${api}/${igUser}/media`, {
-    media_type: 'REELS', upload_type: 'resumable', caption, share_to_feed: 'true', audio_configuration: audio, access_token: token, ...extra,
-  }));
-  console.log('▶ Instagram: uploading video');
-  const data = fs.readFileSync(videoFile);
-  const up = await fetch(create.uri || `https://rupload.facebook.com/ig-api-upload/${VERSION}/${create.id}`, {
-    method: 'POST', headers: { Authorization: `OAuth ${token}`, offset: '0', file_size: String(data.length) }, body: data,
-  });
-  if (!up.ok) throw new Error(`Upload failed ${up.status}: ${await up.text()}`);
-  console.log('▶ Instagram: waiting for processing');
-  await waitReady(api, token, create.id);
+  // Oct 5: the resumable upload of the full-quality file failed ("ProcessingFailedError"); send a compressed copy
+  // (same settings as the public watch link) through a temporary public link instead, like the Instagram-Login path
+  const small = path.join((await import('node:os')).tmpdir(), path.basename(videoFile, '.mp4') + '-ig.mp4'); // outside out/ so later steps don't pick it up
+  await run('ffmpeg', ['-loglevel', 'error', '-y', '-i', videoFile, '-c:v', 'libx264', '-preset', 'veryfast', '-b:v', '4500k', '-maxrate', '5500k',
+    '-bufsize', '11M', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '160k', '-ar', '48000', '-movflags', '+faststart', small]);
+  let create, tunnel;
+  try {
+    console.log('▶ Instagram: opening temporary public link');
+    tunnel = await serveFilePublicly(small);
+    console.log('▶ Instagram: creating Reel container (with music)');
+    create = await withCollabs(collaborators, extra => call(`${api}/${igUser}/media`, {
+      media_type: 'REELS', video_url: tunnel.url, caption, share_to_feed: 'true', audio_configuration: audio, access_token: token, ...extra,
+    }));
+    console.log('▶ Instagram: waiting for processing');
+    await waitReady(api, token, create.id);
+  } finally { tunnel?.close(); }
   const link = await finish(api, igUser, token, create.id, path.basename(videoFile));
   fs.appendFileSync(logFile, `${new Date().toISOString()}\taudio:${song.audio_id}\t${song.title} — ${song.display_artist || ''}\t${path.basename(videoFile, '.mp4')}\n`);
   return link;
@@ -257,7 +261,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   if (wantsMusic(ep)) { // posted with a trending song via the Audio API, else the owner posts it; TikTok gets a Buffer reminder
     if (await postMusicReel(video, ep)) await publishStory(video).catch(e => console.log(`(story skipped: ${e.message})`));
     else await handToOwner(video, ep);
-    await postToTikTok({ video: video, text: ep.igCaption, label: path.basename(dir), ai });
+    const logTxt = fs.existsSync(path.join(ROOT, 'posted.log')) ? fs.readFileSync(path.join(ROOT, 'posted.log'), 'utf8') : '';
+    if (!logTxt.includes(`tiktok:${path.basename(dir)}\t`)) await postToTikTok({ video: video, text: ep.igCaption, label: path.basename(dir), ai }); // already reminded when it rendered
     process.exit(0);
   }
   await publishReel(video, ep.igCaption, { collaborators: ep.collaborators });
