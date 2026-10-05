@@ -18,6 +18,8 @@ crime stories only rarely, when the owner asks.
   Each item scene = what + when + where + price, in 2–4 SHORT separate sentences (max ~12 words each), e.g. "Monday night, it's
   free. Bingo After Dark at the Improv in Dania Beach. Just RSVP." Never pad an item with background (acreage, founding year,
   a mall's history, redevelopment plans): if a place has no event with a date, drop it and use fewer items (3 is fine).
+  Never use Wikipedia trivia in an event item (a city's population/census, a team's titles, an arena's capacity): only the event itself.
+  Every item needs its own day/date; an item without a date ("on view in October", "this season") is dropped.
   Outro = one short, real question ending in "?" ("Which one are you hitting first?"), then the tag-a-friend line.
   Hook = one or two short punchy sentences ("Here's everything happening in South Florida this week. And we're starting with the free stuff.").
   Owner-approved hook styles (Oct 4): "5 THINGS TO DO IN SOUTH FLORIDA THIS WEEKEND", "SOUTH FLORIDA CONCERTS YOU'LL REGRET MISSING THIS MONTH",
@@ -137,6 +139,9 @@ export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
   const epRoot = path.join(ROOT, 'episodes');
   const existing = fs.existsSync(epRoot) ? fs.readdirSync(epRoot).filter(d => fs.existsSync(path.join(epRoot, d, 'episode.json'))).sort() : [];
   const past = existing.map(d => readJSON(path.join(epRoot, d, 'episode.json')).title);
+  // items from the last 3 Reels (owner, Oct 5: Superblue/Brightline showed up in 3 Reels in a row) — never repeat them
+  const recentItems = [...new Set(existing.slice(-3).flatMap(d => (readJSON(path.join(epRoot, d, 'episode.json')).scenes || []).filter(x => x.kind === 'item').map(x => x.overlay).filter(Boolean)))];
+  const AVOID = recentItems.length ? `\nAlready covered in the last 3 Reels — do NOT use these places/events again: ${recentItems.join(', ')}\n` : '';
   // a batch of runs at once passes its own number so two runs never share an episode id
   const num = forcedNum ? String(forcedNum).padStart(3, '0') : String(Math.max(0, ...existing.map(d => parseInt(d, 10) || 0)) + 1).padStart(3, '0');
   const HOOK = hook ? `\nOWNER'S HOOK — the hook scene's "text" must be this line, word for word (finish a "starting with…" line with the first item's name). Only change a word if a fact in it is contradicted by the sources:\n"${hook}"\n` : '';
@@ -149,7 +154,7 @@ export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
     'Don\'t repeat past videos. Return JSON: {"format":"…","angle":"one sentence","wikipedia":["up to 5 exact English Wikipedia article titles to pull facts from"],' +
     '"rent":["up to 12 South Florida city names or 5-digit ZIPs for Zillow rent data, only for rent/cost topics"],"news":[indexes of the relevant headlines],' +
     '"search":["up to 4 Google News searches for facts the other sources will not have: recent sales, events, crime data, case updates"]}' },
-    { role: 'user', content: `Today: ${new Date().toDateString()}\n${topic ? `The account owner asked for: ${topic}\n` : ''}${HOOK}` +
+    { role: 'user', content: `Today: ${new Date().toDateString()}\n${topic ? `The account owner asked for: ${topic}\n` : ''}${HOOK}${AVOID}` +
       `Past videos:\n${past.map(t => '- ' + t).join('\n') || '(none)'}\n\nRecent South Florida headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` }], 'mini');
   console.log(`  plan: [${plan.format}] ${plan.angle}`);
 
@@ -176,7 +181,7 @@ export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
   let episode;
   for (let attempt = 1; attempt <= 3; attempt++) {
     const draft = await chat([{ role: 'system', content: `${NARRATOR}\n\n${STYLE}\n\n${toneLines()}\n\n${HANDLES_RULE()}\n\n${FORMAT}` },
-      { role: 'user', content: `Format: ${plan.format}\nAngle: ${plan.angle}\n${topic ? `Owner's request: ${topic}\n` : ''}${HOOK}\n${SOURCES}\n\nWrite the episode.\n${REMINDER}` }]);
+      { role: 'user', content: `Format: ${plan.format}\nAngle: ${plan.angle}\n${topic ? `Owner's request: ${topic}\n` : ''}${HOOK}${AVOID}\n${SOURCES}\n\nWrite the episode.\n${REMINDER}` }]);
     episode = sanitize(await chat([{ role: 'system', content: `${CHECKER}\n\n${STYLE}` }, { role: 'user', content: `${SOURCES}\n\nDRAFT:\n${JSON.stringify(draft)}\n\n${REMINDER}` }], 'mini'));
     if (episode.removed?.length) console.log(`  fact-check fixed: ${episode.removed.join(' | ').slice(0, 400)}`);
     const spoken = (episode.scenes || []).map(s => s.text).join(' ');
