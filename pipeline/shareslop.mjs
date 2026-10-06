@@ -1,7 +1,6 @@
 // Shareslop (owner, Oct 6: "stuff like @lostmydaddy / @ragebaitnews … people share to couples/friends"): ONE image with a huge
 // two-color headline, posted as a short Reel with a trending song (Instagram Audio API, like the map Reels).
-// Stories are REAL (worldwide weird news, studies, surveys, wild arrests; South Florida every few posts) — the headline is punchy
-// and provocative but true to its source. The picture is an AI-staged scene with invented people (never a real/famous person).
+// Parody "STUDY SHOWS" memes (see write()): the picture is an AI-staged, exaggerated scene with invented people (never a real/famous person).
 //   node pipeline/shareslop.mjs [--count 3] [--dry-run]
 import fs from 'node:fs';
 import path from 'node:path';
@@ -34,29 +33,31 @@ async function candidates() {
   return out.slice(0, 160);
 }
 
+// owner, Oct 6 (after the first previews): the format is "[ridiculous thing the sender wants] + [normal-sounding benefit], STUDY SHOWS"
+// — e.g. "CALLING HIM DADDY INCREASES HIS LIFESPAN, STUDY SHOWS" with an exaggerated picture (heart eyes). It's a parody
+// meme format: obviously absurd, harmless if "followed", never about real people/groups, tagged #satire in the caption.
 async function write(items, recent) {
-  return chatJSON([{ role: 'system', content: 'You run a viral SHARE page (style: @lostmydaddy — e.g. "SPITTING IN HIS MOUTH BOOSTS HIS IMMUNE SYSTEM"): ONE picture with a huge headline '
-    + 'that one person SENDS TO THEIR PARTNER, crush or best friend as a hint or a demand — "do this for me 👀", "see, science says so", "you need to start doing this", "this is literally you". '
-    + 'The share IS the joke: the headline gives the sender an excuse to ask for something (cuddles, massages, compliments, flowers, food, sleep, attention, gym time, a trip) or to call the other person out. '
-    + 'From these REAL headlines pick the ONE whose finding works best as that hint. Best: studies/surveys about what partners should do for each other and what it does for them '
-    + '("MEN WHO GET A DAILY HUG LIVE LONGER", "WOMEN WHO GET FLOWERS RANDOMLY ARE HAPPIER, STUDY FINDS", "COUPLES WHO NAP TOGETHER FIGHT LESS"), habits that make someone more attractive, '
-    + 'friend-group callouts. Phrase the headline as the HINT (subject = the person being sent it: "HIM", "HER", "YOUR GIRLFRIEND", "MEN WHO…"), short and a little cheeky. '
-    + 'If nothing works as a hint, pick the closest relationship/friendship finding; never generic news.\n'
-    + 'HARD RULES (the account must stay safe): the headline must be TRUE to the source headline — provocative wording is fine, inventing facts is not '
-    + '(a study "suggests"/"finds", not "proves"; never health advice the source doesn\'t give). Never about a real celebrity or public figure, '
-    + 'never names a private person or victim, nothing about deaths, kids, sexual assault, race, ethnicity, religion, nationality or politics. '
+  return chatJSON([{ role: 'system', content: 'You run a viral meme SHARE page (style: @lostmydaddy). Every post is ONE picture + a huge headline in this exact formula: '
+    + '[a cheeky, ridiculous thing one partner wants the other to do] + [a normal, legit-sounding health/science benefit] + ", STUDY SHOWS" (or SCIENTISTS SAY / DOCTORS CONFIRM / NEW RESEARCH FINDS). '
+    + 'Examples: "SPITTING IN HIS MOUTH BOOSTS HIS IMMUNE SYSTEM", "CALLING HIM DADDY INCREASES HIS LIFESPAN, STUDY SHOWS", "BUYING HER 2AM TACO BELL LOWERS HER BLOOD PRESSURE, DOCTORS SAY", '
+    + '"LETTING HER WEAR YOUR HOODIE IMPROVES YOUR CREDIT SCORE, STUDY SHOWS", "MEN WHO GIVE FOOT RUBS GROW AN INCH TALLER, SCIENTISTS SAY", "SENDING HIM 47 TIKTOKS A DAY STRENGTHENS HIS HEART". '
+    + 'The point: the person who sees it SENDS it to their partner/crush/friend as a joke-demand ("do this for me 👀") — so the first half must be something real people actually want '
+    + '(attention, food runs, massages, compliments, pet names, cuddles, texting back, letting them pick the restaurant, carrying them, gifts…) and the deadpan "benefit" makes it funnier. '
+    + 'Alternate who it targets (HIM / HER / YOUR BESTIE / YOUR MAN). It may riff on one of the real headlines below if one fits, otherwise invent. '
+    + 'SAFETY: it is satire — nothing anyone could get hurt following (no drugs, alcohol, medication, diets/fasting, dangerous stunts, skipping doctors), not explicit (suggestive like "daddy" is fine), '
+    + 'never real people, celebrities or brands-as-targets, nothing about race, religion, nationality, politics, kids, death or assault. '
     + `Don't repeat these recent angles: ${recent.join(' | ') || 'none'}.\n`
-    + 'Write: "headline": 5–11 words, ALL CAPS, the hint (true to the finding); '
-    + '"hot": 1–3 consecutive words copied exactly from the headline to color blue (the ask/the payoff); '
-    + '"image": a photorealistic staged scene that SHOWS THE HINT BEING FULFILLED (the person the headline is about receiving it and visibly loving it, e.g. "his nervous system wants a back massage" → a man face-down on a couch, eyes closed, blissed out, while his girlfriend massages his shoulders, warm lamp light), exaggerated like a viral meme photo — describe exactly who is where doing what; or one that ACTS OUT the headline literally, mid-action, absurd and a little uncomfortable like a viral meme photo (e.g. for "spitting boosts immunity": a woman pouring water into a man\'s open mouth in a park while people around sneeze into tissues) — never just people staring shocked at a phone; invented ordinary people, no text, no real people; '
-    + '"caption": 2 short lines retelling the story plainly with the key fact + "Source: <outlet>" + a share line that fits that tells them to SEND it (e.g. "Send this to your man 👀", "Send this to her. Just do it 😭", "Leave this on his phone 👀", "Tag who owes you this"); '
-    + '"hashtags": 3 hashtags; "angle": 3-word label of the topic. '
-    + 'First draft 4 different options from different headlines, score each "send": 1–10 = how likely a real person forwards it to their partner/friend as a hint ("send this to him" energy; animals, generic science or trivia score ≤4), then return ONLY the best one with its score. '
-    + 'Reply JSON {"send": n, "index": n, "headline": "", "hot": "", "image": "", "caption": "", "hashtags": [], "angle": ""}.' },
-  { role: 'user', content: items.map((i, n) => `${n}. [${i.source}] ${i.title}`).join('\n') }], 'write');
+    + 'Write: "headline": 6–12 words, ALL CAPS, the formula; "hot": the 1–3 most ridiculous consecutive words copied exactly from the headline (colored blue); '
+    + '"image": an exaggerated, comedic, photorealistic viral-meme scene ACTING OUT the first half, very over the top (e.g. for the daddy one: a woman with giant glowing cartoon heart-shaped eyes swooning while calling her boyfriend daddy, he looks smug and glowing with health, '
+    + 'hearts floating) — describe exactly who is where doing what and their exaggerated expressions; invented ordinary people, no text; '
+    + '"cta": short call to action printed on the image, ALL CAPS, ≤22 chars + 1 emoji (e.g. "SEND THIS TO HIM 👀", "SEND TO YOUR MAN 😭", "TAG YOUR BESTIE 🫶"); '
+    + '"caption": 1–2 deadpan lines in fake-news voice ("A new study found that…") + the same send-it line; "hashtags": 2 hashtags (the code adds #satire); "angle": 3-word label. '
+    + 'First draft 5 options, score each "send": 1–10 = how likely someone forwards it to their partner/friend right now, then return ONLY the best. '
+    + 'Reply JSON {"send": n, "headline": "", "hot": "", "image": "", "cta": "", "caption": "", "hashtags": [], "angle": ""}.' },
+  { role: 'user', content: 'Real headlines for inspiration (optional):\n' + items.slice(0, 40).map(i => `- ${i.title}`).join('\n') }], 'write');
 }
 
-function html(headline, hot, img) {
+function html(headline, hot, img, cta = '') {
   const words = headline.trim().split(/\s+/);
   const hotWords = String(hot || '').toUpperCase().split(/\s+/).filter(Boolean);
   let start = -1;
@@ -77,10 +78,11 @@ body { width: 1080px; height: 1920px; background: #000; overflow: hidden; positi
 .brand i { flex: 1; height: 3px; background: rgba(255,255,255,.75); }
 .brand b { font: 900 40px 'Mont'; color: #fff; letter-spacing: 1px; }
 .brand b span { background: ${BLUE}; color: #fff; padding: 2px 14px; border-radius: 8px; margin-left: 8px; }
+.cta { display: inline-block; margin-top: 30px; background: ${BLUE}; color: #fff; font: 900 46px 'Mont'; padding: 14px 34px; border-radius: 60px; box-shadow: 0 8px 30px rgba(23,105,255,.5); }
 h1 { font: 700 150px/0.98 'Oswald'; color: #fff; text-transform: uppercase; letter-spacing: -1px; word-spacing: 4px; }
 .hot { color: #4D94FF; text-shadow: 0 4px 0 #0A2E7A, 0 0 22px rgba(23,105,255,.55); } /* Near blue, lifted for legibility on black (owner, Oct 6) */
 </style></head><body><div class="photo"></div><div class="fade"></div>
-<div class="box"><div class="brand"><i></i><b>GET<span>NEAR</span></b><i></i></div><h1 id="h">${body}</h1></div></body></html>`;
+<div class="box"><div class="brand"><i></i><b>GET<span>NEAR</span></b><i></i></div><h1 id="h">${body}</h1>${cta ? `<div class="cta">${cta}</div>` : ''}</div></body></html>`;
 }
 
 export async function render(post, dir) {
@@ -90,10 +92,10 @@ export async function render(post, dir) {
   try {
     const page = await browser.newPage();
     await page.setViewport({ width: 1080, height: 1920 });
-    await page.setContent(html(post.headline, post.hot, post.imageFile), { waitUntil: 'load' });
+    await page.setContent(html(post.headline, post.hot, post.imageFile, post.cta), { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
     // shrink the headline until it fits in ~640 px (3–5 lines)
-    await page.evaluate(() => { const h = document.getElementById('h'); let s = 150; while (h.offsetHeight > 640 && s > 70) { s -= 4; h.style.fontSize = s + 'px'; } });
+    await page.evaluate(() => { const h = document.getElementById('h'); let s = 150; while (h.offsetHeight > 560 && s > 70) { s -= 4; h.style.fontSize = s + 'px'; } });
     const jpg = path.join(dir, 'slide.jpg');
     await page.screenshot({ path: jpg, type: 'jpeg', quality: 93 });
     return jpg;
@@ -103,18 +105,16 @@ export async function render(post, dir) {
 async function makeOne(n, items, recent, dryRun) {
   step(`Shareslop ${n}`);
   const w = await write(items, recent);
-  const item = items[w?.index];
-  if (!item || !w.headline || !w.image) throw new Error('writer returned nothing usable: ' + JSON.stringify(w).slice(0, 200));
-  items.splice(w.index, 1); // not twice in one run
+  if (!w?.headline || !w.image) throw new Error('writer returned nothing usable: ' + JSON.stringify(w).slice(0, 200));
   if (!(+w.send >= 7)) throw new Error(`best option only scored ${w.send}/10 for sharing ("${w.headline}") — skipped`);
   const id = `${new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' })}-${String(Date.now()).slice(-6)}`;
   const dir = path.join(ROOT, 'out', 'shareslop', id);
   fs.mkdirSync(dir, { recursive: true });
-  console.log(`  [${item.source}] ${item.title}\n  → ${w.headline}  (hot: ${w.hot})`);
+  console.log(`  → ${w.headline}  (hot: ${w.hot}; send ${w.send}/10; cta: ${w.cta})`);
   const img = await aiImage(w.image, dir, 'image', 'people');
   if (!img) throw new Error('no image');
-  const post = { id, source: item.source, sourceTitle: item.title, headline: w.headline.toUpperCase(), hot: w.hot, image: w.image, imageFile: img.file, angle: w.angle,
-    caption: `${w.caption}\n\n${(w.hashtags || []).slice(0, 3).map(h => '#' + String(h).replace(/^#/, '')).join(' ')}`.trim() };
+  const post = { id, cta: String(w.cta || 'SEND THIS TO HIM 👀').toUpperCase(), headline: w.headline.toUpperCase(), hot: w.hot, image: w.image, imageFile: img.file, angle: w.angle,
+    caption: `${w.caption}\n\n${[...(w.hashtags || []).slice(0, 2), 'satire'].map(h => '#' + String(h).replace(/^#/, '')).join(' ')}`.trim() };
   const jpg = await render(post, dir);
   // a 7 s Reel of the still (Reels need video; the song is added by Instagram) — silent track so the song mixes in cleanly
   const mp4 = path.join(dir, `shareslop-${id}.mp4`);
@@ -122,7 +122,7 @@ async function makeOne(n, items, recent, dryRun) {
     '-vf', 'fps=30,format=yuv420p', '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '20', '-c:a', 'aac', '-b:a', '128k', '-shortest', '-movflags', '+faststart', mp4]);
   writeJSON(path.join(dir, 'post.json'), { ...post, video: path.basename(mp4) });
   fs.mkdirSync(path.dirname(SEEN), { recursive: true });
-  fs.appendFileSync(SEEN, `${key(item.title)}\t${post.angle || ''}\t${id}\n`);
+  fs.appendFileSync(SEEN, `${key(post.headline)}\t${post.angle || ''}\t${id}\n`);
   if (dryRun) { console.log(`  (dry run) ${dir}`); return post; }
   const { publishReelWithMusic } = await import('./publish.mjs');
   await publishReelWithMusic(mp4, post.caption, { audioVolume: 70 }); // no voice → the song carries it
