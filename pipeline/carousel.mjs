@@ -470,7 +470,7 @@ function coverHTML(post, dir, h, o = {}) { // o: textBottom / barBottom / barTex
   const c = post.cover; const img = dataUrl(dir, c.photoFile);
   return `
     ${img ? `<div class="bg" style="background-image:url('${img}');${c.blur ? 'filter:blur(26px);transform:scale(1.12)' : ''}"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 30%, #2a3a66, #05070d)"></div>`}
-    <div class="shade" style="background:linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,.3) 56%, rgba(0,0,0,.82) 84%)"></div>
+    <div class="shade" style="background:${o.textBottom ? 'linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 48%, rgba(0,0,0,.9) 66%, #000 82%)' : 'linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,.3) 56%, rgba(0,0,0,.82) 84%)'}"></div>
     ${c.blur ? `<div class="caps" style="position:absolute;left:0;right:0;top:${h * 0.22}px;text-align:center;font-size:${h > 1400 ? 300 : 250}px">?</div>` : ''}
     ${img ? markSVG(c.mark, h * 0.08, h * 0.42) : ''}
     ${c.credit && !c.blur ? `<div class="credit">${esc(c.credit)}</div>` : ''}
