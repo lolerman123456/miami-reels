@@ -1,0 +1,182 @@
+{
+  "title": "Free family fun, then Fort Lauderdale after dark",
+  "sources": [
+    "Miami’s Community News",
+    "Boca Raton Magazine",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Miami Beach Fire Department is hosting its 39th Annual Children’s Fire Safety Festival.\nHogwharf returns to The Wharf Fort Lauderdale from October 9 through 11.\nBrightline is also running late-night trains after select Kaseya Center shows.\nWhich one are you doing this week?\n\nSources: Miami’s Community News, Boca Raton Magazine, Secret Miami\n\n#SouthFlorida #MiamiBeach #FortLauderdale #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need plans this week? Start with family safety in Miami Beach, then end late by the river in Fort Lauderdale.",
+      "overlay": [
+        "THIS WEEK",
+        "GOING OUT"
+      ],
+      "emojis": [
+        "🚒",
+        "🌴",
+        "🌙",
+        "🍹"
+      ],
+      "location": {
+        "name": "Miami Beach, Florida",
+        "lat": 25.82555556,
+        "lon": -80.1325,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami Beach Fire Department is hosting its 39th Annual Children’s Fire Safety Festival.",
+      "caption": "Miami Beach Fire Department is hosting its 39th Annual Children’s Fire Safety Festival.",
+      "overlay": "MIAMI BEACH",
+      "badge": "39TH YEAR",
+      "sub": "Children’s fire safety",
+      "emoji": "🚒",
+      "stats": [
+        {
+          "value": "39TH",
+          "label": "annual festival"
+        }
+      ],
+      "source": "Miami’s Community News",
+      "location": {
+        "name": "Miami Beach, Florida",
+        "lat": 25.82555556,
+        "lon": -80.1325,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Then Hogwharf returns to The Wharf Fort Lauderdale from October 9 through 11. The venue fills with floating candles, house flags, a Chamber of Secrets photo wall, and costumed characters.",
+      "caption": "Then Hogwharf returns to The Wharf Fort Lauderdale from October 9 through 11. The venue fills with floating candles, house flags, a Chamber of Secrets photo wall, and costumed characters.",
+      "overlay": "THE WHARF",
+      "badge": "OCT 9 TO 11",
+      "sub": "20 W Las Olas Blvd",
+      "emoji": "🪄",
+      "stats": [
+        {
+          "value": "OCT 9-11",
+          "label": "event dates"
+        }
+      ],
+      "source": "Boca Raton Magazine",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 55,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The bar is also doing four specialty cocktails tied to Gryffindor, Slytherin, Ravenclaw, and Hufflepuff. RSVP online and you get a complimentary house scarf at the door. If you go, open NEAR and see which house fans were there.",
+      "caption": "The bar is also doing 4 specialty cocktails tied to Gryffindor, Slytherin, Ravenclaw, and Hufflepuff. RSVP online and you get a complimentary house scarf at the door. If you go, open NEAR and see which house fans were there.",
+      "overlay": "LAS OLAS",
+      "badge": "4 COCKTAILS",
+      "sub": "RSVP for scarf",
+      "emoji": "🧣",
+      "stats": [
+        {
+          "value": "4",
+          "label": "specialty drinks"
+        }
+      ],
+      "source": "Boca Raton Magazine",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 15
+      },
+      "shot": {
+        "type": "push",
+        "range": 650,
+        "pitch": -30,
+        "heading": 115
+      }
+    },
+    {
+      "kind": "item",
+      "text": "If you’re going to a downtown Miami show, Brightline is running late-night trains after select Kaseya Center concerts. The station sits less than a mile from the arena, about a 15-minute walk.",
+      "caption": "If you’re going to a downtown Miami show, Brightline is running late-night trains after select Kaseya Center concerts. The station sits less than a mile from the arena, about a 15-minute walk.",
+      "overlay": "MIAMICENTRAL",
+      "badge": "15 MIN WALK",
+      "sub": "Late trains after shows",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "15 MIN",
+          "label": "walk to train"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "MiamiCentral Station",
+        "lat": 25.7789,
+        "lon": -80.1958,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -34,
+        "heading": 245,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which stop are you picking this week? Fort Lauderdale days are full of people you pass without a word, and NEAR is the part that tells you who that familiar face was.",
+      "overlay": "PICK ONE 👇",
+      "sub": "Miami Beach or Fort Lauderdale",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 10
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "065-free-family-fun-then-fort-lauderdale-aft"
+}
