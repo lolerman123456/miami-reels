@@ -48,10 +48,11 @@ async function write(items, recent) {
     + `Don't repeat these recent angles: ${recent.join(' | ') || 'none'}.\n`
     + 'Write: "headline": 5–11 words, ALL CAPS, the hint (true to the finding); '
     + '"hot": 1–3 consecutive words copied exactly from the headline to color blue (the ask/the payoff); '
-    + '"image": a photorealistic staged scene that ACTS OUT the headline literally, mid-action, absurd and a little uncomfortable like a viral meme photo (e.g. for "spitting boosts immunity": a woman pouring water into a man\'s open mouth in a park while people around sneeze into tissues) — never just people staring shocked at a phone; invented ordinary people, no text, no real people; '
+    + '"image": a photorealistic staged scene that SHOWS THE HINT BEING FULFILLED (the person the headline is about receiving it and visibly loving it, e.g. "his nervous system wants a back massage" → a man face-down on a couch, eyes closed, blissed out, while his girlfriend massages his shoulders, warm lamp light), exaggerated like a viral meme photo — describe exactly who is where doing what; or one that ACTS OUT the headline literally, mid-action, absurd and a little uncomfortable like a viral meme photo (e.g. for "spitting boosts immunity": a woman pouring water into a man\'s open mouth in a park while people around sneeze into tissues) — never just people staring shocked at a phone; invented ordinary people, no text, no real people; '
     + '"caption": 2 short lines retelling the story plainly with the key fact + "Source: <outlet>" + a share line that fits that tells them to SEND it (e.g. "Send this to your man 👀", "Send this to her. Just do it 😭", "Leave this on his phone 👀", "Tag who owes you this"); '
     + '"hashtags": 3 hashtags; "angle": 3-word label of the topic. '
-    + 'Reply JSON {"index": n, "headline": "", "hot": "", "image": "", "caption": "", "hashtags": [], "angle": ""}.' },
+    + 'First draft 4 different options from different headlines, score each "send": 1–10 = how likely a real person forwards it to their partner/friend as a hint ("send this to him" energy; animals, generic science or trivia score ≤4), then return ONLY the best one with its score. '
+    + 'Reply JSON {"send": n, "index": n, "headline": "", "hot": "", "image": "", "caption": "", "hashtags": [], "angle": ""}.' },
   { role: 'user', content: items.map((i, n) => `${n}. [${i.source}] ${i.title}`).join('\n') }], 'write');
 }
 
@@ -105,6 +106,7 @@ async function makeOne(n, items, recent, dryRun) {
   const item = items[w?.index];
   if (!item || !w.headline || !w.image) throw new Error('writer returned nothing usable: ' + JSON.stringify(w).slice(0, 200));
   items.splice(w.index, 1); // not twice in one run
+  if (!(+w.send >= 7)) throw new Error(`best option only scored ${w.send}/10 for sharing ("${w.headline}") — skipped`);
   const id = `${new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' })}-${String(Date.now()).slice(-6)}`;
   const dir = path.join(ROOT, 'out', 'shareslop', id);
   fs.mkdirSync(dir, { recursive: true });
