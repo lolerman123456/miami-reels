@@ -27,6 +27,41 @@ async function pickVideos(videos, hint = '') {
   return (r.picks || []).filter(x => videos[x.index]);
 }
 
+// owner, Oct 6: our "what's happening" captions overlapped text the footage already has (a Short's own subtitles, a streamer's
+// captions, on-screen narration/news text). Look at the cut every ~1.5 s and drop any caption that would show while the video
+// already has readable text in its lower part (where our caption sits); if text runs through most of the clip, no captions at all.
+// Each caption also stays up ≤ CAP_SECS instead of until the next one. Returns {at, text, until} (clip frames).
+const CAP_SECS = 4;
+async function clearCaptions(clip, dir, caps, clipFrames) {
+  if (!caps.length) return caps;
+  caps = caps.sort((a, b) => a.at - b.at).map((c, i, a) => ({ ...c, until: Math.min(c.at + CAP_SECS * FPS, a[i + 1]?.at ?? clipFrames, clipFrames) }));
+  try {
+    const secs = clipFrames / FPS, every = Math.max(1.5, secs / 30);
+    const content = [{ type: 'text', text: 'Frames from a vertical video, each labeled with its time in seconds. We are about to put our own caption at the bottom '
+      + '(the lower ~45% of the frame). For each frame, does the VIDEO ITSELF already show readable text there: burned-in subtitles, TikTok/streamer captions, '
+      + 'narration text, a news headline/lower third, chat overlays, big text stickers? Ignore tiny watermarks/usernames and text on real-world objects (signs, '
+      + 'license plates, shirts). Reply JSON {"text": [times in seconds of frames WITH such text]}' }];
+    const tdir = path.join(dir, 'textcheck'); fs.mkdirSync(tdir, { recursive: true });
+    const times = [];
+    for (let t = 0.3; t < secs - 0.2; t += every) {
+      const f = path.join(tdir, `t${times.length}.jpg`);
+      await run('ffmpeg', ['-y', '-loglevel', 'error', '-ss', t.toFixed(2), '-i', clip, '-frames:v', '1', '-vf', 'scale=-2:640', f]);
+      if (!fs.existsSync(f)) continue;
+      times.push(+t.toFixed(1));
+      content.push({ type: 'text', text: `t=${t.toFixed(1)}s` });
+      content.push({ type: 'image_url', image_url: { url: `data:image/jpeg;base64,${fs.readFileSync(f).toString('base64')}`, detail: 'low' } });
+    }
+    if (!times.length) return caps;
+    const r = await chat([{ role: 'user', content }]);
+    const hit = (r.text || []).map(Number).filter(Number.isFinite);
+    if (hit.length >= times.length * 0.6) { console.log(`  footage has its own text in ${hit.length}/${times.length} frames — no captions`); return []; }
+    const near = every * 0.75; // a text frame covers the stretch around it
+    const kept = caps.filter(c => !hit.some(t => t * FPS >= c.at - near * FPS && t * FPS <= c.until + near * FPS));
+    if (kept.length < caps.length) console.log(`  dropped ${caps.length - kept.length} caption(s) that would overlap the video's own text (text @ ${hit.join(', ')} s)`);
+    return kept;
+  } catch (e) { console.log(`  (text check failed: ${e.message} — keeping captions)`); return caps; }
+}
+
 // who's who on the freeze frame: a box per subject (normalized 0–1) → a numbered marker at its center + a still cropped
 // from the footage for the bottom strip. Never a person who is a victim (cars/places are fine), never a child.
 async function labelsFor(frameFile, check, dir, vw, vh) {
@@ -160,7 +195,7 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
       fill: vw / vh <= 0.8 || (!!c.fill && vw / vh <= 1.3), focusX: Number.isFinite(+c.focusX) ? Math.min(1, Math.max(0, +c.focusX)) : 0.5,
       intro: { frames: intro, warning: false, title: c.hook || v.title, sub: c.sub || '', context: String(c.context || '').slice(0, 200) },
       banner: c.banner || '', freeze, credit: `Video: ${v.agency}`,
-      captions: (c.captions || []).filter(x => x.t >= start && x.t < end).map(x => ({ at: Math.round((x.t - start) * FPS), text: String(x.text) })),
+      captions: await clearCaptions(clip, dir, (c.captions || []).filter(x => x.t >= start && x.t < end).map(x => ({ at: Math.round((x.t - start) * FPS), text: String(x.text) })), clipFrames),
     };
     writeJSON(path.join(dir, 'props.json'), props);
     fs.cpSync(path.join(ROOT, 'assets', 'fonts'), path.join(dir, 'fonts'), { recursive: true });

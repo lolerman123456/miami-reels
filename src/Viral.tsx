@@ -18,7 +18,7 @@ export type ViralProps = {
   fill?: boolean; focusX?: number; // full 9:16 when the action fits a vertical crop (focusX = where to center it)
   intro: { frames: number; warning: boolean; title: string; sub?: string; context?: string };
   banner: string;
-  captions: { at: number; text: string }[]; // at = frame in the clip
+  captions: { at: number; text: string; until?: number }[]; // at/until = frames in the clip
   freeze: { at: number; hold: number; labels: ViralLabel[] } | null;
   credit: string;
 };
@@ -190,7 +190,7 @@ export const Viral: React.FC<ViralProps> = (p) => {
       <Sequence durationInFrames={I}><Intro p={p} /></Sequence>
       <Sequence from={I}><Banner text={p.banner} /></Sequence>
       {caps.map((c, i) => {
-        const from = at(c.at), to = i + 1 < caps.length ? at(caps[i + 1].at) : p.durationInFrames;
+        const from = at(c.at), to = c.until != null ? at(c.until) : i + 1 < caps.length ? at(caps[i + 1].at) : p.durationInFrames;
         return to > from ? <Sequence key={i} from={from} durationInFrames={to - from}><Caption text={c.text} bottom={captionBottom} /></Sequence> : null;
       })}
       <Sequence from={I}>
