@@ -58,8 +58,8 @@ Rules:
   or slide 1 in other words. Read only the headlines in order and they must tell the whole story, each one a new fact.
   Include the why (causes named in the headlines/sources) and who it affects when the sources have it, not only numbers.
 - HOOK & SUBSTANCE (owner: never boring): the cover and slide 1 lead with the most surprising concrete detail (the shocking number, the famous name, the wild moment, the price), not the dry procedural angle ("lawsuit filed", "officials discuss", "report released"). Every slide adds at least one NEW hard fact the reader didn't have yet; no slide just restates or summarizes. Build tension: each slide should make the reader want the next one, and the last slide lands the stakes (what it means for people here, or what happens next, with a date if reported).
-- SECTOR: pick ONE section label for the post from: ECONOMY, TRAFFIC, WEATHER, REAL ESTATE, CRIME, DEVELOPMENT, TRANSIT,
-  HISTORY, SPORTS, HEALTH, EDUCATION, CITY HALL, WORLD, USA. Single-topic posts use that same label on every slide.
+- SECTOR: pick ONE section label for the post from: EVENTS, FOOD, DEALS, ECONOMY, TRAFFIC, WEATHER, REAL ESTATE, CRIME, DEVELOPMENT, TRANSIT,
+  HISTORY, SPORTS, HEALTH, EDUCATION, CITY HALL, WORLD, USA (events/parties/concerts → EVENTS, restaurants/food → FOOD, freebies → DEALS). Single-topic posts use that same label on every slide.
   Never use labels like UPDATE, FACT, MONEY, NEWS.
 - Caption: 1–2 informative lines, then a real question for the comments. Don't list sources in the caption (we add them).
 
@@ -76,7 +76,7 @@ The cover is a scroll-stopping hook in this exact stacked style (all caps on the
 Every cover and slide needs a photo: {"query":"Wikimedia Commons search for a real stock photo (place, landmark, road, building, vehicle, object, scene — e.g. 'Brightline train Miami', 'Palmetto Expressway traffic', 'police car Miami-Dade', 'Cuban coffee cafecito')","prompt":"AI photo description, used only if no stock photo looks good (e.g. 'police cruiser lights reflecting on a wet Hialeah street at night')"}
   Stock photos are preferred (AI images are budgeted), so write queries likely to find a real, good-looking photo. Never plan a real photo of a person to illustrate a news story.
 
-Return JSON: {"sector":"ECONOMY","cover":{"top":"...","main":"...","highlight":"...","bottom":"...","blur":false,"photo":{...},"emojis":["2-4 emojis"],"logos":["domains of the brands/orgs in the post, list posts only, max 6"]},"slides":[{"tag":"SECTOR label from the list","headline":"...","highlight":"2-3 word phrase copied exactly from the headline to color blue","body":"...","place":"neighborhood/city or country, optional","source":"outlet or empty for opinion slides","photo":{...},"color":"#hex brand/team color when the slide is about one brand, team or org (Dolphins #008E97, Dunkin #FF671F), else omit","emoji":"1 emoji for the slide","chip":"key fact ≤16 chars: date, price or number (TUE 9/29, $52+, FREE, 7-0 VOTE)","logo":"official website domain of the brand/team/org the slide is about (dunkindonuts.com, miamidolphins.com, miamidade.gov), else omit; never for people"}],"caption":"...","hashtags":["2 specific hashtags for this post"],"collaborators":["handles from the COLLABORATORS list, or empty"]}
+Return JSON: {"sector":"one label from the SECTOR list","cover":{"top":"...","main":"...","highlight":"...","bottom":"...","blur":false,"photo":{...},"emojis":["2-4 emojis"],"logos":["domains of the brands/orgs in the post, list posts only, max 6"]},"slides":[{"tag":"SECTOR label from the list","headline":"...","highlight":"2-3 word phrase copied exactly from the headline to color blue","body":"...","place":"neighborhood/city or country, optional","source":"outlet or empty for opinion slides","photo":{...},"color":"#hex brand/team color when the slide is about one brand, team or org (Dolphins #008E97, Dunkin #FF671F), else omit","emoji":"1 emoji for the slide","chip":"key fact ≤16 chars: date, price or number (TUE 9/29, $52+, FREE, 7-0 VOTE)","logo":"official website domain of the brand/team/org the slide is about (dunkindonuts.com, miamidolphins.com, miamidade.gov), else omit; never for people"}],"caption":"...","hashtags":["2 specific hashtags for this post"],"collaborators":["handles from the COLLABORATORS list, or empty"]}
 3 to 7 slides. EVERY slide must have tag, headline, highlight, body, photo, emoji and chip. Slides must look alive (owner's rule): brand colors, logos, emojis and fact chips wherever they fit.`;
 
 const nyDate = (d = new Date()) => d.toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
@@ -325,7 +325,9 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   }
   post = sanitize(post);
   post.collaborators = cleanCollabs(post.collaborators);
-  const SECTORS = /^(DEALS|EVENTS|ECONOMY|TRAFFIC|WEATHER|REAL ESTATE|CRIME|DEVELOPMENT|TRANSIT|HISTORY|SPORTS|HEALTH|EDUCATION|CITY HALL|WORLD|USA)$/;
+  // the writer kept copying the JSON example's ECONOMY onto event/food lists (Oct 5–6): upcoming/deals only get fitting labels
+  if (/^(upcoming|deals)$/.test(kind) && !/^(EVENTS|FOOD|DEALS|SPORTS)$/.test(String(post.sector || '').toUpperCase())) post.sector = kind === 'deals' ? 'DEALS' : 'EVENTS';
+  const SECTORS = /^(FOOD|DEALS|EVENTS|ECONOMY|TRAFFIC|WEATHER|REAL ESTATE|CRIME|DEVELOPMENT|TRANSIT|HISTORY|SPORTS|HEALTH|EDUCATION|CITY HALL|WORLD|USA)$/;
   const single = kind === 'feature' || !!topic;
   for (const x of post.slides) {
     if (single && post.sector) x.tag = post.sector;
@@ -437,7 +439,7 @@ body { width: 1080px; height: var(--h); overflow: hidden; background: #000; colo
 const arrow = `<svg width="64" height="24" viewBox="0 0 64 24"><path d="M0 12h58M48 2l12 10-12 10" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 const bar = right => `<div class="bar"><span class="brand">getnearapp</span><span class="more">${right}</span></div>`;
 // slide themes (owner: every slideshow should look alive): the brand/team color from the writer, else the section's color
-const SECTOR_COLORS = { DEALS: '#FF6B1A', EVENTS: '#8A2BE2', SPORTS: '#008E97', CRIME: '#C8102E', WEATHER: '#0A84C6', TRAFFIC: '#E0A100',
+const SECTOR_COLORS = { DEALS: '#FF6B1A', EVENTS: '#8A2BE2', FOOD: '#E8590C', SPORTS: '#008E97', CRIME: '#C8102E', WEATHER: '#0A84C6', TRAFFIC: '#E0A100',
   TRANSIT: '#2F9E44', ECONOMY: '#1E9E5A', 'REAL ESTATE': '#B8860B', DEVELOPMENT: '#E8590C', HISTORY: '#8B5A2B', HEALTH: '#E03E7A',
   EDUCATION: '#5F3DC4', 'CITY HALL': '#364FC7', WORLD: '#1C7ED6', USA: '#1C3F94', NEWS: BLUE };
 const hexOk = c => /^#[0-9a-f]{6}$/i.test(String(c || ''));
