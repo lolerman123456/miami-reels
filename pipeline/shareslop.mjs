@@ -78,7 +78,7 @@ body { width: 1080px; height: 1920px; background: #000; overflow: hidden; positi
 .brand b { font: 900 40px 'Mont'; color: #fff; letter-spacing: 1px; }
 .brand b span { background: ${BLUE}; color: #fff; padding: 2px 14px; border-radius: 8px; margin-left: 8px; }
 h1 { font: 700 150px/0.98 'Oswald'; color: #fff; text-transform: uppercase; letter-spacing: -1px; word-spacing: 4px; }
-.hot { color: ${BLUE}; text-shadow: 0 0 18px rgba(23,105,255,.45); -webkit-text-stroke: 2px #4d8dff; }
+.hot { color: #4D94FF; text-shadow: 0 4px 0 #0A2E7A, 0 0 22px rgba(23,105,255,.55); } /* Near blue, lifted for legibility on black (owner, Oct 6) */
 </style></head><body><div class="photo"></div><div class="fade"></div>
 <div class="box"><div class="brand"><i></i><b>GET<span>NEAR</span></b><i></i></div><h1 id="h">${body}</h1></div></body></html>`;
 }
