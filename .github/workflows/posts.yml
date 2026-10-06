@@ -152,6 +152,7 @@ jobs:
             # one-image share Reel with a trending song (pipeline/shareslop.mjs); "count" in requests/post.json makes several (previews)
             SARGS=(); [ "$PUBLISH" = "false" ] && SARGS+=(--dry-run)
             [ "$EVENT" = "push" ] && SARGS+=(--count "$(jq -r '.count // 1' requests/post.json)")
+            [ -n "$TOPIC" ] && SARGS+=(--topic "$TOPIC")
             node pipeline/shareslop.mjs "${SARGS[@]}"; exit $?
           fi
           if [ "$KIND" = "viral" ]; then

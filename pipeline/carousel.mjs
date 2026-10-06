@@ -437,7 +437,7 @@ body { width: 1080px; height: var(--h); overflow: hidden; background: #000; colo
 .bgemoji { position: absolute; right: -60px; bottom: 60px; font-size: 420px; opacity: .14; transform: rotate(-12deg); }
 `;
 const arrow = `<svg width="64" height="24" viewBox="0 0 64 24"><path d="M0 12h58M48 2l12 10-12 10" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-const bar = right => `<div class="bar"><span class="brand">getnearapp</span><span class="more">${right}</span></div>`;
+const bar = (right, style = '') => `<div class="bar"${style ? ` style="${style}"` : ''}><span class="brand">getnearapp</span><span class="more">${right}</span></div>`;
 // slide themes (owner: every slideshow should look alive): the brand/team color from the writer, else the section's color
 const SECTOR_COLORS = { DEALS: '#FF6B1A', EVENTS: '#8A2BE2', FOOD: '#E8590C', SPORTS: '#008E97', CRIME: '#C8102E', WEATHER: '#0A84C6', TRAFFIC: '#E0A100',
   TRANSIT: '#2F9E44', ECONOMY: '#1E9E5A', 'REAL ESTATE': '#B8860B', DEVELOPMENT: '#E8590C', HISTORY: '#8B5A2B', HEALTH: '#E03E7A',
@@ -466,7 +466,7 @@ const markSVG = (mark, top, h) => {
   if (/^stamp:/i.test(mark)) return stamp(mark.slice(6).trim().toUpperCase().slice(0, 18));
   return '';
 };
-function coverHTML(post, dir, h) {
+function coverHTML(post, dir, h, o = {}) { // o: textBottom / barBottom / barText (shareslop Reels keep clear of Instagram's caption overlay)
   const c = post.cover; const img = dataUrl(dir, c.photoFile);
   return `
     ${img ? `<div class="bg" style="background-image:url('${img}');${c.blur ? 'filter:blur(26px);transform:scale(1.12)' : ''}"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 30%, #2a3a66, #05070d)"></div>`}
@@ -475,7 +475,7 @@ function coverHTML(post, dir, h) {
     ${img ? markSVG(c.mark, h * 0.08, h * 0.42) : ''}
     ${c.credit && !c.blur ? `<div class="credit">${esc(c.credit)}</div>` : ''}
     ${post.kicker && ALIVE.includes(post.kind) ? `<div style="position:absolute;left:30px;top:24px;background:${BLUE};border-radius:14px;padding:10px 22px;font-weight:900;font-size:30px;letter-spacing:1px">${esc(post.kicker)}</div>` : ''}
-    <div style="position:absolute;left:40px;right:40px;bottom:${h > 1400 ? 220 : 150}px;text-align:center">
+    <div style="position:absolute;left:40px;right:40px;bottom:${o.textBottom ?? (h > 1400 ? 220 : 150)}px;text-align:center">
       ${(c.logoFiles || []).length && ALIVE.includes(post.kind) ? `<div style="display:flex;gap:18px;justify-content:center;margin-bottom:26px">${c.logoFiles.map(f => dataUrl(dir, f)).filter(Boolean).map(u => `<div style="background:#fff;border-radius:18px;width:${c.logoFiles.length > 4 ? 140 : 170}px;height:${c.logoFiles.length > 4 ? 100 : 120}px;padding:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.4)"><img src="${u}" style="width:100%;height:100%;object-fit:contain"></div>`).join('')}</div>` : ''}
       ${(c.emojis || []).length && !(c.logoFiles || []).length && ALIVE.includes(post.kind) ? `<div style="font-size:64px;margin-bottom:14px;letter-spacing:12px">${c.emojis.slice(0, 4).map(esc).join('')}</div>` : ''}
       ${c.top ? `<div class="caps" style="font-size:${fit1(c.top, 68)}px;margin-bottom:10px">${esc(c.top)}</div>` : ''}
@@ -483,7 +483,22 @@ function coverHTML(post, dir, h) {
       <div class="caps blue" style="font-size:${fit1(c.highlight, 168)}px;margin:4px 0">${esc(c.highlight)}</div>
       ${c.bottom ? `<div class="caps" style="font-size:${fit1(c.bottom, 104)}px">${esc(c.bottom)}</div>` : ''}
     </div>
-    ${bar(h > 1400 ? `new post on our page ${arrow}` : `swipe for more ${arrow}`)}`;
+    ${o.barBottom ? `<div class="shade" style="top:auto;height:${o.barBottom}px;background:#000"></div>` : ''}
+    ${bar(o.barText ? esc(o.barText) : h > 1400 ? `new post on our page ${arrow}` : `swipe for more ${arrow}`, o.barBottom ? `bottom:${o.barBottom}px` : '')}`;
+}
+
+// shareslop Reel frame (owner, Oct 6: "use the same NEAR news format"): the news cover look at 1080x1920, text and the blue
+// getnearapp bar (with the send-it CTA) lifted above Instagram's caption overlay
+export async function renderShareCover(cover, dir, file, cta) {
+  const browser = await launch();
+  try {
+    const page = await browser.newPage();
+    await page.setViewport({ width: 1080, height: 1920 });
+    await page.setContent(`<html><head><meta charset="utf-8"><style>${CSS}</style></head><body style="--h:1920px">${coverHTML({ cover, kind: 'news' }, dir, 1920, { textBottom: 470, barBottom: 330, barText: cta })}</body></html>`, { waitUntil: 'load' });
+    await page.evaluate(() => document.fonts.ready);
+    await page.screenshot({ path: file, type: 'jpeg', quality: 93 });
+    return file;
+  } finally { await browser.close(); }
 }
 
 // classic news look (owner likes it for news: easy on the eyes): full photo on top, black below, blue accents
