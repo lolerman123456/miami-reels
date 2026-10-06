@@ -1,0 +1,58 @@
+{
+  "id": "001-found-her",
+  "chatName": "the boys 🌴",
+  "durationInFrames": 285,
+  "cardPlace": "Brightline Aventura",
+  "cardTime": "8:42 AM",
+  "zoom": {
+    "from": 112,
+    "to": 180
+  },
+  "messages": [
+    {
+      "from": "me",
+      "text": "BRO I FOUND THE GIRL FROM THE BRIGHTLINE 😭",
+      "at": 2,
+      "react": {
+        "emoji": "‼️",
+        "at": 58
+      }
+    },
+    {
+      "from": "Marcus",
+      "text": "NO WAY",
+      "at": 32
+    },
+    {
+      "from": "Dani",
+      "text": "HOWWW 💀",
+      "at": 50
+    },
+    {
+      "from": "Marcus",
+      "text": "the one u wouldn't shut up about for 2 weeks??",
+      "at": 76
+    },
+    {
+      "from": "me",
+      "card": true,
+      "at": 106,
+      "react": {
+        "emoji": "😭",
+        "at": 160
+      }
+    },
+    {
+      "from": "me",
+      "text": "it's called NEAR. it shows who u crossed paths with",
+      "at": 188
+    },
+    {
+      "from": "Dani",
+      "text": "bro WHAT 😭 sending this to my roommate rn",
+      "at": 222
+    }
+  ],
+  "caption": "he really found her 😭 crossed paths at Brightline and NEAR showed him who it was.\n\nWho would you look for? 👀\n\n#southflorida #miami #brightline #missedconnections",
+  "hook": "he really found her 😭"
+}

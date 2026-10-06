@@ -1,6 +1,7 @@
 import { Composition } from 'remotion';
 import { Reel, ReelProps } from './Reel';
 import { Viral, ViralProps } from './Viral';
+import { Chat, ChatProps } from './Chat';
 
 const defaults: ReelProps = {
   fps: 30, width: 1080, height: 1920, durationInFrames: 300,
@@ -12,7 +13,19 @@ const viralDefaults: ViralProps = {
   intro: { frames: 90, warning: false, title: '', sub: '' }, banner: '', captions: [], freeze: null, credit: '',
 };
 
+const chatDefaults: ChatProps = { durationInFrames: 270, chatName: 'the boys 🌴', messages: [] };
+
 export const RemotionRoot: React.FC = () => (<>
+  <Composition
+    id="Chat"
+    component={Chat}
+    defaultProps={chatDefaults}
+    fps={30}
+    width={1080}
+    height={1920}
+    durationInFrames={270}
+    calculateMetadata={({ props }) => ({ durationInFrames: props.durationInFrames })}
+  />
   <Composition
     id="Viral"
     component={Viral}
