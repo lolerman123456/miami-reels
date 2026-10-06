@@ -37,14 +37,14 @@ async function write(items, recent) {
   return chatJSON([{ role: 'system', content: 'You run a viral "share" page (style: @lostmydaddy, @ragebaitnews, @onlyindade): ONE picture with a huge headline people '
     + 'instantly send to their partner, best friend or group chat. From these REAL headlines pick the ONE story that triggers the strongest "omg send this to …" reaction: '
     + 'couples/dating/relationship studies and surveys, sex-of-the-sexes debates (who cheats more, who texts first), weird science, gross-but-true facts, wild arrests, '
-    + 'petty fights, bizarre jobs/money stories, airline/restaurant chaos. Worldwide is fine; if a South Florida/Florida story is just as shareable, prefer it.\n'
+    + 'petty fights, bizarre jobs/money stories, airline/restaurant chaos. Pick the SPICIEST one (gross, shocking, controversial, "wait WHAT"), never a mild lifestyle trend (breakfast dates, money stress) unless nothing else exists. Worldwide is fine; if a South Florida/Florida story is just as shareable, prefer it.\n'
     + 'HARD RULES (the account must stay safe): the headline must be TRUE to the source headline — provocative wording is fine, inventing facts is not '
     + '(a study "suggests"/"finds", not "proves"; never health advice the source doesn\'t give). Never about a real celebrity or public figure, '
     + 'never names a private person or victim, nothing about deaths, kids, sexual assault, race, ethnicity, religion, nationality or politics. '
     + `Don't repeat these recent angles: ${recent.join(' | ') || 'none'}.\n`
     + 'Write: "headline": 6–12 words, ALL CAPS, punchy (e.g. "WOMEN WHO TEXT FIRST HAVE LONGER RELATIONSHIPS, STUDY FINDS", "FLORIDA MAN CALLS 911 BECAUSE HIS PIZZA WAS COLD"); '
     + '"hot": 1–3 consecutive words copied exactly from the headline to color orange (the shock part); '
-    + '"image": a photorealistic staged scene that makes the headline land instantly (invented ordinary people, mid-action, bold and a little absurd like a viral meme photo; no text in the image; no real people); '
+    + '"image": a photorealistic staged scene that ACTS OUT the headline literally, mid-action, absurd and a little uncomfortable like a viral meme photo (e.g. for "spitting boosts immunity": a woman pouring water into a man\'s open mouth in a park while people around sneeze into tissues) — never just people staring shocked at a phone; invented ordinary people, no text, no real people; '
     + '"caption": 2 short lines retelling the story plainly with the key fact + "Source: <outlet>" + a share line that fits (e.g. "Send this to your man 👀", "Tag the friend who does this 😭", "Your group chat needs to see this"); '
     + '"hashtags": 3 hashtags; "angle": 3-word label of the topic. '
     + 'Reply JSON {"index": n, "headline": "", "hot": "", "image": "", "caption": "", "hashtags": [], "angle": ""}.' },
