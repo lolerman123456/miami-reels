@@ -111,7 +111,9 @@ async function makeOne(n, items, recent, dryRun) {
   const dir = path.join(ROOT, 'out', 'shareslop', id);
   fs.mkdirSync(dir, { recursive: true });
   console.log(`  → ${w.headline}  (hot: ${w.hot}; send ${w.send}/10; cta: ${w.cta})`);
-  const img = await aiImage(w.image, dir, 'image', 'people');
+  // the image service sometimes rejects a scene (400 on the little-spoon one, Oct 6): retry once with a tamer, fully clothed version
+  const img = await aiImage(w.image, dir, 'image', 'people')
+    || await aiImage(`Wholesome, funny, fully clothed comedic photo of an ordinary couple acting out: "${w.headline}". Big exaggerated happy expressions, bright warm light`, dir, 'image', 'people');
   if (!img) throw new Error('no image');
   const post = { id, cta: String(w.cta || 'SEND THIS TO HIM 👀').toUpperCase(), headline: w.headline.toUpperCase(), hot: w.hot, image: w.image, imageFile: img.file, angle: w.angle,
     caption: `${w.caption}\n\n${[...(w.hashtags || []).slice(0, 2), 'satire'].map(h => '#' + String(h).replace(/^#/, '')).join(' ')}`.trim() };
