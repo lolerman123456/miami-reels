@@ -46,11 +46,11 @@ async function write(items, recent) {
     + 'Alternate who it targets (HIM / HER / YOUR BESTIE / YOUR MAN). It may riff on one of the real headlines below if one fits, otherwise invent. '
     + 'SAFETY: it is satire — nothing anyone could get hurt following (no drugs, alcohol, medication, diets/fasting, dangerous stunts, skipping doctors), not explicit (suggestive like "daddy" is fine), '
     + 'never real people, celebrities or brands-as-targets, nothing about race, religion, nationality, politics, kids, death or assault. '
-    + `Don't repeat these recent angles: ${recent.join(' | ') || 'none'}.\n`
+    + `Recent posts — use a DIFFERENT ask, a DIFFERENT benefit (rotate: lifespan, immune system, blood pressure, credit score, IQ, sleep, skin, height, hairline, stress, heart, metabolism…) and switch who it targets: ${recent.join(' | ') || 'none'}.\n`
     + 'Write: "headline": 6–12 words, ALL CAPS, the formula; "hot": the 1–3 most ridiculous consecutive words copied exactly from the headline (colored blue); '
     + '"image": an exaggerated, comedic, photorealistic viral-meme scene ACTING OUT the first half, very over the top (e.g. for the daddy one: a woman with giant glowing cartoon heart-shaped eyes swooning while calling her boyfriend daddy, he looks smug and glowing with health, '
     + 'hearts floating) — describe exactly who is where doing what and their exaggerated expressions; invented ordinary people, no text; '
-    + '"cta": short call to action printed on the image, ALL CAPS, ≤22 chars + 1 emoji (e.g. "SEND THIS TO HIM 👀", "SEND TO YOUR MAN 😭", "TAG YOUR BESTIE 🫶"); '
+    + '"cta": short call to action printed on the image, ALL CAPS, ≤22 chars + 1 emoji, addressed to whoever should DO the ask (buying HER flowers → "SEND THIS TO HIM 👀"; calling HIM daddy → "SEND THIS TO HER 👀"; e.g. "SEND TO YOUR MAN 😭", "TAG YOUR BESTIE 🫶"); '
     + '"caption": 1–2 deadpan lines in fake-news voice ("A new study found that…") + the same send-it line; "hashtags": 2 hashtags (the code adds #satire); "angle": 3-word label. '
     + 'First draft 5 options, score each "send": 1–10 = how likely someone forwards it to their partner/friend right now, then return ONLY the best. '
     + 'Reply JSON {"send": n, "headline": "", "hot": "", "image": "", "cta": "", "caption": "", "hashtags": [], "angle": ""}.' },
@@ -135,10 +135,10 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const count = Math.max(1, Math.min(5, +(args[args.indexOf('--count') + 1]) || 1));
   const items = await candidates();
   console.log(`${items.length} candidate headlines`);
-  const recent = (fs.existsSync(SEEN) ? fs.readFileSync(SEEN, 'utf8').trim().split('\n').slice(-15) : []).map(l => l.split('\t')[1]).filter(Boolean);
+  const recent = (fs.existsSync(SEEN) ? fs.readFileSync(SEEN, 'utf8').trim().split('\n').slice(-15) : []).map(l => l.split('\t')[0]).filter(Boolean);
   let ok = 0;
   for (let n = 1; n <= count; n++) {
-    try { const p = await makeOne(n, items, recent, dryRun); recent.push(p.angle); ok++; }
+    try { const p = await makeOne(n, items, recent, dryRun); recent.push(p.headline); ok++; }
     catch (e) { console.log(`  (shareslop ${n} failed: ${e.message.slice(0, 300)})`); }
   }
   if (!ok) process.exit(1);
