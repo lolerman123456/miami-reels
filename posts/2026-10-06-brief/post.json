@@ -1,0 +1,73 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "OVERTOWN",
+    "main": "A MAN IN HIS 30S DIED IN A",
+    "highlight": "HIT-AND-RUN",
+    "bottom": "POLICE HAVE NOT SAID WHO WAS DRIVING",
+    "blur": false,
+    "photo": {
+      "query": "Overtown Miami scooter crash police lights street at dawn",
+      "prompt": "Dramatic Overtown street at dawn with Miami police lights, a scooter in the roadway, crime-scene tape, and empty lanes"
+    },
+    "emojis": [
+      "🚨",
+      "🛵",
+      "🌆"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Local 10",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "A man in his 30s died after being struck while riding a scooter in Overtown",
+      "highlight": "man in his 30s",
+      "body": "Police say the crash happened early Tuesday in Miami’s Overtown neighborhood.",
+      "place": "Overtown",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami Overtown scooter crash scene police tape dawn",
+        "prompt": "Close, dramatic view of a scooter crash scene in Overtown with flashing police lights, taped-off pavement, and no visible people"
+      },
+      "emoji": "🛵",
+      "chip": "EARLY TUE",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police still have not said what vehicle hit him",
+      "highlight": "vehicle",
+      "body": "Local 10 said authorities have not described the vehicle that struck him or identified the driver.",
+      "place": "Miami",
+      "source": "Local 10",
+      "photo": {
+        "query": "Miami police investigation empty street night cruiser lights",
+        "prompt": "Miami police cruiser parked beside an empty street at night, with reflections on wet pavement and no faces visible"
+      },
+      "emoji": "🔎",
+      "chip": "UNKNOWN",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: CBS News"
+    }
+  ],
+  "caption": "Police say a man in his 30s died after a scooter crash in Overtown early Tuesday. They have not said what vehicle hit him or who was driving.\nWhat would make Miami streets safer for scooter riders and pedestrians?",
+  "hashtags": [
+    "#Overtown",
+    "#Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say a man in his 30s died after a scooter crash in Overtown early Tuesday. They have not said what vehicle hit him or who was driving.\nWhat would make Miami streets safer for scooter riders and pedestrians?\n\n📰 Sources: WPLG Local 10, Local 10, NBC 6 South Florida, Wikipedia\n\n🎥 Video: CBS News Miami\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#Overtown #Miami #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-06",
+  "id": "2026-10-06-brief",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "CBS News Miami",
+    "url": "https://www.youtube.com/watch?v=bo65ta34soU"
+  }
+}
