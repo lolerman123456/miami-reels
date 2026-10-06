@@ -204,18 +204,24 @@ async function waitReady(api, token, id) {
 // Posts we didn't make (manual ones) are added to posted.log so the record stays complete.
 const MIN_GAP = Number(process.env.MIN_POST_GAP_MIN || 60) * 60e3;
 async function spacing(api, igUser, token) {
+  // POST_NOT_BEFORE (epoch s, set for scheduled map Reels): don't post before the slot — Oct 6 the 4pm Reel went out at 2:52 and
+  // the 8pm one at 7:16, in the same second as the 7pm shareslop (both waited out the same gap, then published together, same song).
+  // So: wait for the slot, then re-check the account after a random 20–150 s jitter until nothing new posted in the last hour.
+  const notBefore = (+process.env.POST_NOT_BEFORE || 0) * 1000;
   try {
-    const j = await (await fetch(`${api}/${igUser}/media?fields=timestamp,permalink&limit=5&access_token=${token}`)).json();
-    const posts = (j.data || []).map(p => ({ t: Date.parse(p.timestamp.replace(/([+-]\d\d)(\d\d)$/, '$1:$2')), url: p.permalink })).filter(p => p.t);
-    const logFile = path.join(ROOT, 'posted.log');
-    const log = fs.existsSync(logFile) ? fs.readFileSync(logFile, 'utf8') : '';
-    for (const p of posts.filter(p => p.url && !log.includes(p.url.replace(/\/$/, '')) && Date.now() - p.t < 2 * 86400e3).reverse())
-      fs.appendFileSync(logFile, `${new Date(p.t).toISOString()}\tmanual (posted from the app)\t${p.url}\n`);
-    const last = Math.max(0, ...posts.map(p => p.t));
-    const wait = last + MIN_GAP - Date.now();
-    if (wait > 0) {
-      console.log(`⏸ last post on the account was ${Math.round((Date.now() - last) / 60e3)} min ago; waiting ${Math.ceil(wait / 60e3)} min to keep posts an hour apart`);
-      await new Promise(r => setTimeout(r, wait));
+    for (let round = 0; round < 6; round++) {
+      const j = await (await fetch(`${api}/${igUser}/media?fields=timestamp,permalink&limit=5&access_token=${token}`)).json();
+      const posts = (j.data || []).map(p => ({ t: Date.parse(p.timestamp.replace(/([+-]\d\d)(\d\d)$/, '$1:$2')), url: p.permalink })).filter(p => p.t);
+      const logFile = path.join(ROOT, 'posted.log');
+      const log = fs.existsSync(logFile) ? fs.readFileSync(logFile, 'utf8') : '';
+      for (const p of posts.filter(p => p.url && !log.includes(p.url.replace(/\/$/, '')) && Date.now() - p.t < 2 * 86400e3).reverse())
+        fs.appendFileSync(logFile, `${new Date(p.t).toISOString()}\tmanual (posted from the app)\t${p.url}\n`);
+      const last = Math.max(0, ...posts.map(p => p.t));
+      const wait = Math.max(last + MIN_GAP, notBefore - 120e3) - Date.now();
+      if (wait <= 0 && round > 0) return;
+      const jitter = 20e3 + Math.random() * 130e3;
+      if (wait > 0) console.log(`⏸ last post ${Math.round((Date.now() - last) / 60e3)} min ago${notBefore > Date.now() ? `, slot at ${new Date(notBefore).toISOString()}` : ''}; waiting ${Math.ceil(wait / 60e3)} min`);
+      await new Promise(r => setTimeout(r, Math.max(0, wait) + jitter)); // then look again: another run may have posted meanwhile
     }
   } catch (e) { console.log(`  (couldn't check the last post time: ${e.message}; posting now)`); }
 }

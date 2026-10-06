@@ -89,6 +89,7 @@ jobs:
       pieces: ${{ steps.prep.outputs.pieces }}
       publish: ${{ steps.req.outputs.publish }}
       quality: ${{ steps.req.outputs.quality }}
+      slot: ${{ needs.gate.outputs.slot || steps.req.outputs.slot }}
     steps:
       - uses: actions/checkout@v4
 
@@ -322,10 +323,13 @@ jobs:
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           GH_TOKEN: ${{ github.token }}
           PUBLISH: ${{ needs.prepare.outputs.publish }}
+          SLOT: ${{ needs.prepare.outputs.slot }}
         run: |
           ARGS=()
           [ "$PUBLISH" = "false" ] && ARGS+=(--dry-run)
           echo "FB_ACCESS_TOKEN: ${FB_ACCESS_TOKEN:+set}"
+          # scheduled Reels post at their slot, not as soon as they're rendered (publish.mjs spacing)
+          if [ -n "$SLOT" ]; then export POST_NOT_BEFORE=$(TZ=America/New_York date -d "today ${SLOT}:00" +%s); echo "slot ${SLOT}:00 → not before $POST_NOT_BEFORE"; fi
           node pipeline/parallel.mjs finish "${{ needs.prepare.outputs.dir }}" "${ARGS[@]}"
 
       - name: Keep Instagram token alive
