@@ -125,7 +125,9 @@ export async function aiImage(description, dir, name, raw = false) { return aiPh
 async function aiPhoto(description, dir, name, raw = false) {
   if (!process.env.OPENAI_API_KEY) return null;
   // raw: the caller's prompt as is (studio product renders for floating Reel cards), only the safety line added
-  const prompt = raw ? `${description}. No text, no logos, no watermarks, no real people or faces.` : `${description}. Eye-catching photorealistic editorial photo that stops the scroll: vivid saturated color, bright light (golden hour, neon or strong sun, never dull or gray), bold close or low angle, a clear striking subject with something happening, cinematic depth, South Florida setting when relevant. ` +
+  // raw 'people' (shareslop, owner Oct 6): staged shock scenes with invented people — faces allowed, never real/famous people
+  const prompt = raw === 'people' ? `${description}. Photorealistic candid smartphone photo, vivid natural color, sharp, dramatic moment. Invented ordinary people only: no celebrities, public figures or real identifiable people. No text, no captions, no logos, no watermarks.`
+    : raw ? `${description}. No text, no logos, no watermarks, no real people or faces.` : `${description}. Eye-catching photorealistic editorial photo that stops the scroll: vivid saturated color, bright light (golden hour, neon or strong sun, never dull or gray), bold close or low angle, a clear striking subject with something happening, cinematic depth, South Florida setting when relevant. ` +
     'No text, no readable numbers, no price signs or price displays, no logos, no watermarks. No identifiable real people or public figures; faces turned away, blurred or out of frame.';
   // cheap first (owner: mini model, ~4-5x cheaper), full model only if the mini one fails
   for (const model of [...new Set([process.env.OPENAI_IMAGE_MODEL || 'gpt-image-1-mini', 'gpt-image-1'])]) {

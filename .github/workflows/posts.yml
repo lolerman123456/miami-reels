@@ -98,7 +98,7 @@ jobs:
           sudo chmod +x /usr/local/bin/cloudflared
 
       - name: Video tools (clip slots; agency video inside news carousels)
-        if: contains(fromJSON('["clip","viral","news","brief"]'), needs.gate.outputs.kind)
+        if: contains(fromJSON('["clip","viral","news","brief","shareslop"]'), needs.gate.outputs.kind)
         run: |
           sudo apt-get install -y -qq ffmpeg > /dev/null
           pip install -q -U "yt-dlp[default]"
@@ -127,6 +127,7 @@ jobs:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
           GH_TOKEN: ${{ github.token }}
           CLOUDFLARED_BIN: /usr/local/bin/cloudflared
@@ -147,6 +148,12 @@ jobs:
           [ -n "$TOPIC" ] && ARGS+=(--topic "$TOPIC")
           [ "$PUBLISH" = "false" ] && ARGS+=(--dry-run)
           if [ "${WAIT:-0}" -gt 0 ]; then echo "waiting $((WAIT / 60)) min to post on the hour"; sleep "$WAIT"; fi
+          if [ "$KIND" = "shareslop" ]; then
+            # one-image share Reel with a trending song (pipeline/shareslop.mjs); "count" in requests/post.json makes several (previews)
+            SARGS=(); [ "$PUBLISH" = "false" ] && SARGS+=(--dry-run)
+            [ "$EVENT" = "push" ] && SARGS+=(--count "$(jq -r '.count // 1' requests/post.json)")
+            node pipeline/shareslop.mjs "${SARGS[@]}"; exit $?
+          fi
           if [ "$KIND" = "viral" ]; then
             # viral clip Reel with edits (pipeline/viralreel.mjs); nothing good → a hook + video post instead
             VARGS=(); [ "$PUBLISH" = "false" ] && VARGS+=(--dry-run)
@@ -187,6 +194,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          ls out/shareslop/*/slide.jpg >/dev/null 2>&1 && { gh release view slides >/dev/null 2>&1 || gh release create slides --title "Carousel previews" --notes "Preview slides (not posted)."; }
+          for d in out/shareslop/*/; do [ -f "${d}slide.jpg" ] || continue; n=$(basename "$d")
+            cp "${d}slide.jpg" "/tmp/shareslop-$n.jpg"; gh release upload slides "/tmp/shareslop-$n.jpg" --clobber
+            echo "▶ https://github.com/${{ github.repository }}/releases/download/slides/shareslop-$n.jpg  $(jq -r '.caption' "${d}post.json" | head -c 300 | tr '\n' ' ')" | tee -a "$GITHUB_STEP_SUMMARY"; done
           D=$(ls -td posts/*-preview 2>/dev/null | while read d; do ls "$d"/00-cover.jpg >/dev/null 2>&1 && echo "$d" && break; done); [ -n "$D" ] || exit 0
           gh release view slides >/dev/null 2>&1 || gh release create slides --title "Carousel previews" --notes "Preview slides (not posted)."
           gh release view slides --json assets -q '.assets[].name' | grep "^out-$(basename "$D")-" | while read a; do gh release delete-asset slides "$a" -y; done || true
@@ -207,7 +218,7 @@ jobs:
         run: |
           git config user.name "reel-bot"
           git config user.email "reel-bot@users.noreply.github.com"
-          for f in posts/*/post.json posted.log state/ai-images.txt state/clips-seen.txt; do [ -e "$f" ] && git add "$f"; done; true
+          for f in posts/*/post.json posted.log state/ai-images.txt state/clips-seen.txt state/shareslop-seen.txt; do [ -e "$f" ] && git add "$f"; done; true
           git reset -q -- 'posts/*-preview/*' 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "Post run ${{ github.run_number }} ($(date -u +%F))"

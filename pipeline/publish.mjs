@@ -60,7 +60,7 @@ export async function publishReel(videoFile, caption, { collaborators = [] } = {
 // Map Reels with a trending song (owner, Oct 5): the Instagram Audio API only works with a Facebook-Login token
 // (FB_ACCESS_TOKEN, NEAR Social Publisher app, Jacobo's account with access to the "NEAR APP" Page linked to @getnearapp).
 // Picks a trending song from /ig_audio not used in the last 20 music posts, keeps the voice on top (song at 35% — owner Oct 5: 14 was inaudible).
-export async function publishReelWithMusic(videoFile, caption, { collaborators = [] } = {}) {
+export async function publishReelWithMusic(videoFile, caption, { collaborators = [], audioVolume = 35 } = {}) {
   const token = process.env.FB_ACCESS_TOKEN;
   if (!token) throw new Error('FB_ACCESS_TOKEN not set');
   const api = `https://graph.facebook.com/${VERSION}`;
@@ -74,7 +74,7 @@ export async function publishReelWithMusic(videoFile, caption, { collaborators =
   const used = new Set((fs.existsSync(logFile) ? fs.readFileSync(logFile, 'utf8') : '').split('\n').filter(l => l.includes('\taudio:')).slice(-20).map(l => l.split('\taudio:')[1].split('\t')[0]));
   const song = songs.slice(0, 15).find(a => !used.has(String(a.audio_id))) || songs[0];
   console.log(`▶ Instagram: trending song "${song.title}" by ${song.display_artist || '?'} (${song.audio_id})`);
-  const audio = JSON.stringify({ audio_id: String(song.audio_id), audio_volume: 35, video_volume: 100 });
+  const audio = JSON.stringify({ audio_id: String(song.audio_id), audio_volume: audioVolume, video_volume: 100 });
   // Oct 5: the resumable upload of the full-quality file failed ("ProcessingFailedError"); send a compressed copy
   // (same settings as the public watch link) through a temporary public link instead, like the Instagram-Login path
   const small = path.join((await import('node:os')).tmpdir(), path.basename(videoFile, '.mp4') + '-ig.mp4'); // outside out/ so later steps don't pick it up
