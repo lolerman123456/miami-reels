@@ -17,7 +17,13 @@
       10,
       18
     ],
-    "upcoming": 12
+    "upcoming": 12,
+    "shareslop": [
+      11,
+      14,
+      19,
+      21
+    ]
   },
   "tiktokSlideshowsPerDay": 8,
   "tiktokMinScore": 6,
