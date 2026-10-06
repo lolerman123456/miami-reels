@@ -12,17 +12,18 @@ import { fetchNews, searchNews } from './news.mjs';
 import { aiImage } from './photos.mjs';
 
 const SEEN = path.join(ROOT, 'state', 'shareslop-seen.txt');
-const ORANGE = '#FF8A1F';
-const QUERIES = ['study finds', 'researchers say', 'survey finds couples', 'dating survey', 'relationship study', 'scientists discover',
-  'bizarre', 'weird news', 'man arrested after', 'woman arrested after', 'Florida man', 'Florida woman', 'Miami viral', 'airline passenger'];
+const BLUE = '#1769FF'; // Near blue (owner, Oct 6)
+// owner, Oct 6: real shareslop = what one person sends the other as a hint ("do this for me", "see? I told you") — studies,
+// surveys and facts about couples, partners, friends and daily habits; these stay shareable for weeks, so the search window is wide
+const QUERIES = ['study finds couples', 'study partners who', 'study men who', 'study women who', 'boyfriend study', 'girlfriend study',
+  'husband wife study', 'cuddling study', 'kissing study', 'massage study', 'flowers study women', 'couples who happier', 'relationship researchers',
+  'dating survey', 'sleep study partner', 'friendship study', 'texting study', 'date night study', 'study finds health benefit', 'Florida man'];
 const key = t => t.toLowerCase().replace(/[^a-z0-9 ]/g, '').split(' ').slice(0, 7).join(' ');
 
 async function candidates() {
   const seen = new Set((fs.existsSync(SEEN) ? fs.readFileSync(SEEN, 'utf8') : '').split('\n').map(l => l.split('\t')[0]).filter(Boolean));
   const lists = await Promise.all([
-    ...QUERIES.map(q => searchNews(q, { days: 4, max: 10 }).catch(() => [])),
-    fetchNews('world', { hours: 48, max: 30 }).catch(() => []),
-    fetchNews('local', { hours: 36, max: 25 }).catch(() => []),
+    ...QUERIES.map(q => searchNews(q, { days: 30, max: 10 }).catch(() => [])),
   ]);
   const out = [], dup = new Set();
   for (const i of lists.flat()) {
@@ -34,18 +35,21 @@ async function candidates() {
 }
 
 async function write(items, recent) {
-  return chatJSON([{ role: 'system', content: 'You run a viral "share" page (style: @lostmydaddy, @ragebaitnews, @onlyindade): ONE picture with a huge headline people '
-    + 'instantly send to their partner, best friend or group chat. From these REAL headlines pick the ONE story that triggers the strongest "omg send this to …" reaction: '
-    + 'couples/dating/relationship studies and surveys, sex-of-the-sexes debates (who cheats more, who texts first), weird science, gross-but-true facts, wild arrests, '
-    + 'petty fights, bizarre jobs/money stories, airline/restaurant chaos. Pick the SPICIEST one (gross, shocking, controversial, "wait WHAT"), never a mild lifestyle trend (breakfast dates, money stress) unless nothing else exists. Worldwide is fine; if a South Florida/Florida story is just as shareable, prefer it.\n'
+  return chatJSON([{ role: 'system', content: 'You run a viral SHARE page (style: @lostmydaddy — e.g. "SPITTING IN HIS MOUTH BOOSTS HIS IMMUNE SYSTEM"): ONE picture with a huge headline '
+    + 'that one person SENDS TO THEIR PARTNER, crush or best friend as a hint or a demand — "do this for me 👀", "see, science says so", "you need to start doing this", "this is literally you". '
+    + 'The share IS the joke: the headline gives the sender an excuse to ask for something (cuddles, massages, compliments, flowers, food, sleep, attention, gym time, a trip) or to call the other person out. '
+    + 'From these REAL headlines pick the ONE whose finding works best as that hint. Best: studies/surveys about what partners should do for each other and what it does for them '
+    + '("MEN WHO GET A DAILY HUG LIVE LONGER", "WOMEN WHO GET FLOWERS RANDOMLY ARE HAPPIER, STUDY FINDS", "COUPLES WHO NAP TOGETHER FIGHT LESS"), habits that make someone more attractive, '
+    + 'friend-group callouts. Phrase the headline as the HINT (subject = the person being sent it: "HIM", "HER", "YOUR GIRLFRIEND", "MEN WHO…"), short and a little cheeky. '
+    + 'If nothing works as a hint, pick the closest relationship/friendship finding; never generic news.\n'
     + 'HARD RULES (the account must stay safe): the headline must be TRUE to the source headline — provocative wording is fine, inventing facts is not '
     + '(a study "suggests"/"finds", not "proves"; never health advice the source doesn\'t give). Never about a real celebrity or public figure, '
     + 'never names a private person or victim, nothing about deaths, kids, sexual assault, race, ethnicity, religion, nationality or politics. '
     + `Don't repeat these recent angles: ${recent.join(' | ') || 'none'}.\n`
-    + 'Write: "headline": 6–12 words, ALL CAPS, punchy (e.g. "WOMEN WHO TEXT FIRST HAVE LONGER RELATIONSHIPS, STUDY FINDS", "FLORIDA MAN CALLS 911 BECAUSE HIS PIZZA WAS COLD"); '
-    + '"hot": 1–3 consecutive words copied exactly from the headline to color orange (the shock part); '
+    + 'Write: "headline": 5–11 words, ALL CAPS, the hint (true to the finding); '
+    + '"hot": 1–3 consecutive words copied exactly from the headline to color blue (the ask/the payoff); '
     + '"image": a photorealistic staged scene that ACTS OUT the headline literally, mid-action, absurd and a little uncomfortable like a viral meme photo (e.g. for "spitting boosts immunity": a woman pouring water into a man\'s open mouth in a park while people around sneeze into tissues) — never just people staring shocked at a phone; invented ordinary people, no text, no real people; '
-    + '"caption": 2 short lines retelling the story plainly with the key fact + "Source: <outlet>" + a share line that fits (e.g. "Send this to your man 👀", "Tag the friend who does this 😭", "Your group chat needs to see this"); '
+    + '"caption": 2 short lines retelling the story plainly with the key fact + "Source: <outlet>" + a share line that fits that tells them to SEND it (e.g. "Send this to your man 👀", "Send this to her. Just do it 😭", "Leave this on his phone 👀", "Tag who owes you this"); '
     + '"hashtags": 3 hashtags; "angle": 3-word label of the topic. '
     + 'Reply JSON {"index": n, "headline": "", "hot": "", "image": "", "caption": "", "hashtags": [], "angle": ""}.' },
   { role: 'user', content: items.map((i, n) => `${n}. [${i.source}] ${i.title}`).join('\n') }], 'write');
@@ -71,9 +75,9 @@ body { width: 1080px; height: 1920px; background: #000; overflow: hidden; positi
 .brand { display: flex; align-items: center; gap: 18px; justify-content: center; margin-bottom: 22px; }
 .brand i { flex: 1; height: 3px; background: rgba(255,255,255,.75); }
 .brand b { font: 900 40px 'Mont'; color: #fff; letter-spacing: 1px; }
-.brand b span { background: ${ORANGE}; color: #111; padding: 2px 14px; border-radius: 8px; margin-left: 8px; }
+.brand b span { background: ${BLUE}; color: #fff; padding: 2px 14px; border-radius: 8px; margin-left: 8px; }
 h1 { font: 700 150px/0.98 'Oswald'; color: #fff; text-transform: uppercase; letter-spacing: -1px; word-spacing: 4px; }
-.hot { color: ${ORANGE}; }
+.hot { color: ${BLUE}; text-shadow: 0 0 18px rgba(23,105,255,.45); -webkit-text-stroke: 2px #4d8dff; }
 </style></head><body><div class="photo"></div><div class="fade"></div>
 <div class="box"><div class="brand"><i></i><b>GET<span>NEAR</span></b><i></i></div><h1 id="h">${body}</h1></div></body></html>`;
 }
