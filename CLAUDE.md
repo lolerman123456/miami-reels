@@ -63,7 +63,7 @@ and very viral stories, ~4+ a day. Reels: music Reels plus any episode with `"ti
 other carousels are rated for TikTok and those scoring `control.json` → `tiktokMinScore` (6)+/10 go, max `tiktokSlideshowsPerDay` (8) a day (owner: capitalize on slideshows, not just Reels)
 (`tiktokWorthy` in `pipeline/carousel.mjs`, `postToTikTok` in `pipeline/buffer.mjs`). World carousels never go.
 Hand-made slideshows (brand logos, bold colors, e.g. National Coffee Day): `slideshows/<id>/slides.json` + `logos/`, render with `node pipeline/slideshow.mjs render slideshows/<id>`, commit (incl. `out/`), then `requests/slideshow.json` → `{"dir": "slideshows/<id>", "at": "..."}` sends it to Buffer (`.github/workflows/slideshow.yml`).
-The old direct TikTok app (`pipeline/tiktok.mjs`, `docs/tiktok/`) is no longer needed.
+**TikTok drafts (owner, Oct 6):** once @getnearapp is connected on the NEAR Publisher page (`docs/tiktok/`, backend `pipeline/tiktok.mjs` via `requests/tiktok.json` → `.github/workflows/tiktok.yml`; token encrypted in `state/tiktok-token.enc` with the `TIKTOK_CLIENT_SECRET` secret), every Reel that would get a Buffer reminder goes straight to the TikTok drafts/inbox instead (`sendToTikTokDrafts` in `pipeline/buffer.mjs`); the owner adds a trending sound and posts. Not connected / upload fails → Buffer reminder as before; `control.json` → `"tiktokDrafts": false` turns it off. The API can't add TikTok sounds or publish publicly without TikTok's app audit.
 
 ## Checking on runs & sharing videos (works without gh / without login — the repo is public)
 - Every rendered video is uploaded as `https://github.com/lolerman123456/miami-reels/releases/download/videos/<episode-id>.mp4`

@@ -92,6 +92,9 @@ export async function postToTikTok({ video, images, text = '', label, ai = false
     } catch (e) { console.log(`  (TikTok pick failed: ${e.message.slice(0, 200)})`); }
     return;
   }
+  // owner, Oct 6: map Reels go straight to the TikTok drafts/inbox (Content Posting API, NEAR Publisher app) — the owner opens
+  // TikTok, adds a trending sound and posts. Needs the one-time connect (state/tiktok-token.enc); else / on failure → Buffer.
+  if (video && control.tiktokDrafts !== false && await sendToTikTokDrafts(video, label)) return;
   if (!process.env.BUFFER_API_KEY) return;
   try {
     const channelId = await channelFor('tiktok');
@@ -109,6 +112,25 @@ export async function postToTikTok({ video, images, text = '', label, ai = false
     console.log(`✔ TikTok reminder set in Buffer (${video ? 'video' : `${assets.length}-photo slideshow`}) — ${post.id}`);
     log(`tiktok:${label}`, 'Buffer reminder (owner posts with music)');
   } catch (e) { console.log(`  (TikTok reminder failed: ${e.message.slice(0, 200)})`); }
+}
+
+async function sendToTikTokDrafts(video, label) {
+  if (!process.env.TIKTOK_CLIENT_SECRET || !fs.existsSync(path.join(ROOT, 'state', 'tiktok-token.enc'))) {
+    console.log('  (TikTok drafts: not connected yet — using Buffer)'); return false;
+  }
+  try {
+    const { uploadVideo } = await import('./tiktok.mjs');
+    let file = video;
+    if (fs.statSync(file).size > 60e6) { // single-chunk upload limit is 64 MB
+      file = path.join(path.dirname(video), path.basename(video, '.mp4') + '.tiktok.mp4');
+      await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', video, '-c:v', 'libx264', '-preset', 'veryfast', '-b:v', '6M', '-maxrate', '6M', '-bufsize', '12M', '-c:a', 'aac', '-b:a', '160k', '-movflags', '+faststart', file]);
+    }
+    const id = await uploadVideo(file, { mode: 'draft' });
+    if (file !== video) fs.rmSync(file, { force: true });
+    console.log(`✔ sent to the TikTok drafts (${id}) — owner adds a sound and posts`);
+    log(`tiktok:${label}`, 'sent to TikTok drafts (owner adds a sound and posts)');
+    return true;
+  } catch (e) { console.log(`  (TikTok drafts failed: ${e.message.slice(0, 200)} — using Buffer)`); return false; }
 }
 
 // A whole day's TikTok schedule at once (owner, Sep 29: "too much to track"): each item becomes a Buffer reminder at its time.

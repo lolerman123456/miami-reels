@@ -163,6 +163,7 @@ jobs:
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           KOKORO_VOICE: ${{ vars.KOKORO_VOICE || 'am_adam' }}
           KOKORO_SPEED: ${{ vars.KOKORO_SPEED || '1.3' }}
           CLOUDFLARED_BIN: /usr/local/bin/cloudflared
@@ -318,6 +319,7 @@ jobs:
           CLOUDFLARED_BIN: /usr/local/bin/cloudflared
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           GH_TOKEN: ${{ github.token }}
           PUBLISH: ${{ needs.prepare.outputs.publish }}
         run: |
@@ -361,6 +363,7 @@ jobs:
           git config user.name "reel-bot"
           git config user.email "reel-bot@users.noreply.github.com"
           git add episodes/*/episode.json episodes/*/images/*.png posted.log 2>/dev/null || true
+          git add state/tiktok-token.enc 2>/dev/null || true # refreshed TikTok token (encrypted)
           if ! git diff --cached --quiet; then
             git commit -m "Reel run ${{ github.run_number }} ($(date -u +%F))"
             for i in 1 2 3 4; do git pull -q --rebase && git push -q && break; sleep $((i*5)); done
