@@ -1,0 +1,117 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "HERE'S",
+    "main": "EVERY BIG EVENT",
+    "highlight": "THIS WEEK",
+    "bottom": "IN SOUTH FLORIDA",
+    "blur": false,
+    "photo": {
+      "query": "South Florida event crowd at night concert or festival",
+      "prompt": "dramatic nighttime South Florida crowd scene with stage lights, palm trees, and a packed outdoor venue"
+    },
+    "emojis": [
+      "🎟️",
+      "🎸",
+      "🍿",
+      "👀"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: PattayaPatrol / CC BY-SA 4.0",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Miami Heat Red, White & Pink Game at Kaseya Center",
+      "highlight": "Kaseya Center",
+      "body": "Tuesday, Oct. 6 at 6:30 p.m. at Kaseya Center, 601 Biscayne Blvd., Miami. Tickets cost $10, and the preseason game gives fans an early look at the 2026-27 roster.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Kaseya Center basketball game crowd Miami",
+        "prompt": "wide dramatic arena photo of the Miami Heat court at Kaseya Center with fans, bright lights, and players warming up"
+      },
+      "emoji": "🏀",
+      "chip": "TUE 6:30 PM",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Infinity Song at Revolution Live",
+      "highlight": "Revolution Live",
+      "body": "Wednesday, Oct. 7 at 7 p.m. at Revolution Live, 100 SW Third Ave., Fort Lauderdale. Tickets cost $40, and the sibling band brings its harmonies and viral song to South Florida.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Revolution Live Fort Lauderdale concert night",
+        "prompt": "dramatic live music photo inside Revolution Live in Fort Lauderdale with stage lights, a crowd, and musicians on stage"
+      },
+      "emoji": "🎤",
+      "chip": "WED 7 PM",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Sips & Shorts at Pinecrest Gardens",
+      "highlight": "Pinecrest Gardens",
+      "body": "Thursday, Oct. 8 at 7 p.m. at Pinecrest Gardens, 11000 Red Road, Pinecrest. Tickets cost $10, and the show packs four short plays into one night with live music.",
+      "place": "Pinecrest",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Pinecrest Gardens outdoor performance night",
+        "prompt": "cinematic evening photo of an outdoor theater at Pinecrest Gardens with audience seating, stage lights, and tropical landscaping"
+      },
+      "emoji": "🎭",
+      "chip": "THU 7 PM",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Ebyabe / CC BY-SA 3.0"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Geneva Window Centenary Celebration at the Wolfsonian-FIU",
+      "highlight": "Wolfsonian-FIU",
+      "body": "Friday, Oct. 9 at 6:30 p.m. at the Wolfsonian-FIU, 1001 Washington Ave., Miami Beach. Tickets cost $0 to $20, and the event pairs a talk on Harry Clarke’s stained glass with a performance.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wolfsonian-FIU Miami Beach exterior night",
+        "prompt": "moody night photo of the Wolfsonian-FIU building in Miami Beach with art deco details and warm museum lighting"
+      },
+      "emoji": "🖼️",
+      "chip": "FRI 6:30 PM",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Dcurator / CC BY-SA 4.0"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "South Florida Greek Festival at Savor Cinema",
+      "highlight": "Savor Cinema",
+      "body": "Friday, Oct. 9 at 7 p.m. at Savor Cinema, 503 SE Sixth St., Fort Lauderdale. Tickets cost $40 for the opening-night gala, with food, drinks, and a screening of Last Call.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Savor Cinema Fort Lauderdale exterior night",
+        "prompt": "dramatic cinema exterior in Fort Lauderdale at night with marquee lights, a red carpet, and people arriving"
+      },
+      "emoji": "🎬",
+      "chip": "FRI 7 PM",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Infrogmation of New Orleans / CC BY-SA 3.0"
+    }
+  ],
+  "caption": "South Florida has concerts, theater, film, and a game this week.\nWho are you taking? Tag a friend.",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has concerts, theater, film, and a game this week.\nWho are you taking? Tag a friend.\n\n📰 Sources: Miami New Times\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-06",
+  "id": "2026-10-06-upcoming"
+}
