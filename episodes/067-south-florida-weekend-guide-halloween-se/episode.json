@@ -1,0 +1,194 @@
+{
+  "title": "South Florida Weekend Guide, Halloween Season Starts Early",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami",
+    "Sun Sentinel",
+    "The Miami Guide",
+    "Mommy Poppins"
+  ],
+  "collaborators": [],
+  "igCaption": "Halloween season is already moving across South Florida, with Miami New Times tracking 11 pop-up bars and events this October.\nThis weekend also has a South Florida Top 10 list with chocolate and whiskey, freestyle music, and SummerFest.\nTell us what we should cover next.\n\nSources: Miami New Times, Secret Miami, Sun Sentinel, The Miami Guide, Mommy Poppins\n\n#MiamiEvents #SouthFloridaEvents #HalloweenMiami #WeekendGuide",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Halloween season already started in South Florida, and one October guide lists eleven pop-up bars and events.",
+      "overlay": [
+        "WEEKEND",
+        "GUIDE"
+      ],
+      "emojis": [
+        "🎃",
+        "🎶",
+        "🍫",
+        "👻"
+      ],
+      "location": {
+        "name": "Miami-Dade County, Florida",
+        "lat": 25.61058,
+        "lon": -80.497099,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 120
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami New Times counted eleven Halloween pop-up bars and food events across Miami and Fort Lauderdale for October 2026. The lineup includes vampire dinners, murder mysteries, and spooky cocktails.",
+      "caption": "Miami New Times counted 11 Halloween pop-up bars and food events across Miami and Fort Lauderdale for October 2026. The lineup includes vampire dinners, murder mysteries, and spooky cocktails.",
+      "overlay": "HALLOWEEN",
+      "badge": "11 EVENTS",
+      "sub": "Miami and Fort Lauderdale",
+      "emoji": "👻",
+      "stats": [
+        {
+          "value": "11",
+          "label": "Halloween events"
+        },
+        {
+          "value": "2026",
+          "label": "October guide"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami-Dade County, Florida",
+        "lat": 25.61058,
+        "lon": -80.497099,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 210,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Secret Miami also listed eleven Halloween parties in Miami this October. The Miami Guide has a separate Halloween events guide for 2026, so the calendar already has plenty on it before October 31.",
+      "caption": "Secret Miami also listed 11 Halloween parties in Miami this October. The Miami Guide has a separate Halloween events guide for 2026, so the calendar already has plenty on it before October 31.",
+      "overlay": "MIAMI",
+      "badge": "11 PARTIES",
+      "sub": "October Halloween picks",
+      "emoji": "🎃",
+      "stats": [
+        {
+          "value": "11",
+          "label": "Miami parties"
+        },
+        {
+          "value": "2026",
+          "label": "Event guide"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Miami-Dade County, Florida",
+        "lat": 25.61058,
+        "lon": -80.497099,
+        "h": 20
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 1500,
+        "pitch": -30,
+        "heading": 65
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami New Times also picked seventeen Miami concerts to see in October 2026. That gives you options before Halloween weekend even starts. If you go, check NEAR after the set and see who was there.",
+      "caption": "Miami New Times also picked 17 Miami concerts to see in October 2026. That gives you options before Halloween weekend even starts. If you go, check NEAR after the set and see who was there.",
+      "overlay": "CONCERTS",
+      "badge": "17 PICKS",
+      "sub": "October music list",
+      "emoji": "🎶",
+      "stats": [
+        {
+          "value": "17",
+          "label": "Concert picks"
+        },
+        {
+          "value": "2026",
+          "label": "October list"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami-Dade County, Florida",
+        "lat": 25.61058,
+        "lon": -80.497099,
+        "h": 20
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 1600,
+        "pitch": -33,
+        "heading": 300
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Broward has weekend options in the Sun Sentinel Top 10. The list includes The Art of Chocolate and Whiskey Tasting, a freestyle party, and SummerFest.",
+      "caption": "Broward has weekend options in the Sun Sentinel Top 10. The list includes The Art of Chocolate and Whiskey Tasting, a freestyle party, and SummerFest.",
+      "overlay": "BROWARD",
+      "badge": "TOP 10",
+      "sub": "Weekend event list",
+      "emoji": "🍫",
+      "stats": [
+        {
+          "value": "10",
+          "label": "Weekend picks"
+        }
+      ],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Broward County, Florida",
+        "lat": 26.193535,
+        "lon": -80.476683,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 25,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Tell us which one you want next, and we will cover it. South Florida weekends pack in pop-ups and crowded Halloween events, and NEAR is the app that helps you figure out who that person you kept passing by actually was.",
+      "overlay": "COMMENT 👇",
+      "sub": "Weekend picks through Sunday",
+      "location": {
+        "name": "Broward County, Florida",
+        "lat": 26.193535,
+        "lon": -80.476683,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -32,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "067-south-florida-weekend-guide-halloween-se"
+}
