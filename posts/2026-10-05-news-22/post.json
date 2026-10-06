@@ -1,0 +1,74 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "MIAMI BEACH POLICE SAY",
+    "main": "SOPHISTICATED DRUG",
+    "highlight": "PINK PANTHER",
+    "bottom": "BUST LED TO ARRESTS",
+    "blur": false,
+    "photo": {
+      "query": "Miami Beach police lights South Beach Art Deco night",
+      "prompt": "dramatic Miami Beach police cruiser with flashing lights on Ocean Drive at night, Art Deco buildings in the background, no people visible",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚔",
+      "💵",
+      "🧪"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Local 10",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Police say a sophisticated drug trafficking operation was behind the bust",
+      "highlight": "sophisticated drug trafficking operation",
+      "body": "Local 10 reported Miami Beach police announced arrests from Operation Pink Panther after a large bust of a sophisticated drug trafficking operation.",
+      "place": "Miami Beach",
+      "source": "Local 10",
+      "photo": {
+        "query": "Miami Beach police headquarters exterior night patrol cars",
+        "prompt": "Miami Beach police headquarters exterior at night with patrol cars and flashing lights, no identifiable people"
+      },
+      "emoji": "🚔",
+      "chip": "OPERATION PINK PANTHER",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Local 10"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police arrested 4 men in the case",
+      "highlight": "4 men",
+      "body": "WSVN reported Miami Beach police arrested 4 men in the drug trafficking operation dubbed Pink Panther.",
+      "place": "Miami Beach",
+      "source": "WSVN",
+      "photo": {
+        "query": "police evidence table narcotics packaging close-up",
+        "prompt": "close-up of a police evidence table with sealed narcotics packages and gloves under bright lights, no people visible"
+      },
+      "emoji": "👮",
+      "chip": "4 ARRESTS",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Local 10"
+    }
+  ],
+  "caption": "Miami Beach police say Operation Pink Panther exposed a sophisticated drug trafficking operation, with 4 arrests, more than 70 pounds of drugs and nearly $50,000 seized.\nThe case is now the local story to watch.",
+  "hashtags": [
+    "#MiamiBeach",
+    "#MiamiDade"
+  ],
+  "collaborators": [],
+  "igCaption": "Miami Beach police say Operation Pink Panther exposed a sophisticated drug trafficking operation, with 4 arrests, more than 70 pounds of drugs and nearly $50,000 seized.\nThe case is now the local story to watch.\n\n📰 Sources: Local 10, WSVN, NBC 6 South Florida, Miami Herald\n\n🎥 Video: WPLG Local 10\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiBeach #MiamiDade #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-05",
+  "id": "2026-10-05-news-22",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "WPLG Local 10",
+    "url": "https://www.youtube.com/watch?v=erZpkyHivsY"
+  }
+}
