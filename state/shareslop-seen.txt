@@ -13,3 +13,6 @@ letting her steal your fries improves brain	Fries Theft Science	2026-10-06-80143
 letting her control the aux raises your	Aux Power Science	2026-10-06-952736
 making your man open the pickle jar	pickle jar science	2026-10-06-976250
 letting him be little spoon improves his	Little Spoon Science	2026-10-06-001836
+buying her random flowers lowers her stress	Random Flower Therapy	2026-10-06-890202
+letting her nap on your chest boosts	Chest Nap Science	2026-10-06-919190
+bringing her a sweet treat raises your	Dessert Longevity Demand	2026-10-06-947352
