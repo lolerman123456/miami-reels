@@ -1,0 +1,198 @@
+{
+  "title": "South Florida events this week, cheap picks first",
+  "sources": [
+    "Time Out Worldwide",
+    "Secret Miami",
+    "Eater Miami"
+  ],
+  "collaborators": [
+    "iiipoints"
+  ],
+  "igCaption": "III Points returns to Miami this October, and tickets are available for a penny through @iiipoints.\nGulfstream Park has corgi races Saturday, with 40-yard dashes at 1 PM, 1:30 PM and 2 PM.\nBrightline is running late-night trains after Kaseya Center shows through the end of the year.\nWhich one would you actually go to this week?\n\nSources: Time Out Worldwide, Secret Miami, Eater Miami\n\n#MiamiEvents #SouthFlorida #FortLauderdale #Wynwood",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "What’s worth doing in South Florida this week if you want to start cheap?",
+      "overlay": [
+        "THIS WEEK",
+        "CHEAP FIRST"
+      ],
+      "emojis": [
+        "🎟️",
+        "🐶",
+        "🚆",
+        "🍽️"
+      ],
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.804,
+        "lon": -80.199,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start with III Points. The festival returns to Miami this October, and tickets are available for a penny. That is about as close as Miami gets to paying you back.",
+      "caption": "Start with III Points. The festival returns to Miami this October, and tickets are available for $0.01. That is about as close as Miami gets to paying you back.",
+      "overlay": "WYNWOOD",
+      "badge": "1¢ TICKETS",
+      "sub": "III Points returns",
+      "emoji": "🎧",
+      "stats": [
+        {
+          "value": "1¢",
+          "label": "ticket offer"
+        }
+      ],
+      "source": "Time Out Worldwide",
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.804,
+        "lon": -80.199,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "On Saturday, Gulfstream Park runs the Coastal Corgi Classic at 901 S Federal Highway. The dogs race 40 yards on the main dirt track at about 1 PM, 1:30 PM and 2 PM.",
+      "caption": "On Saturday, Gulfstream Park runs the Coastal Corgi Classic at 901 S Federal Highway. The dogs race 40 yards on the main dirt track at about 1 PM, 1:30 PM and 2 PM.",
+      "overlay": "GULFSTREAM",
+      "badge": "40 YARDS",
+      "sub": "Corgi races Saturday",
+      "emoji": "🐕",
+      "stats": [
+        {
+          "value": "40 YARDS",
+          "label": "corgi dash"
+        },
+        {
+          "value": "1 PM",
+          "label": "first race"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Gulfstream Park",
+        "lat": 25.9781,
+        "lon": -80.1397,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 85,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Brightline is running late-night trains after Kaseya Center shows through the end of the year. This week, that covers Camilo on October 9, Arcángel on October 11 and KATSEYE on October 13. If you’re on the late train, check NEAR for who was there.",
+      "caption": "Brightline is running late-night trains after Kaseya Center shows through the end of the year. This week, that covers Camilo on Oct. 9, Arcángel on Oct. 11 and KATSEYE on Oct. 13. If you’re on the late train, check NEAR for who was there.",
+      "overlay": "KASEYA CENTER",
+      "badge": "15+ SHOWS",
+      "sub": "Late-night trains",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "15+",
+          "label": "covered shows"
+        },
+        {
+          "value": "Oct. 13",
+          "label": "KATSEYE date"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.7814,
+        "lon": -80.187,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 220,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a restaurant plan, Emelina’s opened in West Palm Beach with 16 seats. The team includes Alvaro Perez-Miranda from Michelin-starred Ogawa, plus chefs Osmel González and Camila Salazar. The tasting menu is $275.",
+      "caption": "For a restaurant plan, Emelina’s opened in West Palm Beach with 16 seats. The team includes Alvaro Perez-Miranda from Michelin-starred Ogawa, plus chefs Osmel González and Camila Salazar. The tasting menu is $275.",
+      "overlay": "WEST PALM",
+      "badge": "16 SEATS",
+      "sub": "Cuban omakase",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "16",
+          "label": "seats"
+        },
+        {
+          "value": "$275",
+          "label": "tasting menu"
+        }
+      ],
+      "source": "Eater Miami",
+      "location": {
+        "name": "West Palm Beach, Florida",
+        "lat": 26.74694444,
+        "lon": -80.13111111,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1000,
+        "pitch": -30,
+        "heading": 310,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you picking this week? At events like these, it’s easy to recognize a face from the crowd and never learn the name, and that’s exactly what NEAR quietly makes clear.",
+      "overlay": "WHAT’S THE MOVE? 🎟️",
+      "sub": "Tell us your pick",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 15
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -32,
+        "heading": 30
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "066-south-florida-events-this-week-cheap-pic"
+}
