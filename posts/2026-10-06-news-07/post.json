@@ -1,0 +1,74 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "INVESTIGATORS SAY",
+    "main": "ONE DEATH IS LINKED TO",
+    "highlight": "KIDNAPPING",
+    "bottom": "SHOOTING AND CAR ARSON",
+    "blur": false,
+    "photo": {
+      "query": "Miami-Dade crime scene tape burned car night",
+      "prompt": "dramatic Miami-Dade crime scene at night with police tape, cruiser lights and a burned vehicle in the distance, no people visible",
+      "mark": "stamp: INVESTIGATION"
+    },
+    "emojis": [
+      "🚨",
+      "🔥",
+      "🚔"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: CBS News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "A 22-year-old was found dead in Redlands",
+      "highlight": "22-year-old",
+      "body": "WPLG Local 10 reported deputies said the man found dead in Redlands was 22 and had been abducted from North Miami.",
+      "place": "Redlands",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Redland Miami-Dade rural road police scene night",
+        "prompt": "rural Redlands road in south Miami-Dade at night with police tape, cruiser lights and farmland in the background, no people visible"
+      },
+      "emoji": "🕯️",
+      "chip": "AGE 22",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Deputies say the abduction began in North Miami",
+      "highlight": "North Miami",
+      "body": "CBS News reported deputies said the man was abducted after a shooting at a North Miami apartment.",
+      "place": "North Miami",
+      "source": "CBS News",
+      "photo": {
+        "query": "North Miami apartment building police cars night",
+        "prompt": "North Miami apartment complex at night with several police vehicles outside and crime scene tape near the entrance, no people visible"
+      },
+      "emoji": "🏢",
+      "chip": "NORTH MIAMI",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News"
+    }
+  ],
+  "caption": "Investigators say one man’s death is tied to a North Miami apartment shooting, a kidnapping and a car arson across Miami-Dade.",
+  "hashtags": [
+    "#MiamiDade",
+    "#NorthMiami"
+  ],
+  "collaborators": [],
+  "igCaption": "Investigators say one man’s death is tied to a North Miami apartment shooting, a kidnapping and a car arson across Miami-Dade.\n\n📰 Sources: WPLG Local 10, CBS News, NBC 6 South Florida\n\n🎥 Video: CBS News Miami\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiDade #NorthMiami #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-06",
+  "id": "2026-10-06-news-07",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "CBS News Miami",
+    "url": "https://www.youtube.com/watch?v=05vYozLYOL8"
+  }
+}
