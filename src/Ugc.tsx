@@ -58,7 +58,7 @@ export const Ugc: React.FC<UgcProps> = (p) => {
       {chunk && (() => {
         const s = spring({ frame: f - chunk.s, fps, config: { damping: 14, stiffness: 260, mass: 0.5 } });
         return (
-          <div style={{ position: 'absolute', left: 60, right: 60, top: 1240, textAlign: 'center', transform: `scale(${0.85 + 0.15 * s})` }}>
+          <div style={{ position: 'absolute', left: 60, right: 60, top: 1400, textAlign: 'center', transform: `scale(${0.85 + 0.15 * s})` }}>
             <span style={{ fontFamily: 'Mont', fontWeight: 900, fontSize: 76, lineHeight: 1.12, textTransform: 'uppercase', WebkitTextStroke: '10px #000', paintOrder: 'stroke fill', textShadow: '0 6px 18px rgba(0,0,0,.55)' }}>
               {chunk.words.map((w, i) => <span key={i} style={{ color: f >= w.s && f < (chunk.words[i + 1]?.s ?? chunk.e) ? BLUE : '#fff' }}>{w.w}{i < chunk.words.length - 1 ? ' ' : ''}</span>)}
               {chunk.emoji && <span style={{ WebkitTextStroke: 0 }}> {chunk.emoji}</span>}
@@ -74,7 +74,7 @@ export const Ugc: React.FC<UgcProps> = (p) => {
         const out = interpolate(f, [pop.at + pop.dur - 6, pop.at + pop.dur], [1, 0], { extrapolateLeft: 'clamp' });
         return (
           <div key={i} style={{ position: 'absolute', left: 0, right: 0, top: pop.y ?? 640, display: 'flex', justifyContent: 'center', opacity: out }}>
-            <div style={{ transform: `scale(${inS}) rotate(-2deg)`, background: '#fff', color: '#111', border: `5px solid ${BLUE}`, fontFamily: 'Inter', fontWeight: 800, fontSize: 46, padding: '16px 30px', borderRadius: 40, boxShadow: '0 12px 40px rgba(0,0,0,.35)' }}>{pop.text}</div>
+            <div style={{ transform: `scale(${inS})`, background: '#fff', color: '#111', border: `3px solid ${BLUE}`, fontFamily: 'Inter', fontWeight: 700, fontSize: 36, padding: '10px 22px', borderRadius: 30, boxShadow: '0 6px 18px rgba(0,0,0,.2)' }}>{pop.text}</div>
           </div>
         );
       })}
@@ -83,7 +83,7 @@ export const Ugc: React.FC<UgcProps> = (p) => {
       {p.endCard && f >= p.endCard.at && (() => {
         const s = spring({ frame: f - p.endCard.at, fps, config: { damping: 12, stiffness: 200 } });
         return (
-          <div style={{ position: 'absolute', left: 0, right: 0, top: 1480, display: 'flex', justifyContent: 'center' }}>
+          <div style={{ position: 'absolute', left: 0, right: 0, top: 1600, display: 'flex', justifyContent: 'center' }}>
             <div style={{ transform: `translateY(${(1 - s) * 80}px)`, opacity: s, background: BLUE, color: '#fff', fontFamily: 'Inter', fontWeight: 850, fontSize: 46, padding: '22px 44px', borderRadius: 60, boxShadow: '0 14px 44px rgba(23,105,255,.55)' }}>{p.endCard.text}</div>
           </div>
         );
