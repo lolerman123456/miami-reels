@@ -491,12 +491,13 @@ function coverHTML(post, dir, h, o = {}) { // o: textBottom / barBottom / barTex
 
 // shareslop Reel frame (owner, Oct 6: "use the same NEAR news format"): the news cover look at 1080x1920, text and the blue
 // getnearapp bar (with the send-it CTA) lifted above Instagram's caption overlay
-export async function renderShareCover(cover, dir, file, cta) {
+export async function renderShareCover(cover, dir, file, cta, h = 1920) { // h 1350 = 4:5 photo post (owner posts it with a song, Oct 6)
   const browser = await launch();
   try {
     const page = await browser.newPage();
-    await page.setViewport({ width: 1080, height: 1920 });
-    await page.setContent(`<html><head><meta charset="utf-8"><style>${CSS}</style></head><body style="--h:1920px">${coverHTML({ cover, kind: 'news' }, dir, 1920, { textBottom: 450, barBottom: 330, barText: cta, big: true })}</body></html>`, { waitUntil: 'load' });
+    await page.setViewport({ width: 1080, height: h });
+    const o = h > 1400 ? { textBottom: 450, barBottom: 330, barText: cta, big: true } : { textBottom: 170, barText: cta, big: true };
+    await page.setContent(`<html><head><meta charset="utf-8"><style>${CSS}</style></head><body style="--h:${h}px">${coverHTML({ cover, kind: 'news' }, dir, h, o)}</body></html>`, { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
     await page.screenshot({ path: file, type: 'jpeg', quality: 93 });
     return file;

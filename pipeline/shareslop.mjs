@@ -57,7 +57,7 @@ async function write(items, recent, topic = '') {
   { role: 'user', content: (topic ? `THE OWNER PICKED THE ASK FOR THIS ONE — build it around: ${topic}\n\n` : '') + 'Real headlines for inspiration (optional):\n' + items.slice(0, 40).map(i => `- ${i.title}`).join('\n') }], 'write');
 }
 
-async function makeOne(n, items, recent, dryRun, topic = '') {
+async function makeOne(n, items, recent, dryRun, topic = '', photo = false) {
   step(`Shareslop ${n}`);
   const w = await write(items, recent, topic);
   if (!w?.headline || !w.image) throw new Error('writer returned nothing usable: ' + JSON.stringify(w).slice(0, 200));
@@ -73,7 +73,13 @@ async function makeOne(n, items, recent, dryRun, topic = '') {
   const post = { id, cta: String(w.cta || 'SEND THIS TO HIM 👀').toLowerCase(), headline: w.headline.toUpperCase(),
     cover: { top: w.top, main: w.main, highlight: w.highlight || w.headline, bottom: w.bottom, photoFile: path.basename(img.file), credit: 'AI illustration' }, image: w.image, imageFile: img.file, angle: w.angle,
     caption: `${w.caption}\n\n${[...(w.hashtags || []).slice(0, 2), 'satire'].map(h => '#' + String(h).replace(/^#/, '')).join(' ')}`.trim() };
-  const jpg = await renderShareCover(post.cover, dir, path.join(dir, 'slide.jpg'), post.cta);
+  const jpg = await renderShareCover(post.cover, dir, path.join(dir, 'slide.jpg'), post.cta, photo ? 1350 : 1920);
+  if (photo) { // owner, Oct 6: a PHOTO with a song — the API can't add music to photos, so the owner posts it from the app
+    writeJSON(path.join(dir, 'post.json'), post);
+    fs.mkdirSync(path.dirname(SEEN), { recursive: true });
+    fs.appendFileSync(SEEN, `${key(post.headline)}\t${post.angle || ''}\t${id}\n`);
+    console.log(`  (photo for the owner) ${dir}`); return post;
+  }
   // a 7 s Reel of the still (Reels need video; the song is added by Instagram) — silent track so the song mixes in cleanly
   const mp4 = path.join(dir, `shareslop-${id}.mp4`);
   await run('ffmpeg', ['-y', '-loglevel', 'error', '-loop', '1', '-i', jpg, '-f', 'lavfi', '-i', 'anullsrc=r=48000:cl=stereo', '-t', '7',
@@ -92,12 +98,13 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const dryRun = args.includes('--dry-run');
   const count = Math.max(1, Math.min(5, +(args[args.indexOf('--count') + 1]) || 1));
   const topic = args.includes('--topic') ? args[args.indexOf('--topic') + 1] : '';
+  const photo = args.includes('--photo');
   const items = await candidates();
   console.log(`${items.length} candidate headlines`);
   const recent = (fs.existsSync(SEEN) ? fs.readFileSync(SEEN, 'utf8').trim().split('\n').slice(-15) : []).map(l => l.split('\t')[0]).filter(Boolean);
   let ok = 0;
   for (let n = 1; n <= count; n++) {
-    try { const p = await makeOne(n, items, recent, dryRun, n === 1 ? topic : ''); recent.push(p.headline); ok++; }
+    try { const p = await makeOne(n, items, recent, dryRun, n === 1 ? topic : '', photo); recent.push(p.headline); ok++; }
     catch (e) { console.log(`  (shareslop ${n} failed: ${e.message.slice(0, 300)})`); }
   }
   if (!ok) process.exit(1);
