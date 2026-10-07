@@ -1,0 +1,113 @@
+{
+  "sector": "WEATHER",
+  "cover": {
+    "top": "FLORIDA DECLARED A STATE OF EMERGENCY",
+    "main": "FOR 25 COUNTIES AS ISAIAS IS EXPECTED TO STRENGTHEN",
+    "highlight": "ISAIAS",
+    "bottom": "BEFORE REACHING THE GULF COAST",
+    "blur": false,
+    "photo": {
+      "query": "dramatic satellite view Gulf of Mexico tropical storm Florida visible",
+      "prompt": "dramatic satellite view of a tropical storm over the Gulf of Mexico with Florida visible to the east, storm bands clearly defined",
+      "mark": "stamp: CLOSED"
+    },
+    "emojis": [
+      "🌀",
+      "⚠️",
+      "🌧️"
+    ],
+    "logos": [
+      "flgov.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Local 10",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "WEATHER",
+      "headline": "Florida declared a state of emergency for 25 counties",
+      "highlight": "25 counties",
+      "body": "Gov. Ron DeSantis issued the order Wednesday as Tropical Storm Isaias formed and moved toward Florida.",
+      "place": "Florida",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Florida governor hurricane briefing emergency operations center storm map",
+        "prompt": "Florida emergency briefing room with a governor at a podium, storm track map on large screens, and emergency officials in the background"
+      },
+      "emoji": "⚠️",
+      "chip": "STATE OF EMERGENCY",
+      "logo": "flgov.com",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "Isaias formed in the southwestern Gulf",
+      "highlight": "formed in the Gulf",
+      "body": "Local 10 reported the storm formed early Wednesday in warm water off eastern Mexico.",
+      "place": "Gulf of Mexico",
+      "source": "Local 10",
+      "photo": {
+        "query": "satellite tropical storm Gulf of Mexico bands overhead",
+        "prompt": "tight overhead satellite-style view of swirling storm bands over dark Gulf water"
+      },
+      "emoji": "🌀",
+      "chip": "WEDNESDAY",
+      "logo": "flgov.com",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "Forecasters expect it to rapidly strengthen into a hurricane",
+      "highlight": "rapidly strengthen",
+      "body": "WPTV and The Weather Channel said Isaias is forecast to become a hurricane before it reaches the Gulf Coast.",
+      "place": "Gulf Coast",
+      "source": "WPTV",
+      "photo": {
+        "query": "hurricane satellite eye Gulf of Mexico storm bands",
+        "prompt": "close satellite image of strengthening storm bands curling into a clearer center over the Gulf"
+      },
+      "emoji": "🌪️",
+      "chip": "HURRICANE WATCH",
+      "logo": "flgov.com",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "Some outlets expect stronger hurricane conditions later this week",
+      "highlight": "later this week",
+      "body": "The Weather Channel described Isaias as a significant Gulf hurricane threat, and ABC7 WWSB said the hurricane threat is growing.",
+      "place": "Florida",
+      "source": "The Weather Channel",
+      "photo": {
+        "query": "Florida coast rain wind waves hurricane preparation",
+        "prompt": "Florida coastal scene with rough surf, palm trees bent by wind, and a dark rain curtain moving inland"
+      },
+      "emoji": "🌧️",
+      "chip": "LATER THIS WEEK",
+      "logo": "flgov.com",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": "logo-4.png"
+    }
+  ],
+  "caption": "Florida has 25 counties under a state of emergency as Isaias forms in the Gulf and is forecast to strengthen into a hurricane.\nWhat are you watching most today, rain, wind or flooding?",
+  "hashtags": [
+    "#TropicalStormIsaias",
+    "#FloridaWeather"
+  ],
+  "collaborators": [],
+  "igCaption": "Florida has 25 counties under a state of emergency as Isaias forms in the Gulf and is forecast to strengthen into a hurricane.\nWhat are you watching most today, rain, wind or flooding?\n\n📰 Sources: NBC 6 South Florida, Local 10, WPTV, The Weather Channel, WCTV\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#TropicalStormIsaias #FloridaWeather #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-07",
+  "id": "2026-10-07-brief"
+}
