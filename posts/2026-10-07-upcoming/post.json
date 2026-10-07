@@ -1,0 +1,130 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "ALL THE BIG SOUTH FLORIDA EVENTS",
+    "highlight": "SOUTH FLORIDA",
+    "bottom": "THIS WEEK",
+    "blur": false,
+    "photo": {
+      "query": "South Florida concert crowd night palm trees dramatic event scene",
+      "prompt": "dramatic South Florida event crowd at night with stage lights, palm trees, and food vendors"
+    },
+    "emojis": [
+      "🎤",
+      "🐶",
+      "🚆",
+      "🎟️"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Sofar Sounds in South Florida, Oct. 9",
+      "highlight": "Sofar Sounds",
+      "body": "Sofar Sounds is hosting free secret concerts throughout South Florida on Friday, Oct. 9. The venue is revealed after you reserve a spot.",
+      "place": "South Florida",
+      "source": "Yahoo",
+      "photo": {
+        "query": "small secret concert intimate crowd South Florida",
+        "prompt": "intimate secret concert with a small crowd, warm stage lights, and a singer on a low stage"
+      },
+      "emoji": "🎶",
+      "chip": "FREE",
+      "logo": "sofarsounds.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Camilo at Kaseya Center, Oct. 9",
+      "highlight": "Camilo at",
+      "body": "Camilo plays Kaseya Center in Miami on Thursday, Oct. 9. Brightline says late-night trains will run after the show.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Kaseya Center Miami concert arena night",
+        "prompt": "night view of Kaseya Center in Miami with concert lights and fans outside the arena"
+      },
+      "color": "#F7B500",
+      "emoji": "🎤",
+      "chip": "OCT. 9",
+      "logo": "kaseyacenter.com",
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Phillip Pessar / CC BY 2.0",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Coastal Corgi Classic at Gulfstream Park, Oct. 10",
+      "highlight": "Coastal Corgi",
+      "body": "Corgis race on Gulfstream Park’s main dirt track in Hallandale Beach on Saturday, Oct. 10. Check-in is 11 a.m., the costume contest is at noon, and the first race is at 1 p.m.",
+      "place": "Hallandale Beach",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "corgi race Gulfstream Park track crowd",
+        "prompt": "corgis racing on a dirt track at Gulfstream Park with spectators along the rail"
+      },
+      "emoji": "🐶",
+      "chip": "1 P.M.",
+      "logo": "gulfstreampark.com",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Aht820 / Public domain",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Arcángel at Kaseya Center, Oct. 11",
+      "highlight": "Arcángel at",
+      "body": "Arcángel plays Kaseya Center in Miami on Sunday, Oct. 11. Brightline’s late-night train service also covers this show.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Kaseya Center Miami reggaeton concert crowd",
+        "prompt": "arena concert crowd inside Kaseya Center with bright stage lights and raised phones"
+      },
+      "color": "#111111",
+      "emoji": "🎵",
+      "chip": "OCT. 11",
+      "logo": "kaseyacenter.com",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Gatorfan252525 / CC BY-SA 4.0",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "KATSEYE at Kaseya Center, Oct. 13",
+      "highlight": "KATSEYE at",
+      "body": "KATSEYE is on the Kaseya Center calendar for Tuesday, Oct. 13 in Miami. Brightline says riders should book the return trip early.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "KATSEYE concert stage arena lights",
+        "prompt": "pop group performing on a bright arena stage with dancers and phones in the crowd"
+      },
+      "color": "#7B61FF",
+      "emoji": "✨",
+      "chip": "OCT. 13",
+      "logo": "kaseyacenter.com",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: DXR / CC BY-SA 4.0",
+      "logoFile": null
+    }
+  ],
+  "caption": "South Florida has secret concerts, arena shows, and a corgi race this week.\nWho are you taking? Tag a friend.",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has secret concerts, arena shows, and a corgi race this week.\nWho are you taking? Tag a friend.\n\n📰 Sources: Yahoo, Secret Miami\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-07",
+  "id": "2026-10-07-upcoming"
+}
