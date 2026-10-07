@@ -349,7 +349,7 @@ jobs:
           mkdir -p out/share; S="out/share/$(basename "$F")"
           ffmpeg -loglevel error -y -i "$F" -c:v libx264 -preset veryfast -b:v 4500k -maxrate 5500k -bufsize 11M -c:a aac -b:a 160k -movflags +faststart "$S"
           gh release view videos >/dev/null 2>&1 || gh release create videos --title "Reel videos" --notes "Every rendered Reel. Tap a file to watch it on your phone."
-          gh release upload videos "$S" --clobber
+          for i in 1 2 3 4 5 6; do gh release upload videos "$S" --clobber && break; sleep $((i*15)); done
           echo "▶ Watch: https://github.com/${{ github.repository }}/releases/download/videos/$(basename "$F")" | tee -a "$GITHUB_STEP_SUMMARY"
 
       - name: Upload video
@@ -370,5 +370,6 @@ jobs:
           git add state/tiktok-token.enc 2>/dev/null || true # refreshed TikTok token (encrypted)
           if ! git diff --cached --quiet; then
             git commit -m "Reel run ${{ github.run_number }} ($(date -u +%F))"
-            for i in 1 2 3 4; do git pull -q --rebase && git push -q && break; sleep $((i*5)); done
+            # GitHub 500s come in bursts (Oct 7): keep trying for ~5 min
+            for i in 1 2 3 4 5 6 7 8; do git pull -q --rebase && git push -q && break; sleep $((i*10)); done
           fi

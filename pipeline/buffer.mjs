@@ -51,7 +51,11 @@ async function publicUrl(file, tag = 'videos', name = path.basename(file)) {
     await run('gh', ['release', 'view', tag, '-R', REPO]).catch(() => run('gh', ['release', 'create', tag, '-R', REPO, '--title', tag, '--notes', 'Media for Buffer (TikTok cross-posts).']));
     const tmp = path.join(path.dirname(file), name);
     if (tmp !== file) fs.copyFileSync(file, tmp);
-    await run('gh', ['release', 'upload', tag, tmp, '--clobber', '-R', REPO]);
+    // GitHub 500s come in bursts (Oct 7, 1pm: the upload failed and the Reel never reached TikTok) — retry for ~2.5 min
+    for (let i = 1; ; i++) {
+      try { await run('gh', ['release', 'upload', tag, tmp, '--clobber', '-R', REPO]); break; }
+      catch (e) { if (i >= 5) throw e; await new Promise(r => setTimeout(r, i * 15000)); }
+    }
   }
   return url;
 }

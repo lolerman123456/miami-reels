@@ -224,5 +224,5 @@ jobs:
           git reset -q -- 'posts/*-preview/*' 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "Post run ${{ github.run_number }} ($(date -u +%F))"
-            for i in 1 2 3 4; do git pull -q --rebase && git push -q && break; sleep $((i*5)); done
+            for i in 1 2 3 4 5 6 7 8; do git pull -q --rebase && git push -q && break; sleep $((i*10)); done
           fi
