@@ -15,6 +15,8 @@ export type UgcProps = {
   pops: { text: string; at: number; dur: number; y?: number }[];
   zooms: { at: number; scale: number }[];
   endCard?: { at: number; text: string };
+  fit?: { scale: number; y: number };   // shrink + move the footage (origin top centre)
+  safe?: boolean;                       // keep overlays inside the 4:5 centre
 };
 
 const BLUE = '#1769FF';
@@ -38,19 +40,25 @@ export const Ugc: React.FC<UgcProps> = (p) => {
     scale = interpolate(f, [p.zooms[i].at, p.zooms[i].at + 3], [prev, p.zooms[i].scale], { extrapolateRight: 'clamp' });
   }
   const left = Math.max(0, Math.ceil(p.timer.seconds - f / fps));
+  const fit = p.fit?.scale ?? 1;
   const chunk = p.chunks.find(c => f >= c.s && f < c.e);
   return (
     <AbsoluteFill style={{ background: '#000', overflow: 'hidden' }}>
-      <AbsoluteFill style={{ transform: `scale(${scale})`, transformOrigin: '50% 42%' }}>
-        <OffthreadVideo src={staticFile(p.video)} />
+      {/* 4:5-safe (owner, Oct 7: Meta masks 9:16 to the centre 1080x1350 on Feed/Explore/Profile, y 285–1635): the footage is
+          shrunk/raised (fit) so face + phone stay inside it; a blurred copy fills the edges for full-screen Reels/Stories */}
+      {fit < 1 && <AbsoluteFill style={{ transform: 'scale(1.25)', filter: 'blur(36px) brightness(.55)' }}><OffthreadVideo src={staticFile(p.video)} muted /></AbsoluteFill>}
+      <AbsoluteFill style={{ transform: `translateY(${p.fit?.y ?? 0}px) scale(${fit})`, transformOrigin: '50% 0' }}>
+        <AbsoluteFill style={{ transform: `scale(${scale})`, transformOrigin: '50% 70%' }}>
+          <OffthreadVideo src={staticFile(p.video)} />
+        </AbsoluteFill>
       </AbsoluteFill>
 
       {/* countdown timer box (like the reference): two small lines + a big mm:ss */}
-      <div style={{ position: 'absolute', top: 210, left: 0, right: 0, display: 'flex', justifyContent: 'center' }}>
-        <div style={{ background: 'rgba(0,0,0,.82)', borderRadius: 14, padding: '18px 34px 10px', textAlign: 'center', color: '#fff', fontFamily: 'Inter' }}>
-          <div style={{ fontSize: 40, fontWeight: 600, lineHeight: 1.2 }}>{p.timer.line1}</div>
-          <div style={{ fontSize: 40, fontWeight: 600, lineHeight: 1.2 }}>{p.timer.line2}</div>
-          <div style={{ fontSize: 150, fontWeight: 300, lineHeight: 1.05, letterSpacing: 2, fontVariantNumeric: 'tabular-nums', color: left <= 3 ? '#ff4d4d' : '#fff' }}>00:{String(left).padStart(2, '0')}</div>
+      <div style={{ position: 'absolute', top: p.safe ? 300 : 210, left: 0, right: 0, display: 'flex', justifyContent: 'center' }}>
+        <div style={{ background: 'rgba(0,0,0,.82)', borderRadius: 14, padding: p.safe ? '12px 28px 4px' : '18px 34px 10px', textAlign: 'center', color: '#fff', fontFamily: 'Inter' }}>
+          <div style={{ fontSize: p.safe ? 34 : 40, fontWeight: 600, lineHeight: 1.2 }}>{p.timer.line1}</div>
+          <div style={{ fontSize: p.safe ? 34 : 40, fontWeight: 600, lineHeight: 1.2 }}>{p.timer.line2}</div>
+          <div style={{ fontSize: p.safe ? 120 : 150, fontWeight: 300, lineHeight: 1.05, letterSpacing: 2, fontVariantNumeric: 'tabular-nums', color: left <= 3 ? '#ff4d4d' : '#fff' }}>00:{String(left).padStart(2, '0')}</div>
         </div>
       </div>
 
@@ -58,7 +66,7 @@ export const Ugc: React.FC<UgcProps> = (p) => {
       {chunk && (() => {
         const s = spring({ frame: f - chunk.s, fps, config: { damping: 14, stiffness: 260, mass: 0.5 } });
         return (
-          <div style={{ position: 'absolute', left: 60, right: 60, top: 1400, textAlign: 'center', transform: `scale(${0.85 + 0.15 * s})` }}>
+          <div style={{ position: 'absolute', left: 60, right: 60, top: p.safe ? 1380 : 1400, textAlign: 'center', transform: `scale(${0.85 + 0.15 * s})` }}>
             <span style={{ fontFamily: 'Mont', fontWeight: 900, fontSize: 76, lineHeight: 1.12, textTransform: 'uppercase', WebkitTextStroke: '10px #000', paintOrder: 'stroke fill', textShadow: '0 6px 18px rgba(0,0,0,.55)' }}>
               {chunk.words.map((w, i) => <span key={i} style={{ color: f >= w.s && f < (chunk.words[i + 1]?.s ?? chunk.e) ? BLUE : '#fff' }}>{w.w}{i < chunk.words.length - 1 ? ' ' : ''}</span>)}
               {chunk.emoji && <span style={{ WebkitTextStroke: 0 }}> {chunk.emoji}</span>}
@@ -83,7 +91,7 @@ export const Ugc: React.FC<UgcProps> = (p) => {
       {p.endCard && f >= p.endCard.at && (() => {
         const s = spring({ frame: f - p.endCard.at, fps, config: { damping: 12, stiffness: 200 } });
         return (
-          <div style={{ position: 'absolute', left: 0, right: 0, top: 1600, display: 'flex', justifyContent: 'center' }}>
+          <div style={{ position: 'absolute', left: 0, right: 0, top: p.safe ? 1220 : 1600, display: 'flex', justifyContent: 'center' }}>
             <div style={{ transform: `translateY(${(1 - s) * 80}px)`, opacity: s, background: BLUE, color: '#fff', fontFamily: 'Inter', fontWeight: 850, fontSize: 46, padding: '22px 44px', borderRadius: 60, boxShadow: '0 14px 44px rgba(23,105,255,.55)' }}>{p.endCard.text}</div>
           </div>
         );
