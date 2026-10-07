@@ -2,6 +2,7 @@ import { Composition } from 'remotion';
 import { Reel, ReelProps } from './Reel';
 import { Viral, ViralProps } from './Viral';
 import { Chat, ChatProps } from './Chat';
+import { Ugc, UgcProps } from './Ugc';
 
 const defaults: ReelProps = {
   fps: 30, width: 1080, height: 1920, durationInFrames: 300,
@@ -15,7 +16,19 @@ const viralDefaults: ViralProps = {
 
 const chatDefaults: ChatProps = { durationInFrames: 270, chatName: 'the boys 🌴', messages: [] };
 
+const ugcDefaults: UgcProps = { durationInFrames: 300, video: 'base.mp4', timer: { line1: '', line2: '', seconds: 10 }, chunks: [], pops: [], zooms: [] };
+
 export const RemotionRoot: React.FC = () => (<>
+  <Composition
+    id="Ugc"
+    component={Ugc}
+    defaultProps={ugcDefaults}
+    fps={30}
+    width={1080}
+    height={1920}
+    durationInFrames={300}
+    calculateMetadata={({ props }) => ({ durationInFrames: props.durationInFrames })}
+  />
   <Composition
     id="Chat"
     component={Chat}
