@@ -1,0 +1,199 @@
+{
+  "title": "Disney Believe is coming to Fort Lauderdale",
+  "sources": [
+    "Secret Miami",
+    "Wikipedia Port Everglades",
+    "Wikipedia Disney Cruise Line",
+    "Wikipedia Disney Wish",
+    "WFTV",
+    "BlogMickey.com"
+  ],
+  "collaborators": [],
+  "igCaption": "Disney Cruise Line is bringing Disney Believe to Fort Lauderdale in December 2027.\nPort Everglades handled about 4,773,873 cruise passengers in fiscal year 2025, ranking fourth busiest in the world.\nWould you sail from Fort Lauderdale on this ship?\n\nSources: Secret Miami, Wikipedia Port Everglades, Wikipedia Disney Cruise Line, Wikipedia Disney Wish, WFTV, BlogMickey.com\n\n#FortLauderdale #PortEverglades #DisneyCruiseLine #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Disney’s next cruise ship is set to launch from Fort Lauderdale in December twenty twenty-seven.",
+      "overlay": [
+        "DISNEY SHIP",
+        "FORT LAUDERDALE"
+      ],
+      "emojis": [
+        "🚢",
+        "🏰",
+        "🌊",
+        "📍"
+      ],
+      "location": {
+        "name": "Port Everglades",
+        "lat": 26.086022,
+        "lon": -80.115287,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 145
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The ship is Disney Believe. Disney Cruise Line says it will launch on December eighteenth, twenty twenty-seven, out of Fort Lauderdale. It is part of the Wish class, the same family as Disney Wish, Disney Treasure, and Disney Destiny.",
+      "caption": "The ship is Disney Believe. Disney Cruise Line says it will launch on Dec. 18, 2027, out of Fort Lauderdale. It is part of the Wish class, the same family as Disney Wish, Disney Treasure, and Disney Destiny.",
+      "overlay": "DISNEY BELIEVE",
+      "badge": "DEC 18, 2027",
+      "sub": "Wish-class ship",
+      "emoji": "🚢",
+      "stats": [
+        {
+          "value": "2027",
+          "label": "Launch year"
+        },
+        {
+          "value": "5",
+          "label": "Wish-class ships"
+        }
+      ],
+      "source": "WFTV",
+      "location": {
+        "name": "Port Everglades",
+        "lat": 26.086022,
+        "lon": -80.115287,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -34,
+        "heading": 95,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Port Everglades opened on February twenty-second, nineteen twenty-eight. Crews dredged it from Lake Mabel, and a White House button was supposed to set off the harbor blast. The button malfunctioned. The rock barrier came down shortly after.",
+      "caption": "Port Everglades opened on Feb. 22, 1928. Crews dredged it from Lake Mabel, and a White House button was supposed to set off the harbor blast. The button malfunctioned. The rock barrier came down shortly after.",
+      "overlay": "PORT EVERGLADES",
+      "badge": "OPENED 1928",
+      "sub": "Dredged from Lake Mabel",
+      "emoji": "🧨",
+      "stats": [
+        {
+          "value": "1928",
+          "label": "Opened"
+        },
+        {
+          "value": "85%",
+          "label": "Residents gathered"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "Port Everglades",
+        "lat": 26.086022,
+        "lon": -80.115287,
+        "h": 18
+      },
+      "shot": {
+        "type": "push",
+        "range": 800,
+        "pitch": -30,
+        "heading": 210,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Port Everglades handled 4,773,873 cruise passengers in fiscal year twenty twenty-five. That ranked fourth busiest in the world by passenger volume.",
+      "caption": "Port Everglades handled 4,773,873 cruise passengers in fiscal year 2025. That ranked 4th busiest in the world by passenger volume.",
+      "overlay": "CRUISE PORT",
+      "badge": "4TH WORLDWIDE",
+      "sub": "FY 2025 passengers",
+      "emoji": "🛳️",
+      "stats": [
+        {
+          "value": "4,773,873",
+          "label": "Cruise passengers"
+        },
+        {
+          "value": "4th",
+          "label": "World ranking"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "Port Everglades",
+        "lat": 26.086022,
+        "lon": -80.115287,
+        "h": 22
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1400,
+        "pitch": -36,
+        "heading": 20,
+        "degrees": 90,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Disney announced a secondary homeport facility at Port Everglades in April twenty twenty-two, and it opened in November twenty twenty-three.",
+      "caption": "Disney announced a secondary homeport facility at Port Everglades in Apr. 2022, and it opened in Nov. 2023.",
+      "overlay": "DISNEY TERMINAL",
+      "badge": "OPENED 2023",
+      "sub": "Secondary homeport",
+      "emoji": "🏗️",
+      "stats": [
+        {
+          "value": "2022",
+          "label": "Announced"
+        },
+        {
+          "value": "2023",
+          "label": "Opened"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "Port Everglades",
+        "lat": 26.086022,
+        "lon": -80.115287,
+        "h": 18
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 700,
+        "pitch": -33,
+        "heading": 300,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Would you sail Disney Believe from Fort Lauderdale? You know that person you kept spotting on deck or at the terminal without ever learning their name? That is exactly where NEAR comes in.",
+      "overlay": "WOULD YOU GO? 🚢",
+      "sub": "Comment your pick",
+      "location": {
+        "name": "Port Everglades",
+        "lat": 26.086022,
+        "lon": -80.115287,
+        "h": 25
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1900,
+        "pitch": -32,
+        "heading": 155
+      }
+    }
+  ],
+  "format": "NEW BUILD",
+  "id": "070-disney-believe-is-coming-to-fort-lauderd",
+  "tiktok": true,
+  "music": true
+}
