@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEAR Publisher</title>
+<style>
+  :root { --blue: #1769FF; --ink: #0b0d12; --muted: #6b7280; --line: #e5e7eb; --bg: #f5f7fb; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 16px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--ink); background: var(--bg); }
+  header { background: var(--blue); color: #fff; padding: 18px 20px; font-weight: 800; font-size: 20px; }
+  header small { display: block; font-weight: 500; font-size: 13px; opacity: .85; }
+  main { max-width: 560px; margin: 0 auto; padding: 20px 16px 60px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 16px; padding: 18px; margin-bottom: 16px; }
+  h2 { font-size: 17px; margin: 0 0 12px; }
+  .btn { display: block; width: 100%; border: 0; border-radius: 12px; padding: 14px; font-size: 16px; font-weight: 700; cursor: pointer; }
+  .btn.primary { background: var(--blue); color: #fff; }
+  .btn.dark { background: #000; color: #fff; }
+  .btn:disabled { opacity: .45; cursor: not-allowed; }
+  .muted { color: var(--muted); font-size: 14px; }
+  .who { display: flex; align-items: center; gap: 12px; }
+  .who img { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; background: #ddd; }
+  label.row { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); }
+  select, textarea { width: 100%; font: inherit; padding: 10px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+  textarea { min-height: 110px; }
+  video { width: 100%; max-height: 420px; border-radius: 12px; background: #000; }
+  .list button { display: block; width: 100%; text-align: left; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; font: inherit; cursor: pointer; }
+  .list button.on { border-color: var(--blue); box-shadow: 0 0 0 2px rgba(23,105,255,.2); }
+  .note { font-size: 13px; color: var(--muted); margin-top: 8px; }
+  .ok { color: #0a7a3f; font-weight: 700; }
+  .err { color: #b42318; font-weight: 700; }
+  .hide { display: none; }
+</style>
+</head>
+<body>
+<header>NEAR Publisher<small>Posts NEAR's own South Florida videos to @getnearapp</small></header>
+<main>
+  <div id="offline" class="card hide">
+    <h2>Publisher is starting…</h2>
+    <p class="muted">The publisher backend isn't running right now. It turns on for 40 minutes when started from GitHub (Actions → TikTok → Run workflow). This page refreshes by itself.</p>
+  </div>
+
+  <div id="connect" class="card hide">
+    <h2>1. Connect your TikTok account</h2>
+    <p class="muted">NEAR Publisher only posts NEAR's original videos to the account you connect. You can disconnect anytime in TikTok → Settings → Security → Apps and services.</p>
+    <button class="btn dark" id="loginBtn">Continue with TikTok</button>
+  </div>
+
+  <div id="app" class="hide">
+    <div class="card">
+      <h2>Posting to</h2>
+      <div class="who"><img id="avatar" alt=""><div><b id="nick"></b><div class="muted" id="user"></div></div></div>
+    </div>
+
+    <div class="card">
+      <h2>2. Choose a video</h2>
+      <div class="list" id="list"></div>
+      <video id="preview" controls playsinline class="hide"></video>
+    </div>
+
+    <div class="card" id="settings">
+      <h2>3. Post settings</h2>
+      <p class="muted" style="margin-top:0">Title</p>
+      <textarea id="title" maxlength="2200"></textarea>
+      <p class="muted">Who can view this video</p>
+      <select id="privacy"><option value="" disabled selected>Select privacy</option></select>
+      <label class="row"><span>Allow comments</span><input type="checkbox" id="comment"></label>
+      <label class="row"><span>Allow Duet</span><input type="checkbox" id="duet"></label>
+      <label class="row"><span>Allow Stitch</span><input type="checkbox" id="stitch"></label>
+      <label class="row"><span>Disclose video content<br><span class="muted">Turn on if this promotes yourself, a brand, product or service</span></span><input type="checkbox" id="disclose"></label>
+      <div id="discloseOpts" class="hide">
+        <label class="row"><span>Your brand<br><span class="muted">Labeled as "Promotional content"</span></span><input type="checkbox" id="yourBrand"></label>
+        <label class="row"><span>Branded content<br><span class="muted">Labeled as "Paid partnership"</span></span><input type="checkbox" id="branded"></label>
+      </div>
+      <p class="note" id="consent">By posting, you agree to TikTok's <a href="https://www.tiktok.com/legal/page/global/music-usage-confirmation/en" target="_blank">Music Usage Confirmation</a>.</p>
+      <button class="btn primary" id="postBtn" disabled>Post to TikTok</button>
+      <p id="result" class="note"></p>
+    </div>
+  </div>
+</main>
+<script>
+const CLIENT_KEY = 'awhdos58u7xprlv6';
+const REDIRECT = 'https://lolerman123456.github.io/miami-reels/tiktok/';
+const $ = id => document.getElementById(id);
+let API = null, creator = null, chosen = null;
+
+async function backend() {
+  try {
+    const r = await fetch('https://api.github.com/repos/lolerman123456/miami-reels/contents/state/tiktok-server.json?ref=main', { cache: 'no-store' });
+    const j = JSON.parse(atob((await r.json()).content));
+    return j.until > Date.now() ? j.url : null;
+  } catch { return null; }
+}
+const get = p => fetch(API + p).then(r => r.json());
+const post = (p, b) => fetch(API + p, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(b) }).then(r => r.json());
+
+$('loginBtn').onclick = () => {
+  const state = Math.random().toString(36).slice(2);
+  sessionStorage.setItem('tt_state', state);
+  location.href = 'https://www.tiktok.com/v2/auth/authorize/?' + new URLSearchParams({
+    client_key: CLIENT_KEY, response_type: 'code', scope: 'user.info.basic,video.upload', redirect_uri: REDIRECT, state,
+  });
+};
+
+async function loadApp() {
+  creator = await get('/creator');
+  if (creator.error) { $('connect').classList.remove('hide'); return; }
+  $('connect').classList.add('hide'); $('app').classList.remove('hide');
+  $('avatar').src = creator.creator_avatar_url || ''; $('nick').textContent = creator.creator_nickname || '';
+  $('user').textContent = '@' + (creator.creator_username || '');
+  for (const p of creator.privacy_level_options || []) {
+    const o = document.createElement('option'); o.value = p;
+    o.textContent = { PUBLIC_TO_EVERYONE: 'Everyone', MUTUAL_FOLLOW_FRIENDS: 'Friends', FOLLOWER_OF_CREATOR: 'Followers', SELF_ONLY: 'Only me' }[p] || p;
+    $('privacy').appendChild(o);
+  }
+  if (creator.comment_disabled) $('comment').disabled = true;
+  if (creator.duet_disabled) $('duet').disabled = true;
+  if (creator.stitch_disabled) $('stitch').disabled = true;
+  const vids = await get('/videos');
+  $('list').innerHTML = '';
+  for (const v of vids) {
+    const b = document.createElement('button'); b.textContent = v.title;
+    b.onclick = () => {
+      document.querySelectorAll('.list button').forEach(x => x.classList.remove('on')); b.classList.add('on');
+      chosen = v; $('preview').src = API + '/video/' + encodeURIComponent(v.id); $('preview').classList.remove('hide');
+      $('title').value = (v.caption || v.title).slice(0, 2200); check();
+    };
+    $('list').appendChild(b);
+  }
+}
+function check() {
+  const d = $('disclose').checked;
+  $('discloseOpts').classList.toggle('hide', !d);
+  const branded = d && $('branded').checked;
+  if (branded && $('privacy').value === 'SELF_ONLY') $('privacy').value = '';
+  [...$('privacy').options].forEach(o => { if (o.value === 'SELF_ONLY') o.disabled = branded; });
+  $('consent').innerHTML = 'By posting, you agree to TikTok\'s ' + (branded ? '<a href="https://www.tiktok.com/legal/page/global/bc-policy/en" target="_blank">Branded Content Policy</a> and ' : '') +
+    '<a href="https://www.tiktok.com/legal/page/global/music-usage-confirmation/en" target="_blank">Music Usage Confirmation</a>.';
+  $('postBtn').disabled = !(chosen && $('privacy').value && (!d || $('yourBrand').checked || $('branded').checked));
+}
+['privacy', 'disclose', 'yourBrand', 'branded'].forEach(id => $(id).addEventListener('change', check));
+
+$('postBtn').onclick = async () => {
+  $('postBtn').disabled = true; $('result').className = 'note'; $('result').textContent = 'Uploading to TikTok…';
+  const r = await post('/publish', { id: chosen.id, title: $('title').value, privacy: $('privacy').value, comment: $('comment').checked, duet: $('duet').checked, stitch: $('stitch').checked, yourBrand: $('disclose').checked && $('yourBrand').checked, branded: $('disclose').checked && $('branded').checked });
+  if (r.error) { $('result').className = 'note err'; $('result').textContent = r.error; $('postBtn').disabled = false; return; }
+  $('result').textContent = 'Posted. TikTok is processing it; it can take a few minutes to show on your profile.';
+  for (let i = 0; i < 20; i++) {
+    await new Promise(z => setTimeout(z, 5000));
+    const s = await get('/status?id=' + encodeURIComponent(r.publish_id));
+    if (s.status === 'PUBLISH_COMPLETE') { $('result').className = 'note ok'; $('result').textContent = '✔ Live on TikTok.'; break; }
+    if (s.status === 'FAILED') { $('result').className = 'note err'; $('result').textContent = 'TikTok could not publish it: ' + (s.fail_reason || ''); break; }
+  }
+};
+
+(async function start() {
+  API = await backend();
+  if (!API) { $('offline').classList.remove('hide'); setTimeout(start, 15000); return; }
+  $('offline').classList.add('hide');
+  const q = new URLSearchParams(location.search);
+  if (q.get('code')) {
+    $('connect').classList.remove('hide'); $('loginBtn').disabled = true; $('loginBtn').textContent = 'Connecting…';
+    const r = await post('/exchange', { code: q.get('code') });
+    history.replaceState(null, '', REDIRECT);
+    if (r.error) { $('loginBtn').disabled = false; $('loginBtn').textContent = 'Continue with TikTok'; alert('Could not connect: ' + r.error); return; }
+  }
+  loadApp();
+})();
+</script>
+</body>
+</html>
