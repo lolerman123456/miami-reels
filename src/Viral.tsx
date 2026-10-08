@@ -1,6 +1,7 @@
 // Viral clip Reel (owner, Oct 3): "only in dade meets kalshi" — a real viral video with light, clean, news-style edits:
-//   intro: black card, a WARNING card fades in/out (sensitive footage only), then the story card fades in
-//          (headline + 2–3 lines, "pause to read") — no typing, no game sounds (owner: only the video's own audio)
+//   cold open (owner, Oct 8: the black intro card got skipped): frame 1 is the footage — 2 s of the most shocking moment with
+//          the hook big on top at full opacity (news-page style), then a quick flash and the cut plays from its start
+//          (older props with intro.context still render the black story card)
 //   video: plays; near the start it freezes ~3 s while numbered markers point at who is who, and a bottom strip of stills
 //          cropped from the footage (① SUSPECT, ② WHITE SUV…) appears and stays for the rest of the video
 //   situation box on top, short captions above the strip, credit + @getnearapp at the bottom
@@ -16,7 +17,7 @@ export type ViralProps = {
   durationInFrames: number;
   video: string; videoW: number; videoH: number; clipFrames: number;
   fill?: boolean; focusX?: number; // full 9:16 when the action fits a vertical crop (focusX = where to center it)
-  intro: { frames: number; warning: boolean; title: string; sub?: string; context?: string };
+  intro: { frames: number; warning: boolean; title: string; sub?: string; context?: string; teaseFrom?: number };
   banner: string;
   captions: { at: number; text: string; until?: number }[]; // at/until = frames in the clip
   freeze: { at: number; hold: number; labels: ViralLabel[] } | null;
@@ -99,6 +100,39 @@ const Intro: React.FC<{ p: ViralProps }> = ({ p }) => {
   );
 };
 
+// cold open: the peak moment plays under the hook, no fade-in (text readable on frame 1)
+const ColdOpen: React.FC<{ p: ViralProps }> = ({ p }) => {
+  const f = useCurrentFrame();
+  return (
+    <AbsoluteFill>
+      <VideoLayer p={p} startFrom={p.intro.teaseFrom || 0} />
+      <AbsoluteFill style={{ background: '#fff', opacity: interpolate(f, [p.intro.frames - 4, p.intro.frames], [0, 0.85], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }) }} />
+    </AbsoluteFill>
+  );
+};
+
+// the hook: big white-on-blue headline at the top (below Instagram's top bar), on screen from frame 1
+const Hook: React.FC<{ text: string; outAt: number }> = ({ text, outAt }) => {
+  const f = useCurrentFrame();
+  const words = text.length;
+  return (
+    <div style={{ position: 'absolute', top: 230, left: 44, right: 44, display: 'flex', justifyContent: 'center',
+      opacity: interpolate(f, [outAt - 6, outAt], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }) }}>
+      <div style={{ background: BLUE, color: '#fff', fontFamily: HEAD, fontWeight: 700, fontSize: words > 30 ? 74 : 88, lineHeight: 1.05,
+        textTransform: 'uppercase', textAlign: 'center', padding: '20px 30px', borderRadius: 18, boxShadow: '0 16px 44px rgba(0,0,0,.55)' }}>{text}</div>
+    </div>
+  );
+};
+
+const Rewind: React.FC = () => {
+  const f = useCurrentFrame();
+  return (
+    <div style={{ position: 'absolute', top: 640, left: 0, right: 0, textAlign: 'center', opacity: interpolate(f, [0, 3, 30, 36], [0, 1, 1, 0], { extrapolateRight: 'clamp' }) }}>
+      <span style={{ background: 'rgba(0,0,0,.75)', color: '#fff', fontFamily: HEAD, fontWeight: 600, fontSize: 44, padding: '10px 26px', borderRadius: 12, letterSpacing: 2 }}>⏪ HOW IT STARTED</span>
+    </div>
+  );
+};
+
 const Banner: React.FC<{ text: string }> = ({ text }) => {
   const f = useCurrentFrame();
   return (
@@ -178,6 +212,8 @@ export const Viral: React.FC<ViralProps> = (p) => {
   const caps = [...p.captions].sort((a, b) => a.at - b.at);
   const at = (cf: number) => I + cf + (F !== null && cf >= F ? Hd : 0); // clip frame → composition frame
   const legendBottom = 560, captionBottom = 420;
+  const cold = p.intro.teaseFrom != null && !p.intro.context; // Oct 8+: cold open; older props keep the black card
+  const HOOK_END = I + 90; // the hook stays ~3 s into the cut, then the situation box takes over
   return (
     <AbsoluteFill style={{ background: '#000' }}>
       {(F ?? p.clipFrames) > 0 && <Sequence from={I} durationInFrames={F ?? p.clipFrames}><VideoLayer p={p} /></Sequence>}
@@ -187,8 +223,17 @@ export const Viral: React.FC<ViralProps> = (p) => {
         <Sequence from={I + F} durationInFrames={Hd}><Markers p={p} /></Sequence>
         <Sequence from={I + F} durationInFrames={Hd}><Legend p={p} bottom={legendBottom} /></Sequence>
       </>}
-      <Sequence durationInFrames={I}><Intro p={p} /></Sequence>
-      <Sequence from={I}><Banner text={p.banner} /></Sequence>
+      {cold
+        ? <>
+          <Sequence durationInFrames={I}><ColdOpen p={p} /></Sequence>
+          <Sequence durationInFrames={HOOK_END}><Hook text={p.intro.title} outAt={HOOK_END} /></Sequence>
+          <Sequence from={I} durationInFrames={36}><Rewind /></Sequence>
+          <Sequence from={HOOK_END}><Banner text={p.banner} /></Sequence>
+        </>
+        : <>
+          <Sequence durationInFrames={I}><Intro p={p} /></Sequence>
+          <Sequence from={I}><Banner text={p.banner} /></Sequence>
+        </>}
       {caps.map((c, i) => {
         const from = at(c.at), to = c.until != null ? at(c.until) : i + 1 < caps.length ? at(caps[i + 1].at) : p.durationInFrames;
         return to > from ? <Sequence key={i} from={from} durationInFrames={to - from}><Caption text={c.text} bottom={captionBottom} /></Sequence> : null;

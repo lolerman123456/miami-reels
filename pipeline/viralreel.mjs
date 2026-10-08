@@ -1,6 +1,6 @@
 // Viral clip Reel (owner, Oct 3): a real viral video (dashcam / bodycam / surveillance / phone footage — mainstream,
-// nationwide or worldwide is fine) with clean edits: blurred intro + typed hook (+ "viewer discretion is advised" when
-// sensitive), a situation box on top, short captions saying what is happening, one freeze-frame with labels pointing at
+// nationwide or worldwide is fine) with clean edits: a 2 s cold open of the peak moment with the hook on top (owner, Oct 8:
+// no black intro card — it was skipped), then the cut from the start, a situation box on top, short captions saying what is happening, one freeze-frame with labels pointing at
 // who is who, credit + @getnearapp. No music (posts as a normal Reel). Rendered by src/Viral.tsx.
 //   node pipeline/viralreel.mjs [--url <youtube url>] [--dry-run]
 import fs from 'node:fs';
@@ -187,13 +187,17 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
       if (labels.length) freeze = { at: Math.round((c.freeze - start) * FPS), hold: 54, labels };
       console.log(`  freeze @${c.freeze}s: ${labels.map(l => l.text).join(', ') || '(no labels)'}`);
     }
-    // black intro (owner, Oct 3): WARNING card fades in/out (sensitive only), then the story card (headline + context) ~4 s
-    const intro = c.context ? 135 : 90; // owner, Oct 4 (final): hook + short story card with "pause to read", 4.5 s (3 s without a story)
+    // owner, Oct 8 ("the viral news videos get skipped a lot"): no black title card any more — like news pages, frame 1 is
+    // the footage: a 2 s cold open of the most shocking moment with the hook on top, then it rewinds to the start of the cut
+    const TEASE = 60;
+    const peak = Number.isFinite(+c.peak) && +c.peak > start && +c.peak < end ? +c.peak : (c.freeze != null ? +c.freeze + 2 : start + (end - start) * 0.4);
+    const teaseFrom = Math.max(0, Math.min(clipFrames - TEASE - 1, Math.round((peak - start - 1) * FPS)));
+    const intro = clipFrames > TEASE * 4 ? TEASE : 0;
     const props = {
       durationInFrames: intro + clipFrames + (freeze ? freeze.hold : 0), video: 'clip.mp4', videoW: vw, videoH: vh, clipFrames,
       // vertical footage always fills the screen (owner, Oct 4: no blurred top/bottom)
       fill: vw / vh <= 0.8 || (!!c.fill && vw / vh <= 1.3), focusX: Number.isFinite(+c.focusX) ? Math.min(1, Math.max(0, +c.focusX)) : 0.5,
-      intro: { frames: intro, warning: false, title: c.hook || v.title, sub: c.sub || '', context: String(c.context || '').slice(0, 200) },
+      intro: { frames: intro, warning: false, title: c.hook || v.title, teaseFrom },
       banner: c.banner || '', freeze, credit: `Video: ${v.agency}`,
       captions: await clearCaptions(clip, dir, (c.captions || []).filter(x => x.t >= start && x.t < end).map(x => ({ at: Math.round((x.t - start) * FPS), text: String(x.text) })), clipFrames),
     };
