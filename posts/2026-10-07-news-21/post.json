@@ -1,0 +1,80 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "NORTH BAY VILLAGE",
+    "main": "COP IS BEHIND BARS",
+    "highlight": "ALLEGEDLY",
+    "bottom": "AFTER POLICE SAY SHE BIT AND SCRATCHED HER BOYFRIEND IN HIALEAH",
+    "blur": false,
+    "photo": {
+      "query": "North Bay Village police cruiser or police station at night Miami-Dade",
+      "prompt": "dramatic nighttime photo of a marked North Bay Village police cruiser or police station, flashing lights, no people visible",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚔",
+      "⚖️",
+      "📍"
+    ],
+    "logos": [
+      "nbvillage.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: CBS News",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "North Bay Village officer accused of biting boyfriend",
+      "highlight": "biting boyfriend",
+      "body": "Authorities said Marcia Sangronis, 38, bit and scratched her boyfriend in Hialeah.",
+      "place": "Hialeah",
+      "source": "Facebook",
+      "photo": {
+        "query": "Hialeah police lights on residential street at night",
+        "prompt": "close-up of police lights reflecting on a wet Hialeah street at night, no people visible"
+      },
+      "emoji": "🚨",
+      "chip": "AGE 38",
+      "logo": "nbvillage.com",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: NBC 6 South Florida",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Sangronis was arrested Tuesday",
+      "highlight": "arrested Tuesday",
+      "body": "Authorities said the North Bay Village police officer was arrested Tuesday in Miami-Dade.",
+      "place": "Miami-Dade",
+      "source": "Facebook",
+      "photo": {
+        "query": "Miami-Dade jail exterior at night with police vehicles",
+        "prompt": "wide nighttime photo of a Miami-Dade jail exterior with police vehicles and blue lights, no people visible"
+      },
+      "emoji": "📅",
+      "chip": "TUESDAY",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Telemundo 51"
+    }
+  ],
+  "caption": "North Bay Village police officer Marcia Sangronis was arrested after police said she bit and scratched her boyfriend in Hialeah.\nThe case is drawing attention because the accused is a police officer in South Florida.",
+  "hashtags": [
+    "#NorthBayVillage",
+    "#Hialeah"
+  ],
+  "collaborators": [],
+  "igCaption": "North Bay Village police officer Marcia Sangronis was arrested after police said she bit and scratched her boyfriend in Hialeah.\nThe case is drawing attention because the accused is a police officer in South Florida.\n\n📰 Sources: Facebook, CBS News, NBC 6 South Florida\n\n🎥 Video: WPLG Local 10\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#NorthBayVillage #Hialeah #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-07",
+  "id": "2026-10-07-news-21",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "WPLG Local 10",
+    "url": "https://www.youtube.com/watch?v=DyWyVd36C50"
+  }
+}
