@@ -140,6 +140,15 @@ function git(add, msg) {
 if (import.meta.url === `file://${process.argv[1]}`) {
   const [cmd, ...a] = process.argv.slice(2);
   if (cmd === 'server') await server();
-  else if (cmd === 'draft') { const id = await uploadVideo(a[0], { mode: 'draft' }); console.log('✔ sent to TikTok drafts:', id); if (fs.existsSync(TOKEN_FILE)) commitToken(); }
+  else if (cmd === 'draft') {
+    const id = await uploadVideo(a[0], { mode: 'draft' }); console.log('✔ sent to TikTok drafts:', id);
+    for (let i = 0; i < 12; i++) { // the inbox upload is processed async: SEND_TO_USER_INBOX = it's in the app's inbox notifications
+      await new Promise(r => setTimeout(r, 10e3));
+      const s = await publishStatus(id).catch(e => ({ status: 'error: ' + e.message }));
+      console.log('  status:', JSON.stringify(s));
+      if (/SEND_TO_USER_INBOX|PUBLISH_COMPLETE|FAILED|error/.test(s.status || '')) break;
+    }
+    if (fs.existsSync(TOKEN_FILE)) commitToken();
+  }
   else { console.error('Usage: tiktok.mjs server | draft <mp4>'); process.exit(1); }
 }
