@@ -39,8 +39,17 @@ jobs:
             gh release download videos -p "$a" -D out/tiktok --clobber
           done
           ls out/tiktok
-      - name: NEAR Publisher (40 min)
+      - name: NEAR Publisher (40 min) — or send one video to the TikTok drafts
         env:
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           CLOUDFLARED_BIN: /usr/local/bin/cloudflared
-        run: node pipeline/tiktok.mjs server
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # requests/tiktok.json {"draft": "<video id in the videos release>"} → upload that one Reel to the TikTok inbox (drafts) and stop
+          DRAFT=$(jq -r '.draft // empty' requests/tiktok.json 2>/dev/null || true)
+          if [ "${{ github.event_name }}" = push ] && [ -n "$DRAFT" ]; then
+            [ -f "out/tiktok/$DRAFT.mp4" ] || gh release download videos -p "$DRAFT.mp4" -D out/tiktok --clobber
+            node pipeline/tiktok.mjs draft "out/tiktok/$DRAFT.mp4"
+          else
+            node pipeline/tiktok.mjs server
+          fi

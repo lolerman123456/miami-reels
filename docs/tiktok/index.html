@@ -104,6 +104,10 @@ $('loginBtn').onclick = () => {
 
 async function loadApp() {
   creator = await get('/creator');
+  if (creator.error && /scope_not_authorized/.test(creator.error)) { // drafts-only connection (video.upload): nothing else to do here
+    $('connect').classList.remove('hide'); $('loginBtn').disabled = true;
+    $('loginBtn').textContent = '✔ Connected — new Reels go to your TikTok drafts'; return;
+  }
   if (creator.error) { $('connect').classList.remove('hide'); return; }
   $('connect').classList.add('hide'); $('app').classList.remove('hide');
   $('avatar').src = creator.creator_avatar_url || ''; $('nick').textContent = creator.creator_nickname || '';
