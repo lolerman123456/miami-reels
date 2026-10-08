@@ -27,7 +27,7 @@ jobs:
       - name: Tools
         run: |
           for i in 1 2 3; do timeout 180 sudo apt-get update -qq && break; done || true
-          timeout 600 sudo apt-get install -y -qq ffmpeg fonts-noto-color-emoji > /dev/null
+          timeout 300 sudo apt-get install -y -qq fonts-noto-color-emoji > /dev/null || true; bash scripts/ffmpeg.sh
           sudo curl -sSL -o /usr/local/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
           sudo chmod +x /usr/local/bin/cloudflared
           pip install -q -U "yt-dlp[default]"

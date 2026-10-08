@@ -137,7 +137,7 @@ jobs:
       - name: System packages
         run: |
           for i in 1 2 3; do timeout 180 sudo apt-get update -qq && break; done || true
-          timeout 600 sudo apt-get install -y -qq ffmpeg > /dev/null
+          bash scripts/ffmpeg.sh
           sudo curl -sSL -o /usr/local/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
           sudo chmod +x /usr/local/bin/cloudflared
 
@@ -259,7 +259,7 @@ jobs:
           path: node_modules/.remotion
           key: remotion-browser-${{ hashFiles('package-lock.json') }}
       - name: ffmpeg
-        run: command -v ffmpeg >/dev/null || { for i in 1 2 3; do timeout 180 sudo apt-get update -qq && break; done || true && timeout 600 sudo apt-get install -y -qq ffmpeg > /dev/null; }
+        run: bash scripts/ffmpeg.sh
       - uses: actions/download-artifact@v4
         with:
           name: episode
@@ -296,7 +296,7 @@ jobs:
 
       - name: System packages
         run: |
-          command -v ffmpeg >/dev/null || { for i in 1 2 3; do timeout 180 sudo apt-get update -qq && break; done || true && timeout 600 sudo apt-get install -y -qq ffmpeg > /dev/null; }
+          bash scripts/ffmpeg.sh
           sudo curl -sSL -o /usr/local/bin/cloudflared https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
           sudo chmod +x /usr/local/bin/cloudflared
 

@@ -100,7 +100,7 @@ jobs:
       - name: Video tools (clip slots; agency video inside news carousels)
         if: contains(fromJSON('["clip","viral","news","brief","shareslop"]'), needs.gate.outputs.kind)
         run: |
-          timeout 600 sudo apt-get install -y -qq ffmpeg > /dev/null
+          bash scripts/ffmpeg.sh
           pip install -q -U "yt-dlp[default]"
           curl -fsSL https://deno.land/install.sh | sh -s -- -y > /dev/null 2>&1 || true
           echo "$HOME/.deno/bin" >> "$GITHUB_PATH"
