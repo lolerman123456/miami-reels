@@ -9,7 +9,7 @@ import crypto from 'node:crypto';
 import { spawn, execSync } from 'node:child_process';
 import { ROOT } from './util.mjs';
 
-export const CLIENT_KEY = process.env.TIKTOK_CLIENT_KEY || 'awhdos58u7xprlv6'; // public identifier, not a secret
+export const CLIENT_KEY = process.env.TIKTOK_CLIENT_KEY || 'sbawp0oa8vn1ux5ht8'; // public identifier, not a secret
 export const REDIRECT = 'https://lolerman123456.github.io/miami-reels/tiktok/';
 const API = 'https://open.tiktokapis.com/v2';
 const TOKEN_FILE = path.join(ROOT, 'state', 'tiktok-token.enc');
