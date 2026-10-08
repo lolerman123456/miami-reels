@@ -1,0 +1,199 @@
+{
+  "title": "Cheap South Florida Plans This Weekend",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "This weekend has a first-ever Indigenous film festival, museum shows, gallery stops, and Knaus Berry Farm reopening right after.\nPAMM adult tickets are $18, and Knaus is setting a four-dozen cinnamon roll limit when it opens Tuesday.\nWhich one would you actually go to?\n\nSources: Miami New Times, Secret Miami\n\n#SouthFlorida #WeekendGuide #ThingsToDo #FloridaEvents",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "South Florida has a cheap plan this weekend, with film, art, and a berry farm stop.",
+      "overlay": [
+        "CHEAP PLANS",
+        "THIS WEEKEND"
+      ],
+      "emojis": [
+        "🎬",
+        "🎨",
+        "🍓",
+        "🚶"
+      ],
+      "location": {
+        "name": "Bill Cosford Cinema",
+        "lat": 25.7193,
+        "lon": -80.2776,
+        "h": 25
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start at Bill Cosford Cinema from Friday, October ninth through Monday, October twelfth. The first Miccosukee Indigenous Film Festival has twenty-two entries, all made under criteria tied to Indigenous writers, directors, producers, lead actors, or cultures.",
+      "caption": "Start at Bill Cosford Cinema from Friday, Oct. 9 through Monday, Oct. 12. The first Miccosukee Indigenous Film Festival has 22 entries, all made under criteria tied to Indigenous writers, directors, producers, lead actors, or cultures.",
+      "overlay": "COSFORD CINEMA",
+      "badge": "22 FILMS",
+      "sub": "Oct. 9 to Oct. 12",
+      "emoji": "🎬",
+      "stats": [
+        {
+          "value": "22",
+          "label": "film entries"
+        },
+        {
+          "value": "4 DAYS",
+          "label": "festival run"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Bill Cosford Cinema",
+        "lat": 25.7193,
+        "lon": -80.2776,
+        "h": 25
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 700,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For an art stop, Pérez Art Museum has two new shows that opened October first. Adult tickets cost eighteen dollars. Anina Major built a walkable environment with woven clay sculptures, and Zoë Buckman’s video work uses poetry around domestic violence.",
+      "caption": "For an art stop, Pérez Art Museum has two new shows that opened Oct. 1. Adult tickets cost $18. Anina Major built a walkable environment with woven clay sculptures, and Zoë Buckman’s video work uses poetry around domestic violence.",
+      "overlay": "PAMM",
+      "badge": "$18 ENTRY",
+      "sub": "Two new shows",
+      "emoji": "🎨",
+      "stats": [
+        {
+          "value": "$18",
+          "label": "adult ticket"
+        },
+        {
+          "value": "OCT. 1",
+          "label": "shows opened"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Pérez Art Museum Miami",
+        "lat": 25.7861,
+        "lon": -80.1864,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -34,
+        "heading": 90,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Allapattah gives you two gallery stops close together. Voloshyn Gallery runs Maria Sulymenko’s watercolor and gouache show through October seventeenth at eight-oh-two Northwest Twenty-second Street. Spinello Projects runs Gabriel Pozzo’s solo show through October thirty-first on Northwest Seventh Avenue. If you hit both galleries, check NEAR to see who else was there.",
+      "caption": "Allapattah gives you two gallery stops close together. Voloshyn Gallery runs Maria Sulymenko’s watercolor and gouache show through Oct. 17 at 802 NW 22nd St. Spinello Projects runs Gabriel Pozzo’s solo show through Oct. 31 on NW 7th Ave. If you hit both galleries, check NEAR to see who else was there.",
+      "overlay": "ALLAPATTAH",
+      "badge": "2 GALLERIES",
+      "sub": "Voloshyn and Spinello",
+      "emoji": "🖼️",
+      "stats": [
+        {
+          "value": "OCT. 17",
+          "label": "Sulymenko ends"
+        },
+        {
+          "value": "OCT. 31",
+          "label": "Pozzo ends"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Voloshyn Gallery",
+        "lat": 25.7971,
+        "lon": -80.2099,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -30,
+        "heading": 35,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Then save Tuesday for Knaus Berry Farm in the Redland. It reopens October thirteenth, two weeks early, and marks seventy years in business. Walk-up cinnamon roll orders now cap at four dozen per person, which still asks a lot of one car.",
+      "caption": "Then save Tuesday for Knaus Berry Farm in the Redland. It reopens Oct. 13, two weeks early, and marks 70 years in business. Walk-up cinnamon roll orders now cap at 4 dozen per person, which still asks a lot of one car.",
+      "overlay": "KNAUS BERRY",
+      "badge": "OPENS OCT 13",
+      "sub": "Four-dozen limit",
+      "emoji": "🍓",
+      "stats": [
+        {
+          "value": "70 YEARS",
+          "label": "in business"
+        },
+        {
+          "value": "4 DOZEN",
+          "label": "walk-up limit"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Knaus Berry Farm",
+        "lat": 25.5359,
+        "lon": -80.4575,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -28,
+        "heading": 250,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would get you out of the house this weekend? That same feeling of passing people at a beach or market and never knowing who they were is exactly where NEAR comes in.",
+      "overlay": "WHAT'S YOUR PICK? 👇",
+      "sub": "Cheap plans nearby",
+      "location": {
+        "name": "Knaus Berry Farm",
+        "lat": 25.5359,
+        "lon": -80.4575,
+        "h": 12
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -30,
+        "heading": 305
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "069-cheap-south-florida-plans-this-weekend"
+}
