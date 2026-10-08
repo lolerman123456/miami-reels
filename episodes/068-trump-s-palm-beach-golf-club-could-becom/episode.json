@@ -1,0 +1,223 @@
+{
+  "title": "Trump’s Palm Beach Golf Club Could Become a Presidential Retreat",
+  "sources": [
+    "NBC News",
+    "Miami Herald",
+    "Reuters",
+    "Washington Post",
+    "Wikipedia: Trump International Golf Club (West Palm Beach)",
+    "Wikipedia: Mar-a-Lago",
+    "Wikipedia: Donald Trump"
+  ],
+  "collaborators": [],
+  "igCaption": "Trump wants to turn his Palm Beach County golf club into a permanent presidential retreat.\nThe private club opened in 1999, has 27 holes, and was his first golf course property.\nWould you want official presidential business happening at a private golf club?\n\nSources: NBC News, Miami Herald, Reuters, Washington Post, Wikipedia: Trump International Golf Club (West Palm Beach), Wikipedia: Mar-a-Lago, Wikipedia: Donald Trump\n\n#PalmBeach #FloridaPolitics #Trump #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Trump wants to turn his Palm Beach County golf club into a permanent presidential retreat.",
+      "overlay": [
+        "NEW CAMP",
+        "DAVID?"
+      ],
+      "emojis": [
+        "⛳",
+        "🏛️",
+        "🇺🇸",
+        "📍"
+      ],
+      "location": {
+        "name": "Trump International Golf Club",
+        "lat": 26.66611111,
+        "lon": -80.09833333,
+        "h": 70
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 210
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The plan centers on Trump International Golf Club in Palm Beach County. Trump wants to make the course an official presidential retreat.",
+      "caption": "The plan centers on Trump International Golf Club in Palm Beach County. Trump wants to make the course an official presidential retreat.",
+      "overlay": "TRUMP GOLF",
+      "badge": "RETREAT PLAN",
+      "sub": "Palm Beach County course",
+      "emoji": "🏛️",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "report year"
+        }
+      ],
+      "source": "NBC News",
+      "location": {
+        "name": "Trump International Golf Club",
+        "lat": 26.66611111,
+        "lon": -80.09833333,
+        "h": 70
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -34,
+        "heading": 145,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The club opened in 1999. Jim Fazio designed it with a budget of over $40 million. It was Donald Trump’s first golf course property.",
+      "caption": "The club opened in 1999. Jim Fazio designed it with a budget of over $40 million. It was Donald Trump’s first golf course property.",
+      "overlay": "FIRST COURSE",
+      "badge": "OPENED 1999",
+      "sub": "Designed by Jim Fazio",
+      "emoji": "⛳",
+      "stats": [
+        {
+          "value": "1999",
+          "label": "opened"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "Trump International Golf Club",
+        "lat": 26.66611111,
+        "lon": -80.09833333,
+        "h": 70
+      },
+      "shot": {
+        "type": "push",
+        "range": 750,
+        "pitch": -30,
+        "heading": 40
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The property has 27 holes. The Championship course measures 7,326 yards with a par 72 layout, and it has hosted LPGA championships. There is also a nine-hole course and a three-tiered driving range.",
+      "caption": "The property has 27 holes. The Championship course measures 7,326 yards with a par 72 layout, and it has hosted LPGA championships. There is also a nine-hole course and a three-tiered driving range.",
+      "overlay": "THE COURSE",
+      "badge": "27 HOLES",
+      "sub": "Championship layout",
+      "emoji": "🏌️",
+      "stats": [
+        {
+          "value": "27",
+          "label": "holes"
+        },
+        {
+          "value": "7,326",
+          "label": "yards"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "Trump International Golf Club",
+        "lat": 26.66611111,
+        "lon": -80.09833333,
+        "h": 70
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 650,
+        "pitch": -28,
+        "heading": 300
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Mar-a-Lago is nearby. The estate has 126 rooms on 17 acres. Marjorie Merriweather Post built it between 1924 and 1927, then willed it for use as a Winter White House.",
+      "caption": "Mar-a-Lago is nearby. The estate has 126 rooms on 17 acres. Marjorie Merriweather Post built it between 1924 and 1927, then willed it for use as a Winter White House.",
+      "overlay": "MAR-A-LAGO",
+      "badge": "126 ROOMS",
+      "sub": "Original Winter White House",
+      "emoji": "🏠",
+      "stats": [
+        {
+          "value": "126",
+          "label": "rooms"
+        },
+        {
+          "value": "17",
+          "label": "acres"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "Mar-a-Lago",
+        "lat": 26.67694444,
+        "lon": -80.03694444,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 95,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Security is already part of the story. On September 15, 2024, an assassination attempt happened at the club while Trump was golfing. No injuries were reported. Ryan Wesley Routh was convicted in September 2025 and sentenced to life in prison in February 2026.",
+      "caption": "Security is already part of the story. On September 15, 2024, an assassination attempt happened at the club while Trump was golfing. No injuries were reported. Ryan Wesley Routh was convicted in September 2025 and sentenced to life in prison in February 2026.",
+      "overlay": "SECURITY",
+      "badge": "2024 ATTEMPT",
+      "sub": "No injuries reported",
+      "emoji": "🚨",
+      "stats": [
+        {
+          "value": "2024",
+          "label": "attempt"
+        },
+        {
+          "value": "2026",
+          "label": "sentenced"
+        }
+      ],
+      "source": "Wikipedia",
+      "hit": "crash",
+      "location": {
+        "name": "Trump International Golf Club",
+        "lat": 26.66611111,
+        "lon": -80.09833333,
+        "h": 70
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -35,
+        "heading": 225,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Should a private golf club become an official presidential retreat? In South Florida, you can spend a whole day near someone and never know who they were, which is exactly the gap NEAR fills.",
+      "overlay": "YOUR TAKE? ⛳",
+      "sub": "Tell us in the comments",
+      "location": {
+        "name": "Trump International Golf Club",
+        "lat": 26.66611111,
+        "lon": -80.09833333,
+        "h": 70
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -34,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "NEW BUILD",
+  "id": "068-trump-s-palm-beach-golf-club-could-becom",
+  "tiktok": true,
+  "music": true
+}
