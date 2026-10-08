@@ -99,6 +99,7 @@ export async function postToTikTok({ video, images, text = '', label, ai = false
   // owner, Oct 6: map Reels go straight to the TikTok drafts/inbox (Content Posting API, NEAR Publisher app) — the owner opens
   // TikTok, adds a trending sound and posts. Needs the one-time connect (state/tiktok-token.enc); else / on failure → Buffer.
   if (video && control.tiktokDrafts !== false && await sendToTikTokDrafts(video, label)) return;
+  if (images && control.tiktokDrafts !== false && await sendSlidesToTikTok(images, text, label)) return;
   if (!process.env.BUFFER_API_KEY) return;
   try {
     const channelId = await channelFor('tiktok');
@@ -116,6 +117,17 @@ export async function postToTikTok({ video, images, text = '', label, ai = false
     console.log(`✔ TikTok reminder set in Buffer (${video ? 'video' : `${assets.length}-photo slideshow`}) — ${post.id}`);
     log(`tiktok:${label}`, 'Buffer reminder (owner posts with music)');
   } catch (e) { console.log(`  (TikTok reminder failed: ${e.message.slice(0, 200)})`); }
+}
+
+async function sendSlidesToTikTok(images, text, label) {
+  if (!process.env.TIKTOK_CLIENT_SECRET || !fs.existsSync(path.join(ROOT, 'state', 'tiktok-token.enc'))) return false;
+  try {
+    const { uploadPhotos } = await import('./tiktok.mjs');
+    const id = await uploadPhotos(images, { label, title: text.split('\n')[0].replace(/#\w+/g, '').trim(), description: text });
+    console.log(`✔ slideshow sent to the TikTok inbox (${id}) — owner adds a sound and posts`);
+    log(`tiktok:${label}`, 'slideshow sent to TikTok inbox (owner adds a sound and posts)');
+    return true;
+  } catch (e) { console.log(`  (TikTok slideshow failed: ${e.message.slice(0, 200)} — using Buffer)`); return false; }
 }
 
 async function sendToTikTokDrafts(video, label) {

@@ -615,6 +615,8 @@ async function tiktokWorthy(post, kind) {
   const log = fs.existsSync(path.join(ROOT, 'posted.log')) ? fs.readFileSync(path.join(ROOT, 'posted.log'), 'utf8') : '';
   const today = log.split('\n').filter(l => l.includes(`tiktok:${post.date}-`)).length; // slideshows already sent today
   if (today >= cap) return console.log(`  (TikTok: already ${today} slideshows today)`), false;
+  // owner, Oct 8: slideshows back on TikTok, "only social stuff" → control.json tiktokSlideshowKinds (events / free stuff), no news
+  if (Array.isArray(control.tiktokSlideshowKinds)) return control.tiktokSlideshowKinds.includes(kind) || (console.log(`  (TikTok: ${kind} isn't a social slideshow)`), false);
   if (kind === 'upcoming' || kind === 'deals') return true;
   if (kind === 'world') return false;
   const r = await chat([{ role: 'system', content: 'Rate 1–10 how well this South Florida carousel would do on TikTok with 18–35 year olds in Miami. High: things happening now or coming up that people can go to, and genuinely viral stories people share and argue about (a wild video, a shocking local moment, a celebrity in Miami, a huge price shock). Low: politics, court procedure, routine crime, world news, dry data. Reply JSON {"score": n, "why": "short"}.' },

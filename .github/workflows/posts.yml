@@ -128,6 +128,7 @@ jobs:
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
           BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
           FB_ACCESS_TOKEN: ${{ secrets.FB_ACCESS_TOKEN }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           YOUTUBE_COOKIES: ${{ secrets.YOUTUBE_COOKIES }}
           GH_TOKEN: ${{ github.token }}
           CLOUDFLARED_BIN: /usr/local/bin/cloudflared

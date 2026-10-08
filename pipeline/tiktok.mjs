@@ -75,6 +75,30 @@ export async function uploadVideo(file, { mode = 'draft', title = '', privacy, d
   if (!put.ok) throw new Error(`TikTok upload failed: ${put.status} ${(await put.text()).slice(0, 200)}`);
   return data.publish_id;
 }
+// Photo slideshow → the TikTok inbox (owner, Oct 8: social carousels on TikTok again). Photos can only be PULLED from a
+// verified URL prefix, so the slides are published on GitHub Pages first (docs/tt/<label>/, keeps the last 20) and TikTok fetches them.
+const PAGES = 'https://lolerman123456.github.io/miami-reels/';
+export async function uploadPhotos(files, { label, title = '', description = '' }) {
+  const rel = `tt/${label}`;
+  const dir = path.join(ROOT, 'docs', rel);
+  fs.mkdirSync(dir, { recursive: true });
+  const names = files.slice(0, 35).map((f, i) => { const n = `${String(i + 1).padStart(2, '0')}.jpg`; fs.copyFileSync(f, path.join(dir, n)); return n; });
+  const old = fs.readdirSync(path.join(ROOT, 'docs', 'tt')).sort().reverse().slice(20);
+  for (const o of old) fs.rmSync(path.join(ROOT, 'docs', 'tt', o), { recursive: true, force: true });
+  git(['add', '-A', 'docs/tt'], `TikTok slideshow ${label} (Pages for TikTok to pull)`);
+  const urls = names.map(n => `${PAGES}${rel}/${n}`);
+  for (let i = 0; i < 30; i++) { // GitHub Pages redeploys ~1–2 min after the push
+    const r = await fetch(urls.at(-1), { method: 'HEAD' }).catch(() => null);
+    if (r?.ok) break;
+    await new Promise(z => setTimeout(z, 10e3));
+  }
+  const data = await call('/post/publish/content/init/', {
+    post_info: { title: title.slice(0, 90), description: description.slice(0, 4000) },
+    source_info: { source: 'PULL_FROM_URL', photo_cover_index: 0, photo_images: urls },
+    post_mode: 'MEDIA_UPLOAD', media_type: 'PHOTO',
+  });
+  return data.publish_id;
+}
 export const publishStatus = id => call('/post/publish/status/fetch/', { publish_id: id });
 
 // ---- NEAR Publisher backend (for the page in docs/tiktok/) --------------------------------------------
@@ -150,5 +174,10 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     }
     if (fs.existsSync(TOKEN_FILE)) commitToken();
   }
-  else { console.error('Usage: tiktok.mjs server | draft <mp4>'); process.exit(1); }
+  else if (cmd === 'photos') { // node pipeline/tiktok.mjs photos <label> <jpg…> — test a slideshow to the inbox
+    const id = await uploadPhotos(a.slice(1), { label: a[0], title: a[0] });
+    console.log('✔ slideshow sent to TikTok:', id);
+    for (let i = 0; i < 12; i++) { await new Promise(r => setTimeout(r, 10e3)); const s = await publishStatus(id).catch(e => ({ status: 'error: ' + e.message })); console.log('  status:', JSON.stringify(s)); if (/SEND_TO_USER_INBOX|PUBLISH_COMPLETE|FAILED|error/.test(s.status || '')) break; }
+  }
+  else { console.error('Usage: tiktok.mjs server | draft <mp4> | photos <label> <jpg…>'); process.exit(1); }
 }

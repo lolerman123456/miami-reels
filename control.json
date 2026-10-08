@@ -24,6 +24,10 @@
   "tiktokBuffer": true,
   "storiesPerDay": 2,
   "storyGapHours": 5,
-  "tiktokSlideshows": false,
-  "igMusic": true
+  "tiktokSlideshows": true,
+  "igMusic": true,
+  "tiktokSlideshowKinds": [
+    "upcoming",
+    "deals"
+  ]
 }

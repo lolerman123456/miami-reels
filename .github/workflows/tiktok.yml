@@ -47,7 +47,11 @@ jobs:
         run: |
           # requests/tiktok.json {"draft": "<video id in the videos release>"} → upload that one Reel to the TikTok inbox (drafts) and stop
           DRAFT=$(jq -r '.draft // empty' requests/tiktok.json 2>/dev/null || true)
-          if [ "${{ github.event_name }}" = push ] && [ -n "$DRAFT" ]; then
+          PHOTOS=$(jq -r '.photos // empty' requests/tiktok.json 2>/dev/null || true)
+          if [ "${{ github.event_name }}" = push ] && [ -n "$PHOTOS" ]; then
+            git config user.name reel-bot; git config user.email reel-bot@users.noreply.github.com
+            node pipeline/tiktok.mjs photos "$PHOTOS" $(jq -r '.files[]' requests/tiktok.json)
+          elif [ "${{ github.event_name }}" = push ] && [ -n "$DRAFT" ]; then
             [ -f "out/tiktok/$DRAFT.mp4" ] || gh release download videos -p "$DRAFT.mp4" -D out/tiktok --clobber
             node pipeline/tiktok.mjs draft "out/tiktok/$DRAFT.mp4"
           else
