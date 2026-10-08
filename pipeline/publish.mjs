@@ -1,6 +1,7 @@
 // Publish to Instagram via the Graph API: Reels (publishReel), carousels (publishCarousel), stories (publishStory).
 //   node pipeline/publish.mjs out/001-rudest-cities.mp4 [episodes/001-rudest-cities]
 import fs from 'node:fs';
+import { formatCaption } from './caption.mjs';
 import path from 'node:path';
 import { readJSON, ROOT, run } from './util.mjs';
 import { serveFilePublicly, serveFilesPublicly } from './tunnel.mjs';
@@ -8,6 +9,7 @@ import { serveFilePublicly, serveFilesPublicly } from './tunnel.mjs';
 const VERSION = 'v23.0';
 
 export async function publishReel(videoFile, caption, { collaborators = [] } = {}) {
+  caption = formatCaption(caption); // hashtags at the bottom after 5 dots (owner, Oct 8)
   const token = process.env.INSTAGRAM_ACCESS_TOKEN;
   const igUser = process.env.INSTAGRAM_USER_ID;
   if (!token || !igUser) throw new Error('Set INSTAGRAM_ACCESS_TOKEN and INSTAGRAM_USER_ID in .env');
@@ -61,6 +63,7 @@ export async function publishReel(videoFile, caption, { collaborators = [] } = {
 // (FB_ACCESS_TOKEN, NEAR Social Publisher app, Jacobo's account with access to the "NEAR APP" Page linked to @getnearapp).
 // Picks a trending song from /ig_audio not used in the last 20 music posts, keeps the voice on top (song at 35% — owner Oct 5: 14 was inaudible).
 export async function publishReelWithMusic(videoFile, caption, { collaborators = [], audioVolume = 35 } = {}) {
+  caption = formatCaption(caption); // hashtags at the bottom after 5 dots (owner, Oct 8)
   const token = process.env.FB_ACCESS_TOKEN;
   if (!token) throw new Error('FB_ACCESS_TOKEN not set');
   const api = `https://graph.facebook.com/${VERSION}`;
@@ -108,6 +111,7 @@ export async function postMusicReel(videoFile, episode) {
 
 // Carousel of 2–10 JPEGs (Instagram only accepts JPEG for images).
 export async function publishCarousel(imageFiles, caption, label, { collaborators = [] } = {}) {
+  caption = formatCaption(caption); // hashtags at the bottom after 5 dots (owner, Oct 8)
   const { api, igUser, token } = auth();
   const tunnel = await serveFilesPublicly(imageFiles);
   try {

@@ -8,6 +8,7 @@ import { ROOT, run, step, writeJSON } from './util.mjs';
 import { chatJSON } from './llm.mjs';
 import { fetchNews, searchNews } from './news.mjs';
 import { aiImage } from './photos.mjs';
+import { formatCaption } from './caption.mjs';
 import { renderShareCover } from './carousel.mjs';
 
 const SEEN = path.join(ROOT, 'state', 'shareslop-seen.txt');
@@ -72,7 +73,7 @@ async function makeOne(n, items, recent, dryRun, topic = '', photo = false) {
   if (!img) throw new Error('no image');
   const post = { id, cta: String(w.cta || 'SEND THIS TO HIM 👀').toLowerCase(), headline: w.headline.toUpperCase(),
     cover: { top: w.top, main: w.main, highlight: w.highlight || w.headline, bottom: w.bottom, photoFile: path.basename(img.file), credit: 'AI illustration' }, image: w.image, imageFile: img.file, angle: w.angle,
-    caption: `${w.caption}\n\n${[...(w.hashtags || []).slice(0, 2), 'satire'].map(h => '#' + String(h).replace(/^#/, '')).join(' ')}`.trim() };
+    caption: formatCaption(`${w.caption}\n\n${[...(w.hashtags || []).slice(0, 2), 'satire'].map(h => '#' + String(h).replace(/^#/, '')).join(' ')}`) };
   const jpg = await renderShareCover(post.cover, dir, path.join(dir, 'slide.jpg'), post.cta, photo ? 1350 : 1920);
   if (photo) { // owner, Oct 6: a PHOTO with a song — the API can't add music to photos, so the owner posts it from the app
     writeJSON(path.join(dir, 'post.json'), post);
