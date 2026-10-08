@@ -140,9 +140,10 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
         if (!url && +dur < 30) { console.log(`  skip (${dur} s Short — owner wants 30 s+)`); fs.appendFileSync(SEEN, `${v.id}  reel-short\n`); continue; }
       } catch {}
     }
+    // owner, Oct 8: the 6pm slot found nothing at 8+ (Mangione arrest bodycam, pond chase scored 7) — 7 is the bar, same as clips
     const w = await watch(v, {}, dir, 'reel');
     const c = w?.check;
-    if (!c?.ok || (!url && c.crazy < 8)) {
+    if (!c?.ok || (!url && c.crazy < 7)) {
       console.log(`  skip (${c ? (c.ok ? `crazy ${c.crazy}` : 'not ok') : 'no download'})`);
       if (w) fs.appendFileSync(SEEN, `${v.id}  reel-skip\n`);
       fs.rmSync(dir, { recursive: true, force: true });
