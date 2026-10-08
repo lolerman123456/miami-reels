@@ -1,7 +1,8 @@
 {
-  "kind": "viral",
+  "kind": "shareslop",
   "topic": "",
-  "publish": true,
-  "at": "2026-10-08T21:36:29Z",
-  "notBefore": "2026-10-08T18:00:00-04:00"
+  "publish": false,
+  "photo": true,
+  "count": 1,
+  "at": "2026-10-08T22:15:12Z"
 }
