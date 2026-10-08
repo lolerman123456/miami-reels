@@ -1,0 +1,127 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "EVERY BIG EVENT",
+    "highlight": "THIS WEEK",
+    "bottom": "IN SOUTH FLORIDA",
+    "blur": false,
+    "photo": {
+      "query": "South Florida festival crowd night lights Miami",
+      "prompt": "dramatic night scene of a South Florida crowd walking through glowing festival lights, palm trees and city lights in the background"
+    },
+    "emojis": [
+      "🎬",
+      "🎨",
+      "🍓",
+      "👀"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: PinkBeachPlanet / CC BY-SA 4.0",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Miccosukee Indigenous Film Festival, Oct. 9-12",
+      "highlight": "Miccosukee Indigenous",
+      "body": "The first-ever festival screens 22 Indigenous-made films at Bill Cosford Cinema in Coral Gables. All-access tickets cost $85.",
+      "place": "Coral Gables",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Bill Cosford Cinema University of Miami",
+        "prompt": "cinematic photo of a university film theater entrance at night with a glowing marquee and people arriving for a film festival"
+      },
+      "emoji": "🎬",
+      "chip": "OCT 9-12",
+      "logo": "miccofilmfest.com",
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Wikimedia Commons / Public domain",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "The Science Behind Pixar opens Oct. 10",
+      "highlight": "Science Behind Pixar",
+      "body": "Frost Science opens the exhibit on Saturday at Philip and Patricia Frost Museum of Science in Miami. Adult tickets start at $29.95, and youth tickets ages 4 to 11 start at $24.95.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Frost Science Museum Miami exterior",
+        "prompt": "bright, dramatic photo of the Frost Science Museum in downtown Miami with families entering for an animation exhibit"
+      },
+      "emoji": "🎥",
+      "chip": "OCT 10",
+      "logo": "frostscience.org",
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Dan Lundberg / CC BY-SA 2.0",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Coastal Corgi Classic at Gulfstream Park, Oct. 10",
+      "highlight": "Coastal Corgi Classic",
+      "body": "The corgi race takes over the Gulfstream Park track in Hallandale Beach. Check-in starts at 11 a.m., the costume contest is at 12 p.m., and the first corgi race starts at 1 p.m.",
+      "place": "Hallandale Beach",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Gulfstream Park racetrack corgi race",
+        "prompt": "sharp, high-action photo of a corgi sprinting on a racetrack at Gulfstream Park with a crowd and dirt flying"
+      },
+      "emoji": "🐶",
+      "chip": "11 AM, 12 PM, 1 PM",
+      "logo": "gulfstreampark.com",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Aht820 / Public domain",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "In a Landscape opens Oct. 8",
+      "highlight": "In a Landscape",
+      "body": "Opa Projects opens the show in Miami on Thursday. The exhibit features work by Stephen Thorpe, Annie Lapin, Jonathan Ryan, Christiane Pooley and Mattia Sinigaglia.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miami art gallery installation contemporary paintings",
+        "prompt": "striking contemporary gallery interior in Miami with large abstract artworks and focused lighting on the walls"
+      },
+      "emoji": "🖼️",
+      "chip": "OCT 8",
+      "logo": "opaprojects.com",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Artwork: Karen Rifas Photo Credit: Franc / CC BY-SA 4.0",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Miami Fashion Week Oct. 13-18",
+      "highlight": "Miami Fashion Week",
+      "body": "Miami Fashion Week marks its 10-year anniversary edition next week. The headline does not list a venue in the article text provided.",
+      "place": "Miami",
+      "source": "Miami’s Community News",
+      "photo": {
+        "query": "Miami Fashion Week runway",
+        "prompt": "dramatic fashion runway in Miami with bright lights, models walking and a packed audience, no identifiable faces"
+      },
+      "emoji": "👗",
+      "chip": "OCT 13-18",
+      "logo": "miamifashionweek.com",
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Emrah Altay / CC BY-SA 4.0",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "South Florida has films, art, a race day, a farm run and fashion on the calendar this week.\nWho are you taking? Tag a friend.",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has films, art, a race day, a farm run and fashion on the calendar this week.\nWho are you taking? Tag a friend.\n\n📰 Sources: Miami New Times, Secret Miami, Miami’s Community News\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-08",
+  "id": "2026-10-08-upcoming"
+}
