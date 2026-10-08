@@ -1,0 +1,122 @@
+{
+  "sector": "REAL ESTATE",
+  "cover": {
+    "top": "GRIFFIN'S MIAMI BUY",
+    "main": "IS TIED TO A",
+    "highlight": "$1B WINDFALL",
+    "bottom": "FOR ONE DEVELOPER",
+    "blur": false,
+    "photo": {
+      "query": "Ken Griffin Miami real estate event Reuters",
+      "prompt": "sharp photo of Ken Griffin at a Miami real-estate event or in front of a prominent Miami tower, with a tense business press backdrop"
+    },
+    "emojis": [
+      "🏙️",
+      "💰",
+      "🏗️"
+    ],
+    "logos": [
+      "bloomberg.com",
+      "therealdeal.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "REAL ESTATE",
+      "headline": "Bloomberg reports a $1B Miami developer windfall",
+      "highlight": "$1B Miami",
+      "body": "Bloomberg says a Miami developer gained a $1 billion windfall from Ken Griffin’s real estate buy.",
+      "place": "Miami",
+      "source": "Bloomberg.com",
+      "photo": {
+        "query": "Miami luxury tower Ken Griffin real estate Reuters",
+        "prompt": "dramatic street-level photo of a Miami luxury tower with reflective glass, palm trees, and a real-estate deal mood",
+        "mark": "circle"
+      },
+      "emoji": "💰",
+      "chip": "$1B",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "REAL ESTATE",
+      "headline": "Ken Griffin is the buyer named in the deal",
+      "highlight": "Ken Griffin",
+      "body": "The report ties the gain to Griffin’s real estate purchase in Miami.",
+      "place": "Miami",
+      "source": "Bloomberg.com",
+      "photo": {
+        "query": "Ken Griffin portrait Reuters",
+        "prompt": "clear editorial portrait of Ken Griffin at a business event, with neutral lighting and a formal backdrop"
+      },
+      "emoji": "🏢",
+      "chip": "GRIFFIN",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "REAL ESTATE",
+      "headline": "The deal centers on Miami real estate",
+      "highlight": "Miami real estate",
+      "body": "Bloomberg frames the story as a Miami property deal with one developer on the winning side.",
+      "place": "Miami",
+      "source": "Bloomberg.com",
+      "photo": {
+        "query": "Miami waterfront condos construction cranes Reuters",
+        "prompt": "wide photo of Miami waterfront condos and construction cranes under a bright sky, showing active development"
+      },
+      "emoji": "🏗️",
+      "chip": "MIAMI",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "REAL ESTATE",
+      "headline": "The Real Deal called Griffin the tip of the Wynwood iceberg",
+      "highlight": "Wynwood",
+      "body": "On Oct. 5, The Real Deal said Griffin is the tip of the Wynwood iceberg.",
+      "place": "Wynwood",
+      "source": "The Real Deal",
+      "photo": {
+        "query": "Wynwood Miami street murals development Reuters",
+        "prompt": "sharp Wynwood street scene with murals, new buildings, and a construction site in the background"
+      },
+      "emoji": "🧱",
+      "chip": "OCT 5",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "REAL ESTATE",
+      "headline": "The buy points to more money moving through Miami",
+      "highlight": "More Miami money",
+      "body": "The two headlines place Griffin and Wynwood inside the same Miami money story.",
+      "place": "Miami",
+      "source": "The Real Deal",
+      "photo": {
+        "query": "Miami skyline at dusk Reuters",
+        "prompt": "dramatic dusk photo of the Miami skyline with dense towers and bayfront lights"
+      },
+      "emoji": "💼",
+      "chip": "WYNWOOD",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Bloomberg reports a Miami developer gained a $1 billion windfall from Ken Griffin’s real estate buy.\nHow far does that money ripple through Miami?",
+  "hashtags": [
+    "#MiamiRealEstate",
+    "#WynwoodMiami"
+  ],
+  "collaborators": [],
+  "igCaption": "Bloomberg reports a Miami developer gained a $1 billion windfall from Ken Griffin’s real estate buy.\nHow far does that money ripple through Miami?\n\n📰 Sources: Bloomberg.com, The Real Deal\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#MiamiRealEstate #WynwoodMiami #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-08",
+  "id": "2026-10-08-brief"
+}
