@@ -1,4 +1,3 @@
 # Weekly Reel plan: one topic per line. Each scheduled Reel (1pm, 8pm) uses the next line, then removes it.
 # Lines starting with # are ignored. Leave empty and the system picks its own topics.
 # Owner (Sep 28): social / community only — parties, raves, festivals, nightlife, things to go to with friends.
-The Science Behind Pixar exhibit opens Saturday Oct 10 at Frost Science Museum in downtown Miami — what's inside (8 hands-on sections, life-size Buzz Lightyear, WALL-E, Sulley), included with museum admission, runs through April 11 2027
