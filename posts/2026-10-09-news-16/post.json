@@ -1,0 +1,126 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "DEPUTIES SAY",
+    "main": "CHILDREN AS YOUNG AS 5",
+    "highlight": "24 ABUSE VIDEOS",
+    "bottom": "UPLOADED TO GOOGLE",
+    "blur": false,
+    "photo": {
+      "query": "Broward County jail exterior Fort Lauderdale police lights night",
+      "prompt": "Dramatic night photo of a Broward County jail exterior with red and blue police lights reflecting on wet pavement, no people visible",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚨",
+      "💻",
+      "⚖️"
+    ],
+    "logos": [
+      "google.com",
+      "sheriff.org"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Local 10",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Children as young as 5, deputies say",
+      "highlight": "young as 5",
+      "body": "Broward deputies said a Deerfield Beach man uploaded child sexual abuse videos showing victims as young as 5.",
+      "place": "Deerfield Beach",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Broward Sheriff's Office patrol car at night Florida",
+        "prompt": "Broward Sheriff's Office patrol vehicle at night outside a government building with emergency lights on, no people visible"
+      },
+      "emoji": "🚔",
+      "chip": "AGE 5",
+      "logo": "sheriff.org",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Two dozen videos were uploaded, deputies say",
+      "highlight": "Two dozen",
+      "body": "Deputies said he uploaded two dozen child sexual abuse videos.",
+      "place": "Broward County",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "computer keyboard cloud upload police lights dark room",
+        "prompt": "Close-up of a laptop keyboard with a generic cloud upload icon on screen, red and blue police lights in the background, no personal data visible"
+      },
+      "emoji": "💻",
+      "chip": "24 VIDEOS",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Local 10"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The videos were tied to a Google account",
+      "highlight": "Google account",
+      "body": "Local 10 reported the material was uploaded to a Google account.",
+      "place": "Broward County",
+      "source": "Local 10",
+      "photo": {
+        "query": "generic laptop cloud account screen police lights",
+        "prompt": "A generic smartphone and laptop showing a cloud account screen, lit by police lights, with no names or private account details visible"
+      },
+      "emoji": "📤",
+      "chip": "GOOGLE",
+      "logo": "google.com",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The Deerfield Beach man was jailed Friday",
+      "highlight": "jailed Friday",
+      "body": "Local 10 said the Deerfield Beach man was jailed on Friday, Oct. 9.",
+      "place": "Deerfield Beach",
+      "source": "Local 10",
+      "photo": {
+        "query": "Broward County courthouse exterior Fort Lauderdale Florida",
+        "prompt": "Exterior of a Broward County courthouse under a cloudy sky, with police lights reflected on the building, no people visible"
+      },
+      "emoji": "⚖️",
+      "chip": "OCT 9",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "He faces a series of felony charges",
+      "highlight": "felony charges",
+      "body": "Local 10 said he faces a series of felony charges after the uploads.",
+      "place": "Broward County",
+      "source": "Local 10",
+      "photo": {
+        "query": "Broward County courthouse sign Fort Lauderdale",
+        "prompt": "Close-up of a Broward County courthouse sign with the entrance behind it, no people visible"
+      },
+      "emoji": "📄",
+      "chip": "CHARGES",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Local 10"
+    }
+  ],
+  "caption": "Broward deputies say a Deerfield Beach man uploaded two dozen child sexual abuse videos to a Google account, with victims as young as 5.\nWhat should platforms be required to do when abuse material is uploaded?",
+  "hashtags": [
+    "#DeerfieldBeach",
+    "#BrowardCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "Broward deputies say a Deerfield Beach man uploaded two dozen child sexual abuse videos to a Google account, with victims as young as 5.\nWhat should platforms be required to do when abuse material is uploaded?\n\n📰 Sources: WPLG Local 10, Local 10\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#DeerfieldBeach #BrowardCounty #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-09",
+  "id": "2026-10-09-news-16"
+}
