@@ -1,0 +1,227 @@
+{
+  "title": "Indoor South Florida Plans for Oct. 9 to 11",
+  "sources": [
+    "The Real Deal",
+    "Haute Living",
+    "Eventbrite",
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Indoor weekend plans for Oct. 9 to 11 include a reopened South Beach hotel, a new Miami residence, comedy, nightlife, and Black Violin in Fort Lauderdale.\nBlack Violin plays Sunday at 7 p.m., with tickets from $23 to $105.\nWhich one would you actually do this weekend?\n\nSources: The Real Deal, Haute Living, Eventbrite, Miami New Times\n\n#MiamiEvents #SouthFlorida #FortLauderdale #WeekendPlans",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need indoor plans for October nine to eleven? South Florida has a reopened hotel, a new opening, comedy, nightlife, and Black Violin.",
+      "overlay": [
+        "INDOOR",
+        "WEEKEND PLANS"
+      ],
+      "emojis": [
+        "🎻",
+        "🎤",
+        "🏨",
+        "🌙"
+      ],
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "In South Beach, Safe Harbor is reopening the renovated Art Deco Tides Hotel after nearly a decade. The hotel is back on Ocean Drive this weekend.",
+      "caption": "In South Beach, Safe Harbor is reopening the renovated Art Deco Tides Hotel after nearly a decade. The hotel is back on Ocean Drive this weekend.",
+      "overlay": "SOUTH BEACH",
+      "badge": "NEARLY A DECADE",
+      "sub": "Art Deco hotel returns",
+      "emoji": "🏨",
+      "stats": [
+        {
+          "value": "NEARLY A DECADE",
+          "label": "closed"
+        }
+      ],
+      "source": "The Real Deal",
+      "location": {
+        "name": "South Beach",
+        "lat": 25.781875,
+        "lon": -80.136262,
+        "h": 30
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "In Miami, Casa Bella Residences opens with B&B Italia Design and interiors by Piero Lissoni. It adds another new residential opening to the weekend list.",
+      "caption": "In Miami, Casa Bella Residences opens with B&B Italia Design and interiors by Piero Lissoni. It adds another new residential opening to the weekend list.",
+      "overlay": "MIAMI",
+      "badge": "NEW OPENING",
+      "sub": "B&B Italia design",
+      "emoji": "🛋️",
+      "stats": [
+        {
+          "value": "MIAMI",
+          "label": "location"
+        }
+      ],
+      "source": "Haute Living",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -35,
+        "heading": 40,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Palm Beach Improv has free tickets listed for Friday, October ninth. That gives Palm Beach County one easy comedy option. If you go, open NEAR and see who else was there.",
+      "caption": "Palm Beach Improv has free tickets listed for Friday, Oct. 9. That gives Palm Beach County one easy comedy option. If you go, open NEAR and see who else was there.",
+      "overlay": "PALM BEACH",
+      "badge": "FREE TICKETS",
+      "sub": "Friday comedy option",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "FREE",
+          "label": "ticket price"
+        },
+        {
+          "value": "OCT 9",
+          "label": "event date"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Palm Beach County, Florida",
+        "lat": 26.71,
+        "lon": -80.05,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -30,
+        "heading": 310,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "On South Beach, Ultra White Miami marks its five year anniversary Friday night. The all white event runs from nine p.m. to three a.m.",
+      "caption": "On South Beach, Ultra White Miami marks its 5-year anniversary Friday night. The all-white event runs from 9 p.m. to 3 a.m.",
+      "overlay": "SOUTH BEACH",
+      "badge": "9 PM TO 3 AM",
+      "sub": "All-white Friday event",
+      "emoji": "🌙",
+      "stats": [
+        {
+          "value": "5 YRS",
+          "label": "anniversary"
+        },
+        {
+          "value": "9 PM",
+          "label": "start time"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "South Beach",
+        "lat": 25.781875,
+        "lon": -80.136262,
+        "h": 30
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 190,
+        "degrees": 90,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sunday in Fort Lauderdale, Black Violin plays the Broward Center at seven p.m. Wil Baptiste and Kev Marcus bring the Be Free Tour home, with Braxton Cook opening. Tickets run from twenty-three to one hundred five dollars.",
+      "caption": "Sunday in Fort Lauderdale, Black Violin plays the Broward Center at 7 p.m. Wil Baptiste and Kev Marcus bring the Be Free Tour home, with Braxton Cook opening. Tickets run from $23 to $105.",
+      "overlay": "FORT LAUDERDALE",
+      "badge": "$23 TO $105",
+      "sub": "Broward Center show",
+      "emoji": "🎻",
+      "stats": [
+        {
+          "value": "$23",
+          "label": "starting ticket"
+        },
+        {
+          "value": "7 PM",
+          "label": "showtime"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 40
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -34,
+        "heading": 260,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which indoor plan would you pick for this weekend? Which indoor plan would you pick for this weekend? NEAR is the part that lets you put a name to the stranger you kept seeing between stops all day.",
+      "overlay": "PICK ONE",
+      "sub": "Oct. 9 to 11 plans",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 90
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -32,
+        "heading": 120
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "073-indoor-south-florida-plans-for-oct-9-to-"
+}
