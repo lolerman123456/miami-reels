@@ -153,7 +153,12 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     const [rw, rh] = execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', w.raw]).toString().trim().split(',').map(Number);
     const [rw0, rh0] = execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', w.raw]).toString().trim().split(',').map(Number);
     if (rw0 / rh0 <= 0.8) v.vertical = true; // owner links to Shorts too: a vertical source always fills the screen
-    if (v.vertical) c.crop = null; // keep the Short whole (cropping its caption bars made a 9:16 clip 608x756)
+    // keep the Short whole (cropping its caption bars made a 9:16 clip 608x756) — but trim a burned-in channel banner / black band at
+    // the top or bottom (Oct 9: a "High speed Chases" title sat under our hook) when the rest still fills the screen
+    if (v.vertical) {
+      const y = Math.max(0, +c.crop?.y || 0), h = Math.min(1 - y, +c.crop?.h || 1);
+      c.crop = c.crop && h >= 0.7 && h < 0.95 && rw0 / (rh0 * h) <= 0.75 ? { x: 0, y, w: 1, h } : null;
+    }
     const cw = rw * (c.crop?.w || 1), ch = rh * (c.crop?.h || 1);
     if (!url && cw / ch > 0.8) { console.log(`  skip (not vertical: ${Math.round(cw)}x${Math.round(ch)})`); fs.appendFileSync(SEEN, `${v.id}  reel-wide\n`); fs.rmSync(dir, { recursive: true, force: true }); continue; }
     let start = Math.max(0, Math.min(w.total - 5, +c.start || 0));
