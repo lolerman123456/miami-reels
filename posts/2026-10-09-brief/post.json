@@ -1,0 +1,74 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "A KEYS FUGITIVE WAS",
+    "main": "CAUGHT IN MEXICO",
+    "highlight": "5 DAYS",
+    "bottom": "ON THE RUN AND BOOKED IN MIAMI-DADE",
+    "blur": false,
+    "photo": {
+      "query": "Armando Lopez mugshot or sheriff booking photo Miami-Dade jail exterior police lights",
+      "prompt": "striking booking-style image tied to Armando Lopez, with a Miami-Dade jail exterior and police lights, no extra text, no crowd",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚔",
+      "🇲🇽",
+      "🔒"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Tampa Free Press",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Captured in Mexico after 5 days on the run",
+      "highlight": "5 days on the run",
+      "body": "Armando Lopez was captured in Mexico after 5 days on the run, then booked into the Miami-Dade County jail Thursday, according to jail records.",
+      "place": "Mexico, Miami-Dade",
+      "source": "Local 10",
+      "photo": {
+        "query": "Miami-Dade County jail exterior night police lights",
+        "prompt": "dramatic night photo of the Miami-Dade County jail exterior with police lights reflecting on wet pavement, no people visible"
+      },
+      "emoji": "🚨",
+      "chip": "BOOKED",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "He fled ahead of a Florida Keys trial",
+      "highlight": "fled trial",
+      "body": "Local 10 said Lopez fled ahead of his trial in a Florida Keys case tied to the theft of a sheriff's cruiser and a carjacking.",
+      "place": "Florida Keys",
+      "source": "Local 10",
+      "photo": {
+        "query": "Florida Keys courthouse exterior police cruiser",
+        "prompt": "Florida Keys courthouse exterior with a sheriff cruiser parked outside, hard sunlight, no people visible"
+      },
+      "emoji": "🚔",
+      "chip": "TRIAL",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Tampa Free Press"
+    }
+  ],
+  "caption": "Armando Lopez was captured in Mexico after 5 days on the run, then booked into Miami-Dade jail Thursday.\nWhat detail in this case do you want next?",
+  "hashtags": [
+    "#FloridaKeys",
+    "#MiamiDade"
+  ],
+  "collaborators": [],
+  "igCaption": "Armando Lopez was captured in Mexico after 5 days on the run, then booked into Miami-Dade jail Thursday.\nWhat detail in this case do you want next?\n\n📰 Sources: Local 10, Keys Weekly Newspapers, NBC 6 South Florida\n\n🎥 Video: WPLG Local 10\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#FloridaKeys #MiamiDade #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-09",
+  "id": "2026-10-09-brief",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "WPLG Local 10",
+    "url": "https://www.youtube.com/watch?v=HWN2-emWJ24"
+  }
+}
