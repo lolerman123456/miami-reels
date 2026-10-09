@@ -1,0 +1,201 @@
+{
+  "title": "Indoor South Florida weekend plans, Oct. 9 to 11",
+  "sources": [
+    "Miami New Times",
+    "Miami New Times",
+    "Local 10",
+    "WSVN 7News"
+  ],
+  "collaborators": [],
+  "igCaption": "Indoor plans for Oct. 9 to 11: Patti Smith in Miami, Celia Cruz music in Miramar, Ricky Martin in Hollywood, and a new Italian food hall in Coral Gables.\nHallandale Beach Boulevard also closes at the Florida East Coast Railway crossing from Saturday afternoon to Tuesday night, so check the drive before you go.\nWhich one would you actually book this weekend?\n\nSources: Miami New Times, Miami New Times, Local 10, WSVN 7News\n\n#MiamiEvents #SouthFlorida #FortLauderdale #CoralGables",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need indoor plans this weekend? You can still book concerts and a new food hall from Friday to Sunday.",
+      "overlay": [
+        "WEEKEND",
+        "INDOORS"
+      ],
+      "emojis": [
+        "🎟️",
+        "🎶",
+        "🍝",
+        "☔"
+      ],
+      "location": {
+        "name": "Adrienne Arsht Center",
+        "lat": 25.7877,
+        "lon": -80.1888,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Friday at seven p.m., Patti Smith is at the Adrienne Arsht Center on Biscayne Boulevard. The performance centers on her memoir, Bread of Angels, with stories and songs connected to it. Full-price tickets include a copy of the book.",
+      "caption": "Friday at 7 PM, Patti Smith is at the Adrienne Arsht Center on Biscayne Blvd. The performance centers on her memoir, Bread of Angels, with stories and songs connected to it. Full-price tickets include a copy of the book.",
+      "overlay": "ARSHT CENTER",
+      "badge": "FROM $40",
+      "sub": "Friday, Oct. 9",
+      "emoji": "📖",
+      "stats": [
+        {
+          "value": "$40",
+          "label": "tickets start"
+        },
+        {
+          "value": "7 PM",
+          "label": "showtime"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Adrienne Arsht Center",
+        "lat": 25.7877,
+        "lon": -80.1888,
+        "h": 90
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Saturday at eight p.m., Celia Vive plays the Miramar Cultural Center. Cuban artist Lucrecia performs with the Celia Cruz All Stars Band for the one hundredth anniversary of Celia Cruz’s birth. Tickets run thirty to fifty dollars.",
+      "caption": "Saturday at 8 PM, Celia Vive plays the Miramar Cultural Center. Cuban artist Lucrecia performs with the Celia Cruz All Stars Band for the 100th anniversary of Celia Cruz’s birth. Tickets run $30 to $50.",
+      "overlay": "MIRAMAR",
+      "badge": "$30 TO $50",
+      "sub": "Celia Vive",
+      "emoji": "🎺",
+      "stats": [
+        {
+          "value": "100",
+          "label": "birth anniversary"
+        },
+        {
+          "value": "$30",
+          "label": "tickets start"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miramar Cultural Center",
+        "lat": 25.9861,
+        "lon": -80.3016,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -32,
+        "heading": 65,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Also Saturday at eight p.m., Ricky Martin plays Hard Rock Live in Hollywood. He has sold ninety-five million albums, won two Grammys and four Latin Grammys. Tickets start at fifty-five dollars and go up to nine hundred thirty-five. If you’re there, open NEAR and see who else caught Ricky Martin.",
+      "caption": "Also Saturday at 8 PM, Ricky Martin plays Hard Rock Live in Hollywood. He has sold 95 million albums, won 2 Grammys and 4 Latin Grammys. Tickets start at $55 and go up to $935. If you’re there, open NEAR and see who else caught Ricky Martin.",
+      "overlay": "HARD ROCK",
+      "badge": "FROM $55",
+      "sub": "Hollywood concert",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "95M",
+          "label": "albums sold"
+        },
+        {
+          "value": "$55",
+          "label": "tickets start"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Hard Rock Live",
+        "lat": 26.0513,
+        "lon": -80.2118,
+        "h": 55
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -33,
+        "heading": 240,
+        "degrees": 75,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For food, Zuccaly opened Thursday inside The Plaza Coral Gables at one hundred eleven Palermo Avenue. The Italian food hall covers eight thousand square feet, with six culinary stations, a market, and a full bar. This weekend, it opens one to eight.",
+      "caption": "For food, Zuccaly opened Thursday inside The Plaza Coral Gables at 111 Palermo Ave. The Italian food hall covers 8,000 square feet, with 6 culinary stations, a market, and a full bar. This weekend, it opens 1 to 8.",
+      "overlay": "ZUCCALY",
+      "badge": "8,000 SQ FT",
+      "sub": "Open Sat and Sun",
+      "emoji": "🍝",
+      "stats": [
+        {
+          "value": "8,000",
+          "label": "square feet"
+        },
+        {
+          "value": "6",
+          "label": "food stations"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Zuccaly at The Plaza Coral Gables",
+        "lat": 25.7466,
+        "lon": -80.2579,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 20,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you booking, and what should we check next weekend? You can spend all weekend crossing paths with the same people at brunch, museums, or the mall without ever knowing who they were, and NEAR is for that quiet overlap.",
+      "overlay": "COMMENT 🎟️",
+      "sub": "Oct. 9 to 11 plans",
+      "location": {
+        "name": "Zuccaly at The Plaza Coral Gables",
+        "lat": 25.7466,
+        "lon": -80.2579,
+        "h": 45
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1500,
+        "pitch": -30,
+        "heading": 315
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "072-indoor-south-florida-weekend-plans-oct-9"
+}
