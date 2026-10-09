@@ -1,0 +1,221 @@
+{
+  "title": "Mandarin Oriental Breaks Ground on Brickell Key",
+  "sources": [
+    "CoStar",
+    "The Business Journals",
+    "Wikipedia: Mandarin Oriental, Miami",
+    "Wikipedia: Brickell Key",
+    "Wikipedia: Swire Properties"
+  ],
+  "collaborators": [],
+  "igCaption": "Mandarin Oriental and Swire Properties have broken ground on a new Brickell Key complex after presales topped $1.7 billion.\nThe old hotel opened in November 2000 and came down by implosion on April 12, 2026.\nWould you live on Brickell Key when the new towers open?\n\nSources: CoStar, The Business Journals, Wikipedia: Mandarin Oriental, Miami, Wikipedia: Brickell Key, Wikipedia: Swire Properties\n\n#Miami #Brickell #BrickellKey #MiamiRealEstate",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Brickell Key just broke ground on a Mandarin Oriental project with more than one point seven billion dollars in presales.",
+      "overlay": [
+        "BRICKELL KEY",
+        "$1.7B PRESALES"
+      ],
+      "emojis": [
+        "🏗️",
+        "🏝️",
+        "🏨",
+        "🌊"
+      ],
+      "location": {
+        "name": "Mandarin Oriental, Miami site",
+        "lat": 25.765,
+        "lon": -80.18536,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Mandarin Oriental and Swire Properties broke ground on the new Brickell Key hotel and condo towers. Presales have already topped one point seven billion dollars before the replacement complex opens on the southern tip of the island.",
+      "caption": "Mandarin Oriental and Swire Properties broke ground on the new Brickell Key hotel and condo towers. Presales have already topped $1.7B before the replacement complex opens on the southern tip of the island.",
+      "overlay": "NEW TOWERS",
+      "badge": "$1.7B SALES",
+      "sub": "Groundbreaking on Brickell Key",
+      "emoji": "🏗️",
+      "stats": [
+        {
+          "value": "$1.7B",
+          "label": "presales"
+        }
+      ],
+      "source": "CoStar",
+      "location": {
+        "name": "Mandarin Oriental, Miami site",
+        "lat": 25.765,
+        "lon": -80.18536,
+        "h": 90
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 150,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The old Mandarin Oriental opened in November 2000. It had 295 guestrooms, 31 suites with balconies and terraces, and 15,000 square feet of event space overlooking Biscayne Bay.",
+      "caption": "The old Mandarin Oriental opened in November 2000. It had 295 guestrooms, 31 suites with balconies and terraces, and 15,000 sq ft of event space overlooking Biscayne Bay.",
+      "overlay": "OLD HOTEL",
+      "badge": "OPENED 2000",
+      "sub": "295 rooms on Biscayne Bay",
+      "emoji": "🏨",
+      "stats": [
+        {
+          "value": "295",
+          "label": "guestrooms"
+        },
+        {
+          "value": "15,000 SQ FT",
+          "label": "event space"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "Mandarin Oriental, Miami site",
+        "lat": 25.765,
+        "lon": -80.18536,
+        "h": 80
+      },
+      "shot": {
+        "type": "push",
+        "range": 1100,
+        "pitch": -32,
+        "heading": 240
+      }
+    },
+    {
+      "kind": "item",
+      "text": "That building came down by implosion on April 12, 2026. It opened in 2000.",
+      "caption": "That building came down by implosion on April 12, 2026. It opened in 2000.",
+      "overlay": "IMPLOSION",
+      "badge": "APR 12, 2026",
+      "sub": "Gone in under 20 seconds",
+      "emoji": "💥",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "implosion"
+        }
+      ],
+      "source": "Miami Herald",
+      "hit": "explosion",
+      "location": {
+        "name": "Mandarin Oriental, Miami site",
+        "lat": 25.765,
+        "lon": -80.18536,
+        "h": 70
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 900,
+        "pitch": -36,
+        "heading": 25
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The replacement plan calls for a 66-story tower and a 34-story tower. Together, they will contain 326 private residences and 121 hotel guest rooms, scheduled to open in 2030.",
+      "caption": "The replacement plan calls for a 66-story tower and a 34-story tower. Together, they will contain 326 private residences and 121 hotel guest rooms, scheduled to open in 2030.",
+      "overlay": "2030 PLAN",
+      "badge": "66 STORIES",
+      "sub": "326 homes, 121 hotel rooms",
+      "emoji": "🏙️",
+      "stats": [
+        {
+          "value": "66",
+          "label": "tallest tower"
+        },
+        {
+          "value": "326",
+          "label": "residences"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "Mandarin Oriental, Miami site",
+        "lat": 25.765,
+        "lon": -80.18536,
+        "h": 120
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1700,
+        "pitch": -35,
+        "heading": 315,
+        "degrees": 90,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Brickell Key has Swire history built into it. Swire bought most of the island in the late 1970s, after Edward Claughton combined the islands into a 44-acre triangle-shaped tract in 1943.",
+      "caption": "Brickell Key has Swire history built into it. Swire bought most of the island in the late 1970s, after Edward Claughton combined the islands into a 44-acre triangle-shaped tract in 1943.",
+      "overlay": "BRICKELL KEY",
+      "badge": "44 ACRES",
+      "sub": "Swire bought most of island",
+      "emoji": "🏝️",
+      "stats": [
+        {
+          "value": "44 ACRES",
+          "label": "island tract"
+        },
+        {
+          "value": "1943",
+          "label": "Claughton tract"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "Brickell Key",
+        "lat": 25.766288,
+        "lon": -80.185152,
+        "h": 80
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 1400,
+        "pitch": -32,
+        "heading": 95,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Would you live on Brickell Key when this opens in 2030? Hard to keep track of the people you keep passing in a city that changes this fast, which is exactly where NEAR connects the face you saw to the name you never got.",
+      "overlay": "WOULD YOU LIVE? 🏝️",
+      "sub": "Opening planned for 2030",
+      "location": {
+        "name": "Brickell Key",
+        "lat": 25.766288,
+        "lon": -80.185152,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -33,
+        "heading": 185
+      }
+    }
+  ],
+  "format": "NEW BUILD",
+  "id": "071-mandarin-oriental-breaks-ground-on-brick",
+  "tiktok": true,
+  "music": true
+}
