@@ -72,7 +72,7 @@ jobs:
             mkdir -p state; echo "$SLOT" >> state/slots.txt; tail -n 60 state/slots.txt > s.tmp && mv s.tmp state/slots.txt
             git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
             git add state/slots.txt && git commit -qm "Claim slot $SLOT"
-            for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+            for i in 1 2 3; do git pull -q --rebase --autostash && git push -q && break; sleep 5; done
             echo "NY $D ${H}:xx → starting Reel for ${P}:00 slot ($DELTA min before)"; { echo "go=true"; echo "slot=$P"; } >> "$GITHUB_OUTPUT"; exit 0
           done
           nogo "not a post slot"
@@ -186,7 +186,7 @@ jobs:
               echo "▶ queued video: $NEXT"
               grep -vxF "$NEXT" plan/videos.txt > q.tmp; mv q.tmp plan/videos.txt
               git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
-              git add plan/videos.txt && git commit -qm "Post queued video: $NEXT" && { git pull -q --rebase && git push -q; } || true
+              git add plan/videos.txt && git commit -qm "Post queued video: $NEXT" && { git pull -q --rebase --autostash && git push -q; } || true
               POST_VIDEO="$NEXT"
               W=$(( $(TZ=America/New_York date -d "today ${SLOT}:00" +%s) - $(date +%s) - 240 ))
               if [ "$W" -gt 0 ]; then echo "waiting $((W / 60)) min to post at ${SLOT}:00"; sleep "$W"; fi
@@ -199,7 +199,7 @@ jobs:
             node pipeline/publish.mjs "out/posted/$ID.mp4" "$POST_VIDEO"
             echo "render=false" >> "$GITHUB_OUTPUT"
             git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
-            git add posted.log && git commit -qm "Posted $ID" && { for i in 1 2 3 4; do git pull -q --rebase && git push -q && break; sleep $((i*5)); done; } || true
+            git add posted.log && git commit -qm "Posted $ID" && { for i in 1 2 3 4; do git pull -q --rebase --autostash && git push -q && break; sleep $((i*5)); done; } || true
             exit 0
           fi
           # owner's weekly plan: a run with no topic/episode takes the next line of plan/queue.txt (and removes it)
@@ -210,7 +210,7 @@ jobs:
               echo "▶ weekly plan topic: $REEL_TOPIC"
               grep -vxF "$REEL_TOPIC" plan/queue.txt > q.tmp; mv q.tmp plan/queue.txt
               git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
-              git add plan/queue.txt && git commit -qm "Use planned topic: $REEL_TOPIC" && { git pull -q --rebase && git push -q; } || true
+              git add plan/queue.txt && git commit -qm "Use planned topic: $REEL_TOPIC" && { git pull -q --rebase --autostash && git push -q; } || true
             fi
           fi
           ARGS=()
@@ -371,5 +371,5 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "Reel run ${{ github.run_number }} ($(date -u +%F))"
             # GitHub 500s come in bursts (Oct 7): keep trying for ~5 min
-            for i in 1 2 3 4 5 6 7 8; do git pull -q --rebase && git push -q && break; sleep $((i*10)); done
+            for i in 1 2 3 4 5 6 7 8; do git pull -q --rebase --autostash && git push -q && break; sleep $((i*10)); done
           fi

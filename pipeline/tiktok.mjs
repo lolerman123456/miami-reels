@@ -157,7 +157,7 @@ async function server() {
 function commitToken() { git(['add', 'state/tiktok-token.enc'], 'TikTok connected (encrypted token)'); }
 function git(add, msg) {
   try {
-    execSync(`git config user.name reel-bot && git config user.email reel-bot@users.noreply.github.com && git ${add.join(' ')} && git commit -qm "${msg}" && (git pull -q --rebase || true) && git push -q`, { cwd: ROOT, stdio: 'inherit' });
+    execSync(`git config user.name reel-bot && git config user.email reel-bot@users.noreply.github.com && git ${add.join(' ')} && git commit -qm "${msg}" && (git pull -q --rebase --autostash || true) && git push -q`, { cwd: ROOT, stdio: 'inherit' });
   } catch (e) { console.log('  (git:', e.message.slice(0, 120), ')'); }
 }
 

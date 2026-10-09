@@ -66,7 +66,7 @@ jobs:
             mkdir -p state; echo "$SLOT" >> state/slots.txt; tail -n 80 state/slots.txt > s.tmp && mv s.tmp state/slots.txt
             git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
             git add state/slots.txt && git commit -qm "Claim slot $SLOT"
-            for i in 1 2 3; do git pull -q --rebase && git push -q && break; sleep 5; done
+            for i in 1 2 3; do git pull -q --rebase --autostash && git push -q && break; sleep 5; done
             # the job takes ~6 min to get ready; wait the rest so it posts on the hour
             W=$(( DELTA > 7 ? (DELTA - 7) * 60 : 0 ))
             echo "NY $D → $K carousel for ${P}:00 (in $DELTA min)"
@@ -225,5 +225,5 @@ jobs:
           git reset -q -- 'posts/*-preview/*' 2>/dev/null || true
           if ! git diff --cached --quiet; then
             git commit -m "Post run ${{ github.run_number }} ($(date -u +%F))"
-            for i in 1 2 3 4 5 6 7 8; do git pull -q --rebase && git push -q && break; sleep $((i*10)); done
+            for i in 1 2 3 4 5 6 7 8; do git pull -q --rebase --autostash && git push -q && break; sleep $((i*10)); done
           fi
