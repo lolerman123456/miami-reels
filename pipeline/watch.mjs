@@ -18,6 +18,8 @@ const outDir = path.join(ROOT, 'state', 'watch');
 fs.mkdirSync(outDir, { recursive: true });
 
 const get = async url => { const r = await (await fetch(url)).json(); if (r.error) throw new Error(r.error.message); return r; };
+// which permissions the token has (names only, no secrets) — Business Discovery needs instagram_basic + pages access
+try { const perms = await get(`${api}/me/permissions?access_token=${token}`); console.log('  token permissions:', (perms.data || []).map(p => `${p.permission}:${p.status}`).join(', ')); } catch (e) { console.log('  (could not list permissions)', e.message); }
 const pages = await get(`${api}/me/accounts?fields=instagram_business_account&access_token=${token}`);
 const igUser = (pages.data || []).map(p => p.instagram_business_account?.id).find(Boolean);
 if (!igUser) { console.error('No Instagram business account on the token\'s Pages'); process.exit(1); }
