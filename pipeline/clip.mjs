@@ -214,6 +214,8 @@ export async function chat(messages) {
 }
 
 const RULES = 'Content rules (hard): never a video whose point is a victim, a child or a dead/injured person; no graphic violence, gore or nudity; '
+  // Oct 10: a Florida chase went out labeled Los Angeles
+  + 'PLACE: name a city/state ONLY if the title, description, transcript or a visible sign says it; never guess from the channel or how it looks — if unsure, name no place; '
   // Oct 10: the 6pm fallback posted "Hurricane Isaias" roof footage — a 2020 storm re-uploaded this week
   + 'never OLD footage resurfacing: skip anything whose title/description/footage names a past event or year (a hurricane or storm from a previous season, "2023", "years ago", an anniversary/throwback) — only things that happened in the last few weeks; '
   + 'no ceremonies, meetings, interviews/officer profiles, promotions, PSAs, recruiting, budget talks or other PR — only footage people would actually share: '
@@ -260,7 +262,7 @@ async function analyze(frames, transcript, v, p, mode = 'clip') {
 
 // viral Reel (owner, Oct 3): the raw footage only (dashcam/bodycam/surveillance/phone video), cut at the hooking part,
 // with a freeze-frame moment to label who is who, short "what's happening" captions and a typed hook
-const REEL_RULES = 'Set ok=false when children/students/minors are the main people on camera (school buses, classrooms, kids\' sports), and when the incident is CLEARLY old (a date/year shown or said that is more than a month ago, e.g. a 2023 clip resurfacing) — if nothing dates it, assume it is recent (YouTube Shorts here were uploaded this week). Never a dead body, gore, nudity or a child\'s face; no anchors, reporters or talking heads in the cut (only the raw footage). Never name a victim anywhere (hook, context, captions, caption) — say "a man", "the victim". '
+const REEL_RULES = 'PLACE (Oct 10: a Florida chase was labeled Los Angeles): name a city/state ONLY if the title, description, transcript or a visible sign says it, never from the channel or a guess; if unsure, no place in hook, context, captions or caption. Set ok=false when children/students/minors are the main people on camera (school buses, classrooms, kids\' sports), and when the incident is CLEARLY old (a date/year shown or said that is more than a month ago, e.g. a 2023 clip resurfacing) — if nothing dates it, assume it is recent (YouTube Shorts here were uploaded this week). Never a dead body, gore, nudity or a child\'s face; no anchors, reporters or talking heads in the cut (only the raw footage). Never name a victim anywhere (hook, context, captions, caption) — say "a man", "the victim". '
   + 'Say suspect/accused, never "perpetrator" or "criminal" unless convicted.';
 async function analyzeReel(frames, transcript, v) {
   const content = [{ type: 'text', text: `Frames from "${v.title}" (${v.agency}), each labeled with its time in seconds, plus the transcript. `
@@ -384,6 +386,16 @@ export async function watch(v, p, dir, mode = 'clip') {
   return { check, raw, total, start, dur };
 }
 
+// Oct 10: the hotel-roof clip posted with no sound (the station upload was silent in the cut) — silent footage is skipped
+export async function isSilent(raw, start, dur) {
+  try {
+    const { spawnSync } = await import('node:child_process');
+    const r = spawnSync('ffmpeg', ['-hide_banner', '-ss', String(start), '-t', String(dur), '-i', raw, '-vn', '-af', 'volumedetect', '-f', 'null', '-'], { encoding: 'utf8' });
+    const m = /mean_volume:\s*(-?[\d.]+) dB/.exec(r.stderr || '');
+    return !m || +m[1] < -55; // no audio track, or effectively silent
+  } catch { return false; }
+}
+
 // 4:5 frame: blurred copy fills the background, the clip sits sharp in the middle (zoomed 1.25× so wide footage
 // fills more of the post), credit chip on top
 async function renderVideo(raw, start, dur, agency, out, dir) {
@@ -446,6 +458,9 @@ export async function makeClip({ url, dryRun } = {}) {
     dir = path.join(ROOT, 'out', 'clips', `${date}-${v.id}`);
     w = await watch(v, p, dir);
     check = w?.check;
+    if (check?.ok && (url || check.crazy >= MIN_CRAZY) && !url && await isSilent(w.raw, w.start, w.dur)) {
+      console.log('  skip (no sound in the cut)'); markSeen(v.id, 'silent'); fs.rmSync(dir, { recursive: true, force: true }); check = null; continue;
+    }
     if (check?.ok && (url || check.crazy >= MIN_CRAZY)) {
       ({ start, dur } = w);
       for (const k of ['kicker', 'line1', 'line2', 'hook', 'highlight', 'caption']) if (check[k]) p[k] = check[k];

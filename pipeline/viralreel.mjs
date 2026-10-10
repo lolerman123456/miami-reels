@@ -7,7 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { ROOT, run, step, writeJSON } from './util.mjs';
-import { CHANNELS, STATIONS, MAINSTREAM, recentAgencyVideos, searchViral, searchShorts, chat, watch, ytdlpArgs } from './clip.mjs';
+import { CHANNELS, STATIONS, MAINSTREAM, recentAgencyVideos, searchViral, searchShorts, chat, watch, ytdlpArgs, isSilent } from './clip.mjs';
 import { referenceBlock } from './reference.mjs';
 
 const FPS = 30;
@@ -155,6 +155,7 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     }
     // Oct 10: re-edit channels (ArClips, Apex Chase…) burn in their own hook/arrows/captions that pile up under ours — skip them
     if (!url && c.overlays === true) { console.log('  skip (re-edit with its own burned-in graphics)'); fs.appendFileSync(SEEN, `${v.id}  reel-overlays\n`); fs.rmSync(dir, { recursive: true, force: true }); continue; }
+    if (!url && await isSilent(w.raw, w.start, w.dur)) { console.log('  skip (no sound in the cut)'); fs.appendFileSync(SEEN, `${v.id}  reel-silent\n`); fs.rmSync(dir, { recursive: true, force: true }); continue; }
     // owner, Oct 4: no blurred top/bottom and nothing important cropped out — only vertical (9:16-ish) footage
     const [rw, rh] = execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', w.raw]).toString().trim().split(',').map(Number);
     const [rw0, rh0] = execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', w.raw]).toString().trim().split(',').map(Number);
