@@ -1,0 +1,80 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "ONE PERSON WAS DETAINED AFTER",
+    "main": "A FATAL STABBING",
+    "highlight": "AT A TAMARAC HOME",
+    "bottom": "FRIDAY NIGHT",
+    "blur": false,
+    "photo": {
+      "query": "Broward Sheriff Office patrol car crime scene tape night Tamarac Florida home",
+      "prompt": "Dramatic nighttime crime scene outside a Tamarac home with sheriff patrol lights reflecting on the street and crime scene tape in the foreground, no people visible"
+    },
+    "emojis": [
+      "🚨",
+      "🏠",
+      "📍"
+    ],
+    "logos": [
+      "sheriff.org"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Local 10",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "One person was detained after the fatal stabbing",
+      "highlight": "one person was detained",
+      "body": "A woman is dead after a stabbing at a Tamarac home. Broward deputies detained one person at the scene.",
+      "place": "Tamarac",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "crime scene tape sheriff patrol car night Florida residential home",
+        "prompt": "Close view of yellow crime scene tape with red and blue sheriff patrol lights outside a South Florida home at night, no people visible",
+        "mark": "circle"
+      },
+      "emoji": "🚨",
+      "chip": "1 DETAINED",
+      "logo": "wsvn.com",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The stabbing happened at a Tamarac home Friday night",
+      "highlight": "Friday night",
+      "body": "Broward Sheriff’s Office deputies investigated the deadly stabbing in Tamarac on Friday night.",
+      "place": "Tamarac",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Tamarac Florida residential street at night police lights",
+        "prompt": "A quiet Tamarac residential street at night lit by red and blue emergency lights, with homes visible and no people"
+      },
+      "emoji": "🏠",
+      "chip": "FRI NIGHT",
+      "logo": "local10.com",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": "logo-2.png"
+    }
+  ],
+  "caption": "One person was detained after a fatal stabbing at a Tamarac home Friday night.\n\nWhat did deputies find at the scene?",
+  "hashtags": [
+    "#Tamarac",
+    "#BrowardCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "One person was detained after a fatal stabbing at a Tamarac home Friday night.\n\nWhat did deputies find at the scene?\n\n📰 Sources: WSVN 7News, WPLG Local 10\n\n🎥 Video: WPLG Local 10\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#Tamarac #BrowardCounty #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-10",
+  "id": "2026-10-10-brief",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "WPLG Local 10",
+    "url": "https://www.youtube.com/watch?v=MLkNTkLpLy4"
+  }
+}
