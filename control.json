@@ -33,5 +33,6 @@
   "tiktokSlideshowKinds": [
     "upcoming",
     "deals"
-  ]
+  ],
+  "tiktokDrafts": false
 }
