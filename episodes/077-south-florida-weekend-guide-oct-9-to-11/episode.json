@@ -1,0 +1,199 @@
+{
+  "title": "South Florida Weekend Guide: Oct. 9 to 11",
+  "sources": [
+    "Miami New Times",
+    "The Miami Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Four South Florida plans for this weekend, with music first.\nOct. 9 to 11, Miami to Fort Lauderdale, tickets from $23\n\nSources: Miami New Times, The Miami Times\n\n#MiamiEvents #SouthFlorida #MiamiWeekend #FortLauderdale",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a weekend plan? South Florida has Patti Smith, Celia Cruz music, Ricky Martin, and Black Violin in three days.",
+      "overlay": [
+        "WEEKEND",
+        "GUIDE"
+      ],
+      "emojis": [
+        "🎤",
+        "🎻",
+        "🎶",
+        "📍"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.78138889,
+        "lon": -80.18805556,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Patti Smith is at the Adrienne Arsht Center Friday at seven p.m. The show ties to her memoir, Bread of Angels, with stories from the book and songs inspired by them. Full-price tickets include a copy, and tickets start at forty dollars.",
+      "caption": "Patti Smith is at the Adrienne Arsht Center Friday at 7 p.m. The show ties to her memoir, Bread of Angels, with stories from the book and songs inspired by them. Full-price tickets include a copy, and tickets start at $40.",
+      "overlay": "ARSHT CENTER",
+      "badge": "7 PM FRI",
+      "sub": "Tickets from $40",
+      "emoji": "📖",
+      "stats": [
+        {
+          "value": "$40",
+          "label": "tickets start"
+        },
+        {
+          "value": "7 PM",
+          "label": "Friday show"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Adrienne Arsht Center",
+        "lat": 25.787684,
+        "lon": -80.188633,
+        "h": 70
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Celia Vive is Saturday at the Miramar Cultural Center at eight p.m. Lucrecia performs with the Celia Cruz All Stars Band for the one hundredth anniversary of Celia Cruz’s birth. Tickets run thirty to fifty dollars.",
+      "caption": "Celia Vive is Saturday at the Miramar Cultural Center at 8 p.m. Lucrecia performs with the Celia Cruz All Stars Band for the 100th anniversary of Celia Cruz’s birth. Tickets run $30 to $50.",
+      "overlay": "MIRAMAR",
+      "badge": "100 YEARS",
+      "sub": "Celia Cruz tribute",
+      "emoji": "💃",
+      "stats": [
+        {
+          "value": "100",
+          "label": "birth anniversary"
+        },
+        {
+          "value": "$30",
+          "label": "tickets from"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miramar Cultural Center",
+        "lat": 25.986357,
+        "lon": -80.301659,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 80,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Ricky Martin plays Hard Rock Live in Hollywood Saturday at eight p.m. He has sold ninety-five million albums, with two Grammys and four Latin Grammys. Tickets start at fifty-five dollars and go up to nine hundred thirty-five. If you’re at Hard Rock Live, check NEAR for who’s there too.",
+      "caption": "Ricky Martin plays Hard Rock Live in Hollywood Saturday at 8 p.m. He has sold 95 million albums, with 2 Grammys and 4 Latin Grammys. Tickets start at $55 and go up to $935. If you’re at Hard Rock Live, check NEAR for who’s there too.",
+      "overlay": "HARD ROCK",
+      "badge": "95M ALBUMS",
+      "sub": "Saturday in Hollywood",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "95M",
+          "label": "albums sold"
+        },
+        {
+          "value": "$55",
+          "label": "tickets from"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Hard Rock Live",
+        "lat": 26.051269,
+        "lon": -80.211338,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -30,
+        "heading": 215,
+        "degrees": 75,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Black Violin comes home Sunday at the Broward Center at seven p.m. Wil Baptiste and Kev Marcus bring the Be Free Tour to Fort Lauderdale, with Braxton Cook opening. Tickets run twenty-three to one hundred five dollars.",
+      "caption": "Black Violin comes home Sunday at the Broward Center at 7 p.m. Wil Baptiste and Kev Marcus bring the Be Free Tour to Fort Lauderdale, with Braxton Cook opening. Tickets run $23 to $105.",
+      "overlay": "BROWARD CENTER",
+      "badge": "$23 START",
+      "sub": "Sunday at 7 PM",
+      "emoji": "🎻",
+      "stats": [
+        {
+          "value": "$23",
+          "label": "tickets from"
+        },
+        {
+          "value": "7 PM",
+          "label": "Sunday show"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Broward Center",
+        "lat": 26.119462,
+        "lon": -80.149684,
+        "h": 50
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -32,
+        "heading": 305,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you pick this weekend? You know the people you pass at a festival or bar and never actually meet? NEAR is for finding out who they were.",
+      "overlay": "PICK ONE 🎟️",
+      "sub": "Drop your weekend plan",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 20
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "077-south-florida-weekend-guide-oct-9-to-11"
+}
