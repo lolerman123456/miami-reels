@@ -8,6 +8,7 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { ROOT, run, step, writeJSON } from './util.mjs';
 import { CHANNELS, STATIONS, MAINSTREAM, recentAgencyVideos, searchViral, searchShorts, chat, watch, ytdlpArgs } from './clip.mjs';
+import { referenceBlock } from './reference.mjs';
 
 const FPS = 30;
 const SEEN = path.join(ROOT, 'state', 'clips-seen.txt');
@@ -22,7 +23,10 @@ async function pickVideos(videos, hint = '') {
     + 'Streamer/creator clips count too when something wild happens on stream. It needs SUBSTANCE (owner, Oct 4): a full mini-story with a payoff (arrest, karma, save, crash, comeback) and 30 s+ of footage — skip 10-second snippets, compilations and clips with no resolution. '
     + 'It must be GENUINELY viral — something you can\'t stop watching where something big visibly happens on camera (an arrest everyone is talking about, a crash, a fight, a wild animal, a rescue); '
     + 'skip routine footage where nothing visible happens (dark chases with just taillights, parked cars, empty streets). High view counts matter. '
-    + (hint ? `THIS TIME the owner wants: ${hint}. ` : '') + 'Reply JSON {"picks": [{"index": n, "why": "…"}]}' },
+    // owner, Oct 10 (from @onlyindade's numbers): their biggest Reels are phone videos of LOCAL confrontations — an argument
+    // that boils over, a fight at a store/boat ramp, a public meltdown, wild driving — so those come first, South Florida first
+    + 'TOP PRIORITY (owner, Oct 10): South Florida / Florida phone videos of real-life confrontations people argue about in the comments — a heated argument, a fight at a store, gas station or boat ramp, a public meltdown, road rage, wild driving, a wild arrest. Then bodycam/dashcam and everything else. '
+    + (hint ? `THIS TIME the owner wants: ${hint}. ` : '') + 'Reply JSON {"picks": [{"index": n, "why": "…"}]}' + referenceBlock({ type: 'Reel' }) },
   { role: 'user', content: videos.map((v, i) => `${i}. [${v.agency}] ${v.title} (${v.published.slice(0, 10)}, ${v.views} views)${v.description ? ' — ' + v.description.slice(0, 160) : ''}`).join('\n') }]);
   return (r.picks || []).filter(x => videos[x.index]);
 }
@@ -217,7 +221,7 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
     const local = '/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell';
     await run('npx', ['remotion', 'render', 'src/index.ts', 'Viral', out, `--props=${path.join(dir, 'props.json')}`, `--public-dir=${dir}`,
       '--codec=h264', '--crf=20', '--audio-bitrate=192k', ...(!process.env.CI && fs.existsSync(local) ? [`--browser-executable=${local}`] : [])]);
-    const caption = [c.caption || c.hook, '', 'Follow @getnearapp for more 👀'].join('\n');
+    const caption = c.caption || c.hook; // owner, Oct 10: one punchy line like @onlyindade (+ credit + hashtags from analyzeReel)
     const post = { id: `${date}-viral-${v.id}`, source: v.url, agency: v.agency, title: v.title, start, end, ...c, props, video: out, igCaption: caption };
     writeJSON(path.join(dir, 'post.json'), post);
     for (const f of fs.readdirSync(dir)) if (/^f\d+\.jpg$|^raw\.mp4|\.vtt$/.test(f)) fs.rmSync(path.join(dir, f), { force: true });

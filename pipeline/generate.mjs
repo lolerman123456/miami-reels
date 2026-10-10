@@ -103,7 +103,7 @@ OUTPUT strictly this JSON:
   "title": "…",
   "sources": ["outlet or Wikipedia article or 'Zillow Observed Rent Index'", …],
   "collaborators": ["handles from the COLLABORATORS list, or empty"],
-  "igCaption": "2–4 informative lines with the most interesting facts, a question for the comments, then exactly 4 hashtags",
+  "igCaption": "ONE punchy line like @onlyindade (≤110 chars, plain words, 0–1 emoji), then for events one short line with the date, venue and price, then exactly 4 hashtags",
   "scenes": [
     { "kind": "hook", "text": "…", "overlay": ["LINE 1 ≤18 chars", "LINE 2 ≤18 chars"], "emojis": ["4 emojis"],
       "location": {"name": "…", "lat": 0, "lon": 0, "h": 0}, "shot": {"type": "dive", "range": 1600, "pitch": -32, "heading": 200} },

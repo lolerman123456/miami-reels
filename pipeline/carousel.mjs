@@ -10,6 +10,7 @@ import { getPhoto, newPost } from './photos.mjs';
 import { chatJSON } from './llm.mjs';
 import { aiTells, BANNED } from './generate.mjs';
 import { wikiArticle, rentFacts, gasFacts } from './facts.mjs';
+import { referenceBlock } from './reference.mjs';
 import { STYLE, REMINDER, toneLines, sanitize, memeTells, HANDLES_RULE, cleanCollabs } from './style.mjs';
 
 const HANDLE = '@getnearapp';
@@ -61,7 +62,7 @@ Rules:
 - SECTOR: pick ONE section label for the post from: EVENTS, FOOD, DEALS, ECONOMY, TRAFFIC, WEATHER, REAL ESTATE, CRIME, DEVELOPMENT, TRANSIT,
   HISTORY, SPORTS, HEALTH, EDUCATION, CITY HALL, WORLD, USA (events/parties/concerts → EVENTS, restaurants/food → FOOD, freebies → DEALS). Single-topic posts use that same label on every slide.
   Never use labels like UPDATE, FACT, MONEY, NEWS.
-- Caption: 1–2 informative lines, then a real question for the comments. Don't list sources in the caption (we add them).
+- Caption (owner, Oct 10: copy @onlyindade): ONE punchy line, ≤110 characters, plain words, 0–1 emoji, that makes people comment or send it (e.g. "A wife looked through her husband's phone and ended up calling the cops on him", "Imagine explaining to your mom how you lost $110,000 on your birthday"). No second line, no question list. Don't list sources in the caption (we add them).
 
 The cover is a scroll-stopping hook in this exact stacked style (all caps on the image):
   top: small setup line (e.g. "POLICE SAY", "DID YOU KNOW", "NOBODY TALKS ABOUT", "RENT IN")
@@ -204,11 +205,14 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     const trending = kind === 'news' ? await fetchViral().catch(() => []) : [];
     if (trending.length) console.log(`  trending: ${trending.length} (${trending.slice(0, 4).map(t => t.title.slice(0, 40)).join('; ')})`);
     const TREND = trending.length ? `\n\nTRENDING RIGHT NOW (what South Florida is sharing and searching; a signal only, not a source):\n${trending.map(t => `- ${t.source}: ${t.title}${t.summary ? ' — ' + t.summary : ''}`).join('\n')}\n\nPrefer a headline story that is ALSO trending above. A trending item with no news headline can be picked only if the searches will find real reporting on it; never a private person, a lost pet, a personal post or an unconfirmed Reddit claim.` : '';
+    // owner, Oct 10: copy what works for @onlyindade (their top carousels this week — story type and hook style, never their facts)
+    const ref = kind === 'world' ? '' : referenceBlock({ type: 'Carousel' });
+    const REF = ref + (ref ? '\nPrefer the story that is most like these in TYPE (a relatable local moment, a wild arrest, money lost, a neighbor fight).' : '');
     const choice = await chat([{ role: 'system', content: `Pick ${spec.pick}\n` +
       // owner (Sep 29): stories must not be boring — a hook and real substance, not procedure
       'BORING TEST: skip stories that are only procedure or paperwork (a lawsuit filed, a meeting, a proposal, a study, a statement, a vote scheduled) unless there is a vivid, surprising detail people would repeat to a friend (a shocking number, a wild moment, a famous name, a big price, a real danger, a twist). Pick the story with the strongest "wait, what?" detail AND enough reported facts to fill 5–6 slides (what happened, key numbers, how it started, who it hits here, what happens next). ' +
       `Return JSON {"story":"one sentence","hook":"the single most surprising, specific detail in the headlines (a number, name, place or moment) that the cover should lead with","search":["2–4 Google News searches to find more reporting on that exact story"],"wikipedia":["0–2 exact English Wikipedia titles for background (a country, a conflict, a place)"],"photos":[indexes of headlines marked [PHOTO] that are about this exact story, best first — mugshots and real scene photos first],"articles":[indexes of ALL headlines about this exact story],"accused":"full name of the person accused/charged/arrested, or empty"}\nPHOTOS MATTER (owner: no AI images): when two stories are close, pick the one with a [PHOTO] headline or a named accused person (their booking photo is public).` },
-      { role: 'user', content: `Headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.image ? ' [PHOTO]' : ''}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}\n\nAlready posted (pick something else unless there is a big new development):\n${recentPosts(2).map(p => '- ' + [p.cover?.main, p.cover?.highlight].filter(Boolean).join(' ') + ': ' + (p.slides || []).map(x => x.headline).join('; ')).join('\n') || '(none)'}${TREND}` }]);
+      { role: 'user', content: `Headlines:\n${news.map((n, i) => `${i}. ${n.source} — ${n.title}${n.image ? ' [PHOTO]' : ''}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}\n\nAlready posted (pick something else unless there is a big new development):\n${recentPosts(2).map(p => '- ' + [p.cover?.main, p.cover?.highlight].filter(Boolean).join(' ') + ': ' + (p.slides || []).map(x => x.headline).join('; ')).join('\n') || '(none)'}${TREND}${REF}` }]);
     console.log(`  story: ${choice.story}`);
     // the outlets' own news photos (mugshots, scenes, people in the story) are what make people stop scrolling
     storyText = `${choice.story} ${choice.hook || ''}`.trim();
@@ -342,7 +346,6 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   post.igCaption = [
     post.caption,
     sources.length ? `📰 Sources: ${sources.join(', ')}` : '',
-    `📍 Got an only-in-Miami moment? Tag ${HANDLE} or DM us to get featured.`,
     tags.join(' '),
   ].filter(Boolean).join('\n\n');
   post.kind = kind;
@@ -374,7 +377,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     if (v) {
       post.video = { file: path.basename(v.file), agency: v.agency, url: v.url };
       post.slides = post.slides.slice(0, 2);
-      post.igCaption = post.igCaption.replace(/\n\n(📍)/, `\n\n🎥 Video: ${v.agency}\n\n$1`);
+      post.igCaption = post.igCaption.replace(/\n\n(#)/, `\n\n🎥 Video: ${v.agency}\n\n$1`);
     }
   }
   // real photos first (owner, Oct 2: "too much AI is annoying"): the outlets' photos, reused across slides before any AI
