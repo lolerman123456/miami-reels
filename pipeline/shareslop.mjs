@@ -34,7 +34,7 @@ async function candidates() {
 }
 
 // owner, Oct 6 (after the first previews): the format is "[ridiculous thing the sender wants] + [normal-sounding benefit], STUDY SHOWS"
-// — e.g. "CALLING HIM DADDY INCREASES HIS LIFESPAN, STUDY SHOWS" with an exaggerated picture (heart eyes). It's a parody
+// — e.g. "CALLING HIM DADDY INCREASES HIS LIFESPAN, STUDY SHOWS" with an exaggerated (but real-looking, no cartoon overlays) picture. It's a parody
 // meme format: obviously absurd, harmless if "followed", never about real people/groups, tagged #satire in the caption.
 async function write(items, recent, topic = '') {
   return chatJSON([{ role: 'system', content: 'You run a viral meme SHARE page (style: @lostmydaddy). Every post is ONE picture + a huge headline in this exact formula: '
@@ -49,8 +49,8 @@ async function write(items, recent, topic = '') {
     + `Recent posts — use a DIFFERENT ask, a DIFFERENT benefit (rotate: lifespan, immune system, blood pressure, credit score, IQ, sleep, skin, height, hairline, stress, heart, metabolism…) and switch who it targets: ${recent.join(' | ') || 'none'}.\n`
     + 'Write: "headline": 6–12 words, ALL CAPS, the formula; then split it into the NEAR news-cover lines (each line is set on ONE line, so keep them short): '
     + '"top": ≤14 chars small kicker (e.g. "NEW STUDY:", "STUDY SHOWS:", "DOCTORS SAY:"), "main": ≤13 chars, "highlight": ≤11 chars (the ridiculous ask, shown huge in blue), "bottom": ≤16 chars (the benefit) — SHORT lines print BIG (owner wants it big), so cut words: "BUYING HER" / "RANDOM FLOWERS" not "BUYING HER FLOWERS FOR NO REASON" — read in order they say the headline; '
-    + '"image": a realistic, comedic viral-photo scene ACTING OUT the first half (real-looking people and place, the over-the-top part is their expressions and the situation; no glowing/cartoon overlays except heart-eyes for a swooning moment) (e.g. for the daddy one: a woman with giant glowing cartoon heart-shaped eyes swooning while calling her boyfriend daddy, he looks smug and glowing with health, '
-    + 'hearts floating) — describe exactly who is where doing what and their exaggerated expressions; invented ordinary people, no text; '
+    + '"image": a realistic, comedic viral-photo scene ACTING OUT the first half (real-looking people and place, the over-the-top part is their expressions and the situation; NO cartoon overlays at all — no heart-eyes, no floating hearts, no emoji, no glow: the photo must look like a real candid phone photo; owner, Oct 10) (e.g. for the daddy one: a woman swooning with a huge dreamy grin, hand on her chest, while calling her boyfriend daddy, he looks smug and visibly pleased with himself, '
+    + 'standing a little taller) — describe exactly who is where doing what and their exaggerated expressions; invented ordinary people, no text; '
     + '"cta": short call to action printed on the image, ALL CAPS, ≤22 chars + 1 emoji, addressed to whoever should DO the ask (buying HER flowers → "SEND THIS TO HIM 👀"; calling HIM daddy → "SEND THIS TO HER 👀"; e.g. "SEND TO YOUR MAN 😭", "TAG YOUR BESTIE 🫶"); '
     + '"caption": 1–2 deadpan lines in fake-news voice ("A new study found that…") + the same send-it line; "hashtags": 2 hashtags (the code adds #satire); "angle": 3-word label. '
     + 'First draft 5 options, score each "send": 1–10 = how likely someone forwards it to their partner/friend right now, then return ONLY the best. '
