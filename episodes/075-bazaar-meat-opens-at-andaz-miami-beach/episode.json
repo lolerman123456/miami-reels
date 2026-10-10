@@ -1,0 +1,188 @@
+{
+  "title": "Bazaar Meat Opens at Andaz Miami Beach",
+  "sources": [
+    "Haute Living",
+    "WhatNow",
+    "Miami New Times",
+    "Observer",
+    "Wikipedia José Andrés",
+    "Wikipedia Hyatt",
+    "Wikipedia Miami Beach"
+  ],
+  "collaborators": [],
+  "igCaption": "Bazaar Meat Miami Beach opens October 22 at Andaz Miami Beach.\nJosé Andrés has won several James Beard Awards and founded World Central Kitchen.\nWould you try for a reservation here?\n\nSources: Haute Living, WhatNow, Miami New Times, Observer, Wikipedia José Andrés, Wikipedia Hyatt, Wikipedia Miami Beach\n\n#MiamiBeach #BazaarMeat #JoseAndres #SouthFloridaFood",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "José Andrés is opening Bazaar Meat at Andaz Miami Beach on October twenty-second.",
+      "overlay": [
+        "BAZAAR MEAT",
+        "OCT 22"
+      ],
+      "emojis": [
+        "🥩",
+        "🍷",
+        "🏨",
+        "📍"
+      ],
+      "location": {
+        "name": "Andaz Miami Beach",
+        "lat": 25.8137,
+        "lon": -80.1227,
+        "h": 35
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Bazaar Meat Miami Beach opens October twenty-second at Andaz Miami Beach.",
+      "caption": "Bazaar Meat Miami Beach opens Oct. 22 at Andaz Miami Beach.",
+      "overlay": "ANDAZ",
+      "badge": "OPENS OCT 22",
+      "sub": "Bazaar Meat arrives",
+      "emoji": "🥩",
+      "stats": [
+        {
+          "value": "OCT 22",
+          "label": "opening date"
+        }
+      ],
+      "source": "Haute Living",
+      "location": {
+        "name": "Andaz Miami Beach",
+        "lat": 25.8137,
+        "lon": -80.1227,
+        "h": 35
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 850,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "José Andrés was born in Spain on July thirteenth, nineteen sixty-nine. He moved to the United States in the early nineteen nineties, and in nineteen ninety-three he led the kitchen at Jaleo in Washington, D.C.",
+      "caption": "José Andrés was born in Spain on July 13, 1969. He moved to the United States in the early 1990s, and in 1993 he led the kitchen at Jaleo in Washington, D.C.",
+      "overlay": "JOSÉ ANDRÉS",
+      "badge": "BORN 1969",
+      "sub": "Chef behind Bazaar",
+      "emoji": "👨‍🍳",
+      "stats": [
+        {
+          "value": "1969",
+          "label": "year born"
+        },
+        {
+          "value": "1993",
+          "label": "Jaleo role"
+        }
+      ],
+      "source": "Wikipedia José Andrés",
+      "location": {
+        "name": "Andaz Miami Beach",
+        "lat": 25.8137,
+        "lon": -80.1227,
+        "h": 35
+      },
+      "shot": {
+        "type": "push",
+        "range": 700,
+        "pitch": -30,
+        "heading": 80
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Andrés founded World Central Kitchen, a nonprofit that provides meals after natural disasters. The organization took in five hundred nineteen million dollars in grants and donations in twenty twenty-two.",
+      "caption": "Andrés founded World Central Kitchen, a nonprofit that provides meals after natural disasters. The organization took in $519 million in grants and donations in 2022.",
+      "overlay": "WORLD CENTRAL",
+      "badge": "$519M",
+      "sub": "WCK donations in 2022",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "$519M",
+          "label": "2022 donations"
+        }
+      ],
+      "source": "Wikipedia José Andrés",
+      "location": {
+        "name": "Andaz Miami Beach",
+        "lat": 25.8137,
+        "lon": -80.1227,
+        "h": 35
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 650,
+        "pitch": -28,
+        "heading": 255
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Andaz launched in April two thousand seven. Hyatt has more than one thousand three hundred fifty hotels and all-inclusive properties in sixty-nine countries.",
+      "caption": "Andaz launched in April 2007. Hyatt has more than 1,350 hotels and all-inclusive properties in 69 countries.",
+      "overlay": "ANDAZ BRAND",
+      "badge": "1,350+ HOTELS",
+      "sub": "Hyatt global footprint",
+      "emoji": "🏨",
+      "stats": [
+        {
+          "value": "2007",
+          "label": "Andaz launch"
+        },
+        {
+          "value": "69",
+          "label": "countries"
+        }
+      ],
+      "source": "Wikipedia Hyatt",
+      "location": {
+        "name": "Andaz Miami Beach",
+        "lat": 25.8137,
+        "lon": -80.1227,
+        "h": 35
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -34,
+        "heading": 20,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Would you try to get a table here on opening week? Opening week is the kind of night you spot the same face in line, never catch their name, and NEAR shows you who that was.",
+      "overlay": "WOULD YOU GO? 🍽️",
+      "sub": "October twenty-second",
+      "location": {
+        "name": "Andaz Miami Beach",
+        "lat": 25.8137,
+        "lon": -80.1227,
+        "h": 35
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 310
+      }
+    }
+  ],
+  "format": "NEW BUILD",
+  "id": "075-bazaar-meat-opens-at-andaz-miami-beach",
+  "tiktok": true,
+  "music": true
+}
