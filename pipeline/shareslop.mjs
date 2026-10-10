@@ -89,8 +89,12 @@ async function makeOne(n, items, recent, dryRun, topic = '', photo = false) {
   fs.mkdirSync(path.dirname(SEEN), { recursive: true });
   fs.appendFileSync(SEEN, `${key(post.headline)}\t${post.angle || ''}\t${id}\n`);
   if (dryRun) { console.log(`  (dry run) ${dir}`); return post; }
-  const { publishReelWithMusic } = await import('./publish.mjs');
-  await publishReelWithMusic(mp4, post.caption, { audioVolume: 70 }); // no voice → the song carries it
+  const { publishReelWithMusic, publishReel } = await import('./publish.mjs');
+  try { await publishReelWithMusic(mp4, post.caption, { audioVolume: 70 }); } // no voice → the song carries it
+  catch (e) { // Oct 10: expired FB token lost the 7pm slot — post it without the song rather than not at all
+    console.log(`  (music post failed: ${e.message.slice(0, 200)} — posting without music)`);
+    await publishReel(mp4, post.caption);
+  }
   return post;
 }
 

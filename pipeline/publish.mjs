@@ -104,9 +104,16 @@ export async function publishReelWithMusic(videoFile, caption, { collaborators =
 export async function postMusicReel(videoFile, episode) {
   let on = true;
   try { on = readJSON(path.join(ROOT, 'control.json')).igMusic !== false; } catch {}
-  if (!on || !process.env.FB_ACCESS_TOKEN) { console.log(`  (music Reel not auto-posted: igMusic=${on}, FB_ACCESS_TOKEN ${process.env.FB_ACCESS_TOKEN ? 'set' : 'missing'})`); return false; }
+  // owner went hands-off (Oct 10): a hand-off means nothing gets posted, so without music the Reel still goes out (plain Reel,
+  // Instagram-Login token). Oct 10 7pm/8pm: the FB token expired after 2 h and both slots were lost to the hand-off.
+  const plain = async why => {
+    console.log(`  (${why} — posting it without music)`);
+    try { await publishReel(videoFile, episode.igCaption, { collaborators: episode.collaborators }); return true; }
+    catch (e) { console.log(`  (plain post failed too: ${e.message.slice(0, 300)}; handing it to the owner)`); return false; }
+  };
+  if (!on || !process.env.FB_ACCESS_TOKEN) return plain(`music off: igMusic=${on}, FB_ACCESS_TOKEN ${process.env.FB_ACCESS_TOKEN ? 'set' : 'missing'}`);
   try { await publishReelWithMusic(videoFile, episode.igCaption, { collaborators: episode.collaborators }); return true; }
-  catch (e) { console.log(`  (music post failed: ${e.message.slice(0, 300)}; handing it to the owner)`); return false; }
+  catch (e) { return plain(`music post failed: ${e.message.slice(0, 300)}`); }
 }
 
 // Carousel of 2–10 JPEGs (Instagram only accepts JPEG for images).
