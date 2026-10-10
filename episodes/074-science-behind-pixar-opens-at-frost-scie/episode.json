@@ -1,0 +1,139 @@
+{
+  "title": "Science Behind Pixar Opens at Frost Science",
+  "sources": [
+    "WLRN",
+    "Resident Magazine",
+    "The Miami Guide",
+    "Yahoo",
+    "Time Out Worldwide"
+  ],
+  "collaborators": [],
+  "igCaption": "The Science Behind Pixar comes to Frost Science this fall.\nIt explores the science behind Pixar films.\nWhich Pixar movie would you want explained first?\n\nSources: WLRN, Resident Magazine, The Miami Guide, Yahoo, Time Out Worldwide\n\n#FrostScience #Pixar #MiamiEvents #ThingsToDoMiami",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Frost Science is opening a Pixar exhibit with the science behind the movies.",
+      "overlay": [
+        "PIXAR AT",
+        "FROST SCIENCE"
+      ],
+      "emojis": [
+        "🚀",
+        "🤖",
+        "💙",
+        "🔬"
+      ],
+      "location": {
+        "name": "Phillip and Patricia Frost Museum of Science",
+        "lat": 25.7853,
+        "lon": -80.1878,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Science Behind Pixar comes to the Phillip and Patricia Frost Museum of Science this fall. It focuses on the science and technology behind Pixar films.",
+      "caption": "The Science Behind Pixar comes to the Phillip and Patricia Frost Museum of Science this fall. It focuses on the science and technology behind Pixar films.",
+      "overlay": "FROST SCIENCE",
+      "badge": "THIS FALL",
+      "sub": "Pixar science exhibit",
+      "emoji": "🎬",
+      "stats": [],
+      "source": "WLRN",
+      "location": {
+        "name": "Phillip and Patricia Frost Museum of Science",
+        "lat": 25.7853,
+        "lon": -80.1878,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -34,
+        "heading": 145,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The exhibit breaks down the science behind Pixar films. If you go, peek on NEAR and see who else’s there.",
+      "caption": "The exhibit breaks down the science behind Pixar films. If you go, peek on NEAR and see who else’s there.",
+      "overlay": "PIXAR SCIENCE",
+      "badge": "AT FROST SCIENCE",
+      "sub": "Interactive exhibit",
+      "emoji": "🧪",
+      "stats": [],
+      "source": "Yahoo",
+      "location": {
+        "name": "Phillip and Patricia Frost Museum of Science",
+        "lat": 25.7853,
+        "lon": -80.1878,
+        "h": 80
+      },
+      "shot": {
+        "type": "push",
+        "range": 700,
+        "pitch": -30,
+        "heading": 40
+      }
+    },
+    {
+      "kind": "item",
+      "text": "It comes to Miami this fall.",
+      "caption": "It comes to Miami this fall.",
+      "overlay": "MIAMI THIS FALL",
+      "badge": "FALL 2026",
+      "sub": "At Frost Science",
+      "emoji": "🎟️",
+      "stats": [],
+      "source": "The Miami Guide",
+      "location": {
+        "name": "Phillip and Patricia Frost Museum of Science",
+        "lat": 25.7853,
+        "lon": -80.1878,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 315,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which Pixar movie should Frost Science explain first? The same way a great exhibit leaves you wondering who was standing beside you, NEAR shows you the people who walked past you all day and never got introduced.",
+      "overlay": "WHAT FIRST? 🔬",
+      "sub": "Tell us in the comments",
+      "location": {
+        "name": "Phillip and Patricia Frost Museum of Science",
+        "lat": 25.7853,
+        "lon": -80.1878,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 110
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "074-science-behind-pixar-opens-at-frost-scie"
+}
