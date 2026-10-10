@@ -149,6 +149,8 @@ export async function makeViralReel({ url, dryRun, hint } = {}) {
       fs.rmSync(dir, { recursive: true, force: true });
       continue;
     }
+    // Oct 10: re-edit channels (ArClips, Apex Chase…) burn in their own hook/arrows/captions that pile up under ours — skip them
+    if (!url && c.overlays === true) { console.log('  skip (re-edit with its own burned-in graphics)'); fs.appendFileSync(SEEN, `${v.id}  reel-overlays\n`); fs.rmSync(dir, { recursive: true, force: true }); continue; }
     // owner, Oct 4: no blurred top/bottom and nothing important cropped out — only vertical (9:16-ish) footage
     const [rw, rh] = execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', w.raw]).toString().trim().split(',').map(Number);
     const [rw0, rh0] = execFileSync('ffprobe', ['-v', 'error', '-select_streams', 'v:0', '-show_entries', 'stream=width,height', '-of', 'csv=p=0', w.raw]).toString().trim().split(',').map(Number);

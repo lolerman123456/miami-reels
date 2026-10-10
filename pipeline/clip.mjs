@@ -271,6 +271,7 @@ async function analyzeReel(frames, transcript, v) {
     + '"freeze": seconds (absolute) of an EARLY frame 1–3 s after your start (start the cut ~1 s before the subjects are clearly visible, but never after the main action) where the main people/vehicles are clearly visible and big, or null, '
     + '"fill": true if the important action stays inside a vertical 9:16 window for the whole cut (so the video can fill the phone screen without cutting anything important), "focusX": 0-1 horizontal center of that window (of the cropped footage), '
     + '"crop": {"x":0-1,"y":0-1,"w":0-1,"h":0-1} the box (normalized, top-left origin) of the RAW footage inside the frame, leaving out ALL TV graphics — lower-third headline/name bars (often the bottom 15–25%), tickers, bugs/logos, a Short\'s burned-in channel title/banner band (e.g. a big "High speed Chases" logo across the top) and black bars — and blurred side bars (a vertical phone video shown inside a TV frame → just that phone video), or null if it already fills the frame, '
+    + '"overlays": true if the video is already a re-edit with its own burned-in edit graphics over most of the footage (a hook/title text like "Dont Miss the End", drawn red circles/arrows, emoji captions, subtitles styled by a compilation channel) — raw footage with only a small logo/timestamp is false, '
     + '"caption": "Instagram caption: 2–4 short lines (accused wording), where, \\"🎥 Video: <source>\\", 3 hashtags"}' }];
   for (const f of frames) {
     content.push({ type: 'text', text: `t=${f.t}s` });
