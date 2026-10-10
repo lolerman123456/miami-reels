@@ -466,8 +466,19 @@ const markSVG = (mark, top, h) => {
   if (/^stamp:/i.test(mark)) return stamp(mark.slice(6).trim().toUpperCase().slice(0, 18));
   return '';
 };
+// Oct 10: the writer sometimes puts the whole line in "main" AND repeats it as "highlight" ("WHERE SOUTH FLORIDA IS GOING OUT…" + "WHERE SOUTH FLORIDA")
+// — split the line around the highlight so it reads once: top+before / HIGHLIGHT / after+bottom
+function splitCover(c0) {
+  const c = { ...c0 }, hl = String(c.highlight || '').trim();
+  if (!hl) return c;
+  const t = String(c.main || ''); const k = t.toLowerCase().indexOf(hl.toLowerCase());
+  if (k < 0) return c;
+  const before = t.slice(0, k).trim(), after = t.slice(k + hl.length).trim();
+  c.main = ''; c.top = [c.top, before].filter(Boolean).join(' '); c.bottom = [after, c.bottom].filter(Boolean).join(' ');
+  return c;
+}
 function coverHTML(post, dir, h, o = {}) { // o: textBottom / barBottom / barText (shareslop Reels keep clear of Instagram's caption overlay)
-  const c = post.cover; const img = dataUrl(dir, c.photoFile);
+  const c = splitCover(post.cover); const img = dataUrl(dir, c.photoFile);
   // o.big (shareslop, owner Oct 6: "a lil bigger"): never smaller than the floor — long lines wrap instead of shrinking
   const fs = (t, max) => o.big ? fit1(t, Math.round(max * 1.25), 1040) : fit1(t, max); // one line each; shareslop lines are written short so they come out big
   return `
@@ -545,8 +556,8 @@ function aliveSlideHTML(s, i, n, dir, post) {
     ${img ? markSVG(s.mark, 90, 460) : ''}
     ${s.credit ? `<div class="credit">${esc(s.credit)}</div>` : ''}
     <div class="count">${i + 1}/${n}</div>
-    ${logo ? `<div class="logo" style="right:60px;top:540px;width:300px;height:180px">${`<img src="${logo}">`}</div>` : ''}
     <div style="position:absolute;left:60px;right:60px;bottom:150px">
+      ${logo ? `<div class="logo" style="position:relative;float:right;margin:-40px 0 0 24px;width:230px;height:130px;padding:16px"><img src="${logo}"></div>` : ''}
       <span class="tag" style="background:${red ? '#FF3B3B' : '#fff'};color:${red ? '#fff' : shade(theme, 0.6)}">${s.emoji ? esc(s.emoji) + ' ' : ''}${esc(s.tag || 'NEWS')}</span>${s.chip ? `<span class="chip" style="background:${accent};color:#111">${esc(String(s.chip).toUpperCase().slice(0, 18))}</span>` : ''}
       <div class="caps" style="font-size:${size}px;margin-top:26px">${headline}</div>
       <div style="margin-top:26px;font-size:42px;font-weight:700;line-height:1.32;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.6)">${esc(s.body)}</div>
