@@ -1,0 +1,145 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "HERE'S",
+    "main": "WHERE SOUTH FLORIDA IS GOING OUT THIS WEEKEND",
+    "highlight": "WHERE SOUTH FLORIDA",
+    "bottom": "",
+    "blur": false,
+    "photo": {
+      "query": "South Florida concert venue exterior at night with arriving crowd",
+      "prompt": "dramatic night photo of a South Florida concert venue exterior with lights on and people arriving"
+    },
+    "emojis": [
+      "🎤",
+      "🎻",
+      "🍝",
+      "👀"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Celia Vive! at Miramar Cultural Center, Oct. 10",
+      "highlight": "Celia Vive!",
+      "body": "Oct. 10 at 8 p.m. at Miramar Cultural Center in Miramar. Tickets are $30 to $50. Lucrecia performs Celia Cruz songs with the Celia Cruz All Stars Band.",
+      "place": "Miramar",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miramar Cultural Center stage performance salsa concert",
+        "prompt": "dramatic stage photo with salsa lights, a live band and a packed theater in Miramar"
+      },
+      "emoji": "💃",
+      "chip": "8 PM",
+      "logo": "miramarculturalcenter.org",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Ricky Martin at Hard Rock Live, Oct. 10",
+      "highlight": "Ricky Martin",
+      "body": "Oct. 10 at 8 p.m. at Hard Rock Live in Hollywood. Tickets start at $55 and go to $935. Ricky Martin plays his biggest hits.",
+      "place": "Hollywood",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Hard Rock Live Hollywood concert crowd stage lights",
+        "prompt": "dramatic concert photo inside Hard Rock Live with bright stage lights and a packed crowd"
+      },
+      "emoji": "🎤",
+      "chip": "$55+",
+      "logo": "casino.hardrock.com",
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Silver Dovelet / CC BY-SA 3.0",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Zuccaly soft opening in Coral Gables, Oct. 10 to 12",
+      "highlight": "Zuccaly",
+      "body": "Open Saturday and Sunday from 1 to 8 p.m. at The Plaza Coral Gables in Coral Gables. The new Italian food hall has six stations, a market and a full bar.",
+      "place": "Coral Gables",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Italian food hall Coral Gables pasta pizza wine interior",
+        "prompt": "dramatic food hall photo with fresh pasta, Roman-style pizza, gelato and wine under warm lights"
+      },
+      "emoji": "🍝",
+      "chip": "1-8 PM",
+      "logo": "zuccaly.com",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Averette / CC BY 3.0",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Black Violin at Broward Center, Oct. 11",
+      "highlight": "Black Violin",
+      "body": "Oct. 11 at 7 p.m. at Broward Center in Fort Lauderdale. Tickets start at $23 and go to $105. Braxton Cook opens the show.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Black Violin concert stage Fort Lauderdale Broward Center",
+        "prompt": "dramatic stage photo of two violinists performing under blue and purple lights"
+      },
+      "emoji": "🎻",
+      "chip": "7 PM",
+      "logo": "browardcenter.org",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: adam.cook.b / CC BY-SA 2.0",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Deering Estate ghost tours in Miami, through Oct. 29",
+      "highlight": "ghost tours",
+      "body": "Tours run Tuesdays and Thursdays through Oct. 29 at Deering Estate in Miami. The experience starts after dark and allows paranormal equipment.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Deering Estate Miami historic house at night flashlight tour",
+        "prompt": "moody night photo of Deering Estate with flashlights and people walking toward the historic house"
+      },
+      "emoji": "👻",
+      "chip": "TUE + THU",
+      "logo": "deeringestate.org",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Elisa.rolle / CC BY-SA 4.0",
+      "logoFile": "logo-5.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Miami Fashion Week, Oct. 13 to 18",
+      "highlight": "Miami Fashion Week",
+      "body": "Miami Fashion Week runs Oct. 13 to 18 in Miami. The anniversary edition brings runway shows and related events across the week.",
+      "place": "Miami",
+      "source": "Miami’s Community News",
+      "photo": {
+        "query": "Miami Fashion Week runway lights models audience",
+        "prompt": "dramatic fashion runway photo with bright lights, seated crowd and a model on the catwalk"
+      },
+      "emoji": "👗",
+      "chip": "OCT 13-18",
+      "logo": "miamifashionweek.com",
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Yahoo! Entretenimiento / CC BY 2.0",
+      "logoFile": "logo-6.png"
+    }
+  ],
+  "caption": "South Florida has concerts, dinner plans and late-night events on the calendar this week.\nWho are you taking? Tag a friend.",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has concerts, dinner plans and late-night events on the calendar this week.\nWho are you taking? Tag a friend.\n\n📰 Sources: Miami New Times, Secret Miami, Miami’s Community News\n\n📍 Got an only-in-Miami moment? Tag @getnearapp or DM us to get featured.\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-10",
+  "id": "2026-10-10-upcoming"
+}
