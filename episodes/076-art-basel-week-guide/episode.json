@@ -1,0 +1,190 @@
+{
+  "title": "Art Basel Week Guide",
+  "sources": [
+    "Art Basel",
+    "The Art Newspaper",
+    "Miami Herald",
+    "The Miami Guide",
+    "Forbes",
+    "NBC 6 South Florida",
+    "Time Out Worldwide"
+  ],
+  "collaborators": [],
+  "igCaption": "Art Basel Miami Beach 2026 announced 272 exhibitors and a reconfigured showfloor.\nThe week also spreads through the Miami Design District and Wynwood with fairs, museums, parties, panels and satellite fairs.\nWhat stop should we cover first this year?\n\nSources: Art Basel, The Art Newspaper, Miami Herald, The Miami Guide, Forbes, NBC 6 South Florida, Time Out Worldwide\n\n#ArtBasel #MiamiArtWeek #MiamiBeach #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Art Basel week starts at the Miami Beach Convention Center. The 2026 Miami Beach edition announced 272 exhibitors.",
+      "overlay": [
+        "ART BASEL",
+        "WEEK GUIDE"
+      ],
+      "emojis": [
+        "🎨",
+        "🖼️",
+        "🌴",
+        "📍"
+      ],
+      "location": {
+        "name": "Miami Beach Convention Center",
+        "lat": 25.7948,
+        "lon": -80.1332,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Art Basel announced 272 exhibitors for its 2026 Miami Beach edition, with a reconfigured showfloor. That changes the main fair layout before you get through the doors.",
+      "caption": "Art Basel announced 272 exhibitors for its 2026 Miami Beach edition, with a reconfigured showfloor. That changes the main fair layout before you get through the doors.",
+      "overlay": "CONVENTION CTR",
+      "badge": "272 EXHIBITORS",
+      "sub": "Main fair, new layout",
+      "emoji": "🖼️",
+      "stats": [
+        {
+          "value": "272",
+          "label": "exhibitors"
+        },
+        {
+          "value": "2026",
+          "label": "edition"
+        }
+      ],
+      "source": "Art Basel",
+      "location": {
+        "name": "Miami Beach Convention Center",
+        "lat": 25.7948,
+        "lon": -80.1332,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 145,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The main gallery sector and floorplan are scaling down for 2026. The fair also pushed the city for lower rent.",
+      "caption": "The main gallery sector and floorplan are scaling down for 2026. The fair also pushed the city for lower rent.",
+      "overlay": "FAIR CHANGES",
+      "badge": "2026 FLOOR",
+      "sub": "Main sector and rent talks",
+      "emoji": "📐",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "floorplan"
+        }
+      ],
+      "source": "The Art Newspaper",
+      "location": {
+        "name": "Miami Beach Convention Center",
+        "lat": 25.7948,
+        "lon": -80.1332,
+        "h": 80
+      },
+      "shot": {
+        "type": "push",
+        "range": 1300,
+        "pitch": -35,
+        "heading": 65
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Head to the Miami Design District for fairs, museums, and design programming. It is one of the places that fills the rest of Art Week. If you’re there, check NEAR later to see who else was around.",
+      "caption": "Head to the Miami Design District for fairs, museums, and design programming. It is one of the places that fills the rest of Art Week. If you’re there, check NEAR later to see who else was around.",
+      "overlay": "DESIGN DISTRICT",
+      "badge": "ART WEEK",
+      "sub": "Fairs and museums",
+      "emoji": "🏛️",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "guide year"
+        }
+      ],
+      "source": "The Miami Guide",
+      "location": {
+        "name": "Miami Design District",
+        "lat": 25.81666667,
+        "lon": -80.2,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 20,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Wynwood is where the satellite fairs land. Time Out tracks them for Art Basel week, and NBC 6 points to fairs and panels across the city.",
+      "caption": "Wynwood is where the satellite fairs land. Time Out tracks them for Art Basel week, and NBC 6 points to fairs and panels across the city.",
+      "overlay": "WYNWOOD",
+      "badge": "SATELLITES",
+      "sub": "Fairs and panels",
+      "emoji": "📍",
+      "stats": [
+        {
+          "value": "2025",
+          "label": "fair guide"
+        }
+      ],
+      "source": "Time Out Worldwide",
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.804,
+        "lon": -80.199,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which stop should we build a full Art Week route around? It’s the same feeling as passing someone all week at Art Basel and never catching their name, which is exactly what NEAR helps make clear.",
+      "overlay": "COMMENT 📍",
+      "sub": "Pick the first stop",
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.804,
+        "lon": -80.199,
+        "h": 45
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -30,
+        "heading": 250
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "076-art-basel-week-guide"
+}
