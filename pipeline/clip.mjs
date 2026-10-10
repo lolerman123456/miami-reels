@@ -214,6 +214,8 @@ export async function chat(messages) {
 }
 
 const RULES = 'Content rules (hard): never a video whose point is a victim, a child or a dead/injured person; no graphic violence, gore or nudity; '
+  // Oct 10: the 6pm fallback posted "Hurricane Isaias" roof footage — a 2020 storm re-uploaded this week
+  + 'never OLD footage resurfacing: skip anything whose title/description/footage names a past event or year (a hurricane or storm from a previous season, "2023", "years ago", an anniversary/throwback) — only things that happened in the last few weeks; '
   + 'no ceremonies, meetings, interviews/officer profiles, promotions, PSAs, recruiting, budget talks or other PR — only footage people would actually share: '
   + 'bodycam/dashcam (including traffic stops with a funny, heated or wild exchange — e.g. Traffic Thursdays/Traffic Tuesday episodes), chases, arrests, '
   + 'busts with seized cash/drugs/guns, rescues, wild moments, big fraud takedowns announced by prosecutors. Say "accused"/"charged" unless convicted; '

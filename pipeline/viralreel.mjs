@@ -16,7 +16,7 @@ const TALK = /\b(briefing|press conference|news conference|meeting|ceremony|awar
 
 async function pickVideos(videos, hint = '') {
   const r = await chat([{ role: 'system', content: 'You run a viral news page like @onlyindade (South Florida, but nationwide/worldwide viral clips pop too). '
-    + 'From these YouTube uploads, rank up to 10 that contain RAW viral footage people would share: dashcam, bodycam, surveillance, doorbell cam, phone video, '
+    + 'From these YouTube uploads, rank up to 15 that contain RAW viral footage people would share: dashcam, bodycam, surveillance, doorbell cam, phone video, '
     + 'helicopter footage of chases, wild arrests, crashes, road rage, rescues, animals (gators, bears), insane weather moments. Prefer high views and South Florida '
     + 'when equally good. Skip talking heads, politics, press conferences, full newscasts, anything about a dead child. '
     + 'Prefer CLEAR footage (owner, Oct 3): a few big, distinct subjects (one car, one person, one animal) — not cramped, crowded or far-away shots. '
