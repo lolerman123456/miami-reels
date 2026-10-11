@@ -1,0 +1,131 @@
+{
+  "sector": "CITY HALL",
+  "cover": {
+    "top": "HOMESTEAD KIA",
+    "main": "SEVERAL CARS WERE LEFT",
+    "highlight": "CHARRED",
+    "bottom": "AFTER A FIRE",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons burned cars car dealership fire lot",
+      "prompt": "dramatic wide photo of a Kia dealership lot in Homestead after a fire, a row of charred cars with blackened hoods, melted bumpers and smoke stains on pavement"
+    },
+    "emojis": [
+      "🔥",
+      "🚗",
+      "🚒"
+    ],
+    "logos": [
+      "kia.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CITY HALL",
+      "headline": "Several cars were left charred at a Homestead Kia dealership",
+      "highlight": "Several cars",
+      "body": "WSVN 7News reported several vehicles were left charred after a fire broke out at a Kia dealership in Homestead on Sunday.",
+      "place": "Homestead",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Wikimedia Commons burned cars dealership lot fire",
+        "prompt": "close, dramatic photo of several charred cars in a dealership lot, blackened paint, broken glass and fire damage visible in a row",
+        "mark": "x"
+      },
+      "emoji": "🔥",
+      "chip": "SUNDAY",
+      "logo": "kia.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "The fire started at a Kia dealership",
+      "highlight": "Kia dealership",
+      "body": "The report identified the site as a Kia dealership in Homestead.",
+      "place": "Homestead",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Wikimedia Commons Kia dealership exterior car lot",
+        "prompt": "wide photo of a Kia dealership exterior with rows of cars on the lot and emergency lights reflecting on the pavement"
+      },
+      "emoji": "🚗",
+      "chip": "KIA LOT",
+      "logo": "kia.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "WSVN placed the blaze near Southwest 300th Street",
+      "highlight": "Southwest 300th",
+      "body": "WSVN 7News said the fire started at a Kia dealership near Southwest 300th Street in Homestead.",
+      "place": "Homestead",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Wikimedia Commons Homestead Florida street car dealership",
+        "prompt": "street-level photo near Southwest 300th Street in Homestead with a car dealership lot and emergency vehicles in the distance"
+      },
+      "emoji": "📍",
+      "chip": "SW 300TH",
+      "logo": "kia.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "A row of vehicles burned on the lot",
+      "highlight": "row of vehicles",
+      "body": "The report showed a row of vehicles left burned at the dealership lot.",
+      "place": "Homestead",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Wikimedia Commons row of burned cars parking lot fire",
+        "prompt": "dramatic side view of a row of burned cars in a dealership parking lot, with charred fronts, shattered windows and dark smoke marks"
+      },
+      "emoji": "🚒",
+      "chip": "CHARRED",
+      "logo": "kia.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "The report did not list a cause",
+      "highlight": "cause",
+      "body": "The Sunday report gave the location and damage, but did not say what started the fire.",
+      "place": "Homestead",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Wikimedia Commons fire investigator burned vehicles",
+        "prompt": "fire investigator walking through a burned car dealership lot in Homestead, with charred vehicles behind yellow tape"
+      },
+      "emoji": "🧯",
+      "chip": "NO CAUSE",
+      "logo": "kia.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "Several cars were left charred at a Homestead Kia dealership after a fire broke out on Sunday.",
+  "hashtags": [
+    "#Homestead",
+    "#MiamiDade"
+  ],
+  "collaborators": [],
+  "igCaption": "Several cars were left charred at a Homestead Kia dealership after a fire broke out on Sunday.\n\n📰 Sources: WSVN 7News\n\n#Homestead #MiamiDade #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-11",
+  "id": "2026-10-11-news-07"
+}
