@@ -1,0 +1,231 @@
+{
+  "title": "Five things to do in South Florida this week",
+  "sources": [
+    "NHL.com",
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Five things this week, starting with Panthers Pink in the Rink.\nOct. 12-17, South Florida, $0 to sold out\n\nSources: NHL.com, Miami New Times\n\n#MiamiEvents #SouthFlorida #ThingsToDoMiami #OnlyInDade",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "The Panthers host Pink in the Rink Saturday. Here are five things to do in South Florida this week.",
+      "overlay": [
+        "THIS WEEK",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🏒",
+        "📚",
+        "🎤",
+        "🏀"
+      ],
+      "location": {
+        "name": "Amerant Bank Arena",
+        "lat": 26.15847,
+        "lon": -80.32556,
+        "h": 35
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 115
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Saturday, the Florida Panthers host their fifth annual Pink in the Rink night. The event is presented by Baptist Health Cancer Care and Promise Fund, and it lands on October seventeenth.",
+      "caption": "Saturday, the Florida Panthers host their fifth annual Pink in the Rink night. The event is presented by Baptist Health Cancer Care and Promise Fund, and it lands on Oct. 17.",
+      "overlay": "PANTHERS",
+      "badge": "OCT. 17",
+      "sub": "Pink in the Rink night",
+      "emoji": "🏒",
+      "stats": [
+        {
+          "value": "5TH",
+          "label": "annual night"
+        },
+        {
+          "value": "OCT. 17",
+          "label": "event date"
+        }
+      ],
+      "source": "NHL.com",
+      "location": {
+        "name": "Amerant Bank Arena",
+        "lat": 26.15847,
+        "lon": -80.32556,
+        "h": 35
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Monday, Michael Lewis talks about his new book, Blockers, at Coral Gables Congregational Church. Dave Barry moderates at seven p.m., and tickets run from zero to thirty dollars with a book included.",
+      "caption": "Monday, Michael Lewis talks about his new book, Blockers, at Coral Gables Congregational Church. Dave Barry moderates at 7 p.m., and tickets run from $0 to $30 with a book included.",
+      "overlay": "CORAL GABLES",
+      "badge": "$0-$30",
+      "sub": "Michael Lewis book talk",
+      "emoji": "📚",
+      "stats": [
+        {
+          "value": "7 PM",
+          "label": "start time"
+        },
+        {
+          "value": "$0-$30",
+          "label": "tickets"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Coral Gables Congregational Church",
+        "lat": 25.74018,
+        "lon": -80.27947,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 210,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Tuesday, Katseye plays Kaseya Center at eight p.m. The show is sold out. The group recently made its Saturday Night Live debut and will headline the Victoria's Secret Fashion Show later this month. Sold-out crowd, but NEAR shows you who else made it in.",
+      "caption": "Tuesday, Katseye plays Kaseya Center at 8 p.m. The show is sold out. The group recently made its Saturday Night Live debut and will headline the Victoria's Secret Fashion Show later this month. Sold-out crowd, but NEAR shows you who else made it in.",
+      "overlay": "KASEYA CENTER",
+      "badge": "SOLD OUT",
+      "sub": "Katseye in Miami",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "8 PM",
+          "label": "start time"
+        },
+        {
+          "value": "SOLD OUT",
+          "label": "ticket status"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.78141,
+        "lon": -80.18701,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 305,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Wednesday, the Miami Heat host the Brooklyn Nets at Kaseya Center. Tipoff is seven thirty p.m. Tickets cost fifteen to three hundred sixty-one dollars for one of the final preseason games.",
+      "caption": "Wednesday, the Miami Heat host the Brooklyn Nets at Kaseya Center. Tipoff is 7:30 p.m. Tickets cost $15 to $361 for one of the final preseason games.",
+      "overlay": "MIAMI HEAT",
+      "badge": "$15-$361",
+      "sub": "Preseason vs. Nets",
+      "emoji": "🏀",
+      "stats": [
+        {
+          "value": "7:30 PM",
+          "label": "tipoff"
+        },
+        {
+          "value": "$15-$361",
+          "label": "tickets"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.78141,
+        "lon": -80.18701,
+        "h": 60
+      },
+      "shot": {
+        "type": "push",
+        "range": 1400,
+        "pitch": -34,
+        "heading": 24
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Thursday, the Chewy Pack Walk starts at six p.m. at Chewy Bark Park on Ponce de Leon Boulevard. Admission is free with RSVP, and the costume contest includes Most Creative Costume and Best Pet Parent Duo.",
+      "caption": "Thursday, the Chewy Pack Walk starts at 6 p.m. at Chewy Bark Park on Ponce de Leon Boulevard. Admission is free with RSVP, and the costume contest includes Most Creative Costume and Best Pet/Parent Duo.",
+      "overlay": "THE UNDERLINE",
+      "badge": "FREE RSVP",
+      "sub": "Chewy Pack Walk",
+      "emoji": "🐶",
+      "stats": [
+        {
+          "value": "6 PM",
+          "label": "walk time"
+        },
+        {
+          "value": "FREE",
+          "label": "with RSVP"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Chewy Bark Park",
+        "lat": 25.72901,
+        "lon": -80.25839,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -29,
+        "heading": 168,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you doing this week? And if you keep crossing paths with the same people at these spots without ever talking, NEAR is the app that shows you who they were.",
+      "overlay": "PICK ONE 👇",
+      "sub": "Tell us in the comments",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.76168,
+        "lon": -80.19179,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 250
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "078-five-things-to-do-in-south-florida-this-"
+}
