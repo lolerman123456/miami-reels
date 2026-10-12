@@ -64,7 +64,7 @@ export async function publishReel(videoFile, caption, { collaborators = [] } = {
 // Picks a trending song from /ig_audio not used in the last 20 music posts, keeps the voice on top (song at 35% — owner Oct 5: 14 was inaudible).
 export async function publishReelWithMusic(videoFile, caption, { collaborators = [], audioVolume = 35 } = {}) {
   caption = formatCaption(caption); // hashtags at the bottom after 5 dots (owner, Oct 8)
-  const token = process.env.FB_ACCESS_TOKEN;
+  const token = process.env.FB_ACCESS_TOKEN?.trim(); // Oct 12: the pasted secret had trailing whitespace — URLs drop it, POST bodies don't ("Cannot parse access token")
   if (!token) throw new Error('FB_ACCESS_TOKEN not set');
   const api = `https://graph.facebook.com/${VERSION}`;
   const pages = await (await fetch(`${api}/me/accounts?fields=instagram_business_account&access_token=${token}`)).json();

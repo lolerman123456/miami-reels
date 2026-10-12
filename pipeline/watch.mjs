@@ -9,7 +9,7 @@ import path from 'node:path';
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..');
 const VERSION = 'v23.0';
 const api = `https://graph.facebook.com/${VERSION}`;
-const token = process.env.FB_ACCESS_TOKEN;
+const token = process.env.FB_ACCESS_TOKEN?.trim();
 if (!token) { console.error('FB_ACCESS_TOKEN not set'); process.exit(1); }
 
 const control = JSON.parse(fs.readFileSync(path.join(ROOT, 'control.json'), 'utf8'));
