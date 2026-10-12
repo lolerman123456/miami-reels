@@ -1,0 +1,136 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "EVERY BIG",
+    "highlight": "SOUTH FLORIDA",
+    "bottom": "EVENT THIS WEEK",
+    "blur": false,
+    "photo": {
+      "query": "Hard Rock Live Hollywood Florida concert crowd stage lights",
+      "prompt": "dramatic concert crowd outside Hard Rock Live in Hollywood with bright stage lights, a glowing marquee, and people moving toward the entrance"
+    },
+    "emojis": [
+      "🎸",
+      "🏀",
+      "🐶",
+      "🌺"
+    ],
+    "logos": [
+      "kaseyacenter.com",
+      "casino.hardrock.com",
+      "miamidade.gov",
+      "theunderline.org",
+      "booksandbooks.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Michael Lewis at Coral Gables Congregational Church",
+      "highlight": "Michael Lewis",
+      "body": "Monday, Oct. 12 at 7 p.m. Michael Lewis discusses Blockers with Dave Barry moderating. Tickets are $0 to $30 and include a copy of the book.",
+      "place": "Coral Gables",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Coral Gables Congregational Church De Soto Boulevard evening author event",
+        "prompt": "evening author talk inside a historic Coral Gables church with a seated crowd, a lit podium, and books on display"
+      },
+      "emoji": "📚",
+      "chip": "MON 7 PM",
+      "logo": "booksandbooks.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Miami Heat vs. Brooklyn Nets at Kaseya Center",
+      "highlight": "Miami Heat",
+      "body": "Wednesday, Oct. 14 at 7:30 p.m. The Heat host the Nets in a preseason game. Tickets run $15 to $361.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Kaseya Center Miami Heat basketball court warmups",
+        "prompt": "Miami Heat players warming up on the Kaseya Center court with bright arena lights, red seats, and fans filing in"
+      },
+      "color": "#98002E",
+      "emoji": "🏀",
+      "chip": "$15+",
+      "logo": "nba.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Chewy Pack Walk on The Underline",
+      "highlight": "Chewy Pack Walk",
+      "body": "Thursday, Oct. 15 at 6 p.m. Dogs and their people meet at Chewy Bark Park for a costume walk. Admission is free with RSVP.",
+      "place": "Coral Gables",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "The Underline Miami dog walk Coral Gables evening",
+        "prompt": "dogs in costumes walking under the Metrorail at The Underline in Coral Gables with owners, string lights, and a crowd of pet walkers"
+      },
+      "color": "#1A5FFF",
+      "emoji": "🐶",
+      "chip": "FREE",
+      "logo": "theunderline.org",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Dtobias / CC BY-SA 4.0",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Def Leppard at Hard Rock Live",
+      "highlight": "Def Leppard",
+      "body": "Thursday, Oct. 15 at 8 p.m. The band plays Hard Rock Live with hits including Pour Some Sugar on Me and Animal. Tickets are $75 to $559.",
+      "place": "Hollywood",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Def Leppard live concert Hard Rock Live Hollywood",
+        "prompt": "Def Leppard onstage at a packed rock concert with sharp guitar lights, smoke, and a wide crowd shot"
+      },
+      "color": "#C8102E",
+      "emoji": "🎸",
+      "chip": "$75+",
+      "logo": "casino.hardrock.com",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Silver Dovelet / CC BY-SA 3.0",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Redland International Orchid Festival",
+      "highlight": "Orchid Festival",
+      "body": "Friday, Oct. 16 from noon to 5 p.m. The 30th edition brings growers from Florida, Thailand, Brazil and Malaysia to Fruit and Spice Park. Tickets cost $20.",
+      "place": "Homestead",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Fruit and Spice Park Homestead orchid festival outdoor market",
+        "prompt": "rare orchids on display at Fruit and Spice Park in Homestead with tropical plants, vendors, and close-up flower detail"
+      },
+      "emoji": "🌺",
+      "chip": "$20",
+      "logo": "miamidade.gov",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Daderot / CC0",
+      "logoFile": null
+    }
+  ],
+  "caption": "Save this before the group chat starts spiraling. Who are you taking? Tag a friend 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "Save this before the group chat starts spiraling. Who are you taking? Tag a friend 👀\n\n📰 Sources: Miami New Times\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-12",
+  "id": "2026-10-12-upcoming"
+}
