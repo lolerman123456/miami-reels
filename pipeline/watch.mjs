@@ -20,6 +20,8 @@ fs.mkdirSync(outDir, { recursive: true });
 const get = async url => { const r = await (await fetch(url)).json(); if (r.error) throw new Error(r.error.message); return r; };
 // which permissions the token has (names only, no secrets) — Business Discovery needs instagram_basic + pages access
 try { const perms = await get(`${api}/me/permissions?access_token=${token}`); console.log('  token permissions:', (perms.data || []).map(p => `${p.permission}:${p.status}`).join(', ')); } catch (e) { console.log('  (could not list permissions)', e.message); }
+// token expiry (Oct 12: a 2-hour Graph Explorer token was saved unextended and broke music + this watcher)
+try { const d = (await get(`${api}/debug_token?input_token=${token}&access_token=${token}`)).data || {}; console.log('  token expires:', d.expires_at ? new Date(d.expires_at * 1000).toISOString() : 'never', '· data access until:', d.data_access_expires_at ? new Date(d.data_access_expires_at * 1000).toISOString() : '?'); } catch (e) { console.log('  (could not read token expiry)', e.message); }
 const pages = await get(`${api}/me/accounts?fields=instagram_business_account&access_token=${token}`);
 const igUser = (pages.data || []).map(p => p.instagram_business_account?.id).find(Boolean);
 if (!igUser) { console.error('No Instagram business account on the token\'s Pages'); process.exit(1); }
