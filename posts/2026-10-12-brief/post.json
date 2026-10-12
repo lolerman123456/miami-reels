@@ -1,0 +1,117 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "PALMETTO BAY",
+    "main": "ARMED MAN ON A ROOFTOP",
+    "highlight": "IN PALMETTO BAY",
+    "bottom": "DEPUTIES ARRESTED HIM",
+    "blur": false,
+    "photo": {
+      "query": "Palmetto Bay Florida police lights rooftop residential street night",
+      "prompt": "dramatic South Miami-Dade residential street at night with flashing police lights, a visible rooftop line, and palm trees framing a house",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "🚔",
+      "🏠",
+      "🚨"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Armed man on a rooftop in Palmetto Bay",
+      "highlight": "rooftop in Palmetto Bay",
+      "body": "Deputies arrested an armed man after finding him on a rooftop in Palmetto Bay, NBC 6 South Florida reported.",
+      "place": "Palmetto Bay",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Palmetto Bay rooftop police lights night",
+        "prompt": "close, dramatic view of a suburban rooftop with police cruisers and flashing lights below it, shot from street level at night"
+      },
+      "emoji": "🚨",
+      "chip": "MON 10/12",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police turned the block into a scene",
+      "highlight": "the block",
+      "body": "The call brought deputies into a South Miami-Dade neighborhood and drew a police response around the home.",
+      "place": "Palmetto Bay",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "South Miami-Dade police scene residential street night",
+        "prompt": "wide shot of a quiet residential street in South Miami-Dade with patrol cars, tape, and officers near a house"
+      },
+      "emoji": "🚓",
+      "chip": "POLICE RESPONSE",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The headline gives the key detail",
+      "highlight": "armed",
+      "body": "The report says the man was armed. It does not add other details in the headline.",
+      "place": "Palmetto Bay",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "police rooftop house night Florida",
+        "prompt": "telephoto view of a house roof at night with officers positioned below and a spotlight aimed upward"
+      },
+      "emoji": "🔎",
+      "chip": "ARMED",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Palmetto Bay is in Miami-Dade County",
+      "highlight": "Miami-Dade County",
+      "body": "Palmetto Bay is an incorporated village in South Miami-Dade, west of Biscayne Bay and about 15 miles southwest of downtown Miami.",
+      "place": "Palmetto Bay",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Palmetto Bay Florida neighborhood houses palm trees",
+        "prompt": "daytime view of a Palmetto Bay neighborhood with single-family homes, palm trees, and a calm street"
+      },
+      "emoji": "📍",
+      "chip": "SOUTH MIAMI-DADE",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Deputies arrested him Monday",
+      "highlight": "arrested him",
+      "body": "The next update will come from deputies as the case moves forward.",
+      "place": "Palmetto Bay",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "police vehicle lights Miami-Dade night house roof",
+        "prompt": "police SUVs parked outside a house at night with flashing lights reflecting off the roofline and nearby trees"
+      },
+      "emoji": "🚔",
+      "chip": "ARRESTED",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "A man with a weapon ended up on a rooftop in Palmetto Bay, and deputies arrested him after the neighborhood became a police scene.",
+  "hashtags": [
+    "#PalmettoBay",
+    "#MiamiDade"
+  ],
+  "collaborators": [],
+  "igCaption": "A man with a weapon ended up on a rooftop in Palmetto Bay, and deputies arrested him after the neighborhood became a police scene.\n\n📰 Sources: NBC 6 South Florida, Wikipedia\n\n#PalmettoBay #MiamiDade #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-12",
+  "id": "2026-10-12-brief"
+}
