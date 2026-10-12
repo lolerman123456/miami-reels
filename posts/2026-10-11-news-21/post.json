@@ -1,0 +1,133 @@
+{
+  "sector": "USA",
+  "cover": {
+    "top": "AP SAYS",
+    "main": "GUILFOYLE FACES ALLEGED",
+    "highlight": "IMPROPER CONDUCT",
+    "bottom": "AS TRUMP, RUBIO WEIGH FIRING HER",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons United States Embassy Athens Greece exterior American flag",
+      "prompt": "dramatic exterior of the U.S. Embassy in Athens at dusk with the American flag, security barriers and a tense diplomatic mood",
+      "mark": "stamp: UNDER REVIEW"
+    },
+    "emojis": [
+      "🇺🇸",
+      "🇬🇷",
+      "⚖️"
+    ],
+    "logos": [
+      "state.gov",
+      "whitehouse.gov"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Radar Online",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "USA",
+      "headline": "Kimberly Guilfoyle faces conduct allegations in Athens",
+      "highlight": "alleged improper conduct",
+      "body": "AP says the reports involve alleged improper conduct before and during Kimberly Guilfoyle’s tenure as U.S. ambassador to Greece.",
+      "place": "Athens",
+      "source": "AP News",
+      "photo": {
+        "query": "Wikimedia Commons United States Embassy Athens Greece American flag",
+        "prompt": "close dramatic view of the U.S. Embassy in Athens with the American flag in front and security fencing visible"
+      },
+      "emoji": "⚖️",
+      "chip": "OCT 11",
+      "logo": "state.gov",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "USA",
+      "headline": "Trump and Rubio are weighing firing her",
+      "highlight": "weighing firing",
+      "body": "AP says President Donald Trump and Secretary of State Marco Rubio are considering firing Guilfoyle after mounting reports of improper conduct.",
+      "place": "Washington",
+      "source": "AP News",
+      "photo": {
+        "query": "Wikimedia Commons Harry S Truman Building State Department Washington DC exterior flags",
+        "prompt": "dramatic exterior of the U.S. State Department building in Washington with flags under a cloudy sky"
+      },
+      "emoji": "🇺🇸",
+      "chip": "AP SOURCE",
+      "logo": "state.gov",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "USA",
+      "headline": "Rubio declined to comment on Oct. 9",
+      "highlight": "declined to comment",
+      "body": "A report on Oct. 9 said Rubio refused to comment on the allegations before the AP story on Oct. 11.",
+      "place": "Washington",
+      "source": "巴士的報",
+      "photo": {
+        "query": "Wikimedia Commons United States Department of State building entrance Washington DC",
+        "prompt": "tight photo of the State Department entrance in Washington with official signage and flags"
+      },
+      "emoji": "🗂️",
+      "chip": "OCT 9",
+      "logo": "state.gov",
+      "photoFile": "news-3.jpg",
+      "credit": "Photo: Yahoo",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "USA",
+      "headline": "The New York Times reported backlash in Greece",
+      "highlight": "backlash in Greece",
+      "body": "The New York Times reported exasperation and resignation in Greece over the allegations on Oct. 10.",
+      "place": "Greece",
+      "source": "The New York Times",
+      "photo": {
+        "query": "Wikimedia Commons Athens Greece Acropolis night city view",
+        "prompt": "wide nighttime view of Athens with the Acropolis lit above the city and government buildings below"
+      },
+      "emoji": "🇬🇷",
+      "chip": "OCT 10",
+      "logo": "state.gov",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Radar Online",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "USA",
+      "headline": "The decision is still under review",
+      "highlight": "still under review",
+      "body": "AP says the firing decision is under review, so Guilfoyle’s future in Athens is still uncertain.",
+      "place": "Washington",
+      "source": "AP News",
+      "photo": {
+        "query": "Wikimedia Commons official paperwork desk Washington DC",
+        "prompt": "dramatic close-up of official paperwork, folders and a pen on a desk under hard light"
+      },
+      "emoji": "📄",
+      "chip": "NEXT",
+      "logo": "state.gov",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "Trump and Rubio are weighing whether to fire Kimberly Guilfoyle after reports about her conduct in Greece.",
+  "hashtags": [
+    "#KimberlyGuilfoyle",
+    "#MarcoRubio"
+  ],
+  "collaborators": [],
+  "igCaption": "Trump and Rubio are weighing whether to fire Kimberly Guilfoyle after reports about her conduct in Greece.\n\n📰 Sources: AP News, 巴士的報, The New York Times\n\n#KimberlyGuilfoyle #MarcoRubio #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-11",
+  "id": "2026-10-11-news-21"
+}
