@@ -1,0 +1,85 @@
+{
+  "sector": "HEALTH",
+  "cover": {
+    "top": "FORT LAUDERDALE",
+    "main": "AUTISM COMPANY IS UNDER",
+    "highlight": "FEDERAL PROBE",
+    "bottom": "OVER BILLING PRACTICES",
+    "blur": false,
+    "photo": {
+      "query": "Fort Lauderdale office building dramatic exterior downtown",
+      "prompt": "dramatic low-angle photo of a Fort Lauderdale office building at dusk with dark glass, stormy sky and no identifiable people",
+      "mark": "stamp: CLOSED"
+    },
+    "emojis": [
+      "🧩",
+      "🧾",
+      "🏢"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Sun Sentinel",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "HEALTH",
+      "headline": "Fort Lauderdale autism firm under federal probe",
+      "highlight": "federal probe",
+      "body": "The Sun Sentinel reported Monday that a Fort Lauderdale-based autism therapy company is under federal investigation over billing practices.",
+      "place": "Fort Lauderdale",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "Fort Lauderdale downtown office building Broward dramatic",
+        "prompt": "sharp dramatic photo of a Fort Lauderdale office building exterior with reflective windows and no identifiable people"
+      },
+      "emoji": "🏢",
+      "chip": "OCT 12",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Sun Sentinel"
+    },
+    {
+      "tag": "HEALTH",
+      "headline": "The investigation centers on billing practices",
+      "highlight": "billing practices",
+      "body": "The report says the probe raises questions about how much money may have been billed improperly.",
+      "place": "Fort Lauderdale",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "medical billing paperwork calculator close up",
+        "prompt": "close-up photo of medical billing paperwork, a calculator and a pen on a desk, with no names or patient information visible"
+      },
+      "emoji": "🧾",
+      "chip": "BILLING",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Sun Sentinel"
+    },
+    {
+      "tag": "HEALTH",
+      "headline": "The company provides autism therapy",
+      "highlight": "autism therapy",
+      "body": "The headline identifies the business as an autism therapy firm.",
+      "place": "Fort Lauderdale",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "therapy room toys table no children",
+        "prompt": "empty pediatric therapy room with toys, small chairs and a table, photographed dramatically with no children or people present"
+      },
+      "emoji": "🧩",
+      "chip": "AUTISM",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Sun Sentinel"
+    }
+  ],
+  "caption": "A Fort Lauderdale autism therapy company is under a federal billing probe.",
+  "hashtags": [
+    "#FortLauderdale",
+    "#AutismTherapy"
+  ],
+  "collaborators": [],
+  "igCaption": "A Fort Lauderdale autism therapy company is under a federal billing probe.\n\n📰 Sources: Sun Sentinel\n\n#FortLauderdale #AutismTherapy #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-12",
+  "id": "2026-10-12-news-07"
+}
