@@ -1,0 +1,186 @@
+{
+  "title": "South Florida plans coming up now",
+  "sources": [
+    "Inter Miami CF",
+    "PR Newswire",
+    "WKMG",
+    "Secret Miami",
+    "Eater Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has soccer, rockets, dinner plans, and GTA research this week.\nOct. 14, Nu Stadium, price not listed\n\nSources: Inter Miami CF, PR Newswire, WKMG, Secret Miami, Eater Miami\n\n#Miami #SouthFlorida #MiamiEvents #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "South Florida has a busy calendar right now: soccer, a rocket launch, a secret dinner, and GTA 6 research.",
+      "overlay": [
+        "THIS WEEK",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "⚽",
+        "🚀",
+        "🍽️",
+        "🎮"
+      ],
+      "location": {
+        "name": "Nu Stadium",
+        "lat": 25.793611,
+        "lon": -80.279444,
+        "h": 35
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Inter Miami plays at Nu Stadium on October 14, and the club is building the match around an American Airlines theme night.",
+      "caption": "Inter Miami plays at Nu Stadium on Oct. 14, and the club is building the match around an American Airlines theme night.",
+      "overlay": "NU STADIUM",
+      "badge": "OCT. 14",
+      "sub": "American Airlines night",
+      "emoji": "⚽",
+      "stats": [
+        {
+          "value": "OCT. 14",
+          "label": "match night"
+        }
+      ],
+      "source": "Inter Miami CF",
+      "location": {
+        "name": "Nu Stadium",
+        "lat": 25.793611,
+        "lon": -80.279444,
+        "h": 35
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Dîner en Blanc Miami returns October 24. The event leans into elegance, mystery, and celebration, and the location stays secret until the end.",
+      "caption": "Dîner en Blanc Miami returns Oct. 24. The event leans into elegance, mystery, and celebration, and the location stays secret until the end.",
+      "overlay": "MIAMI",
+      "badge": "OCT. 24",
+      "sub": "Location stays secret",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "OCT. 24",
+          "label": "return date"
+        }
+      ],
+      "source": "PR Newswire",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.774266,
+        "lon": -80.193659,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 40,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "SpaceX is set to launch a Dragon resupply mission to the International Space Station from Florida. If you're out there for the launch, open NEAR and spot nearby faces.",
+      "caption": "SpaceX is set to launch a Dragon resupply mission to the ISS from Florida. If you're out there for the launch, open NEAR and spot nearby faces.",
+      "overlay": "SPACE COAST",
+      "badge": "DRAGON",
+      "sub": "Resupply mission",
+      "emoji": "🚀",
+      "stats": [
+        {
+          "value": "ISS",
+          "label": "destination"
+        }
+      ],
+      "source": "WKMG",
+      "location": {
+        "name": "Cape Canaveral Space Force Station",
+        "lat": 28.488889,
+        "lon": -80.577778,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 2200,
+        "pitch": -30,
+        "heading": 88,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Rockstar says its GTA 6 research started with a small group road-tripping from Miami to Key West. The team later filmed over the Everglades and hovered above a stadium during a Beyoncé concert.",
+      "caption": "Rockstar says its GTA 6 research started with a small group road-tripping from Miami to Key West. The team later filmed over the Everglades and hovered above a stadium during a Beyoncé concert.",
+      "overlay": "EVERGLADES",
+      "badge": "GTA 6",
+      "sub": "Miami research trip",
+      "emoji": "🎮",
+      "stats": [
+        {
+          "value": "GTA 6",
+          "label": "game research"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Everglades National Park",
+        "lat": 25.286615,
+        "lon": -80.898651,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 2500,
+        "pitch": -28,
+        "heading": 260,
+        "degrees": 90,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you leave the house for this week? Because half the people you pass on a packed South Florida weekend are strangers you never get to meet, and NEAR is for the ones you noticed but never spoke to.",
+      "overlay": "YOUR PICK? 👇",
+      "sub": "Tell us what to cover next",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.774266,
+        "lon": -80.193659,
+        "h": 90
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 155
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "079-south-florida-plans-coming-up-now"
+}
