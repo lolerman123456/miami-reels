@@ -1,0 +1,214 @@
+{
+  "title": "South Florida Weekend Guide: Free First, Then Dinner and Nightlife",
+  "sources": [
+    "Florida Today",
+    "Miami New Times",
+    "The Palm Beach Post",
+    "Sun Sentinel",
+    "Eater Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Start with the community events, then plan dinner and Halloween drinks.\n\nSources: Florida Today, Miami New Times, The Palm Beach Post, Sun Sentinel, Eater Miami\n\n#SouthFlorida #FortLauderdale #DelrayBeach #WeekendGuide",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Looking for a South Florida weekend plan that starts with community events and ends with dinner or drinks?",
+      "overlay": [
+        "WEEKEND",
+        "GUIDE"
+      ],
+      "emojis": [
+        "📍",
+        "🍽️",
+        "🎃",
+        "🗓️"
+      ],
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start with the No Kings protests. Florida Today lists event locations in Florida for this weekend, including Fort Lauderdale.",
+      "caption": "Start with the No Kings protests. Florida Today lists event locations in Florida for this weekend, including Fort Lauderdale.",
+      "overlay": "FORT LAUDERDALE",
+      "badge": "THIS WEEKEND",
+      "sub": "No Kings protests",
+      "emoji": "📢",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "Florida list"
+        }
+      ],
+      "source": "Florida Today",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Delray Beach has a farewell dinner stop. Park Tavern at 32 SE Second Ave. closes Sunday, October 18, after more than 15 years. It opened in 2012 and became known for happy hour and a from-scratch kitchen.",
+      "caption": "Delray Beach has a farewell dinner stop. Park Tavern at 32 SE Second Ave. closes Sunday, Oct. 18, after more than 15 years. It opened in 2012 and became known for happy hour and a from-scratch kitchen.",
+      "overlay": "DELRAY BEACH",
+      "badge": "CLOSES OCT 18",
+      "sub": "Park Tavern farewell",
+      "emoji": "🍔",
+      "stats": [
+        {
+          "value": "15+ YEARS",
+          "label": "on the Ave"
+        },
+        {
+          "value": "OCT 18",
+          "label": "final day"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Park Tavern Delray Beach",
+        "lat": 26.44444444,
+        "lon": -80.10972222,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 85,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Also in Delray, the Palm Beach Post has a dinner fundraiser supporting foster children. At that fundraiser, open NEAR and see who else showed up.",
+      "caption": "Also in Delray, the Palm Beach Post has a dinner fundraiser supporting foster children. At that fundraiser, open NEAR and see who else showed up.",
+      "overlay": "DELRAY DINNER",
+      "badge": "FUNDRAISER",
+      "sub": "Supports foster children",
+      "emoji": "🍽️",
+      "stats": [],
+      "source": "The Palm Beach Post",
+      "location": {
+        "name": "Delray Beach, Florida",
+        "lat": 26.44444444,
+        "lon": -80.10972222,
+        "h": 12
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -30,
+        "heading": 25,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For nightlife, Broward has Halloween options. The Sun Sentinel’s adult party guide covers haunted houses, costumes, and cocktails across South Florida.",
+      "caption": "For nightlife, Broward has Halloween options. The Sun Sentinel’s adult party guide covers haunted houses, costumes, and cocktails across South Florida.",
+      "overlay": "BROWARD",
+      "badge": "HALLOWEEN",
+      "sub": "Adults party guide",
+      "emoji": "🎃",
+      "stats": [],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Broward County, Florida",
+        "lat": 26.193535,
+        "lon": -80.476683,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 2200,
+        "pitch": -35,
+        "heading": 310,
+        "degrees": 50,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "If you want dinner before the late stuff, Brickell has updated restaurant options. Eater’s October guide adds The Mexican, Seia, and Nuna, and lists Elcielo with an 18-course tasting menu from chef Juan Manuel Barrientos.",
+      "caption": "If you want dinner before the late stuff, Brickell has updated restaurant options. Eater’s October guide adds The Mexican, Seia, and Nuna, and lists Elcielo with an 18-course tasting menu from chef Juan Manuel Barrientos.",
+      "overlay": "BRICKELL",
+      "badge": "18 COURSES",
+      "sub": "Dinner before nightlife",
+      "emoji": "🍝",
+      "stats": [
+        {
+          "value": "18",
+          "label": "courses"
+        },
+        {
+          "value": "$98",
+          "label": "bar experience"
+        }
+      ],
+      "source": "Eater Miami",
+      "location": {
+        "name": "Elcielo Miami",
+        "lat": 25.769535,
+        "lon": -80.191399,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -36,
+        "heading": 165,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you doing first, protest, fundraiser, farewell dinner, or Halloween drinks? Which one are you doing first, protest, fundraiser, farewell dinner, or Halloween drinks? It’s the kind of day where you pass people all over South Florida, then realize NEAR can show you who they were.",
+      "overlay": "WHAT’S FIRST? 📍",
+      "sub": "Drop the weekend plan",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -35,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "082-south-florida-weekend-guide-free-first-t"
+}
