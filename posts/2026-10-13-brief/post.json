@@ -1,0 +1,138 @@
+{
+  "sector": "DEVELOPMENT",
+  "cover": {
+    "top": "MIAMI FREEDOM PARK",
+    "main": "IS GOING",
+    "highlight": "FROM PLAN",
+    "bottom": "TO REALITY",
+    "blur": false,
+    "photo": {
+      "query": "Miami Freedom Park construction aerial Miami stadium cranes",
+      "prompt": "dramatic aerial view of Miami Freedom Park construction, stadium frame rising, cranes, cleared land, roads and downtown Miami skyline at sunset"
+    },
+    "emojis": [
+      "🏟️",
+      "⚽",
+      "🏗️"
+    ],
+    "logos": [
+      "intermiamicf.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "DEVELOPMENT",
+      "headline": "Miami Freedom Park is finally taking shape",
+      "highlight": "taking shape",
+      "body": "Urban Land Magazine says Miami Freedom Park is emerging as a sports-anchored mixed-use district in Miami.",
+      "place": "Miami",
+      "source": "Urban Land Magazine",
+      "photo": {
+        "query": "Miami Freedom Park construction site stadium rising cranes",
+        "prompt": "wide construction scene at Miami Freedom Park with the stadium structure rising, cranes overhead and bright South Florida light",
+        "mark": "arrow"
+      },
+      "emoji": "🏗️",
+      "chip": "OCT 13",
+      "color": "#F7B5CD",
+      "logo": "intermiamicf.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "DEVELOPMENT",
+      "headline": "The stadium leads the district buildout",
+      "highlight": "stadium",
+      "body": "The soccer stadium sits at the center of the project, with development planned around it.",
+      "place": "Miami",
+      "source": "Urban Land Magazine",
+      "photo": {
+        "query": "Miami soccer stadium construction exterior cranes",
+        "prompt": "striking exterior view of a soccer stadium under construction in Miami, steel frame, cranes and concrete work visible"
+      },
+      "emoji": "🏟️",
+      "chip": "PROJECT CORE",
+      "color": "#F7B5CD",
+      "logo": "intermiamicf.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "DEVELOPMENT",
+      "headline": "The project brings mixed-use plans with it",
+      "highlight": "mixed-use",
+      "body": "The district is planned as a mix of sports, development and surrounding city uses.",
+      "place": "Miami",
+      "source": "Urban Land Magazine",
+      "photo": {
+        "query": "Miami development site mixed-use construction aerial",
+        "prompt": "aerial view of a large Miami development site with construction equipment, new roads and unfinished buildings around the stadium area"
+      },
+      "emoji": "🏗️",
+      "chip": "DISTRICT",
+      "color": "#F7B5CD",
+      "logo": "intermiamicf.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "DEVELOPMENT",
+      "headline": "Public-money questions still hang over the build",
+      "highlight": "public-money",
+      "body": "The project also keeps public-money questions in view as the site takes shape.",
+      "place": "Miami",
+      "source": "Urban Land Magazine",
+      "photo": {
+        "query": "Miami city hall civic building exterior palm trees",
+        "prompt": "dramatic exterior of a Miami civic building with palm trees and a cloudy South Florida sky"
+      },
+      "emoji": "🏛️",
+      "chip": "QUESTIONS",
+      "color": "#F7B5CD",
+      "logo": "intermiamicf.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "DEVELOPMENT",
+      "headline": "Miami and Inter Miami both have a stake in it",
+      "highlight": "Miami",
+      "body": "The buildout affects nearby neighborhoods, soccer fans and the wider Miami market.",
+      "place": "Miami",
+      "source": "Urban Land Magazine",
+      "photo": {
+        "query": "Miami fans pink jerseys outside stadium construction",
+        "prompt": "close view of soccer fans in pink jerseys near a stadium construction site in Miami, with barriers and cranes in the background"
+      },
+      "emoji": "⚽",
+      "chip": "WHO IT AFFECTS",
+      "color": "#F7B5CD",
+      "logo": "intermiamicf.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "Miami Freedom Park is taking shape in public view, with the stadium at the center and more buildout still ahead.",
+  "hashtags": [
+    "#MiamiFreedomPark",
+    "#InterMiami"
+  ],
+  "collaborators": [
+    "intermiamicf"
+  ],
+  "igCaption": "Miami Freedom Park is taking shape in public view, with the stadium at the center and more buildout still ahead.\n\n📰 Sources: Urban Land Magazine\n\n#MiamiFreedomPark #InterMiami #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-13",
+  "id": "2026-10-13-brief"
+}
