@@ -1,0 +1,190 @@
+{
+  "title": "South Florida Weekend Guide: III Points, Zona de Fuego, Vintage Bikes, and A Pasta Bar",
+  "sources": [
+    "NBC 6 South Florida",
+    "Miami’s Community News",
+    "Miami New Times"
+  ],
+  "collaborators": [
+    "iiipoints"
+  ],
+  "igCaption": "@iiipoints is back in Wynwood, and Hollywood has a new restaurant opening. Weekend plans.\n\nSources: NBC 6 South Florida, Miami’s Community News, Miami New Times\n\n#SouthFlorida #Wynwood #HollywoodFL #MiamiSprings",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "III Points is back in Wynwood, and this weekend list also has a restaurant opening and vintage bikes.",
+      "overlay": [
+        "WEEKEND",
+        "PLANS"
+      ],
+      "emojis": [
+        "🎶",
+        "🔥",
+        "🏍️",
+        "🍝"
+      ],
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.804,
+        "lon": -80.199,
+        "h": 25
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "III Points Music Festival returns to Wynwood. NBC 6 posted its what-to-know guide on Tuesday, October thirteenth, twenty twenty-six. Wynwood stays the center of it.",
+      "caption": "III Points Music Festival returns to Wynwood. NBC 6 posted its what-to-know guide on Tuesday, Oct. 13, 2026.",
+      "overlay": "WYNWOOD",
+      "badge": "III POINTS",
+      "sub": "Festival returns",
+      "emoji": "🎶",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "guide year"
+        }
+      ],
+      "source": "NBC 6 South Florida",
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.804,
+        "lon": -80.199,
+        "h": 25
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Seminole Hard Rock Hotel & Casino Hollywood has the grand opening of Zona de Fuego. South Florida Live covered it on Tuesday, October thirteenth, twenty twenty-six. It is at the Hard Rock property in Hollywood.",
+      "caption": "Seminole Hard Rock Hotel & Casino Hollywood has the grand opening of Zona de Fuego. South Florida Live covered it on Tuesday, Oct. 13, 2026.",
+      "overlay": "HARD ROCK",
+      "badge": "GRAND OPEN",
+      "sub": "Zona de Fuego",
+      "emoji": "🔥",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "opening year"
+        }
+      ],
+      "source": "NBC 6 South Florida",
+      "location": {
+        "name": "Seminole Hard Rock Hotel & Casino Hollywood",
+        "lat": 26.051318,
+        "lon": -80.210034,
+        "h": 55
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -34,
+        "heading": 65,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami Springs hosts the third annual Vintage Motorcycle Show. Miami’s Community News posted the event on Tuesday, October thirteenth, twenty twenty-six. Third annual means this has already happened twice. If you’re there, open NEAR and see who else came for bikes.",
+      "caption": "Miami Springs hosts the 3rd Annual Vintage Motorcycle Show. Miami’s Community News posted the event on Tuesday, Oct. 13, 2026. If you’re there, open NEAR and see who else came for bikes.",
+      "overlay": "MIAMI SPRINGS",
+      "badge": "3RD ANNUAL",
+      "sub": "Vintage motorcycles",
+      "emoji": "🏍️",
+      "stats": [
+        {
+          "value": "3RD",
+          "label": "annual show"
+        }
+      ],
+      "source": "Miami’s Community News",
+      "location": {
+        "name": "Miami Springs, Florida",
+        "lat": 25.81944444,
+        "lon": -80.28944444,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -30,
+        "heading": 250,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "A Pasta Bar opens Wednesday, October twenty-first, in Sunset Harbour, inside the former Sushi Garage space on West Avenue. It is the first Florida location from the New York restaurant, with four thousand seven hundred square feet and a seventeen-seat chef’s counter.",
+      "caption": "A Pasta Bar opens Wednesday, Oct. 21, in Sunset Harbour, inside the former Sushi Garage space on West Avenue. It is the first Florida location from the New York restaurant, with 4,700 square feet and a 17-seat chef’s counter.",
+      "overlay": "SUNSET HARBOUR",
+      "badge": "OPENS OCT 21",
+      "sub": "First Florida spot",
+      "emoji": "🍝",
+      "stats": [
+        {
+          "value": "4,700 SQ FT",
+          "label": "restaurant size"
+        },
+        {
+          "value": "17 SEATS",
+          "label": "chef counter"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "A Pasta Bar Miami Beach",
+        "lat": 25.79372,
+        "lon": -80.14256,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -28,
+        "heading": 315,
+        "degrees": 50,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you doing first this weekend? A weekend like this is full of faces you recognize from across the room, and NEAR is what helps you figure out who that person was after they’ve already passed by.",
+      "overlay": "PICK ONE 👇",
+      "sub": "Weekend plans",
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.804,
+        "lon": -80.199,
+        "h": 25
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "081-south-florida-weekend-guide-iii-points-z"
+}
