@@ -13,24 +13,29 @@ const OK_LICENSE = /^(CC0|Public domain|PD|CC BY(-SA)?( [0-9.]+)?)/i;
 const BUDGET_FILE = path.join(ROOT, 'state', 'ai-images.txt');
 const FALLBACKS = ['Miami skyline', 'Miami Beach aerial', 'Brickell skyline', 'Biscayne Bay Miami'];
 const used = new Set(); // don't reuse one photo twice in a post
+// Oct 13: the cover query "South Florida concert crowd at night" was retried without "South Florida" and picked a
+// Pattaya (Thailand) crowd photo. A query that names South Florida only takes stock photos whose title names a Florida place.
+const FL_WORDS = /\b(miami|dade|florida|south\s*florida|broward|palm beach|fort lauderdale|fl)\b/i;
+const FL_TITLE = /miami|florida|\bfla\b|\bfl\b|dade|broward|palm beach|lauderdale|hialeah|doral|homestead|coral gables|coconut grove|brickell|wynwood|little havana|biscayne|key biscayne|key west|florida keys|everglades|boca raton|delray|jupiter|hollywood, ?f|aventura|sunny isles|sunrise|pembroke|kendall|kaseya|hard rock stadium|loandepot|bayfront park|bayside|south beach|ocean drive|lincoln road|vizcaya|wynwood|seminole/i;
 let aiThisPost = 0;     // at most AI_IMAGES_PER_POST (default 4) per carousel (owner: AI instead of boring stock)
 export function newPost() { used.clear(); aiThisPost = 0; }
 
 export async function getPhoto(spec, dir, name, { context = '', aiFirst = false } = {}) {
   if (!spec) return null;
   const attempt = async (fn, ...a) => { try { return await fn(...a); } catch (e) { console.log(`  (${fn.name} failed for ${name}: ${e.message.slice(0, 160)})`); return null; } };
+  const fl = FL_WORDS.test(spec.query || '') ? FL_TITLE : null; // keep the place when the search drops it
   const simple = spec.query?.replace(/\b(miami|dade|florida|south|broward|palm beach|fort lauderdale|fl)\b/gi, '').replace(/\s+/g, ' ').trim();
   // owner asked for AI images on this post: AI first, no budget caps
   if (process.env.AI_PHOTOS === '1' && spec.prompt) { const p = await attempt(aiPhoto, spec.prompt, dir, name); if (p) return p; }
   // news carousels (owner, Sep 29: stock looks bland): eye-catching AI image first, stock only as a fallback
   if (aiFirst && spec.prompt && aiBudgetLeft() > 0) { const p = await attempt(aiPhoto, spec.prompt, dir, name); if (p) return p; }
-  return (spec.query && await attempt(stockPhoto, spec.query, dir, name, context))
-    || (simple && simple !== spec.query && simple.split(' ').length >= 1 && await attempt(stockPhoto, simple, dir, name, context))
+  return (spec.query && await attempt(stockPhoto, spec.query, dir, name, context, false, fl))
+    || (simple && simple !== spec.query && simple.split(' ').length >= 1 && await attempt(stockPhoto, simple, dir, name, context, false, fl))
     || (spec.prompt && aiBudgetLeft() > 0 && aiThisPost < Number(process.env.AI_IMAGES_PER_POST ?? 4) && await attempt(aiPhoto, spec.prompt, dir, name))
     || (spec.prompt && aiBudgetLeft() > 0 && await attempt(aiPhoto, spec.prompt, dir, name)) // over the normal caps (owner: never post a slide without a picture); hard stop at +30/day
     // AI budget spent (owner Oct 3: $2/day): take the best-matching free stock photo without the picky looks check
-    || (spec.query && await attempt(stockPhoto, spec.query, dir, name, context, true))
-    || (simple && simple !== spec.query && await attempt(stockPhoto, simple, dir, name, context, true))
+    || (spec.query && await attempt(stockPhoto, spec.query, dir, name, context, true, fl))
+    || (simple && simple !== spec.query && await attempt(stockPhoto, simple, dir, name, context, true, fl))
     || await properNames(spec.query, dir, name, context)
     || await properNames(context, dir, name, context) // the slide's own headline names the venue ("Chucho Valdés at the Arsht Center")
     || null; // no photo: the slide uses the plain dark background instead of a random, off-topic stock picture
@@ -69,8 +74,8 @@ async function candidates(query) {
     && !/curt teich|postcard|publisher/i.test(c.artist)).slice(0, 5);
 }
 
-async function stockPhoto(query, dir, name, context, anyOk = false) {
-  const list = await candidates(query);
+async function stockPhoto(query, dir, name, context, anyOk = false, mustMatch = null) {
+  const list = (await candidates(query)).filter(c => !mustMatch || mustMatch.test(c.title));
   if (!list.length) return null;
   for (const c of list) {
     const img = await fetch(c.url, { headers: { 'User-Agent': UA } }).catch(() => null);

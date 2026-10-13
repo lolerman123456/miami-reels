@@ -471,10 +471,17 @@ const markSVG = (mark, top, h) => {
 };
 // Oct 10: the writer sometimes puts the whole line in "main" AND repeats it as "highlight" ("WHERE SOUTH FLORIDA IS GOING OUT…" + "WHERE SOUTH FLORIDA")
 // — split the line around the highlight so it reads once: top+before / HIGHLIGHT / after+bottom
+// where a highlight starts in a line, matching whole words only — Oct 13 the cover "SOUTH FLORIDA GOES" + highlight "OUT"
+// matched inside "S-OUT-H" and printed "S / OUT / H FLORIDA GOES THIS WEEK"
+function wordIndex(text, word) {
+  const w = String(word || '').trim(); if (!w) return -1;
+  const m = new RegExp(`(^|[^\\p{L}\\p{N}])(${w.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})(?![\\p{L}\\p{N}])`, 'iu').exec(String(text || ''));
+  return m ? m.index + m[1].length : -1;
+}
 function splitCover(c0) {
   const c = { ...c0 }, hl = String(c.highlight || '').trim();
   if (!hl) return c;
-  const t = String(c.main || ''); const k = t.toLowerCase().indexOf(hl.toLowerCase());
+  const t = String(c.main || ''); const k = wordIndex(t, hl);
   if (k < 0) return c;
   const before = t.slice(0, k).trim(), after = t.slice(k + hl.length).trim();
   c.main = ''; c.top = [c.top, before].filter(Boolean).join(' '); c.bottom = [after, c.bottom].filter(Boolean).join(' ');
@@ -521,7 +528,7 @@ export async function renderShareCover(cover, dir, file, cta, h = 1920) { // h 1
 // classic news look (owner likes it for news: easy on the eyes): full photo on top, black below, blue accents
 function newsSlideHTML(s, i, n, dir) {
   const img = dataUrl(dir, s.photoFile);
-  const hl = String(s.headline || ''); const k = s.highlight ? hl.toLowerCase().indexOf(String(s.highlight).toLowerCase()) : -1;
+  const hl = String(s.headline || ''); const k = wordIndex(hl, s.highlight);
   const headline = k >= 0 ? `${esc(hl.slice(0, k))}<span class="blue">${esc(hl.slice(k, k + s.highlight.length))}</span>${esc(hl.slice(k + s.highlight.length))}` : esc(hl);
   const size = Math.max(52, Math.min(84, Math.floor(84 * Math.sqrt(48 / Math.max(48, hl.length)))));
   const red = /CRIME|BREAKING|UPDATE/.test(s.tag || '');
@@ -547,7 +554,7 @@ const slideHTML = (s, i, n, dir, post) => (ALIVE.includes(post?.kind) ? aliveSli
 function aliveSlideHTML(s, i, n, dir, post) {
   const img = dataUrl(dir, s.photoFile), logo = dataUrl(dir, s.logoFile);
   const theme = themeOf(s, post), accent = '#FFD24A';
-  const hl = String(s.headline || ''); const k = s.highlight ? hl.toLowerCase().indexOf(String(s.highlight).toLowerCase()) : -1;
+  const hl = String(s.headline || ''); const k = wordIndex(hl, s.highlight);
   const headline = k >= 0 ? `${esc(hl.slice(0, k))}<span style="color:${accent}">${esc(hl.slice(k, k + s.highlight.length))}</span>${esc(hl.slice(k + s.highlight.length))}` : esc(hl);
   const size = Math.max(52, Math.min(84, Math.floor(84 * Math.sqrt(48 / Math.max(48, hl.length)))));
   const red = /CRIME|BREAKING|UPDATE/.test(s.tag || '');
