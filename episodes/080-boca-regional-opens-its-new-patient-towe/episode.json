@@ -1,0 +1,190 @@
+{
+  "title": "Boca Regional opens its new patient tower",
+  "sources": [
+    "The Palm Beach Post",
+    "Healthcare Design Magazine",
+    "TAPinto",
+    "Sun Sentinel",
+    "Wikipedia"
+  ],
+  "collaborators": [],
+  "igCaption": "Boca Regional unveiled a $1.1B patient tower in Palm Beach County. 🏥\n\nSources: The Palm Beach Post, Healthcare Design Magazine, TAPinto, Sun Sentinel, Wikipedia\n\n#BocaRaton #PalmBeachCounty #SouthFlorida #Healthcare",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Boca Regional just unveiled a new patient tower, and it is set to make it Palm Beach County's largest hospital.",
+      "overlay": [
+        "BOCA REGIONAL",
+        "NEW TOWER"
+      ],
+      "emojis": [
+        "🏥",
+        "🚧",
+        "🩺",
+        "📍"
+      ],
+      "location": {
+        "name": "Boca Raton Regional Hospital",
+        "lat": 26.3587487,
+        "lon": -80.1020268,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 210
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Gloria Drummond Patient Tower is a $1.1 billion project at Boca Raton Regional Hospital. The hospital unveiled it on Monday, October 12, with move-in planned by the end of October.",
+      "caption": "The Gloria Drummond Patient Tower is a $1.1B project at Boca Raton Regional Hospital. The hospital unveiled it on Monday, Oct. 12, with move-in planned by the end of October.",
+      "overlay": "PATIENT TOWER",
+      "badge": "$1.1B",
+      "sub": "Move-in by late October",
+      "emoji": "🏗️",
+      "stats": [
+        {
+          "value": "$1.1B",
+          "label": "project cost"
+        }
+      ],
+      "source": "Healthcare Design Magazine",
+      "location": {
+        "name": "Gloria Drummond Patient Tower",
+        "lat": 26.3587487,
+        "lon": -80.1020268,
+        "h": 95
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Boca Regional has 400 licensed beds, 800 physicians, 2,000 nursing and support staff, and 1,200 volunteers. The new tower adds private rooms and upgraded technology.",
+      "caption": "Boca Regional has 400 licensed beds, 800 physicians, 2,000 nursing and support staff, and 1,200 volunteers. The new tower adds private rooms and upgraded technology.",
+      "overlay": "BOCA REGIONAL",
+      "badge": "400 BEDS",
+      "sub": "Private rooms added",
+      "emoji": "🛏️",
+      "stats": [
+        {
+          "value": "400",
+          "label": "licensed beds"
+        },
+        {
+          "value": "800",
+          "label": "physicians"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "Boca Raton Regional Hospital",
+        "lat": 26.3587487,
+        "lon": -80.1020268,
+        "h": 80
+      },
+      "shot": {
+        "type": "push",
+        "range": 800,
+        "pitch": -30,
+        "heading": 70
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The hospital started after Gloria and Robert Drummond lost their children, Debra and James Randall, in 1962. The Debbie-Rand Memorial Service League raised $3.5 million, and the Miracle on Meadows Road opened in 1967 with 104 beds.",
+      "caption": "The hospital started after Gloria and Robert Drummond lost their children, Debra and James Randall, in 1962. The Debbie-Rand Memorial Service League raised $3.5M, and the Miracle on Meadows Road opened in 1967 with 104 beds.",
+      "overlay": "MEADOWS ROAD",
+      "badge": "OPENED 1967",
+      "sub": "Started with 104 beds",
+      "emoji": "📅",
+      "stats": [
+        {
+          "value": "$3.5M",
+          "label": "funds raised"
+        },
+        {
+          "value": "104",
+          "label": "first beds"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "Boca Raton Regional Hospital",
+        "lat": 26.3587487,
+        "lon": -80.1020268,
+        "h": 70
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 700,
+        "pitch": -28,
+        "heading": 300
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Boca Regional is part of Baptist Health South Florida's network. Baptist Health had 11 hospitals in 2023, across Miami-Dade, Monroe, and Palm Beach counties, plus more than 100 physician practices and outpatient facilities.",
+      "caption": "Boca Regional is part of Baptist Health South Florida's network. Baptist Health had 11 hospitals in 2023, across Miami-Dade, Monroe, and Palm Beach counties, plus more than 100 physician practices and outpatient facilities.",
+      "overlay": "BAPTIST HEALTH",
+      "badge": "11 HOSPITALS",
+      "sub": "Regional health network",
+      "emoji": "🩺",
+      "stats": [
+        {
+          "value": "11",
+          "label": "hospitals"
+        },
+        {
+          "value": "100+",
+          "label": "facilities"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "Boca Raton Regional Hospital",
+        "lat": 26.3587487,
+        "lon": -80.1020268,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1100,
+        "pitch": -35,
+        "heading": 20,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "The tower adds new space, and the hospital's move-in is planned for late October. Hospitals are full of faces you pass in a hurry and never meet again, and NEAR is for the everyday version of that moment, when you realize who someone was after they’re already gone.",
+      "overlay": "MOVE-IN SOON",
+      "sub": "Late October",
+      "location": {
+        "name": "Boca Raton Regional Hospital",
+        "lat": 26.3587487,
+        "lon": -80.1020268,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -36,
+        "heading": 250
+      }
+    }
+  ],
+  "format": "NEW BUILD",
+  "id": "080-boca-regional-opens-its-new-patient-towe",
+  "tiktok": true,
+  "music": true
+}
