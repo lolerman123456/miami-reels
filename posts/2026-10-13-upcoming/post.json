@@ -1,0 +1,138 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "",
+    "main": "SOUTH FLORIDA GOES",
+    "highlight": "OUT",
+    "bottom": "THIS WEEK",
+    "blur": false,
+    "photo": {
+      "query": "South Florida concert crowd at night with stage lights and palm trees",
+      "prompt": "A dramatic nighttime South Florida crowd heading into a live event, with bright stage lights, palm trees, and a clear venue entrance"
+    },
+    "emojis": [
+      "🎤",
+      "🏀",
+      "🐶",
+      "🌺"
+    ],
+    "logos": [
+      "kaseyacenter.com",
+      "theunderline.org",
+      "casino.hardrock.com",
+      "miamidade.gov"
+    ],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: PattayaPatrol / CC BY-SA 4.0",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "KATSEYE at Kaseya Center, Oct. 13",
+      "highlight": "KATSEYE",
+      "body": "The girl group plays Kaseya Center in Miami at 8 p.m. The show is sold out.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Kaseya Center Miami concert crowd night",
+        "prompt": "A packed pop concert inside Kaseya Center with bright stage lights and phones raised in the air"
+      },
+      "color": "#111111",
+      "emoji": "🎤",
+      "chip": "8 PM",
+      "logo": "kaseyacenter.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Miami Heat vs. Brooklyn Nets, Oct. 14",
+      "highlight": "Miami Heat",
+      "body": "The Heat host the Nets at Kaseya Center at 7:30 p.m. Tickets cost $15 to $361.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miami Heat game Kaseya Center basketball court",
+        "prompt": "A courtside view of a Miami Heat game at Kaseya Center with the hardwood, scoreboard, and red arena lights"
+      },
+      "color": "#98002E",
+      "emoji": "🏀",
+      "chip": "$15+",
+      "logo": "miamiheat.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Chewy Pack Walk on The Underline, Oct. 15",
+      "highlight": "Chewy Pack Walk",
+      "body": "Bring your dog to Chewy Bark Park in Coral Gables at 6 p.m. Admission is free with RSVP.",
+      "place": "Coral Gables",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "The Underline Miami dog park evening",
+        "prompt": "Dogs in costumes walking with owners under the Metrorail at The Underline in Coral Gables at golden hour"
+      },
+      "color": "#1E5AA8",
+      "emoji": "🐶",
+      "chip": "FREE",
+      "logo": "theunderline.org",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Def Leppard at Hard Rock Live, Oct. 15",
+      "highlight": "Def Leppard",
+      "body": "Def Leppard plays Hard Rock Live in Hollywood at 8 p.m. Tickets cost $75 to $559.",
+      "place": "Hollywood",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Hard Rock Live Hollywood Florida concert",
+        "prompt": "A rock concert at Hard Rock Live in Hollywood with guitars, smoke, spotlights, and a packed crowd"
+      },
+      "color": "#6B1D1D",
+      "emoji": "🎸",
+      "chip": "$75+",
+      "logo": "casino.hardrock.com",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: ChoticoTheGamer / CC0",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Redland International Orchid Festival, Oct. 16",
+      "highlight": "Orchid Festival",
+      "body": "The festival runs noon to 5 p.m. at Fruit and Spice Park in Homestead. Tickets cost $20.",
+      "place": "Homestead",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "orchid festival tropical flowers open air",
+        "prompt": "Rows of rare orchids in bright colors at an open-air tropical flower festival in Homestead"
+      },
+      "emoji": "🌺",
+      "chip": "$20",
+      "logo": "miamidade.gov",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Photo by David J. Stang / CC BY-SA 4.0",
+      "logoFile": null
+    }
+  ],
+  "caption": "South Florida has plans this week. Who are you taking? Tag a friend 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [
+    "miamiheat"
+  ],
+  "igCaption": "South Florida has plans this week. Who are you taking? Tag a friend 👀\n\n📰 Sources: Miami New Times\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-13",
+  "id": "2026-10-13-upcoming"
+}
