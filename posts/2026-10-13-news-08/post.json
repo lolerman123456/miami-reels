@@ -1,0 +1,85 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "POLICE SAY",
+    "main": "DRIVER WAS SHOT IN THE LEG",
+    "highlight": "SHOT",
+    "bottom": "WHILE DRIVING INTO MIAMI GARDENS COMPLEX",
+    "blur": false,
+    "photo": {
+      "query": "Miami Gardens apartment complex entrance police scene daylight",
+      "prompt": "dramatic daytime police scene at an apartment complex entrance in Miami Gardens, patrol cars blocking the driveway, yellow tape, flashing lights, apartment buildings in view, no visible victim"
+    },
+    "emojis": [
+      "🚔",
+      "🚁",
+      "🚑"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Shot in the leg while driving into a Miami Gardens complex",
+      "highlight": "shot in the leg",
+      "body": "Police said a woman was shot while she drove into an apartment complex in Miami Gardens.",
+      "place": "Miami Gardens",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Miami Gardens apartment complex entrance police cars daylight",
+        "prompt": "police cruisers with lights on outside a Miami Gardens apartment complex driveway in daylight, crime scene tape across the entrance, no people shown"
+      },
+      "emoji": "🚔",
+      "chip": "MIAMI GARDENS",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Rescue crews airlifted her to a hospital",
+      "highlight": "airlifted",
+      "body": "WSVN reported rescue crews took the woman to the hospital by air after the shooting.",
+      "place": "Miami Gardens",
+      "source": "WSVN",
+      "photo": {
+        "query": "medical helicopter South Florida emergency landing daylight",
+        "prompt": "medical helicopter lifting off near an emergency scene in South Florida during the day, rescue vehicles below, no patient visible"
+      },
+      "emoji": "🚁",
+      "chip": "AIRLIFTED",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police said she was inside her car",
+      "highlight": "inside her car",
+      "body": "Police said the gunfire hit her while she was inside the car as it pulled in.",
+      "place": "Miami Gardens",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "car apartment complex driveway police tape Miami Gardens",
+        "prompt": "sedan stopped near an apartment complex driveway with police tape and patrol lights in daylight, no visible people",
+        "mark": "arrow"
+      },
+      "emoji": "🚗",
+      "chip": "PULLED IN",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    }
+  ],
+  "caption": "Shot in the leg while driving into a Miami Gardens apartment complex",
+  "hashtags": [
+    "#MiamiGardens",
+    "#MiamiDade"
+  ],
+  "collaborators": [],
+  "igCaption": "Shot in the leg while driving into a Miami Gardens apartment complex\n\n📰 Sources: WSVN 7News, WSVN, Wikipedia\n\n#MiamiGardens #MiamiDade #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-13",
+  "id": "2026-10-13-news-08"
+}
