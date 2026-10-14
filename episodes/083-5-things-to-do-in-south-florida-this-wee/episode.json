@@ -1,0 +1,223 @@
+{
+  "title": "5 things to do in South Florida this week",
+  "sources": [
+    "Secret Miami",
+    "Haute Living",
+    "Miami New Times",
+    "Eater Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Free museum admission, a new flagship, and a few food stops for South Florida this week.\n\nSources: Secret Miami, Haute Living, Miami New Times, Eater Miami\n\n#Miami #SouthFlorida #ThingsToDo #MiamiFood",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need plans this week without starting at the most expensive option? Start with these five South Florida picks.",
+      "overlay": [
+        "5 THINGS",
+        "THIS WEEK"
+      ],
+      "emojis": [
+        "📍",
+        "🍽️",
+        "🛍️",
+        "🎨"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 120
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number five: Miami Book Fair unveiled its 2026 poster, designed by New World School of the Arts student Isabella Isaza.",
+      "caption": "Number 5: Miami Book Fair unveiled its 2026 poster, designed by New World School of the Arts student Isabella Isaza.",
+      "overlay": "MIAMI BOOK FAIR",
+      "badge": "2026 POSTER",
+      "sub": "Student-designed art",
+      "emoji": "📚",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "Poster year"
+        }
+      ],
+      "source": "MDC News",
+      "location": {
+        "name": "Miami Dade College Wolfson Campus",
+        "lat": 25.7776,
+        "lon": -80.1901,
+        "h": 45
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number four: Wynwood Walls and Rockstar Games are making museum admission free for Miami residents through 2028.",
+      "caption": "Number 4: Wynwood Walls and Rockstar Games are making museum admission free for Miami residents through 2028.",
+      "overlay": "WYNWOOD WALLS",
+      "badge": "FREE THROUGH 2028",
+      "sub": "Miami residents only",
+      "emoji": "🎨",
+      "stats": [
+        {
+          "value": "2028",
+          "label": "Free through"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Wynwood Walls",
+        "lat": 25.8046,
+        "lon": -80.1999,
+        "h": 28
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 45,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number three: Carolina Herrera opened a Miami Design District flagship on October 13. If you swing by, open NEAR and see who was there.",
+      "caption": "Number 3: Carolina Herrera opened a Miami Design District flagship on Oct. 13. If you swing by, open NEAR and see who was there.",
+      "overlay": "DESIGN DISTRICT",
+      "badge": "OPENED OCT 13",
+      "sub": "New flagship store",
+      "emoji": "🛍️",
+      "stats": [
+        {
+          "value": "OCT 13",
+          "label": "Reported opening"
+        }
+      ],
+      "source": "Haute Living",
+      "location": {
+        "name": "Miami Design District",
+        "lat": 25.8126,
+        "lon": -80.1924,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 45,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number two: True Food Kitchen closed its Miami location at The Falls after the company filed for Chapter 11 bankruptcy with about 42 million dollars in debt.",
+      "caption": "Number 2: True Food Kitchen closed its Miami location at The Falls after the company filed for Chapter 11 bankruptcy with about $42 million in debt.",
+      "overlay": "THE FALLS",
+      "badge": "$42M DEBT",
+      "sub": "True Food closed",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "$42M",
+          "label": "Company debt"
+        },
+        {
+          "value": "12",
+          "label": "Locations closed"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "The Falls",
+        "lat": 25.6444,
+        "lon": -80.3383,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -28,
+        "heading": 220,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "And number one: Emelina in West Palm Beach has a 16-seat Cuban omakase and a 10-course tasting menu for 275 dollars.",
+      "caption": "And number 1: Emelina in West Palm Beach has a 16-seat Cuban omakase and a 10-course tasting menu for $275.",
+      "overlay": "WEST PALM",
+      "badge": "16 SEATS",
+      "sub": "Cuban omakase",
+      "emoji": "🥘",
+      "stats": [
+        {
+          "value": "16",
+          "label": "Seats"
+        },
+        {
+          "value": "$275",
+          "label": "Tasting menu"
+        }
+      ],
+      "source": "Eater Miami",
+      "location": {
+        "name": "West Palm Beach",
+        "lat": 26.7153,
+        "lon": -80.0534,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -30,
+        "heading": 85,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you do this week? South Florida is full of places where you brush past people all week and never learn their names, which is exactly the kind of missed connection NEAR makes less invisible.",
+      "overlay": "PICK ONE 👇",
+      "sub": "Tell us your plan",
+      "location": {
+        "name": "South Florida",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 120
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -32,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "083-5-things-to-do-in-south-florida-this-wee"
+}
