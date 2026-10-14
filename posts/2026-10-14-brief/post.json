@@ -1,0 +1,81 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "A $226M HAUL",
+    "main": "OF MORE THAN 29,000 POUNDS",
+    "highlight": "OF DRUGS",
+    "bottom": "WAS UNLOADED AT PORT EVERGLADES",
+    "blur": false,
+    "photo": {
+      "query": "U.S. Coast Guard drug offload Port Everglades Fort Lauderdale cocaine marijuana pallets cutter",
+      "prompt": "Coast Guard crews unloading wrapped drug bales from a cutter at Port Everglades in Fort Lauderdale, with pallets stacked across the dock"
+    },
+    "emojis": [
+      "🚢",
+      "🚨",
+      "📦"
+    ],
+    "logos": [
+      "uscg.mil",
+      "porteverglades.net"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "More than 29,000 pounds of cocaine and marijuana were unloaded at Port Everglades in one crackdown.",
+      "highlight": "29,000+ pounds",
+      "body": "The U.S. Coast Guard offloaded the drugs Wednesday morning in Fort Lauderdale.",
+      "place": "Fort Lauderdale",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "U.S. Coast Guard drug offload Port Everglades Fort Lauderdale bales dock",
+        "prompt": "A Coast Guard cutter docked at Port Everglades as crews unload wrapped drug bales onto pallets in the morning light"
+      },
+      "emoji": "🚨",
+      "chip": "$226M",
+      "logo": "uscg.mil",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Officials put the haul at $226 million.",
+      "highlight": "$226 million",
+      "body": "The offload included cocaine and marijuana recovered in multiple busts.",
+      "place": "Fort Lauderdale",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Coast Guard seized cocaine marijuana bales pallets port offload",
+        "prompt": "Rows of wrapped narcotics bales stacked on pallets at a port during a Coast Guard offload",
+        "mark": "circle"
+      },
+      "emoji": "📦",
+      "chip": "29K+ LBS",
+      "logo": "uscg.mil",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": null
+    }
+  ],
+  "caption": "More than 29,000 pounds of cocaine and marijuana were unloaded at Port Everglades after busts in the eastern Pacific.",
+  "hashtags": [
+    "#PortEverglades",
+    "#CoastGuard"
+  ],
+  "collaborators": [],
+  "igCaption": "More than 29,000 pounds of cocaine and marijuana were unloaded at Port Everglades after busts in the eastern Pacific.\n\n📰 Sources: WSVN 7News, Wikipedia\n\n🎥 Video: CBS News Miami\n\n#PortEverglades #CoastGuard #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-14",
+  "id": "2026-10-14-brief",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "CBS News Miami",
+    "url": "https://www.youtube.com/watch?v=0rFnR1TxUSM"
+  }
+}
