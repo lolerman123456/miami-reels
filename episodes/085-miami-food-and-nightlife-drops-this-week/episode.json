@@ -1,0 +1,222 @@
+{
+  "title": "Miami food and nightlife drops this week",
+  "sources": [
+    "Haute Living",
+    "Resy | Right This Way",
+    "Florida Sportsman",
+    "The Palm Beach Post",
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Miami food drops this week, from stone crab to Ultra news.\nOct. 14-15, Miami and Palm Beach, price not listed\n\nSources: Haute Living, Resy | Right This Way, Florida Sportsman, The Palm Beach Post, Miami New Times\n\n#MiamiFood #MiamiNightlife #SouthFlorida #ThisWeek",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Stone crab season starts this week, and Miami also got new food and nightlife drops.",
+      "overlay": [
+        "FOOD DROPS",
+        "THIS WEEK"
+      ],
+      "emojis": [
+        "🦀",
+        "🍽️",
+        "🍷",
+        "🎶"
+      ],
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 120
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Wilder is a new neighborhood market in Miami. Haute Living described it as Michelin-backed on Wednesday, October 14.",
+      "caption": "Wilder is a new neighborhood market in Miami. Haute Living described it as Michelin-backed on Wednesday, Oct. 14.",
+      "overlay": "WILDER",
+      "badge": "OCT 14",
+      "sub": "Michelin-backed market",
+      "emoji": "🛒",
+      "stats": [
+        {
+          "value": "OCT 14",
+          "label": "News date"
+        }
+      ],
+      "source": "Haute Living",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Anako brought modern Filipino cooking with Southeast Asian flair to Resy on Wednesday, October 14.",
+      "caption": "Anako brought modern Filipino cooking with Southeast Asian flair to Resy on Wednesday, Oct. 14.",
+      "overlay": "ANAKO",
+      "badge": "OCT 14",
+      "sub": "Modern Filipino cooking",
+      "emoji": "🍚",
+      "stats": [
+        {
+          "value": "OCT 14",
+          "label": "Resy date"
+        }
+      ],
+      "source": "Resy | Right This Way",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 700,
+        "pitch": -30,
+        "heading": 45
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Florida’s stone crab season opens October 15. That date sets the menu shift for a lot of South Florida seafood spots. When stone crab season starts, NEAR shows who’s digging into the same spread.",
+      "caption": "Florida’s stone crab season opens Oct. 15. When stone crab season starts, NEAR shows who’s digging into the same spread.",
+      "overlay": "STONE CRAB",
+      "badge": "OCT 15",
+      "sub": "Florida season opens",
+      "emoji": "🦀",
+      "stats": [
+        {
+          "value": "OCT 15",
+          "label": "Season opens"
+        }
+      ],
+      "source": "Florida Sportsman",
+      "location": {
+        "name": "Miami Beach, Florida",
+        "lat": 25.82555556,
+        "lon": -80.1325,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -34,
+        "heading": 95,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Palm Beach has wine-paired dining events at two restaurants this week. The Palm Beach Post posted them on Wednesday, October 14.",
+      "caption": "Palm Beach has wine-paired dining events at two restaurants this week. The Palm Beach Post posted them on Wednesday, Oct. 14.",
+      "overlay": "PALM BEACH",
+      "badge": "2 EVENTS",
+      "sub": "Wine-paired dining",
+      "emoji": "🍷",
+      "stats": [
+        {
+          "value": "2",
+          "label": "Restaurants"
+        },
+        {
+          "value": "OCT 14",
+          "label": "Post date"
+        }
+      ],
+      "source": "The Palm Beach Post",
+      "location": {
+        "name": "Palm Beach, Florida",
+        "lat": 26.70555556,
+        "lon": -80.04111111,
+        "h": 50
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 25,
+        "degrees": 75,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Ultra Music Festival revealed its Phase 1 lineup for 2027. The festival returns to Bayfront Park from March 26 through 28 for its 27th edition.",
+      "caption": "Ultra Music Festival revealed its Phase 1 lineup for 2027. The festival returns to Bayfront Park from March 26 through 28 for its 27th edition.",
+      "overlay": "ULTRA",
+      "badge": "27TH EDITION",
+      "sub": "Bayfront Park return",
+      "emoji": "🎶",
+      "stats": [
+        {
+          "value": "2027",
+          "label": "Festival year"
+        },
+        {
+          "value": "27",
+          "label": "Edition"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Bayfront Park",
+        "lat": 25.7751,
+        "lon": -80.1868,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -35,
+        "heading": 210,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you checking first this week? Miami nights are full of people you pass by once and never meet, and NEAR shows you who they were after the moment is gone.",
+      "overlay": "WHAT FIRST? 👇",
+      "sub": "Food and nightlife drops",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 120
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "085-miami-food-and-nightlife-drops-this-week"
+}
