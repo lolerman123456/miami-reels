@@ -1,0 +1,84 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "MIAMI POLICE SAY",
+    "main": "A DOG WAS FOUND IN THE WATER",
+    "highlight": "TIED TO 2 CINDER BLOCKS",
+    "bottom": "UNDERWATER IN COCONUT GROVE",
+    "blur": false,
+    "photo": {
+      "query": "Coconut Grove Biscayne Bay waterfront Miami night police lights",
+      "prompt": "dark Coconut Grove waterfront in Miami at night, police lights reflecting on the water, a visible pair of cinder blocks near the shoreline",
+      "mark": "circle"
+    },
+    "emojis": [
+      "🚨",
+      "🐕",
+      "🌊"
+    ],
+    "logos": [
+      "local10.com",
+      "nbcmiami.com",
+      "wsvn.com",
+      "miamiherald.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c2.png",
+      "logo-c3.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Tied to two cinder blocks underwater in Coconut Grove",
+      "highlight": "two cinder blocks",
+      "body": "Miami police say witnesses found a dog underwater in Coconut Grove tied to two cinder blocks.",
+      "place": "Coconut Grove",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Coconut Grove Biscayne Bay seawall Miami police lights",
+        "prompt": "close view of dark water along a Coconut Grove seawall in Miami, with police lights reflecting on the surface and the shoreline in frame"
+      },
+      "emoji": "🚨",
+      "chip": "CINDER BLOCKS",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police are investigating a suspected animal abuse case",
+      "highlight": "suspected animal abuse case",
+      "body": "Authorities confirmed the investigation on Wednesday, Oct. 14.",
+      "place": "Miami",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami police car night waterfront",
+        "prompt": "Miami police cruiser with flashing lights beside a dark waterfront street in Coconut Grove, trees and water in the background"
+      },
+      "emoji": "👮",
+      "chip": "OCT. 14",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Miami police are investigating a suspected animal abuse case after a dog was found underwater in Coconut Grove tied to two cinder blocks.",
+  "hashtags": [
+    "#CoconutGrove",
+    "#MiamiNews"
+  ],
+  "collaborators": [],
+  "igCaption": "Miami police are investigating a suspected animal abuse case after a dog was found underwater in Coconut Grove tied to two cinder blocks.\n\n📰 Sources: WPLG Local 10, NBC 6 South Florida, Tampa Bay Times\n\n🎥 Video: NBC 6 South Florida\n\n#CoconutGrove #MiamiNews #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-14",
+  "id": "2026-10-14-news-07",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "NBC 6 South Florida",
+    "url": "https://www.youtube.com/watch?v=Yyy5VgVjYuo"
+  }
+}
