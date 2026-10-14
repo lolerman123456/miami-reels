@@ -1,0 +1,138 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS",
+    "main": "EVERY BIG",
+    "highlight": "EVENT",
+    "bottom": "THIS WEEK",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons search South Florida event crowd lights skyline",
+      "prompt": "A dramatic South Florida night scene with concert lights, a bookstore crowd, glowing art installations and a busy street outside a venue"
+    },
+    "emojis": [
+      "👀",
+      "🎶",
+      "✨"
+    ],
+    "logos": [
+      "iiipoints.com",
+      "barnesandnoble.com",
+      "jungleisland.com",
+      "kravis.org"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c3.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Barnes & Noble Midtown Miami, Oct. 14",
+      "highlight": "Midtown Miami",
+      "body": "Barnes & Noble opens today at 10 a.m. at 3201 N. Miami Ave., Ste. 111, Miami. L.J. Shen is doing the ribbon-cutting and book signing.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons search Barnes and Noble bookstore opening ribbon cutting",
+        "prompt": "A sharp, bright bookstore opening with a ribbon-cutting table, tall bookshelves and people walking into the store"
+      },
+      "color": "#006241",
+      "emoji": "📚",
+      "chip": "10 AM",
+      "logo": "barnesandnoble.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Miami Fashion Week, Oct. 13 to 18",
+      "highlight": "Miami Fashion Week",
+      "body": "The 10th anniversary edition runs Oct. 13 to 18 in Miami. WSVN says the week includes a special pop-up to meet designers.",
+      "place": "Miami",
+      "source": "WSVN",
+      "photo": {
+        "query": "Wikimedia Commons search Miami fashion runway lights",
+        "prompt": "A runway photo with bright lights, a model mid-walk and a packed front row in Miami"
+      },
+      "emoji": "👗",
+      "chip": "OCT 13-18",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "III Points in Wynwood, this week",
+      "highlight": "III Points",
+      "body": "III Points is in festival week in Wynwood. Miami New Times has the full set times by day and stage and the acts to catch.",
+      "place": "Wynwood",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons search Wynwood music festival crowd stage lights",
+        "prompt": "A packed Wynwood festival scene with a DJ booth, warehouse lights and a dense crowd facing the stage"
+      },
+      "color": "#000000",
+      "emoji": "🎛️",
+      "chip": "THIS WEEK",
+      "logo": "iiipoints.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Luminosa at Jungle Island, this week",
+      "highlight": "Luminosa at Jungle",
+      "body": "Jungle Island’s 1.35-mile light trail has seven zones, food vendors, cocktails and live entertainment. Tickets are 10% off when booked by Oct. 18.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Wikimedia Commons search Jungle Island Miami lights trail",
+        "prompt": "A glowing nighttime trail with giant light sculptures, palm trees and visitors walking through an illuminated path"
+      },
+      "color": "#7B2CFF",
+      "emoji": "✨",
+      "chip": "10% OFF",
+      "logo": "jungleisland.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Kravis Center Block Party in West Palm Beach",
+      "highlight": "Block Party",
+      "body": "The Kravis Center Block Party brings free music, arts and family fun to West Palm Beach. WPTV listed it in its Oct. 14 events coverage.",
+      "place": "West Palm Beach",
+      "source": "WPTV",
+      "photo": {
+        "query": "Wikimedia Commons search outdoor block party stage tents palm trees West Palm Beach",
+        "prompt": "An outdoor arts block party outside a performing arts center with a stage, tents and families walking by"
+      },
+      "emoji": "🎨",
+      "chip": "FREE",
+      "logo": "kravis.org",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "Save this before the group chat picks another couch night. Who are you taking? Tag a friend 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [
+    "iiipoints"
+  ],
+  "igCaption": "Save this before the group chat picks another couch night. Who are you taking? Tag a friend 👀\n\n📰 Sources: Miami New Times, WSVN, Secret Miami, WPTV\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-14",
+  "id": "2026-10-14-upcoming"
+}
