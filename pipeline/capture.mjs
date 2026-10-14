@@ -67,7 +67,8 @@ export async function renderFrames(todo, framesDir, { mode } = {}) {
       await page.setViewport({ width: 540, height: 960, deviceScaleFactor: 2 });
       await page.evaluateOnNewDocument(k => { window.__GMAPS_KEY = k; }, key);
       page.on('pageerror', e => console.log('  [page error]', e.message));
-      await page.goto(srv.url);
+      // Oct 14: one capture slice hit puppeteer's 30 s 'load' timeout (8pm Reel lost) — the frames are driven by srv.done, so don't wait for every map tile to load
+      await page.goto(srv.url, { waitUntil: 'domcontentloaded', timeout: 120000 });
     }
     await srv.done;
   } finally {
