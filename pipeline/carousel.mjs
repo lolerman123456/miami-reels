@@ -492,7 +492,8 @@ function coverHTML(post, dir, h, o = {}) { // o: textBottom / barBottom / barTex
   // o.big (shareslop, owner Oct 6: "a lil bigger"): never smaller than the floor — long lines wrap instead of shrinking
   const fs = (t, max) => o.big ? fit1(t, Math.round(max * 1.25), 1040) : fit1(t, max); // one line each; shareslop lines are written short so they come out big
   return `
-    ${img ? `<div class="bg" style="background-image:url('${img}');${c.blur ? 'filter:blur(26px);transform:scale(1.12)' : ''}"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 30%, #2a3a66, #05070d)"></div>`}
+    ${img && o.fit ? `<div class="bg" style="background-image:url('${img}');filter:blur(30px) brightness(.6);transform:scale(1.15)"></div><div class="bg" style="background:url('${img}') center ${o.fit}px/1080px auto no-repeat"></div>` // owner Oct 14: the 2:3 AI photo was side-cropped in the 9:16 Reel — show it whole, blurred copy behind
+    : img ? `<div class="bg" style="background-image:url('${img}');${c.blur ? 'filter:blur(26px);transform:scale(1.12)' : ''}"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 30%, #2a3a66, #05070d)"></div>`}
     <div class="shade" style="background:${o.textBottom ? 'linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 48%, rgba(0,0,0,.9) 66%, #000 82%)' : 'linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,.3) 56%, rgba(0,0,0,.82) 84%)'}"></div>
     ${c.blur ? `<div class="caps" style="position:absolute;left:0;right:0;top:${h * 0.22}px;text-align:center;font-size:${h > 1400 ? 300 : 250}px">?</div>` : ''}
     ${img ? markSVG(c.mark, h * 0.08, h * 0.42) : ''}
@@ -517,7 +518,7 @@ export async function renderShareCover(cover, dir, file, cta, h = 1920) { // h 1
   try {
     const page = await browser.newPage();
     await page.setViewport({ width: 1080, height: h });
-    const o = h > 1400 ? { textBottom: 450, barBottom: 330, barText: cta, big: true } : { textBottom: 170, barText: cta, big: true };
+    const o = h > 1400 ? { textBottom: 450, barBottom: 330, barText: cta, big: true, fit: 110 } : { textBottom: 170, barText: cta, big: true };
     await page.setContent(`<html><head><meta charset="utf-8"><style>${CSS}</style></head><body style="--h:${h}px">${coverHTML({ cover, kind: 'news' }, dir, h, o)}</body></html>`, { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
     await page.screenshot({ path: file, type: 'jpeg', quality: 93 });
