@@ -1,0 +1,224 @@
+{
+  "title": "South Florida Weekend Guide: Food, Hoops, Hockey and Lights",
+  "sources": [
+    "Miami New Times",
+    "NBA.com",
+    "NHL.com",
+    "Secret Miami",
+    "Local 10"
+  ],
+  "collaborators": [],
+  "igCaption": "@onlyindade Weekend picks: steak, hoops, hockey, lights and Homestead 🏁\nOct. 14, Kaseya Center.\n\nSources: Miami New Times, NBA.com, NHL.com, Secret Miami, Local 10\n\n#Miami #SouthFlorida #MiamiEvents #WeekendGuide",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "South Florida weekend picks start with Gordon Ramsay reopening a Miami Beach restaurant as a steakhouse.",
+      "overlay": [
+        "WEEKEND",
+        "GUIDE"
+      ],
+      "emojis": [
+        "🍽️",
+        "🏀",
+        "🏒",
+        "🏁"
+      ],
+      "location": {
+        "name": "Miami Beach, Florida",
+        "lat": 25.82555556,
+        "lon": -80.1325,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Lucky Cat Steak opens November 25 at 119 Washington Avenue in South of Fifth. Gordon Ramsay opened Lucky Cat there in February 2024. It closed in August 2025. The new version has 152 seats, seafood, Wagyu and cocktails.",
+      "caption": "Lucky Cat Steak opens Nov. 25 at 119 Washington Ave. The new version has 152 seats, seafood, Wagyu and cocktails.",
+      "overlay": "LUCKY CAT",
+      "badge": "OPENS NOV 25",
+      "sub": "119 Washington Ave.",
+      "emoji": "🥩",
+      "stats": [
+        {
+          "value": "152",
+          "label": "seats"
+        },
+        {
+          "value": "NOV 25",
+          "label": "opening"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "119 Washington Avenue, Miami Beach",
+        "lat": 25.7702,
+        "lon": -80.1349,
+        "h": 15
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 700,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Brooklyn plays Miami Heat at Kaseya Center on October 14. The game is listed as Brooklyn Nets versus Miami Heat. ",
+      "caption": "Brooklyn Nets vs. Miami Heat is at Kaseya Center on Oct. 14.",
+      "overlay": "KASEYA CENTER",
+      "badge": "OCT 14",
+      "sub": "Nets at Heat",
+      "emoji": "🏀",
+      "stats": [
+        {
+          "value": "OCT 14",
+          "label": "game date"
+        }
+      ],
+      "source": "NBA.com",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.78138889,
+        "lon": -80.18805556,
+        "h": 70
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -35,
+        "heading": 75,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Panthers host Vamos Gatos Night on Thursday, October 15. If you’re at Vamos Gatos Night, check NEAR for other Panthers fans.",
+      "caption": "The Panthers host Vamos Gatos Night on Thursday, Oct. 15. If you’re at Vamos Gatos Night, check NEAR for other Panthers fans.",
+      "overlay": "VAMOS GATOS",
+      "badge": "OCT 15",
+      "sub": "Panthers theme night",
+      "emoji": "🏒",
+      "stats": [
+        {
+          "value": "OCT 15",
+          "label": "theme night"
+        }
+      ],
+      "source": "NHL.com",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 210,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Luminosa is back at Jungle Island for 2026. The walk runs 1.35 miles through canopy-covered trails, with more than 43,600 LEDs and seven custom zones, including Little Havana, South Beach and a finale area.",
+      "caption": "Luminosa is back at Jungle Island with 1.35 miles, more than 43,600 LEDs and seven custom zones.",
+      "overlay": "LUMINOSA",
+      "badge": "1.35 MILES",
+      "sub": "Jungle Island trails",
+      "emoji": "💡",
+      "stats": [
+        {
+          "value": "1.35 MI",
+          "label": "light walk"
+        },
+        {
+          "value": "43,600+",
+          "label": "LEDs"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Jungle Island",
+        "lat": 25.7851,
+        "lon": -80.1761,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -30,
+        "heading": 320,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Local 10 has a NASCAR knowledge test for a chance to win tickets to the 2026 Homestead-Miami Speedway.",
+      "caption": "Local 10 has a NASCAR knowledge test for a chance to win tickets to the 2026 Homestead-Miami Speedway.",
+      "overlay": "HOMESTEAD",
+      "badge": "2026 TICKETS",
+      "sub": "NASCAR ticket chance",
+      "emoji": "🏁",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "ticket chance"
+        }
+      ],
+      "source": "Local 10",
+      "location": {
+        "name": "Homestead-Miami Speedway",
+        "lat": 25.45194444,
+        "lon": -80.40861111,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 40,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Pick your stop and go first. That same weekend blur is why NEAR exists: the stranger you passed at brunch, the game, or the light show can become a name instead of a missed connection.",
+      "overlay": "PICK ONE 👇",
+      "sub": "Food, sports, lights or racing",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -35,
+        "heading": 185
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "084-south-florida-weekend-guide-food-hoops-h"
+}
