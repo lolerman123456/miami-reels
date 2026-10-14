@@ -77,8 +77,12 @@ export async function publishReelWithMusic(videoFile, caption, { collaborators =
   const used = new Set((fs.existsSync(logFile) ? fs.readFileSync(logFile, 'utf8') : '').split('\n').filter(l => l.includes('\taudio:')).slice(-20).map(l => l.split('\taudio:')[1].split('\t')[0]));
   // random pick among the top unused ones: runs that overlap (Oct 12, the 7pm shareslop and the 8pm Reel) can't see each other's
   // audio: lines, so always taking the first unused song gave both the same one
-  const fresh = songs.slice(0, 15).filter(a => !used.has(String(a.audio_id)));
-  const song = fresh.length ? fresh[Math.floor(Math.random() * Math.min(fresh.length, 6))] : songs[0];
+  // Oct 14: a worship song landed on a nightlife Reel — skip religious/kids tracks, and songs whose title was used recently (same song, new id)
+  const OFF = /worship|gospel|christ|jesus|hymn|praise|lullab|nursery|kids|bible/i;
+  const usedTitles = new Set((fs.existsSync(logFile) ? fs.readFileSync(logFile, 'utf8') : '').split('\n').filter(l => l.includes('\taudio:')).slice(-20).map(l => (l.split('\t')[2] || '').toLowerCase()));
+  const fresh = songs.slice(0, 20).filter(a => !used.has(String(a.audio_id)) && !OFF.test(`${a.title || ''} ${a.display_artist || a.artist || ''}`)
+    && !usedTitles.has(`${a.title || ''} — ${a.display_artist || a.artist || ''}`.toLowerCase()));
+  const song = fresh.length ? fresh[Math.floor(Math.random() * Math.min(fresh.length, 6))] : (songs.find(a => !OFF.test(`${a.title || ""} ${a.display_artist || a.artist || ""}`)) || songs[0]);
   console.log(`▶ Instagram: trending song "${song.title}" by ${song.display_artist || '?'} (${song.audio_id})`);
   const audio = JSON.stringify({ audio_id: String(song.audio_id), audio_volume: audioVolume, video_volume: 100 });
   // Oct 5: the resumable upload of the full-quality file failed ("ProcessingFailedError"); send a compressed copy
