@@ -231,7 +231,7 @@ async function pick(videos) {
     + '(e.g. "MIAMI-DADE DEPUTIES" / "STOP A WRONG-WAY DRIVER ON I-95"), no clickbait lies, only what the title/description supports. '
     + 'Only actual footage counts (bodycam, dashcam, surveillance, helicopter, phone video) — never a sheriff/official talking to camera, even about a wild case. Rank up to 6 candidates, best first (fewer or none only if nothing qualifies). The cover can quote the best line from the title. '
     + 'Return JSON {"picks": [{"index": number, "kicker": "one of CAUGHT ON CAMERA, BODYCAM, DASHCAM, CHASE, ARRESTED, BUSTED, RESCUE, WILD FLORIDA, CRAZY", "line1": "≤28 chars", '
-    + '"line2": "≤40 chars, the shock", "caption": "ONE punchy line like @onlyindade (≤100 chars, plain words, 0–1 emoji, accused/charged wording), then a new line \\"🎥 Video: <agency>\\", then 3 hashtags", "why": "…"}]}' },
+    + '"line2": "≤40 chars, the shock", "caption": "ONE punchy line in the style of a South Florida news page (never mention, tag or @ any other account; ≤100 chars, plain words, 0–1 emoji, accused/charged wording), then a new line \\"🎥 Video: <agency>\\", then 3 hashtags", "why": "…"}]}' },
   { role: 'user', content: videos.map((v, i) => `${i}. [${v.agency}] ${v.title} (${v.published.slice(0, 10)}, ${v.views} views) — ${v.description}`).join('\n') }]);
   return (r.picks || []).filter(x => videos[x.index]);
 }
@@ -251,7 +251,7 @@ async function analyze(frames, transcript, v, p, mode = 'clip') {
     + 'starting right at the most hooking moment so the first second grabs (skip intros, title cards, interviews, talking heads; in a TV report, cut the part that shows the actual surveillance/bodycam/phone footage, not the anchor or reporter). '
     + 'Reply JSON {"ok": true|false, "why": "…", "crazy": 1-10 (10 = everyone would share it), "start": seconds, "end": seconds, '
     + '"cover": seconds of the most gripping frame (no victim/child/gore), "kicker": one of CAUGHT ON CAMERA | BODYCAM | DASHCAM | CHASE | ARRESTED | BUSTED | RESCUE | WILD FLORIDA | CRAZY, "line1": "≤28 chars", "line2": "≤40 chars, the shock", "hook": "ONE clean hook sentence for the cover, ≤60 chars, plain words, the shock (e.g. Driver flees cops at 120 mph through Hialeah)", "highlight": "1–3 words copied exactly from hook to highlight", '
-    + '"caption": "ONE punchy line like @onlyindade (≤100 chars, plain words, 0–1 emoji, accused/charged wording), then a new line \\"🎥 Video: <agency>\\", then 3 hashtags"}' }];
+    + '"caption": "ONE punchy line in the style of a South Florida news page (never mention, tag or @ any other account; ≤100 chars, plain words, 0–1 emoji, accused/charged wording), then a new line \\"🎥 Video: <agency>\\", then 3 hashtags"}' }];
   for (const f of frames) {
     content.push({ type: 'text', text: `t=${f.t}s` });
     content.push({ type: 'image_url', image_url: { url: `data:image/jpeg;base64,${fs.readFileSync(f.file).toString('base64')}`, detail: 'low' } });
@@ -277,7 +277,7 @@ async function analyzeReel(frames, transcript, v) {
     + '"fill": true if the important action stays inside a vertical 9:16 window for the whole cut (so the video can fill the phone screen without cutting anything important), "focusX": 0-1 horizontal center of that window (of the cropped footage), '
     + '"crop": {"x":0-1,"y":0-1,"w":0-1,"h":0-1} the box (normalized, top-left origin) of the RAW footage inside the frame, leaving out ALL TV graphics — lower-third headline/name bars (often the bottom 15–25%), tickers, bugs/logos, a Short\'s burned-in channel title/banner band (e.g. a big "High speed Chases" logo across the top) and black bars — and blurred side bars (a vertical phone video shown inside a TV frame → just that phone video), or null if it already fills the frame, '
     + '"overlays": true if the video is already a re-edit with its own burned-in edit graphics over most of the footage (a hook/title text like "Dont Miss the End", drawn red circles/arrows, emoji captions, subtitles styled by a compilation channel) — raw footage with only a small logo/timestamp is false, '
-    + '"caption": "Instagram caption: ONE punchy line like @onlyindade (≤100 chars, plain words, 0–1 emoji, accused wording, e.g. \\"An argument at the boat ramp ended with one man in the water 😳\\"), then a new line \\"🎥 Video: <source>\\", then 3 hashtags"}' }];
+    + '"caption": "Instagram caption: ONE punchy line in the style of a South Florida news page (never mention, tag or @ any other account; ≤100 chars, plain words, 0–1 emoji, accused wording, e.g. \\"An argument at the boat ramp ended with one man in the water 😳\\"), then a new line \\"🎥 Video: <source>\\", then 3 hashtags"}' }];
   for (const f of frames) {
     content.push({ type: 'text', text: `t=${f.t}s` });
     content.push({ type: 'image_url', image_url: { url: `data:image/jpeg;base64,${fs.readFileSync(f.file).toString('base64')}`, detail: 'low' } });
