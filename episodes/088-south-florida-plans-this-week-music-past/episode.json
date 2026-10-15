@@ -1,0 +1,189 @@
+{
+  "title": "South Florida plans this week: music, pasta, fall festival",
+  "sources": [
+    "Axios",
+    "USA Today",
+    "Haute Living",
+    "WPBF",
+    "Miami New Times",
+    "Miami Herald",
+    "NBC 6 South Florida",
+    "Time Out Worldwide"
+  ],
+  "collaborators": [
+    "iiipoints"
+  ],
+  "igCaption": "Music in Wynwood, pasta in Sunset Harbour, and a two-day fall festival up north.\nOct. 21 at Sunset Harbour. Oct. 23-24 in Royal Palm Beach.\n\nSources: Axios, USA Today, Haute Living, WPBF, Miami New Times, Miami Herald, NBC 6 South Florida, Time Out Worldwide\n\n#MiamiEvents #SouthFlorida #Wynwood #MiamiBeach",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "This week in South Florida, you can do almost three hundred artists, new pasta, and a two-day fall festival.",
+      "overlay": [
+        "THIS WEEK",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🎶",
+        "🍝",
+        "🍂",
+        "📍"
+      ],
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.804,
+        "lon": -80.199,
+        "h": 35
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "III Points is back in Wynwood this October with almost three hundred artists. Miami New Times has the set times by day and stage, and NBC 6 says the festival returns to Wynwood with what to know before you go.",
+      "caption": "III Points is back in Wynwood this October with almost 300 artists. Miami New Times has the set times by day and stage, and NBC 6 says the festival returns to Wynwood with what to know before you go.",
+      "overlay": "WYNWOOD",
+      "badge": "300 ARTISTS",
+      "sub": "III Points returns",
+      "emoji": "🎧",
+      "stats": [
+        {
+          "value": "300",
+          "label": "artists"
+        }
+      ],
+      "source": "Axios",
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.804,
+        "lon": -80.199,
+        "h": 35
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 850,
+        "pitch": -30,
+        "heading": 120,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Miami Herald says the music fest site will become a college campus. That leaves III Points in Wynwood this weekend with a bigger question about what comes next.",
+      "caption": "The Miami Herald says the music fest site will become a college campus. That leaves III Points in Wynwood this weekend with a bigger question about what comes next.",
+      "overlay": "WYNWOOD",
+      "badge": "COLLEGE SITE",
+      "sub": "What comes next",
+      "emoji": "🏫",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "reported"
+        }
+      ],
+      "source": "Miami Herald",
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.804,
+        "lon": -80.199,
+        "h": 35
+      },
+      "shot": {
+        "type": "push",
+        "range": 700,
+        "pitch": -28,
+        "heading": 245
+      }
+    },
+    {
+      "kind": "item",
+      "text": "A Pasta Bar Miami Beach opens in Sunset Harbour on October twenty-first. Haute Living put the opening on the calendar for Oct. 21. If you go opening night, check NEAR for who’s there too.",
+      "caption": "A Pasta Bar Miami Beach opens in Sunset Harbour on Oct. 21. If you go opening night, check NEAR for who’s there too.",
+      "overlay": "SUNSET HARBOUR",
+      "badge": "OPENS OCT 21",
+      "sub": "New Miami Beach dinner",
+      "emoji": "🍝",
+      "stats": [
+        {
+          "value": "OCT 21",
+          "label": "opens"
+        }
+      ],
+      "source": "Haute Living",
+      "location": {
+        "name": "Sunset Harbour",
+        "lat": 25.7906,
+        "lon": -80.1448,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -30,
+        "heading": 80,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Royal Palm Beach has the Rock N' Fall Festival on October twenty-third and twenty-fourth. WPBF has the dates as Oct. 23-24.",
+      "caption": "Royal Palm Beach has the Rock N' Fall Festival on Oct. 23-24.",
+      "overlay": "ROYAL PALM",
+      "badge": "OCT 23-24",
+      "sub": "Two-day fall festival",
+      "emoji": "🍂",
+      "stats": [
+        {
+          "value": "OCT 23-24",
+          "label": "festival dates"
+        }
+      ],
+      "source": "WPBF",
+      "location": {
+        "name": "Royal Palm Beach, Florida",
+        "lat": 26.7125,
+        "lon": -80.23944444,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -32,
+        "heading": 310,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Music, pasta, or the fall festival. Music, pasta, and fall festivals are full of people you pass without meeting, and NEAR is what tells you who that familiar face was. Which one would you pick this week?",
+      "overlay": "PICK ONE 📍",
+      "sub": "Music, pasta, or fall fest",
+      "location": {
+        "name": "Royal Palm Beach, Florida",
+        "lat": 26.7125,
+        "lon": -80.23944444,
+        "h": 15
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -30,
+        "heading": 25
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "088-south-florida-plans-this-week-music-past"
+}
