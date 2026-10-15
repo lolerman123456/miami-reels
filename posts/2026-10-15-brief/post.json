@@ -1,0 +1,81 @@
+{
+  "sector": "TRAFFIC",
+  "cover": {
+    "top": "SHERIFF RELEASED",
+    "main": "ACTUAL",
+    "highlight": "RESCUE FOOTAGE",
+    "bottom": "AFTER DEADLY EVERGLADES AIRBOAT CRASH",
+    "blur": false,
+    "photo": {
+      "query": "Broward Sheriff's Office rescue helicopter over Everglades airboat crash scene",
+      "prompt": "dramatic helicopter rescue scene over the Florida Everglades, sawgrass, shallow water, first responders working near an airboat crash site"
+    },
+    "emojis": [
+      "🚁",
+      "🚤",
+      "🌾"
+    ],
+    "logos": [
+      "sheriff.org",
+      "myfwc.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "TRAFFIC",
+      "headline": "Sheriff released actual rescue footage after the Everglades crash",
+      "highlight": "rescue footage",
+      "body": "Broward Sheriff released video on Thursday after the deadly airboat crash in the Everglades.",
+      "place": "Everglades",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Everglades rescue response helicopter sawgrass airboat crash",
+        "prompt": "close, dramatic emergency response in the Florida Everglades, helicopter overhead, responders near shallow water and an airboat"
+      },
+      "emoji": "🚁",
+      "chip": "OCT 15",
+      "logo": "sheriff.org",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": null
+    },
+    {
+      "tag": "TRAFFIC",
+      "headline": "New video shows crews responding to the fatal crash",
+      "highlight": "new video",
+      "body": "NBC 6 South Florida said the footage shows authorities responding to the crash in Broward.",
+      "place": "Broward County",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "first responders Everglades airboat crash Broward helicopter",
+        "prompt": "first responders and a helicopter at a remote Everglades crash scene, sawgrass and open water, serious rescue moment",
+        "mark": "arrow"
+      },
+      "emoji": "🚑",
+      "chip": "VIDEO",
+      "logo": "sheriff.org",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": null
+    }
+  ],
+  "caption": "Broward Sheriff released rescue video after a deadly airboat crash in the Everglades",
+  "hashtags": [
+    "#Everglades",
+    "#BrowardCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "Broward Sheriff released rescue video after a deadly airboat crash in the Everglades\n\n📰 Sources: Miami Herald, NBC 6 South Florida, Facebook, WSVN, Boca Post\n\n🎥 Video: Broward Sheriff's Office\n\n#Everglades #BrowardCounty #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-15",
+  "id": "2026-10-15-brief",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "Broward Sheriff's Office",
+    "url": "https://www.youtube.com/watch?v=uYajUzG-JA8"
+  }
+}
