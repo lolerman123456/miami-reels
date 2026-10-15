@@ -1,0 +1,134 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "WHERE SOUTH FLORIDA IS",
+    "main": "GOING OUT THIS WEEKEND",
+    "highlight": "SAVE THIS",
+    "bottom": "NEXT 7 DAYS",
+    "blur": false,
+    "photo": {
+      "query": "South Florida nightlife crowd festival lights palm trees",
+      "prompt": "dramatic South Florida night scene with a crowd, bright stage lights, palm trees, and a city skyline"
+    },
+    "emojis": [
+      "👀",
+      "🎟️",
+      "🌴"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Def Leppard at Hard Rock Live, Oct. 15",
+      "highlight": "Def Leppard",
+      "body": "Def Leppard plays Hard Rock Live in Hollywood today. Exact time and price were not listed.",
+      "place": "Hard Rock Live, Hollywood",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Def Leppard live concert stage crowd Hard Rock Live Hollywood",
+        "prompt": "dramatic rock concert crowd at a large indoor venue with bright stage lights and the band on stage"
+      },
+      "emoji": "🎸",
+      "chip": "OCT 15",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Chewy Pack Walk on The Underline, Oct. 15",
+      "highlight": "Chewy Pack Walk",
+      "body": "The Chewy Pack Walk happens on The Underline today. Exact time and price were not listed.",
+      "place": "The Underline, Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "The Underline dog walk Miami people and dogs",
+        "prompt": "bright outdoor group walk on a city trail in Miami with dogs, leashes, and people moving together"
+      },
+      "emoji": "🐕",
+      "chip": "TODAY",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "III Points in Wynwood, this week",
+      "highlight": "III Points",
+      "body": "III Points returns to Wynwood this week. The festival has a full schedule by day and stage.",
+      "place": "Wynwood, Miami",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "III Points festival Wynwood Miami stage crowd lasers",
+        "prompt": "packed electronic music festival scene in Wynwood with lasers, smoke, and a dense nighttime crowd"
+      },
+      "emoji": "🎧",
+      "chip": "THIS WEEK",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Miami Fashion Week, Oct. 13 to 18",
+      "highlight": "Miami Fashion Week",
+      "body": "Miami Fashion Week runs through Oct. 18 in Miami. Exact time and price were not listed.",
+      "place": "Miami",
+      "source": "WSVN",
+      "photo": {
+        "query": "Miami Fashion Week runway audience lights",
+        "prompt": "fashion runway in Miami with models walking under bright lights and a full audience"
+      },
+      "emoji": "👗",
+      "chip": "OCT 13-18",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Kravis Center Block Party, this weekend",
+      "highlight": "Kravis Center Block Party",
+      "body": "The Kravis Center Block Party returns to West Palm Beach with free music, arts and family fun. Exact time was not listed.",
+      "place": "Kravis Center, West Palm Beach",
+      "source": "WPTV",
+      "photo": {
+        "query": "Kravis Center West Palm Beach outdoor block party stage crowd",
+        "prompt": "outdoor block party in West Palm Beach with a small stage, families walking, and the Kravis Center in view"
+      },
+      "emoji": "🎶",
+      "chip": "FREE",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "No Kings: Vote Early events, this weekend",
+      "highlight": "No Kings",
+      "body": "No Kings: Vote Early events are happening across South Florida this weekend. Exact times and locations were not listed.",
+      "place": "South Florida",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "South Florida civic rally signs daytime crowd",
+        "prompt": "large daytime rally in South Florida with people holding signs in a public space"
+      },
+      "emoji": "🗳️",
+      "chip": "WEEKEND",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "South Florida has plans this week. Tag a friend and tell them who you’re taking 👀",
+  "#hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [
+    "iiipoints"
+  ],
+  "igCaption": "South Florida has plans this week. Tag a friend and tell them who you’re taking 👀\n\n📰 Sources: Miami New Times, NBC 6 South Florida, WSVN, WPTV\n\n#miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-15",
+  "id": "2026-10-15-upcoming"
+}
