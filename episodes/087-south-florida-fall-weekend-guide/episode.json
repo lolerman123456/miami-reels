@@ -1,0 +1,188 @@
+{
+  "title": "South Florida Fall Weekend Guide",
+  "sources": [
+    "Florida International University",
+    "Palm Beach Illustrated",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Beer, live music, sculpture, and skating under palms.\nDates and prices vary by venue.\n\nSources: Florida International University, Palm Beach Illustrated, Secret Miami\n\n#MiamiEvents #SouthFlorida #WeekendGuide #FallInMiami",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Want a fall weekend plan with beer, live music, sculpture, and ice skating under palms?",
+      "overlay": [
+        "FALL WEEKEND",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🍺",
+        "🎸",
+        "🖼️",
+        "⛸️"
+      ],
+      "location": {
+        "name": "North Miami, Florida",
+        "lat": 25.90083333,
+        "lon": -80.16861111,
+        "h": 15
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "North Miami BrewFest takes place next month. Florida International University had it on the calendar on October 15, so this is a local beer stop to keep on your list.",
+      "caption": "North Miami BrewFest takes place next month. FIU had it on the calendar on Oct. 15, so this is a local beer stop to keep on your list.",
+      "overlay": "NORTH MIAMI",
+      "badge": "NEXT MONTH",
+      "sub": "BrewFest on deck",
+      "emoji": "🍺",
+      "stats": [
+        {
+          "value": "OCT 15",
+          "label": "FIU update"
+        }
+      ],
+      "source": "Florida International University",
+      "location": {
+        "name": "North Miami, Florida",
+        "lat": 25.90083333,
+        "lon": -80.16861111,
+        "h": 15
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Adam Hawley plays Crazy Uncle Mike’s. Palm Beach Illustrated posted the show on October 15, and the venue puts live music in the middle of dinner and drinks.",
+      "caption": "Adam Hawley plays Crazy Uncle Mike’s. Palm Beach Illustrated posted the show on Oct. 15, and the venue puts live music in the middle of dinner and drinks.",
+      "overlay": "CRAZY UNCLE",
+      "badge": "ADAM HAWLEY",
+      "sub": "Live music stop",
+      "emoji": "🎸",
+      "stats": [
+        {
+          "value": "OCT 15",
+          "label": "show update"
+        }
+      ],
+      "source": "Palm Beach Illustrated",
+      "location": {
+        "name": "Crazy Uncle Mike's",
+        "lat": 26.3689,
+        "lon": -80.0831,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 80,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Ann Norton Sculpture Gardens unveils a Bruce Helander exhibition. The gardens are in West Palm Beach, and this adds an art stop to the weekend. At Ann Norton, peek on NEAR and see who else wandered the gardens.",
+      "caption": "Ann Norton Sculpture Gardens unveils a Bruce Helander exhibition. The gardens are in West Palm Beach, and this adds an art stop to the weekend. At Ann Norton, peek on NEAR and see who else wandered the gardens.",
+      "overlay": "ANN NORTON",
+      "badge": "NEW EXHIBIT",
+      "sub": "Bruce Helander show",
+      "emoji": "🖼️",
+      "stats": [
+        {
+          "value": "OCT 15",
+          "label": "exhibit update"
+        }
+      ],
+      "source": "Palm Beach Illustrated",
+      "location": {
+        "name": "Ann Norton Sculpture Gardens",
+        "lat": 26.7047,
+        "lon": -80.0505,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -30,
+        "heading": 215,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "NightGarden opens November 12 at Fairchild Tropical Botanic Garden. The event runs 60 minutes, welcomes all ages, and children 3 and under enter free. This year also adds a brand-new ice rink under the palms.",
+      "caption": "NightGarden opens Nov. 12 at Fairchild Tropical Botanic Garden. The event runs 60 minutes, welcomes all ages, and children 3 and under enter free. This year also adds a brand-new ice rink under the palms.",
+      "overlay": "FAIRCHILD",
+      "badge": "OPENS NOV 12",
+      "sub": "Ice rink under palms",
+      "emoji": "⛸️",
+      "stats": [
+        {
+          "value": "60 MIN",
+          "label": "duration"
+        },
+        {
+          "value": "NOV 12",
+          "label": "opening date"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Fairchild Tropical Botanic Garden",
+        "lat": 25.6769,
+        "lon": -80.2748,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 310,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Beer, music, art, or skating. You can spend the whole weekend crossing paths with someone at a beer garden, art walk, or rink and never learn their name, which is exactly what NEAR catches. Which one are you doing first?",
+      "overlay": "PICK ONE",
+      "sub": "Comment your first stop",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -34,
+        "heading": 25
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "087-south-florida-fall-weekend-guide"
+}
