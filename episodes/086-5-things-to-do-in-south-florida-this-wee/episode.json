@@ -1,0 +1,227 @@
+{
+  "title": "5 Things To Do In South Florida This Week",
+  "sources": [
+    "Miami New Times",
+    "Local 10",
+    "Inter Miami CF",
+    "WSVN 7News",
+    "Sun Sentinel"
+  ],
+  "collaborators": [
+    "intermiamicf",
+    "miamiheat"
+  ],
+  "igCaption": "Halloween season is starting early in South Florida. 🎃\nThis week, South Florida, prices vary by event.\n\nSources: Miami New Times, Local 10, Inter Miami CF, WSVN 7News, Sun Sentinel\n\n#Miami #SouthFlorida #Halloween #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Halloween season is already moving in South Florida, and this week has books, soccer, basketball, and costumes.",
+      "overlay": [
+        "THIS WEEK",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🎃",
+        "📚",
+        "⚽",
+        "🏀"
+      ],
+      "location": {
+        "name": "Midtown Miami",
+        "lat": 25.8074,
+        "lon": -80.1937,
+        "h": 40
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number five: Barnes and Noble opened in Midtown Miami on October 14 at 10 a.m. The store took over the former West Elm space at 3201 North Miami Avenue, Suite 111, with 12,000 square feet.",
+      "caption": "Number 5: Barnes & Noble opened in Midtown Miami on Oct. 14 at 10 a.m. The store took over the former West Elm space at 3201 N. Miami Ave., Ste. 111, with 12,000 square feet.",
+      "overlay": "MIDTOWN MIAMI",
+      "badge": "12,000 SQ FT",
+      "sub": "New bookstore now open",
+      "emoji": "📚",
+      "stats": [
+        {
+          "value": "12,000",
+          "label": "square feet"
+        },
+        {
+          "value": "10 AM",
+          "label": "opening time"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Barnes & Noble Midtown Miami",
+        "lat": 25.8077,
+        "lon": -80.1932,
+        "h": 35
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number four: the Miami Heat have their final home preseason game against the Brooklyn Nets. Erik Spoelstra plans to use it to evaluate the roster’s depth before the regular-season opener.",
+      "caption": "Number 4: The Miami Heat have their final home preseason game against the Brooklyn Nets. Erik Spoelstra plans to use it to evaluate the roster’s depth before the regular-season opener.",
+      "overlay": "MIAMI HEAT",
+      "badge": "PRESEASON",
+      "sub": "Final home tune-up",
+      "emoji": "🏀",
+      "stats": [
+        {
+          "value": "1",
+          "label": "final home game"
+        }
+      ],
+      "source": "Local 10",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7814,
+        "lon": -80.187,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 35,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number three: Inter Miami posted its Starting XI for the match against New York City FC on October 14. Fans got the lineup before kickoff. If you’re at the match, open NEAR and spot who’s nearby.",
+      "caption": "Number 3: Inter Miami posted its Starting XI for the match against New York City FC on Oct. 14. If you’re at the match, open NEAR and spot who’s nearby.",
+      "overlay": "INTER MIAMI",
+      "badge": "STARTING XI",
+      "sub": "Matchday lineup posted",
+      "emoji": "⚽",
+      "stats": [
+        {
+          "value": "11",
+          "label": "starters"
+        },
+        {
+          "value": "OCT 14",
+          "label": "match post"
+        }
+      ],
+      "source": "Inter Miami CF",
+      "location": {
+        "name": "Fort Lauderdale Stadium Area",
+        "lat": 26.193,
+        "lon": -80.1611,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -32,
+        "heading": 260,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number two: Halloween season reached Nicklaus Children’s Hospital this week. WSVN reported that young patients picked out costumes with help from Spirit Halloween of South Florida on October 14.",
+      "caption": "Number 2: Halloween season reached Nicklaus Children’s Hospital this week. WSVN reported that young patients picked out costumes with help from Spirit Halloween of South Florida on Oct. 14.",
+      "overlay": "NICKLAUS",
+      "badge": "OCT 14",
+      "sub": "Costumes for patients",
+      "emoji": "🎃",
+      "stats": [
+        {
+          "value": "OCT 14",
+          "label": "reported date"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Nicklaus Children's Hospital",
+        "lat": 25.74145833,
+        "lon": -80.29426667,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -30,
+        "heading": 120,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "And number one: Halloween events are stacking up across South Florida. The Sun Sentinel’s October 10 guide points to haunted houses, costumes, and cocktails for adults celebrating Halloween around the region.",
+      "caption": "And number 1: Halloween events are stacking up across South Florida. The Sun Sentinel’s Oct. 10 guide points to haunted houses, costumes, and cocktails for adults celebrating Halloween around the region.",
+      "overlay": "HALLOWEEN",
+      "badge": "OCT 10 GUIDE",
+      "sub": "Adult parties this season",
+      "emoji": "👻",
+      "stats": [
+        {
+          "value": "OCT 10",
+          "label": "guide date"
+        }
+      ],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Fort Lauderdale",
+        "lat": 26.1224,
+        "lon": -80.1373,
+        "h": 70
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 310,
+        "degrees": 90,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you doing this week, and what should we cover next? If you keep spotting the same person at the beach, market, or night out and never get their name, NEAR is the app that shows you who they were.",
+      "overlay": "WHAT’S NEXT? 🎃",
+      "sub": "Tell us in the comments",
+      "location": {
+        "name": "South Florida",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 90
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -32,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "086-5-things-to-do-in-south-florida-this-wee"
+}
