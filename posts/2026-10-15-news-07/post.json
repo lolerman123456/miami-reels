@@ -1,0 +1,85 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "POLICE SAY",
+    "main": "A TEEN SHOT IN",
+    "highlight": "MIRAMAR",
+    "bottom": "WAS FOUND IN MIAMI GARDENS",
+    "blur": false,
+    "photo": {
+      "query": "Miramar Miami Gardens police lights night",
+      "prompt": "dramatic night street scene with police lights reflecting on wet pavement, no people visible",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "🚨",
+      "🚑",
+      "📍"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Police say the shooting started in Miramar",
+      "highlight": "started in Miramar",
+      "body": "WSVN reported that police say the 17-year-old was shot in Miramar before being found in Miami Gardens.",
+      "place": "Miramar",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Miramar Florida police car emergency lights night",
+        "prompt": "police cruiser with red and blue lights on a Miramar street at night, no people visible"
+      },
+      "emoji": "🚨",
+      "chip": "MIRAMAR",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The teen was found shot in Miami Gardens",
+      "highlight": "found shot in Miami Gardens",
+      "body": "Rescue crews took the teenager to a hospital after the victim was found shot in Miami Gardens, WSVN reported.",
+      "place": "Miami Gardens",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Miami Gardens police car night emergency lights",
+        "prompt": "Miami Gardens police vehicle with flashing lights on a dark roadway, no people visible"
+      },
+      "emoji": "🚑",
+      "chip": "17 YEARS OLD",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Miami Gardens police and fire rescue responded",
+      "highlight": "Fire Rescue responded",
+      "body": "Miami Gardens Police and Miami-Dade Fire Rescue units responded after the teen was found shot.",
+      "place": "Miami Gardens",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Miami-Dade Fire Rescue ambulance night emergency lights",
+        "prompt": "Miami-Dade Fire Rescue ambulance and police lights on a South Florida street at night, no patients or people visible"
+      },
+      "emoji": "🚒",
+      "chip": "RESPONDERS",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    }
+  ],
+  "caption": "Police say a teen was shot in Miramar, then found across the county line in Miami Gardens.",
+  "hashtags": [
+    "#MiamiGardens",
+    "#Miramar"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say a teen was shot in Miramar, then found across the county line in Miami Gardens.\n\n📰 Sources: WSVN 7News, Wikipedia\n\n#MiamiGardens #Miramar #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-15",
+  "id": "2026-10-15-news-07"
+}
