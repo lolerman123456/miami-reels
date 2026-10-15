@@ -153,7 +153,7 @@ const AGGREGATORS = /viralhog|storyful|jukin|newsflare|caters|rumble viral|fails
 // this week's YouTube Shorts for these searches; compilations/aggregators are dropped by title
 export const SHORTS_QUERIES = ['Miami fight', 'Florida fight caught on camera', 'Hialeah', 'Broward caught on camera', 'Fort Lauderdale', 'boat ramp fight',
   'store fight', 'gas station fight', 'public meltdown', 'Florida road rage', 'Dolphins fan', 'Hard Rock Stadium fan', 'Miami supercar', 'Miami Lamborghini', 'bodycam arrest', 'police bodycam', 'dashcam', 'road rage', 'caught on camera', 'security camera', 'doorbell camera',
-  'police chase', 'Florida man', 'Miami', 'streamer moment', 'Kai Cenat stream', 'IShowSpeed stream', 'streamer caught', 'live stream gone wrong', 'wild arrest'];
+  'police chase', 'Florida man', 'Miami', 'surveillance robbery Miami', 'smoke shop robbery Florida', 'good samaritan Florida', 'streamer moment', 'Kai Cenat stream', 'IShowSpeed stream', 'streamer caught', 'live stream gone wrong', 'wild arrest'];
 const JUNK = /compilation|ranking|top ?\d+|best .*moments|moments (ever|caught)|\b#?\d+\s*$|part \d+|incredible moments|astonishing|unbelievable moments|that seem impossible/i;
 export async function searchShorts({ queries = SHORTS_QUERIES } = {}) {
   const out = [], seen = new Set();
