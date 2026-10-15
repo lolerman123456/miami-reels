@@ -78,7 +78,7 @@ export async function publishReelWithMusic(videoFile, caption, { collaborators =
   // random pick among the top unused ones: runs that overlap (Oct 12, the 7pm shareslop and the 8pm Reel) can't see each other's
   // audio: lines, so always taking the first unused song gave both the same one
   // Oct 14: a worship song landed on a nightlife Reel — skip religious/kids tracks, and songs whose title was used recently (same song, new id)
-  const OFF = /worship|gospel|christ|jesus|hymn|praise|lullab|nursery|kids|bible/i;
+  const OFF = /worship|gospel|christ|jesus|hymn|praise|lullab|nursery|kids|bible|\d+ ?hz|frequenc|meditat|sleep|relax|healing|ambient|rain sounds|white noise/i;
   const usedTitles = new Set((fs.existsSync(logFile) ? fs.readFileSync(logFile, 'utf8') : '').split('\n').filter(l => l.includes('\taudio:')).slice(-20).map(l => (l.split('\t')[2] || '').toLowerCase()));
   const fresh = songs.slice(0, 20).filter(a => !used.has(String(a.audio_id)) && !OFF.test(`${a.title || ''} ${a.display_artist || a.artist || ''}`)
     && !usedTitles.has(`${a.title || ''} — ${a.display_artist || a.artist || ''}`.toLowerCase()));
