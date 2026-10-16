@@ -1,0 +1,117 @@
+{
+  "sector": "USA",
+  "cover": {
+    "top": "DEPORTED MOTHER",
+    "main": "FLYING OUT OF MIAMI FRIDAY",
+    "highlight": "8 MONTHS",
+    "bottom": "APART FROM 2 CHILDREN",
+    "blur": false,
+    "photo": {
+      "query": "Miami International Airport departures terminal dramatic wide angle travelers silhouettes",
+      "prompt": "dramatic wide photo of Miami International Airport departures at sunrise, travelers seen only as silhouettes with luggage, no identifiable children"
+    },
+    "emojis": [
+      "✈️",
+      "🇬🇹",
+      "🧳"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "USA",
+      "headline": "Two children fly from Miami Friday",
+      "highlight": "fly from Miami",
+      "body": "WPLG says two young children are flying from Miami to Guatemala on Friday morning.",
+      "place": "Miami",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami International Airport departures board dramatic terminal",
+        "prompt": "dramatic airport departure hall in Miami with flight boards, rolling suitcases and morning light, no identifiable children",
+        "mark": "arrow"
+      },
+      "emoji": "✈️",
+      "chip": "FRI AM",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "USA",
+      "headline": "They are headed to Guatemala",
+      "highlight": "headed to Guatemala",
+      "body": "The flight is taking them to Guatemala to reunite with their mother.",
+      "place": "Guatemala",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "passenger airplane taking off Miami International Airport sunrise",
+        "prompt": "dramatic sunrise view of a passenger plane taking off from Miami International Airport, seen from behind airport fencing"
+      },
+      "emoji": "🇬🇹",
+      "chip": "MIA TO GUA",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "USA",
+      "headline": "Their mother was deported",
+      "highlight": "mother deported",
+      "body": "WPLG says their mother was deported from the United States.",
+      "place": "United States",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "international airport gate empty seats airplane window dramatic",
+        "prompt": "somber international airport gate scene with empty seats and a plane outside the window, no identifiable people"
+      },
+      "emoji": "🧳",
+      "chip": "DEPORTED",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "USA",
+      "headline": "They were apart for 8 months",
+      "highlight": "8 months apart",
+      "body": "WPLG reported the family had been separated for eight months.",
+      "place": "Miami to Guatemala",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "airport waiting area empty seats morning light luggage",
+        "prompt": "quiet airport waiting area with two small suitcases near empty seats, morning light through windows, no people"
+      },
+      "emoji": "🕰️",
+      "chip": "8 MONTHS",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "USA",
+      "headline": "The reunion is set for Friday",
+      "highlight": "Friday reunion",
+      "body": "WPLG says the children are flying Friday morning to reunite with their mother in Guatemala.",
+      "place": "Guatemala",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Guatemala airport arrivals exterior wide photo",
+        "prompt": "wide photo of Guatemala airport arrivals area with cloudy sky and travelers from behind, no identifiable children"
+      },
+      "emoji": "🇬🇹",
+      "chip": "REUNION",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Eight months apart, the children are flying from Miami to Guatemala to reunite with their mother Friday morning.",
+  "hashtags": [
+    "#MiamiNews",
+    "#Immigration"
+  ],
+  "collaborators": [],
+  "igCaption": "Eight months apart, the children are flying from Miami to Guatemala to reunite with their mother Friday morning.\n\n📰 Sources: WPLG Local 10\n\n#MiamiNews #Immigration #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-16",
+  "id": "2026-10-16-brief"
+}
