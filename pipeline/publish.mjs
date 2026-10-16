@@ -8,8 +8,20 @@ import { serveFilePublicly, serveFilesPublicly } from './tunnel.mjs';
 
 const VERSION = 'v23.0';
 
-export async function publishReel(videoFile, caption, { collaborators = [] } = {}) {
+export async function publishReel(videoFile, caption, opts = {}) {
   caption = formatCaption(caption); // hashtags at the bottom after 5 dots (owner, Oct 8)
+  try {
+    return await publishReelOnce(videoFile, caption, opts);
+  } catch (e) {
+    // Oct 16: Instagram returned status ERROR for a normal viral Reel (same format as ones that posted) → retry once with a fresh container
+    if (!/Processing failed|processing timed out/.test(e.message)) throw e;
+    console.log(`▶ Instagram: ${e.message} — retrying once in 60 s`);
+    await new Promise(r => setTimeout(r, 60000));
+    return publishReelOnce(videoFile, caption, opts);
+  }
+}
+
+async function publishReelOnce(videoFile, caption, { collaborators = [] } = {}) {
   const token = process.env.INSTAGRAM_ACCESS_TOKEN;
   const igUser = process.env.INSTAGRAM_USER_ID;
   if (!token || !igUser) throw new Error('Set INSTAGRAM_ACCESS_TOKEN and INSTAGRAM_USER_ID in .env');
