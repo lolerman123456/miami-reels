@@ -1,0 +1,73 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "POLICE SAY",
+    "main": "81-YEAR-OLD WORKER",
+    "highlight": "SHOT HIS BOSS",
+    "bottom": "AFTER A WARNING ABOUT SLEEPING",
+    "blur": false,
+    "photo": {
+      "query": "industrial machinery shop police lights Medley Florida night",
+      "prompt": "dramatic night photo of a small machinery repair shop in Medley with police lights outside the building and yellow tape across the entrance, no people visible"
+    },
+    "emojis": [
+      "🚔",
+      "🏭",
+      "⚠️"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Stephen Hogan from Chicago, United State / CC BY 2.0",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Police say an 81-year-old Hialeah man was the shooter",
+      "highlight": "81-year-old Hialeah man",
+      "body": "Police say an 81-year-old Hialeah man is accused of fatally shooting the owner of the Medley machinery shop where he worked.",
+      "place": "Medley",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "industrial shop exterior police tape Medley Florida",
+        "prompt": "close photo of a Medley repair shop entrance with police tape, flashing lights reflecting on the metal door, no people visible"
+      },
+      "emoji": "🚨",
+      "chip": "81 YEARS OLD",
+      "photoFile": "photo-cover.jpg",
+      "credit": "Photo: Stephen Hogan from Chicago, United State / CC BY 2.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police say the worker and owner knew each other",
+      "highlight": "worked there",
+      "body": "The accused man worked at the shop owned by the victim, police say.",
+      "place": "Medley",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "empty machinery repair shop tools workbench Miami-Dade",
+        "prompt": "empty machinery repair shop interior with workbenches, machine parts, and fluorescent lights, no people visible"
+      },
+      "emoji": "🏭",
+      "chip": "SHOP OWNER",
+      "photoFile": "photo-cover.jpg",
+      "credit": "Photo: Stephen Hogan from Chicago, United State / CC BY 2.0"
+    }
+  ],
+  "caption": "Police say an 81-year-old Hialeah man shot the boss after being told to stop sleeping at the shop.",
+  "hashtags": [
+    "#Medley",
+    "#Hialeah"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say an 81-year-old Hialeah man shot the boss after being told to stop sleeping at the shop.\n\n📰 Sources: NBC 6 South Florida\n\n🎥 Video: NBC 6 South Florida\n\n#Medley #Hialeah #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-16",
+  "id": "2026-10-16-news-16",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "NBC 6 South Florida",
+    "url": "https://www.youtube.com/watch?v=4EngUDJqYec"
+  }
+}
