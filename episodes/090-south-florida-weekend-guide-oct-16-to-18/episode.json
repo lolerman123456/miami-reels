@@ -1,0 +1,193 @@
+{
+  "title": "South Florida Weekend Guide: Oct. 16 to 18",
+  "sources": [
+    "WPEC",
+    "TAPinto",
+    "Miami New Times",
+    "The Palm Beach Post"
+  ],
+  "collaborators": [],
+  "igCaption": "Food, music, a walk, and Halloween plans for South Florida this weekend.\nOct. 16 to 18, South Florida, prices vary\n\nSources: WPEC, TAPinto, Miami New Times, The Palm Beach Post\n\n#MiamiEvents #SouthFlorida #WeekendGuide #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a South Florida plan this weekend? Start with food in West Palm, then music, a walk, and Halloween clues.",
+      "overlay": [
+        "WEEKEND",
+        "GUIDE"
+      ],
+      "emojis": [
+        "🍽️",
+        "🎶",
+        "👟",
+        "🎃"
+      ],
+      "location": {
+        "name": "West Palm Beach, Florida",
+        "lat": 26.74694444,
+        "lon": -80.13111111,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Taste of West Palm Beach is set for CityPlace. The food festival was in the local news Friday, Oct. 16.",
+      "caption": "Taste of West Palm Beach is set for CityPlace. The food festival was in the local news Friday, Oct. 16.",
+      "overlay": "CITYPLACE",
+      "badge": "OCT. 16",
+      "sub": "Food festival in WPB",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "OCT. 16",
+          "label": "news date"
+        }
+      ],
+      "source": "WPEC",
+      "location": {
+        "name": "CityPlace",
+        "lat": 26.7134,
+        "lon": -80.0567,
+        "h": 35
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Broward County Walk to End Alzheimer’s is set for Dec. 5 at Nova Southeastern University.",
+      "caption": "The Broward County Walk to End Alzheimer’s is set for Dec. 5 at Nova Southeastern University.",
+      "overlay": "NOVA",
+      "badge": "DEC. 5",
+      "sub": "Walk in Broward",
+      "emoji": "👟",
+      "stats": [
+        {
+          "value": "DEC. 5",
+          "label": "walk date"
+        }
+      ],
+      "source": "TAPinto",
+      "location": {
+        "name": "Nova Southeastern University",
+        "lat": 26.07777778,
+        "lon": -80.24194444,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -30,
+        "heading": 60,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For live music, iHeartRadio Fiesta Latina takes over Kaseya Center Saturday at 8 p.m. Enrique Santos hosts, with Anuel AA, Myke Towers, Farruko, Manuel Turizo, and Greeicy on the bill. If you're at Kaseya Center, open NEAR and see who's around.",
+      "caption": "For live music, iHeartRadio Fiesta Latina takes over Kaseya Center Saturday at 8 p.m. Enrique Santos hosts, with Anuel AA, Myke Towers, Farruko, Manuel Turizo, and Greeicy on the bill. If you're at Kaseya Center, open NEAR and see who's around.",
+      "overlay": "KASEYA CENTER",
+      "badge": "$45 TO $370",
+      "sub": "Saturday night concert",
+      "emoji": "🎶",
+      "stats": [
+        {
+          "value": "$45",
+          "label": "low ticket"
+        },
+        {
+          "value": "$370",
+          "label": "high ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.7814,
+        "lon": -80.187,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 245,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For Halloween plans, the Kimpton Surfcomber has a murder mystery dinner Saturday at 8 p.m. Guests get assigned character roles, follow clues, and sit down to three courses with craft cocktails.",
+      "caption": "For Halloween plans, the Kimpton Surfcomber has a murder mystery dinner Saturday at 8 p.m. Guests get assigned character roles, follow clues, and sit down to three courses with craft cocktails.",
+      "overlay": "SURFCOMBER",
+      "badge": "$193.75",
+      "sub": "Dinner with clues",
+      "emoji": "🎃",
+      "stats": [
+        {
+          "value": "$193.75",
+          "label": "ticket price"
+        },
+        {
+          "value": "8 PM",
+          "label": "start time"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Kimpton Surfcomber Hotel",
+        "lat": 25.7926,
+        "lon": -80.1297,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 110,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you actually do this weekend? South Florida weekends are full of faces you pass on the way to the next stop, and NEAR is what turns that brief crossing into a name.",
+      "overlay": "PICK ONE 👇",
+      "sub": "Food, walk, music, or mystery",
+      "location": {
+        "name": "Broward County, Florida",
+        "lat": 26.193535,
+        "lon": -80.476683,
+        "h": 120
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -28,
+        "heading": 300
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "090-south-florida-weekend-guide-oct-16-to-18"
+}
