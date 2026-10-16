@@ -1,0 +1,153 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "EVERY BIG EVENT",
+    "highlight": "THIS WEEK",
+    "bottom": "IN SOUTH FLORIDA",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Mana Wynwood Miami festival crowd lights",
+      "prompt": "A dramatic night festival crowd in Wynwood with colorful stage lights, palm silhouettes and people walking toward the entrance"
+    },
+    "emojis": [
+      "👀",
+      "🎶",
+      "🎟️"
+    ],
+    "logos": [
+      "iiipoints.com",
+      "kaseyacenter.com",
+      "surfcomber.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c2.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "III Points at Mana Wynwood, Oct. 16",
+      "highlight": "III Points",
+      "body": "Friday at 3 p.m. at Mana Wynwood, 318 NW 23rd St., Miami. Tickets cost $159 to $599. 13 stages and a stacked lineup make this the biggest one-night ticket in Wynwood this weekend.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons Mana Wynwood Miami music festival stage crowd",
+        "prompt": "A packed nighttime electronic music festival stage in Wynwood with lasers, haze and a dense crowd facing the lights"
+      },
+      "color": "#7B2CFF",
+      "emoji": "🎛️",
+      "chip": "FRI 3 PM",
+      "logo": "iiipoints.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Kravis Center Block Party, Oct. 17",
+      "highlight": "Block Party",
+      "body": "Saturday at the Kravis Center in West Palm Beach. Admission is free. It brings music, arts and family activities to downtown West Palm Beach.",
+      "place": "West Palm Beach",
+      "source": "WPTV",
+      "photo": {
+        "query": "Wikimedia Commons Kravis Center West Palm Beach exterior",
+        "prompt": "A lively outdoor block party at the Kravis Center in West Palm Beach with music, art booths and families walking outside"
+      },
+      "emoji": "🎨",
+      "chip": "FREE",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "No Kings: Vote Early events, Oct. 17",
+      "highlight": "Vote Early",
+      "body": "Saturday at South Florida locations across the region. Time varies by site. The rallies are built around early voting ahead of the midterms.",
+      "place": "South Florida",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons early voting polling place Florida",
+        "prompt": "A South Florida early voting scene with signs, a line of voters and bright daytime light outside a civic building"
+      },
+      "emoji": "🗳️",
+      "chip": "SAT 10/17",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Halloween murder mystery dinner, Oct. 17",
+      "highlight": "murder mystery",
+      "body": "Saturday at 8 p.m. at Kimpton Surfcomber Hotel, 1717 Collins Ave., Miami Beach. Tickets cost $193.75. The dinner pairs a three-course meal with a murder mystery game.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons Kimpton Surfcomber Hotel Miami Beach",
+        "prompt": "A moody Halloween dinner table inside a Miami Beach hotel with dim lights, cocktails, place cards and mystery clues"
+      },
+      "color": "#111111",
+      "emoji": "🕵️",
+      "chip": "$193.75",
+      "logo": "surfcomber.com",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: P. Hughes / CC BY 4.0",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "iHeartRadio Fiesta Latina, Oct. 17",
+      "highlight": "Fiesta Latina",
+      "body": "Saturday at 8 p.m. at Kaseya Center, 601 Biscayne Blvd., Miami. Tickets cost $45 to $370. Anuel AA, Myke Towers, Farruko, Manuel Turizo and Greeicy are on the bill.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons Kaseya Center Miami concert interior",
+        "prompt": "A packed arena concert at Kaseya Center with red stage lighting, a large crowd and Latin music energy"
+      },
+      "color": "#C6002B",
+      "emoji": "🎤",
+      "chip": "SAT 8 PM",
+      "logo": "kaseyacenter.com",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Gatorfan252525 / CC BY-SA 4.0",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Tini at Kaseya Center, Oct. 18",
+      "highlight": "Tini",
+      "body": "Sunday at 8 p.m. at Kaseya Center, 601 Biscayne Blvd., Miami. Tickets cost $61 to $408. This is the only U.S. stop on her Futttura World Tour.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons Tini singer concert",
+        "prompt": "Argentine pop star Tini performing on a large arena stage with LED screens, dancers and bright concert lights"
+      },
+      "color": "#E43D8A",
+      "emoji": "💫",
+      "chip": "SUN 8 PM",
+      "logo": "kaseyacenter.com",
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: NikoBa 85 / CC BY-SA 4.0",
+      "logoFile": null
+    }
+  ],
+  "caption": "South Florida is booked through Sunday. Tag a friend and tell them who you are taking 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [
+    "iiipoints"
+  ],
+  "igCaption": "South Florida is booked through Sunday. Tag a friend and tell them who you are taking 👀\n\n📰 Sources: Miami New Times, WPTV\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-16",
+  "id": "2026-10-16-upcoming"
+}
