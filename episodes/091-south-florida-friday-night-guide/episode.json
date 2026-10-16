@@ -1,0 +1,219 @@
+{
+  "title": "South Florida Friday Night Guide",
+  "sources": [
+    "NBC 6 South Florida",
+    "Secret Miami",
+    "Seminole Hard Rock Hollywood Poker",
+    "The Palm Beach Post",
+    "Local 10"
+  ],
+  "collaborators": [],
+  "igCaption": "Friday plans across South Florida, from yachts to gardens.\nOct. 16, South Florida, prices vary\n\nSources: NBC 6 South Florida, Secret Miami, Seminole Hard Rock Hollywood Poker, The Palm Beach Post, Local 10\n\n#SouthFlorida #MiamiEvents #FortLauderdale #PalmBeach",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Friday night in South Florida starts with yachts in Fort Lauderdale and ends with a cold front on the way.",
+      "overlay": [
+        "FRIDAY NIGHT",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🛥️",
+        "🎟️",
+        "🌴",
+        "🌬️"
+      ],
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start in Fort Lauderdale. Yacht Rendezvous returns with luxury yachts, entertainment, and a cause.",
+      "caption": "Start in Fort Lauderdale. Yacht Rendezvous returns with luxury yachts, entertainment, and a cause.",
+      "overlay": "FORT LAUDERDALE",
+      "badge": "RETURNS TODAY",
+      "sub": "Yachts, entertainment, cause",
+      "emoji": "🛥️",
+      "stats": [],
+      "source": "NBC 6 South Florida",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 155,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "In Pinecrest, NightGarden opens November 12 at Fairchild Tropical Botanic Garden. It runs 60 minutes, welcomes all ages, and adds a new ice rink under the palms.",
+      "caption": "In Pinecrest, NightGarden opens Nov. 12 at Fairchild Tropical Botanic Garden. It runs 60 minutes, welcomes all ages, and adds a new ice rink under the palms.",
+      "overlay": "PINECREST",
+      "badge": "OPENS NOV 12",
+      "sub": "Fairchild adds ice rink",
+      "emoji": "⛸️",
+      "stats": [
+        {
+          "value": "NOV 12",
+          "label": "opening"
+        },
+        {
+          "value": "60 MIN",
+          "label": "duration"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Pinecrest, Florida",
+        "lat": 25.665,
+        "lon": -80.30416667,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -30,
+        "heading": 70,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Hollywood has daily tournaments at Seminole Hard Rock Poker. The update ran October 11. If you’re in Hollywood, check NEAR after the tournament and see who played.",
+      "caption": "Hollywood has daily tournaments at Seminole Hard Rock Poker. The update ran Oct. 11. If you’re in Hollywood, check NEAR after the tournament and see who played.",
+      "overlay": "HOLLYWOOD",
+      "badge": "DAILY TOURNEYS",
+      "sub": "Seminole Hard Rock poker",
+      "emoji": "♠️",
+      "stats": [
+        {
+          "value": "OCT 11",
+          "label": "update"
+        }
+      ],
+      "source": "Seminole Hard Rock Hollywood Poker",
+      "location": {
+        "name": "Seminole Hard Rock Hotel & Casino Hollywood",
+        "lat": 26.0513,
+        "lon": -80.2114,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -32,
+        "heading": 118,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Palm Beach County has Coco Market Goes Pink on the calendar. The Palm Beach Post covered it on September 22.",
+      "caption": "Palm Beach County has Coco Market Goes Pink on the calendar. The Palm Beach Post covered it on Sept. 22.",
+      "overlay": "DELRAY BEACH",
+      "badge": "GOES PINK",
+      "sub": "Palm Beach County pick",
+      "emoji": "🌸",
+      "stats": [
+        {
+          "value": "SEP 22",
+          "label": "published"
+        }
+      ],
+      "source": "The Palm Beach Post",
+      "location": {
+        "name": "Delray Beach, Florida",
+        "lat": 26.44444444,
+        "lon": -80.10972222,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -31,
+        "heading": 22,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Plan for a cold front this weekend. Local 10 says early voting starts Monday in Miami-Dade, Broward, and Monroe.",
+      "caption": "Plan for a cold front this weekend. Local 10 says early voting starts Monday in Miami-Dade, Broward, and Monroe.",
+      "overlay": "SOUTH FLORIDA",
+      "badge": "MONDAY VOTE",
+      "sub": "Cold front this weekend",
+      "emoji": "🗳️",
+      "stats": [
+        {
+          "value": "MONDAY",
+          "label": "early voting"
+        },
+        {
+          "value": "3",
+          "label": "counties"
+        }
+      ],
+      "source": "Local 10",
+      "location": {
+        "name": "Miami, Florida",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 245,
+        "degrees": 75,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you actually leave the house for tonight? Friday nights are full of people you pass once and never name, and NEAR is for the moment you want to know who that was.",
+      "overlay": "WHERE TONIGHT? 🌙",
+      "sub": "Tell us your Friday move",
+      "location": {
+        "name": "South Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 100
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -35,
+        "heading": 185
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "091-south-florida-friday-night-guide"
+}
