@@ -1,0 +1,193 @@
+{
+  "title": "South Florida Weekend Guide: NASCAR, Food, and Lights",
+  "sources": [
+    "WSVN 7News",
+    "Sun Sentinel",
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "NASCAR, Las Olas food, and a night walk at Jungle Island this weekend.\nOct. 16-18, South Florida, prices vary\n\nSources: WSVN 7News, Sun Sentinel, Miami New Times, Secret Miami\n\n#MiamiEvents #SouthFlorida #ThingsToDoMiami #WeekendGuide",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "NASCAR championship weekend is coming back to Homestead for the first time in six years.",
+      "overlay": [
+        "WEEKEND",
+        "GUIDE"
+      ],
+      "emojis": [
+        "🏁",
+        "🍽️",
+        "🌃",
+        "📍"
+      ],
+      "location": {
+        "name": "Homestead-Miami Speedway",
+        "lat": 25.45194444,
+        "lon": -80.40861111,
+        "h": 25
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 215
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start with Homestead-Miami Speedway. One of NASCAR's biggest weekends, the Championship, is set to return to South Florida after six years away. The track gets the spotlight again.",
+      "caption": "Start with Homestead-Miami Speedway. One of NASCAR's biggest weekends, the Championship, is set to return to South Florida after 6 years away. The track gets the spotlight again.",
+      "overlay": "HOMESTEAD",
+      "badge": "6 YEARS",
+      "sub": "Championship returns",
+      "emoji": "🏁",
+      "stats": [
+        {
+          "value": "6 YEARS",
+          "label": "since last time"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Homestead-Miami Speedway",
+        "lat": 25.45194444,
+        "lon": -80.40861111,
+        "h": 25
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 140,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For food, Las Olas has a new Sweetwaters. The Sun Sentinel called it the heartbeat of Las Olas and said it opened with something for almost everyone. That gives you an easy stop on the boulevard.",
+      "caption": "For food, Las Olas has a new Sweetwaters. The Sun Sentinel called it the heartbeat of Las Olas and said it opened with something for almost everyone.",
+      "overlay": "LAS OLAS",
+      "badge": "NEW OPENING",
+      "sub": "Sweetwaters on the boulevard",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "opened"
+        }
+      ],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Las Olas Boulevard",
+        "lat": 26.1193,
+        "lon": -80.13496,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 95,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Carrot changed its name after thirty-three years. Mario Laufer started the business in 1993 on West Flagler Street, and the chain now has 32 locations across South Florida and New York. If you stop by the old Carrot spot, check NEAR for who was there too.",
+      "caption": "Carrot changed its name after 33 years. Mario Laufer started the business in 1993 on West Flagler Street, and the chain now has 32 locations across South Florida and New York. If you stop by the old Carrot spot, check NEAR for who was there too.",
+      "overlay": "CARROT",
+      "badge": "33 YEARS",
+      "sub": "Miami chain gets shorter",
+      "emoji": "🥕",
+      "stats": [
+        {
+          "value": "33 YEARS",
+          "label": "old name"
+        },
+        {
+          "value": "32",
+          "label": "locations"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Carrot Brickell Plaza",
+        "lat": 25.7653,
+        "lon": -80.1934,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -33,
+        "heading": 22,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a nighttime plan, Luminosa returns to Jungle Island for 2026. The walk runs 1.35 miles under the canopy, with over 43,600 LEDs by Lektrik Art.",
+      "caption": "For a nighttime plan, Luminosa returns to Jungle Island for 2026. The walk runs 1.35 miles under the canopy, with over 43,600 LEDs by Lektrik Art.",
+      "overlay": "JUNGLE ISLAND",
+      "badge": "1.35 MILES",
+      "sub": "Night walk with LEDs",
+      "emoji": "💡",
+      "stats": [
+        {
+          "value": "1.35 MILES",
+          "label": "trail"
+        },
+        {
+          "value": "43,600",
+          "label": "LEDs"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Jungle Island",
+        "lat": 25.785,
+        "lon": -80.1742,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -31,
+        "heading": 305,
+        "degrees": 90,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "South Florida has all three this weekend. If you catch a face in the crowd at NASCAR, dinner, or the lights and never get the name, the NEAR app shows who walked past.",
+      "overlay": "WEEKEND PLANS",
+      "sub": "Pick one and go",
+      "location": {
+        "name": "South Florida",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -35,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "089-south-florida-weekend-guide-nascar-food-"
+}
