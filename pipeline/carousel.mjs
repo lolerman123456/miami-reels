@@ -490,7 +490,7 @@ function splitCover(c0) {
 function coverHTML(post, dir, h, o = {}) { // o: textBottom / barBottom / barText (shareslop Reels keep clear of Instagram's caption overlay)
   const c = splitCover(post.cover); const img = dataUrl(dir, c.photoFile);
   // o.big (shareslop, owner Oct 6: "a lil bigger"): never smaller than the floor — long lines wrap instead of shrinking
-  const fs = (t, max) => o.big ? fit1(t, Math.round(max * 1.25), 1040) : fit1(t, max); // one line each; shareslop lines are written short so they come out big
+  const fs = (t, max) => o.big ? fit1(t, Math.round(max * 1.25), o.safe ? 820 : 1040) : fit1(t, max); // one line each; shareslop lines are written short so they come out big
   return `
     ${img && o.fit ? `<div class="bg" style="background-image:url('${img}');filter:blur(30px) brightness(.6);transform:scale(1.15)"></div><div class="bg" style="background:url('${img}') center ${o.fit}px/1080px auto no-repeat"></div>` // owner Oct 14: the 2:3 AI photo was side-cropped in the 9:16 Reel — show it whole, blurred copy behind
     : img ? `<div class="bg" style="background-image:url('${img}');${c.blur ? 'filter:blur(26px);transform:scale(1.12)' : ''}"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 30%, #2a3a66, #05070d)"></div>`}
@@ -499,7 +499,7 @@ function coverHTML(post, dir, h, o = {}) { // o: textBottom / barBottom / barTex
     ${img ? markSVG(c.mark, h * 0.08, h * 0.42) : ''}
     ${c.credit && !c.blur ? `<div class="credit">${esc(c.credit)}</div>` : ''}
     ${post.kicker && ALIVE.includes(post.kind) ? `<div style="position:absolute;left:30px;top:24px;background:${BLUE};border-radius:14px;padding:10px 22px;font-weight:900;font-size:30px;letter-spacing:1px">${esc(post.kicker)}</div>` : ''}
-    <div style="position:absolute;left:40px;right:40px;bottom:${o.textBottom ?? (h > 1400 ? 220 : 150)}px;text-align:center">
+    <div style="position:absolute;left:${o.safe ? 110 : 40}px;right:${o.safe ? 150 : 40}px;bottom:${o.textBottom ?? (h > 1400 ? 220 : 150)}px;text-align:center">
       ${(c.logoFiles || []).length && ALIVE.includes(post.kind) ? `<div style="display:flex;gap:18px;justify-content:center;margin-bottom:26px">${c.logoFiles.map(f => dataUrl(dir, f)).filter(Boolean).map(u => `<div style="background:#fff;border-radius:18px;width:${c.logoFiles.length > 4 ? 140 : 170}px;height:${c.logoFiles.length > 4 ? 100 : 120}px;padding:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.4)"><img src="${u}" style="width:100%;height:100%;object-fit:contain"></div>`).join('')}</div>` : ''}
       ${(c.emojis || []).length && !(c.logoFiles || []).length && ALIVE.includes(post.kind) ? `<div style="font-size:64px;margin-bottom:14px;letter-spacing:12px">${c.emojis.slice(0, 4).map(esc).join('')}</div>` : ''}
       ${c.top ? `<div class="caps" style="font-size:${fs(c.top, 68)}px;margin-bottom:10px">${esc(c.top)}</div>` : ''}
@@ -508,7 +508,7 @@ function coverHTML(post, dir, h, o = {}) { // o: textBottom / barBottom / barTex
       ${c.bottom ? `<div class="caps" style="font-size:${fs(c.bottom, 104)}px">${esc(c.bottom)}</div>` : ''}
     </div>
     ${o.barBottom ? `<div class="shade" style="top:auto;height:${o.barBottom}px;background:#000"></div>` : ''}
-    ${bar(o.barText ? esc(o.barText) : h > 1400 ? `new post on our page ${arrow}` : `swipe for more ${arrow}`, o.barBottom ? `bottom:${o.barBottom}px` : '')}`;
+    ${bar(o.barText ? esc(o.barText) : h > 1400 ? `new post on our page ${arrow}` : `swipe for more ${arrow}`, [o.barBottom ? `bottom:${o.barBottom}px` : '', o.safe ? 'padding:0 150px 0 110px' : ''].filter(Boolean).join(';'))}`;
 }
 
 // shareslop Reel frame (owner, Oct 6: "use the same NEAR news format"): the news cover look at 1080x1920, text and the blue
@@ -518,7 +518,7 @@ export async function renderShareCover(cover, dir, file, cta, h = 1920) { // h 1
   try {
     const page = await browser.newPage();
     await page.setViewport({ width: 1080, height: h });
-    const o = h > 1400 ? { textBottom: 450, barBottom: 330, barText: cta, big: true, fit: 110 } : { textBottom: 170, barText: cta, big: true };
+    const o = h > 1400 ? { textBottom: 450, barBottom: 330, barText: cta, big: true, fit: 110, safe: true } : { textBottom: 170, barText: cta, big: true }; // safe (owner Oct 16, still cropped): taller phones crop ~55 px off each side of a 9:16 Reel and the like/comment buttons cover the right — keep text and bar inside
     await page.setContent(`<html><head><meta charset="utf-8"><style>${CSS}</style></head><body style="--h:${h}px">${coverHTML({ cover, kind: 'news' }, dir, h, o)}</body></html>`, { waitUntil: 'load' });
     await page.evaluate(() => document.fonts.ready);
     await page.screenshot({ path: file, type: 'jpeg', quality: 93 });
