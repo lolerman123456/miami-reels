@@ -1,0 +1,228 @@
+{
+  "title": "Florida Weekend Guide: Games, Protests and Night Lights",
+  "sources": [
+    "Local 10",
+    "WLRN",
+    "CBS News",
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Big game, early voting push, and lights you can walk through.\nOct. 17, Hard Rock Stadium.\n\nSources: Local 10, WLRN, CBS News, Miami New Times, Secret Miami\n\n#Miami #FloridaEvents #WeekendGuide #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Miami versus Florida State leads the weekend in South Florida.",
+      "overlay": [
+        "WEEKEND",
+        "CROWD GUIDE"
+      ],
+      "emojis": [
+        "🏈",
+        "🗳️",
+        "🌴",
+        "💡"
+      ],
+      "location": {
+        "name": "Hard Rock Stadium",
+        "lat": 25.95805556,
+        "lon": -80.23888889,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami, ranked number three, hosts Florida State at Hard Rock Stadium on Saturday night. The game is another chapter in a heated rivalry, and rain could add another challenge.",
+      "caption": "Miami, ranked No. 3, hosts Florida State at Hard Rock Stadium on Saturday night. The game is another chapter in a heated rivalry, and rain could add another challenge.",
+      "overlay": "HARD ROCK",
+      "badge": "NO. 3 MIAMI",
+      "sub": "Canes host Florida State",
+      "emoji": "🏈",
+      "stats": [
+        {
+          "value": "NO. 3",
+          "label": "Miami ranking"
+        }
+      ],
+      "source": "Local 10",
+      "location": {
+        "name": "Hard Rock Stadium",
+        "lat": 25.95805556,
+        "lon": -80.23888889,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "No Kings returns in South Florida with a focus on early voting ahead of the midterms.",
+      "caption": "No Kings returns in South Florida with a focus on early voting ahead of the midterms.",
+      "overlay": "NO KINGS",
+      "badge": "EARLY VOTE",
+      "sub": "Day of action returns",
+      "emoji": "🗳️",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "midterm year"
+        }
+      ],
+      "source": "WLRN",
+      "location": {
+        "name": "Miami-Dade Elections Department",
+        "lat": 25.7342,
+        "lon": -80.3135,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -30,
+        "heading": 55,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "At Traz Powell Stadium, Columbus beat Miami Central 28 to 3 in the GMAC Championship Game. Columbus improved to 8-1. The game ended early because of weather. If you were there, NEAR shows who else braved Traz Powell too.",
+      "caption": "At Traz Powell Stadium, Columbus beat Miami Central 28-3 in the GMAC Championship Game. Columbus improved to 8-1. The game ended early because of weather. If you were there, NEAR shows who else braved Traz Powell too.",
+      "overlay": "TRAZ POWELL",
+      "badge": "28-3 FINAL",
+      "sub": "GMAC title game",
+      "emoji": "🏟️",
+      "stats": [
+        {
+          "value": "28-3",
+          "label": "final score"
+        },
+        {
+          "value": "8-1",
+          "label": "Columbus record"
+        }
+      ],
+      "source": "Local 10",
+      "location": {
+        "name": "Traz Powell Stadium",
+        "lat": 25.8729,
+        "lon": -80.2457,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 310,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Luminosa returns to Jungle Island for its 2026 edition. The walk runs 1.35 miles, with more than 43,600 LEDs and seven custom zones.",
+      "caption": "Luminosa returns to Jungle Island for its 2026 edition. The walk runs 1.35 miles, with more than 43,600 LEDs and seven custom zones.",
+      "overlay": "JUNGLE ISLAND",
+      "badge": "1.35 MILES",
+      "sub": "Luminosa returns",
+      "emoji": "💡",
+      "stats": [
+        {
+          "value": "1.35 MI",
+          "label": "light walk"
+        },
+        {
+          "value": "43,600+",
+          "label": "LED lights"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Jungle Island",
+        "lat": 25.7849,
+        "lon": -80.1762,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -31,
+        "heading": 120,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "NightGarden opens at Fairchild Tropical Botanic Garden on November 12. This year adds an ice rink under the palms, a 60-minute route, illuminated pathways, larger-than-life sculptures, and food trucks.",
+      "caption": "NightGarden opens at Fairchild Tropical Botanic Garden on November 12. This year adds an ice rink under the palms, a 60-minute route, illuminated pathways, larger-than-life sculptures, and food trucks.",
+      "overlay": "FAIRCHILD",
+      "badge": "NOV. 12",
+      "sub": "NightGarden opens",
+      "emoji": "⛸️",
+      "stats": [
+        {
+          "value": "NOV. 12",
+          "label": "opening date"
+        },
+        {
+          "value": "60 MIN",
+          "label": "duration"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Fairchild Tropical Botanic Garden",
+        "lat": 25.6769,
+        "lon": -80.2748,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -30,
+        "heading": 250,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you actually show up for this weekend? Between the games, protests, and night lights, the stranger you kept passing all day is exactly the kind of person NEAR app can put a name to.",
+      "overlay": "YOUR PICK? 👇",
+      "sub": "Tell us where you’re going",
+      "location": {
+        "name": "Hard Rock Stadium",
+        "lat": 25.95805556,
+        "lon": -80.23888889,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2100,
+        "pitch": -34,
+        "heading": 205
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "093-florida-weekend-guide-games-protests-and"
+}
