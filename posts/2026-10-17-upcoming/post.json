@@ -1,0 +1,141 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS",
+    "main": "EVERY BIG",
+    "highlight": "EVENT",
+    "bottom": "THIS WEEK",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Miami concert crowd night Kaseya Center",
+      "prompt": "A dramatic South Florida night out collage with a packed concert crowd, neon stage lights, a restaurant opening on Las Olas and Halloween cocktails"
+    },
+    "emojis": [
+      "🎟️",
+      "🎶",
+      "🍸",
+      "👀"
+    ],
+    "logos": [
+      "iiipoints.com",
+      "kaseyacenter.com",
+      "surfcomber.com",
+      "naialasolas.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c2.png",
+      "logo-c3.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "III Points at Mana Wynwood, Oct. 16 to 17",
+      "highlight": "III Points",
+      "body": "The festival runs at Mana Wynwood with 13 stages and artists including Flying Lotus, Tokischa, Four Tet and Lil' Kim. It starts at 3 p.m. and tickets cost $159 to $599.",
+      "place": "Wynwood, Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons Wynwood Miami music festival crowd night",
+        "prompt": "A packed Wynwood music festival at night with lasers, rain in the lights and a dense crowd facing a large stage"
+      },
+      "color": "#6A00FF",
+      "emoji": "🎛️",
+      "chip": "3 PM",
+      "logo": "iiipoints.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Halloween murder mystery dinner at Kimpton Surfcomber Hotel, Oct. 17",
+      "highlight": "murder mystery",
+      "body": "Kimpton Surfcomber hosts an interactive dinner at 8 p.m. with assigned character roles, clues, craft cocktails and a three-course meal. Tickets are $193.75.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons Kimpton Surfcomber Hotel Miami Beach night",
+        "prompt": "A moody Miami Beach hotel dinner scene with candlelight, Halloween decor, clue cards and cocktails on a table"
+      },
+      "emoji": "🕵️",
+      "chip": "$193.75",
+      "logo": "surfcomber.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "iHeartRadio Fiesta Latina at Kaseya Center, Oct. 17",
+      "highlight": "Fiesta Latina",
+      "body": "The show starts at 8 p.m. at Kaseya Center with Anuel AA, Myke Towers, Farruko, Manuel Turizo and Greeicy. Tickets cost $45 to $370.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons Kaseya Center Miami concert arena",
+        "prompt": "A dramatic packed arena concert at Kaseya Center with red stage lights and a Latin music crowd"
+      },
+      "color": "#E31837",
+      "emoji": "🎤",
+      "chip": "$45+",
+      "logo": "kaseyacenter.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Tini at Kaseya Center, Oct. 18",
+      "highlight": "Tini",
+      "body": "Tini brings her Futttura World Tour to Miami at 8 p.m. It is the only U.S. stop on the year-long tour, and tickets cost $61 to $408.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons Kaseya Center Miami stage concert",
+        "prompt": "A pop concert stage inside Kaseya Center with giant LED screens, pink and blue lights and a packed floor"
+      },
+      "color": "#E31837",
+      "emoji": "✨",
+      "chip": "$61+",
+      "logo": "kaseyacenter.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Naia opens on Las Olas, Oct. 22",
+      "highlight": "Naia opens",
+      "body": "Naia opens at 904 E. Las Olas Blvd. at 4 p.m. with dinner and happy hour in the former Mango's space. The restaurant serves Mediterranean dishes with Asian flavors.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons Las Olas Boulevard Fort Lauderdale restaurant night",
+        "prompt": "A polished new Las Olas restaurant at night with a glowing corner bar, open kitchen, sushi plates and robata grill flames"
+      },
+      "emoji": "🍣",
+      "chip": "4 PM",
+      "logo": "naialasolas.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "South Florida has a full week. Who are you taking? Tag a friend 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [
+    "iiipoints"
+  ],
+  "igCaption": "South Florida has a full week. Who are you taking? Tag a friend 👀\n\n📰 Sources: Miami New Times\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-17",
+  "id": "2026-10-17-upcoming"
+}
