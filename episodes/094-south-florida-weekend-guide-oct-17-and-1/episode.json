@@ -1,0 +1,197 @@
+{
+  "title": "South Florida weekend guide: Oct. 17 and 18",
+  "sources": [
+    "Local 10",
+    "Miami New Times",
+    "New York Times",
+    "Miami Hurricanes"
+  ],
+  "collaborators": [],
+  "igCaption": "Your Oct. 17 weekend plans, from rallies to football to Kaseya Center.\nOct. 17 and 18, Miami and West Palm Beach, $45 and up\n\nSources: Local 10, Miami New Times, New York Times, Miami Hurricanes\n\n#MiamiWeekend #SouthFlorida #MiamiEvents #WestPalmBeach",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a plan today? South Florida has No Kings rallies, Florida State against No. 3 Miami, and two Kaseya Center shows this weekend.",
+      "overlay": [
+        "WEEKEND",
+        "GUIDE"
+      ],
+      "emojis": [
+        "📍",
+        "🏈",
+        "🎤",
+        "🗳️"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7814,
+        "lon": -80.187,
+        "h": 120
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start with West Palm Beach. No Kings rallies were held Saturday in cities and communities across the U.S. Organizers said the goal was getting people to vote early in the midterm elections.",
+      "caption": "Start with West Palm Beach. No Kings rallies were held Saturday in cities and communities across the U.S. Organizers said the goal was getting people to vote early in the midterm elections.",
+      "overlay": "WEST PALM",
+      "badge": "OCT. 17",
+      "sub": "No Kings rally",
+      "emoji": "🗳️",
+      "stats": [
+        {
+          "value": "OCT. 17",
+          "label": "rally date"
+        }
+      ],
+      "source": "Local 10",
+      "location": {
+        "name": "West Palm Beach, Florida",
+        "lat": 26.74694444,
+        "lon": -80.13111111,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Then football takes over Miami Gardens. Florida State plays No. 3 Miami on Saturday at Hard Rock Stadium. The kickoff is at 7:30 p.m.",
+      "caption": "Then football takes over Miami Gardens. Florida State plays No. 3 Miami on Saturday at Hard Rock Stadium. The kickoff is at 7:30 p.m.",
+      "overlay": "MIAMI GARDENS",
+      "badge": "7:30 PM",
+      "sub": "FSU at Miami",
+      "emoji": "🏈",
+      "stats": [
+        {
+          "value": "7:30 PM",
+          "label": "kickoff"
+        },
+        {
+          "value": "NO. 3",
+          "label": "Miami rank"
+        }
+      ],
+      "source": "Miami Hurricanes",
+      "location": {
+        "name": "Hard Rock Stadium",
+        "lat": 25.95805556,
+        "lon": -80.23888889,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 40,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "At 8 p.m., iHeartRadio Fiesta Latina is at Kaseya Center. Enrique Santos hosts, with Anuel AA, Myke Towers, Farruko, Manuel Turizo, and Greeicy. Tickets run from $45 to $370. If you’re at Kaseya Center, open NEAR and see who’s around.",
+      "caption": "At 8 p.m., iHeartRadio Fiesta Latina is at Kaseya Center. Enrique Santos hosts, with Anuel AA, Myke Towers, Farruko, Manuel Turizo, and Greeicy. Tickets run from $45 to $370. If you’re at Kaseya Center, open NEAR and see who’s around.",
+      "overlay": "KASEYA CENTER",
+      "badge": "$45-$370",
+      "sub": "Fiesta Latina",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "8 PM",
+          "label": "show time"
+        },
+        {
+          "value": "$45-$370",
+          "label": "tickets"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.781401,
+        "lon": -80.187944,
+        "h": 70
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -35,
+        "heading": 260,
+        "degrees": 75,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sunday stays at Kaseya Center. Tini brings the Futttura World Tour at 8 p.m. Miami is the only U.S. stop on the year-long tour. Tickets cost $61 to $408.",
+      "caption": "Sunday stays at Kaseya Center. Tini brings the Futttura World Tour at 8 p.m. Miami is the only U.S. stop on the year-long tour. Tickets cost $61 to $408.",
+      "overlay": "KASEYA CENTER",
+      "badge": "ONLY U.S. STOP",
+      "sub": "Tini on Sunday",
+      "emoji": "🎶",
+      "stats": [
+        {
+          "value": "8 PM",
+          "label": "show time"
+        },
+        {
+          "value": "$61-$408",
+          "label": "tickets"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.781401,
+        "lon": -80.187944,
+        "h": 70
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1300,
+        "pitch": -33,
+        "heading": 315,
+        "degrees": 90,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Pick one and go. The same way a weekend can pass with great places and great people just slipping by, NEAR is for the faces you saw around South Florida but never met. That is the whole weekend.",
+      "overlay": "WHAT'S THE PLAN? 📍",
+      "sub": "Tell us your move",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7814,
+        "lon": -80.187,
+        "h": 120
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "094-south-florida-weekend-guide-oct-17-and-1"
+}
