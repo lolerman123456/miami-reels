@@ -1,0 +1,82 @@
+{
+  "sector": "USA",
+  "cover": {
+    "top": "A 71-YEAR-OLD FISHERMAN",
+    "main": "WAS KILLED BY A",
+    "highlight": "NEARLY 12-FOOT",
+    "bottom": "ALLIGATOR AT A FLORIDA LAKE",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons large American alligator Florida lake shoreline",
+      "prompt": "large American alligator at the edge of a dark Florida lake, low angle from the shoreline, dramatic water and reeds, no people",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "🐊",
+      "🎣",
+      "🚨"
+    ],
+    "logos": [
+      "local10.com",
+      "fox35orlando.com",
+      "cbsnews.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c2.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "USA",
+      "headline": "A nearly 12-foot alligator killed a 71-year-old fisherman",
+      "highlight": "nearly 12-foot",
+      "body": "A 71-year-old man was fishing from the shore of a Florida lake Friday when the alligator attacked and killed him.",
+      "place": "Florida",
+      "source": "Local 10",
+      "photo": {
+        "query": "Wikimedia Commons American alligator Florida water close up",
+        "prompt": "close-up of a large alligator in dark freshwater with only its eyes and snout above the surface, no people"
+      },
+      "emoji": "🐊",
+      "chip": "71 YEARS OLD",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "USA",
+      "headline": "The attack happened at a Winter Garden park",
+      "highlight": "Winter Garden",
+      "body": "Fox 35 Orlando reported the attack happened at a park in Winter Garden, west of Orlando.",
+      "place": "Winter Garden",
+      "source": "FOX 35 Orlando",
+      "photo": {
+        "query": "Wikimedia Commons Winter Garden Florida park lake",
+        "prompt": "quiet Florida park lake in Winter Garden with grass shoreline, trees and dark water, no people"
+      },
+      "emoji": "📍",
+      "chip": "PARK",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "A nearly 12-foot alligator killed a 71-year-old fisherman at a Florida park",
+  "hashtags": [
+    "#WinterGarden",
+    "#FloridaNews"
+  ],
+  "collaborators": [],
+  "igCaption": "A nearly 12-foot alligator killed a 71-year-old fisherman at a Florida park\n\n📰 Sources: Local 10, FOX 35 Orlando, New York Post, Wikipedia\n\n🎥 Video: WPBF 25 News\n\n#WinterGarden #FloridaNews #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-17",
+  "id": "2026-10-17-news-18",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "WPBF 25 News",
+    "url": "https://www.youtube.com/watch?v=4x4rrf7QZBg"
+  }
+}
