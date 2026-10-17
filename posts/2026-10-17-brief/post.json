@@ -1,0 +1,74 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "POLICE SAY",
+    "main": "FORMER CANDIDATE WAS ARRESTED",
+    "highlight": "THREATS",
+    "bottom": "TO KILL OR INJURE",
+    "blur": false,
+    "photo": {
+      "query": "Elijah Manley Broward County arrest or courthouse",
+      "prompt": "dramatic photo of Elijah Manley outside a Broward County law enforcement building with sheriff deputies nearby and flashing red and blue lights, evening light, news-style composition",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚨",
+      "📱",
+      "⚖️"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Elijah Manley arrested over alleged threats",
+      "highlight": "arrested over alleged threats",
+      "body": "Police say the former congressional candidate wrote or sent threats to kill or injure someone on social media.",
+      "place": "Broward County",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Elijah Manley Broward County arrest",
+        "prompt": "news photo of Elijah Manley near a Broward County courthouse entrance with police lights reflecting on glass doors, dramatic and specific"
+      },
+      "emoji": "🚨",
+      "chip": "ARRESTED",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "CBS says Manley surrendered in Broward",
+      "highlight": "surrendered in Broward",
+      "body": "CBS News reported he surrendered to Broward authorities on social media death threat charges.",
+      "place": "Broward County",
+      "source": "CBS News",
+      "photo": {
+        "query": "Broward County Main Jail Fort Lauderdale exterior",
+        "prompt": "sharp exterior photo of the Broward County Main Jail with sheriff vehicles outside, nighttime lighting, and a tense news look"
+      },
+      "emoji": "🏛️",
+      "chip": "SURRENDERED",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Sun Sentinel"
+    }
+  ],
+  "caption": "A former congressional candidate is behind bars over alleged Facebook death threats",
+  "hashtags": [
+    "#BrowardCounty",
+    "#ElijahManley"
+  ],
+  "collaborators": [],
+  "igCaption": "A former congressional candidate is behind bars over alleged Facebook death threats\n\n📰 Sources: NBC 6 South Florida, CBS News, WPLG Local 10, Sun Sentinel\n\n🎥 Video: CBS News Miami\n\n#BrowardCounty #ElijahManley #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-17",
+  "id": "2026-10-17-brief",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "CBS News Miami",
+    "url": "https://www.youtube.com/watch?v=kqPOgqW4nls"
+  }
+}
