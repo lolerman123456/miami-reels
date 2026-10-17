@@ -1,0 +1,231 @@
+{
+  "title": "5 things to do this weekend, starting with the big ones",
+  "sources": [
+    "The Palm Beach Post",
+    "Local 10",
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Start with the weekend plans, then watch the Saturday rain.\nOct 16 to 18, Miami and Palm Beach County, $159 to $599\n\nSources: The Palm Beach Post, Local 10, Miami New Times, Secret Miami\n\n#MiamiWeekend #MiamiEvents #PalmBeachCounty #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Want weekend plans that start in Palm Beach County and end with a thirteen-stage music festival?",
+      "overlay": [
+        "WEEKEND PLANS",
+        "START HERE"
+      ],
+      "emojis": [
+        "🗓️",
+        "🎶",
+        "🐶",
+        "🌧️"
+      ],
+      "location": {
+        "name": "West Palm Beach, Florida",
+        "lat": 26.74694444,
+        "lon": -80.13111111,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number five: No Kings protests are planned in Palm Beach County on Saturday, October 17. The Palm Beach Post says there are five protests that day.",
+      "caption": "Number 5: No Kings protests are planned in Palm Beach County on Saturday, Oct. 17. The Palm Beach Post says there are 5 protests that day.",
+      "overlay": "PALM BEACH",
+      "badge": "5 PROTESTS",
+      "sub": "Saturday, Oct. 17",
+      "emoji": "📍",
+      "stats": [
+        {
+          "value": "5",
+          "label": "protests"
+        },
+        {
+          "value": "OCT. 17",
+          "label": "date"
+        }
+      ],
+      "source": "The Palm Beach Post",
+      "location": {
+        "name": "West Palm Beach, Florida",
+        "lat": 26.74694444,
+        "lon": -80.13111111,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 40,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number four: the Humane Society of Broward County hosts Count Bark-ula on Friday. Local 10 says adoptable puppies and big dogs are getting extra attention at the Halloween festival.",
+      "caption": "Number 4: the Humane Society of Broward County hosts Count Bark-ula on Friday. Local 10 says adoptable puppies and big dogs are getting extra attention at the Halloween festival.",
+      "overlay": "COUNT BARK-ULA",
+      "badge": "FRIDAY",
+      "sub": "Adoptable dogs",
+      "emoji": "🐶",
+      "stats": [
+        {
+          "value": "OCT. 16",
+          "label": "festival date"
+        }
+      ],
+      "source": "Local 10",
+      "location": {
+        "name": "Humane Society of Broward County",
+        "lat": 26.0616,
+        "lon": -80.1686,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 115,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number three: Bar1939 at the National Hotel in Miami Beach has three Halloween cocktails throughout October. One is Morticia’s Bleeding Heart Margarita, topped with lychee eyeballs, at 1677 Collins Avenue. If you’re sipping there, open NEAR and see who else is at Bar1939.",
+      "caption": "Number 3: Bar1939 at the National Hotel in Miami Beach has 3 Halloween cocktails throughout October. One is Morticia’s Bleeding Heart Margarita, topped with lychee eyeballs, at 1677 Collins Ave. If you’re sipping there, open NEAR and see who else is at Bar1939.",
+      "overlay": "BAR1939",
+      "badge": "3 COCKTAILS",
+      "sub": "1677 Collins Ave.",
+      "emoji": "🍸",
+      "stats": [
+        {
+          "value": "3",
+          "label": "cocktails"
+        },
+        {
+          "value": "OCTOBER",
+          "label": "available"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "National Hotel Miami Beach",
+        "lat": 25.7927,
+        "lon": -80.1297,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 155,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number two: III Points returns to Mana Wynwood for two days. The festival starts Friday at three p.m. with thirteen stages. Miami New Times lists Flying Lotus, Tokischa, Four Tet, Lil' Kim, and Bone Thugs-n-Harmony.",
+      "caption": "Number 2: III Points returns to Mana Wynwood for 2 days. The festival starts Friday at 3 p.m. with 13 stages. Miami New Times lists Flying Lotus, Tokischa, Four Tet, Lil' Kim, and Bone Thugs-n-Harmony.",
+      "overlay": "III POINTS",
+      "badge": "13 STAGES",
+      "sub": "Mana Wynwood",
+      "emoji": "🎶",
+      "stats": [
+        {
+          "value": "13",
+          "label": "stages"
+        },
+        {
+          "value": "3 P.M.",
+          "label": "start time"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Mana Wynwood",
+        "lat": 25.7993,
+        "lon": -80.2003,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -34,
+        "heading": 250,
+        "degrees": 90,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number one: plan around Saturday rain. Local 10 says widespread thunderstorms start around one to three p.m. Saturday. Some rain could be heavy and lead to flooding, with high rain chances lasting into Saturday night.",
+      "caption": "Number 1: plan around Saturday rain. Local 10 says widespread thunderstorms start around 1 to 3 p.m. Saturday. Some rain could be heavy and lead to flooding, with high rain chances lasting into Saturday night.",
+      "overlay": "SATURDAY RAIN",
+      "badge": "1 TO 3 P.M.",
+      "sub": "Flooding threat",
+      "emoji": "🌧️",
+      "stats": [
+        {
+          "value": "1-3 P.M.",
+          "label": "storm start"
+        },
+        {
+          "value": "SATURDAY",
+          "label": "rain threat"
+        }
+      ],
+      "source": "Local 10",
+      "location": {
+        "name": "Miami, Florida",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1700,
+        "pitch": -35,
+        "heading": 305,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you actually do this weekend? A weekend in South Florida is full of people you notice and never meet, and NEAR is for the ones you passed by without ever learning who they were.",
+      "overlay": "PICK ONE",
+      "sub": "Drop it in the comments",
+      "location": {
+        "name": "Miami, Florida",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -32,
+        "heading": 20
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "092-5-things-to-do-this-weekend-starting-wit"
+}
