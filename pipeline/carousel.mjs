@@ -494,7 +494,7 @@ function coverHTML(post, dir, h, o = {}) { // o: textBottom / barBottom / barTex
   return `
     ${img && o.fit ? `<div class="bg" style="background-image:url('${img}');filter:blur(30px) brightness(.6);transform:scale(1.15)"></div><div class="bg" style="background:url('${img}') center ${o.fit}px/1080px auto no-repeat"></div>` // owner Oct 14: the 2:3 AI photo was side-cropped in the 9:16 Reel — show it whole, blurred copy behind
     : img ? `<div class="bg" style="background-image:url('${img}');${c.blur ? 'filter:blur(26px);transform:scale(1.12)' : ''}"></div>` : `<div class="bg" style="background:radial-gradient(circle at 50% 30%, #2a3a66, #05070d)"></div>`}
-    <div class="shade" style="background:${o.textBottom ? 'linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 48%, rgba(0,0,0,.9) 66%, #000 82%)' : 'linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,.3) 56%, rgba(0,0,0,.82) 84%)'}"></div>
+    <div class="shade" style="background:${o.fit ? 'linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,.5) 50%, rgba(0,0,0,.78) 66%, rgba(0,0,0,.6) 88%, rgba(0,0,0,.45) 100%)' : o.textBottom ? 'linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,.55) 48%, rgba(0,0,0,.9) 66%, #000 82%)' : 'linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,.3) 56%, rgba(0,0,0,.82) 84%)'}"></div>
     ${c.blur ? `<div class="caps" style="position:absolute;left:0;right:0;top:${h * 0.22}px;text-align:center;font-size:${h > 1400 ? 300 : 250}px">?</div>` : ''}
     ${img ? markSVG(c.mark, h * 0.08, h * 0.42) : ''}
     ${c.credit && !c.blur ? `<div class="credit">${esc(c.credit)}</div>` : ''}
@@ -507,7 +507,7 @@ function coverHTML(post, dir, h, o = {}) { // o: textBottom / barBottom / barTex
       <div class="caps blue" style="font-size:${fs(c.highlight, 168)}px;margin:4px 0">${esc(c.highlight)}</div>
       ${c.bottom ? `<div class="caps" style="font-size:${fs(c.bottom, 104)}px">${esc(c.bottom)}</div>` : ''}
     </div>
-    ${o.barBottom ? `<div class="shade" style="top:auto;height:${o.barBottom}px;background:#000"></div>` : ''}
+    ${o.barBottom && !o.fit ? `<div class="shade" style="top:auto;height:${o.barBottom}px;background:#000"></div>` : ''}
     ${bar(o.barText ? esc(o.barText) : h > 1400 ? `new post on our page ${arrow}` : `swipe for more ${arrow}`, [o.barBottom ? `bottom:${o.barBottom}px` : '', o.safe ? 'padding:0 150px 0 110px' : ''].filter(Boolean).join(';'))}`;
 }
 
