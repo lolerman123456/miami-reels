@@ -1,34 +1,34 @@
-# @onlyindade — 2,102,916 followers, 14894 posts (checked Fri, Oct 16, 8:33 PM NY)
+# @onlyindade — 2,103,011 followers, 14895 posts (checked Sat, Oct 17, 1:39 AM NY)
 
 | Posted (NY) | Type | Likes | Comments | Caption (first line) |
 |---|---|---|---|---|
-| [Fri, Oct 16, 7:19 PM](https://www.instagram.com/reel/DekrwuOpyEs/) | Reel | 1701 | 132 | Crazy chase last night in Brickell as a stolen vehicle was leaving a parking garage🚔😳/ #ONLYinDADE activo_rd |
-| [Fri, Oct 16, 4:27 PM](https://www.instagram.com/p/DekY8z4Aby3/) | Carousel | 9056 | 886 | Six families. One clinic. Still no answers./ #ONLYinDADE |
-| [Fri, Oct 16, 1:24 PM](https://www.instagram.com/reel/DekDqpCp2DZ/) | Reel | 14634 | 138 | Vice city in full effect🚔😮‍💨🔥/ #ONLYinDADE |
-| [Fri, Oct 16, 11:02 AM](https://www.instagram.com/p/Dejzyy4HOGr/) | Carousel | 1368 | 23 | Miami dropped $26.6 million on 5 cars this year, and the priciest one’s from 1959 😭 #ONLYinDADE |
-| [Fri, Oct 16, 9:50 AM](https://www.instagram.com/p/Dejrh9ZnGTX/) | Carousel | 3362 | 64 | Best national park in America, as long as you own a boat #ONLYinDADE 🚤 |
-| [Thu, Oct 15, 11:50 PM](https://www.instagram.com/p/Deim7isnApS/) | Carousel | 7432 | 330 | Tesla finally showed the new Roadster, and it only took 9 years 🚀 #ONLYinDADE |
-| [Thu, Oct 15, 10:16 PM](https://www.instagram.com/p/DeicIDrHGw5/) | Carousel | 6322 | 967 | Turns out the most expensive kid in Dade is the one who left 💸 #ONLYinDADE |
-| [Thu, Oct 15, 6:27 PM](https://www.instagram.com/p/DeiB7deCd6C/) | Carousel | 35694 | 307 | GTA 6 took over the city today 👀 #ONLYinDADE |
-| [Thu, Oct 15, 3:48 PM](https://www.instagram.com/reel/Dehvid5JAtH/) | Reel | 4164 | 1079 | Hit and run turns into Road rage incident 😬 #ONLYinDADE |
-| [Thu, Oct 15, 12:44 PM](https://www.instagram.com/p/DehasntHJ1J/) | Carousel | 7892 | 214 | Amar’e went from guarding the paint to guarding the hallways. #ONLYinDADE |
-| [Thu, Oct 15, 10:56 AM](https://www.instagram.com/reel/DehN8OHupEB/) | Reel | 7683 | 1103 | Is he speaking facts? Sound off in the comments 🤔 #ONLYinDADE |
-| [Wed, Oct 14, 10:46 PM](https://www.instagram.com/reel/Def6efStRv0/) | Reel | 3547 | 73 | Not your typical ending to a police chase😳/ #ONLYinDADE |
-| [Wed, Oct 14, 7:24 PM](https://www.instagram.com/reel/DefjiwSJ-op/) | Reel | 18588 | 1743 | Surveillance footage captures the moment a woman was robbed at gunpoint inside a smoke shop in Cutler Bay.😳/  |
-| [Wed, Oct 14, 4:09 PM](https://www.instagram.com/reel/DefM6HSJCUd/) | Reel | 6984 | 482 | Shoutout to this family for helping out a postal worker who was on the verge of fainting🙌/ #ONLYinDADE rayrev |
-| [Wed, Oct 14, 1:53 PM](https://www.instagram.com/p/Dee9wv0HOC5/) | Carousel | 2673 | 189 | Guac is extra, and apparently so is the whole bin.🥑/#ONLYinDADE |
-| [Wed, Oct 14, 11:40 AM](https://www.instagram.com/reel/DeeuaJnOWZW/) | Reel | 9571 | 2028 | A dog was found underwater tied to cinder blocks near the Dinner Key boat ramp in Coconut Grove yesterday, and |
-| [Wed, Oct 14, 9:02 AM](https://www.instagram.com/reel/DeecQj6u3iP/) | Reel | 2946 | 262 | Any experts know what’s going on here? 🤔 #ONLYinDADE |
-| [Tue, Oct 13, 9:34 PM](https://www.instagram.com/p/DedNyIjnHWG/) | Carousel | 9055 | 502 | And you thought the Rickenbacker was a rough commute #ONLYinDADE |
-| [Tue, Oct 13, 6:40 PM](https://www.instagram.com/reel/Dec5kQLJVo7/) | Reel | 10559 | 722 | Wild crash caught on camera earlier today down in Florida city involving a police cruiser 😬 #ONLYinDADE |
-| [Tue, Oct 13, 3:49 PM](https://www.instagram.com/p/DecmQCsiRS9/) | Carousel | 7365 | 1087 | Shooting your shot hit different in Dadeland #ONLYinDADE |
-| [Tue, Oct 13, 2:16 PM](https://www.instagram.com/reel/DecbfsCJ7dp/) | Reel | 2315 | 157 | Dude takes off running after getting stopped 😬 #ONLYinDADE |
-| [Tue, Oct 13, 11:36 AM](https://www.instagram.com/p/DecJVyQHAhW/) | Carousel | 4118 | 582 | The sheriff said “tours by appointment only” to the MAYOR #ONLYinDADE |
-| [Tue, Oct 13, 9:15 AM](https://www.instagram.com/p/Deb5MkOHFie/) | Carousel | 6855 | 202 | Space X launch had everyone bugging this morning 😂🚀 #ONLYinDADE |
-| [Mon, Oct 12, 10:29 PM](https://www.instagram.com/p/DeavROIHEEw/) | Carousel | 3864 | 343 | Facebook Marketplace “is this still available?” just hit different😳/ #ONLYinDADE |
-| [Mon, Oct 12, 8:11 PM](https://www.instagram.com/reel/DeafXe2JJb8/) | Reel | 6491 | 950 | Bro really try to chase him down on foot…🏃😭🤦‍♂️/ #ONLYinDADE tahir305 |
-| [Mon, Oct 12, 5:32 PM](https://www.instagram.com/p/DeaNKTAJC9Q/) | Photo | 12515 | 452 | Mitte was best known for portraying Walter White Jr. in the hit AMC series, appearing in 56 episodes across al |
-| [Mon, Oct 12, 3:29 PM](https://www.instagram.com/reel/DeZ-1Bbp-Ix/) | Reel | 2856 | 103 | Pandora just pulled up to Miami 💙 #ONLYinDADE |
-| [Mon, Oct 12, 1:14 PM](https://www.instagram.com/reel/DeZvfGlpcPC/) | Reel | 2682 | 111 | This might take the cake for the most Miami thing we’ve ever seen 😂 #ONLYinDADE |
-| [Mon, Oct 12, 10:27 AM](https://www.instagram.com/p/DeZclsLnGS0/) | Carousel | 4165 | 97 | Scary start to the week at Miami Coral Park, but police say the bomb threat was fake #ONLYinDADE |
-| [Sun, Oct 11, 10:51 PM](https://www.instagram.com/reel/DeYLUIsOC0-/) | Reel | 5598 | 902 | Bro lost his cool💀/ #ONLYinDADE |
+| [Fri, Oct 16, 10:48 PM](https://www.instagram.com/reel/DelEDcvuzFh/) | Reel | 2236 | 73 | How does one end up in this situation👀 Bro’s got that strength though💪/ #ONLYinDADE manolito_artattoo |
+| [Fri, Oct 16, 7:19 PM](https://www.instagram.com/reel/DekrwuOpyEs/) | Reel | 3796 | 262 | Crazy chase last night in Brickell as a stolen vehicle was leaving a parking garage🚔😳/ #ONLYinDADE activo_rd |
+| [Fri, Oct 16, 4:27 PM](https://www.instagram.com/p/DekY8z4Aby3/) | Carousel | 11587 | 1116 | Six families. One clinic. Still no answers./ #ONLYinDADE |
+| [Fri, Oct 16, 1:24 PM](https://www.instagram.com/reel/DekDqpCp2DZ/) | Reel | 17649 | 155 | Vice city in full effect🚔😮‍💨🔥/ #ONLYinDADE |
+| [Fri, Oct 16, 11:02 AM](https://www.instagram.com/p/Dejzyy4HOGr/) | Carousel | 1477 | 23 | Miami dropped $26.6 million on 5 cars this year, and the priciest one’s from 1959 😭 #ONLYinDADE |
+| [Fri, Oct 16, 9:50 AM](https://www.instagram.com/p/Dejrh9ZnGTX/) | Carousel | 3615 | 69 | Best national park in America, as long as you own a boat #ONLYinDADE 🚤 |
+| [Thu, Oct 15, 11:50 PM](https://www.instagram.com/p/Deim7isnApS/) | Carousel | 7508 | 333 | Tesla finally showed the new Roadster, and it only took 9 years 🚀 #ONLYinDADE |
+| [Thu, Oct 15, 10:16 PM](https://www.instagram.com/p/DeicIDrHGw5/) | Carousel | 6498 | 1006 | Turns out the most expensive kid in Dade is the one who left 💸 #ONLYinDADE |
+| [Thu, Oct 15, 6:27 PM](https://www.instagram.com/p/DeiB7deCd6C/) | Carousel | 36496 | 312 | GTA 6 took over the city today 👀 #ONLYinDADE |
+| [Thu, Oct 15, 3:48 PM](https://www.instagram.com/reel/Dehvid5JAtH/) | Reel | 4218 | 1096 | Hit and run turns into Road rage incident 😬 #ONLYinDADE |
+| [Thu, Oct 15, 12:44 PM](https://www.instagram.com/p/DehasntHJ1J/) | Carousel | 7979 | 217 | Amar’e went from guarding the paint to guarding the hallways. #ONLYinDADE |
+| [Thu, Oct 15, 10:56 AM](https://www.instagram.com/reel/DehN8OHupEB/) | Reel | 7810 | 1118 | Is he speaking facts? Sound off in the comments 🤔 #ONLYinDADE |
+| [Wed, Oct 14, 10:46 PM](https://www.instagram.com/reel/Def6efStRv0/) | Reel | 3574 | 73 | Not your typical ending to a police chase😳/ #ONLYinDADE |
+| [Wed, Oct 14, 7:24 PM](https://www.instagram.com/reel/DefjiwSJ-op/) | Reel | 18678 | 1747 | Surveillance footage captures the moment a woman was robbed at gunpoint inside a smoke shop in Cutler Bay.😳/  |
+| [Wed, Oct 14, 4:09 PM](https://www.instagram.com/reel/DefM6HSJCUd/) | Reel | 7031 | 483 | Shoutout to this family for helping out a postal worker who was on the verge of fainting🙌/ #ONLYinDADE rayrev |
+| [Wed, Oct 14, 1:53 PM](https://www.instagram.com/p/Dee9wv0HOC5/) | Carousel | 2688 | 189 | Guac is extra, and apparently so is the whole bin.🥑/#ONLYinDADE |
+| [Wed, Oct 14, 11:40 AM](https://www.instagram.com/reel/DeeuaJnOWZW/) | Reel | 9597 | 2032 | A dog was found underwater tied to cinder blocks near the Dinner Key boat ramp in Coconut Grove yesterday, and |
+| [Wed, Oct 14, 9:02 AM](https://www.instagram.com/reel/DeecQj6u3iP/) | Reel | 2969 | 267 | Any experts know what’s going on here? 🤔 #ONLYinDADE |
+| [Tue, Oct 13, 9:34 PM](https://www.instagram.com/p/DedNyIjnHWG/) | Carousel | 9094 | 502 | And you thought the Rickenbacker was a rough commute #ONLYinDADE |
+| [Tue, Oct 13, 6:40 PM](https://www.instagram.com/reel/Dec5kQLJVo7/) | Reel | 10597 | 724 | Wild crash caught on camera earlier today down in Florida city involving a police cruiser 😬 #ONLYinDADE |
+| [Tue, Oct 13, 3:49 PM](https://www.instagram.com/p/DecmQCsiRS9/) | Carousel | 7395 | 1088 | Shooting your shot hit different in Dadeland #ONLYinDADE |
+| [Tue, Oct 13, 2:16 PM](https://www.instagram.com/reel/DecbfsCJ7dp/) | Reel | 2322 | 157 | Dude takes off running after getting stopped 😬 #ONLYinDADE |
+| [Tue, Oct 13, 11:36 AM](https://www.instagram.com/p/DecJVyQHAhW/) | Carousel | 4136 | 586 | The sheriff said “tours by appointment only” to the MAYOR #ONLYinDADE |
+| [Tue, Oct 13, 9:15 AM](https://www.instagram.com/p/Deb5MkOHFie/) | Carousel | 6874 | 202 | Space X launch had everyone bugging this morning 😂🚀 #ONLYinDADE |
+| [Mon, Oct 12, 10:29 PM](https://www.instagram.com/p/DeavROIHEEw/) | Carousel | 3874 | 343 | Facebook Marketplace “is this still available?” just hit different😳/ #ONLYinDADE |
+| [Mon, Oct 12, 8:11 PM](https://www.instagram.com/reel/DeafXe2JJb8/) | Reel | 6524 | 952 | Bro really try to chase him down on foot…🏃😭🤦‍♂️/ #ONLYinDADE tahir305 |
+| [Mon, Oct 12, 5:32 PM](https://www.instagram.com/p/DeaNKTAJC9Q/) | Photo | 12518 | 452 | Mitte was best known for portraying Walter White Jr. in the hit AMC series, appearing in 56 episodes across al |
+| [Mon, Oct 12, 3:29 PM](https://www.instagram.com/reel/DeZ-1Bbp-Ix/) | Reel | 2871 | 103 | Pandora just pulled up to Miami 💙 #ONLYinDADE |
+| [Mon, Oct 12, 1:14 PM](https://www.instagram.com/reel/DeZvfGlpcPC/) | Reel | 2693 | 111 | This might take the cake for the most Miami thing we’ve ever seen 😂 #ONLYinDADE |
+| [Mon, Oct 12, 10:27 AM](https://www.instagram.com/p/DeZclsLnGS0/) | Carousel | 4170 | 97 | Scary start to the week at Miami Coral Park, but police say the bomb threat was fake #ONLYinDADE |
