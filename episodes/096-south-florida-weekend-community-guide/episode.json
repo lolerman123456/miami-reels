@@ -1,0 +1,222 @@
+{
+  "title": "South Florida weekend community guide",
+  "sources": [
+    "WSVN 7News",
+    "CBS News",
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Early voting, a Sunrise charity walk, and a few October plans to keep on your list.\n\nSources: WSVN 7News, CBS News, Miami New Times\n\n#Miami #SouthFlorida #Broward #MiamiEvents",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Early voting starts Monday across South Florida, and Sunrise just raised three hundred sixty thousand dollars for breast cancer support.",
+      "overlay": [
+        "SOUTH FLORIDA",
+        "THIS WEEK"
+      ],
+      "emojis": [
+        "🗳️",
+        "🎀",
+        "🚶",
+        "📍"
+      ],
+      "location": {
+        "name": "Amerant Bank Arena",
+        "lat": 26.15847,
+        "lon": -80.32556,
+        "h": 35
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Early voting starts Monday in South Florida for the 2026 midterm elections. The ballot has high-profile races and major choices on it.",
+      "caption": "Early voting starts Monday in South Florida for the 2026 midterm elections. The ballot has high-profile races and major choices on it.",
+      "overlay": "EARLY VOTING",
+      "badge": "STARTS MON",
+      "sub": "2026 midterms",
+      "emoji": "🗳️",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "midterms"
+        }
+      ],
+      "source": "CBS News",
+      "location": {
+        "name": "Miami-Dade Elections Department",
+        "lat": 25.7954,
+        "lon": -80.3133,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "In Sunrise, the American Cancer Society’s Making Strides Against Breast Cancer walk raised three hundred sixty thousand dollars. The walk brought people together at Amerant Bank Arena for research and support.",
+      "caption": "In Sunrise, the American Cancer Society’s Making Strides Against Breast Cancer walk raised $360,000. The walk brought people together at Amerant Bank Arena for research and support.",
+      "overlay": "SUNRISE",
+      "badge": "$360K RAISED",
+      "sub": "Breast cancer support",
+      "emoji": "🎀",
+      "stats": [
+        {
+          "value": "$360K",
+          "label": "raised"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Amerant Bank Arena",
+        "lat": 26.15847,
+        "lon": -80.32556,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -34,
+        "heading": 70,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Bar1939 at the National Hotel has three Halloween cocktails through October. One is Morticia’s Bleeding Heart Margarita, topped with lychee eyeballs. If you’re at Bar1939, open NEAR and see who’s sipping there.",
+      "caption": "Bar1939 at the National Hotel has three Halloween cocktails through October. One is Morticia’s Bleeding Heart Margarita, topped with lychee eyeballs. If you’re at Bar1939, open NEAR and see who’s sipping there.",
+      "overlay": "BAR1939",
+      "badge": "3 COCKTAILS",
+      "sub": "At National Hotel",
+      "emoji": "🍸",
+      "stats": [
+        {
+          "value": "3",
+          "label": "cocktails"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "National Hotel Miami Beach",
+        "lat": 25.79287,
+        "lon": -80.12922,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 215,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Room 901 in Fort Lauderdale runs a Carrie-inspired 1970s prom from October 8 through Halloween. The speakeasy inside Hyatt Centric Las Olas also serves Prom Punch and leans into the blood-covered prom dress behind the hidden door.",
+      "caption": "Room 901 in Fort Lauderdale runs a Carrie-inspired 1970s prom from Oct. 8 through Halloween. The speakeasy inside Hyatt Centric Las Olas also serves Prom Punch.",
+      "overlay": "FORT LAUDERDALE",
+      "badge": "THROUGH HALLOWEEN",
+      "sub": "Room 901",
+      "emoji": "🎭",
+      "stats": [
+        {
+          "value": "OCT. 8",
+          "label": "starts"
+        },
+        {
+          "value": "HALLOWEEN",
+          "label": "ends"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Hyatt Centric Las Olas",
+        "lat": 26.1199,
+        "lon": -80.1424,
+        "h": 8
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 760,
+        "pitch": -31,
+        "heading": 305,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Naia opens October 22 at 904 East Las Olas Boulevard in Fort Lauderdale. The restaurant has more than two hundred seats, daily dinner, and weekday happy hour from four to seven p.m.",
+      "caption": "Naia opens Oct. 22 at 904 E. Las Olas Blvd. in Fort Lauderdale. The restaurant has more than 200 seats, daily dinner, and weekday happy hour from 4 to 7 p.m.",
+      "overlay": "NAIA",
+      "badge": "OPENS OCT 22",
+      "sub": "904 E Las Olas",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "OCT. 22",
+          "label": "opening"
+        },
+        {
+          "value": "MORE THAN 200",
+          "label": "seats"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "904 East Las Olas Boulevard",
+        "lat": 26.11938,
+        "lon": -80.13431,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 750,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "If you are voting, walking, or making Halloween plans, this week has options. And after a day of events and errands, NEAR can show you the people you passed on the sidewalk, so the face from earlier is no longer just a blur.",
+      "overlay": "YOUR WEEK",
+      "sub": "Tell us below",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 155
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "096-south-florida-weekend-community-guide"
+}
