@@ -1,0 +1,193 @@
+{
+  "title": "South Florida weekend plans, Oct. 16 to 18",
+  "sources": [
+    "Sun Sentinel",
+    "WPEC",
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Las Olas first, then the Halloween events.\n\nSources: Sun Sentinel, WPEC, Miami New Times, Secret Miami\n\n#MiamiWeekend #FortLauderdale #SouthFlorida #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need weekend plans for October sixteenth to eighteenth? Start on Las Olas, then save the Halloween stuff for later.",
+      "overlay": [
+        "WEEKEND",
+        "PLANS"
+      ],
+      "emojis": [
+        "🎨",
+        "🍂",
+        "🍸",
+        "🕵️"
+      ],
+      "location": {
+        "name": "Las Olas Boulevard",
+        "lat": 26.1194,
+        "lon": -80.1326,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 110
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Las Olas shows up in October event guides in Fort Lauderdale. The Las Olas Art Fair and Las Olas Autumn Festival both land on the calendar this month, centered around East Las Olas Boulevard.",
+      "caption": "Las Olas shows up in October event guides in Fort Lauderdale. The Las Olas Art Fair and Las Olas Autumn Festival both land on the calendar this month, centered around E. Las Olas Blvd.",
+      "overlay": "LAS OLAS",
+      "badge": "OCT. EVENTS",
+      "sub": "Art fair and fall festival",
+      "emoji": "🎨",
+      "stats": [
+        {
+          "value": "10",
+          "label": "October events"
+        }
+      ],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "East Las Olas Boulevard",
+        "lat": 26.1194,
+        "lon": -80.1326,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a Halloween drink stop, Room 901 runs its Carrie takeover through Halloween. It is inside Hyatt Centric Las Olas at 100 E. Las Olas Blvd., with a 1970s prom theme and Prom Punch.",
+      "caption": "For a Halloween drink stop, Room 901 runs its Carrie takeover through Halloween. It is inside Hyatt Centric Las Olas at 100 E. Las Olas Blvd., with a 1970s prom theme and Prom Punch.",
+      "overlay": "ROOM 901",
+      "badge": "THRU OCT. 31",
+      "sub": "Carrie-themed speakeasy",
+      "emoji": "🍸",
+      "stats": [
+        {
+          "value": "901",
+          "label": "room name"
+        },
+        {
+          "value": "1970s",
+          "label": "prom theme"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Room 901 at Hyatt Centric Las Olas",
+        "lat": 26.1195,
+        "lon": -80.1422,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -34,
+        "heading": 210,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Saturday night goes to the Kimpton Surfcomber on Miami Beach. The hotel hosts a Halloween murder mystery dinner at 8 p.m. Guests get assigned character roles, work clues, and eat a three-course meal with craft cocktails. If you’re there, open NEAR later and see who else solved the mystery.",
+      "caption": "Saturday night goes to the Kimpton Surfcomber on Miami Beach. The hotel hosts a Halloween murder mystery dinner at 8 p.m. Guests get assigned character roles, work clues, and eat a three-course meal with craft cocktails. If you’re there, open NEAR later and see who else solved the mystery.",
+      "overlay": "SURFCOMBER",
+      "badge": "8 PM",
+      "sub": "Murder mystery dinner",
+      "emoji": "🕵️",
+      "stats": [
+        {
+          "value": "$193.75",
+          "label": "ticket"
+        },
+        {
+          "value": "3",
+          "label": "courses"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Kimpton Surfcomber Hotel",
+        "lat": 25.7931,
+        "lon": -80.1294,
+        "h": 40
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 95,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For families planning ahead, NightGarden opens November 12 at Fairchild Tropical Botanic Garden. This year adds an ice rink under the palms, plus a 60-minute walk through illuminated paths and larger-than-life sculptures.",
+      "caption": "For families planning ahead, NightGarden opens Nov. 12 at Fairchild Tropical Botanic Garden. This year adds an ice rink under the palms, plus a 60-minute walk through illuminated paths and larger-than-life sculptures.",
+      "overlay": "NIGHTGARDEN",
+      "badge": "OPENS NOV. 12",
+      "sub": "Ice rink under palms",
+      "emoji": "⛸️",
+      "stats": [
+        {
+          "value": "60",
+          "label": "minutes"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Fairchild Tropical Botanic Garden",
+        "lat": 25.6769,
+        "lon": -80.2748,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -30,
+        "heading": 260,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you actually do this weekend? You know the person you kept passing at the market or concert all weekend without ever meeting—NEAR is for figuring out who that was.",
+      "overlay": "PICK ONE 👇",
+      "sub": "Tell us what to cover next",
+      "location": {
+        "name": "Las Olas Boulevard",
+        "lat": 26.1194,
+        "lon": -80.1326,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 130
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "095-south-florida-weekend-plans-oct-16-to-18"
+}
