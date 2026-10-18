@@ -1,0 +1,98 @@
+{
+  "sector": "SPORTS",
+  "cover": {
+    "top": "ASHTON DANIELS",
+    "main": "LEFT AFTER",
+    "highlight": "THE TARGETING CALL",
+    "bottom": "AGAINST MIAMI",
+    "blur": false,
+    "photo": {
+      "query": "Ashton Daniels Florida State quarterback Miami Hurricanes game",
+      "prompt": "Florida State quarterback Ashton Daniels on the turf after a hard hit in the Miami rivalry game, trainers nearby, stadium lights, tense sideline reaction",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "🏈",
+      "🟧"
+    ],
+    "logos": [
+      "seminoles.com",
+      "miamihurricanes.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Yahoo! Sports",
+    "logoFiles": [
+      "logo-c1.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "SPORTS",
+      "headline": "Ashton Daniels left after the targeting call",
+      "highlight": "left after",
+      "body": "FSU quarterback Ashton Daniels left Saturday’s game against Miami after a targeting call.",
+      "place": "Florida",
+      "source": "Tallahassee Democrat",
+      "photo": {
+        "query": "Ashton Daniels Florida State Seminoles quarterback Miami Hurricanes football",
+        "prompt": "Florida State quarterback Ashton Daniels on the sideline after leaving the game, trainers beside him, Miami defenders in the background"
+      },
+      "color": "#782F40",
+      "emoji": "🏈",
+      "chip": "SAT 10/17",
+      "logo": "seminoles.com",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Yahoo! Sports",
+      "logoFile": null
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "Miami safety Zechariah Poyser was ejected",
+      "highlight": "ejected",
+      "body": "Miami safety Zechariah Poyser was ejected for targeting against Florida State.",
+      "place": "Florida",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Zechariah Poyser Miami Hurricanes football safety",
+        "prompt": "Miami Hurricanes safety walking toward the sideline after an ejection, referee and teammates in frame, stadium crowd under lights"
+      },
+      "color": "#F47321",
+      "emoji": "🟧",
+      "chip": "EJECTED",
+      "logo": "miamihurricanes.com",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Yahoo! Sports",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "Miami’s secondary had another injury scare",
+      "highlight": "another injury scare",
+      "body": "Sun Sentinel reported Hurricanes safety Bryce Fitzgerald returned to the FSU game after an injury.",
+      "place": "Florida",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "Bryce Fitzgerald Miami Hurricanes football safety",
+        "prompt": "Miami Hurricanes defensive back on the sideline during the rivalry game, trainers checking on him, teammates standing nearby"
+      },
+      "color": "#F47321",
+      "emoji": "🟦",
+      "chip": "RETURNED",
+      "logo": "miamihurricanes.com",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Yahoo! Sports",
+      "logoFile": "logo-3.png"
+    }
+  ],
+  "caption": "Ashton Daniels left after the targeting call against Miami. The ejection and injuries kept the rivalry game in the spotlight.",
+  "hashtags": [
+    "#MiamiHurricanes",
+    "#FSUFootball"
+  ],
+  "collaborators": [],
+  "igCaption": "Ashton Daniels left after the targeting call against Miami. The ejection and injuries kept the rivalry game in the spotlight.\n\n📰 Sources: Tallahassee Democrat, Miami Herald, Sun Sentinel, Yahoo Sports\n\n#MiamiHurricanes #FSUFootball #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-17",
+  "id": "2026-10-17-news-21"
+}
