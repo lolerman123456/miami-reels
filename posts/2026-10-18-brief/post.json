@@ -1,0 +1,82 @@
+{
+  "sector": "SPORTS",
+  "cover": {
+    "top": "MIAMI WON",
+    "main": "43-35",
+    "highlight": "IN DOUBLE OVERTIME",
+    "bottom": "IS NO. 1 NEXT?",
+    "blur": false,
+    "photo": {
+      "query": "Hard Rock Stadium Miami Hurricanes Florida State double overtime night game crowd",
+      "prompt": "Dramatic night shot of Hard Rock Stadium with Miami Hurricanes fans on their feet and players celebrating after a double-overtime win"
+    },
+    "emojis": [
+      "🏈",
+      "🟧",
+      "🟩"
+    ],
+    "logos": [
+      "miamihurricanes.com",
+      "seminoles.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: CBS News",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "SPORTS",
+      "headline": "43-35 in double overtime",
+      "highlight": "43-35",
+      "body": "No. 3 Miami beat Florida State 43-35 in double overtime.",
+      "place": "Miami Gardens",
+      "source": "ABC News - Breaking News, Latest News and Videos",
+      "photo": {
+        "query": "Hard Rock Stadium double overtime football celebration Miami Florida State",
+        "prompt": "Players from Miami celebrating on the field after a double-overtime finish, with Florida State players nearby and the scoreboard visible"
+      },
+      "color": "#F47321",
+      "emoji": "🏈",
+      "chip": "2OT",
+      "logo": "miamihurricanes.com",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Yahoo Sports",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "Miami survived two Hail Marys",
+      "highlight": "two Hail Marys",
+      "body": "ESPN said Miami survived two Hail Marys before closing out the game in 2OT.",
+      "place": "Miami Gardens",
+      "source": "ESPN",
+      "photo": {
+        "query": "college football Hail Mary end zone night game crowd",
+        "prompt": "A football in the air near the end zone during a night game, with defenders and receivers reaching for it"
+      },
+      "color": "#F47321",
+      "emoji": "🙌",
+      "chip": "2 HAIL MARYS",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Local 10"
+    }
+  ],
+  "caption": "Miami won 43-35 in double OT and could reach No. 1 in the AP poll for the first time in 24 years",
+  "hashtags": [
+    "#MiamiHurricanes",
+    "#CollegeFootball"
+  ],
+  "collaborators": [],
+  "igCaption": "Miami won 43-35 in double OT and could reach No. 1 in the AP poll for the first time in 24 years\n\n📰 Sources: ABC News - Breaking News, Latest News and Videos, ESPN, WSVN, The New York Times, Local 10\n\n🎥 Video: WPBF 25 News\n\n#MiamiHurricanes #CollegeFootball #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-18",
+  "id": "2026-10-18-brief",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "WPBF 25 News",
+    "url": "https://www.youtube.com/watch?v=VmpiLJEaDuA"
+  }
+}
