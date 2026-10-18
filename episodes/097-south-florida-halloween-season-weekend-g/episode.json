@@ -1,0 +1,226 @@
+{
+  "title": "South Florida Halloween Season Weekend Guide",
+  "sources": [
+    "Eventbrite",
+    "Greater Miami & Miami Beach",
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Halloween season has free, daytime, and late-night options across South Florida.\nOct. 31, Wynwood, free\n\nSources: Eventbrite, Greater Miami & Miami Beach, Miami New Times\n\n#MiamiEvents #SouthFlorida #HalloweenMiami #WeekendGuide",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Here are a few Halloween-season plans across South Florida.",
+      "overlay": [
+        "HALLOWEEN",
+        "WEEKEND GUIDE"
+      ],
+      "emojis": [
+        "🎃",
+        "🧛",
+        "🍺",
+        "🥒"
+      ],
+      "location": {
+        "name": "Wynwood, Miami",
+        "lat": 25.8011,
+        "lon": -80.1994,
+        "h": 35
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "HalloWYN takes over Wynwood on Saturday, October 31. It runs from 7 PM to 3 AM, and the listing calls it Wynwood’s official free Halloween block party. That gives you eight hours to wear a costume and commit to it.",
+      "caption": "HalloWYN takes over Wynwood on Saturday, Oct. 31. It runs from 7 PM to 3 AM, and the listing calls it Wynwood’s official free Halloween block party. That gives you eight hours to wear a costume and commit to it.",
+      "overlay": "WYNWOOD",
+      "badge": "FREE",
+      "sub": "Oct. 31, 7 PM to 3 AM",
+      "emoji": "🎭",
+      "stats": [
+        {
+          "value": "7 PM",
+          "label": "start time"
+        },
+        {
+          "value": "3 AM",
+          "label": "end time"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Wynwood, Miami",
+        "lat": 25.8011,
+        "lon": -80.1994,
+        "h": 35
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "UNDead in the Water is a Halloween attraction with tickets listed across multiple dates. It is a Port Miami option for people who want a spooky night on the water.",
+      "caption": "UNDead in the Water is a Halloween attraction with tickets listed across multiple dates. It is a Port Miami option for people who want a spooky night on the water.",
+      "overlay": "UNDEAD",
+      "badge": "MULTI-DATE",
+      "sub": "Halloween attraction",
+      "emoji": "🧟",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "event year"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "PortMiami",
+        "lat": 25.7781,
+        "lon": -80.1794,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 90,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Oktoberfest Miami is listed for multiple dates in 2026. The listing calls it the biggest German beer festival, so yes, beer is doing the heavy lifting here. If you end up there, check NEAR to see who’s around too.",
+      "caption": "Oktoberfest Miami is listed for multiple dates in 2026. The listing calls it the biggest German beer festival. If you end up there, check NEAR to see who’s around too.",
+      "overlay": "OKTOBERFEST",
+      "badge": "2026",
+      "sub": "Multiple dates",
+      "emoji": "🍺",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "festival year"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Miami, Florida",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 40
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 235,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The South Florida Pickle Festival runs Saturday, October 17, through Sunday, October 18, from 12 PM to 6 PM in Boca Raton. That is a daytime pick if you want to be home before the late-night crowd starts measuring costumes.",
+      "caption": "The South Florida Pickle Festival runs Saturday, Oct. 17, through Sunday, Oct. 18, from 12 PM to 6 PM in Boca Raton.",
+      "overlay": "BOCA RATON",
+      "badge": "12 PM TO 6 PM",
+      "sub": "Oct. 17 and 18",
+      "emoji": "🥒",
+      "stats": [
+        {
+          "value": "12 PM",
+          "label": "start time"
+        },
+        {
+          "value": "6 PM",
+          "label": "end time"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Boca Raton, Florida",
+        "lat": 26.37777778,
+        "lon": -80.11388889,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 20,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Venture X Palmetto Bay has a Halloween listing, and Miami Beach’s NightGarden opens November 12 with a new ice rink under the palms. South Florida has a lot going on for one weekend.",
+      "caption": "Venture X Palmetto Bay has a Halloween listing. NightGarden opens November 12 with a new ice rink under the palms.",
+      "overlay": "PALMETTO BAY",
+      "badge": "HALLOWEEN",
+      "sub": "South Dade pick",
+      "emoji": "👻",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "listing year"
+        },
+        {
+          "value": "November 12, 2026",
+          "label": "opening date"
+        }
+      ],
+      "source": "Greater Miami & Miami Beach",
+      "location": {
+        "name": "Palmetto Bay, Florida",
+        "lat": 25.6218,
+        "lon": -80.3248,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -30,
+        "heading": 310,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Pick one and keep the rest in your back pocket for next weekend. For the people you keep spotting at the same Halloween pop-ups but never really meet, NEAR shows you who they were once the night is over.",
+      "overlay": "PICK ONE 🎃",
+      "sub": "Drop the plan",
+      "location": {
+        "name": "Miami, Florida",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 60
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -35,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "097-south-florida-halloween-season-weekend-g"
+}
