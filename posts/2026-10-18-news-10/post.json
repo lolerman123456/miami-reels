@@ -1,0 +1,84 @@
+{
+  "sector": "SPORTS",
+  "cover": {
+    "top": "FIRST NO. 1 RANKING",
+    "main": "IN 24 YEARS",
+    "highlight": "MIAMI ON THE VERGE",
+    "bottom": "AFTER CHAOS SATURDAY",
+    "blur": false,
+    "photo": {
+      "query": "Miami Hurricanes players celebrating at Hard Rock Stadium night crowd",
+      "prompt": "dramatic Miami Hurricanes sideline celebration at Hard Rock Stadium at night, players in orange and green under stadium lights, fans reacting in the background"
+    },
+    "emojis": [
+      "🏈",
+      "😳",
+      "🟧",
+      "🟩"
+    ],
+    "logos": [
+      "miamihurricanes.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Yahoo! Sports",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "SPORTS",
+      "headline": "Miami is on the verge of its first No. 1 in 24 years",
+      "highlight": "first No. 1",
+      "body": "The New York Times said Miami won and is on the verge of its first No. 1 AP ranking since 2001.",
+      "place": "Miami",
+      "source": "The New York Times",
+      "photo": {
+        "query": "Miami Hurricanes football team celebrating after a win at Hard Rock Stadium",
+        "prompt": "Miami Hurricanes players celebrating after a win at Hard Rock Stadium, close-up of helmets, coaches, and fans under bright lights"
+      },
+      "color": "#F47321",
+      "emoji": "🏈",
+      "chip": "24 YEARS",
+      "logo": "miamihurricanes.com",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Yahoo! Sports",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "Miami beat Florida State 43-35 in double overtime",
+      "highlight": "43-35",
+      "body": "ESPN and the Tampa Bay Times reported a 43-35 Miami win over Florida State in double overtime.",
+      "place": "Miami Gardens",
+      "source": "ESPN",
+      "photo": {
+        "query": "Miami Florida State double overtime football play at Hard Rock Stadium",
+        "prompt": "tense double-overtime football action at Hard Rock Stadium, players colliding near the goal line with the scoreboard visible"
+      },
+      "color": "#F47321",
+      "emoji": "⏱️",
+      "chip": "2OT",
+      "logo": "miamihurricanes.com",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Yahoo! Sports",
+      "logoFile": "logo-2.png"
+    }
+  ],
+  "caption": "Five of the top seven teams lost, and Miami is on the verge of its first No. 1 AP ranking since 2001.",
+  "hashtags": [
+    "#MiamiHurricanes",
+    "#CollegeFootball"
+  ],
+  "collaborators": [],
+  "igCaption": "Five of the top seven teams lost, and Miami is on the verge of its first No. 1 AP ranking since 2001.\n\n📰 Sources: The New York Times, ESPN, WAKA 8, Yahoo Sports\n\n🎥 Video: WPBF 25 News\n\n#MiamiHurricanes #CollegeFootball #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-18",
+  "id": "2026-10-18-news-10",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "WPBF 25 News",
+    "url": "https://www.youtube.com/watch?v=VmpiLJEaDuA"
+  }
+}
