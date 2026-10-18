@@ -1,0 +1,74 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "AN INMATE TIP",
+    "main": "CRACKED OPEN THE",
+    "highlight": "2007 MURDER",
+    "bottom": "CASE IN LAUDERDALE LAKES",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons search for Broward Sheriff's Office patrol car crime scene tape night",
+      "prompt": "dramatic Broward Sheriff's Office patrol car lights behind crime scene tape on a dark Lauderdale Lakes street",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚔",
+      "📞",
+      "🕵️"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "An inmate tip opened a 19-year-old case",
+      "highlight": "inmate tip",
+      "body": "CBS News and WPLG Local 10 reported that a prison inmate’s tip led detectives to charge two women in the 2007 Lauderdale Lakes case.",
+      "place": "Lauderdale Lakes",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Wikimedia Commons search for jail phone bars dark hallway",
+        "prompt": "close-up of a jail phone beside metal bars, lit by harsh overhead light"
+      },
+      "emoji": "📞",
+      "chip": "19 YEARS",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case involved a robbery and shooting",
+      "highlight": "robbery and shooting",
+      "body": "The Sun Sentinel said the charges came from a cold-case robbery and shooting in Lauderdale Lakes.",
+      "place": "Lauderdale Lakes",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "Wikimedia Commons search for crime scene tape police lights street night",
+        "prompt": "crime scene tape across a quiet Broward street at night with red and blue patrol lights in the background"
+      },
+      "emoji": "🚨",
+      "chip": "2007",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "A prison inmate’s tip revived a 2007 Lauderdale Lakes murder case.",
+  "hashtags": [
+    "#LauderdaleLakes",
+    "#BrowardCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "A prison inmate’s tip revived a 2007 Lauderdale Lakes murder case.\n\n📰 Sources: WPLG Local 10, Sun Sentinel, CBS News, Boca Post, Miami Herald\n\n🎥 Video: Broward Sheriff's Office\n\n#LauderdaleLakes #BrowardCounty #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-18",
+  "id": "2026-10-18-news-07",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "Broward Sheriff's Office",
+    "url": "https://www.youtube.com/watch?v=M9d03FG-AKg"
+  }
+}
