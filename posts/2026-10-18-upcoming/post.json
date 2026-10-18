@@ -1,0 +1,154 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "EVERY BIG",
+    "highlight": "SOUTH FLORIDA",
+    "bottom": "EVENT THIS WEEK",
+    "blur": false,
+    "photo": {
+      "query": "Miami nightlife crowd concert lights Wynwood Florida",
+      "prompt": "A dramatic South Florida night-out scene with bright concert lights, palm trees, and a packed outdoor venue"
+    },
+    "emojis": [
+      "👀",
+      "🎤",
+      "🍸"
+    ],
+    "logos": [
+      "kaseyacenter.com",
+      "naialasolas.com",
+      "nationalhotel.com",
+      "roomnine01.com",
+      "playatkings.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c1.png",
+      "logo-c2.png",
+      "logo-c4.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Tini at Kaseya Center, Oct. 18",
+      "highlight": "Tini at",
+      "body": "Tini plays Kaseya Center in Miami at 8 p.m. Tickets run from $61 to $408.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Tini singer concert stage",
+        "prompt": "Argentine pop star performing on a large arena stage with LED screens and bright concert lighting"
+      },
+      "emoji": "🎤",
+      "chip": "OCT 18",
+      "logo": "kaseyacenter.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Naia opens on Las Olas, Oct. 22",
+      "highlight": "Naia opens",
+      "body": "Naia opens at 904 E. Las Olas Blvd. in Fort Lauderdale. Daily service starts at 4 p.m.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Las Olas Boulevard Fort Lauderdale restaurant night",
+        "prompt": "A polished new Las Olas restaurant corner at night with a busy bar, warm finishes and an open kitchen"
+      },
+      "emoji": "🍣",
+      "chip": "OCT 22",
+      "logo": "naialasolas.com",
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Rob Olivera / CC BY 2.0",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Halloween Murder Mystery Dinner, Oct. 24",
+      "highlight": "Murder mystery",
+      "body": "Kimpton Surfcomber Hotel hosts the next Halloween Murder Mystery Dinner at 8 p.m. Tickets are $150 plus tax and fees.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Kimpton Surfcomber Hotel Miami Beach pool night",
+        "prompt": "A Miami Beach hotel dinner scene at night with mystery clues, cocktails and a dramatic Halloween table setup"
+      },
+      "emoji": "🕵️",
+      "chip": "$150++",
+      "logo": "soleibeachclub.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Bar1939 spooky cocktails, through October",
+      "highlight": "Bar1939",
+      "body": "Bar1939 inside the National Hotel in Miami Beach is serving three Halloween cocktails all month, including Morticia’s Bleeding Heart Margarita.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "National Hotel Miami Beach bar Art Deco",
+        "prompt": "A moody Art Deco hotel bar in Miami Beach with Halloween cocktails and vintage lighting"
+      },
+      "emoji": "🍸",
+      "chip": "ALL MONTH",
+      "logo": "nationalhotel.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Room 901 Carrie takeover, through Oct. 31",
+      "highlight": "Room 901",
+      "body": "Room 901 at Hyatt Centric Las Olas in Fort Lauderdale is running a Carrie-themed pop-up through Halloween.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Hyatt Centric Las Olas Fort Lauderdale",
+        "prompt": "A hidden Fort Lauderdale speakeasy dressed like a dark 1970s prom with red lighting, candles and dramatic florals"
+      },
+      "emoji": "🩸",
+      "chip": "THRU 10/31",
+      "logo": "roomnine01.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Kings Doral Boo’s Bag, through Oct. 31",
+      "highlight": "Boo’s Bag",
+      "body": "Kings Dining & Entertainment in Doral is serving a $13 Boo’s Bag through Oct. 31. Halloween events run Oct. 31 from 11:30 a.m. to 2 p.m. and again at 8 p.m.",
+      "place": "Doral",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Kings Dining Entertainment Doral bowling",
+        "prompt": "A Doral bowling and entertainment venue with neon lights and a Halloween cocktail served in an IV-style drink bag"
+      },
+      "emoji": "🎳",
+      "chip": "$13",
+      "logo": "playatkings.com",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-6.png"
+    }
+  ],
+  "caption": "South Florida has plans this week. Who are you taking? Tag a friend 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has plans this week. Who are you taking? Tag a friend 👀\n\n📰 Sources: Miami New Times\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-18",
+  "id": "2026-10-18-upcoming"
+}
