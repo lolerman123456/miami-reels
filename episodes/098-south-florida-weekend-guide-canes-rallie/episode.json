@@ -1,0 +1,230 @@
+{
+  "title": "South Florida weekend guide: Canes, rallies, and downtown plans",
+  "sources": [
+    "Local 10",
+    "WSVN 7News",
+    "The Palm Beach Post",
+    "Miami New Times",
+    "Eater Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Canes at No. 1, rallies in Palm Beach County, and downtown plans after dark.\n\nSources: Local 10, WSVN 7News, The Palm Beach Post, Miami New Times, Eater Miami\n\n#Miami #SouthFlorida #WeekendGuide #Canes",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Miami is number one in the AP Top 25. So this weekend guide starts with the Canes.",
+      "overlay": [
+        "CANES WEEKEND",
+        "START HERE"
+      ],
+      "emojis": [
+        "🏈",
+        "🙌",
+        "📍",
+        "🌴"
+      ],
+      "location": {
+        "name": "University of Miami",
+        "lat": 25.7216,
+        "lon": -80.2793,
+        "h": 35
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 110
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The University of Miami took No. 1 in the latest AP Top 25 after five of Saturday’s top seven teams lost. Local 10 called it the wildest week of college football polling.",
+      "caption": "The University of Miami took No. 1 in the latest AP Top 25 after 5 of Saturday’s top 7 teams lost. Local 10 called it the wildest week of college football polling.",
+      "overlay": "U OF MIAMI",
+      "badge": "NO. 1 AP",
+      "sub": "Canes top the poll",
+      "emoji": "🏈",
+      "stats": [
+        {
+          "value": "NO. 1",
+          "label": "AP ranking"
+        },
+        {
+          "value": "5 OF 7",
+          "label": "top teams lost"
+        }
+      ],
+      "source": "Local 10",
+      "location": {
+        "name": "University of Miami",
+        "lat": 25.7216,
+        "lon": -80.2793,
+        "h": 35
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 850,
+        "pitch": -32,
+        "heading": 155,
+        "degrees": 75,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "WSVN said Canes fans were going wild after the ranking. If you are picking a watch party, build the night around the No. 1 team in the country.",
+      "caption": "WSVN said Canes fans were going wild after the ranking. If you’re picking a watch party, build the night around the No. 1 team in the country.",
+      "overlay": "CANES WATCH",
+      "badge": "NO. 1 TEAM",
+      "sub": "Watch party anchor",
+      "emoji": "🙌",
+      "stats": [
+        {
+          "value": "NO. 1",
+          "label": "Canes ranking"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "University of Miami",
+        "lat": 25.7216,
+        "lon": -80.2793,
+        "h": 35
+      },
+      "shot": {
+        "type": "push",
+        "range": 700,
+        "pitch": -30,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Palm Beach County had No Kings rallies on October 17. Hundreds joined the rallies targeting Trump and urging voting on November 3. If you went to the rally, check NEAR for who showed up too.",
+      "caption": "Palm Beach County had No Kings rallies on Oct. 17. Hundreds joined the rallies targeting Trump and urging voting on Nov. 3. If you went to the rally, check NEAR for who showed up too.",
+      "overlay": "PALM BEACH",
+      "badge": "OCT. 17",
+      "sub": "Rallies and voting",
+      "emoji": "🗳️",
+      "stats": [
+        {
+          "value": "OCT. 17",
+          "label": "rally date"
+        },
+        {
+          "value": "NOV. 3",
+          "label": "vote date"
+        }
+      ],
+      "source": "The Palm Beach Post",
+      "location": {
+        "name": "Palm Beach County, Florida",
+        "lat": 26.71,
+        "lon": -80.05,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 2200,
+        "pitch": -34,
+        "heading": 18,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a downtown concert plan, iHeartRadio Fiesta Latina is at Kaseya Center on Saturday at 8 p.m. Tickets run from $45 to $370, with Enrique Santos hosting.",
+      "caption": "For a downtown concert plan, iHeartRadio Fiesta Latina is at Kaseya Center on Saturday at 8 p.m. Tickets run from $45 to $370, with Enrique Santos hosting.",
+      "overlay": "KASEYA CENTER",
+      "badge": "$45+",
+      "sub": "Saturday at 8 p.m.",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "$45",
+          "label": "low ticket"
+        },
+        {
+          "value": "$370",
+          "label": "high ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.7814,
+        "lon": -80.187,
+        "h": 85
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 245,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a lower-cost food move, Eater’s Miami guide marks quick inexpensive restaurants with dishes largely under $10. Downtown also has ViceVersa, a pizza and aperitivo bar new to the October map.",
+      "caption": "For a lower-cost food move, Eater’s Miami guide marks quick inexpensive restaurants with dishes largely under $10. Downtown also has ViceVersa, a pizza and aperitivo bar new to the October map.",
+      "overlay": "DOWNTOWN",
+      "badge": "UNDER $10",
+      "sub": "Quick food category",
+      "emoji": "🍕",
+      "stats": [
+        {
+          "value": "$10",
+          "label": "quick dishes"
+        },
+        {
+          "value": "OCT. 2026",
+          "label": "new to map"
+        }
+      ],
+      "source": "Eater Miami",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1450,
+        "pitch": -35,
+        "heading": 310,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Would you do Canes first, rallies first, or food first? A weekend like this means you pass a lot of faces at games, rallies, and downtown, and NEAR is what turns those near-misses into names.",
+      "overlay": "PICK YOUR PLAN 🗺️",
+      "sub": "Comment your route",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2300,
+        "pitch": -32,
+        "heading": 135
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "098-south-florida-weekend-guide-canes-rallie"
+}
