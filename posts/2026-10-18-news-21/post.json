@@ -1,0 +1,74 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "FLED AFTER A DEADLY",
+    "main": "DANIA BEACH CRASH",
+    "highlight": "POLICE SAY DRIVER FLED",
+    "bottom": "A WOMAN WAS ARRESTED",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons search for Broward Sheriff Office patrol car night Florida crash scene",
+      "prompt": "Dramatic Dania Beach roadway at night with Broward sheriff lights, police tape, wet pavement, and a blocked lane after a fatal hit-and-run",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚨",
+      "🚔",
+      "⚠️"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Fled after a deadly Dania Beach crash",
+      "highlight": "fled after a deadly Dania Beach crash",
+      "body": "BSO says a woman was arrested Sunday after a fatal hit-and-run in Dania Beach.",
+      "place": "Dania Beach",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Wikimedia Commons search for Broward Sheriff Office police car Florida night",
+        "prompt": "Broward sheriff patrol cars blocking a South Florida street at night, red and blue lights reflecting on asphalt after a fatal crash"
+      },
+      "emoji": "🚨",
+      "chip": "SUN 10/18",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "CBS says a man died in the crash",
+      "highlight": "a man died",
+      "body": "CBS News said police accuse the driver of killing a man in the Dania Beach hit-and-run.",
+      "place": "Dania Beach",
+      "source": "CBS News",
+      "photo": {
+        "query": "Wikimedia Commons search for police tape road closed at night Florida",
+        "prompt": "Yellow police tape stretched across a dark South Florida road with patrol lights blurred behind it after a fatal crash investigation"
+      },
+      "emoji": "⚠️",
+      "chip": "MAN KILLED",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    }
+  ],
+  "caption": "Police say a driver fled after a pedestrian died in Dania Beach.",
+  "hashtags": [
+    "#DaniaBeach",
+    "#BrowardCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say a driver fled after a pedestrian died in Dania Beach.\n\n📰 Sources: NBC 6 South Florida, CBS News, Boca Post, Miami Herald\n\n🎥 Video: NBC 6 South Florida\n\n#DaniaBeach #BrowardCounty #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-18",
+  "id": "2026-10-18-news-21",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "NBC 6 South Florida",
+    "url": "https://www.youtube.com/watch?v=BEGWrg1LnMQ"
+  }
+}
