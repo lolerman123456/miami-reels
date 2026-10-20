@@ -1,0 +1,117 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "POLICE SAY A",
+    "main": "32-YEAR-OLD",
+    "highlight": "TRIED TO KIDNAP",
+    "bottom": "A 13-YEAR-OLD AT A MIRAMAR GAS STATION",
+    "blur": false,
+    "photo": {
+      "query": "Miramar Florida gas station police lights night",
+      "prompt": "Dramatic nighttime photo of police lights outside a Miramar gas station, fuel pumps in the foreground, empty forecourt, no people visible",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚨",
+      "⛽",
+      "👮"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Local 10",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "The victim was 13",
+      "highlight": "victim was 13",
+      "body": "Police say a 32-year-old man tried to kidnap a 13-year-old girl at a gas station in Miramar.",
+      "place": "Miramar",
+      "source": "CBS News",
+      "photo": {
+        "query": "Miramar Florida gas station police lights night",
+        "prompt": "Close, dramatic photo of a Miramar gas station at night with police lights reflecting on the pavement, no people visible"
+      },
+      "emoji": "🚨",
+      "chip": "13 YEARS OLD",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police arrested him Monday",
+      "highlight": "arrested Monday",
+      "body": "Authorities say the suspect was arrested Monday in connection with the attempted kidnapping.",
+      "place": "Miramar",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miramar Florida police cruiser flashing lights night",
+        "prompt": "Police cruiser with flashing lights parked near a Miramar street at night, no suspect or victim visible"
+      },
+      "emoji": "👮",
+      "chip": "MONDAY",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: NBC 6 South Florida"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The gas station is the scene",
+      "highlight": "gas station",
+      "body": "NBC 6 reported the case involved a gas station in Miramar.",
+      "place": "Miramar",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "gas station pumps police lights Florida night",
+        "prompt": "Gas station pumps with red and blue police lights reflecting on wet pavement at night, no people visible"
+      },
+      "emoji": "⛽",
+      "chip": "SCENE",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Local 10"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case involves a child in public",
+      "highlight": "child in public",
+      "body": "The accusation centers on a 13-year-old girl at a public gas station in Miramar.",
+      "place": "Miramar",
+      "source": "CBS News",
+      "photo": {
+        "query": "Miramar Florida gas station storefront night",
+        "prompt": "Wide exterior of a Miramar gas station at night, bright canopy lights, empty parking lot, no people visible"
+      },
+      "emoji": "⚖️",
+      "chip": "PUBLIC PLACE",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police continue the case review",
+      "highlight": "case review",
+      "body": "Officials have not released more details in the headlines provided.",
+      "place": "Miramar",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miramar Florida police station exterior day",
+        "prompt": "Exterior of a South Florida police station with patrol cars parked outside, clear signage, no people in focus"
+      },
+      "emoji": "👮",
+      "chip": "NEXT",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: NBC 6 South Florida"
+    }
+  ],
+  "caption": "Police say a 32-year-old man was arrested Monday after trying to kidnap a 13-year-old girl at a Miramar gas station.",
+  "hashtags": [
+    "#Miramar",
+    "#BrowardCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say a 32-year-old man was arrested Monday after trying to kidnap a 13-year-old girl at a Miramar gas station.\n\n📰 Sources: CBS News, WPLG Local 10, NBC 6 South Florida\n\n#Miramar #BrowardCounty #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-20",
+  "id": "2026-10-20-brief"
+}
