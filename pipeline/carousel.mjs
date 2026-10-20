@@ -115,7 +115,10 @@ async function wikiPhotos(title) {
 
 // celeb: pick people + one surprising fact, then keep the first one whose Wikipedia article really states it and has a free photo
 async function celebStory(topic) {
-  const recent = recentPosts(45).filter(p => p.kind === 'celeb').map(p => p.person).filter(Boolean);
+  // previews count too (owner, Oct 20: sees every celeb post before it goes out), so a skipped one isn't picked again
+  const dir = path.join(ROOT, 'posts'), since = nyDate(new Date(Date.now() - 45 * 864e5));
+  const recent = (fs.existsSync(dir) ? fs.readdirSync(dir) : []).filter(d => d.slice(0, 10) >= since && /-celeb-/.test(d))
+    .map(d => { try { return readJSON(path.join(dir, d, 'post.json')).person; } catch { return null; } }).filter(Boolean);
   const pick = await chat([{ role: 'system', content: 'Pick famous people for a "did you know" Instagram post for a South Florida audience (18–35). Each candidate needs ONE true, documented fact that sounds fake or starts an argument in the comments: a surprising old job, their real name, their real age, where they really grew up, a record, money, a weird early career, a famous rejection, an unexpected Miami/Florida connection. It must be something their English Wikipedia article states plainly. Prefer people tied to Miami / South Florida / Florida (rappers, singers, athletes, actors, e.g. Rick Ross, DJ Khaled, Pitbull, Trick Daddy, Flo Rida, Denzel Curry, Gloria Estefan, Camila Cabello, Dwyane Wade, Udonis Haslem, Lionel Messi), then any huge celebrity. Never: minors, deaths, illness or tragedy, sexual topics, non-famous relatives, unproven accusations, or race, religion or nationality as the hook. Return JSON {"candidates":[{"wikipedia":"exact English Wikipedia title","fact":"the fact in one plain sentence","why":"why people will argue about it"}]} with 6 candidates, best first.' },
     { role: 'user', content: `${topic ? `The owner asked for: ${topic}. All candidates must be about that.\n` : ''}Already posted (pick other people): ${recent.join(', ') || '(none)'}` }]);
   for (const c of (pick.candidates || []).slice(0, 6)) {
@@ -709,6 +712,27 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const topicArg = args.includes('--topic') ? args[args.indexOf('--topic') + 1] : null;
   const kind = args.find(a => !a.startsWith('--') && a !== topicArg) || 'brief';
   const ti = args.indexOf('--topic');
+  // owner, Oct 20 ("show me it before"): post a preview the owner approved, exactly as previewed — its post.json is in
+  // the repo and its rendered slides are in the "slides" release (out-<id>-NN.jpg)
+  if (args.includes('--publish-preview')) {
+    const id = args[args.indexOf('--publish-preview') + 1];
+    const pdir = path.join(ROOT, 'posts', id);
+    const post = readJSON(path.join(pdir, 'post.json'));
+    const get = async f => {
+      const res = await fetch(`https://github.com/lolerman123456/miami-reels/releases/download/slides/out-${id}-${f}`, { signal: AbortSignal.timeout(60000) });
+      if (!res.ok) return null;
+      fs.writeFileSync(path.join(pdir, f), Buffer.from(await res.arrayBuffer())); return path.join(pdir, f);
+    };
+    const names = ['00-cover.jpg', ...post.slides.map((_, i) => `${String(i + 1).padStart(2, '0')}.jpg`), '99-cta.jpg'];
+    const slides = []; for (const f of names) { const p = await get(f); if (!p) throw new Error(`preview slide ${f} missing`); slides.push(p); }
+    const story = await get('story.jpg');
+    const label = id.replace(/-preview$/, '');
+    const { publishCarousel, publishStory } = await import('./publish.mjs');
+    await publishCarousel(slides, post.igCaption, label, { collaborators: post.collaborators });
+    if (story) await publishStory(story, label).catch(e => console.log(`(story skipped: ${e.message})`));
+    writeJSON(path.join(pdir, 'post.json'), { ...post, approved: true, posted: new Date().toISOString() });
+    process.exit(0);
+  }
   const dir = args.includes('--render-only') ? path.resolve(ROOT, args[args.indexOf('--render-only') + 1])
     : await writeCarousel(kind, { topic: ti >= 0 ? args[ti + 1] : null, preview: args.includes('--dry-run') });
   const { post, slides, story } = await renderCarousel(dir);
