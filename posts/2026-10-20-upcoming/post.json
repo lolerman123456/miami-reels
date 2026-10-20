@@ -1,0 +1,134 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "EVERY BIG",
+    "highlight": "EVENT",
+    "bottom": "THIS WEEK",
+    "blur": false,
+    "photo": {
+      "query": "South Florida Halloween event crowd night dramatic lights",
+      "prompt": "A dramatic South Florida night scene with a red-lit car wash tunnel, seafood festival tents, a masquerade mask, and a botanical garden lit for Halloween"
+    },
+    "emojis": [
+      "👀",
+      "🎭",
+      "🦞",
+      "🎃"
+    ],
+    "logos": [
+      "sobeseafoodfest.com",
+      "ymu.org",
+      "mbgarden.org",
+      "miramarculturalcenter.org"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c1.png",
+      "logo-c2.png",
+      "logo-c3.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Moth StorySlam in Miramar, Oct. 20",
+      "highlight": "Moth StorySlam",
+      "body": "Tuesday at 7 p.m., the Miramar Cultural Center hosts five-minute stories on the theme “Magic.” Tickets are $17.",
+      "place": "Miramar",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miramar Cultural Center stage microphone spotlight",
+        "prompt": "A single microphone under a spotlight on a theater stage inside a cultural center"
+      },
+      "emoji": "🎤",
+      "chip": "OCT. 20",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Tunnel of Terror in Miami, Oct. 21",
+      "highlight": "Tunnel of Terror",
+      "body": "Wednesday from 5 to 9 p.m., El Car Wash at 6695 W. Flagler St. turns into a haunted tunnel with a live DJ and scare actors. Standard car wash pricing applies.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "car wash tunnel red lights night scare actors",
+        "prompt": "A red-lit car wash tunnel at night with fog, water spray, and Halloween scare actors near the entrance"
+      },
+      "emoji": "🚗",
+      "chip": "5 TO 9 PM",
+      "logo": "elcarwash.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "South Beach Seafood Festival, Oct. 21 to 23",
+      "highlight": "Seafood Festival",
+      "body": "The 14th annual festival runs Wednesday through Saturday at venues in Miami Beach, with more than 50 restaurants. Ticket prices vary by event.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "South Beach seafood festival crowd chefs serving food Miami Beach",
+        "prompt": "A crowded Miami Beach seafood festival at sunset with chefs serving plates under bright tents"
+      },
+      "emoji": "🦞",
+      "chip": "50+ RESTOS",
+      "logo": "sobeseafoodfest.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Halloween Moonlight Masquerade, Oct. 22",
+      "highlight": "Moonlight Masquerade",
+      "body": "Thursday at 8 p.m., Sacred Space hosts live music, an open bar, local restaurant bites, and theatrical performances. Tickets are $125.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "masquerade party candlelight live performers garden venue night",
+        "prompt": "A Halloween masquerade party with masks, candlelight, live performers, and a garden venue at night"
+      },
+      "emoji": "🎭",
+      "chip": "$125",
+      "logo": "ymu.org",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Folklore & Foliage, Oct. 23",
+      "highlight": "Folklore & Foliage",
+      "body": "Friday at 6 p.m., Miami Beach Botanical Garden brings dark art vendors, old Florida ghost lore, shadow puppets, vintage Halloween footage, and tarot readings. RSVP is free.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miami Beach Botanical Garden night halloween lanterns",
+        "prompt": "A botanical garden at night with palm shadows, lanterns, tarot cards, and Halloween projections"
+      },
+      "emoji": "🌿",
+      "chip": "FREE",
+      "logo": "mbgarden.org",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "South Florida gave us a haunted car wash this week. Tag a friend you’re taking 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida gave us a haunted car wash this week. Tag a friend you’re taking 👀\n\n📰 Sources: Miami New Times, Secret Miami\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-20",
+  "id": "2026-10-20-upcoming"
+}
