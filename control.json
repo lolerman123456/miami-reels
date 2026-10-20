@@ -21,6 +21,10 @@
     "shareslop": [
       11,
       19
+    ],
+    "celeb": [
+      15,
+      21
     ]
   },
   "tiktokSlideshowsPerDay": 8,
