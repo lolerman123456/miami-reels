@@ -36,6 +36,9 @@ const KINDS = {
   news: { kicker: 'MIAMI NEWS 🚨', feed: 'local', pick: 'the single most viral South Florida story right now: the one people are sharing, commenting on and arguing about (a shocking crime or arrest, a wild video, a disaster, a celebrity moment in Miami, a pop-culture moment taking over the city (a big game/movie launch, a viral trend, lines around the block), a traffic/road project that changes daily commutes (a new expressway, toll or lane closure with a date), a big local team win (Canes, Heat, Dolphins, Panthers, Inter Miami), a famous athlete or celebrity with a surprising local job or move, a big price or rent shock, a major court case, a huge development). Never a small business closing, a minor traffic item, a routine meeting or a neighborhood-only story. Go NICHE and specific like @onlyindade (owner, Sep 30): prefer hyper-local stories people gossip about, e.g. a teacher, professor, coach, cop or official arrested (with the charge and the mugshot photo from the outlet), fraud and scam schemes with the dollar amount, sexual assault or abuse charges (never name or picture a victim), wild arrests, polarizing local fights (landlords, HOAs, school boards, viral customer fights). Always \"accused\" / \"charged\" / \"police say\" unless convicted; the person must be named in the news reports, never a private person from social media. It must be a DIFFERENT story from the ones we already posted (listed below).', ask: 'A news carousel: ONE viral South Florida story told in depth across 5–6 connected slides (what happened, the key details and numbers, how it started, who it affects here, what happens next).' },
   world: { kicker: 'NEWS FROM AROUND THE WORLD 🌎', feed: 'world', pick: 'the single most serious story in the world today: the deadliest, most dangerous or most consequential (war, disaster, attack, crisis). Pick the one with the most facts in the headlines.', ask: 'The night news carousel: ONE world story, the most serious one today, told in depth across 5–6 connected slides (what happened, the scale in numbers, how it started, who is affected, what the world is doing, what happens next, and a Florida/US angle only if there honestly is one).' },
   feature: { feed: 'local' },
+  // owner, Oct 20: "ragebait" Did-You-Know covers about famous people in the NEAR NEWS look — TRUE facts only (from the
+  // person's Wikipedia article, checked before writing) with their real Wikipedia photo; never satire about real people
+  celeb: { kicker: 'NEAR NEWS', ask: 'A "did you know" ragebait carousel about ONE famous person: a TRUE fact about them that sounds fake and makes people argue in the comments, told in 3–4 connected slides using ONLY their Wikipedia article (the fact with its year/number → how it happened → what came after and why people still bring it up). COVER in the owner\'s template: top "DID YOU KNOW THAT", main = the person\'s name as fans know it, highlight = the shocking part (2–4 words, the big blue line), bottom = the rest of the sentence ending with "?", e.g. "DID YOU KNOW THAT / RICK ROSS / WAS A CORRECTIONAL OFFICER / BEFORE HE STARTED RAPPING?". Sector ENTERTAINMENT (SPORTS for athletes). Never add anything the article does not state, no jokes, no guesses, and no crime claim unless the article states the conviction or charge as fact. Caption: one punchy line that makes people comment or tag a friend, e.g. "Rick Ross really went from CO to the Boss 😭". Every slide credits "Wikipedia" as its source.' },
   // TikTok-first: things people can actually go to in the next 7 days (the raves Reel was our top post)
   // everyday share bait (owner): food deals, free stuff, giveaways, food drives — things people send to a friend
   deals: { kicker: 'FREE & CHEAP IN SOUTH FLORIDA 🍔', feed: 'local', ask: 'A "deals and free stuff" carousel for South Florida: the 5–6 best deals, freebies, giveaways and community food drives/distributions happening now or in the next 7 days (fast-food app deals and free-item days, national food day deals, free events, giveaways, church or food bank food drives with the place, date and time). One slide each (5–6 slides): what you get, the price or "FREE", WHO by name (the chain, brand, church or group; never "participating chains"), where (city for local ones), the exact dates, and how to get it (app, code, bring ID, first come). Only deals and drives stated in the headlines, still valid now or upcoming; never guess a price or date. Tags are DEALS. Tag the chain or organization if it is in the collaborators list. Not only food: parking (ParkMobile promos, free or $1 parking), transit and Brightline deals, free museum or attraction days, coupons and promo codes people here can use. The cover leads with the single best deal as a hook (e.g. "$1 PARKING ALL WEEKEND", "FREE CHICK-FIL-A TUESDAY"), or an owner-approved hook (Oct 4): "FREE FOOD IN SOUTH FLORIDA THIS WEEK 🍔", "7 FREE THINGS TO DO THIS WEEKEND", "FREE ENTRY: SPOTS THAT COST $0 THIS MONTH", "RESTAURANTS GIVING STUFF AWAY THIS WEEK", "BIRTHDAY FREEBIES IN SOUTH FLORIDA (SAVE THIS) 🎂". Say South Florida, not Miami, unless the place is in Miami. Caption ends with "send this to someone who needs it".' },
@@ -88,6 +91,45 @@ function recentPosts(days = 7) {
   const since = nyDate(new Date(Date.now() - days * 864e5));
   return fs.readdirSync(dir).filter(d => d.slice(0, 10) >= since && !d.endsWith('-preview')).sort()
     .map(d => { try { return readJSON(path.join(dir, d, 'post.json')); } catch { return null; } }).filter(Boolean);
+}
+
+// celeb: the person's free-licensed Wikipedia photos (lead image first, then article images named after them), never fair-use files
+async function wikiPhotos(title) {
+  const get = async params => (await fetch('https://en.wikipedia.org/w/api.php?' + new URLSearchParams({ format: 'json', ...params }), {
+    headers: { 'User-Agent': 'getnearapp-bot/1.0 (https://github.com/lolerman123456/miami-reels)' }, signal: AbortSignal.timeout(20000) })).json();
+  const page = Object.values((await get({ action: 'query', prop: 'pageimages|images', piprop: 'name', imlimit: '50', redirects: '1', titles: title })).query?.pages || {})[0];
+  if (!page) return [];
+  const surname = title.replace(/\s*\(.*\)$/, '').split(' ').pop().toLowerCase();
+  const files = [page.pageimage && `File:${page.pageimage}`, ...(page.images || []).map(i => i.title)
+    .filter(t => /\.(jpe?g|png)$/i.test(t) && t.toLowerCase().replace(/_/g, ' ').includes(surname))].filter(Boolean);
+  const out = [];
+  for (const f of [...new Set(files.map(f => f.replace(/_/g, ' ')))].slice(0, 6)) {
+    const info = Object.values((await get({ action: 'query', prop: 'imageinfo', iiprop: 'url|extmetadata', iiurlwidth: '1400', titles: f })).query?.pages || {})[0]?.imageinfo?.[0];
+    const lic = info?.extmetadata?.LicenseShortName?.value || '';
+    if (!info?.thumburl || !lic || /fair use|non-free/i.test(lic)) continue;
+    out.push({ url: info.thumburl, credit: `Photo: Wikimedia Commons (${lic})` });
+    if (out.length >= 3) break;
+  }
+  return out;
+}
+
+// celeb: pick people + one surprising fact, then keep the first one whose Wikipedia article really states it and has a free photo
+async function celebStory(topic) {
+  const recent = recentPosts(45).filter(p => p.kind === 'celeb').map(p => p.person).filter(Boolean);
+  const pick = await chat([{ role: 'system', content: 'Pick famous people for a "did you know" Instagram post for a South Florida audience (18–35). Each candidate needs ONE true, documented fact that sounds fake or starts an argument in the comments: a surprising old job, their real name, their real age, where they really grew up, a record, money, a weird early career, a famous rejection, an unexpected Miami/Florida connection. It must be something their English Wikipedia article states plainly. Prefer people tied to Miami / South Florida / Florida (rappers, singers, athletes, actors, e.g. Rick Ross, DJ Khaled, Pitbull, Trick Daddy, Flo Rida, Denzel Curry, Gloria Estefan, Camila Cabello, Dwyane Wade, Udonis Haslem, Lionel Messi), then any huge celebrity. Never: minors, deaths, illness or tragedy, sexual topics, non-famous relatives, unproven accusations, or race, religion or nationality as the hook. Return JSON {"candidates":[{"wikipedia":"exact English Wikipedia title","fact":"the fact in one plain sentence","why":"why people will argue about it"}]} with 6 candidates, best first.' },
+    { role: 'user', content: `${topic ? `The owner asked for: ${topic}. All candidates must be about that.\n` : ''}Already posted (pick other people): ${recent.join(', ') || '(none)'}` }]);
+  for (const c of (pick.candidates || []).slice(0, 6)) {
+    const w = await wikiArticle(c.wikipedia, { chars: 16000 }).catch(() => null);
+    if (!w || recent.includes(w.title)) continue;
+    const v = await chat([{ role: 'system', content: 'Does this Wikipedia article clearly state this fact (same meaning, not a stretch or an inference)? Reply JSON {"supported": true|false, "quote": "the exact sentence from the article that states it"}.' },
+      { role: 'user', content: `Fact: ${c.fact}\n\nArticle "${w.title}":\n${w.text}` }]).catch(() => null);
+    const norm = s => String(s || '').replace(/\s+/g, ' ').trim().toLowerCase();
+    if (!v?.supported || !v.quote || !norm(w.text).includes(norm(v.quote).slice(0, 80))) { console.log(`  ✗ ${w.title}: "${c.fact}" isn't in the article`); continue; }
+    const photos = await wikiPhotos(w.title).catch(() => []);
+    if (!photos.length) { console.log(`  ✗ ${w.title}: no free photo`); continue; }
+    return { person: w.title, fact: c.fact, quote: v.quote, wiki: w, photos };
+  }
+  return null;
 }
 
 // A brand's logo from its site icon (apple-touch-icon or Google's favicon service); kept only if it is big enough to look sharp.
@@ -182,16 +224,25 @@ async function digDeeper(news, what) {
 
 export async function writeCarousel(kind, { topic, preview } = {}) {
   const spec = KINDS[kind];
-  if (!spec) throw new Error(`Unknown carousel kind "${kind}" (brief|news|world|feature|upcoming|deals)`);
+  if (!spec) throw new Error(`Unknown carousel kind "${kind}" (brief|news|world|feature|upcoming|deals|celeb)`);
+  const ownTopic = topic;
   let storyPhotos = [], storyText = '';
   const weekday = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })).getDay();
   const feature = kind === 'feature' ? FEATURES[weekday] : null;
   const kicker = feature ? `${feature.name}` : spec.kicker;
 
   step(`Writing ${kind} carousel${feature ? ` (${feature.name})` : ''}`);
-  const news = await fetchNews(spec.feed);
+  const news = kind === 'celeb' ? [] : await fetchNews(spec.feed);
   const extra = [];
-  if (topic) {
+  let celeb = null;
+  if (kind === 'celeb') {
+    celeb = await celebStory(topic);
+    if (!celeb) throw new Error('No celeb fact checked out against Wikipedia');
+    console.log(`  person: ${celeb.person} — ${celeb.fact}\n  article: "${celeb.quote}"\n  photos: ${celeb.photos.map(p => p.credit).join(', ')}`);
+    extra.push(`WIKIPEDIA "${celeb.person}" (the ONLY source for this post):\n${celeb.wiki.text}`);
+    storyPhotos = celeb.photos;
+    topic = `${celeb.person}: ${celeb.fact} (the article says: "${celeb.quote}")`;
+  } else if (topic) {
     // owner's topic: pull topic-specific headlines + any matching data source
     const found = await searchNews(`${topic} Florida`).catch(() => []);
     news.unshift(...found);
@@ -269,12 +320,14 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   }
   const recent = recentPosts();
   const ask = [
+    kind === 'celeb' ? `${spec.ask}\nThe person and the fact (checked against the article): ${topic}` :
     topic ? `${spec.pick ? spec.ask + '\n' : ''}The account owner asked for this — follow it: ${topic}` : (feature ? feature.ask : spec.ask),
     kind === 'world' ? 'COVER: the small top line is always "NEWS FROM AROUND THE WORLD" (we add it). Leave "top" empty and make main + highlight + bottom a complete sentence on their own, with its own subject, e.g. main "A NOR\'EASTER PUTS", highlight "50 MILLION", bottom "FROM MAINE TO VIRGINIA IN ITS PATH".' : '',
     'PHOTOS must stop the scroll: ask for striking, dramatic, specific pictures (the actual person, scene, vehicle, building or moment). Optionally, on AT MOST ONE slide or the cover, and only when it adds meaning, add "mark" to draw on the photo: "circle" (point out the key detail), "arrow" (point at it), "x" (something destroyed, cancelled, banned or a public figure who lost/was ousted), or "stamp: WANTED" / "stamp: ON THE RUN" / "stamp: ARRESTED" / "stamp: CLOSED" / "stamp: SOLD OUT" style labels (few words). Be creative but never mark a private person, a victim or a child, and most posts need no mark.',
     `Today (New York): ${new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric' })}`,
     ['deals', 'upcoming'].includes(kind) ? 'LIST POST: ignore the rule that headlines chain with transitions (no "THAT\'S…", "AND…", "SO…"). Each headline names the thing itself, e.g. "DUNKIN\': FREE COFFEE TUESDAY" or "KAROL G POP-UP IN WYNWOOD, OCT. 3–4". Take dates, times, venues and prices from the ARTICLE texts. 5–6 DIFFERENT items: never two slides about the same place, event, restaurant or chain. For a national chain the place is "all locations" or "in the app" (only chains with South Florida locations). Prefer South Florida items; skip online shopping deals (Amazon, shipped items).' : '',
     kind === 'deals' ? `Headlines (date — outlet — headline — summary). Only use deals, freebies and drives that are still valid now or coming up in the next 7 days; skip expired ones:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` :
+    kind === 'celeb' ? '' :
     kind === 'upcoming' ? `Headlines (date — outlet — headline — summary). Only use events whose date is stated and falls in the next 7 days:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` :
     `Headlines (date — outlet — headline — summary). Only use headlines from the last 3 days about THIS exact event; a search can return an older, similar event (last winter's storm, a past case): ignore those, and if two headlines disagree, leave the detail out:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}`,
     extra.length ? `Fact sources:\n\n${extra.join('\n\n')}` : '',
@@ -291,7 +344,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     if (tells.length && attempt < TRIES) { console.log(`  attempt ${attempt}: sounds like AI (${tells.join(' | ')}) — rewriting`); post = null; continue; }
     const incomplete = (post?.slides || []).filter(s => !s?.headline || !s?.body || !s?.photo).length;
     const CONNECT = /^(that|that's|thats|which|and|so|but|because|the reason|for |on top|meanwhile|now|still|plus|this|it|here|what|those|even|then|since|after|as a result)/i;
-    const loose = (kind === 'feature' || topic) ? (post?.slides || []).slice(1).filter(x => !CONNECT.test(String(x.headline || '').trim())).length : 0;
+    const loose = (kind === 'feature' || topic) && kind !== 'celeb' ? (post?.slides || []).slice(1).filter(x => !CONNECT.test(String(x.headline || '').trim())).length : 0;
     if (loose > 0 && attempt < TRIES) { console.log(`  attempt ${attempt}: ${loose} headlines don't connect — rewriting`); post = null; continue; }
     const listDupes = ['deals', 'upcoming'].includes(kind) ? n - new Set((post?.slides || []).map(x => String(x.headline || '').split(/[:,]| IN | AT /i)[0].trim().toLowerCase())).size : 0;
     if ((listDupes > 0 || (['deals', 'upcoming'].includes(kind) && n < 5)) && attempt < TRIES) { console.log(`  attempt ${attempt}: list needs 5–6 different items (${n} slides, ${listDupes} repeats) — rewriting`); post = null; continue; }
@@ -331,7 +384,8 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   post.collaborators = cleanCollabs(post.collaborators);
   // the writer kept copying the JSON example's ECONOMY onto event/food lists (Oct 5–6): upcoming/deals only get fitting labels
   if (/^(upcoming|deals)$/.test(kind) && !/^(EVENTS|FOOD|DEALS|SPORTS)$/.test(String(post.sector || '').toUpperCase())) post.sector = kind === 'deals' ? 'DEALS' : 'EVENTS';
-  const SECTORS = /^(FOOD|DEALS|EVENTS|ECONOMY|TRAFFIC|WEATHER|REAL ESTATE|CRIME|DEVELOPMENT|TRANSIT|HISTORY|SPORTS|HEALTH|EDUCATION|CITY HALL|WORLD|USA)$/;
+  if (kind === 'celeb') post.sector = String(post.sector || '').toUpperCase() === 'SPORTS' ? 'SPORTS' : 'ENTERTAINMENT';
+  const SECTORS = /^(ENTERTAINMENT|FOOD|DEALS|EVENTS|ECONOMY|TRAFFIC|WEATHER|REAL ESTATE|CRIME|DEVELOPMENT|TRANSIT|HISTORY|SPORTS|HEALTH|EDUCATION|CITY HALL|WORLD|USA)$/;
   const single = kind === 'feature' || !!topic;
   for (const x of post.slides) {
     if (single && post.sector) x.tag = post.sector;
@@ -350,9 +404,10 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   ].filter(Boolean).join('\n\n');
   post.kind = kind;
   post.kicker = kicker;
+  if (celeb) Object.assign(post, { person: celeb.person, wikiUrl: celeb.wiki.url });
   post.date = nyDate();
   const hour = new Date().toLocaleString('en-US', { timeZone: 'America/New_York', hour: '2-digit', hour12: false });
-  post.id = `${post.date}-${kind}${kind === 'news' ? '-' + hour : ''}${topic && !spec.pick ? '-custom' : ''}${preview ? '-preview' : ''}`;
+  post.id = `${post.date}-${kind}${kind === 'news' || kind === 'celeb' ? '-' + hour : ''}${ownTopic && !spec.pick ? '-custom' : ''}${preview ? '-preview' : ''}`;
   const dir = path.join(ROOT, 'posts', post.id);
   fs.mkdirSync(dir, { recursive: true });
   step('Finding photos');
@@ -361,7 +416,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   // world: the story's own hook, with "NEWS FROM AROUND THE WORLD" as the small top line (owner's format)
   if (kind === 'world') Object.assign(post.cover, { top: 'NEWS FROM AROUND THE WORLD', blur: false });
   // owner's own topic (no story pick): still look for real photos of it
-  if (topic && !storyPhotos.length && !ALIVE.includes(kind)) {
+  if (topic && !storyPhotos.length && !ALIVE.includes(kind) && kind !== 'celeb') {
     for (const a of await bingArticles(topic)) {
       const img = await ogImage(a.url);
       if (img && !storyPhotos.some(x => x.url === img)) storyPhotos.push({ url: img, credit: `Photo: ${a.source}` });
@@ -371,7 +426,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     if (storyPhotos.length) console.log(`  real photos: ${storyPhotos.map(p => p.credit).join(', ')}`);
   }
   // owner (Oct 2): if the agency released video of this story, it goes in as slide 2 and the carousel shrinks to 4 slides
-  if ((storyText || topic) && !ALIVE.includes(kind)) {
+  if ((storyText || topic) && !ALIVE.includes(kind) && kind !== 'celeb') {
     const { videoForStory } = await import('./clip.mjs');
     const v = await videoForStory(storyText || topic, dir);
     if (v) {
@@ -502,6 +557,7 @@ function coverHTML(post, dir, h, o = {}) { // o: textBottom / barBottom / barTex
     <div style="position:absolute;left:${o.safe ? 110 : 40}px;right:${o.safe ? 150 : 40}px;bottom:${o.textBottom ?? (h > 1400 ? 220 : 150)}px;text-align:center">
       ${(c.logoFiles || []).length && ALIVE.includes(post.kind) ? `<div style="display:flex;gap:18px;justify-content:center;margin-bottom:26px">${c.logoFiles.map(f => dataUrl(dir, f)).filter(Boolean).map(u => `<div style="background:#fff;border-radius:18px;width:${c.logoFiles.length > 4 ? 140 : 170}px;height:${c.logoFiles.length > 4 ? 100 : 120}px;padding:12px;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.4)"><img src="${u}" style="width:100%;height:100%;object-fit:contain"></div>`).join('')}</div>` : ''}
       ${(c.emojis || []).length && !(c.logoFiles || []).length && ALIVE.includes(post.kind) ? `<div style="font-size:64px;margin-bottom:14px;letter-spacing:12px">${c.emojis.slice(0, 4).map(esc).join('')}</div>` : ''}
+      ${post.kind === 'celeb' ? `<div style="display:inline-block;background:${BLUE};border:4px solid #fff;border-radius:16px;padding:8px 28px;font-weight:900;font-size:46px;letter-spacing:1px;margin-bottom:24px;box-shadow:0 8px 30px rgba(0,0,0,.4)">NEARNEWS</div>` : ''}
       ${c.top ? `<div class="caps" style="font-size:${fs(c.top, 68)}px;margin-bottom:10px">${esc(c.top)}</div>` : ''}
       ${c.main ? `<div class="caps" style="font-size:${fs(c.main, 104)}px">${esc(c.main)}</div>` : ''}
       <div class="caps blue" style="font-size:${fs(c.highlight, 168)}px;margin:4px 0">${esc(c.highlight)}</div>
