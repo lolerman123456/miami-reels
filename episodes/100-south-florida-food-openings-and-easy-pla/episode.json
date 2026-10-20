@@ -1,0 +1,191 @@
+{
+  "title": "South Florida food openings and easy plans this week",
+  "sources": [
+    "Time Out Worldwide",
+    "PROFILEmiami",
+    "The Miami Guide",
+    "Secret Miami",
+    "Miami-Dade County Golden Ticket Arts Guide"
+  ],
+  "collaborators": [],
+  "igCaption": "Food openings and one strange car wash plan this week.\nOct 21, El Car Wash W. Flagler, free tickets while supplies last\n\nSources: Time Out Worldwide, PROFILEmiami, The Miami Guide, Secret Miami, Miami-Dade County Golden Ticket Arts Guide\n\n#Miami #SouthFlorida #MiamiFood #ThingsToDoMiami",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "A grocery market backed by Major Food Group is opening in Midtown, and one car wash turns haunted this week.",
+      "overlay": [
+        "FOOD PLANS",
+        "THIS WEEK"
+      ],
+      "emojis": [
+        "🥗",
+        "🍝",
+        "🚗",
+        "🎟️"
+      ],
+      "location": {
+        "name": "Midtown Miami",
+        "lat": 25.8074,
+        "lon": -80.1937,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Wilder is set to open in Midtown this fall. Major Food Group is backing it, with Grassfed Culture Hospitality involved, and reports describe a neighborhood market with a kitchen from the Los Félix team.",
+      "caption": "Wilder is set to open in Midtown this fall. Major Food Group is backing it, with Grassfed Culture Hospitality involved, and reports describe a neighborhood market with a kitchen from the Los Félix team.",
+      "overlay": "WILDER",
+      "badge": "FALL 2026",
+      "sub": "Midtown market",
+      "emoji": "🥬",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "fall opening"
+        }
+      ],
+      "source": "PROFILEmiami",
+      "location": {
+        "name": "Midtown Miami",
+        "lat": 25.8074,
+        "lon": -80.1937,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Mercante is coming to the Miami River this fall. Nicola Siervo is behind the Italian Riviera restaurant and piano bar.",
+      "caption": "Mercante is coming to the Miami River this fall. Nicola Siervo is behind the Italian Riviera restaurant and piano bar.",
+      "overlay": "MERCANTE",
+      "badge": "FALL 2026",
+      "sub": "Miami River opening",
+      "emoji": "🍝",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "fall opening"
+        }
+      ],
+      "source": "The Miami Guide",
+      "location": {
+        "name": "Miami River",
+        "lat": 25.7726,
+        "lon": -80.199,
+        "h": 70
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -35,
+        "heading": 260,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "El Car Wash on West Flagler becomes Tunnel of Terror on Wednesday, October 21, from 5 to 9 p.m. The address is 6695 W. Flagler Street, with live scare actors, red lights, a DJ, and two House of Horror tickets per car while supplies last. If you go, check NEAR afterward and see who else survived the tunnel.",
+      "caption": "El Car Wash on W. Flagler becomes Tunnel of Terror on Wednesday, Oct. 21, from 5 to 9 p.m. The address is 6695 W. Flagler St., with live scare actors, red lights, a DJ, and 2 House of Horror tickets per car while supplies last. If you go, check NEAR afterward and see who else survived the tunnel.",
+      "overlay": "TUNNEL OF TERROR",
+      "badge": "5 TO 9 PM",
+      "sub": "One-night car wash",
+      "emoji": "🚗",
+      "stats": [
+        {
+          "value": "5-9 PM",
+          "label": "event time"
+        },
+        {
+          "value": "2",
+          "label": "tickets per car"
+        }
+      ],
+      "source": "Secret Miami",
+      "hit": "crash",
+      "location": {
+        "name": "El Car Wash W. Flagler",
+        "lat": 25.7689,
+        "lon": -80.3047,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 95,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami-Dade residents 62 and older can use the Golden Ticket Arts Guide for free admission to cultural events. The guide includes Miami City Ballet, Florida Grand Opera, New World Symphony, Pérez Art Museum, Freedom Tower, Deering Estate, and Fairchild Tropical Botanic Garden.",
+      "caption": "Miami-Dade residents 62 and older can use the Golden Ticket Arts Guide for free admission to cultural events. The guide includes Miami City Ballet, Florida Grand Opera, New World Symphony, Pérez Art Museum, Freedom Tower, Deering Estate, and Fairchild Tropical Botanic Garden.",
+      "overlay": "GOLDEN TICKET",
+      "badge": "62 AND OLDER",
+      "sub": "Free culture access",
+      "emoji": "🎟️",
+      "stats": [
+        {
+          "value": "62+",
+          "label": "eligible age"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Miami-Dade Cultural Affairs",
+        "lat": 25.7743,
+        "lon": -80.1903,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 20,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you actually doing this week? South Florida is full of places you mean to try and people you pass without meeting, and NEAR is for the second part.",
+      "overlay": "WHAT'S YOUR PLAN? 🍽️",
+      "sub": "Tell us where to go next",
+      "location": {
+        "name": "Midtown Miami",
+        "lat": 25.8074,
+        "lon": -80.1937,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1700,
+        "pitch": -32,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "100-south-florida-food-openings-and-easy-pla"
+}
