@@ -1,0 +1,114 @@
+{
+  "sector": "ENTERTAINMENT",
+  "cover": {
+    "top": "DID YOU KNOW THAT",
+    "main": "WHOOPI GOLDBERG",
+    "highlight": "WORKED AS A BRICKLAYER",
+    "bottom": "BEFORE SHE BECAME FAMOUS?",
+    "blur": false,
+    "photo": {
+      "query": "Whoopi Goldberg dramatic portrait Wikimedia Commons",
+      "prompt": "dramatic close portrait of Whoopi Goldberg under stage lighting, sharp expression, dark background"
+    },
+    "emojis": [
+      "🧱",
+      "🎭",
+      "🏆"
+    ],
+    "logos": [
+      "wikipedia.org"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Wikimedia Commons (CC BY-SA 4.0)",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "Whoopi Goldberg worked as a bricklayer",
+      "highlight": "worked as a bricklayer",
+      "body": "In the 1970s, Goldberg moved to San Diego, then to Berkeley. She worked odd jobs there, including as a bank teller, a mortuary cosmetologist, and a bricklayer.",
+      "place": "Berkeley, California",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "bricklayer hands laying bricks construction Wikimedia Commons",
+        "prompt": "close-up of hands laying red bricks with mortar on a construction site, sharp detail, dramatic side light"
+      },
+      "emoji": "🧱",
+      "chip": "1970S",
+      "logo": "wikipedia.org",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Wikimedia Commons (CC0)",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "She also worked with a theater troupe",
+      "highlight": "theater troupe",
+      "body": "Goldberg joined the avant-garde theater troupe the Blake Street Hawkeyes. She also gave comedy and acting classes in Berkeley.",
+      "place": "Berkeley, California",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Berkeley theater stage Wikimedia Commons",
+        "prompt": "small theater stage with a single spotlight, empty seats, and a rehearsal feel"
+      },
+      "emoji": "🎭",
+      "chip": "BERKELEY",
+      "logo": "wikipedia.org",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Wikimedia Commons (Public domain)",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "Mike Nichols helped move her show to Broadway",
+      "highlight": "move her show to Broadway",
+      "body": "She created The Spook Show in 1983. Nichols saw her perform and helped transfer it to Broadway as Whoopi Goldberg.",
+      "place": "Broadway, New York",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Broadway marquee night Wikimedia Commons",
+        "prompt": "Broadway theater marquee at night with bright lights and a city sidewalk, no readable fake text"
+      },
+      "emoji": "🎟️",
+      "chip": "1983",
+      "logo": "wikipedia.org",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY-SA 4.0)",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "The recording won a Grammy",
+      "highlight": "won a Grammy",
+      "body": "The Broadway show ran from October 24, 1984, to March 10, 1985. Its recording won Best Comedy Album, and Goldberg became the first Black female comedian to win a Grammy.",
+      "place": "New York City",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Grammy trophy stage lights Wikimedia Commons",
+        "prompt": "gold gramophone award on a dark stage with blue spotlights and theater curtains"
+      },
+      "emoji": "🏆",
+      "chip": "1984 to 1985",
+      "logo": "wikipedia.org",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Wikimedia Commons (CC0)",
+      "logoFile": "logo-4.png"
+    }
+  ],
+  "caption": "Whoopi Goldberg worked as a bricklayer before fame.",
+  "hashtags": [
+    "#WhoopiGoldberg",
+    "#DidYouKnow"
+  ],
+  "collaborators": [],
+  "igCaption": "Whoopi Goldberg worked as a bricklayer before fame.\n\n📰 Sources: Wikipedia\n\n#WhoopiGoldberg #DidYouKnow #miami #southflorida",
+  "kind": "celeb",
+  "kicker": "NEAR NEWS",
+  "person": "Whoopi Goldberg",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Whoopi_Goldberg",
+  "date": "2026-10-20",
+  "id": "2026-10-20-celeb-14-custom-preview"
+}
