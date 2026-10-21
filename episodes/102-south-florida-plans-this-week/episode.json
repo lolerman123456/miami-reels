@@ -1,0 +1,233 @@
+{
+  "title": "South Florida Plans This Week",
+  "sources": [
+    "Miami Herald",
+    "WSVN",
+    "Yahoo",
+    "Miami New Times",
+    "WPEC",
+    "NBA.com",
+    "NHL.com"
+  ],
+  "collaborators": [
+    "gobrightline",
+    "miamiheat"
+  ],
+  "igCaption": "Save these Miami plans before Halloween.\nOct. 21 to Nov. 1, Miami, free to $52\n\nSources: Miami Herald, WSVN, Yahoo, Miami New Times, WPEC, NBA.com, NHL.com\n\n#MiamiEvents #SouthFlorida #MiamiGuide #HalloweenMiami",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "A celebrity cafe just opened in Wynwood, and Brightline brought back a Heat train this week.",
+      "overlay": [
+        "THIS WEEK",
+        "IN MIAMI"
+      ],
+      "emojis": [
+        "☕",
+        "🏀",
+        "🚆",
+        "🎃"
+      ],
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.801,
+        "lon": -80.199,
+        "h": 25
+      },
+      "shot": {
+        "type": "dive",
+        "range": 900,
+        "pitch": -32,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Machine Gun Kelly opened his Miami cafe in Wynwood. WSVN called it a coffee shop and bar, and Yahoo described it as unapologetically authentic.",
+      "caption": "Machine Gun Kelly opened his Miami cafe in Wynwood. WSVN called it a coffee shop and bar, and Yahoo described it as unapologetically authentic.",
+      "overlay": "WYNWOOD",
+      "badge": "OPEN NOW",
+      "sub": "MGK coffee shop",
+      "emoji": "☕",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "opened"
+        }
+      ],
+      "source": "Miami Herald",
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.801,
+        "lon": -80.199,
+        "h": 25
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Brightline brought back its Miami HEAT Buzzer Beater train service for the 2026 to 2027 season. The Heat opened the season Oct. 21 against the Minnesota Timberwolves.",
+      "caption": "Brightline brought back its Miami HEAT Buzzer Beater train service for the 2026-27 season. The Heat opened the season Oct. 21 against the Minnesota Timberwolves.",
+      "overlay": "KASEYA CENTER",
+      "badge": "2026-27",
+      "sub": "Heat train service",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "2026-27",
+          "label": "Heat season"
+        },
+        {
+          "value": "OCT 21",
+          "label": "opener"
+        }
+      ],
+      "source": "WPEC",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.7814,
+        "lon": -80.187,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -35,
+        "heading": 215,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Florida Panthers and Jameson brought back Cats on Tap for the 2026 to 2027 season. It is a drink special tied to Panthers games. If you're at Cats on Tap, check NEAR for Panthers fans nearby.",
+      "caption": "The Florida Panthers and Jameson brought back Cats on Tap for the 2026-27 season. It is a drink special tied to Panthers games. If you're at Cats on Tap, check NEAR for Panthers fans nearby.",
+      "overlay": "PANTHERS",
+      "badge": "BACK FOR 2026-27",
+      "sub": "Cats on Tap",
+      "emoji": "🏒",
+      "stats": [
+        {
+          "value": "2026-27",
+          "label": "season"
+        }
+      ],
+      "source": "NHL.com",
+      "location": {
+        "name": "Amerant Bank Arena",
+        "lat": 26.1595,
+        "lon": -80.3273,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 95,
+        "degrees": 75,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Horrorland is back for its seventh season at Jungle Island. It runs Thursday through Sunday from 7 to 10 p.m. through Nov. 1, with tickets at $39.99.",
+      "caption": "The Horrorland is back for its 7th season at Jungle Island. It runs Thursday through Sunday from 7 to 10 p.m. through Nov. 1, with tickets at $39.99.",
+      "overlay": "JUNGLE ISLAND",
+      "badge": "$39.99",
+      "sub": "Through Nov. 1",
+      "emoji": "🎃",
+      "stats": [
+        {
+          "value": "7TH",
+          "label": "season"
+        },
+        {
+          "value": "$39.99",
+          "label": "tickets"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Jungle Island",
+        "lat": 25.785,
+        "lon": -80.176,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sounds of Screams debuts this year at the Miami-Dade Fair Expo Center. It covers 13 acres, and one ticket includes five haunted houses, carnival rides, scare zones, and live entertainment.",
+      "caption": "Sounds of Screams debuts this year at the Miami-Dade Fair Expo Center. It covers 13 acres, and one ticket includes 5 haunted houses, carnival rides, scare zones and live entertainment.",
+      "overlay": "FAIR EXPO",
+      "badge": "13 ACRES",
+      "sub": "New Halloween park",
+      "emoji": "👻",
+      "stats": [
+        {
+          "value": "13 ACRES",
+          "label": "event site"
+        },
+        {
+          "value": "5",
+          "label": "haunted houses"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami-Dade Fair Expo Center",
+        "lat": 25.7463,
+        "lon": -80.3732,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 95,
+        "degrees": 75,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you saving for this week? It is funny how a week can feel packed with places and still leave you wondering who you kept seeing around town; NEAR turns those crossed paths into names.",
+      "overlay": "SAVE ONE 🎃",
+      "sub": "Tell us your pick",
+      "location": {
+        "name": "Miami-Dade Fair Expo Center",
+        "lat": 25.7463,
+        "lon": -80.3732,
+        "h": 18
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -35,
+        "heading": 110
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "102-south-florida-plans-this-week"
+}
