@@ -67,18 +67,20 @@ async function kokoroVoice() {
 async function openaiVoice({ voice = 'ash', instructions = OPENAI_STYLE, model = 'gpt-4o-mini-tts' }) {
   return async text => {
     for (let attempt = 1; ; attempt++) {
+      // Oct 21: a hung request (no headers for 5 min) killed the 1pm Reel — time out sooner and retry network errors too
       const res = await fetch('https://api.openai.com/v1/audio/speech', {
         method: 'POST',
         headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
         body: JSON.stringify({ model, voice, input: text, instructions, response_format: 'pcm' }), // 24 kHz 16-bit mono
-      });
-      if (res.ok) {
+        signal: AbortSignal.timeout(90000),
+      }).catch(e => { if (attempt >= 3) throw e; console.log(`  TTS attempt ${attempt} failed (${e.cause?.code || e.name}) — retrying`); return null; });
+      if (res?.ok) {
         const pcm = Buffer.from(await res.arrayBuffer());
         const samples = new Float32Array(pcm.length / 2);
         for (let i = 0; i < samples.length; i++) samples[i] = pcm.readInt16LE(i * 2) / 32768;
         return { samples, rate: 24000 };
       }
-      if (attempt >= 3) throw new Error(`OpenAI TTS ${res.status}: ${await res.text()}`);
+      if (res && attempt >= 3) throw new Error(`OpenAI TTS ${res.status}: ${await res.text()}`);
       await new Promise(r => setTimeout(r, 3000 * attempt));
     }
   };
