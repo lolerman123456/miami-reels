@@ -1,0 +1,85 @@
+{
+  "sector": "ENTERTAINMENT",
+  "cover": {
+    "top": "DID YOU KNOW THAT",
+    "main": "PITBULL",
+    "highlight": "LEARNED ENGLISH",
+    "bottom": "BY WATCHING SESAME STREET?",
+    "blur": false,
+    "photo": {
+      "query": "Pitbull performing Wikimedia Commons",
+      "prompt": "dramatic concert photo of Pitbull onstage in sunglasses with a microphone and bright stage lights, packed crowd behind him"
+    },
+    "emojis": [
+      "🎤",
+      "📺"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Wikimedia Commons (CC BY 2.0)",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "Armando Christian Pérez was born in Miami in 1981",
+      "highlight": "Armando Christian Pérez",
+      "body": "Pitbull was born Armando Christian Pérez on January 15, 1981, in Miami, Florida.",
+      "place": "Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Pitbull portrait Wikimedia Commons",
+        "prompt": "sharp portrait of Pitbull in sunglasses against dark concert lighting"
+      },
+      "emoji": "🎤",
+      "chip": "JAN 15 1981",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY 2.0)"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "He learned English by watching Sesame Street",
+      "highlight": "Sesame Street",
+      "body": "As a child, he learned English by watching Sesame Street, and at age 3 he could recite the works of José Martí in Spanish.",
+      "place": "Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Sesame Street television screen Wikimedia Commons",
+        "prompt": "close photo of a television screen showing Sesame Street with warm light in a home setting"
+      },
+      "emoji": "📺",
+      "chip": "AGE 3",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY-SA 3.0)"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "He later became known as Pitbull",
+      "highlight": "Pitbull",
+      "body": "He released his debut album M.I.A.M.I. in 2004 and later broke through as a pop artist, which is why the name still gets repeated.",
+      "place": "",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Pitbull concert crowd Wikimedia Commons",
+        "prompt": "wide photo of Pitbull performing on a large stage with a crowd and bright lights"
+      },
+      "emoji": "🌎",
+      "chip": "2004",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY 2.0)"
+    }
+  ],
+  "caption": "Pitbull learned English from Sesame Street and nobody believes it the first time 😭",
+  "hashtags": [
+    "#Pitbull",
+    "#Wikipedia"
+  ],
+  "collaborators": [],
+  "igCaption": "Pitbull learned English from Sesame Street and nobody believes it the first time 😭\n\n📰 Sources: Wikipedia\n\n#Pitbull #Wikipedia #miami #southflorida",
+  "kind": "celeb",
+  "kicker": "NEAR NEWS",
+  "person": "Pitbull (rapper)",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Pitbull_(rapper)",
+  "date": "2026-10-21",
+  "id": "2026-10-21-celeb-14"
+}
