@@ -1,0 +1,144 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "EVERY BIG",
+    "highlight": "SOUTH FLORIDA",
+    "bottom": "EVENT THIS WEEK",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons South Florida festival crowd night lights",
+      "prompt": "dramatic South Florida night festival crowd with bright stage lights, palm trees, and people moving toward an entrance"
+    },
+    "emojis": [
+      "🎃",
+      "🎟️",
+      "🗓️"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Tunnel of Terror, Oct. 21",
+      "highlight": "Tunnel of Terror",
+      "body": "El Car Wash at 6695 W. Flagler St. in Miami runs it from 5 to 9 p.m. Standard car wash pricing applies, and drivers get two free House of Horror tickets while supplies last.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "El Car Wash Miami Halloween tunnel night",
+        "prompt": "night car wash tunnel in Miami glowing red with scare actors outside the lane, headlights, wet pavement, and a dramatic close-up on the tunnel entrance"
+      },
+      "emoji": "🚗",
+      "chip": "FREE TICKETS",
+      "logo": "elcarwash.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "The Horrorland Scream Park, Oct. 22 to 26",
+      "highlight": "The Horrorland",
+      "body": "Jungle Island in Miami runs it Thursday through Sunday from 7 to 10 p.m. Tickets cost $39.99 for haunted houses, scare zones, and carnival rides.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Jungle Island Miami Halloween entrance night",
+        "prompt": "Jungle Island entrance at night with fog, orange and purple lights, haunted house facade, and people in costumes"
+      },
+      "emoji": "👻",
+      "chip": "$39.99",
+      "logo": "thehorrorland.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Nightmare Village, Oct. 22 to 26",
+      "highlight": "Nightmare Village",
+      "body": "Xtreme Action Park in Fort Lauderdale runs it Thursday through Sunday from 7 to 10 p.m. Tickets cost $40 to $55 for three indoor haunted stories.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Xtreme Action Park Fort Lauderdale haunted attraction interior",
+        "prompt": "indoor haunted attraction in Fort Lauderdale with neon lights, fog, a scary corridor, and a clear view of the entrance"
+      },
+      "emoji": "🕯️",
+      "chip": "$40 to $55",
+      "logo": "xtremeactionpark.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Track or Treat, Oct. 23",
+      "highlight": "Track or Treat",
+      "body": "Evelyn Greer Park in Pinecrest starts trick-or-treating at 5 p.m. and the outdoor screening at 7 p.m. Admission is free.",
+      "place": "Pinecrest",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Evelyn Greer Park Pinecrest Halloween family event",
+        "prompt": "family Halloween event at a park in Pinecrest with candy tables, bounce houses, a movie screen, and kids in costumes at dusk"
+      },
+      "emoji": "🍬",
+      "chip": "FREE",
+      "logo": "pinecrest-fl.gov",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Haulover Park Kite Festival, Oct. 24 to 25",
+      "highlight": "Kite Festival",
+      "body": "Haulover Park in Miami Beach runs it from 11 a.m. to 6 p.m. Admission is free, and parking costs $10 per car.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Haulover Park Miami Beach giant kites",
+        "prompt": "giant colorful kites shaped like sea animals flying over Haulover Park with families on the grass and a wide beach backdrop"
+      },
+      "emoji": "🪁",
+      "chip": "FREE",
+      "logo": "skywardkites.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Zoo Boo, Oct. 24 to 25",
+      "highlight": "Zoo Boo",
+      "body": "Zoo Miami in Miami runs it from 10 a.m. to 3 p.m. Admission is free with zoo entry, which starts at $21.95.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Zoo Miami Halloween family event entrance",
+        "prompt": "Zoo Miami entrance decorated for Halloween with pumpkins, families in costumes, and animal-themed activity stations"
+      },
+      "emoji": "🦁",
+      "chip": "$21.95+",
+      "logo": "zoomiami.org",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-6.png"
+    }
+  ],
+  "caption": "Your weekend plans are handled. Who are you taking? Tag a friend.",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiHalloween"
+  ],
+  "collaborators": [],
+  "igCaption": "Your weekend plans are handled. Who are you taking? Tag a friend.\n\n📰 Sources: Secret Miami, Miami New Times\n\n#SouthFloridaEvents #MiamiHalloween #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-21",
+  "id": "2026-10-21-upcoming"
+}
