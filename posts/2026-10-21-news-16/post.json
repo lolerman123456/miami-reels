@@ -1,0 +1,74 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "POLICE SAY",
+    "main": "HE ALLEGEDLY LIVED THERE",
+    "highlight": "FOR 4 YEARS",
+    "bottom": "USING A DEAD MAN'S ID WHILE RENOVATING THE HOME",
+    "blur": false,
+    "photo": {
+      "query": "Lauderhill Florida police car outside single-family home night",
+      "prompt": "dramatic night photo of a South Florida police cruiser outside a quiet single-family home, blue lights reflecting on the street, no people visible"
+    },
+    "emojis": [
+      "🚓",
+      "🏠",
+      "🪪"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WFTV",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Police say he lived there 4 years",
+      "highlight": "4 years",
+      "body": "A Lauderhill police officer is accused of taking over a dead man's South Florida home, using his identity and renovating the property.",
+      "place": "Lauderhill",
+      "source": "New York Post",
+      "photo": {
+        "query": "Lauderhill Florida home police cruiser night",
+        "prompt": "quiet South Florida house at night with a police cruiser parked outside, crime-scene mood, no people visible",
+        "mark": "stamp: ACCUSED"
+      },
+      "emoji": "🚓",
+      "chip": "4 YEARS",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: NBC News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case began with a welfare check",
+      "highlight": "welfare check",
+      "body": "NBC News reported the officer found the man dead in the home before the alleged takeover began.",
+      "place": "South Florida",
+      "source": "NBC News",
+      "photo": {
+        "query": "Florida police welfare check house exterior",
+        "prompt": "front entrance of a South Florida home with a patrol car nearby during a welfare check, no people visible"
+      },
+      "emoji": "🚪",
+      "chip": "WELFARE",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WFTV"
+    }
+  ],
+  "caption": "A welfare check allegedly turned into a 4-year identity takeover.",
+  "hashtags": [
+    "#Lauderhill",
+    "#BrowardCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "A welfare check allegedly turned into a 4-year identity takeover.\n\n📰 Sources: New York Post, NBC News, WPLG Local 10, inkl, NBC 6 South Florida\n\n🎥 Video: CBS News Miami\n\n#Lauderhill #BrowardCounty #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-21",
+  "id": "2026-10-21-news-16",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "CBS News Miami",
+    "url": "https://www.youtube.com/watch?v=iaZtvVR_BBw"
+  }
+}
