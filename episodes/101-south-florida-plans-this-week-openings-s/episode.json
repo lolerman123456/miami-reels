@@ -1,0 +1,199 @@
+{
+  "title": "South Florida plans this week: openings, sales, and one rocket",
+  "sources": [
+    "Miami New Times",
+    "Inter Miami CF",
+    "WSVN 7News",
+    "Eater Miami"
+  ],
+  "collaborators": [
+    "intermiamicf"
+  ],
+  "igCaption": "New openings, a stadium sale, and a rocket week in Florida.\nOct. 21 at Nu Stadium\n\nSources: Miami New Times, Inter Miami CF, WSVN 7News, Eater Miami\n\n#MiamiEvents #SouthFlorida #FortLauderdale #MiamiFood",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need plans this week? Start with the new openings, a stadium sale, and one Florida rocket launch.",
+      "overlay": [
+        "THIS WEEK",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🛒",
+        "⚽",
+        "🚀",
+        "🍽️"
+      ],
+      "location": {
+        "name": "Nu Stadium",
+        "lat": 26.1931,
+        "lon": -80.1611,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Trader Joe’s is opening three new Florida stores in 2026 and 2027. Boynton Beach gets its first location at 334 N. Congress Ave., Unit B, in 2027. Orlando and Sarasota are also on the list.",
+      "caption": "Trader Joe’s is opening 3 new Florida stores in 2026 and 2027. Boynton Beach gets its first location at 334 N. Congress Ave., Unit B, in 2027.",
+      "overlay": "BOYNTON BEACH",
+      "badge": "OPENS 2027",
+      "sub": "First city location",
+      "emoji": "🛒",
+      "stats": [
+        {
+          "value": "3",
+          "label": "Florida stores"
+        },
+        {
+          "value": "2027",
+          "label": "Boynton debut"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "334 N. Congress Ave., Unit B, Boynton Beach",
+        "lat": 26.5296,
+        "lon": -80.0909,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Inter Miami CF’s Merch Madness sale is Wednesday, Oct. 21, at Nu Stadium. The club says it is its biggest sale of the year.",
+      "caption": "Inter Miami CF’s Merch Madness sale is Wednesday, Oct. 21, at Nu Stadium. The club says it is its biggest sale of the year.",
+      "overlay": "NU STADIUM",
+      "badge": "OCT. 21",
+      "sub": "Merch Madness sale",
+      "emoji": "⚽",
+      "stats": [
+        {
+          "value": "Oct. 21",
+          "label": "Sale date"
+        }
+      ],
+      "source": "Inter Miami CF",
+      "location": {
+        "name": "Nu Stadium",
+        "lat": 26.1931,
+        "lon": -80.1611,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 40,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "SpaceX launched the Bandwagon 5 mission Tuesday morning from Cape Canaveral Space Force Station. The Falcon 9 rocket carried several satellites. If you’re at Cape Canaveral, open NEAR and see who else watched it.",
+      "caption": "SpaceX launched the Bandwagon 5 mission Tuesday morning from Cape Canaveral Space Force Station. The Falcon 9 rocket carried several satellites. If you’re at Cape Canaveral, open NEAR and see who else watched it.",
+      "overlay": "CAPE CANAVERAL",
+      "badge": "FALCON 9",
+      "sub": "Bandwagon 5 mission",
+      "emoji": "🚀",
+      "stats": [
+        {
+          "value": "5",
+          "label": "Mission number"
+        },
+        {
+          "value": "9",
+          "label": "Falcon rocket"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Cape Canaveral Space Force Station",
+        "lat": 28.48888889,
+        "lon": -80.57777778,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 2200,
+        "pitch": -35,
+        "heading": 96,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For dinner, Eater added Fooq’s in Little River to its October 2026 Miami 38 list. The restaurant reemerged in Little River with a Persian-inspired menu.",
+      "caption": "Eater added Fooq’s in Little River to its October 2026 Miami 38 list. The restaurant reemerged with a Persian-inspired menu.",
+      "overlay": "LITTLE RIVER",
+      "badge": "NEW IN OCT.",
+      "sub": "Persian-inspired",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "38",
+          "label": "Eater list"
+        },
+        {
+          "value": "2026",
+          "label": "October update"
+        }
+      ],
+      "source": "Eater Miami",
+      "location": {
+        "name": "Little River, Miami",
+        "lat": 25.8319,
+        "lon": -80.1937,
+        "h": 30
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -30,
+        "heading": 260,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you doing first this week? And if this week sends you past someone you keep noticing but never meet, NEAR is the app that turns that passing glance into a name.",
+      "overlay": "WHAT'S FIRST?",
+      "sub": "Drop the plan",
+      "location": {
+        "name": "Little River, Miami",
+        "lat": 25.8319,
+        "lon": -80.1937,
+        "h": 30
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 310
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "101-south-florida-plans-this-week-openings-s"
+}
