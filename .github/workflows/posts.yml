@@ -207,7 +207,7 @@ jobs:
           for d in out/shareslop/*/; do [ -f "${d}slide.jpg" ] || continue; n=$(basename "$d")
             cp "${d}slide.jpg" "/tmp/shareslop-$n.jpg"; gh release upload slides "/tmp/shareslop-$n.jpg" --clobber
             echo "▶ https://github.com/${{ github.repository }}/releases/download/slides/shareslop-$n.jpg  $(jq -r '.caption' "${d}post.json" | head -c 300 | tr '\n' ' ')" | tee -a "$GITHUB_STEP_SUMMARY"; done
-          D=$(ls -td posts/*-preview 2>/dev/null | while read d; do ls "$d"/00-cover.jpg >/dev/null 2>&1 && echo "$d" && break; done); [ -n "$D" ] || exit 0
+          D=$(ls -td posts/*-preview 2>/dev/null | while read d; do ls "$d"/00-cover.jpg >/dev/null 2>&1 && echo "$d" && break; done; true); [ -n "$D" ] || exit 0 # true: a kept celeb preview post.json has no slides here
           gh release view slides >/dev/null 2>&1 || gh release create slides --title "Carousel previews" --notes "Preview slides (not posted)."
           gh release view slides --json assets -q '.assets[].name' | grep "^out-$(basename "$D")-" | while read a; do gh release delete-asset slides "$a" -y; done || true
           for f in "$D"/*.jpg "$D"/story-video.mp4; do [ -e "$f" ] || continue; case "$f" in */photo-*) continue;; esac; cp "$f" "out-$(basename "$D")-$(basename "$f")"; gh release upload slides "out-$(basename "$D")-$(basename "$f")" --clobber; \
