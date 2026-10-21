@@ -1,0 +1,229 @@
+{
+  "title": "South Florida plans this week",
+  "sources": [
+    "Sun Sentinel",
+    "EDMTunes",
+    "Secret Miami",
+    "Miami New Times"
+  ],
+  "collaborators": [
+    "gobrightline"
+  ],
+  "igCaption": "This week has magic, late trains, jazz, and giant kites.\n\nSources: Sun Sentinel, EDMTunes, Secret Miami, Miami New Times\n\n#MiamiEvents #SouthFlorida #MiamiBeach #FortLauderdale",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "This week in South Florida has a true-crime magic show, a new after-hours DJ series, and a midnight train home.",
+      "overlay": [
+        "THIS WEEK",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🎩",
+        "🎧",
+        "🚆",
+        "🪁"
+      ],
+      "location": {
+        "name": "MiamiCentral",
+        "lat": 25.7789,
+        "lon": -80.1956,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Ben Seidman is bringing CON MAN: A True Crime Magic Show to Broward Center. The show puts deception and true-crime storytelling on the same stage in Fort Lauderdale.",
+      "caption": "Ben Seidman is bringing CON MAN: A True Crime Magic Show to Broward Center. The show puts deception and true-crime storytelling on the same stage in Fort Lauderdale.",
+      "overlay": "BROWARD CENTER",
+      "badge": "TRUE CRIME",
+      "sub": "Ben Seidman show",
+      "emoji": "🎩",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "show coverage"
+        }
+      ],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Broward Center for the Performing Arts",
+        "lat": 26.1195,
+        "lon": -80.1492,
+        "h": 40
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Queen Miami Beach launched an after-hours DJ series inside the Paris Theater. The series brings late-night sets to the venue on Washington Avenue.",
+      "caption": "Queen Miami Beach launched an after-hours DJ series inside the Paris Theater. The series brings late-night sets to the venue on Washington Avenue.",
+      "overlay": "QUEEN MIAMI",
+      "badge": "AFTER HOURS",
+      "sub": "Paris Theater series",
+      "emoji": "🎧",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "series launch"
+        }
+      ],
+      "source": "EDMTunes",
+      "location": {
+        "name": "Queen Miami Beach at Paris Theater",
+        "lat": 25.7829,
+        "lon": -80.1326,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 95,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Brightline is running a one-night Midnight Train after Halloween Horror Nights. It leaves Orlando at 12:15 a.m. on Sunday, October 25, then stops in West Palm Beach, Boca Raton, Fort Lauderdale, Aventura, and Miami. If you ride back, open NEAR and see who else was aboard.",
+      "caption": "Brightline is running a one-night Midnight Train after Halloween Horror Nights. It leaves Orlando at 12:15 a.m. on Sunday, October 25, then stops in West Palm Beach, Boca Raton, Fort Lauderdale, Aventura, and Miami. If you ride back, open NEAR and see who else was aboard.",
+      "overlay": "MIAMICENTRAL",
+      "badge": "12:15 A.M.",
+      "sub": "One-night train",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "12:15 A.M.",
+          "label": "departure"
+        },
+        {
+          "value": "5 STOPS",
+          "label": "South FL stops"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "MiamiCentral",
+        "lat": 25.7789,
+        "lon": -80.1956,
+        "h": 85
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 210,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Betsy Hotel has free fall and winter music on Ocean Drive. Its live music programming first launched in 2010, and Sofar Sounds starts a monthly residency there on Friday, October 23.",
+      "caption": "The Betsy Hotel has free fall and winter music on Ocean Drive. Its live music programming first launched in 2010, and Sofar Sounds starts a monthly residency there on Friday, October 23.",
+      "overlay": "THE BETSY",
+      "badge": "FREE MUSIC",
+      "sub": "Ocean Drive lineup",
+      "emoji": "🎹",
+      "stats": [
+        {
+          "value": "2010",
+          "label": "music launched"
+        },
+        {
+          "value": "OCT 23",
+          "label": "Sofar starts"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "The Betsy Hotel",
+        "lat": 25.7866,
+        "lon": -80.1308,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 25,
+        "degrees": 75,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Haulover Park Kite Festival runs Saturday and Sunday from 11 a.m. to 6 p.m. The sky gets 100-foot stingrays, giant whales, and a 30-foot astronaut. Admission is free, parking is $10 per car.",
+      "caption": "Haulover Park Kite Festival runs Saturday and Sunday from 11 a.m. to 6 p.m. The sky gets 100-foot stingrays, giant whales, and a 30-foot astronaut. Admission is free, parking is $10 per car.",
+      "overlay": "HAULOVER",
+      "badge": "100-FT KITES",
+      "sub": "$10 parking",
+      "emoji": "🪁",
+      "stats": [
+        {
+          "value": "100 FT",
+          "label": "stingrays"
+        },
+        {
+          "value": "$10",
+          "label": "parking"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Haulover Park",
+        "lat": 25.9065,
+        "lon": -80.1243,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -28,
+        "heading": 330,
+        "degrees": 90,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you doing this week? And if your week includes crossing paths with someone you never got to ask about, NEAR shows you who they were after the moment has passed.",
+      "overlay": "PICK ONE 👇",
+      "sub": "Comment your plan",
+      "location": {
+        "name": "Haulover Park",
+        "lat": 25.9065,
+        "lon": -80.1243,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 330
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "103-south-florida-plans-this-week"
+}
