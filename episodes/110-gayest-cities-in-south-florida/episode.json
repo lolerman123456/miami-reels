@@ -1,0 +1,94 @@
+{
+  "title": "Gayest Cities in South Florida",
+  "id": "110-gayest-cities-in-south-florida",
+  "format": "BY THE NUMBERS",
+  "sources": ["Williams Institute (UCLA School of Law)", "2020 U.S. Census"],
+  "collaborators": [],
+  "igCaption": "The gayest cities in South Florida, by the 2020 Census 🏳️‍🌈 Ranked by same-sex couples per 1,000 households. Did yours make it?\n\nSources: Williams Institute (UCLA School of Law), 2020 U.S. Census\n\n#SouthFlorida #WiltonManors #FortLauderdale #Pride",
+  "tiktok": true,
+  "music": true,
+  "voice": { "provider": "openai", "voice": "ash" },
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "These are the gayest cities in South Florida. Ranked by same-sex couples per household, from the 2020 Census.",
+      "overlay": ["GAYEST CITIES", "IN SOUTH FLORIDA"],
+      "emojis": ["🏳️‍🌈", "🌴", "📍", "🏙️"],
+      "location": { "name": "Wilton Drive, Wilton Manors", "lat": 26.1601, "lon": -80.137, "h": 5 },
+      "shot": { "type": "dive", "range": 1600, "pitch": -35, "heading": 200 }
+    },
+    {
+      "kind": "item",
+      "text": "Number five is Fort Lauderdale. About forty two of every thousand households are same-sex couples. And with about thirty five hundred couples, it has more than any other city on this list.",
+      "caption": "#5 Fort Lauderdale: 41.8 of every 1,000 households are same-sex couples. 3,527 couples, the most on this list.",
+      "overlay": "FORT LAUDERDALE",
+      "badge": "41.8 PER 1K",
+      "sub": "#5 · 3,527 couples",
+      "emoji": "🏙️",
+      "stats": [{ "value": "3,527", "label": "same-sex couples" }],
+      "source": "Williams Institute",
+      "location": { "name": "Fort Lauderdale", "lat": 26.1224, "lon": -80.1373, "h": 5 },
+      "shot": { "type": "orbit", "range": 1600, "pitch": -32, "heading": 120, "degrees": 70, "dir": 1 }
+    },
+    {
+      "kind": "item",
+      "text": "Number four, Miami Shores. Almost fifty two of every thousand households, from one hundred eighty nine couples.",
+      "caption": "#4 Miami Shores: 51.7 per 1,000 households, from 189 couples.",
+      "overlay": "MIAMI SHORES",
+      "badge": "51.7 PER 1K",
+      "sub": "#4 · 189 couples",
+      "emoji": "🌴",
+      "stats": [{ "value": "189", "label": "same-sex couples" }],
+      "source": "Williams Institute",
+      "location": { "name": "Miami Shores", "lat": 25.8631, "lon": -80.1928, "h": 3 },
+      "shot": { "type": "orbit", "range": 800, "pitch": -32, "heading": 60, "degrees": 70, "dir": -1 }
+    },
+    {
+      "kind": "item",
+      "text": "Number three is tiny El Portal, right next door. Only fifty four couples, but that is seventy of every thousand households.",
+      "caption": "#3 El Portal: just 54 couples, but 70 per 1,000 households.",
+      "overlay": "EL PORTAL",
+      "badge": "70 PER 1K",
+      "sub": "#3 · 54 couples",
+      "emoji": "🏡",
+      "stats": [{ "value": "54", "label": "same-sex couples" }],
+      "source": "Williams Institute",
+      "location": { "name": "El Portal", "lat": 25.8553, "lon": -80.1959, "h": 3 },
+      "shot": { "type": "orbit", "range": 600, "pitch": -32, "heading": 200, "degrees": 70, "dir": 1 }
+    },
+    {
+      "kind": "item",
+      "text": "Number two, Oakland Park. About seventy four of every thousand households. That ranks seventh in the entire country.",
+      "caption": "#2 Oakland Park: 73.7 per 1,000 households. #7 in the whole U.S.",
+      "overlay": "OAKLAND PARK",
+      "badge": "#7 IN THE US",
+      "sub": "#2 · 73.7 per 1K",
+      "emoji": "🏳️‍🌈",
+      "stats": [{ "value": "1,406", "label": "same-sex couples" }],
+      "source": "Williams Institute",
+      "location": { "name": "Oakland Park", "lat": 26.1723, "lon": -80.132, "h": 3 },
+      "shot": { "type": "orbit", "range": 900, "pitch": -32, "heading": 300, "degrees": 70, "dir": -1 }
+    },
+    {
+      "kind": "item",
+      "text": "And number one is Wilton Manors. Two hundred thirteen of every thousand households are same-sex couples. That is the highest share of any city in the United States.",
+      "caption": "#1 Wilton Manors: 213 of every 1,000 households are same-sex couples. #1 in the entire U.S.",
+      "overlay": "WILTON MANORS",
+      "badge": "#1 IN THE US",
+      "sub": "#1 · 213.5 per 1K",
+      "emoji": "👑",
+      "stats": [{ "value": "1,331", "label": "same-sex couples" }],
+      "source": "Williams Institute",
+      "location": { "name": "Wilton Drive, Wilton Manors", "lat": 26.1601, "lon": -80.137, "h": 5 },
+      "shot": { "type": "orbit", "range": 700, "pitch": -32, "heading": 30, "degrees": 80, "dir": 1 }
+    },
+    {
+      "kind": "outro",
+      "text": "Did your city make the list? Tag a friend who lives in one. And if you keep seeing the same faces out on Wilton Drive, NEAR is how you finally get their names.",
+      "overlay": "DID YOURS MAKE IT? 🏳️‍🌈",
+      "sub": "Tag a friend",
+      "location": { "name": "Broward County coast", "lat": 26.14, "lon": -80.12, "h": 5 },
+      "shot": { "type": "pullout", "range": 2200, "pitch": -35, "heading": 110 }
+    }
+  ]
+}
