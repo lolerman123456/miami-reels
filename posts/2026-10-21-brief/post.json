@@ -1,0 +1,74 @@
+{
+  "sector": "WEATHER",
+  "cover": {
+    "top": "KING TIDES PLUS",
+    "main": "MODERATE TO MAJOR",
+    "highlight": "COASTAL FLOODING",
+    "bottom": "COULD HIT SOUTH FLORIDA THIS WEEKEND",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Miami Beach king tide flooding street cars",
+      "prompt": "dramatic flooded Miami Beach street during king tide, water covering the roadway, cars slowed by standing water, storm clouds overhead, palm trees bending in wind"
+    },
+    "emojis": [
+      "🌊",
+      "🌧️",
+      "💨"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Yahoo",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "WEATHER",
+      "headline": "Moderate to major coastal flooding could hit this weekend",
+      "highlight": "moderate to major coastal flooding",
+      "body": "CBS News says king tides, heavy rain and wind could cause moderate to major coastal flooding in South Florida this weekend.",
+      "place": "South Florida",
+      "source": "CBS News",
+      "photo": {
+        "query": "Wikimedia Commons Miami Beach coastal flooding king tide Collins Avenue",
+        "prompt": "floodwater covering a Miami Beach street during a king tide, cars moving slowly through deep water under gray storm clouds"
+      },
+      "emoji": "🌊",
+      "chip": "WEEKEND",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "Miami-Dade, Broward, Palm Beach and the Keys are in the alert area",
+      "highlight": "alert area",
+      "body": "CBS News says the coastal flooding risk covers Miami-Dade, Broward, Palm Beach and the Florida Keys.",
+      "place": "Miami-Dade, Broward, Palm Beach and Keys",
+      "source": "CBS News",
+      "photo": {
+        "query": "Wikimedia Commons Florida Keys Overseas Highway storm water",
+        "prompt": "stormy water near the Florida Keys Overseas Highway, choppy waves close to the low road, dark clouds over the ocean",
+        "mark": "arrow"
+      },
+      "emoji": "📍",
+      "chip": "4 AREAS",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Yahoo"
+    }
+  ],
+  "caption": "King tides, heavy rain and wind could push South Florida into a rough weekend of coastal flooding.",
+  "hashtags": [
+    "#SouthFloridaWeather",
+    "#KingTides"
+  ],
+  "collaborators": [],
+  "igCaption": "King tides, heavy rain and wind could push South Florida into a rough weekend of coastal flooding.\n\n📰 Sources: CBS News, Wikipedia, FOX Weather\n\n🎥 Video: CBS News Miami\n\n#SouthFloridaWeather #KingTides #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-21",
+  "id": "2026-10-21-brief",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "CBS News Miami",
+    "url": "https://www.youtube.com/watch?v=2gA13mzNPQE"
+  }
+}
