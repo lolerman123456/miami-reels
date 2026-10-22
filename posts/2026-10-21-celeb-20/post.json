@@ -1,0 +1,101 @@
+{
+  "sector": "ENTERTAINMENT",
+  "cover": {
+    "top": "DID YOU KNOW THAT",
+    "main": "RICK ROSS",
+    "highlight": "WORKED AS A CORRECTIONAL OFFICER",
+    "bottom": "BEFORE HE STARTED RAPPING?",
+    "blur": false,
+    "photo": {
+      "query": "Rick Ross performance onstage Wikimedia Commons",
+      "prompt": "dramatic concert photo of Rick Ross onstage with a microphone, bright stage lights, dark background"
+    },
+    "emojis": [
+      "🎤",
+      "👮",
+      "🌴"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Wikimedia Commons (CC BY 3.0)",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "Rick Ross worked as a Florida correctional officer",
+      "highlight": "Florida correctional officer",
+      "body": "William Leonard Roberts II had the job before his debut single “Hustlin'” came out in March 2006.",
+      "place": "Florida",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Rick Ross performing Wikimedia Commons",
+        "prompt": "Rick Ross performing onstage with a microphone, intense lighting, and a crowded concert setting"
+      },
+      "emoji": "👮",
+      "chip": "FLORIDA",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY-SA 4.0)"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "He held the job for 18 months",
+      "highlight": "18 months",
+      "body": "Roberts worked from December 1995 until his resignation in June 1997.",
+      "place": "Florida",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Florida correctional officer building Wikimedia Commons",
+        "prompt": "Florida correctional facility exterior with fencing and a guard tower, shot in a moody late-afternoon light"
+      },
+      "emoji": "📅",
+      "chip": "1995-1997",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY 2.0)"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "The detail came back up in 2008",
+      "highlight": "July 2008",
+      "body": "The Smoking Gun linked Ross to the 18-month stint, and a uniform photo circulated soon after.",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "South Florida Reception Center Wikimedia Commons",
+        "prompt": "Florida prison facility exterior with secure fencing and a clear institutional entrance"
+      },
+      "emoji": "🗞️",
+      "chip": "2008",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY 3.0)"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "Ross later admitted the job was real",
+      "highlight": "admitted it",
+      "body": "After the evidence became public, he said he had worked as a correctional officer in Florida from 1995 to 1997.",
+      "place": "Florida",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Rick Ross close-up performance Wikimedia Commons",
+        "prompt": "close-up concert photo of Rick Ross holding a microphone under red stage lights"
+      },
+      "emoji": "🎙️",
+      "chip": "ADMITTED",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY-SA 4.0)"
+    }
+  ],
+  "caption": "Rick Ross really did the prison guard job before the rap career 😭",
+  "hashtags": [
+    "#RickRoss",
+    "#MiamiHipHop"
+  ],
+  "collaborators": [],
+  "igCaption": "Rick Ross really did the prison guard job before the rap career 😭\n\n📰 Sources: Wikipedia\n\n#RickRoss #MiamiHipHop #miami #southflorida",
+  "kind": "celeb",
+  "kicker": "NEAR NEWS",
+  "person": "Rick Ross",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Rick_Ross",
+  "date": "2026-10-21",
+  "id": "2026-10-21-celeb-20"
+}
