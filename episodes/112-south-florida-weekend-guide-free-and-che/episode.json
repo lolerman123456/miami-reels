@@ -1,0 +1,259 @@
+{
+  "title": "South Florida Weekend Guide: Free and Cheap First",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami",
+    "WSVN 7News",
+    "ESPN"
+  ],
+  "collaborators": [
+    "gobrightline"
+  ],
+  "igCaption": "Free block parties, a midnight train, and a soccer move to Miami.\nOct. 24 and Oct. 31, South Florida, $45 and up\n\nSources: Miami New Times, Secret Miami, WSVN 7News, ESPN\n\n#MiamiEvents #SouthFlorida #MiamiWeekend #ThingsToDoMiami",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Halloween lands on a Saturday in twenty twenty-six, and South Florida has free plans before the paid ones.",
+      "overlay": [
+        "WEEKEND GUIDE",
+        "FREE FIRST"
+      ],
+      "emojis": [
+        "🎃",
+        "🚆",
+        "⚽",
+        "📱"
+      ],
+      "location": {
+        "name": "Wynwood Marketplace",
+        "lat": 25.8004,
+        "lon": -80.1992,
+        "h": 18
+      },
+      "shot": {
+        "type": "dive",
+        "range": 900,
+        "pitch": -32,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start in Wynwood. HalloWyn returns to Wynwood Marketplace for its thirteenth consecutive year, from seven p.m. to three a.m. Admission is free. The open bar option is forty-five dollars from seven to ten.",
+      "caption": "Start in Wynwood. HalloWyn returns to Wynwood Marketplace for its 13th consecutive year, from 7 p.m. to 3 a.m. Admission is free. The open bar option is $45 from 7 to 10.",
+      "overlay": "HALLOWYN",
+      "badge": "FREE",
+      "sub": "2250 NW 2nd Ave.",
+      "emoji": "🎃",
+      "stats": [
+        {
+          "value": "13",
+          "label": "years running"
+        },
+        {
+          "value": "$45",
+          "label": "open bar"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Wynwood Marketplace",
+        "lat": 25.8004,
+        "lon": -80.1992,
+        "h": 18
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Lincoln Road starts earlier. Kids can trick-or-treat around the pedestrian mall from five-thirty to seven-thirty. At eight p.m., the block party shifts into the adult part of the night. Admission stays free.",
+      "caption": "Lincoln Road starts earlier. Kids can trick-or-treat around the pedestrian mall from 5:30 to 7:30. At 8 p.m., the block party shifts into the adult part of the night. Admission stays free.",
+      "overlay": "LINCOLN ROAD",
+      "badge": "FREE",
+      "sub": "Miami Beach block party",
+      "emoji": "🍬",
+      "stats": [
+        {
+          "value": "5:30",
+          "label": "trick-or-treat"
+        },
+        {
+          "value": "8 PM",
+          "label": "party shift"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Lincoln Road",
+        "lat": 25.79055556,
+        "lon": -80.13638889,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -30,
+        "heading": 75,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Apple Store on Lincoln Road has a different kind of line this week. WSVN reported people forming up ahead of the iPhone Duo release on Friday. Apple's new phone is a foldable model.",
+      "caption": "The Apple Store on Lincoln Road has a different kind of line this week. WSVN reported people forming up ahead of the iPhone Duo release on Friday. Apple's new phone is a foldable model.",
+      "overlay": "APPLE LINE",
+      "badge": "FRIDAY",
+      "sub": "iPhone Duo release",
+      "emoji": "📱",
+      "stats": [
+        {
+          "value": "FRI",
+          "label": "release day"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Lincoln Road",
+        "lat": 25.79055556,
+        "lon": -80.13638889,
+        "h": 15
+      },
+      "shot": {
+        "type": "push",
+        "range": 600,
+        "pitch": -28,
+        "heading": 112
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For the cheap live music pick, Churchill’s in Little Haiti has Necrodanse at nine p.m. Last Grasp, In a Darkened Room, and Blood Orchid play live. Tickets run eleven to twenty dollars. If you're there, open NEAR and see who else caught the set.",
+      "caption": "For the cheap live music pick, Churchill’s in Little Haiti has Necrodanse at 9 p.m. Last Grasp, In a Darkened Room, and Blood Orchid play live. Tickets run $11 to $20. If you're there, open NEAR and see who else caught the set.",
+      "overlay": "CHURCHILL'S",
+      "badge": "$11-$20",
+      "sub": "5501 NE 2nd Ave.",
+      "emoji": "🎸",
+      "stats": [
+        {
+          "value": "$11",
+          "label": "low ticket"
+        },
+        {
+          "value": "9 PM",
+          "label": "start time"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Churchill's Pub",
+        "lat": 25.8267,
+        "lon": -80.1913,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -31,
+        "heading": 215,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The travel pick is Brightline’s one-night Midnight Train after Halloween Horror Nights. It leaves Orlando at twelve-fifteen a.m. Sunday, October twenty-fifth, then stops in West Palm Beach, Boca Raton, Fort Lauderdale, Aventura, and Miami.",
+      "caption": "The travel pick is Brightline’s one-night Midnight Train after Halloween Horror Nights. It leaves Orlando at 12:15 a.m. Sunday, Oct. 25, then stops in West Palm Beach, Boca Raton, Fort Lauderdale, Aventura, and Miami.",
+      "overlay": "BRIGHTLINE",
+      "badge": "12:15 AM",
+      "sub": "One-night HHN train",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "12:15 AM",
+          "label": "departure"
+        },
+        {
+          "value": "25%",
+          "label": "group savings"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Brightline Aventura Station",
+        "lat": 25.9657,
+        "lon": -80.1434,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami also gets the USMNT's Concacaf Nations League quarterfinal away leg against Haiti.",
+      "caption": "Miami also gets the USMNT's Concacaf Nations League quarterfinal away leg against Haiti.",
+      "overlay": "SOCCER MOVES",
+      "badge": "MIAMI",
+      "sub": "USMNT vs. Haiti",
+      "emoji": "⚽",
+      "stats": [
+        {
+          "value": "Miami",
+          "label": "host city"
+        }
+      ],
+      "source": "ESPN",
+      "location": {
+        "name": "Hard Rock Stadium",
+        "lat": 25.95805556,
+        "lon": -80.23888889,
+        "h": 18
+      },
+      "shot": {
+        "type": "push",
+        "range": 700,
+        "pitch": -30,
+        "heading": 260
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Pick the free one, the $45 one, or the midnight train. And if your weekend plans mean passing the same faces all over South Florida, NEAR is the app that shows you who those almost-meetings actually were.",
+      "overlay": "WHAT'S YOUR PICK? 👇",
+      "sub": "Free, cheap, or train",
+      "location": {
+        "name": "Lincoln Road",
+        "lat": 25.79055556,
+        "lon": -80.13638889,
+        "h": 15
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1300,
+        "pitch": -30,
+        "heading": 185
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "112-south-florida-weekend-guide-free-and-che"
+}
