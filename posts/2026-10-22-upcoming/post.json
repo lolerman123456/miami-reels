@@ -1,0 +1,121 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "EVERY BIG",
+    "highlight": "SOUTH FLORIDA",
+    "bottom": "EVENT THIS WEEK",
+    "blur": false,
+    "photo": {
+      "query": "South Florida Halloween crowd at night with neon lights costumes palm trees and stage smoke",
+      "prompt": "dramatic South Florida Halloween crowd at night with neon lights, costumes, palm trees, and stage smoke"
+    },
+    "emojis": [
+      "🎃",
+      "🚆",
+      "👻"
+    ],
+    "logos": [
+      "thehorrorland.com",
+      "soundsofscreams.com",
+      "houseofhorrorcarnival.com",
+      "xtremeactionpark.com",
+      "gobrightline.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c2.png",
+      "logo-c4.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "The Horrorland Scream Park, Oct. 22 to 25",
+      "highlight": "The Horrorland",
+      "body": "Open 7 to 10 p.m. Thursday through Sunday at Jungle Island in Miami. Tickets cost $39.99 for haunted houses, scare zones, and Circus of Terror.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Jungle Island Miami haunted entrance at night",
+        "prompt": "haunted scream park entrance at Jungle Island in Miami with fog, red lighting, and costumed scare actors"
+      },
+      "emoji": "👻",
+      "chip": "$39.99",
+      "logo": "thehorrorland.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Sounds of Screams, Oct. 22 to 25",
+      "highlight": "Sounds of Screams",
+      "body": "The 13-acre haunt runs 6 to 11 p.m. at the Miami-Dade Fair Expo Center in Miami. One ticket covers five haunted houses, rides, scare zones, and live entertainment.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miami-Dade Fair Expo Center haunted carnival at night",
+        "prompt": "large haunted carnival at the Miami-Dade Fair Expo Center at night with rides, fog, and horror lighting"
+      },
+      "emoji": "🎡",
+      "chip": "$42-$52",
+      "logo": "soundsofscreams.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "House of Horror Haunted Carnival, Oct. 22 to 25",
+      "highlight": "House of Horror",
+      "body": "The Halloween carnival is at Tropical Park in Miami. Hours are 6 to 11 p.m. Thursday and Sunday, and 6 p.m. to midnight Friday and Saturday.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Tropical Park Miami Halloween carnival at night",
+        "prompt": "Halloween carnival at Tropical Park in Miami with haunted house facades, bright rides, and smoky night lighting"
+      },
+      "emoji": "🎢",
+      "chip": "$39.99",
+      "logo": "houseofhorrorcarnival.com",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Metrocraft / Public domain",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Nightmare Village, Oct. 22 to 25",
+      "highlight": "Nightmare Village",
+      "body": "Xtreme Action Park in Fort Lauderdale hosts the indoor haunt 7 to 10 p.m. Thursday through Sunday. Tickets cost $40 to $55.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Xtreme Action Park Fort Lauderdale haunted entrance night",
+        "prompt": "indoor haunted attraction in Fort Lauderdale with dark carnival lighting, fog, and a sinister entrance"
+      },
+      "emoji": "🕯️",
+      "chip": "$40-$55",
+      "logo": "xtremeactionpark.com",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Joe Shlabotnik from Forest Hills, Queens / CC BY 2.0",
+      "logoFile": null
+    }
+  ],
+  "caption": "Save this before the weekend group chat starts. Who are you taking? Tag a friend 🎃",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiHalloween"
+  ],
+  "collaborators": [
+    "gobrightline"
+  ],
+  "igCaption": "Save this before the weekend group chat starts. Who are you taking? Tag a friend 🎃\n\n📰 Sources: Miami New Times, Secret Miami\n\n#SouthFloridaEvents #MiamiHalloween #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-22",
+  "id": "2026-10-22-upcoming"
+}
