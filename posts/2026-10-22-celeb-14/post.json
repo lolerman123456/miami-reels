@@ -1,0 +1,102 @@
+{
+  "sector": "ENTERTAINMENT",
+  "cover": {
+    "top": "DID YOU KNOW THAT",
+    "main": "DJ KHALED",
+    "highlight": "99 JAMZ HOST",
+    "bottom": "BEFORE HE BECAME FAMOUS?",
+    "blur": false,
+    "photo": {
+      "query": "DJ Khaled radio studio microphone Wikimedia Commons",
+      "prompt": "dramatic photo of DJ Khaled in a radio studio with a microphone, headphones, and broadcast lights",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "🎧",
+      "📻",
+      "🌴"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Wikimedia Commons (CC BY 4.0)",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "99 Jamz gave Khaled his first recognition",
+      "highlight": "first recognition",
+      "body": "Khaled first gained recognition as a radio host in the 1990s for Miami station 99 Jamz.",
+      "place": "Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "WEDR 99 Jamz radio studio Wikimedia Commons",
+        "prompt": "close-up of a radio studio microphone, headphones, and mixing board with an ON AIR light glowing"
+      },
+      "emoji": "📻",
+      "chip": "1990S",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY 3.0)"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "He moved to Miami in 1998",
+      "highlight": "1998",
+      "body": "In 1998, Khaled moved to Miami and co-hosted The Luke Show on WEDR 99 Jamz with Luther Campbell.",
+      "place": "Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Miami radio studio microphone Wikimedia Commons",
+        "prompt": "radio studio scene with two microphones, headphones, and a broadcast console in Miami"
+      },
+      "emoji": "🌴",
+      "chip": "1998",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY 2.0)"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "He kept building at 99 Jamz in 2003",
+      "highlight": "The Takeover",
+      "body": "In 2003, he started hosting a weeknight radio show on 99 Jamz called The Takeover.",
+      "place": "Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "late-night radio studio ON AIR sign Wikimedia Commons",
+        "prompt": "late-night hip-hop radio studio with a glowing ON AIR sign, turntables, and headphones on the desk"
+      },
+      "emoji": "🎙️",
+      "chip": "2003",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY 4.0)"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "That radio run led to Terror Squad work",
+      "highlight": "Terror Squad",
+      "body": "He then worked with Fat Joe's Terror Squad as a live DJ and producer before his debut album in 2006.",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "DJ Khaled concert DJ booth Wikimedia Commons",
+        "prompt": "concert photo from behind a DJ booth with stage lights, turntables, and a crowd in front"
+      },
+      "emoji": "💿",
+      "chip": "2006",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY 3.0)"
+    }
+  ],
+  "caption": "DJ Khaled was on 99 Jamz before the fame. Tag a friend who did not know that.",
+  "hashtags": [
+    "#DJKhaled",
+    "#99Jamz"
+  ],
+  "collaborators": [],
+  "igCaption": "DJ Khaled was on 99 Jamz before the fame. Tag a friend who did not know that.\n\n📰 Sources: Wikipedia\n\n#DJKhaled #99Jamz #miami #southflorida",
+  "kind": "celeb",
+  "kicker": "NEAR NEWS",
+  "person": "DJ Khaled",
+  "wikiUrl": "https://en.wikipedia.org/wiki/DJ_Khaled",
+  "date": "2026-10-22",
+  "id": "2026-10-22-celeb-14"
+}
