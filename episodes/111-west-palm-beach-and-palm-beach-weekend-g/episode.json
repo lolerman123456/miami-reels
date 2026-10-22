@@ -1,0 +1,215 @@
+{
+  "title": "West Palm Beach and Palm Beach weekend guide",
+  "sources": [
+    "Palm Beach Illustrated",
+    "WPBF",
+    "Seminoles.com",
+    "Mommy Poppins"
+  ],
+  "collaborators": [],
+  "igCaption": "Fall fest, Emanuel Ax, science center plans, and a Friday sports stop.\nPalm Beach County weekend guide.\n\nSources: Palm Beach Illustrated, WPBF, Seminoles.com, Mommy Poppins\n\n#WestPalmBeach #PalmBeach #PalmBeachCounty #WeekendGuide",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a Palm Beach County weekend plan with fall fest, live music, science, and a Friday sports stop?",
+      "overlay": [
+        "WEEKEND",
+        "PALM BEACH"
+      ],
+      "emojis": [
+        "🍂",
+        "🎹",
+        "🔬",
+        "🏊"
+      ],
+      "location": {
+        "name": "West Palm Beach, Florida",
+        "lat": 26.74694444,
+        "lon": -80.13111111,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start at CityPlace in downtown West Palm Beach. CityPlace sets the scene for Fall Fest. It is a walkable stop before dinner.",
+      "caption": "Start at CityPlace in downtown West Palm Beach. CityPlace sets the scene for Fall Fest. It is a walkable stop before dinner.",
+      "overlay": "CITYPLACE",
+      "badge": "FALL FEST",
+      "sub": "Downtown West Palm Beach",
+      "emoji": "🍂",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "fall guide"
+        }
+      ],
+      "source": "Palm Beach Illustrated",
+      "location": {
+        "name": "CityPlace (Downtown West Palm Beach)",
+        "lat": 26.708442,
+        "lon": -80.056534,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For live music, Palm Beach has Emanuel Ax. Palm Beach Illustrated put him on the October 22 arts radar.",
+      "caption": "For live music, Palm Beach has Emanuel Ax. Palm Beach Illustrated put him on the October 22 arts radar.",
+      "overlay": "PALM BEACH",
+      "badge": "EMANUEL AX",
+      "sub": "Classical music pick",
+      "emoji": "🎹",
+      "stats": [
+        {
+          "value": "OCT 22",
+          "label": "arts pick"
+        }
+      ],
+      "source": "Palm Beach Illustrated",
+      "location": {
+        "name": "Palm Beach, Florida",
+        "lat": 26.70555556,
+        "lon": -80.04111111,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -30,
+        "heading": 75,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Cox Science Center marks 65 years with a Founders Day celebration. WPBF reported the anniversary on Thursday, October 22. At Founders Day, check NEAR to see who else was at Cox.",
+      "caption": "The Cox Science Center marks 65 years with a Founders Day celebration. WPBF reported the anniversary on Thursday, October 22. At Founders Day, check NEAR to see who else was at Cox.",
+      "overlay": "COX SCIENCE",
+      "badge": "65 YEARS",
+      "sub": "Founders Day celebration",
+      "emoji": "🔬",
+      "stats": [
+        {
+          "value": "65 YEARS",
+          "label": "anniversary"
+        }
+      ],
+      "source": "WPBF",
+      "location": {
+        "name": "West Palm Beach, Florida",
+        "lat": 26.74694444,
+        "lon": -80.13111111,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -34,
+        "heading": 220,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "FSU hosts the All Florida Invite on Friday. The map point is Florida Atlantic University.",
+      "caption": "FSU hosts the All Florida Invite on Friday. The map point is Florida Atlantic University.",
+      "overlay": "FAU",
+      "badge": "FRIDAY",
+      "sub": "All Florida Invite",
+      "emoji": "🏊",
+      "stats": [
+        {
+          "value": "FRIDAY",
+          "label": "invite day"
+        }
+      ],
+      "source": "Seminoles.com",
+      "location": {
+        "name": "Florida Atlantic University",
+        "lat": 26.371,
+        "lon": -80.102,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -33,
+        "heading": 315,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Keep one backup list ready. Mommy Poppins has 50 things to do in West Palm Beach with kids.",
+      "caption": "Keep one backup list ready. Mommy Poppins has 50 things to do in West Palm Beach with kids.",
+      "overlay": "KIDS BACKUP",
+      "badge": "50 THINGS",
+      "sub": "West Palm Beach with kids",
+      "emoji": "🧒",
+      "stats": [
+        {
+          "value": "50",
+          "label": "kid plans"
+        }
+      ],
+      "source": "Mommy Poppins",
+      "location": {
+        "name": "West Palm Beach, Florida",
+        "lat": 26.74694444,
+        "lon": -80.13111111,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -32,
+        "heading": 20,
+        "degrees": 50,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you do first this weekend? If you keep spotting familiar faces around West Palm and never get a name, NEAR is the app that shows you who you walked past.",
+      "overlay": "PICK ONE 👇",
+      "sub": "Fall fest, music, science, sports",
+      "location": {
+        "name": "West Palm Beach, Florida",
+        "lat": 26.74694444,
+        "lon": -80.13111111,
+        "h": 90
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "111-west-palm-beach-and-palm-beach-weekend-g"
+}
