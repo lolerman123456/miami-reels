@@ -1,0 +1,131 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "SHE ALLEGEDLY",
+    "main": "TIED A DOG",
+    "highlight": "TO A FENCE",
+    "bottom": "AND LEFT IT TO DIE",
+    "blur": false,
+    "photo": {
+      "query": "Broward sheriff cruiser fence night booking photo",
+      "prompt": "dramatic Broward County arrest scene with a sheriff cruiser, a chain-link fence, and harsh flashing lights at night, no animal visible, no private victim visible",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚨",
+      "🐕",
+      "⚖️"
+    ],
+    "logos": [
+      "local10.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "She allegedly tied the dog to a fence and walked away",
+      "highlight": "tied the dog",
+      "body": "A Broward woman was arrested after deputies said she tied a dog to a fence and left it to die.",
+      "place": "Broward County",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Broward sheriff booking photo or arrest scene",
+        "prompt": "dramatic Broward County booking or arrest photo style image with sheriff lights in the background, no animal visible"
+      },
+      "emoji": "🚨",
+      "chip": "ARRESTED",
+      "logo": "local10.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Deputies said the dog was left to die",
+      "highlight": "left to die",
+      "body": "The allegation centers on the dog being tied up and abandoned at the fence.",
+      "place": "Broward County",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "chain-link fence empty leash Florida night",
+        "prompt": "close-up of a chain-link fence at night with an empty leash hanging from it, red and blue lights blurred behind it, no people and no animal visible"
+      },
+      "emoji": "🐕",
+      "chip": "FENCE",
+      "logo": "local10.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The arrest report came from Broward County deputies",
+      "highlight": "Broward County deputies",
+      "body": "Deputies described the case as an animal cruelty arrest in Broward County.",
+      "place": "Broward County",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Broward County sheriff patrol car fenced area",
+        "prompt": "Broward sheriff patrol SUV parked beside a fenced area in daylight, no people visible"
+      },
+      "emoji": "📍",
+      "chip": "BROWARD",
+      "logo": "local10.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The report was published Thursday, Oct. 22",
+      "highlight": "Thursday, Oct. 22",
+      "body": "The arrest was reported Thursday in Local 10's coverage of the case.",
+      "place": "Broward County",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Florida courthouse exterior sheriff vehicle daylight",
+        "prompt": "courthouse exterior in Broward County with a sheriff vehicle in front, daytime, no people visible"
+      },
+      "emoji": "🗓️",
+      "chip": "OCT 22",
+      "logo": "local10.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The dog cruelty case is still tied to one report",
+      "highlight": "one report",
+      "body": "So far, the public details say only this: a Broward woman was arrested after deputies said she tied a dog to a fence and left it to die.",
+      "place": "Broward County",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "crime scene tape chain-link fence sheriff car",
+        "prompt": "chain-link fence with crime scene tape and a Broward sheriff vehicle nearby, dramatic lighting, no people and no animal visible"
+      },
+      "emoji": "⚖️",
+      "chip": "DEPUTIES",
+      "logo": "local10.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "Deputies say she tied a dog to a fence and walked away.",
+  "hashtags": [
+    "#BrowardCounty",
+    "#AnimalCruelty"
+  ],
+  "collaborators": [],
+  "igCaption": "Deputies say she tied a dog to a fence and walked away.\n\n📰 Sources: WPLG Local 10\n\n#BrowardCounty #AnimalCruelty #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-22",
+  "id": "2026-10-22-brief"
+}
