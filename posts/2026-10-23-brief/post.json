@@ -1,0 +1,80 @@
+{
+  "sector": "CITY HALL",
+  "cover": {
+    "top": "MIAMI-DADE SHERIFF",
+    "main": "THREATENS TO END SECURITY",
+    "highlight": "NEXT MONTH",
+    "bottom": "FOR MAYOR AND 13 COMMISSIONERS",
+    "blur": false,
+    "photo": {
+      "query": "Rosie Cordero-Stutz Miami-Dade Sheriff press conference Wikimedia Commons",
+      "prompt": "dramatic photo of Miami-Dade sheriff at a podium with deputies behind her and the county government building in the background",
+      "mark": "stamp: ON THE CHOPPING BLOCK"
+    },
+    "emojis": [
+      "🚔",
+      "🏛️",
+      "⚠️"
+    ],
+    "logos": [
+      "miamidade.gov"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WPLG Local 10",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CITY HALL",
+      "headline": "Security for 14 leaders could end next month",
+      "highlight": "14 leaders",
+      "body": "Local 10 reports Sheriff Rosie Cordero-Stutz plans to end security details for Miami-Dade’s mayor and all 13 commissioners next month.",
+      "place": "Miami-Dade County",
+      "source": "Local 10",
+      "photo": {
+        "query": "Miami-Dade County Stephen P. Clark Government Center police vehicle Wikimedia Commons",
+        "prompt": "marked police SUV outside the Stephen P. Clark Government Center in downtown Miami at night"
+      },
+      "emoji": "🚔",
+      "chip": "NEXT MONTH",
+      "logo": "miamidade.gov",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: WPLG",
+      "logoFile": null
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "NBC 6 names the Sergeant-at-Arms program",
+      "highlight": "Sergeant-at-Arms",
+      "body": "NBC 6 reported the sheriff said she is ending the Sergeant-at-Arms program tied to county leaders.",
+      "place": "Miami-Dade County",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Miami-Dade County commission chambers Wikimedia Commons",
+        "prompt": "empty Miami-Dade commission chamber with microphones, nameplates and a uniformed officer near the dais"
+      },
+      "emoji": "🏛️",
+      "chip": "PROGRAM",
+      "logo": "miamidade.gov",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Yahoo",
+      "logoFile": null
+    }
+  ],
+  "caption": "Miami-Dade’s budget fight now puts security for 14 county leaders on the line",
+  "hashtags": [
+    "#MiamiDade",
+    "#MiamiPolitics"
+  ],
+  "collaborators": [],
+  "igCaption": "Miami-Dade’s budget fight now puts security for 14 county leaders on the line\n\n📰 Sources: Local 10, NBC 6 South Florida, Miami Herald\n\n🎥 Video: WPLG Local 10\n\n#MiamiDade #MiamiPolitics #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-23",
+  "id": "2026-10-23-brief",
+  "video": {
+    "file": "story-video.mp4",
+    "agency": "WPLG Local 10",
+    "url": "https://www.youtube.com/watch?v=aZ9rZueX4Lw"
+  }
+}
