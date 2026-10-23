@@ -1,0 +1,85 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "FORT LAUDERDALE TELEMEDICINE OWNER",
+    "main": "GETS 20-YEAR SENTENCE FOR",
+    "highlight": "$46 MILLION",
+    "bottom": "MEDICARE FRAUD",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons federal courthouse Fort Lauderdale exterior",
+      "prompt": "dramatic low-angle photo of a federal courthouse entrance in South Florida at dusk, with American flags, dark clouds, and a serious news tone"
+    },
+    "emojis": [
+      "⚖️",
+      "🏥",
+      "💸"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Fort Lauderdale telemedicine owner gets 20 years",
+      "highlight": "20 years",
+      "body": "A Fort Lauderdale telemedicine company owner was sentenced Friday in a $46 million Medicare fraud scheme.",
+      "place": "Fort Lauderdale",
+      "source": "WPEC",
+      "photo": {
+        "query": "Wikimedia Commons courthouse exterior Florida dramatic",
+        "prompt": "tight dramatic photo of a courthouse entrance with columns, dark glass doors, and a cloudy South Florida sky",
+        "mark": "stamp: ARRESTED"
+      },
+      "emoji": "⚖️",
+      "chip": "20 YEARS",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The fraud amount was $46 million",
+      "highlight": "$46 million",
+      "body": "The case involved $46 million in Medicare fraud.",
+      "place": "Fort Lauderdale",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "Wikimedia Commons Medicare paperwork gavel",
+        "prompt": "close-up of Medicare paperwork, court documents, and a judge's gavel under harsh desk light"
+      },
+      "emoji": "💸",
+      "chip": "$46M",
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Aaron Lucas / CC BY-SA 4.0"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The sentence was reported Friday",
+      "highlight": "Friday",
+      "body": "The reported sentence is 20 years in prison for the Fort Lauderdale business owner tied to the case.",
+      "place": "Fort Lauderdale",
+      "source": "CiberCuba",
+      "photo": {
+        "query": "Wikimedia Commons Fort Lauderdale skyline courthouse sunset",
+        "prompt": "striking photo of downtown Fort Lauderdale over the New River at sunset, with a courthouse in the frame and a serious news tone"
+      },
+      "emoji": "🌆",
+      "chip": "FRI 10/23",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Daniel Kraft / CC BY-SA 3.0"
+    }
+  ],
+  "caption": "$46 million in Medicare fraud ended with a 20-year sentence for a Fort Lauderdale owner",
+  "hashtags": [
+    "#FortLauderdale",
+    "#MedicareFraud"
+  ],
+  "collaborators": [],
+  "igCaption": "$46 million in Medicare fraud ended with a 20-year sentence for a Fort Lauderdale owner\n\n📰 Sources: WPEC, Sun Sentinel, Wikipedia, CiberCuba\n\n#FortLauderdale #MedicareFraud #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-23",
+  "id": "2026-10-23-news-16"
+}
