@@ -131,7 +131,7 @@ async function celebStory(topic) {
       { role: 'user', content: `Suggested fact: ${c.fact}\n\nArticle "${w.title}":\n${w.text}` }]).catch(() => null);
     const norm = s => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
     if (!v?.found || !v.quote || !norm(w.text).includes(norm(v.quote).slice(0, 80))) { console.log(`  ✗ ${w.title}: "${c.fact}" isn't in the article`); continue; }
-    if (Number(v.shock) < 7 || /\b(real|full|birth|legal) name\b|\bnamed\b|\bborn (in|on)\b|\bbirthday\b/i.test(v.fact)) { console.log(`  ✗ ${w.title}: too weak (${v.shock}/10: ${v.fact})`); continue; }
+    if (Number(v.shock) < 8 || /\b(real|full|birth|legal) name\b|\bnamed\b|\bborn (in|on)\b|\bbirthday\b/i.test(v.fact)) { console.log(`  ✗ ${w.title}: too weak (${v.shock}/10: ${v.fact})`); continue; }
     c.fact = v.fact;
     const photos = await wikiPhotos(w.title).catch(() => []);
     if (!photos.length) { console.log(`  ✗ ${w.title}: no free photo`); continue; }
@@ -392,17 +392,19 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   if (kind === 'celeb') {
     Object.assign(post.cover, { top: 'DID YOU KNOW THAT', main: String(post.cover.main || '').trim() });
     const VERB = /^(WAS|WERE|IS|HAS|HAD|USED|WORKED|GOT|LEARNED|WENT|MADE|TURNED|SPENT|STARTED|LIVED|GREW|SOLD|PAID|EARNED|LOST|DROPPED|QUIT|BEGAN|SERVED|PLAYED|SLEPT|ONCE|NEVER|ALMOST|ACTUALLY|STILL|ONLY|OWNS|OWNED|BOUGHT|WROTE|TURNED|BECAME|SANG|STUDIED|DID|COULD|WOULD|CAN|HELPED|DATED|MARRIED|HOLDS|HELD|RAN|BUILT|FAILED|BROKE)\b/i;
-    const ok = () => VERB.test(String(post.cover.highlight || '').trim()) && /\?\s*$/.test(String(post.cover.bottom || post.cover.highlight || ''));
-    if (!ok()) {
-      const fx = await chat([{ role: 'system', content: 'Rewrite a DID YOU KNOW Instagram cover so it reads as ONE complete question. Keep the same fact. main = only the person\'s name; highlight = 2–5 words that START with a verb (WAS, WORKED, GOT, LEARNED…), all caps; bottom = the rest ending with "?" (can be short). Reply JSON {"main":"","highlight":"","bottom":""}.' },
-        { role: 'user', content: `Cover now: DID YOU KNOW THAT / ${post.cover.main} / ${post.cover.highlight} / ${post.cover.bottom}\nFirst slide: ${post.slides?.[0]?.headline} — ${post.slides?.[0]?.body}` }]).catch(() => null);
+    const words = t => String(t || '').trim().split(/\s+/).filter(Boolean).length;
+    // any verb works ("SET", "SIGNED"…): known ones or an -ED word; short lines so the cover reads at a glance
+    const ok = () => { const h = String(post.cover.highlight || '').trim(); return (VERB.test(h) || /^(SET|PUT|WON|HIT|TOOK|GAVE|SIGNED|\w+ED)\b/i.test(h)) && words(h) <= 5 && words(post.cover.bottom) <= 7 && /\?\s*$/.test(String(post.cover.bottom || h)); };
+    for (let i = 0; i < 2 && !ok(); i++) {
+      const fx = await chat([{ role: 'system', content: 'Rewrite a DID YOU KNOW Instagram cover so it reads as ONE complete question. Keep the same fact. main = only the person\'s name; highlight = 2–5 words that START with a verb (WAS, WORKED, GOT, LEARNED…), all caps; bottom = the rest ending with "?", at most 7 words (cut details, keep the shocking part). Reply JSON {"main":"","highlight":"","bottom":""}.' },
+        { role: 'user', content: `Cover now: DID YOU KNOW THAT / ${post.cover.main} / ${post.cover.highlight} / ${post.cover.bottom}\nFirst slide: ${post.slides?.[0]?.headline} — ${post.slides?.[0]?.body}\nWikipedia (stay true to it): "${celeb?.quote}"` }]).catch(() => null);
       if (fx?.main && fx.highlight) Object.assign(post.cover, { main: fx.main, highlight: fx.highlight, bottom: fx.bottom || '' });
       if (post.cover.bottom) { if (!/\?\s*$/.test(post.cover.bottom)) post.cover.bottom += '?'; } else if (!/\?\s*$/.test(post.cover.highlight)) post.cover.highlight += '?';
-      if (!ok()) throw new Error(`celeb cover still doesn't read as a question: ${lines(post.cover)}`);
       console.log(`  celeb cover fixed: ${lines(post.cover)}`);
     }
+    if (!ok()) throw new Error(`celeb cover still doesn't read as a question: ${lines(post.cover)}`);
     // the cover fixes can bend the fact (Oct 22 preview: "sentenced to 45 days" when he was sentenced to 3 months and served 45) → checked against the article's sentence
-    const fc = await chat([{ role: 'system', content: 'Does this Instagram cover question say exactly what the Wikipedia sentence says (same numbers, same meaning, nothing added)? If not, rewrite it so it does, same template: main = only the name, highlight = 2–5 words starting with a verb, bottom = the rest ending with "?", all caps, short. Reply JSON {"accurate": true|false, "main":"", "highlight":"", "bottom":""}.' },
+    const fc = await chat([{ role: 'system', content: 'Does this Instagram cover question say exactly what the Wikipedia sentence says (same numbers, same meaning, nothing added)? If not, rewrite it so it does, same template: main = only the name, highlight = 2–5 words starting with a verb, bottom = the rest ending with "?" in at most 7 words, all caps. Reply JSON {"accurate": true|false, "main":"", "highlight":"", "bottom":""}.' },
       { role: 'user', content: `Cover: ${lines(post.cover)}\nWikipedia: "${celeb?.quote}"` }]).catch(() => null);
     if (!fc) throw new Error('celeb cover fact check failed');
     if (fc.accurate === false) {
