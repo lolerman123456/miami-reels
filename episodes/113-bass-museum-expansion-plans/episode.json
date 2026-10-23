@@ -1,0 +1,186 @@
+{
+  "title": "Bass Museum Expansion Plans",
+  "sources": [
+    "Artforum",
+    "Dezeen",
+    "The Architect’s Newspaper",
+    "ArchDaily",
+    "Wikipedia"
+  ],
+  "collaborators": [],
+  "igCaption": "The Bass has expansion plans in Miami Beach.\n\nSources: Artforum, Dezeen, The Architect’s Newspaper, ArchDaily, Wikipedia\n\n#MiamiBeach #TheBass #MiamiArt #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Miami Beach’s Bass Museum just unveiled expansion plans. Voters already authorized $20.1 million for a new wing.",
+      "overlay": [
+        "THE BASS",
+        "EXPANDS"
+      ],
+      "emojis": [
+        "🏛️",
+        "🎨",
+        "🏗️",
+        "🌴"
+      ],
+      "location": {
+        "name": "The Bass, Miami Beach",
+        "lat": 25.7973966,
+        "lon": -80.1299536,
+        "h": 35
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Bass sits in Collins Park in Miami Beach. The museum was founded in 1963 and opened on April 7, 1964, inside the former Miami Beach Public Library.",
+      "caption": "The Bass sits in Collins Park in Miami Beach. The museum was founded in 1963 and opened on April 7, 1964, inside the former Miami Beach Public Library.",
+      "overlay": "THE BASS",
+      "badge": "OPENED 1964",
+      "sub": "Former public library",
+      "emoji": "🏛️",
+      "stats": [
+        {
+          "value": "1964",
+          "label": "opened"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "The Bass, Miami Beach",
+        "lat": 25.7973966,
+        "lon": -80.1299536,
+        "h": 35
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "John Bass and Johanna Redlich gave the city more than 500 works in 1963. The agreement required a Bass Museum of Art to stay open to the public in perpetuity.",
+      "caption": "John Bass and Johanna Redlich gave the city more than 500 works in 1963. The agreement required a Bass Museum of Art to stay open to the public in perpetuity.",
+      "overlay": "FOUNDING GIFT",
+      "badge": "500+ WORKS",
+      "sub": "Given to the city",
+      "emoji": "🖼️",
+      "stats": [
+        {
+          "value": "500+",
+          "label": "works"
+        },
+        {
+          "value": "1963",
+          "label": "gift year"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "The Bass, Miami Beach",
+        "lat": 25.7973966,
+        "lon": -80.1299536,
+        "h": 35
+      },
+      "shot": {
+        "type": "push",
+        "range": 650,
+        "pitch": -30,
+        "heading": 40
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The building has changed before. A 16,000 square foot expansion designed by Arata Isozaki opened in 2002. The museum closed again in May 2015 and reopened on October 29, 2017.",
+      "caption": "The building has changed before. A 16,000 sq ft expansion designed by Arata Isozaki opened in 2002. The museum closed again in May 2015 and reopened on October 29, 2017.",
+      "overlay": "PAST EXPANSION",
+      "badge": "16,000 SQ FT",
+      "sub": "Isozaki design",
+      "emoji": "📐",
+      "stats": [
+        {
+          "value": "16,000",
+          "label": "sq ft added"
+        },
+        {
+          "value": "2017",
+          "label": "reopened"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "The Bass, Miami Beach",
+        "lat": 25.7973966,
+        "lon": -80.1299536,
+        "h": 35
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 700,
+        "pitch": -33,
+        "heading": 285
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Johnston Marklee has unveiled designs for the next expansion. The firm will design a new pavilion for the campus expansion in Collins Park, and city-issued bond funds will add more exhibition space.",
+      "caption": "Johnston Marklee has unveiled designs for the next expansion. The firm will design a new pavilion for the campus expansion in Collins Park, and city-issued bond funds will add more exhibition space.",
+      "overlay": "NEW PAVILION",
+      "badge": "$20.1M",
+      "sub": "For a new wing",
+      "emoji": "🏗️",
+      "stats": [
+        {
+          "value": "$20.1M",
+          "label": "city funds"
+        }
+      ],
+      "source": "Dezeen",
+      "location": {
+        "name": "The Bass, Miami Beach",
+        "lat": 25.7973966,
+        "lon": -80.1299536,
+        "h": 35
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -35,
+        "heading": 15,
+        "degrees": 90,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Would you go more often if The Bass adds more exhibition space? It’s the same way you can leave a museum with a whole experience and still not know the person you kept passing by, which is what NEAR makes clearer.",
+      "overlay": "WOULD YOU GO? 🎨",
+      "sub": "Tell us below",
+      "location": {
+        "name": "The Bass, Miami Beach",
+        "lat": 25.7973966,
+        "lon": -80.1299536,
+        "h": 35
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "NEW BUILD",
+  "id": "113-bass-museum-expansion-plans",
+  "tiktok": true,
+  "music": true
+}
