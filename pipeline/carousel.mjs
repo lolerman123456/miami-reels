@@ -124,12 +124,15 @@ async function celebStory(topic) {
     { role: 'user', content: `${topic ? `The owner asked for: ${topic}. All candidates must be about that.\n` : ''}Already posted (pick other people): ${recent.join(', ') || '(none)'}` }]);
   for (const c of (pick.candidates || []).filter(c => !(Number(c.shock) < 8)).slice(0, 6)) {
     if (/\b(real|full|birth|legal) name\b|\bnamed\b|\bborn (in|on)\b|\bbirthday\b/i.test(c.fact)) { console.log(`  ✗ ${c.wikipedia}: trivia (${c.fact})`); continue; }
-    const w = await wikiArticle(c.wikipedia, { chars: 16000 }).catch(() => null);
+    const w = await wikiArticle(c.wikipedia, { chars: 40000 }).catch(() => null);
     if (!w || recent.includes(w.title)) continue;
-    const v = await chat([{ role: 'system', content: 'Does this Wikipedia article clearly state this fact (same meaning, not a stretch or an inference)? Reply JSON {"supported": true|false, "quote": "the exact sentence from the article that states it"}.' },
-      { role: 'user', content: `Fact: ${c.fact}\n\nArticle "${w.title}":\n${w.text}` }]).catch(() => null);
-    const norm = s => String(s || '').replace(/\s+/g, ' ').trim().toLowerCase();
-    if (!v?.supported || !v.quote || !norm(w.text).includes(norm(v.quote).slice(0, 80))) { console.log(`  ✗ ${w.title}: "${c.fact}" isn't in the article`); continue; }
+    // Oct 22: the picker's facts came with made-up specifics ("1993 cocaine charges") → the fact is now rewritten from the article's own sentence
+    const v = await chat([{ role: 'system', content: 'Find the sentence in this Wikipedia article that states the suggested fact, or, if the article states it differently or not at all, the article\'s single most shocking non-trivial fact of the same kind (surprising old job, jail time or conviction, huge money number, famous rejection, wild early-career detail, unexpected Miami connection). Never trivia: real/full names, nicknames, birthdays, birthplaces, schools, siblings, awards. Reply JSON {"found": true|false, "quote": "the exact sentence copied from the article", "fact": "the fact in one plain sentence, using ONLY what the quote says (no added years, numbers or details)", "shock": 1-10}.' },
+      { role: 'user', content: `Suggested fact: ${c.fact}\n\nArticle "${w.title}":\n${w.text}` }]).catch(() => null);
+    const norm = s => String(s || '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    if (!v?.found || !v.quote || !norm(w.text).includes(norm(v.quote).slice(0, 80))) { console.log(`  ✗ ${w.title}: "${c.fact}" isn't in the article`); continue; }
+    if (Number(v.shock) < 7 || /\b(real|full|birth|legal) name\b|\bnamed\b|\bborn (in|on)\b|\bbirthday\b/i.test(v.fact)) { console.log(`  ✗ ${w.title}: too weak (${v.shock}/10: ${v.fact})`); continue; }
+    c.fact = v.fact;
     const photos = await wikiPhotos(w.title).catch(() => []);
     if (!photos.length) { console.log(`  ✗ ${w.title}: no free photo`); continue; }
     return { person: w.title, fact: c.fact, quote: v.quote, wiki: w, photos };
