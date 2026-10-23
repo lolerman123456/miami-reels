@@ -395,25 +395,27 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     const words = t => String(t || '').trim().split(/\s+/).filter(Boolean).length;
     // any verb works ("SET", "SIGNED"…): known ones or an -ED word; short lines so the cover reads at a glance
     const ok = () => { const h = String(post.cover.highlight || '').trim(); return (VERB.test(h) || /^(SET|PUT|WON|HIT|TOOK|GAVE|SIGNED|\w+ED)\b/i.test(h)) && words(h) <= 5 && words(post.cover.bottom) <= 7 && /\?\s*$/.test(String(post.cover.bottom || h)); };
-    for (let i = 0; i < 2 && !ok(); i++) {
-      const fx = await chat([{ role: 'system', content: 'Rewrite a DID YOU KNOW Instagram cover so it reads as ONE complete question. Keep the same fact. main = only the person\'s name; highlight = 2–5 words that START with a verb (WAS, WORKED, GOT, LEARNED…), all caps; bottom = the rest ending with "?", at most 7 words (cut details, keep the shocking part). Reply JSON {"main":"","highlight":"","bottom":""}.' },
-        { role: 'user', content: `Cover now: DID YOU KNOW THAT / ${post.cover.main} / ${post.cover.highlight} / ${post.cover.bottom}\nFirst slide: ${post.slides?.[0]?.headline} — ${post.slides?.[0]?.body}\nWikipedia (stay true to it): "${celeb?.quote}"` }]).catch(() => null);
-      if (fx?.main && fx.highlight) Object.assign(post.cover, { main: fx.main, highlight: fx.highlight, bottom: fx.bottom || '' });
-      if (post.cover.bottom) { if (!/\?\s*$/.test(post.cover.bottom)) post.cover.bottom += '?'; } else if (!/\?\s*$/.test(post.cover.highlight)) post.cover.highlight += '?';
-      console.log(`  celeb cover fixed: ${lines(post.cover)}`);
-    }
+    // Oct 22: single rewrites kept cramming every detail into the bottom line → ask for several short options, keep the first that reads right
+    const set = c => { Object.assign(post.cover, { main: c.main, highlight: c.highlight, bottom: c.bottom || '' }); if (post.cover.bottom) { if (!/\?\s*$/.test(post.cover.bottom)) post.cover.bottom += '?'; } else if (!/\?\s*$/.test(post.cover.highlight)) post.cover.highlight += '?'; };
+    const options = async why => {
+      const r = await chat([{ role: 'system', content: 'Write 4 options for a DID YOU KNOW Instagram cover that reads as ONE short question a person can read in one second. main = ONLY the person\'s name as fans know it; highlight = 2–5 words that START with a verb (the shocking part, shown big in blue); bottom = 2–6 words ending with "?". All caps. Leave details for the slides. Say ONLY what the Wikipedia sentence says (same numbers, no added facts). Examples: "RICK ROSS / WAS A CORRECTIONAL OFFICER / BEFORE HE STARTED RAPPING?", "TRICK DADDY / SERVED 15 MONTHS / IN PRISON BEFORE FAME?", "MARK WAHLBERG / SERVED 45 DAYS / IN JAIL AS A TEEN?". Reply JSON {"options":[{"main":"","highlight":"","bottom":""}]}.' },
+        { role: 'user', content: `${why}\nCover now: DID YOU KNOW THAT / ${post.cover.main} / ${post.cover.highlight} / ${post.cover.bottom}\nWikipedia: "${celeb?.quote}"` }]).catch(() => null);
+      const before = { ...post.cover };
+      for (const c of r?.options || []) { if (!c?.main || !c.highlight) continue; set(c); if (ok()) return true; }
+      Object.assign(post.cover, before);
+      return false;
+    };
+    if (!ok() && await options('The cover is too long or does not read as a question.')) console.log(`  celeb cover fixed: ${lines(post.cover)}`);
     if (!ok()) throw new Error(`celeb cover still doesn't read as a question: ${lines(post.cover)}`);
     // the cover fixes can bend the fact (Oct 22 preview: "sentenced to 45 days" when he was sentenced to 3 months and served 45) → checked against the article's sentence
-    const fc = await chat([{ role: 'system', content: 'Does this Instagram cover question say exactly what the Wikipedia sentence says (same numbers, same meaning, nothing added)? If not, rewrite it so it does, same template: main = only the name, highlight = 2–5 words starting with a verb, bottom = the rest ending with "?" in at most 7 words, all caps. Reply JSON {"accurate": true|false, "main":"", "highlight":"", "bottom":""}.' },
+    const check = () => chat([{ role: 'system', content: 'Does this Instagram cover question say exactly what the Wikipedia sentence says (same numbers, same meaning, nothing added)? A shorter cover that leaves details out is fine. Reply JSON {"accurate": true|false, "why": "short"}.' },
       { role: 'user', content: `Cover: ${lines(post.cover)}\nWikipedia: "${celeb?.quote}"` }]).catch(() => null);
-    if (!fc) throw new Error('celeb cover fact check failed');
-    if (fc.accurate === false) {
-      if (!fc.main || !fc.highlight) throw new Error(`celeb cover isn't accurate: ${lines(post.cover)}`);
-      Object.assign(post.cover, { main: fc.main, highlight: fc.highlight, bottom: fc.bottom || '' });
-      if (post.cover.bottom) { if (!/\?\s*$/.test(post.cover.bottom)) post.cover.bottom += '?'; } else if (!/\?\s*$/.test(post.cover.highlight)) post.cover.highlight += '?';
-      if (!ok()) throw new Error(`celeb cover still doesn't read as a question: ${lines(post.cover)}`);
-      console.log(`  celeb cover made accurate: ${lines(post.cover)}`);
+    let fc = await check();
+    for (let i = 0; i < 2 && fc?.accurate === false; i++) {
+      console.log(`  celeb cover not accurate: ${lines(post.cover)} (${fc.why})`);
+      if (await options(`The cover is NOT accurate: ${fc.why}`)) fc = await check();
     }
+    if (!fc || fc.accurate !== true) throw new Error(`celeb cover isn't accurate: ${lines(post.cover)}`);
   }
   post = sanitize(post);
   post.collaborators = cleanCollabs(post.collaborators);
