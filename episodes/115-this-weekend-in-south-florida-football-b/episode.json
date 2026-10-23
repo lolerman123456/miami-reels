@@ -1,0 +1,198 @@
+{
+  "title": "This Weekend in South Florida: Football, Boats, and Easy Plans",
+  "sources": [
+    "BOAT International",
+    "Boating Mag",
+    "Daily Jefferson County Union",
+    "New York Times",
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Football, boats, art, and a Carrie prom in one South Florida weekend.\n\nSources: BOAT International, Boating Mag, Daily Jefferson County Union, New York Times, Miami New Times\n\n#Miami #FortLauderdale #SouthFlorida #WeekendGuide",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "What do boats, No. 1 Miami football, and a Carrie-themed prom have in common this weekend?",
+      "overlay": [
+        "THIS WEEKEND",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🏈",
+        "🛥️",
+        "🎨",
+        "🩸"
+      ],
+      "location": {
+        "name": "Fort Lauderdale International Boat Show",
+        "lat": 26.1137,
+        "lon": -80.1065,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Fort Lauderdale International Boat Show is back for 2026. BOAT International calls it the world’s largest in-water boat show. Boating Mag’s Friday guide points people toward the new boats to see, so expect the docks to do a lot of the talking.",
+      "caption": "The Fort Lauderdale International Boat Show is back for 2026. BOAT International calls it the world’s largest in-water boat show. Boating Mag’s Friday guide points people toward the new boats to see, so expect the docks to do a lot of the talking.",
+      "overlay": "FORT LAUDERDALE",
+      "badge": "2026 SHOW",
+      "sub": "World’s largest in-water show",
+      "emoji": "🛥️",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "boat show"
+        }
+      ],
+      "source": "BOAT International",
+      "location": {
+        "name": "Bahia Mar Yachting Center",
+        "lat": 26.1137,
+        "lon": -80.1065,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 145,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami hosts Pittsburgh on Saturday, October 24. The Hurricanes are ranked No. 1, and they’re paying tribute to the 2001 national championship team. Miami reached No. 1 for the first time in nearly a quarter-century.",
+      "caption": "Miami hosts Pittsburgh on Saturday, Oct. 24. The Hurricanes are ranked No. 1, and they’re paying tribute to the 2001 national championship team. Miami reached No. 1 for the first time in nearly a quarter-century.",
+      "overlay": "HARD ROCK",
+      "badge": "NO. 1 MIAMI",
+      "sub": "Pitt visits Oct. 24",
+      "emoji": "🏈",
+      "stats": [
+        {
+          "value": "NO. 1",
+          "label": "Miami ranking"
+        },
+        {
+          "value": "2001",
+          "label": "team honored"
+        }
+      ],
+      "source": "Daily Jefferson County Union",
+      "location": {
+        "name": "Hard Rock Stadium",
+        "lat": 25.958,
+        "lon": -80.2389,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1700,
+        "pitch": -32,
+        "heading": 70,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Room 901 in Fort Lauderdale is doing a Carrie takeover through Halloween. It sits inside Hyatt Centric Las Olas at 100 E. Las Olas Blvd. The setup marks 50 years after Carrie White’s prom night went wrong. If you're at Room 901, check NEAR to see who else showed up.",
+      "caption": "Room 901 in Fort Lauderdale is doing a Carrie takeover through Halloween. It sits inside Hyatt Centric Las Olas at 100 E. Las Olas Blvd. The setup marks 50 years after Carrie White’s prom night went wrong. If you're at Room 901, check NEAR to see who else showed up.",
+      "overlay": "ROOM 901",
+      "badge": "50 YEARS",
+      "sub": "Carrie prom takeover",
+      "emoji": "🩸",
+      "stats": [
+        {
+          "value": "50",
+          "label": "years after Carrie"
+        },
+        {
+          "value": "100",
+          "label": "E Las Olas"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Hyatt Centric Las Olas Fort Lauderdale",
+        "lat": 26.1193,
+        "lon": -80.1415,
+        "h": 70
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -35,
+        "heading": 230,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Family Fest 2026 happens Sunday at ICA Miami Expansion Space. It starts at 1 p.m. at 23 NE 41st St. Tickets cost $50 for adults, $15 for kids, and children under 3 enter free.",
+      "caption": "Family Fest 2026 happens Sunday at ICA Miami Expansion Space. It starts at 1 p.m. at 23 NE 41st St. Tickets cost $50 for adults, $15 for kids, and children under 3 enter free.",
+      "overlay": "ICA MIAMI",
+      "badge": "$15 KIDS",
+      "sub": "Sunday at 1 p.m.",
+      "emoji": "🎨",
+      "stats": [
+        {
+          "value": "$50",
+          "label": "adult ticket"
+        },
+        {
+          "value": "$15",
+          "label": "kids ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "ICA Miami Expansion Space",
+        "lat": 25.8136,
+        "lon": -80.1923,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 310,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you actually do this weekend? You know the people you kept seeing around town all weekend without ever saying hello? NEAR shows you who they were.",
+      "overlay": "PICK ONE 👇",
+      "sub": "Boats, football, art, or prom",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 100
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1900,
+        "pitch": -32,
+        "heading": 185
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "115-this-weekend-in-south-florida-football-b"
+}
