@@ -1,0 +1,94 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "HE IS",
+    "main": "ALREADY SERVING 25 YEARS",
+    "highlight": "ACCUSED AGAIN",
+    "bottom": "IN A BROWARD CHILD-SEX CASE FROM PRISON",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons prison cell bars smartphone evidence",
+      "prompt": "dark prison cell with a contraband phone glowing on a metal bunk, bars in the foreground, dramatic news lighting, no people visible"
+    },
+    "emojis": [
+      "🚔",
+      "📱",
+      "⚖️"
+    ],
+    "logos": [
+      "local10.com",
+      "wpec.com",
+      "wpbf.com",
+      "tampafp.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Local 10",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c2.png",
+      "logo-c3.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Police say he was doing it from prison",
+      "highlight": "from prison",
+      "body": "Local 10 says the inmate was already locked up for a Broward child-sex case when he was accused of sending child sexual abuse material from his cell.",
+      "place": "Broward County",
+      "source": "Local 10",
+      "photo": {
+        "query": "Wikimedia Commons prison cell bars empty bunk",
+        "prompt": "empty prison cell with bars, a bunk bed and harsh overhead light, high contrast, no people visible"
+      },
+      "emoji": "🔒",
+      "chip": "PRISON CELL",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Local 10"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The new case centers on a contraband phone",
+      "highlight": "contraband phone",
+      "body": "Tampa Free Press reported that a contraband phone in a Florida prison cell led to new child exploitation charges against the inmate.",
+      "place": "Florida",
+      "source": "Tampa Free Press",
+      "photo": {
+        "query": "Wikimedia Commons smartphone evidence bag police",
+        "prompt": "smartphone sealed in a clear evidence bag on a metal table inside a correctional facility, dramatic shadows",
+        "mark": "circle"
+      },
+      "emoji": "📱",
+      "chip": "PHONE",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Local 10"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "WPEC says child abuse images were created in prison",
+      "highlight": "in prison",
+      "body": "WPEC reported he was sentenced to 25 years and accused of creating AI-generated sexual abuse images while in custody.",
+      "place": "Florida",
+      "source": "WPEC",
+      "photo": {
+        "query": "Wikimedia Commons computer forensic evidence laptop police",
+        "prompt": "closed laptop and evidence markers on a police cybercrime desk, screens blurred, no people visible"
+      },
+      "emoji": "💻",
+      "chip": "AI IMAGES",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Local 10"
+    }
+  ],
+  "caption": "Police say the new case started inside prison, where he was already serving time for a Broward child-sex case.",
+  "hashtags": [
+    "#BrowardCounty",
+    "#FloridaCrime"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say the new case started inside prison, where he was already serving time for a Broward child-sex case.\n\n📰 Sources: Local 10, Tampa Free Press, WPEC, WPBF\n\n#BrowardCounty #FloridaCrime #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-23",
+  "id": "2026-10-23-news-18"
+}
