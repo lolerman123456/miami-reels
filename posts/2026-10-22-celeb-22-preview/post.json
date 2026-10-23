@@ -1,0 +1,98 @@
+{
+  "sector": "SPORTS",
+  "cover": {
+    "top": "DID YOU KNOW THAT",
+    "main": "A-ROD",
+    "highlight": "GOT SUSPENDED",
+    "bottom": "THE DAY HE RETURNED?",
+    "blur": false,
+    "photo": {
+      "query": "Alex Rodriguez Yankee Stadium August 5 2013 Wikimedia Commons",
+      "prompt": "Alex Rodriguez at Yankee Stadium in game action under bright stadium lights, dramatic close-up, third base or batting stance"
+    },
+    "emojis": [
+      "⚾",
+      "🚫",
+      "🏟️"
+    ],
+    "logos": [
+      "mlb.com",
+      "yankees.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Wikimedia Commons (Public domain)",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "SPORTS",
+      "headline": "August 5, 2013 was his return and suspension day",
+      "highlight": "August 5, 2013",
+      "body": "Rodriguez returned to the Yankees on August 5, 2013. MLB announced the same day that he would be suspended, pending appeal, through the 2014 season.",
+      "place": "New York",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Alex Rodriguez Yankee Stadium August 5 2013 Wikimedia Commons",
+        "prompt": "Alex Rodriguez in a Yankees uniform at Yankee Stadium, intense game moment, close-up with the infield in frame"
+      },
+      "emoji": "📅",
+      "chip": "AUG 5, 2013",
+      "logo": "mlb.com",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY 2.0)",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "MLB linked the suspension to Biogenesis",
+      "highlight": "Biogenesis scandal",
+      "body": "The suspension came from his role in the Biogenesis scandal. He was returning while MLB was investigating his possible connection to performance-enhancing drugs.",
+      "place": "New York",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "baseball dugout empty stadium Wikimedia Commons",
+        "prompt": "empty Yankees dugout at night with helmets and bats visible under stadium lights"
+      },
+      "emoji": "🧾",
+      "chip": "BIOGENESIS",
+      "logo": "mlb.com",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY-SA 2.0)",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "The penalty was later reduced to 162 games",
+      "highlight": "162 games",
+      "body": "After an arbitration hearing, the suspension was reduced from 211 games to 162 games. That kept him off the field for the entire 2014 season.",
+      "place": "New York",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "baseball umpire stadium lights Wikimedia Commons",
+        "prompt": "baseball field under stadium lights with no players, focused on the empty infield and bases"
+      },
+      "emoji": "⚖️",
+      "chip": "211 TO 162",
+      "logo": "mlb.com",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Wikimedia Commons (Public domain)",
+      "logoFile": "logo-3.png"
+    }
+  ],
+  "caption": "A-Rod played on August 5, then MLB handed him a suspension the same day.",
+  "hashtags": [
+    "#AlexRodriguez",
+    "#Yankees"
+  ],
+  "collaborators": [],
+  "igCaption": "A-Rod played on August 5, then MLB handed him a suspension the same day.\n\n📰 Sources: Wikipedia\n\n#AlexRodriguez #Yankees #miami #southflorida",
+  "kind": "celeb",
+  "kicker": "NEAR NEWS",
+  "person": "Alex Rodriguez",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Alex_Rodriguez",
+  "date": "2026-10-22",
+  "id": "2026-10-22-celeb-22-preview"
+}
