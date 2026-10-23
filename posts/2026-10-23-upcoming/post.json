@@ -1,0 +1,162 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "THIS IS COMING TO",
+    "main": "SOUTH FLORIDA",
+    "highlight": "AND NOBODY'S TALKING ABOUT IT",
+    "bottom": "👀",
+    "blur": false,
+    "photo": {
+      "query": "South Florida night crowd concert lights palm trees",
+      "prompt": "dramatic South Florida night scene with a packed outdoor crowd, bright stage lights, and palm trees in the frame"
+    },
+    "emojis": [
+      "🎸",
+      "🎨",
+      "🚆",
+      "👀"
+    ],
+    "logos": [
+      "amerantbankarena.com",
+      "jointherevolution.net",
+      "gobrightline.com",
+      "icamiami.org",
+      "zeyzeymiami.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c2.png",
+      "logo-c3.png",
+      "logo-c4.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Folklore & Foliage at Miami Beach Botanical Garden, Oct. 23",
+      "highlight": "Folklore & Foliage",
+      "body": "Folklore & Foliage starts at 6 p.m. at Miami Beach Botanical Garden in Miami Beach. Admission is free with RSVP.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miami Beach Botanical Garden night event crowd",
+        "prompt": "nighttime photo of Miami Beach Botanical Garden with event lights, vendors, and a crowd moving through the garden"
+      },
+      "color": "#5B3FD9",
+      "emoji": "🌿",
+      "chip": "Free",
+      "logo": "mbgarden.org",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Scene Queen at Revolution Live, Oct. 24",
+      "highlight": "Scene Queen",
+      "body": "Scene Queen plays Revolution Live in Fort Lauderdale at 7 p.m. Wargasm and Bailey Spinn open, and tickets cost $39.50.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Revolution Live Fort Lauderdale concert crowd stage lights",
+        "prompt": "packed rock concert inside Revolution Live with pink and red stage lights and the band on a low stage"
+      },
+      "color": "#FF4FA3",
+      "emoji": "🎸",
+      "chip": "$39.50",
+      "logo": "jointherevolution.net",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Sombr at Amerant Bank Arena, Oct. 24",
+      "highlight": "Sombr",
+      "body": "Sombr performs at Amerant Bank Arena in Sunrise at 7 p.m. The Last Dinner Party and The Hellp open, with tickets from $51 to $238.",
+      "place": "Sunrise",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Amerant Bank Arena Sunrise Florida concert exterior night",
+        "prompt": "Amerant Bank Arena in Sunrise at night with arena lights on and people arriving for a concert"
+      },
+      "color": "#C8102E",
+      "emoji": "🎤",
+      "chip": "$51+",
+      "logo": "amerantbankarena.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Brightline Midnight Train, Oct. 25",
+      "highlight": "Midnight Train",
+      "body": "Brightline runs a one-night late train from Orlando at 12:15 a.m. Sunday. It stops in West Palm Beach, Boca Raton, Fort Lauderdale, Aventura and Miami.",
+      "place": "South Florida",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Brightline train night platform South Florida",
+        "prompt": "Brightline train at a lit station platform at night with passengers boarding after a late event"
+      },
+      "color": "#FFD200",
+      "emoji": "🚆",
+      "chip": "12:15 a.m.",
+      "logo": "gobrightline.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Family Fest 2026 at ICA Miami Expansion Space, Oct. 25",
+      "highlight": "Family Fest",
+      "body": "Family Fest starts at 1 p.m. at ICA Miami Expansion Space in Miami. Tickets are $50 for adults, $15 for kids, and free for children under 3.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "ICA Miami Expansion Space family art event Miami",
+        "prompt": "families at a daytime art event in Miami with mural art, hands-on stations, and open gallery space"
+      },
+      "color": "#000000",
+      "emoji": "🎨",
+      "chip": "$15 kids",
+      "logo": "icamiami.org",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Peter Bjorn and John at ZeyZey, Oct. 25",
+      "highlight": "Peter Bjorn and John",
+      "body": "Peter Bjorn and John play ZeyZey Miami at 7 p.m. for the 20th anniversary of Writer's Block. Tickets cost $35.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "ZeyZey Miami outdoor music venue night",
+        "prompt": "outdoor Miami music venue at night with string lights, a crowd, and a band onstage"
+      },
+      "color": "#2E7D32",
+      "emoji": "🎶",
+      "chip": "$35",
+      "logo": "zeyzeymiami.com",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-6.png"
+    }
+  ],
+  "caption": "Who are you taking? Tag a friend.",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiWeekend"
+  ],
+  "collaborators": [],
+  "igCaption": "Who are you taking? Tag a friend.\n\n📰 Sources: Miami New Times, Secret Miami\n\n#SouthFloridaEvents #MiamiWeekend #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-23",
+  "id": "2026-10-23-upcoming"
+}
