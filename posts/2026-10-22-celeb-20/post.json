@@ -1,0 +1,101 @@
+{
+  "sector": "ENTERTAINMENT",
+  "cover": {
+    "top": "DID YOU KNOW THAT",
+    "main": "CAMILA CABELLO",
+    "highlight": "KARLA CAMILA",
+    "bottom": "CABELLO ESTRABAO?",
+    "blur": false,
+    "photo": {
+      "query": "Camila Cabello performance photo Wikimedia Commons",
+      "prompt": "dramatic concert photo of Camila Cabello singing into a microphone under blue stage lights"
+    },
+    "emojis": [
+      "🎤",
+      "🇨🇺"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Wikimedia Commons (CC BY 4.0)",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "Her full name is Karla Camila Cabello Estrabao",
+      "highlight": "Karla Camila",
+      "body": "Wikipedia lists her full birth name as Karla Camila Cabello Estrabao.",
+      "place": "Cuba",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Camila Cabello close-up portrait Wikimedia Commons",
+        "prompt": "close-up portrait of Camila Cabello with stage lighting, sharp focus, and a dark background"
+      },
+      "emoji": "🎤",
+      "chip": "BIRTH NAME",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY 3.0)"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "She was born on March 3, 1997, in Cuba",
+      "highlight": "March 3, 1997",
+      "body": "She was born in Cojímar, in the Habana del Este district of Havana, Cuba.",
+      "place": "Havana, Cuba",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Havana Cuba street scene Wikimedia Commons",
+        "prompt": "wide street scene in Havana with vivid buildings, afternoon light, and a sense of place"
+      },
+      "emoji": "🇨🇺",
+      "chip": "1997",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY 2.0)"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "She spent much of her early life moving between Mexico and Cuba",
+      "highlight": "Mexico and Cuba",
+      "body": "Her father was born in Mexico City and her mother is Cuban.",
+      "place": "Mexico and Cuba",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Mexico City to Havana travel visual Wikimedia Commons",
+        "prompt": "split travel-style image with a Mexico City skyline on one side and Havana buildings on the other"
+      },
+      "emoji": "✈️",
+      "chip": "EARLY LIFE",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY 4.0)"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "She moved to Miami as a child",
+      "highlight": "36-hour Greyhound",
+      "body": "When she was 6 or 7, she moved to Miami with her mother. Her father joined the family about 18 months later.",
+      "place": "Miami",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Greyhound bus Miami Wikimedia Commons",
+        "prompt": "Greyhound bus arriving in Miami at night with city lights and a highway view"
+      },
+      "emoji": "🚌",
+      "chip": "MIAMI",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY 3.0)"
+    }
+  ],
+  "caption": "Camila Cabello being Karla Camila Cabello Estrabao is the kind of fact people argue about twice",
+  "hashtags": [
+    "#CamilaCabello",
+    "#Wikipedia"
+  ],
+  "collaborators": [],
+  "igCaption": "Camila Cabello being Karla Camila Cabello Estrabao is the kind of fact people argue about twice\n\n📰 Sources: Wikipedia\n\n#CamilaCabello #Wikipedia #miami #southflorida",
+  "kind": "celeb",
+  "kicker": "NEAR NEWS",
+  "person": "Camila Cabello",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Camila_Cabello",
+  "date": "2026-10-22",
+  "id": "2026-10-22-celeb-20"
+}
