@@ -401,6 +401,17 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
       if (!ok()) throw new Error(`celeb cover still doesn't read as a question: ${lines(post.cover)}`);
       console.log(`  celeb cover fixed: ${lines(post.cover)}`);
     }
+    // the cover fixes can bend the fact (Oct 22 preview: "sentenced to 45 days" when he was sentenced to 3 months and served 45) → checked against the article's sentence
+    const fc = await chat([{ role: 'system', content: 'Does this Instagram cover question say exactly what the Wikipedia sentence says (same numbers, same meaning, nothing added)? If not, rewrite it so it does, same template: main = only the name, highlight = 2–5 words starting with a verb, bottom = the rest ending with "?", all caps, short. Reply JSON {"accurate": true|false, "main":"", "highlight":"", "bottom":""}.' },
+      { role: 'user', content: `Cover: ${lines(post.cover)}\nWikipedia: "${celeb?.quote}"` }]).catch(() => null);
+    if (!fc) throw new Error('celeb cover fact check failed');
+    if (fc.accurate === false) {
+      if (!fc.main || !fc.highlight) throw new Error(`celeb cover isn't accurate: ${lines(post.cover)}`);
+      Object.assign(post.cover, { main: fc.main, highlight: fc.highlight, bottom: fc.bottom || '' });
+      if (post.cover.bottom) { if (!/\?\s*$/.test(post.cover.bottom)) post.cover.bottom += '?'; } else if (!/\?\s*$/.test(post.cover.highlight)) post.cover.highlight += '?';
+      if (!ok()) throw new Error(`celeb cover still doesn't read as a question: ${lines(post.cover)}`);
+      console.log(`  celeb cover made accurate: ${lines(post.cover)}`);
+    }
   }
   post = sanitize(post);
   post.collaborators = cleanCollabs(post.collaborators);
