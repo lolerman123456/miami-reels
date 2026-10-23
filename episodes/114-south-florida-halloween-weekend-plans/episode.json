@@ -1,0 +1,199 @@
+{
+  "title": "South Florida Halloween Weekend Plans",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Halloween weekend has gardens, metal, arena pop and a Sunday night throwback.\nOct 23 to 25, Miami and Fort Lauderdale, free to $238\n\nSources: Miami New Times, Secret Miami\n\n#MiamiEvents #SouthFlorida #HalloweenWeekend #FortLauderdale",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Halloween weekend in South Florida starts with ghost lore in Miami Beach and keeps moving from there.",
+      "overlay": [
+        "HALLOWEEN",
+        "WEEKEND"
+      ],
+      "emojis": [
+        "🎃",
+        "🌴",
+        "🎸",
+        "🌙"
+      ],
+      "location": {
+        "name": "Miami Beach Botanical Garden",
+        "lat": 25.7962,
+        "lon": -80.1304,
+        "h": 12
+      },
+      "shot": {
+        "type": "dive",
+        "range": 900,
+        "pitch": -32,
+        "heading": 115
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Friday starts at Miami Beach Botanical Garden with Folklore and Foliage. It runs at 6 p.m. on Convention Center Drive, with old Florida ghost lore from author Thomas Smith, shadow puppets, tarot readings, and free admission with RSVP.",
+      "caption": "Friday starts at Miami Beach Botanical Garden with Folklore & Foliage. It runs at 6 p.m. on Convention Center Drive, with Old Florida ghost lore from author Thomas Smith, shadow puppets, tarot readings, and free admission with RSVP.",
+      "overlay": "MIAMI BEACH",
+      "badge": "FREE RSVP",
+      "sub": "Ghost lore at 6 p.m.",
+      "emoji": "🌿",
+      "stats": [
+        {
+          "value": "6 PM",
+          "label": "start time"
+        },
+        {
+          "value": "FREE",
+          "label": "admission"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami Beach Botanical Garden",
+        "lat": 25.7962,
+        "lon": -80.1304,
+        "h": 12
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 750,
+        "pitch": -34,
+        "heading": 145,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Saturday is at Revolution Live in Fort Lauderdale. Scene Queen brings the Metalicious Tour at 7 p.m., with Wargasm and Bailey Spinn opening. Tickets cost $39.50 through Ticketmaster.",
+      "caption": "Saturday is at Revolution Live in Fort Lauderdale. Scene Queen brings the Metalicious Tour at 7 p.m., with Wargasm and Bailey Spinn opening. Tickets cost $39.50 through Ticketmaster.",
+      "overlay": "REVOLUTION LIVE",
+      "badge": "$39.50",
+      "sub": "Scene Queen at 7 p.m.",
+      "emoji": "🎸",
+      "stats": [
+        {
+          "value": "$39.50",
+          "label": "tickets"
+        },
+        {
+          "value": "7 PM",
+          "label": "show time"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Revolution Live",
+        "lat": 26.1216,
+        "lon": -80.1463,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 220,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Also Saturday, Sombr plays Amerant Bank Arena in Sunrise on the You Are The Reasons Tour. The Last Dinner Party and The Hellp open. Tickets run from $51 to $238 on SeatGeek. If you’re at Amerant, open NEAR and see who else showed.",
+      "caption": "Also Saturday, Sombr plays Amerant Bank Arena in Sunrise on the You Are The Reasons Tour. The Last Dinner Party and The Hellp open. Tickets run from $51 to $238 on SeatGeek. If you’re at Amerant, open NEAR and see who else showed.",
+      "overlay": "SUNRISE",
+      "badge": "$51-$238",
+      "sub": "Amerant Bank Arena",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "$51",
+          "label": "low ticket"
+        },
+        {
+          "value": "$238",
+          "label": "high ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Amerant Bank Arena",
+        "lat": 26.1585,
+        "lon": -80.3256,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -30,
+        "heading": 85,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sunday ends at ZeyZey Miami. Peter Bjorn and John celebrate 20 years of Writer’s Block at 7 p.m. on NE 61st Street. Tickets cost $35 through ZeyZey Miami.",
+      "caption": "Sunday ends at ZeyZey Miami. Peter Bjorn and John celebrate 20 years of Writer’s Block at 7 p.m. on NE 61st Street. Tickets cost $35 through ZeyZey Miami.",
+      "overlay": "ZEYZEY MIAMI",
+      "badge": "20 YEARS",
+      "sub": "Writer’s Block show",
+      "emoji": "🎶",
+      "stats": [
+        {
+          "value": "20 YEARS",
+          "label": "album mark"
+        },
+        {
+          "value": "$35",
+          "label": "tickets"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "ZeyZey Miami",
+        "lat": 25.8324,
+        "lon": -80.1924,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Pick one for Halloween weekend. Pick one for Halloween weekend, and if you keep spotting the same person in the crowd but never say a word, NEAR shows you who they were.",
+      "overlay": "WHAT’S THE MOVE? 🎃",
+      "sub": "Comment your plan",
+      "location": {
+        "name": "ZeyZey Miami",
+        "lat": 25.8324,
+        "lon": -80.1924,
+        "h": 12
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 25
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "114-south-florida-halloween-weekend-plans"
+}
