@@ -1,0 +1,114 @@
+{
+  "sector": "ENTERTAINMENT",
+  "cover": {
+    "top": "DID YOU KNOW THAT",
+    "main": "MARK WAHLBERG",
+    "highlight": "WAS SENTENCED TO",
+    "bottom": "45 DAYS FOR A 1988 FELONY ASSAULT?",
+    "blur": false,
+    "photo": {
+      "query": "Mark Wahlberg red carpet Wikimedia Commons",
+      "prompt": "dramatic close-up red carpet photo of Mark Wahlberg with camera flashes, sharp contrast, and a tight crop"
+    },
+    "emojis": [
+      "🎬",
+      "⚖️",
+      "😳"
+    ],
+    "logos": [
+      "wikipedia.org"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Wikimedia Commons (Public domain)",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "He was 16 in the 1988 case",
+      "highlight": "1988 case",
+      "body": "Wikipedia says Wahlberg assaulted two Vietnamese-American men in April 1988, when he was 16.",
+      "place": "Boston",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Dorchester Boston street Wikimedia Commons",
+        "prompt": "moody Boston street scene at dusk with brick buildings and hard shadows"
+      },
+      "emoji": "🚔",
+      "chip": "AGE 16",
+      "logo": "wikipedia.org",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY-SA 4.0)",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "He pleaded guilty to felony assault",
+      "highlight": "felony assault",
+      "body": "Wikipedia says he pleaded guilty to felony assault and was sentenced to three months in jail.",
+      "place": "Massachusetts",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "old jail cell Wikimedia Commons",
+        "prompt": "stark empty jail cell with a metal bed and cold overhead light"
+      },
+      "emoji": "⚖️",
+      "chip": "1988",
+      "logo": "wikipedia.org",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Wikimedia Commons (CC0)",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "He served 45 days",
+      "highlight": "45 days",
+      "body": "Wikipedia says he served only 45 days of that sentence.",
+      "place": "Massachusetts",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "jail bars Wikimedia Commons",
+        "prompt": "close-up of jail bars in harsh light with a plain concrete background"
+      },
+      "emoji": "🔒",
+      "chip": "45 DAYS",
+      "logo": "wikipedia.org",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Wikimedia Commons (Public domain)",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "ENTERTAINMENT",
+      "headline": "People still bring it up because of the pardon debate",
+      "highlight": "pardon debate",
+      "body": "Wikipedia says he applied for a pardon in 2014, then later said he regretted the attempt.",
+      "place": "Massachusetts",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Massachusetts State House Boston Wikimedia Commons",
+        "prompt": "low-angle view of the Massachusetts State House under gray clouds"
+      },
+      "emoji": "🏛️",
+      "chip": "2014",
+      "logo": "wikipedia.org",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Wikimedia Commons (CC BY-SA 4.0)",
+      "logoFile": "logo-4.png"
+    }
+  ],
+  "caption": "Mark Wahlberg serving 45 days for a felony assault is the kind of fact people still argue about 😭",
+  "hashtags": [
+    "#MarkWahlberg",
+    "#WikipediaFacts"
+  ],
+  "collaborators": [],
+  "igCaption": "Mark Wahlberg serving 45 days for a felony assault is the kind of fact people still argue about 😭\n\n📰 Sources: Wikipedia\n\n#MarkWahlberg #WikipediaFacts #miami #southflorida",
+  "kind": "celeb",
+  "kicker": "NEAR NEWS",
+  "person": "Mark Wahlberg",
+  "wikiUrl": "https://en.wikipedia.org/wiki/Mark_Wahlberg",
+  "date": "2026-10-22",
+  "id": "2026-10-22-celeb-21-preview"
+}
