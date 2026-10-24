@@ -1,0 +1,128 @@
+{
+  "sector": "REAL ESTATE",
+  "cover": {
+    "top": "LARRY PAGE COULD SPARE",
+    "main": "NEARLY $15B WITH",
+    "highlight": "$173M",
+    "bottom": "IN MIAMI MANSIONS",
+    "blur": false,
+    "photo": {
+      "query": "Larry Page luxury Miami waterfront mansion Biscayne Bay dusk",
+      "prompt": "dramatic editorial photo of a Miami waterfront mansion at dusk, lit windows, palm trees, Biscayne Bay water, and downtown Miami in the distance",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "💸",
+      "🏠",
+      "🌴"
+    ],
+    "logos": [
+      "google.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "REAL ESTATE",
+      "headline": "$173M in Miami mansions could cut Larry Page's California tax bill",
+      "highlight": "$173M",
+      "body": "Larry Page reportedly bought $173 million worth of Miami mansions. The move is tied to a possible tax break if he leaves California.",
+      "place": "Miami and California",
+      "source": "AOL.com",
+      "photo": {
+        "query": "Miami waterfront mansions Biscayne Bay aerial",
+        "prompt": "striking aerial photo of multiple Miami waterfront mansions on Biscayne Bay with yachts and the city skyline behind them at sunset"
+      },
+      "color": "#4285F4",
+      "emoji": "🏠",
+      "chip": "$173M",
+      "logo": "google.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "REAL ESTATE",
+      "headline": "The reported savings could reach nearly $15 billion",
+      "highlight": "nearly $15B",
+      "body": "One report says leaving California could spare Page nearly $15 billion in taxes. Another says the move could help him escape California's potential billionaire tax.",
+      "place": "California",
+      "source": "Yahoo Finance",
+      "photo": {
+        "query": "California state capitol with tax documents editorial",
+        "prompt": "moody photo of the California State Capitol with stacked tax documents or a calculator in the foreground"
+      },
+      "color": "#4285F4",
+      "emoji": "💸",
+      "chip": "$15B",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "REAL ESTATE",
+      "headline": "The purchase adds another Miami billionaire property play",
+      "highlight": "Miami compound",
+      "body": "A separate report said Jeff Bezos added a $69.5 million beach house to his Miami compound. The headline points to how top billionaires are buying along the coast.",
+      "place": "Miami",
+      "source": "Yahoo Finance",
+      "photo": {
+        "query": "Miami Beach luxury waterfront home and beach house editorial",
+        "prompt": "sharp photo of a luxury Miami Beach waterfront home with the ocean, a dock, and bright midday light"
+      },
+      "color": "#4285F4",
+      "emoji": "🌴",
+      "chip": "$69.5M",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "REAL ESTATE",
+      "headline": "Page built Google with Sergey Brin",
+      "highlight": "Google",
+      "body": "Larry Page co-founded Google with Sergey Brin. He later led Google and Alphabet before stepping down from day-to-day roles in 2019.",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Googleplex exterior Mountain View editorial",
+        "prompt": "clean exterior photo of the Googleplex campus with the Google logo visible on a modern glass building"
+      },
+      "color": "#34A853",
+      "emoji": "🔎",
+      "chip": "2019",
+      "logo": "google.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "REAL ESTATE",
+      "headline": "Page remains one of the richest people in the world",
+      "highlight": "$334.1B",
+      "body": "Wikipedia says Bloomberg and Forbes estimated Page's net worth at $334.1 billion in 2026. That puts him among the richest people in the world.",
+      "source": "Wikipedia",
+      "photo": {
+        "query": "Larry Page portrait or Google campus editorial",
+        "prompt": "formal editorial portrait of Larry Page or a clean shot of a Google campus building with his silhouette not required"
+      },
+      "color": "#FBBC05",
+      "emoji": "💰",
+      "chip": "$334.1B",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Larry Page's reported $173 million Miami buy is tied to a possible nearly $15 billion tax break if he leaves California.",
+  "hashtags": [
+    "#MiamiRealEstate",
+    "#LarryPage"
+  ],
+  "collaborators": [],
+  "igCaption": "Larry Page's reported $173 million Miami buy is tied to a possible nearly $15 billion tax break if he leaves California.\n\n📰 Sources: AOL.com, Yahoo Finance, Wikipedia\n\n#MiamiRealEstate #LarryPage #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-24",
+  "id": "2026-10-24-brief"
+}
