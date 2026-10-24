@@ -1,0 +1,159 @@
+{
+  "title": "South Florida plans this weekend: parks, walks and a build",
+  "sources": [
+    "WSVN 7News",
+    "ABC News",
+    "U.S. Department of the Interior",
+    "WPTV"
+  ],
+  "collaborators": [],
+  "igCaption": "Free park entry on Oct. 27, a walk at loanDepot Park, and a 10-home build in Oakland Park.\n\nSources: WSVN 7News, ABC News, U.S. Department of the Interior, WPTV\n\n#MiamiEvents #SouthFlorida #Everglades #ThisWeekend",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a South Florida plan with a real purpose this weekend? Three local things are on the calendar.",
+      "overlay": [
+        "WEEKEND PLANS",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🌿",
+        "🚶",
+        "🏠",
+        "📍"
+      ],
+      "location": {
+        "name": "LoanDepot Park",
+        "lat": 25.77805556,
+        "lon": -80.21972222,
+        "h": 35
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Making Strides starts at loanDepot Park. The American Cancer Society holds the walk to raise breast cancer awareness and support research. It is one of two local walks listed this month.",
+      "caption": "Making Strides starts at loanDepot Park. The American Cancer Society holds the walk to raise breast cancer awareness and support research. It is one of 2 local walks listed this month.",
+      "overlay": "LOANDEPOT PARK",
+      "badge": "2 WALKS",
+      "sub": "Breast cancer awareness",
+      "emoji": "🎀",
+      "stats": [
+        {
+          "value": "2",
+          "label": "local walks"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "LoanDepot Park",
+        "lat": 25.77805556,
+        "lon": -80.21972222,
+        "h": 35
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 850,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Everglades National Park has a free entrance day on Oct. 27. The National Park Service is waiving entrance fees for Teddy Roosevelt's birthday. That makes the park easier to plan for next week. If you go, open NEAR and see who else hit the Everglades.",
+      "caption": "Everglades National Park has a free entrance day on Oct. 27. The National Park Service is waiving entrance fees for Teddy Roosevelt's birthday. If you go, open NEAR and see who else hit the Everglades.",
+      "overlay": "EVERGLADES",
+      "badge": "FREE OCT 27",
+      "sub": "NPS fee-free day",
+      "emoji": "🐊",
+      "stats": [
+        {
+          "value": "OCT 27",
+          "label": "free entry"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Everglades National Park",
+        "lat": 25.3125,
+        "lon": -80.6875,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 2300,
+        "pitch": -35,
+        "heading": 92,
+        "degrees": 85,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "In Oakland Park, almost 150 volunteers are helping Habitat for Humanity and Hard Rock start a community from the ground up. The Seminole Hard Rock Women Build covers 10 homes for families.",
+      "caption": "In Oakland Park, almost 150 volunteers are helping Habitat for Humanity and Hard Rock start a community from the ground up. The Seminole Hard Rock Women Build covers 10 homes for families.",
+      "overlay": "OAKLAND PARK",
+      "badge": "10 HOMES",
+      "sub": "Habitat volunteer build",
+      "emoji": "🔨",
+      "stats": [
+        {
+          "value": "150",
+          "label": "volunteers"
+        },
+        {
+          "value": "10",
+          "label": "homes"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Oakland Park",
+        "lat": 26.172306,
+        "lon": -80.131989,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -30,
+        "heading": 18,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Pick the one that fits your weekend. A weekend like this is full of people you pass without ever meeting, and NEAR is what makes it possible to figure out who they were later.",
+      "overlay": "WEEKEND PICKS",
+      "sub": "Comment your plan",
+      "location": {
+        "name": "South Florida",
+        "lat": 25.761681,
+        "lon": -80.191788,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2400,
+        "pitch": -35,
+        "heading": 260
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "116-south-florida-plans-this-weekend-parks-w"
+}
