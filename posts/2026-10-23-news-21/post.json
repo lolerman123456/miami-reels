@@ -1,0 +1,84 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "ARIZONA SURGEON",
+    "main": "LUGGAGE FULL OF",
+    "highlight": "TESLA PILLS",
+    "bottom": "AND SHROOMS",
+    "blur": false,
+    "photo": {
+      "query": "PortMiami cruise terminal luggage police lights dramatic",
+      "prompt": "dramatic close photo of cruise luggage outside a PortMiami terminal at dusk, a cruise ship in the background, police lights reflecting on the pavement, no people visible"
+    },
+    "emojis": [
+      "🚢",
+      "💊",
+      "🍄"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Cruise Hive",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Border Patrol says luggage had Tesla ecstasy",
+      "highlight": "Tesla ecstasy",
+      "body": "FOX 10 Phoenix says an Arizona surgeon was busted while boarding a Miami cruise ship with luggage full of Tesla-logo ecstasy and shrooms.",
+      "place": "PortMiami",
+      "source": "FOX 10 Phoenix",
+      "photo": {
+        "query": "PortMiami cruise ship terminal luggage Miami dramatic",
+        "prompt": "tight cinematic photo of stacked cruise luggage outside a PortMiami terminal with a ship towering in the background and police lights nearby, no faces visible"
+      },
+      "emoji": "💊",
+      "chip": "TESLA PILLS",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Cruise Hive"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police say the doctor was boarding at PortMiami",
+      "highlight": "boarding at PortMiami",
+      "body": "NBC 6 South Florida says police found Tesla-logo pills while the doctor was boarding a cruise at PortMiami.",
+      "place": "PortMiami",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "PortMiami Dodge Island cruise terminal security dramatic",
+        "prompt": "wide dramatic view of a PortMiami cruise terminal on Dodge Island with a ship docked and security vehicles near the entrance, no people identifiable"
+      },
+      "emoji": "🧳",
+      "chip": "PORTMIAMI",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Cruise Hive"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The Bahamas trip ended before he got on board",
+      "highlight": "before he got on board",
+      "body": "The cruise was headed from Miami to the Bahamas, according to the Facebook report. Police say the drugs were found before he entered the ship.",
+      "place": "Miami",
+      "source": "Facebook",
+      "photo": {
+        "query": "cruise ship PortMiami luggage screening area dramatic",
+        "prompt": "cruise ship at a Miami terminal with blue water beyond it and luggage screening area in the foreground, early morning light, no passengers visible"
+      },
+      "emoji": "🏝️",
+      "chip": "BAHAMAS",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Cruise Hive"
+    }
+  ],
+  "caption": "Police say a PortMiami cruise boarding turned into a drug bust after they found Tesla-logo pills and shrooms in luggage.",
+  "hashtags": [
+    "#PortMiami",
+    "#MiamiCrime"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say a PortMiami cruise boarding turned into a drug bust after they found Tesla-logo pills and shrooms in luggage.\n\n📰 Sources: FOX 10 Phoenix, NBC 6 South Florida, Facebook, Yahoo, www.techtimes.co.uk\n\n#PortMiami #MiamiCrime #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-23",
+  "id": "2026-10-23-news-21"
+}
