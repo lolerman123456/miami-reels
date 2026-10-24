@@ -1,0 +1,200 @@
+{
+  "title": "Cheap Halloween Weekend Music and Nightlife Around Miami",
+  "sources": [
+    "Miami New Times",
+    "Miami New Times",
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Halloween weekend starts with free live music, then moves to ticketed shows.\n\nSources: Miami New Times, Miami New Times, Miami New Times\n\n#MiamiEvents #MiamiBeach #Wynwood #HalloweenWeekend",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Free live music starts Friday. The weekend also has ticketed shows and late-night drinks.",
+      "overlay": [
+        "HALLOWEEN",
+        "WEEKEND"
+      ],
+      "emojis": [
+        "🎃",
+        "🎶",
+        "🌙",
+        "🎟️"
+      ],
+      "location": {
+        "name": "Miami Beach Botanical Garden",
+        "lat": 25.7953,
+        "lon": -80.1324,
+        "h": 18
+      },
+      "shot": {
+        "type": "dive",
+        "range": 700,
+        "pitch": -32,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start Friday at Folklore and Foliage at the Miami Beach Botanical Garden. It runs at six p.m. at two thousand Convention Center Drive. Admission is free with RSVP. Bruno Esposito of Lone Wolf One Man Band performs, and Thomas Smith brings old Florida ghost lore.",
+      "caption": "Start Friday at Folklore & Foliage at the Miami Beach Botanical Garden. It runs at 6 p.m. at 2000 Convention Center Drive. Admission is free with RSVP. Bruno Esposito of Lone Wolf One Man Band performs, and Thomas Smith brings old Florida ghost lore.",
+      "overlay": "BOTANICAL GARDEN",
+      "badge": "FREE RSVP",
+      "sub": "Friday at 6 p.m.",
+      "emoji": "🌿",
+      "stats": [
+        {
+          "value": "FREE",
+          "label": "admission"
+        },
+        {
+          "value": "6 PM",
+          "label": "start time"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami Beach Botanical Garden",
+        "lat": 25.7953,
+        "lon": -80.1324,
+        "h": 18
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 650,
+        "pitch": -30,
+        "heading": 40,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For drinks, Bar nineteen thirty-nine at the National Hotel runs Halloween cocktails all October. The address is sixteen seventy-seven Collins Avenue. The menu includes Morticia’s Bleeding Heart Margarita with lychee eyeballs, Wednesday’s Woe, and Lurch’s Smoky Gin and Tonic.",
+      "caption": "For drinks, Bar1939 at the National Hotel runs Halloween cocktails all October. The address is 1677 Collins Ave. The menu includes Morticia’s Bleeding Heart Margarita with lychee eyeballs, Wednesday’s Woe, and Lurch’s Smoky Gin & Tonic.",
+      "overlay": "BAR1939",
+      "badge": "ALL OCTOBER",
+      "sub": "National Hotel",
+      "emoji": "🍸",
+      "stats": [
+        {
+          "value": "3",
+          "label": "Halloween drinks"
+        },
+        {
+          "value": "1677",
+          "label": "Collins Ave"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "National Hotel Miami Beach",
+        "lat": 25.7919,
+        "lon": -80.1298,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -31,
+        "heading": 120,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sunday night, Peter Bjorn and John play ZeyZey Miami at seven p.m. Tickets cost thirty-five dollars. The band is marking twenty years of Writer’s Block, with Young Folks and Second Chance on the set-list for longtime fans. If you go, check NEAR after ZeyZey and see who else was there.",
+      "caption": "Sunday night, Peter Bjorn and John play ZeyZey Miami at 7 p.m. Tickets cost $35. The band is marking 20 years of Writer’s Block, with Young Folks and Second Chance on the set-list for longtime fans. If you go, check NEAR after ZeyZey and see who else was there.",
+      "overlay": "ZEYZEY",
+      "badge": "$35",
+      "sub": "Sunday at 7 p.m.",
+      "emoji": "🎸",
+      "stats": [
+        {
+          "value": "$35",
+          "label": "tickets"
+        },
+        {
+          "value": "20 YEARS",
+          "label": "Writer's Block"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "ZeyZey Miami",
+        "lat": 25.8321,
+        "lon": -80.1915,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 750,
+        "pitch": -33,
+        "heading": 285,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The arena pick is Sombr in Sunrise on Saturday at seven p.m. Tickets run from fifty-one to two hundred thirty-eight dollars. The Last Dinner Party and The Hellp open the show at Amerant Bank Arena.",
+      "caption": "The arena pick is Sombr in Sunrise on Saturday at 7 p.m. Tickets run from $51 to $238. The Last Dinner Party and The Hellp open the show at Amerant Bank Arena.",
+      "overlay": "SUNRISE",
+      "badge": "$51-$238",
+      "sub": "Saturday at 7 p.m.",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "$51",
+          "label": "lowest ticket"
+        },
+        {
+          "value": "$238",
+          "label": "top ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Amerant Bank Arena",
+        "lat": 26.1584,
+        "lon": -80.3256,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -34,
+        "heading": 20,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Friday starts free, then the rest of the weekend is ticketed. If you kept seeing the same face in Miami’s Halloween crowds but never got a name, NEAR is the app that tells you who walked past you that day.",
+      "overlay": "PICK ONE 🎃",
+      "sub": "Friday through Sunday",
+      "location": {
+        "name": "Miami Beach Botanical Garden",
+        "lat": 25.7953,
+        "lon": -80.1324,
+        "h": 18
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1200,
+        "pitch": -32,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "118-cheap-halloween-weekend-music-and-nightl"
+}
