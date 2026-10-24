@@ -1,0 +1,239 @@
+{
+  "title": "Halloween Weekend South Florida Plans",
+  "sources": [
+    "Eventbrite",
+    "Secret Miami",
+    "Bay News 9",
+    "CBS News",
+    "Local 10",
+    "Local 10"
+  ],
+  "collaborators": [
+    "gobrightline"
+  ],
+  "igCaption": "Halloween weekend plans if you waited until now. 🎃\nOct. 24-25, South Florida, free and paid picks\n\nSources: Eventbrite, Secret Miami, Bay News 9, CBS News, Local 10, Local 10\n\n#Miami #SouthFlorida #Halloween #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need Halloween weekend plans in South Florida without pretending you planned this two weeks ago?",
+      "overlay": [
+        "HALLOWEEN",
+        "WEEKEND"
+      ],
+      "emojis": [
+        "🎃",
+        "🚆",
+        "🌊",
+        "🍂"
+      ],
+      "location": {
+        "name": "Broward County, Florida",
+        "lat": 26.193535,
+        "lon": -80.476683,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start with 4Roots Harvest Festival on Saturday, October twenty-fourth. It runs from nine in the morning to two in the afternoon. That gives you a daytime fall plan before the night events.",
+      "caption": "Start with 4Roots Harvest Festival on Saturday, Oct. 24. It runs from 9 AM to 2 PM.",
+      "overlay": "4ROOTS",
+      "badge": "9 AM-2 PM",
+      "sub": "Saturday harvest plan",
+      "emoji": "🍂",
+      "stats": [
+        {
+          "value": "9 AM",
+          "label": "start time"
+        },
+        {
+          "value": "2 PM",
+          "label": "end time"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "South Florida",
+        "lat": 26.193535,
+        "lon": -80.476683,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 120,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Margate has Nightmare on Flynn’s Street on Saturday, October twenty-fourth. It starts at one in the afternoon and runs until eleven-thirty at night.",
+      "caption": "Margate has Nightmare on Flynn’s Street on Saturday, Oct. 24. It starts at 1 PM and runs until 11:30 PM.",
+      "overlay": "MARGATE",
+      "badge": "1-11:30 PM",
+      "sub": "Long Halloween window",
+      "emoji": "👻",
+      "stats": [
+        {
+          "value": "1 PM",
+          "label": "start time"
+        },
+        {
+          "value": "11:30 PM",
+          "label": "end time"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Margate, Florida",
+        "lat": 26.244526,
+        "lon": -80.206436,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 40,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami Gardens has the International Vegan Food Festival Halloween Bash on Saturday. It runs from two to eight in the evening. If you go, open NEAR and see who else hit the festival.",
+      "caption": "Miami Gardens has the International Vegan Food Festival Halloween Bash on Saturday. It runs from 2 to 8 PM. If you go, open NEAR and see who else hit the festival.",
+      "overlay": "MIAMI GARDENS",
+      "badge": "2-8 PM",
+      "sub": "Halloween food stop",
+      "emoji": "🥗",
+      "stats": [
+        {
+          "value": "2 PM",
+          "label": "start time"
+        },
+        {
+          "value": "8 PM",
+          "label": "end time"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Miami Gardens, Florida",
+        "lat": 25.942038,
+        "lon": -80.245604,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -30,
+        "heading": 300,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Brightline is running a one-night Midnight Train after Halloween Horror Nights. It leaves Orlando at twelve-fifteen Sunday morning and stops in West Palm Beach, Boca Raton, Fort Lauderdale, Aventura and Miami. The ride also includes a free spooky snack and sleep mask while supplies last. Groups of three or more can save up to twenty-five percent on SMART fares if they book at least one day in advance.",
+      "caption": "Brightline is running a one-night Midnight Train after Halloween Horror Nights. It leaves Orlando at 12:15 AM Sunday and stops in West Palm Beach, Boca Raton, Fort Lauderdale, Aventura and Miami. The ride also includes a free spooky snack and sleep mask while supplies last. Groups of three or more can save up to 25% on SMART fares if they book at least one day in advance.",
+      "overlay": "BRIGHTLINE",
+      "badge": "12:15 AM",
+      "sub": "One-night late train",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "12:15 AM",
+          "label": "departure"
+        },
+        {
+          "value": "25%",
+          "label": "group savings"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "West Palm Beach, Florida",
+        "lat": 26.74694444,
+        "lon": -80.13111111,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -32,
+        "heading": 180,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Florida national parks offer free admission Tuesday. King tides could bring flooding impacts to South Florida on Sunday, with roads and businesses along the coast at risk.",
+      "caption": "Florida national parks offer free admission Tuesday. King tides could bring flooding impacts to South Florida on Sunday, with roads and businesses along the coast at risk.",
+      "overlay": "SOUTH FLORIDA",
+      "badge": "FREE TUES",
+      "sub": "Watch king tides Sunday",
+      "emoji": "🌊",
+      "stats": [
+        {
+          "value": "TUESDAY",
+          "label": "free admission"
+        },
+        {
+          "value": "SUNDAY",
+          "label": "flooding risk"
+        }
+      ],
+      "source": "Bay News 9",
+      "location": {
+        "name": "Palm Beach County, Florida",
+        "lat": 26.71,
+        "lon": -80.05,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 250,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you actually do this weekend? The same way a weekend can blur together with faces you pass and never meet, NEAR is what tells you who that person by the bar or parade really was.",
+      "overlay": "PICK ONE 🎃",
+      "sub": "Free, cheap, last-minute",
+      "location": {
+        "name": "Broward County, Florida",
+        "lat": 26.193535,
+        "lon": -80.476683,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -34,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "117-halloween-weekend-south-florida-plans"
+}
