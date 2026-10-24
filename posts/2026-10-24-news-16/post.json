@@ -1,0 +1,137 @@
+{
+  "sector": "SPORTS",
+  "cover": {
+    "top": "MALACHI TONEY",
+    "main": "SET A MIAMI RECORD WITH",
+    "highlight": "16 CATCHES",
+    "bottom": "FOR 194 YARDS, 3 TDS",
+    "blur": false,
+    "photo": {
+      "query": "Malachi Toney Miami Hurricanes football Hard Rock Stadium",
+      "prompt": "dramatic action photo of Miami Hurricanes receiver Malachi Toney catching a pass under stadium lights at Hard Rock Stadium"
+    },
+    "emojis": [
+      "🏈",
+      "🙌",
+      "🟠",
+      "🟢"
+    ],
+    "logos": [
+      "miamihurricanes.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Yahoo Sports",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "SPORTS",
+      "headline": "Malachi Toney's 16 catches for 194 yards and 3 touchdowns",
+      "highlight": "16 catches",
+      "body": "Malachi Toney caught 16 passes for 194 yards and 3 touchdowns as No. 1 Miami beat Pitt 52-23 at Hard Rock Stadium.",
+      "place": "Miami Gardens",
+      "source": "Local 10",
+      "photo": {
+        "query": "Malachi Toney Miami Hurricanes catch Hard Rock Stadium",
+        "prompt": "Miami Hurricanes receiver Malachi Toney hauling in a pass near the sideline at Hard Rock Stadium with stadium lights and crowd behind him",
+        "mark": "circle"
+      },
+      "emoji": "🏈",
+      "chip": "16 CATCHES",
+      "logo": "miamihurricanes.com",
+      "color": "#F47321",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "Miami's first game at No. 1 since 2002",
+      "highlight": "since 2002",
+      "body": "WSVN reported this was Miami's first game atop the AP poll since the 2002 season.",
+      "place": "Miami Gardens",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Miami Hurricanes football Hard Rock Stadium crowd orange green",
+        "prompt": "wide dramatic photo of Hard Rock Stadium packed for a Miami Hurricanes football game with orange and green fans under bright lights"
+      },
+      "emoji": "☝️",
+      "chip": "NO. 1",
+      "logo": "miamihurricanes.com",
+      "color": "#005030",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "Mensah threw for 387 yards and 4 touchdowns",
+      "highlight": "387 yards",
+      "body": "Darian Mensah threw for 387 yards and 4 touchdowns in the win over Pitt.",
+      "place": "Miami Gardens",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Darian Mensah Miami Hurricanes quarterback passing",
+        "prompt": "Miami Hurricanes quarterback Darian Mensah throwing from the pocket during a night game at Hard Rock Stadium"
+      },
+      "emoji": "🎯",
+      "chip": "4 TDS",
+      "logo": "miamihurricanes.com",
+      "color": "#F47321",
+      "photoFile": "news-3.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "Toney went over 2,000 career yards in 23 games",
+      "highlight": "2,000 career yards",
+      "body": "The Washington Post reported Toney passed 2,000 career receiving yards in only 23 games.",
+      "place": "Miami Gardens",
+      "source": "The Washington Post",
+      "photo": {
+        "query": "Malachi Toney Miami Hurricanes touchdown celebration",
+        "prompt": "Miami Hurricanes receiver Malachi Toney celebrating a touchdown in the end zone with teammates at Hard Rock Stadium"
+      },
+      "emoji": "📈",
+      "chip": "23 GAMES",
+      "logo": "miamihurricanes.com",
+      "color": "#005030",
+      "photoFile": "news-4.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "Miami improved to 7-0 after the blowout",
+      "highlight": "7-0",
+      "body": "On3 reported the Hurricanes improved to 7-0 with the 52-23 win.",
+      "place": "Miami Gardens",
+      "source": "On3",
+      "photo": {
+        "query": "Miami Hurricanes football team running out tunnel Hard Rock Stadium",
+        "prompt": "Miami Hurricanes football players running out of the tunnel through smoke at Hard Rock Stadium before kickoff"
+      },
+      "emoji": "🔥",
+      "chip": "7-0",
+      "logo": "miamihurricanes.com",
+      "color": "#F47321",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Yahoo Sports",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "Malachi Toney caught 16 passes and rewrote Miami's record book in a 52-23 win.",
+  "hashtags": [
+    "#MiamiHurricanes",
+    "#HardRockStadium"
+  ],
+  "collaborators": [],
+  "igCaption": "Malachi Toney caught 16 passes and rewrote Miami's record book in a 52-23 win.\n\n📰 Sources: Local 10, WSVN 7News, The Washington Post, On3\n\n#MiamiHurricanes #HardRockStadium #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-24",
+  "id": "2026-10-24-news-16"
+}
