@@ -1,0 +1,101 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "SELF-PROCLAIMED WITCH DOCTOR",
+    "main": "GETS",
+    "highlight": "LIFE IN PRISON",
+    "bottom": "FOR THE DISAPPEARANCE AND DEATH OF 21-YEAR-OLD LEILA CAVETT",
+    "blur": false,
+    "photo": {
+      "query": "Broward County courthouse exterior dramatic dusk Fort Lauderdale",
+      "prompt": "dramatic exterior photo of the Broward County courthouse in Fort Lauderdale at dusk, serious news mood, empty steps, cloudy sky",
+      "mark": "stamp: LIFE"
+    },
+    "emojis": [
+      "⚖️",
+      "🚔",
+      "🕯️"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Orlando Sentinel",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Life in prison for Leila Cavett's disappearance and death",
+      "highlight": "life in prison",
+      "body": "Local 10 says Shannan Ryan, a self-proclaimed witch doctor, was sentenced to life in prison in Broward.",
+      "place": "Broward",
+      "source": "Local 10",
+      "photo": {
+        "query": "Fort Lauderdale courthouse steps dramatic exterior",
+        "prompt": "tight dramatic photo of courthouse steps in Fort Lauderdale with a cloudy sky and a serious news feel"
+      },
+      "emoji": "⚖️",
+      "chip": "LIFE",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Leila Cavett was 21",
+      "highlight": "21",
+      "body": "CBS News identified Cavett as a 21-year-old young mother in the 2020 Broward case.",
+      "place": "Broward",
+      "source": "CBS News",
+      "photo": {
+        "query": "South Florida candlelight vigil street night",
+        "prompt": "somber candlelight vigil on a South Florida street at night, candles and flowers, no identifiable faces"
+      },
+      "emoji": "🕯️",
+      "chip": "AGE 21",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Orlando Sentinel"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case drew attention because she vanished first",
+      "highlight": "vanished first",
+      "body": "The case gripped South Florida because Cavett disappeared before investigators later found her remains.",
+      "place": "South Florida",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "missing person flyers South Florida close up",
+        "prompt": "documentary-style close-up of missing-person flyers on a wall with flowers and candles, South Florida setting"
+      },
+      "emoji": "📄",
+      "chip": "MISSING",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Ryan was sentenced this week",
+      "highlight": "this week",
+      "body": "NBC 6 South Florida and the Sun Sentinel reported the sentencing on Friday, Oct. 23.",
+      "place": "South Florida",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Florida courthouse microphone press conference exterior",
+        "prompt": "news microphones outside a Florida courthouse during a sentencing, no identifiable people, documentary style"
+      },
+      "emoji": "📺",
+      "chip": "OCT. 23",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Orlando Sentinel"
+    }
+  ],
+  "caption": "Shannan Ryan was sentenced to life in prison for the disappearance and death of 21-year-old Leila Cavett.",
+  "hashtags": [
+    "#LeilaCavett",
+    "#BrowardCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "Shannan Ryan was sentenced to life in prison for the disappearance and death of 21-year-old Leila Cavett.\n\n📰 Sources: Local 10, CBS News, Sun Sentinel, NBC 6 South Florida, People.com\n\n#LeilaCavett #BrowardCounty #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-24",
+  "id": "2026-10-24-news-07"
+}
