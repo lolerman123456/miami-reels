@@ -1,0 +1,86 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "A FORT LAUDERDALE ATTORNEY",
+    "main": "WAS CHARGED IN",
+    "highlight": "BOCA RATON",
+    "bottom": "STALKING CASE",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Boca Raton courthouse night exterior",
+      "prompt": "dramatic night photo of a Boca Raton courthouse or police building with bright exterior lights, empty foreground, and a tense South Florida feel, no people visible",
+      "mark": ""
+    },
+    "emojis": [
+      "🚨",
+      "⚖️",
+      "📍"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WPBF",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "A Fort Lauderdale attorney was charged in Boca Raton",
+      "highlight": "Fort Lauderdale attorney",
+      "body": "Boca Post reported Saturday that a Fort Lauderdale attorney was charged in a Boca Raton stalking case.",
+      "place": "Boca Raton",
+      "source": "Boca Post",
+      "photo": {
+        "query": "Wikimedia Commons Boca Raton police car night",
+        "prompt": "a Boca Raton police cruiser parked outside a government building at night, sharp lights, wet pavement, no people visible"
+      },
+      "emoji": "🚓",
+      "chip": "OCT 24",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WPBF"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case ties Fort Lauderdale to Boca Raton",
+      "highlight": "two South Florida cities",
+      "body": "The charge connects where the attorney works or lives in Fort Lauderdale with where the case was filed in Boca Raton.",
+      "place": "South Florida",
+      "source": "Boca Post",
+      "photo": {
+        "query": "Wikimedia Commons South Florida courthouse exterior",
+        "prompt": "courthouse exterior in South Florida with palm trees, evening light, and a quiet empty entrance, no people visible"
+      },
+      "emoji": "📍",
+      "chip": "LOCAL CASE",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WPBF"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Boca Raton is the center of the case",
+      "highlight": "Boca Raton",
+      "body": "The headline places the charge in Boca Raton, not in Broward County.",
+      "place": "Boca Raton",
+      "source": "Boca Post",
+      "photo": {
+        "query": "Wikimedia Commons Boca Raton city hall exterior",
+        "prompt": "clean, dramatic exterior of a Boca Raton civic building with strong shadows and no people in frame"
+      },
+      "emoji": "🏛️",
+      "chip": "BOCA",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WPBF"
+    }
+  ],
+  "caption": "A Fort Lauderdale attorney was charged in a Boca Raton stalking case.",
+  "hashtags": [
+    "#BocaRaton",
+    "#FortLauderdale",
+    "#SouthFlorida"
+  ],
+  "collaborators": [],
+  "igCaption": "A Fort Lauderdale attorney was charged in a Boca Raton stalking case.\n\n📰 Sources: Boca Post\n\n#BocaRaton #FortLauderdale #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-24",
+  "id": "2026-10-24-news-10"
+}
