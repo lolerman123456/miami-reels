@@ -1,0 +1,126 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS GUIDE TO",
+    "main": "EVERY BIG EVENT",
+    "highlight": "THIS WEEK",
+    "bottom": "IN SOUTH FLORIDA",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons search for South Florida nightlife crowd Miami Beach neon lights",
+      "prompt": "dramatic South Florida weekend collage with a concert stage, a hotel dinner room, a museum crowd and a rooftop party"
+    },
+    "emojis": [
+      "👀",
+      "🎟️",
+      "🌴"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Halloween Murder Mystery Dinner, Oct. 24",
+      "highlight": "Murder Mystery",
+      "body": "Solei Beach Club at Kimpton Surfcomber Hotel in Miami Beach hosts the Clue-inspired finale at 8 p.m. Tickets are $150++ per person.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons search for Kimpton Surfcomber Hotel Miami Beach",
+        "prompt": "moody Miami Beach hotel dinner scene with Halloween candles, clue cards and cocktails"
+      },
+      "emoji": "🕵️",
+      "chip": "8 PM",
+      "logo": "soleibeachclub.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Sombr at Amerant Bank Arena, Oct. 24",
+      "highlight": "Amerant Bank",
+      "body": "Sombr plays at 7 p.m. at Amerant Bank Arena in Sunrise with The Last Dinner Party and The Hellp. Tickets run from $51 to $238.",
+      "place": "Sunrise",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons search for Amerant Bank Arena Sunrise concert",
+        "prompt": "concert stage inside Amerant Bank Arena with blue spotlights and a packed floor"
+      },
+      "emoji": "🎤",
+      "chip": "7 PM",
+      "logo": "amerantbankarena.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Family Fest 2026 at ICA Miami, Oct. 25",
+      "highlight": "Family Fest",
+      "body": "ICA Miami Expansion Space in Miami hosts the family event at 1 p.m. Tickets are $50 for adults and $15 for kids.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons search for Institute of Contemporary Art Miami Design District",
+        "prompt": "family art event inside a modern Miami gallery with mural stations and kids making art"
+      },
+      "emoji": "🎨",
+      "chip": "1 PM",
+      "logo": "icamiami.org",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Icamiami / CC BY-SA 4.0",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Glass Skin Magic Wand pop-up at Mr. C Coconut Grove, Oct. 26",
+      "highlight": "Magic Wand",
+      "body": "Glass Skin brings a one-day pop-up to Mr. C Coconut Grove in Miami on Oct. 26. The article does not list a time or price.",
+      "place": "Coconut Grove",
+      "source": "Haute Living",
+      "photo": {
+        "query": "Wikimedia Commons search for Mr. C Miami Coconut Grove hotel",
+        "prompt": "sleek Coconut Grove hotel pop-up table with skincare products and soft daylight"
+      },
+      "emoji": "✨",
+      "chip": "OCT 26",
+      "logo": "mrchotels.com",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Averette / CC BY 3.0",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Rosa Obscura at Rosa Sky, Oct. 30 to 31",
+      "highlight": "Rosa Obscura",
+      "body": "Rosa Sky Rooftop in Miami turns into Rosa Obscura on Oct. 30 and 31. The article does not list a start time or ticket price.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wikimedia Commons search for Brickell Miami rooftop skyline night",
+        "prompt": "Halloween rooftop party over the Brickell skyline with circus lights and DJs"
+      },
+      "emoji": "🎪",
+      "chip": "OCT 30-31",
+      "logo": "rosaskyrooftop.com",
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Daniel Christensen / Public domain",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "South Florida has plans all week. Who are they taking? Tag a friend 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has plans all week. Who are they taking? Tag a friend 👀\n\n📰 Sources: Miami New Times, Haute Living\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-24",
+  "id": "2026-10-24-upcoming"
+}
