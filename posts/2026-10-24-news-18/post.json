@@ -1,0 +1,85 @@
+{
+  "sector": "TRAFFIC",
+  "cover": {
+    "top": "TROOPERS SAY",
+    "main": "6 PEOPLE WERE KILLED",
+    "highlight": "FIERY CRASH",
+    "bottom": "ON FLORIDA'S TURNPIKE IN ORANGE COUNTY",
+    "blur": false,
+    "photo": {
+      "query": "Florida Turnpike crash scene at night fire trucks smoke road ranger truck",
+      "prompt": "night crash scene on Florida's Turnpike in Orange County with a Road Ranger truck, emergency lights, smoke, and blocked lanes, no victims visible"
+    },
+    "emojis": [
+      "🚨",
+      "🔥",
+      "🛣️"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: ClickOrlando",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "TRAFFIC",
+      "headline": "6 killed in a fiery crash on Florida’s Turnpike in Orange County",
+      "highlight": "6 killed",
+      "body": "WESH and FOX 35 Orlando reported six people were killed in the crash on Florida’s Turnpike.",
+      "place": "Orange County",
+      "source": "WESH",
+      "photo": {
+        "query": "Florida Turnpike crash scene emergency lights night blocked lanes",
+        "prompt": "wide night photo of a Florida Turnpike crash scene with emergency vehicles, flashing lights, smoke, and traffic backed up behind cones, no people visible",
+        "mark": "arrow"
+      },
+      "emoji": "🚨",
+      "chip": "ORANGE COUNTY",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: ClickOrlando"
+    },
+    {
+      "tag": "TRAFFIC",
+      "headline": "Six people killed after SUV hits Road Ranger truck",
+      "highlight": "SUV hits Road Ranger truck",
+      "body": "WFTV reported the crash started when an SUV hit a Road Ranger truck on the Turnpike.",
+      "place": "Florida’s Turnpike",
+      "source": "WFTV",
+      "photo": {
+        "query": "SUV front damage Road Ranger truck Turnpike crash night",
+        "prompt": "damaged SUV and Road Ranger service truck on a dark highway shoulder after a crash, with debris and emergency lights nearby, no people visible"
+      },
+      "emoji": "🚙",
+      "chip": "SUV VS TRUCK",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: ClickOrlando"
+    },
+    {
+      "tag": "TRAFFIC",
+      "headline": "Troopers say the crash was fiery",
+      "highlight": "fiery crash",
+      "body": "Troopers said the wreck turned fiery in Orange County.",
+      "place": "Orange County",
+      "source": "Orlando Sentinel",
+      "photo": {
+        "query": "fiery highway crash smoke emergency lights Florida Turnpike",
+        "prompt": "smoke rising from a highway crash scene on Florida's Turnpike at night, with fire trucks and police lights reflecting on wet pavement, no victims visible"
+      },
+      "emoji": "🔥",
+      "chip": "FHP",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: ClickOrlando"
+    }
+  ],
+  "caption": "Six people were killed in a fiery crash on Florida’s Turnpike in Orange County.",
+  "hashtags": [
+    "#FloridaTurnpike",
+    "#OrangeCountyFL"
+  ],
+  "collaborators": [],
+  "igCaption": "Six people were killed in a fiery crash on Florida’s Turnpike in Orange County.\n\n📰 Sources: WESH, WFTV, Orlando Sentinel, Hoodline, FOX 35 Orlando\n\n#FloridaTurnpike #OrangeCountyFL #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-24",
+  "id": "2026-10-24-news-18"
+}
