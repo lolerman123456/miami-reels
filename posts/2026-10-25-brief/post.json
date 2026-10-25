@@ -1,0 +1,86 @@
+{
+  "sector": "WEATHER",
+  "cover": {
+    "top": "HURRICANE ISAIAS",
+    "main": "GENERATED MORE THAN",
+    "highlight": "55,000 FLORIDA CLAIMS",
+    "bottom": "AND $580 MILLION IN LOSSES",
+    "blur": false,
+    "photo": {
+      "query": "Florida hurricane damaged home roof tarps insurance claims",
+      "prompt": "close-up of a storm-damaged Florida home with blue roof tarps, fallen palm branches, broken fencing, and wet debris in the driveway",
+      "mark": "circle"
+    },
+    "emojis": [
+      "🌀",
+      "🏠",
+      "💸"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Yahoo",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "WEATHER",
+      "headline": "More than 55,000 Florida claims and $580 million in losses",
+      "highlight": "55,000 claims",
+      "body": "Hurricane Isaias ended up generating more than $580 million in Florida insurance losses, with over 55,000 claims filed.",
+      "place": "Florida",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Florida hurricane damage neighborhood roof tarps insurance paperwork",
+        "prompt": "Florida neighborhood after a hurricane with roof tarps, scattered debris, and an insurance adjuster looking over damage"
+      },
+      "emoji": "📄",
+      "chip": "55K+",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Yahoo"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "The claims kept rising after the storm",
+      "highlight": "55,000+",
+      "body": "The filing total shows how many Florida homes and businesses were still working through hurricane damage claims after Isaias.",
+      "place": "Florida",
+      "source": "WUSF",
+      "photo": {
+        "query": "Florida homeowners reviewing insurance damage after hurricane",
+        "prompt": "Florida homeowners standing beside a damaged house with papers, a phone, and visible roof damage in daylight"
+      },
+      "emoji": "🧾",
+      "chip": "CLAIMS",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Yahoo"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "The losses added up to $580 million statewide",
+      "highlight": "$580 million",
+      "body": "The insurance bill reached more than $580 million across Florida as carriers processed damage from the storm.",
+      "place": "Florida",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "damaged Florida storefront after hurricane insurance claim scene",
+        "prompt": "damaged Florida storefront with boarded windows, wet pavement, and cleanup crews after a hurricane"
+      },
+      "emoji": "💸",
+      "chip": "$580M",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Yahoo"
+    }
+  ],
+  "caption": "One storm left Florida with more than 55,000 claims and $580 million in losses.",
+  "hashtags": [
+    "#HurricaneIsaias",
+    "#Florida",
+    "#InsuranceClaims"
+  ],
+  "collaborators": [],
+  "igCaption": "One storm left Florida with more than 55,000 claims and $580 million in losses.\n\n📰 Sources: NBC 6 South Florida, WUSF\n\n#HurricaneIsaias #Florida #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-25",
+  "id": "2026-10-25-brief"
+}
