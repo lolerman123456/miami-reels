@@ -1,0 +1,136 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "EVERY BIG",
+    "highlight": "SOUTH FLORIDA",
+    "bottom": "EVENT THIS WEEK",
+    "blur": false,
+    "photo": {
+      "query": "dramatic South Florida nightlife concert Halloween crowd skyline",
+      "prompt": "dramatic South Florida night scene with concert lights, a packed outdoor crowd, rooftop skyline, and Halloween details"
+    },
+    "emojis": [
+      "🎃",
+      "🎶",
+      "🍸",
+      "👀"
+    ],
+    "logos": [
+      "icamiami.org",
+      "zeyzeymiami.com",
+      "roomnine01.com",
+      "rosaskyrooftop.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c3.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Family Fest 2026 at ICA Miami, Oct. 25",
+      "highlight": "Family Fest 2026",
+      "body": "Sunday, Oct. 25 at 1 p.m. at ICA Miami Expansion Space in Miami. Tickets are $50 for adults and $15 for kids. It includes mural-focused art expeditions, hands-on stations and a 40-minute Fantasy Theatre performance.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "ICA Miami expansion space family art event",
+        "prompt": "families making mural art outside a contemporary museum space in Miami's Design District"
+      },
+      "emoji": "🎨",
+      "chip": "OCT 25",
+      "logo": "icamiami.org",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Peter Bjorn and John at ZeyZey, Oct. 25",
+      "highlight": "Peter Bjorn and John",
+      "body": "Sunday, Oct. 25 at 7 p.m. at ZeyZey Miami in Miami. Tickets cost $35. The band is playing songs from 20 years of Writer's Block, including “Young Folks” and “Second Chance.”",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Peter Bjorn and John live performance",
+        "prompt": "indie band performing on a small outdoor stage in Miami at night with warm lights and a packed crowd"
+      },
+      "emoji": "🎸",
+      "chip": "$35",
+      "logo": "zeyzeymiami.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Halloween Murder Mystery Dinner, Oct. 24",
+      "highlight": "Halloween Murder Mystery Dinner",
+      "body": "Saturday, Oct. 24 at 8 p.m. at Solei Beach Club at Kimpton Surfcomber Hotel in Miami Beach. Tickets are $150. The dinner includes an interactive mystery, two cocktails and a three-course meal.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Halloween murder mystery dinner Miami Beach",
+        "prompt": "dinner table with candlelight, dramatic place settings and a Halloween mystery theme inside a Miami Beach hotel restaurant"
+      },
+      "emoji": "🕯️",
+      "chip": "$150",
+      "logo": "soleibeachclub.com",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Ianaré Sévi / CC BY-SA 3.0",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Room 901 Carrie takeover, through Oct. 31",
+      "highlight": "Carrie takeover",
+      "body": "Room 901 at Hyatt Centric Las Olas in Fort Lauderdale runs its Carrie-inspired prom takeover through Oct. 31. The space has red-and-black decor, candlelight and retro music.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Carrie themed speakeasy Fort Lauderdale",
+        "prompt": "hidden Fort Lauderdale speakeasy styled like a dark 1970s prom with red lighting, candles and a blood-red dress display"
+      },
+      "emoji": "🩸",
+      "chip": "THRU 10/31",
+      "logo": "roomnine01.com",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: Daniel Kraft / CC BY-SA 3.0",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Rosa Obscura at Rosa Sky, Oct. 30 to 31",
+      "highlight": "Rosa Obscura",
+      "body": "Rosa Sky Rooftop in Miami turns into Rosa Obscura on Thursday, Oct. 30 and Friday, Oct. 31. The party includes fortune tellers, creepy clown decor, a popcorn stand and a Tunnel of Love photo op.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Rosa Sky rooftop Halloween party Brickell",
+        "prompt": "Brickell rooftop Halloween party with fortune teller table, creepy clown decor, popcorn stand and skyline views at night"
+      },
+      "emoji": "🎪",
+      "chip": "OCT 30-31",
+      "logo": "rosaskyrooftop.com",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Salicyna / CC BY-SA 4.0",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "South Florida has plans this week. Tag a friend and tell them they are going with you 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiHalloween"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has plans this week. Tag a friend and tell them they are going with you 👀\n\n📰 Sources: Miami New Times\n\n#SouthFloridaEvents #MiamiHalloween #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-25",
+  "id": "2026-10-25-upcoming"
+}
