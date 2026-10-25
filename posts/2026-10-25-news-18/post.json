@@ -1,0 +1,117 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "A WOMAN",
+    "main": "WAS ARRESTED AFTER",
+    "highlight": "MOST OF HIS BODY",
+    "bottom": "WAS CRITICALLY BURNED",
+    "blur": false,
+    "photo": {
+      "query": "Miami-Dade police fire rescue scene night dramatic",
+      "prompt": "Dramatic nighttime scene in northwest Miami-Dade with police cruisers, fire rescue vehicles, and flashing lights after a fire attack investigation"
+    },
+    "emojis": [
+      "🚨",
+      "🔥",
+      "🏥"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Police say most of his body was critically burned",
+      "highlight": "critically burned",
+      "body": "Police say a man was set on fire in northwest Miami-Dade. Most of his body was critically burned after the attack.",
+      "place": "Northwest Miami-Dade",
+      "source": "CBS News",
+      "photo": {
+        "query": "Miami-Dade police lights emergency scene night",
+        "prompt": "Close, dramatic view of Miami-Dade police lights and fire rescue lights at a dark street scene after a severe attack"
+      },
+      "emoji": "🚨",
+      "chip": "CRITICAL",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "A woman was arrested in the case",
+      "highlight": "was arrested",
+      "body": "CBS News reported that police arrested a woman after the fire attack.",
+      "place": "Miami-Dade",
+      "source": "CBS News",
+      "photo": {
+        "query": "Miami-Dade police cruiser night flashing lights",
+        "prompt": "Miami-Dade police cruiser with flashing lights at night during an arrest investigation",
+        "mark": "stamp: ARRESTED"
+      },
+      "emoji": "👮",
+      "chip": "ARREST",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Hoodline"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Miami Herald says the woman was charged Sunday",
+      "highlight": "charged Sunday",
+      "body": "The Miami Herald reported that a Miami-Dade woman was charged Sunday, Oct. 25, with setting a man ablaze.",
+      "place": "Miami-Dade",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Miami-Dade courthouse exterior daytime",
+        "prompt": "Miami-Dade courthouse exterior with a police vehicle parked outside"
+      },
+      "emoji": "⚖️",
+      "chip": "OCT 25",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The man was sent to the hospital",
+      "highlight": "to the hospital",
+      "body": "The Miami Herald said the attack sent the man to the hospital.",
+      "place": "Miami-Dade",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "hospital emergency entrance Miami night ambulance",
+        "prompt": "Hospital emergency entrance with an ambulance bay and flashing lights at night"
+      },
+      "emoji": "🏥",
+      "chip": "HOSPITAL",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The headlines do not give a motive",
+      "highlight": "do not give a motive",
+      "body": "The Sunday headlines name the arrest, the charge and the hospital trip. They do not give a motive.",
+      "place": "Miami-Dade",
+      "source": "CBS News",
+      "photo": {
+        "query": "police tape Miami-Dade night scene",
+        "prompt": "Police tape and emergency lights on a dark Miami-Dade street after an active investigation"
+      },
+      "emoji": "📍",
+      "chip": "NEXT",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Hoodline"
+    }
+  ],
+  "caption": "Police say most of a man’s body was critically burned after a northwest Miami-Dade attack",
+  "hashtags": [
+    "#MiamiDade",
+    "#NorthwestMiamiDade"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say most of a man’s body was critically burned after a northwest Miami-Dade attack\n\n📰 Sources: CBS News, Miami Herald\n\n#MiamiDade #NorthwestMiamiDade #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-25",
+  "id": "2026-10-25-news-18"
+}
