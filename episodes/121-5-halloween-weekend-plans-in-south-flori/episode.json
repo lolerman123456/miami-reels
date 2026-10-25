@@ -1,0 +1,236 @@
+{
+  "title": "5 Halloween Weekend Plans in South Florida",
+  "sources": [
+    "Gulf Coast News and Weather",
+    "Miami New Times",
+    "Secret Miami",
+    "WSVN",
+    "Sun Sentinel"
+  ],
+  "collaborators": [],
+  "igCaption": "Five Halloween weekend plans.\nOct. 24-27, South Florida, free and up\n\nSources: Gulf Coast News and Weather, Miami New Times, Secret Miami, WSVN, Sun Sentinel\n\n#Miami #FortLauderdale #SouthFlorida #Halloween",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need Halloween weekend plans that are cheap and specific to South Florida?",
+      "overlay": [
+        "HALLOWEEN",
+        "WEEKEND"
+      ],
+      "emojis": [
+        "🎃",
+        "🌴",
+        "👻",
+        "🚆"
+      ],
+      "location": {
+        "name": "Miami Beach, Florida",
+        "lat": 25.82555556,
+        "lon": -80.1325,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number five: Everglades and other Florida national parks waive fees Tuesday for Theodore Roosevelt's birthday.",
+      "caption": "Number 5: Everglades and other Florida national parks waive fees Tuesday for Theodore Roosevelt's birthday.",
+      "overlay": "EVERGLADES",
+      "badge": "FREE TUESDAY",
+      "sub": "National parks waive fees",
+      "emoji": "🐊",
+      "stats": [
+        {
+          "value": "FREE",
+          "label": "park fees"
+        },
+        {
+          "value": "TUESDAY",
+          "label": "fee-free day"
+        }
+      ],
+      "source": "Gulf Coast News and Weather",
+      "location": {
+        "name": "Everglades National Park",
+        "lat": 25.286615,
+        "lon": -80.898651,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 2200,
+        "pitch": -35,
+        "heading": 125,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number four: Family Fest 2026 is Sunday at the ICA Miami Expansion Space on Northeast 41st Street. Adults are fifty dollars, kids are fifteen dollars, and children under three get in free.",
+      "caption": "Number 4: Family Fest 2026 is Sunday at the ICA Miami Expansion Space on NE 41st St. Adults are $50, kids are $15, and children under 3 get in free.",
+      "overlay": "ICA MIAMI",
+      "badge": "$15 KIDS",
+      "sub": "Sunday at 1 p.m.",
+      "emoji": "🎨",
+      "stats": [
+        {
+          "value": "$15",
+          "label": "kids ticket"
+        },
+        {
+          "value": "FREE",
+          "label": "under 3"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "ICA Miami Expansion Space",
+        "lat": 25.8131,
+        "lon": -80.193,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 40,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number three: Scene Queen plays Revolution Live in Fort Lauderdale on Saturday at seven. Tickets cost thirty-nine dollars and fifty cents, with Wargasm and Bailey Spinn opening the Metalicious Tour. If you’re at Revolution Live, open NEAR and see who else was there.",
+      "caption": "Number 3: Scene Queen plays Revolution Live in Fort Lauderdale on Saturday at 7. Tickets cost $39.50, with Wargasm and Bailey Spinn opening the Metalicious Tour. If you’re at Revolution Live, open NEAR and see who else was there.",
+      "overlay": "REVOLUTION",
+      "badge": "$39.50",
+      "sub": "Saturday at 7 p.m.",
+      "emoji": "🎸",
+      "stats": [
+        {
+          "value": "$39.50",
+          "label": "ticket price"
+        },
+        {
+          "value": "7 PM",
+          "label": "show time"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Revolution Live",
+        "lat": 26.1199,
+        "lon": -80.145,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -34,
+        "heading": 155,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number two: Brightline runs one Midnight Train for Halloween Horror Nights riders. It leaves Orlando at 12:15 a.m. Sunday and stops in West Palm Beach, Boca Raton, Fort Lauderdale, Aventura, and Miami.",
+      "caption": "Number 2: Brightline runs one Midnight Train for Halloween Horror Nights riders. It leaves Orlando at 12:15 a.m. Sunday and stops in West Palm Beach, Boca Raton, Fort Lauderdale, Aventura, and Miami.",
+      "overlay": "BRIGHTLINE",
+      "badge": "12:15 A.M.",
+      "sub": "One-night train south",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "12:15 AM",
+          "label": "departure"
+        },
+        {
+          "value": "5 STOPS",
+          "label": "South FL stops"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Brightline MiamiCentral",
+        "lat": 25.7798,
+        "lon": -80.1966,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 210,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "And number one: House of Horror is marking 25 years with a new venue, themed nights, and 5 haunted houses.",
+      "caption": "And number 1: House of Horror is marking 25 years with a new venue, themed nights, and 5 haunted houses.",
+      "overlay": "HOUSE OF HORROR",
+      "badge": "25 YEARS",
+      "sub": "5 haunted houses",
+      "emoji": "🏚️",
+      "stats": [
+        {
+          "value": "25 YEARS",
+          "label": "anniversary"
+        },
+        {
+          "value": "5",
+          "label": "haunted houses"
+        }
+      ],
+      "source": "WSVN",
+      "location": {
+        "name": "Miami, Florida",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -35,
+        "heading": 300,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you do this weekend? Halloween weekends are full of people you cross paths with once and never ask about, and NEAR shows you who that stranger in costume actually was.",
+      "overlay": "WHAT'S YOUR PICK? 🎃",
+      "sub": "Drop the plan in comments",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 75
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1700,
+        "pitch": -32,
+        "heading": 25
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "121-5-halloween-weekend-plans-in-south-flori"
+}
