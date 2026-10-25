@@ -1,127 +1,129 @@
 {
   "sector": "CRIME",
   "cover": {
-    "top": "AFTER FAMU HOMECOMING,",
-    "main": "12 PEOPLE",
-    "highlight": "INCLUDING 6 MINORS",
-    "bottom": "WERE INJURED NEAR STADIUM",
+    "top": "POLICE SAY",
+    "main": "AMBER NOVA FLORA",
+    "highlight": "DUI ARREST",
+    "bottom": "ARRESTED IN ORLANDO",
     "blur": false,
     "photo": {
-      "query": "Florida A&M University Bragg Memorial Stadium Tallahassee police lights night",
-      "prompt": "dramatic night scene outside Bragg Memorial Stadium in Tallahassee with police lights, a cleared street, and the stadium entrance visible after the game",
-      "mark": "arrow"
+      "query": "Amber Nova Flora mugshot Orlando police car night",
+      "prompt": "dramatic mugshot-style portrait of Amber Nova Flora beside an Orlando police car at night, flashing red and blue lights, arrest paperwork visible, no extra people"
     },
     "emojis": [
       "🚨",
-      "🏟️",
-      "🐍"
+      "🤼",
+      "🌅"
     ],
     "logos": [
-      "famu.edu",
-      "talgov.com"
+      "wwe.com",
+      "allelitewrestling.com"
     ],
-    "photoFile": "photo-cover.png",
-    "credit": "AI illustration",
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: New York Post",
     "logoFiles": [
-      "logo-c0.png"
+      "logo-c1.png"
     ]
   },
   "slides": [
     {
       "tag": "CRIME",
-      "headline": "12 people, including 6 minors, were injured near FAMU after homecoming",
-      "highlight": "12 people",
-      "body": "At least 12 people were injured near Florida A&M’s stadium after the homecoming football game, including 6 minors.",
-      "place": "Tallahassee",
-      "source": "The New York Times",
+      "headline": "Amber Nova Flora was arrested for DUI in Orlando",
+      "highlight": "arrested for DUI",
+      "body": "New York Post reported that Amber Nova Flora was busted for DUI in Orlando.",
+      "place": "Orlando",
+      "source": "New York Post",
       "photo": {
-        "query": "Florida A&M Bragg Memorial Stadium night aftermath Tallahassee",
-        "prompt": "wide photo of Bragg Memorial Stadium and the street outside at night with emergency vehicles and police tape"
+        "query": "Orlando police cruiser night arrest scene",
+        "prompt": "Orlando police cruiser with flashing lights outside a dark street at 5 a.m., wet pavement, no people"
       },
-      "emoji": "🚨",
-      "chip": "12 INJURED",
-      "logo": "famu.edu",
-      "color": "#FF8200",
-      "photoFile": "photo-1.png",
-      "credit": "AI illustration",
+      "emoji": "🚔",
+      "chip": "DUI ARREST",
+      "logo": "nypost.com",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Wrestleview",
       "logoFile": "logo-1.png"
     },
     {
       "tag": "CRIME",
-      "headline": "Police said the shooting happened on Perry Street",
-      "highlight": "Perry Street",
-      "body": "WCTV said Tallahassee police identified Perry Street as the scene near Bragg Memorial Stadium.",
-      "place": "Tallahassee",
-      "source": "WCTV",
+      "headline": "Police arrested her at 5 a.m.",
+      "highlight": "5 a.m.",
+      "body": "Daily Mail said Orlando police made the arrest at 5 a.m.",
+      "place": "Orlando",
+      "source": "Daily Mail",
       "photo": {
-        "query": "Perry Street Tallahassee police night",
-        "prompt": "police cars blocking Perry Street at night near the stadium with flashing lights and an empty roadway"
+        "query": "Orlando street dawn police lights",
+        "prompt": "early morning Orlando street with red and blue police lights reflecting on the road, empty sidewalk, no people"
       },
-      "emoji": "📍",
-      "chip": "PERRY ST",
-      "logo": "talgov.com",
-      "photoFile": "photo-2.png",
-      "credit": "AI illustration",
-      "logoFile": null
+      "emoji": "🌅",
+      "chip": "5 A.M.",
+      "logo": "dailymail.co.uk",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Indulgexpress",
+      "logoFile": "logo-2.png"
     },
     {
       "tag": "CRIME",
-      "headline": "The shooting came after the homecoming game",
-      "highlight": "after the game",
-      "body": "Headlines said the shooting happened after Florida A&M’s homecoming football game ended.",
-      "place": "Tallahassee",
-      "source": "USA Today",
+      "headline": "The report says she faces two DUI charges",
+      "highlight": "two DUI charges",
+      "body": "Daily Mail said she faces two DUI charges in Florida.",
+      "place": "Florida",
+      "source": "Daily Mail",
       "photo": {
-        "query": "homecoming crowd outside Florida A&M stadium night aftermath",
-        "prompt": "emptying crowd area outside a college football stadium at night with scattered chairs, police lights, and a visible stadium facade"
+        "query": "Florida court paperwork DUI arrest closeup",
+        "prompt": "close-up of arrest paperwork on a car hood under police lights, Orlando setting, no visible faces"
       },
-      "emoji": "🏟️",
-      "chip": "AFTER THE GAME",
-      "photoFile": "photo-3.png",
-      "credit": "AI illustration"
+      "emoji": "📄",
+      "chip": "2 CHARGES",
+      "logo": "dailymail.co.uk",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: New York Post",
+      "logoFile": "logo-3.png"
     },
     {
       "tag": "CRIME",
-      "headline": "Some reports said 11 people were shot",
-      "highlight": "11 people",
-      "body": "One report said 11 people were shot and one person was hurt while running away, while other reports said 12 were injured.",
-      "place": "Tallahassee",
-      "source": "Instagram",
+      "headline": "Other outlets identified her as a former WWE and AEW wrestler",
+      "highlight": "former WWE and AEW wrestler",
+      "body": "The Times of India and Still Real To Us described Amber Nova as a former WWE and AEW wrestler.",
+      "place": "Orlando",
+      "source": "The Times of India",
       "photo": {
-        "query": "police tape ambulance night Tallahassee street",
-        "prompt": "yellow police tape, ambulance lights, and patrol cars on a dark street near a stadium"
+        "query": "empty wrestling ring arena lights Orlando",
+        "prompt": "empty professional wrestling ring under bright arena lights, dramatic shadows, no people"
       },
-      "emoji": "🚑",
-      "chip": "COUNT DISPUTED",
-      "photoFile": "photo-4.png",
-      "credit": "AI illustration"
+      "emoji": "🤼",
+      "chip": "WWE / AEW",
+      "logo": "timesofindia.indiatimes.com",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Wrestleview",
+      "logoFile": "logo-4.png"
     },
     {
       "tag": "CRIME",
-      "headline": "Tallahassee police are investigating",
-      "highlight": "investigating",
-      "body": "Police are still investigating the shooting, and the Tallahassee Democrat said the homecoming ended with one of the city’s worst mass shootings.",
-      "place": "Tallahassee",
-      "source": "CBS News",
+      "headline": "SEScoops said she posted bail",
+      "highlight": "posted bail",
+      "body": "SEScoops reported that Amber Nova posted bail after the arrest.",
+      "place": "Orlando",
+      "source": "SEScoops",
       "photo": {
-        "query": "Tallahassee police investigation night crime scene",
-        "prompt": "close shot of police cruiser lights reflecting on pavement outside a stadium at night with investigators in the background"
+        "query": "Orange County jail exterior night Orlando",
+        "prompt": "courthouse or jail exterior at night in Orlando with police lights nearby, no people"
       },
-      "emoji": "🔎",
-      "chip": "ONGOING",
-      "logo": "talgov.com",
-      "photoFile": "photo-5.png",
-      "credit": "AI illustration",
-      "logoFile": null
+      "emoji": "⚖️",
+      "chip": "BAIL",
+      "logo": "sescoops.com",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Indulgexpress",
+      "logoFile": "logo-5.png"
     }
   ],
-  "caption": "12 people, including 6 minors, were injured near FAMU’s stadium after homecoming in Tallahassee.",
+  "caption": "Amber Nova Flora was arrested for DUI in Orlando, and the reports say she faces two charges and posted bail",
   "hashtags": [
-    "#FAMU",
-    "#Tallahassee"
+    "#Orlando",
+    "#AmberNova"
   ],
   "collaborators": [],
-  "igCaption": "12 people, including 6 minors, were injured near FAMU’s stadium after homecoming in Tallahassee.\n\n📰 Sources: The New York Times, WCTV, USA Today, Instagram, CBS News\n\n#FAMU #Tallahassee #miami #southflorida",
+  "igCaption": "Amber Nova Flora was arrested for DUI in Orlando, and the reports say she faces two charges and posted bail\n\n📰 Sources: New York Post, Daily Mail, The Times of India, SEScoops\n\n#Orlando #AmberNova #miami #southflorida",
   "kind": "news",
   "kicker": "MIAMI NEWS 🚨",
   "date": "2026-10-25",
