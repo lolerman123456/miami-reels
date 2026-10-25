@@ -1,0 +1,140 @@
+{
+  "sector": "SPORTS",
+  "cover": {
+    "top": "FIRST WIN OF THE SEASON",
+    "main": "MALIK WILLIS DELIVERED",
+    "highlight": "3 TDS",
+    "bottom": "AND MIAMI'S FIRST WIN",
+    "blur": false,
+    "photo": {
+      "query": "Malik Willis Miami Dolphins quarterback Jets MetLife Stadium",
+      "prompt": "Dramatic action photo of Malik Willis in a Miami Dolphins uniform celebrating under MetLife Stadium lights after a close road win"
+    },
+    "emojis": [
+      "🏈",
+      "🐬",
+      "🎯"
+    ],
+    "logos": [
+      "miamidolphins.com",
+      "newyorkjets.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Local 10",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "SPORTS",
+      "headline": "Miami left Week 7 with win No. 1",
+      "highlight": "win No. 1",
+      "body": "The Dolphins beat the Jets 28-25 on Sunday, Oct. 25. Local 10 reported it took seven weeks for Miami to get its first win.",
+      "place": "East Rutherford, N.J.",
+      "source": "Local 10",
+      "photo": {
+        "query": "Miami Dolphins New York Jets MetLife Stadium football game",
+        "prompt": "Wide, tense NFL game photo of Miami Dolphins players in aqua facing New York Jets players in green at MetLife Stadium"
+      },
+      "color": "#008E97",
+      "emoji": "🐬",
+      "chip": "WEEK 7",
+      "logo": "miamidolphins.com",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Yahoo Sports",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "Willis threw 2 TDs and ran for 1",
+      "highlight": "threw 2 TDs",
+      "body": "WSVN reported Malik Willis threw two touchdown passes and ran for a score. That gave Miami three touchdowns from Willis.",
+      "place": "East Rutherford, N.J.",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Malik Willis quarterback football action Dolphins",
+        "prompt": "Close, dramatic football photo of Malik Willis throwing on the run in a Miami Dolphins uniform with defenders closing in"
+      },
+      "color": "#008E97",
+      "emoji": "🎯",
+      "chip": "3 TDs",
+      "logo": "miamidolphins.com",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "Caleb Douglas caught his first 2 TDs",
+      "highlight": "first 2 TDs",
+      "body": "Yahoo Sports reported rookie Caleb Douglas caught the first two touchdowns of his Dolphins career in the win.",
+      "place": "East Rutherford, N.J.",
+      "source": "Yahoo Sports",
+      "photo": {
+        "query": "Miami Dolphins receiver touchdown catch Jets",
+        "prompt": "Dramatic photo of a Miami Dolphins receiver catching a touchdown near the sideline with New York Jets defenders behind him",
+        "mark": "circle"
+      },
+      "color": "#008E97",
+      "emoji": "🙌",
+      "chip": "2 TDs",
+      "logo": "miamidolphins.com",
+      "photoFile": "news-3.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "One Douglas score went 63 yards",
+      "highlight": "63 yards",
+      "body": "NFL.com called it a can’t-miss play. Willis used a submarine-style arm angle on a 63-yard touchdown pass to Douglas.",
+      "place": "East Rutherford, N.J.",
+      "source": "NFL.com",
+      "photo": {
+        "query": "Miami Dolphins long touchdown pass football",
+        "prompt": "Low-angle football action photo of a Miami Dolphins quarterback releasing a sidearm pass as a receiver breaks open downfield"
+      },
+      "color": "#008E97",
+      "emoji": "🚀",
+      "chip": "63 YDS",
+      "logo": "miamidolphins.com",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "Miami took the early lead and held on",
+      "highlight": "held on",
+      "body": "The Sun Sentinel reported the Dolphins took an early lead, then held on to beat the Jets for their first win of the season.",
+      "place": "East Rutherford, N.J.",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "Miami Dolphins sideline MetLife Stadium Jets game",
+        "prompt": "Tense late-game football photo of the Miami Dolphins sideline watching the field under bright stadium lights"
+      },
+      "color": "#008E97",
+      "emoji": "⏱️",
+      "chip": "EARLY LEAD",
+      "logo": "miamidolphins.com",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Yahoo Sports",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "Malik Willis gave Miami 3 TDs and its first win after seven weeks @miamidolphins",
+  "hashtags": [
+    "#MiamiDolphins",
+    "#FinsUp"
+  ],
+  "collaborators": [
+    "miamidolphins"
+  ],
+  "igCaption": "Malik Willis gave Miami 3 TDs and its first win after seven weeks @miamidolphins\n\n📰 Sources: Local 10, WSVN 7News, Yahoo Sports, NFL.com, Sun Sentinel\n\n#MiamiDolphins #FinsUp #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-25",
+  "id": "2026-10-25-news-16"
+}
