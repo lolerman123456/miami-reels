@@ -1,0 +1,175 @@
+{
+  "title": "South Florida Sports Weekend Guide",
+  "sources": [
+    "Hot Hot Hoops",
+    "Local 10",
+    "NBA.com",
+    "Inter Miami CF",
+    "Red Bull New York",
+    "Goal.com",
+    "MLS Multiplex",
+    "Caribbean National Weekly",
+    "FOX Sports"
+  ],
+  "collaborators": [
+    "miamiheat",
+    "intermiamicf"
+  ],
+  "igCaption": "Three South Florida sports stories to follow this weekend.\n\nSources: Hot Hot Hoops, Local 10, NBA.com, Inter Miami CF, Red Bull New York, Goal.com, MLS Multiplex, Caribbean National Weekly, FOX Sports\n\n#MiamiSports #MiamiHeat #InterMiami #Soccer",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "South Florida has three sports stories today, and two of them are happening away from home.",
+      "overlay": [
+        "SPORTS",
+        "WEEKEND"
+      ],
+      "emojis": [
+        "🏀",
+        "⚽",
+        "📺",
+        "🌴"
+      ],
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.781401,
+        "lon": -80.187004,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Heat are 0-2, and they visit the Charlotte Hornets tonight. Charlotte is 1-1. Local 10 has the game, and Miami is looking for its first win of the season on October 24. The standings are short, the calendar is shorter.",
+      "caption": "The Heat are 0-2, and they visit the Charlotte Hornets tonight. Charlotte is 1-1. Local 10 has the game, and Miami is looking for its first win of the season on Oct. 24.",
+      "overlay": "HEAT",
+      "badge": "0-2 START",
+      "sub": "At Charlotte tonight",
+      "emoji": "🏀",
+      "stats": [
+        {
+          "value": "0-2",
+          "label": "Heat record"
+        },
+        {
+          "value": "1-1",
+          "label": "Hornets record"
+        }
+      ],
+      "source": "Local 10",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.781401,
+        "lon": -80.187004,
+        "h": 90
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Inter Miami are at Sports Illustrated Stadium against the New York Red Bulls. Both teams posted starting XIs today. The match is drawing plenty of attention because Lionel Messi is part of the question around kickoff. If you’re there for Messi, open NEAR and see who’s around.",
+      "caption": "Inter Miami are at Sports Illustrated Stadium against the New York Red Bulls. Both teams posted starting XIs today. If you’re there for Messi, open NEAR and see who’s around.",
+      "overlay": "INTER MIAMI",
+      "badge": "STARTING XI",
+      "sub": "At Red Bulls",
+      "emoji": "⚽",
+      "stats": [
+        {
+          "value": "XI",
+          "label": "Lineups posted"
+        },
+        {
+          "value": "10/24",
+          "label": "Match date"
+        }
+      ],
+      "source": "Inter Miami CF",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.781401,
+        "lon": -80.187004,
+        "h": 90
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 40,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Haiti will host the United States in Miami because a security crisis forced another home-match relocation. FOX Sports says the U.S. will play both Nations League matches against Haiti on home soil.",
+      "caption": "Haiti will host the United States in Miami because a security crisis forced another home-match relocation.",
+      "overlay": "HAITI VS USA",
+      "badge": "IN MIAMI",
+      "sub": "Nations League",
+      "emoji": "🇭🇹",
+      "stats": [
+        {
+          "value": "2",
+          "label": "USA matches"
+        },
+        {
+          "value": "2026/27",
+          "label": "Nations League"
+        }
+      ],
+      "source": "Caribbean National Weekly",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.77427,
+        "lon": -80.19366,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -35,
+        "heading": 260,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you watching tonight, Heat, Inter Miami, or Haiti versus USA? At the game or the bar, you sometimes notice the same face all night and never catch their name, and NEAR shows you who that was.",
+      "overlay": "WHAT'S YOUR PICK? 👇",
+      "sub": "Tell us in the comments",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.781401,
+        "lon": -80.187004,
+        "h": 90
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "119-south-florida-sports-weekend-guide"
+}
