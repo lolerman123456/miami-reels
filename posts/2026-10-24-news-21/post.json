@@ -1,0 +1,88 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "NORTHWEST MIAMI-DADE",
+    "main": "A MAN WAS HOSPITALIZED SATURDAY EVENING AFTER REPORTEDLY BEING",
+    "highlight": "SET ON FIRE",
+    "bottom": "",
+    "blur": false,
+    "photo": {
+      "query": "Miami-Dade Fire Rescue police lights night street crime scene",
+      "prompt": "Dramatic nighttime crime scene in Northwest Miami-Dade with police cruisers, fire rescue lights and yellow tape on a dark street, no victim or bystanders visible"
+    },
+    "emojis": [
+      "🚨",
+      "🔥",
+      "🏥"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "WSVN: Man hospitalized after fire attack",
+      "highlight": "reportedly being set on fire",
+      "body": "WSVN reported a man was hospitalized after reportedly being set on fire in Northwest Miami-Dade County on Saturday evening.",
+      "place": "Northwest Miami-Dade",
+      "source": "WSVN",
+      "photo": {
+        "query": "Miami-Dade Fire Rescue ambulance night emergency lights",
+        "prompt": "Miami-Dade Fire Rescue ambulance with red emergency lights outside a hospital entrance at night, no patient visible"
+      },
+      "emoji": "🏥",
+      "chip": "HOSPITALIZED",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Deputies responded to reports Saturday evening",
+      "highlight": "Saturday evening",
+      "body": "The Miami-Dade Sheriff's Office responded to reports in Northwest Miami-Dade, according to WSVN.",
+      "place": "Northwest Miami-Dade",
+      "source": "WSVN",
+      "photo": {
+        "query": "Miami-Dade Sheriff's Office patrol car night lights",
+        "prompt": "Marked sheriff patrol vehicle with flashing blue and red lights blocking a dark Northwest Miami-Dade street, no people visible"
+      },
+      "emoji": "🚔",
+      "chip": "RESPONDED",
+      "logo": "miamidade.gov",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police have not released a motive",
+      "highlight": "still investigating",
+      "body": "Police are still investigating the reported attack, and WSVN did not say what led to it.",
+      "place": "Northwest Miami-Dade",
+      "source": "WSVN",
+      "photo": {
+        "query": "Miami-Dade crime scene tape police night close up",
+        "prompt": "Close-up of yellow crime scene tape with a sheriff vehicle and flashing lights blurred behind it at night in Miami-Dade"
+      },
+      "emoji": "🔎",
+      "chip": "INVESTIGATION",
+      "logo": "miamidade.gov",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": null
+    }
+  ],
+  "caption": "A man was hospitalized after reportedly being set on fire in Northwest Miami-Dade County.",
+  "hashtags": [
+    "#NorthwestMiamiDade",
+    "#MiamiDadeNews"
+  ],
+  "collaborators": [],
+  "igCaption": "A man was hospitalized after reportedly being set on fire in Northwest Miami-Dade County.\n\n📰 Sources: WSVN\n\n#NorthwestMiamiDade #MiamiDadeNews #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-24",
+  "id": "2026-10-24-news-21"
+}
