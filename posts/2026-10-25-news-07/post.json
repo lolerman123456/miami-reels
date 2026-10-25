@@ -1,0 +1,85 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "POLICE SAY",
+    "main": "BUTCHER KNIFE SCARE",
+    "highlight": "MIAMI VICE ’85",
+    "bottom": "BROOKLYN SET",
+    "blur": false,
+    "photo": {
+      "query": "Brooklyn film set NYPD lights production trucks night",
+      "prompt": "dramatic Brooklyn film set at night with NYPD lights, production trucks, cones, cables, and a closed street"
+    },
+    "emojis": [
+      "🎬",
+      "🚔",
+      "🔪"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Yahoo",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Police say a butcher knife was pulled on the set of ‘Miami Vice ’85’",
+      "highlight": "butcher knife",
+      "body": "Police say a man was arrested after allegedly pulling a butcher knife on the set of Michael B. Jordan’s ‘Miami Vice ’85’ film shoot.",
+      "place": "Brooklyn",
+      "source": "Complex",
+      "photo": {
+        "query": "butcher knife police tape film set pavement",
+        "prompt": "close-up of a butcher knife on pavement near police tape, film cables, and production cones at night",
+        "mark": "circle"
+      },
+      "emoji": "🔪",
+      "chip": "KNIFE",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Yahoo"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police say the man clashed with a crew member",
+      "highlight": "crew member",
+      "body": "The New York Post reported police said the man clashed with a crew member on the NYC film set.",
+      "place": "New York City",
+      "source": "New York Post",
+      "photo": {
+        "query": "film crew street production police tape",
+        "prompt": "empty city film set blocked by police tape with lights, cones, and crew gear left on the street"
+      },
+      "emoji": "🚧",
+      "chip": "CREW",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Yahoo"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The scare happened while filming in Brooklyn",
+      "highlight": "filming in Brooklyn",
+      "body": "IGN reported ‘Miami Vice ’85’ was filming in Brooklyn when a knife-wielding man threatened production crew.",
+      "place": "Brooklyn",
+      "source": "IGN",
+      "photo": {
+        "query": "Brooklyn street NYPD police car night film set",
+        "prompt": "Brooklyn street at night with an NYPD cruiser, production trailers, and flashing lights"
+      },
+      "emoji": "🚔",
+      "chip": "BROOKLYN",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Yahoo"
+    }
+  ],
+  "caption": "A butcher knife allegedly turned the ‘Miami Vice ’85’ set into a police scene.",
+  "hashtags": [
+    "#MiamiVice85",
+    "#MichaelBJordan"
+  ],
+  "collaborators": [],
+  "igCaption": "A butcher knife allegedly turned the ‘Miami Vice ’85’ set into a police scene.\n\n📰 Sources: Complex, New York Post, IGN, NBC News, Parade Magazine\n\n#MiamiVice85 #MichaelBJordan #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-25",
+  "id": "2026-10-25-news-07"
+}
