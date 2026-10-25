@@ -1,0 +1,129 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "AFTER FAMU HOMECOMING,",
+    "main": "12 PEOPLE",
+    "highlight": "INCLUDING 6 MINORS",
+    "bottom": "WERE INJURED NEAR STADIUM",
+    "blur": false,
+    "photo": {
+      "query": "Florida A&M University Bragg Memorial Stadium Tallahassee police lights night",
+      "prompt": "dramatic night scene outside Bragg Memorial Stadium in Tallahassee with police lights, a cleared street, and the stadium entrance visible after the game",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "🚨",
+      "🏟️",
+      "🐍"
+    ],
+    "logos": [
+      "famu.edu",
+      "talgov.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "12 people, including 6 minors, were injured near FAMU after homecoming",
+      "highlight": "12 people",
+      "body": "At least 12 people were injured near Florida A&M’s stadium after the homecoming football game, including 6 minors.",
+      "place": "Tallahassee",
+      "source": "The New York Times",
+      "photo": {
+        "query": "Florida A&M Bragg Memorial Stadium night aftermath Tallahassee",
+        "prompt": "wide photo of Bragg Memorial Stadium and the street outside at night with emergency vehicles and police tape"
+      },
+      "emoji": "🚨",
+      "chip": "12 INJURED",
+      "logo": "famu.edu",
+      "color": "#FF8200",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police said the shooting happened on Perry Street",
+      "highlight": "Perry Street",
+      "body": "WCTV said Tallahassee police identified Perry Street as the scene near Bragg Memorial Stadium.",
+      "place": "Tallahassee",
+      "source": "WCTV",
+      "photo": {
+        "query": "Perry Street Tallahassee police night",
+        "prompt": "police cars blocking Perry Street at night near the stadium with flashing lights and an empty roadway"
+      },
+      "emoji": "📍",
+      "chip": "PERRY ST",
+      "logo": "talgov.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The shooting came after the homecoming game",
+      "highlight": "after the game",
+      "body": "Headlines said the shooting happened after Florida A&M’s homecoming football game ended.",
+      "place": "Tallahassee",
+      "source": "USA Today",
+      "photo": {
+        "query": "homecoming crowd outside Florida A&M stadium night aftermath",
+        "prompt": "emptying crowd area outside a college football stadium at night with scattered chairs, police lights, and a visible stadium facade"
+      },
+      "emoji": "🏟️",
+      "chip": "AFTER THE GAME",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Some reports said 11 people were shot",
+      "highlight": "11 people",
+      "body": "One report said 11 people were shot and one person was hurt while running away, while other reports said 12 were injured.",
+      "place": "Tallahassee",
+      "source": "Instagram",
+      "photo": {
+        "query": "police tape ambulance night Tallahassee street",
+        "prompt": "yellow police tape, ambulance lights, and patrol cars on a dark street near a stadium"
+      },
+      "emoji": "🚑",
+      "chip": "COUNT DISPUTED",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Tallahassee police are investigating",
+      "highlight": "investigating",
+      "body": "Police are still investigating the shooting, and the Tallahassee Democrat said the homecoming ended with one of the city’s worst mass shootings.",
+      "place": "Tallahassee",
+      "source": "CBS News",
+      "photo": {
+        "query": "Tallahassee police investigation night crime scene",
+        "prompt": "close shot of police cruiser lights reflecting on pavement outside a stadium at night with investigators in the background"
+      },
+      "emoji": "🔎",
+      "chip": "ONGOING",
+      "logo": "talgov.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    }
+  ],
+  "caption": "12 people, including 6 minors, were injured near FAMU’s stadium after homecoming in Tallahassee.",
+  "hashtags": [
+    "#FAMU",
+    "#Tallahassee"
+  ],
+  "collaborators": [],
+  "igCaption": "12 people, including 6 minors, were injured near FAMU’s stadium after homecoming in Tallahassee.\n\n📰 Sources: The New York Times, WCTV, USA Today, Instagram, CBS News\n\n#FAMU #Tallahassee #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-25",
+  "id": "2026-10-25-news-10"
+}
