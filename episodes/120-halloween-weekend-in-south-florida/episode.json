@@ -1,0 +1,192 @@
+{
+  "title": "Halloween Weekend in South Florida",
+  "sources": [
+    "Miami New Times",
+    "WPLG Local 10",
+    "WSVN 7News"
+  ],
+  "collaborators": [],
+  "igCaption": "Halloween weekend has parties, a cancer walk, and adoptable pets in costumes.\n\nSources: Miami New Times, WPLG Local 10, WSVN 7News\n\n#MiamiHalloween #FortLauderdale #NorthMiami #SouthFloridaEvents",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Halloween weekend has a Carrie prom, a cancer walk, and adoptable pets in costumes. Fort Lauderdale, Wilton Manors, and North Miami all have plans.",
+      "overlay": [
+        "HALLOWEEN",
+        "WEEKEND"
+      ],
+      "emojis": [
+        "🎃",
+        "👻",
+        "🐶",
+        "🚶"
+      ],
+      "location": {
+        "name": "Hyatt Centric Las Olas Fort Lauderdale",
+        "lat": 26.1196,
+        "lon": -80.1424,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Room 901 in Fort Lauderdale turned its hidden speakeasy into a Carrie-inspired 1970s prom. It runs October 8 through Halloween inside Hyatt Centric Las Olas, with red-and-black décor, candlelight, a retro soundtrack, and Prom Punch.",
+      "caption": "Room 901 in Fort Lauderdale turned its hidden speakeasy into a Carrie-inspired 1970s prom. It runs October 8 through Halloween inside Hyatt Centric Las Olas, with red-and-black décor, candlelight, a retro soundtrack, and Prom Punch.",
+      "overlay": "ROOM 901",
+      "badge": "THRU OCT 31",
+      "sub": "Carrie prom pop-up",
+      "emoji": "🩸",
+      "stats": [
+        {
+          "value": "OCT 8",
+          "label": "start date"
+        },
+        {
+          "value": "50 YEARS",
+          "label": "Carrie mark"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Room 901 at Hyatt Centric Las Olas",
+        "lat": 26.1196,
+        "lon": -80.1424,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 75,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Wicked Manors brings 1 big party and 1 spooktacular show in Wilton Manors. The street-party format is the whole point.",
+      "caption": "Wicked Manors brings 1 big party and 1 spooktacular show in Wilton Manors.",
+      "overlay": "WILTON MANORS",
+      "badge": "1 BIG PARTY",
+      "sub": "Wicked Manors weekend",
+      "emoji": "🎭",
+      "stats": [
+        {
+          "value": "1",
+          "label": "big party"
+        },
+        {
+          "value": "1",
+          "label": "show"
+        }
+      ],
+      "source": "WPLG Local 10",
+      "location": {
+        "name": "Wilton Drive, Wilton Manors",
+        "lat": 26.1588,
+        "lon": -80.1372,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -30,
+        "heading": 40,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "North Miami hosted the 5th annual gRace 4 a Cure Cancer Walk on Sunday. It put a cancer walk into the Halloween weekend lineup. If you’re there, open NEAR and see who else walked the route.",
+      "caption": "North Miami hosted the 5th annual gRace 4 a Cure Cancer Walk on Sunday. If you’re there, open NEAR and see who else walked the route.",
+      "overlay": "NORTH MIAMI",
+      "badge": "5TH ANNUAL",
+      "sub": "Cancer walk on Sunday",
+      "emoji": "🎗️",
+      "stats": [
+        {
+          "value": "5TH",
+          "label": "annual walk"
+        }
+      ],
+      "source": "WPLG Local 10",
+      "location": {
+        "name": "North Miami City Hall",
+        "lat": 25.8901,
+        "lon": -80.1867,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -28,
+        "heading": 115,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Broward County Animal Care hosted Pup or Treat in Fort Lauderdale to support adoption efforts. The Halloween party featured animals in creative costumes.",
+      "caption": "Broward County Animal Care hosted Pup or Treat in Fort Lauderdale to support adoption efforts. The Halloween party featured animals in creative costumes.",
+      "overlay": "PUP OR TREAT",
+      "badge": "ADOPTION BASH",
+      "sub": "Costumes for adoptable pets",
+      "emoji": "🐾",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "Halloween event"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Broward County Animal Care",
+        "lat": 26.0718,
+        "lon": -80.1731,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 260,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "That gives you a prom, a walk, and a pet costume stop. If Halloween weekend puts you beside strangers in costume and you never catch their name, NEAR is the part that shows you who you actually walked past. Pick your plan for Halloween weekend.",
+      "overlay": "PICK ONE 🎃",
+      "sub": "Party, walk, or pets?",
+      "location": {
+        "name": "Downtown Fort Lauderdale",
+        "lat": 26.1224,
+        "lon": -80.1373,
+        "h": 90
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1700,
+        "pitch": -32,
+        "heading": 310
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "120-halloween-weekend-in-south-florida"
+}
