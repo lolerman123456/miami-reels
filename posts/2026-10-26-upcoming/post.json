@@ -1,0 +1,133 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "THIS IS COMING TO",
+    "main": "SOUTH FLORIDA AND NOBODY'S TALKING ABOUT IT",
+    "highlight": "👀",
+    "bottom": "",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons South Florida nightlife crowd concert lights",
+      "prompt": "a dramatic South Florida night scene with a packed crowd, bright stage lights, palm trees, and a city skyline in the background"
+    },
+    "emojis": [
+      "🎟️",
+      "🎃",
+      "🎤",
+      "👀"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Cake in Pompano Beach, Oct. 26",
+      "highlight": "Cake at 6:30 p.m.",
+      "body": "Cake plays Pompano Beach Amphitheater at 6:30 p.m. Tickets cost $64 to $79.",
+      "place": "Pompano Beach Amphitheater, Pompano Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Pompano Beach Amphitheater concert night crowd",
+        "prompt": "a wide night photo of the Pompano Beach Amphitheater with a lit stage, crowd in front, and concert lights cutting across the sky"
+      },
+      "emoji": "🎸",
+      "chip": "MON 6:30 PM",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "The Linda Lindas in Fort Lauderdale, Oct. 27",
+      "highlight": "The Linda Lindas at 7 p.m.",
+      "body": "The Linda Lindas play Culture Room at 7 p.m. Tickets cost $40.",
+      "place": "Culture Room, Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "punk concert small venue crowd guitars",
+        "prompt": "a close, high-energy punk show inside a small venue with guitars, flashing red lights, and a packed crowd"
+      },
+      "emoji": "🥁",
+      "chip": "$40",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Young Miko at Kaseya Center, Oct. 28",
+      "highlight": "Young Miko at 7 p.m.",
+      "body": "Young Miko brings the Late Checkout Tour to Kaseya Center at 7 p.m. Tickets cost $80 to $197.",
+      "place": "Kaseya Center, Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Kaseya Center Miami arena concert night",
+        "prompt": "Kaseya Center in Miami at night with arena lights on, fans outside the entrance, and a concert crowd arriving"
+      },
+      "emoji": "🎤",
+      "chip": "$80+",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Miami Film Festival GEMS opens Oct. 29",
+      "highlight": "GEMS opens Oct. 29",
+      "body": "Miami Film Festival GEMS opens with The Debut and runs with 50 films, guest conversations and tributes at various venues. Ticket costs vary.",
+      "place": "Various venues, Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miami film festival red carpet theater night",
+        "prompt": "a cinematic Miami theater entrance at night with a red carpet, bright lights, and people arriving for a film event"
+      },
+      "emoji": "🎬",
+      "chip": "50 FILMS",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: MiamiFilmFestival / CC BY-SA 2.0"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Ghostbusters in Concert, Oct. 30",
+      "highlight": "Ghostbusters in Concert",
+      "body": "The Adrienne Arsht Center screens Ghostbusters at 8 p.m. while an orchestra performs the soundtrack live. Tickets cost $29 to $104.",
+      "place": "Adrienne Arsht Center, Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Adrienne Arsht Center Miami night exterior",
+        "prompt": "the Adrienne Arsht Center in Miami at night with dramatic lighting and people walking toward the entrance"
+      },
+      "emoji": "👻",
+      "chip": "FRI 8 PM",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "HalloWyn 2026 in Wynwood, Oct. 31",
+      "highlight": "HalloWyn 2026",
+      "body": "Wynwood Marketplace hosts HalloWyn from 7 p.m. to 3 a.m. Admission is free, with a $45 open bar option from 7 to 10 p.m.",
+      "place": "Wynwood Marketplace, Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Wynwood Halloween block party costumes murals night",
+        "prompt": "a packed Halloween block party in Wynwood at night with costumes, mural backdrops, DJs, and bright street lighting"
+      },
+      "emoji": "🎃",
+      "chip": "FREE",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "South Florida has plans every night this week. Who are you taking? Tag a friend 🎟️",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has plans every night this week. Who are you taking? Tag a friend 🎟️\n\n📰 Sources: Miami New Times\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-26",
+  "id": "2026-10-26-upcoming"
+}
