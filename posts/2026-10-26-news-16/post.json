@@ -1,0 +1,93 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "DOWNTOWN MIAMI",
+    "main": "POLICE ARE STILL SEARCHING FOR THE",
+    "highlight": "ROBBER",
+    "bottom": "WHO ALLEGEDLY HIT A REGIONS BANK",
+    "blur": false,
+    "photo": {
+      "query": "downtown Miami bank exterior police lights night",
+      "prompt": "Dramatic street-level photo of a downtown Miami bank entrance with police lights reflecting on the glass and empty sidewalk, no people visible",
+      "mark": "stamp: ON THE RUN"
+    },
+    "emojis": [
+      "🚨",
+      "🏦",
+      "🔎"
+    ],
+    "logos": [
+      "regions.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "The robber allegedly hit the Regions Bank in downtown Miami and got away",
+      "highlight": "got away",
+      "body": "WSVN 7News says a bank robber held up the Regions Bank in downtown Miami on Monday and is still on the loose.",
+      "place": "Downtown Miami",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Regions Bank downtown Miami exterior police lights",
+        "prompt": "Close photo of a Regions Bank branch exterior in downtown Miami with flashing police lights nearby, no people visible"
+      },
+      "color": "#00853F",
+      "emoji": "🚨",
+      "chip": "MON",
+      "logo": "regions.com",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police are still searching",
+      "highlight": "still searching",
+      "body": "WSVN says police are searching for the bank robber. The report says the person remains on the run in Miami.",
+      "place": "Miami",
+      "source": "WSVN",
+      "photo": {
+        "query": "Miami police cruiser downtown at night",
+        "prompt": "Miami police cruiser with lights on near downtown office towers at night, no people visible"
+      },
+      "emoji": "👮",
+      "chip": "ON LOOSE",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The robbery happened in downtown Miami",
+      "highlight": "downtown Miami",
+      "body": "The report places the holdup at a Regions Bank in downtown Miami, the county seat of Miami-Dade County.",
+      "place": "Downtown Miami",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "downtown Miami street bank entrance police tape",
+        "prompt": "Downtown Miami street view with a bank entrance and police tape in the foreground, no people visible"
+      },
+      "color": "#00853F",
+      "emoji": "🏦",
+      "chip": "DOWNTOWN",
+      "logo": "regions.com",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": null
+    }
+  ],
+  "caption": "Police are searching for the robber after the Regions Bank holdup in downtown Miami.",
+  "hashtags": [
+    "#DowntownMiami",
+    "#MiamiCrime"
+  ],
+  "collaborators": [],
+  "igCaption": "Police are searching for the robber after the Regions Bank holdup in downtown Miami.\n\n📰 Sources: WSVN 7News, WSVN, Wikipedia\n\n#DowntownMiami #MiamiCrime #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-26",
+  "id": "2026-10-26-news-16"
+}
