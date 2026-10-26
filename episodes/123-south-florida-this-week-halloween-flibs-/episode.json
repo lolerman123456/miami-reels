@@ -1,0 +1,228 @@
+{
+  "title": "South Florida This Week: Halloween, FLIBS, and King Tides",
+  "sources": [
+    "WSVN 7News",
+    "Miami New Times",
+    "NBC 6 South Florida",
+    "Sun Sentinel",
+    "South Florida Reporter"
+  ],
+  "collaborators": [],
+  "igCaption": "Halloween first, boats second, flooded streets all week.\n\nSources: WSVN 7News, Miami New Times, NBC 6 South Florida, Sun Sentinel, South Florida Reporter\n\n#Miami #FortLauderdale #SouthFlorida #Halloween",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need South Florida plans this week? Start with Halloween stops, then Fort Lauderdale gets over one thousand three hundred boats.",
+      "overlay": [
+        "THIS WEEK",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🎃",
+        "🛥️",
+        "🌊",
+        "📍"
+      ],
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "First, watch the water. King tides brought more flooding after a soggy weekend, and 7News cameras caught high-tide flooding Monday morning. Wind and flood advisories are in effect, so check your route before you park near low streets.",
+      "caption": "First, watch the water. King tides brought more flooding after a soggy weekend, and 7News cameras caught high-tide flooding Monday morning. Wind and flood advisories are in effect, so check your route before you park near low streets.",
+      "overlay": "KING TIDES",
+      "badge": "MONDAY",
+      "sub": "Flooding after high tide",
+      "emoji": "🌊",
+      "stats": [
+        {
+          "value": "MON",
+          "label": "flooding filmed"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 40
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 35,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For Halloween plans, Miami has trick-or-treating on Halloween. Miami New Times put out a city guide, which helps if you want candy plans without turning the night into a spreadsheet.",
+      "caption": "For Halloween plans, Miami has trick-or-treating on Halloween. Miami New Times put out a city guide, which helps if you want candy plans without turning the night into a spreadsheet.",
+      "overlay": "MIAMI",
+      "badge": "HALLOWEEN",
+      "sub": "Trick-or-treat guide",
+      "emoji": "🍬",
+      "stats": [
+        {
+          "value": "HALLOWEEN",
+          "label": "Halloween"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Then Fort Lauderdale International Boat Show returns Wednesday for its 67th year. NBC 6 says more than 1,300 boats from around the world will be displayed. The show calls itself the world’s largest in-water boat show. If you're there, open NEAR and see who else is at FLIBS.",
+      "caption": "Then Fort Lauderdale International Boat Show returns Wednesday for its 67th year. NBC 6 says more than 1,300 boats from around the world will be displayed. The show calls itself the world’s largest in-water boat show. If you're there, open NEAR and see who else is at FLIBS.",
+      "overlay": "FLIBS",
+      "badge": "1,300+ BOATS",
+      "sub": "Returns Wednesday",
+      "emoji": "🛥️",
+      "stats": [
+        {
+          "value": "1,300+",
+          "label": "boats"
+        },
+        {
+          "value": "67TH",
+          "label": "year"
+        }
+      ],
+      "source": "NBC 6 South Florida",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -35,
+        "heading": 210,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The boat show also has 50-plus debut vessels and over 130 superyachts. That brings buyers, crews, and marine businesses into Fort Lauderdale at the same time.",
+      "caption": "The boat show also has 50-plus debut vessels and over 130 superyachts. That brings buyers, crews, and marine businesses into Fort Lauderdale at the same time.",
+      "overlay": "FORT LAUD",
+      "badge": "130+ YACHTS",
+      "sub": "Debuts and superyachts",
+      "emoji": "⚓",
+      "stats": [
+        {
+          "value": "50+",
+          "label": "debuts"
+        },
+        {
+          "value": "130+",
+          "label": "superyachts"
+        }
+      ],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 60
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1700,
+        "pitch": -36,
+        "heading": 285,
+        "degrees": 95,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For Halloween road-trip people, Key West wrapped Fantasy Fest with a parade on Duval Street. The 10-day costuming celebration ended Saturday with tens of thousands of spectators, 12-foot puppets, and 125 performers in one float.",
+      "caption": "For Halloween road-trip people, Key West wrapped Fantasy Fest with a parade on Duval Street. The 10-day costuming celebration ended Saturday with tens of thousands of spectators, 12-foot puppets, and 125 performers in one float.",
+      "overlay": "KEY WEST",
+      "badge": "10 DAYS",
+      "sub": "Fantasy Fest finale",
+      "emoji": "🎭",
+      "stats": [
+        {
+          "value": "10",
+          "label": "days"
+        },
+        {
+          "value": "125",
+          "label": "performers"
+        }
+      ],
+      "source": "South Florida Reporter",
+      "location": {
+        "name": "Duval Street, Key West",
+        "lat": 24.555059,
+        "lon": -81.780005,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -30,
+        "heading": 155,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "What are you doing first: candy, boats, or checking the tide? Between costumes, boats, and king tides, South Florida is full of people you pass without meeting, which is exactly the kind of connection NEAR helps put a name to.",
+      "overlay": "WHAT'S FIRST? 🎃",
+      "sub": "Drop your plan",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1900,
+        "pitch": -32,
+        "heading": 245
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "123-south-florida-this-week-halloween-flibs-"
+}
