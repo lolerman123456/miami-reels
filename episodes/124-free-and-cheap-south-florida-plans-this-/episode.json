@@ -1,0 +1,224 @@
+{
+  "title": "Free and cheap South Florida plans this week",
+  "sources": [
+    "Miami New Times",
+    "Sun Sentinel"
+  ],
+  "collaborators": [],
+  "igCaption": "Halloween lands on Saturday, so the cheap plans got useful.\nOct. 26 to Nov. 1, South Florida, free to $20\n\nSources: Miami New Times, Sun Sentinel\n\n#SouthFlorida #MiamiBeach #Wynwood #Halloween2026",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Halloween falls on a Saturday this year, and South Florida has several plans under twenty dollars.",
+      "overlay": [
+        "CHEAP WEEK",
+        "HALLOWEEN"
+      ],
+      "emojis": [
+        "🎃",
+        "🧛",
+        "🎟️",
+        "🌧️"
+      ],
+      "location": {
+        "name": "Miami Beach, Florida",
+        "lat": 25.82555556,
+        "lon": -80.1325,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start with HalloWyn at Wynwood Marketplace. The block party returns for its thirteenth consecutive year from seven p.m. to three a.m. Admission is free, and there is a forty-five dollar open bar option from seven to ten.",
+      "caption": "Start with HalloWyn at Wynwood Marketplace. The block party returns for its 13th consecutive year from 7 p.m. to 3 a.m. Admission is free, and there is a $45 open bar option from 7 to 10.",
+      "overlay": "HALLOWYN",
+      "badge": "FREE",
+      "sub": "2250 NW 2nd Ave.",
+      "emoji": "🎃",
+      "stats": [
+        {
+          "value": "13",
+          "label": "years running"
+        },
+        {
+          "value": "$45",
+          "label": "open bar option"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Wynwood Marketplace",
+        "lat": 25.7995,
+        "lon": -80.1994,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Lincoln Road has trick-or-treating from five-thirty to seven-thirty p.m. After eight, the Halloween block party turns more adult. Admission is free.",
+      "caption": "Lincoln Road has trick-or-treating from 5:30 to 7:30 p.m. After 8, the Halloween block party turns more adult. Admission is free.",
+      "overlay": "LINCOLN ROAD",
+      "badge": "FREE",
+      "sub": "Kids first, party after 8",
+      "emoji": "🍬",
+      "stats": [
+        {
+          "value": "5:30 PM",
+          "label": "kids start"
+        },
+        {
+          "value": "8 PM",
+          "label": "party shift"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Lincoln Road",
+        "lat": 25.7907,
+        "lon": -80.1367,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 65,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a cheaper show, Churchill’s Pub has Necrodanse at nine p.m. Three darkwave bands play: Last Grasp, In a Darkened Room, and Blood Orchid. Tickets run eleven to twenty dollars. If you’re there, open NEAR and see who else caught Necrodanse.",
+      "caption": "For a cheaper show, Churchill’s Pub has Necrodanse at 9 p.m. Three darkwave bands play: Last Grasp, In a Darkened Room, and Blood Orchid. Tickets run $11 to $20. If you’re there, open NEAR and see who else caught Necrodanse.",
+      "overlay": "CHURCHILL'S",
+      "badge": "$11-$20",
+      "sub": "5501 NE 2nd Ave.",
+      "emoji": "🦇",
+      "stats": [
+        {
+          "value": "3",
+          "label": "bands"
+        },
+        {
+          "value": "$11",
+          "label": "tickets start"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Churchill's Pub",
+        "lat": 25.8258,
+        "lon": -80.1916,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -32,
+        "heading": 210,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a daytime pick, PAMM opens Picasso, Klee, Matisse on Thursday. The show brings roughly one hundred modernist works from Berlin’s Museum Berggruen, with Picasso, Klee, Cézanne, Matisse, and Giacometti. Tickets cost eighteen dollars.",
+      "caption": "For a daytime pick, PAMM opens Picasso, Klee, Matisse on Thursday. The show brings roughly 100 modernist works from Berlin’s Museum Berggruen, with Picasso, Klee, Cézanne, Matisse, and Giacometti. Tickets cost $18.",
+      "overlay": "PAMM",
+      "badge": "$18",
+      "sub": "100 modernist works",
+      "emoji": "🖼️",
+      "stats": [
+        {
+          "value": "100",
+          "label": "works"
+        },
+        {
+          "value": "$18",
+          "label": "ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Pérez Art Museum Miami",
+        "lat": 25.786,
+        "lon": -80.1862,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -34,
+        "heading": 315,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Check the streets before you go. Rain, wind, and king tide flooding are making Miami’s streets tough to navigate, and coastal flooding could hit South Florida this week.",
+      "caption": "Check the streets before you go. Rain, wind, and king tide flooding are making Miami’s streets tough to navigate, and coastal flooding could hit South Florida this week.",
+      "overlay": "KING TIDES",
+      "badge": "THIS WEEK",
+      "sub": "Check roads before leaving",
+      "emoji": "🌧️",
+      "stats": [],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Miami Beach, Florida",
+        "lat": 25.82555556,
+        "lon": -80.1325,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1700,
+        "pitch": -35,
+        "heading": 115,
+        "degrees": 50,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which cheap plan would you actually do this week? You can spend the week out in South Florida and still only know the faces you passed, and NEAR is what turns those strangers into names.",
+      "overlay": "WHAT'S THE PICK? 🎟️",
+      "sub": "Drop the next event",
+      "location": {
+        "name": "Miami Beach, Florida",
+        "lat": 25.82555556,
+        "lon": -80.1325,
+        "h": 100
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -32,
+        "heading": 250
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "124-free-and-cheap-south-florida-plans-this-"
+}
