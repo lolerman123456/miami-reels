@@ -25,6 +25,8 @@ crime stories only rarely, when the owner asks.
   Owner-approved hook styles (Oct 4): "5 THINGS TO DO IN SOUTH FLORIDA THIS WEEKEND", "SOUTH FLORIDA CONCERTS YOU'LL REGRET MISSING THIS MONTH",
   "THE PARTIES NOBODY'S TELLING YOU ABOUT", "WHERE SOUTH FLORIDA IS GOING OUT THIS FRIDAY", "CHEAPEST NIGHTS OUT THIS WEEK (UNDER $20)",
   "SAVE THIS: EVERY BIG EVENT COMING TO SOUTH FLORIDA IN <MONTH>", "TOP 5 HALLOWEEN PARTIES IN SOUTH FLORIDA + WHAT TO WEAR TO EACH".
+  Weekly stats (Oct 26): the most-shared Reels were weekend/holiday plan guides that open with the FREE stuff (block parties, free
+  Halloween events: 300+ reach, 9–11 shares); single-venue Reels (one museum, one stadium) and lists without dates did worst.
   Also: new restaurant openings, concerts, festivals, pop-ups. Say "South Florida" or "Florida", not "Miami", unless the place is actually in Miami (owner, Oct 4).
 - STORY (preferred): a true, gripping story tied to ONE real South Florida place people can see on the map. Famous people who
   lived or died there, crimes and how they were solved, disasters, scandals, mysteries, celebrity mansions, record-breaking

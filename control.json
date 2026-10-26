@@ -3,14 +3,14 @@
   "postHours": [
     13,
     16,
-    20
+    20,
+    22
   ],
   "skipDates": [],
   "carousels": {
     "clip": [
       8,
-      17,
-      22
+      17
     ],
     "brief": 9,
     "viral": [
