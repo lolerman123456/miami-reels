@@ -1,0 +1,85 @@
+{
+  "sector": "WEATHER",
+  "cover": {
+    "top": "RECORD COASTAL",
+    "main": "FLOODING",
+    "highlight": "SOUTH FLORIDA",
+    "bottom": "KING TIDES AND WIND",
+    "blur": false,
+    "photo": {
+      "query": "South Florida king tide flooding street seawall dramatic",
+      "prompt": "dramatic street-level photo of floodwater spilling over a South Florida seawall onto a road, with cars in standing water and gray skies",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "🌊",
+      "💨",
+      "⚠️"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: CBS News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "WEATHER",
+      "headline": "Record coastal flooding is already hitting South Florida",
+      "highlight": "Record coastal flooding",
+      "body": "Strong northeast winds and king tides combined Monday to produce record coastal flooding across South Florida.",
+      "place": "South Florida",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami Beach king tide flooding street water over seawall",
+        "prompt": "close photo of floodwater pouring over a seawall into a South Florida street during king tide, with palm trees and cloudy sky"
+      },
+      "emoji": "🌊",
+      "chip": "MON 10/26",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "The king tide peak is still days away",
+      "highlight": "peak is still",
+      "body": "South Florida is already flooding, and the peak of this king tide is days away.",
+      "place": "South Florida",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "South Florida coastal flooding king tide Miami Beach Fort Lauderdale",
+        "prompt": "wide photo of a flooded coastal road in South Florida with water covering lanes and buildings in the background"
+      },
+      "emoji": "📈",
+      "chip": "DAYS AWAY",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "A Wind Advisory warns of gusts up to 40 mph",
+      "highlight": "40 mph",
+      "body": "A Wind Advisory is in place for gusts up to 40 mph as floodwater spills over streets.",
+      "place": "South Florida",
+      "source": "Local 10",
+      "photo": {
+        "query": "Miami palm trees strong wind coastal storm road",
+        "prompt": "photo of palm trees bending in strong wind beside a flooded South Florida coastal street under dark clouds"
+      },
+      "emoji": "💨",
+      "chip": "40 MPH",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News"
+    }
+  ],
+  "caption": "Record coastal flooding is already here, and the king tide peak is still days away 🌊",
+  "hashtags": [
+    "#SouthFloridaWeather",
+    "#KingTides"
+  ],
+  "collaborators": [],
+  "igCaption": "Record coastal flooding is already here, and the king tide peak is still days away 🌊\n\n📰 Sources: WPLG Local 10, Miami Herald, Local 10, CBS News\n\n#SouthFloridaWeather #KingTides #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-26",
+  "id": "2026-10-26-news-10"
+}
