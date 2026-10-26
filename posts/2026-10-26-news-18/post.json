@@ -1,0 +1,90 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "DOWNTOWN MIAMI",
+    "main": "A BANK ROBBER WHO",
+    "highlight": "ROBBED A BANK",
+    "bottom": "IN BROAD DAYLIGHT IS STILL ON THE LOOSE",
+    "blur": false,
+    "photo": {
+      "query": "downtown Miami bank entrance police lights weekday",
+      "prompt": "a downtown Miami bank entrance with police lights in the foreground, office towers behind it, daytime street traffic, dramatic and specific scene",
+      "mark": "stamp: ON THE RUN"
+    },
+    "emojis": [
+      "🚨",
+      "🏦",
+      "🔎"
+    ],
+    "logos": [
+      "regions.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "He robbed a bank in downtown Miami in broad daylight and is still on the loose.",
+      "highlight": "in broad daylight",
+      "body": "WSVN 7News says a robber held up the Regions Bank in downtown Miami on Monday.",
+      "place": "Downtown Miami",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "downtown Miami Regions Bank entrance daytime police scene",
+        "prompt": "the front of a Regions Bank in downtown Miami during the day, with police presence and pedestrians nearby, sharp and dramatic"
+      },
+      "color": "#00A651",
+      "emoji": "🏦",
+      "chip": "MON 10/26",
+      "logo": "regions.com",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police said the robber got away after the holdup.",
+      "highlight": "got away",
+      "body": "WSVN 7News reported that the suspect left before police caught him.",
+      "place": "Downtown Miami",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Miami police cruiser downtown office district daytime",
+        "prompt": "a Miami police cruiser with lights on beside a downtown Miami street, glass towers and office buildings in frame"
+      },
+      "emoji": "🚔",
+      "chip": "ON THE RUN",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The search was still active Monday.",
+      "highlight": "still active",
+      "body": "Police were searching for the bank robber on Monday, according to WSVN 7News.",
+      "place": "Miami",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "police lights downtown Miami street daytime",
+        "prompt": "flashing police lights on a downtown Miami street with high-rise buildings and traffic, close and specific"
+      },
+      "emoji": "🔎",
+      "chip": "SEARCHING",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    }
+  ],
+  "caption": "Police are searching for the robber who hit the Regions Bank in downtown Miami on Monday.",
+  "hashtags": [
+    "#DowntownMiami",
+    "#MiamiCrime"
+  ],
+  "collaborators": [],
+  "igCaption": "Police are searching for the robber who hit the Regions Bank in downtown Miami on Monday.\n\n📰 Sources: WSVN 7News\n\n#DowntownMiami #MiamiCrime #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-26",
+  "id": "2026-10-26-news-18"
+}
