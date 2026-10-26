@@ -1,0 +1,117 @@
+{
+  "sector": "WEATHER",
+  "cover": {
+    "top": "SOUTH FLORIDA",
+    "main": "FLOODING, EROSION",
+    "highlight": "BIG WAVES",
+    "bottom": "HIT PALM BEACH COUNTY",
+    "blur": false,
+    "photo": {
+      "query": "Wikimedia Commons Palm Beach County beach erosion storm waves Florida",
+      "prompt": "Dramatic Palm Beach County beach scene with big waves chewing at the shoreline, eroded sand, and spray hitting a beach access path",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "🌊",
+      "🌧️",
+      "💨"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: CBS News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "WEATHER",
+      "headline": "Flooding, erosion and big waves hit Palm Beach County",
+      "highlight": "Palm Beach County",
+      "body": "The Palm Beach Post reported flooding, erosion and big waves in Palm Beach County on Monday. The king tide peak is still days away.",
+      "place": "Palm Beach County",
+      "source": "The Palm Beach Post",
+      "photo": {
+        "query": "Wikimedia Commons Palm Beach County beach erosion storm waves Florida",
+        "prompt": "Large waves hitting an eroded Palm Beach County beach, with carved sand, foam, and water pushing toward a beach access path"
+      },
+      "emoji": "🌊",
+      "chip": "MON",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "The flood threat runs Fort Lauderdale to Miami",
+      "highlight": "Fort Lauderdale to Miami",
+      "body": "CBS News said king tides, rain and gusty winds bring a coastal flooding threat from Fort Lauderdale to Miami.",
+      "place": "Fort Lauderdale to Miami",
+      "source": "CBS News",
+      "photo": {
+        "query": "Wikimedia Commons Fort Lauderdale king tide flooding street",
+        "prompt": "A flooded Fort Lauderdale coastal street during king tide, with cars moving through shallow water near condos and palm trees"
+      },
+      "emoji": "🌧️",
+      "chip": "FTL-MIA",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Yahoo"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "South Florida is already flooding",
+      "highlight": "already flooding",
+      "body": "The Miami Herald reported Sunday that South Florida was already flooding, and the peak of this king tide was still days away.",
+      "place": "South Florida",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Wikimedia Commons Miami Beach king tide flooding street cars",
+        "prompt": "Miami Beach street flooding during king tide, with water around parked cars, curbs covered, and gray skies overhead"
+      },
+      "emoji": "📈",
+      "chip": "DAYS AWAY",
+      "photoFile": "news-3.jpg",
+      "credit": "Photo: Yahoo"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "Wind, showers and rough surf add to the flooding",
+      "highlight": "rough surf",
+      "body": "WPEC said coastal flooding, gusty winds and showers continue across Southeast Florida. King tides are naturally high tides, and weather can push the water higher.",
+      "place": "Southeast Florida",
+      "source": "WPEC",
+      "photo": {
+        "query": "Wikimedia Commons South Florida rough surf windy beach storm",
+        "prompt": "Windy South Florida beach with rough surf, blown spray, and dark rain clouds over the ocean"
+      },
+      "emoji": "💨",
+      "chip": "THIS WEEK",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "WEATHER",
+      "headline": "Businesses and residents are preparing for more water",
+      "highlight": "preparing",
+      "body": "CBS News said businesses and residents across South Florida are getting ready for another round of flooding as the peak approaches.",
+      "place": "South Florida",
+      "source": "CBS News",
+      "photo": {
+        "query": "Wikimedia Commons sandbags storefront flooding Florida",
+        "prompt": "Sandbags outside a South Florida storefront with floodwater along the curb during king tide conditions"
+      },
+      "emoji": "🧱",
+      "chip": "PEAK AHEAD",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: CBS News"
+    }
+  ],
+  "caption": "Flooding, erosion and big waves hit Palm Beach County as South Florida braces for the king tide peak.",
+  "hashtags": [
+    "#KingTide",
+    "#SouthFloridaWeather"
+  ],
+  "collaborators": [],
+  "igCaption": "Flooding, erosion and big waves hit Palm Beach County as South Florida braces for the king tide peak.\n\n📰 Sources: The Palm Beach Post, CBS News, Miami Herald, WPEC\n\n#KingTide #SouthFloridaWeather #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-26",
+  "id": "2026-10-26-brief"
+}
