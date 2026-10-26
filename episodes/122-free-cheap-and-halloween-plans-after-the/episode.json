@@ -1,0 +1,197 @@
+{
+  "title": "Free, cheap, and Halloween plans after the king tides",
+  "sources": [
+    "Local 10",
+    "NBC 6 South Florida",
+    "Miami New Times",
+    "Eventbrite"
+  ],
+  "collaborators": [],
+  "igCaption": "After the king tides, keep the plans close and check the streets first.\nOct. 23-25, Miami Beach Botanical Garden, National Hotel, ZeyZey, free to $35\n\nSources: Local 10, NBC 6 South Florida, Miami New Times, Eventbrite\n\n#Miami #MiamiBeach #SouthFlorida #Halloween",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "King tides made driving rough Sunday morning, so these are close South Florida plans with free and cheap Halloween events.",
+      "overlay": [
+        "AFTER KING",
+        "TIDES"
+      ],
+      "emojis": [
+        "🌊",
+        "🎃",
+        "🎶",
+        "🚗"
+      ],
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 155
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start at Miami Beach Botanical Garden for Folklore and Foliage. It runs Friday at six p.m. with old Florida ghost lore from author Thomas Smith, shadow puppets, tarot readings, vintage Halloween footage, and free admission with RSVP.",
+      "caption": "Start at Miami Beach Botanical Garden for Folklore & Foliage. It runs Friday at 6 p.m. with old Florida ghost lore from author Thomas Smith, shadow puppets, tarot readings, vintage Halloween footage, and free admission with RSVP.",
+      "overlay": "BOTANICAL GARDEN",
+      "badge": "FREE RSVP",
+      "sub": "Friday at 6 PM",
+      "emoji": "🌿",
+      "stats": [
+        {
+          "value": "6 PM",
+          "label": "start time"
+        },
+        {
+          "value": "FREE",
+          "label": "with RSVP"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami Beach Botanical Garden",
+        "lat": 25.7946,
+        "lon": -80.1323,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 95,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a lower-commitment Halloween stop, Bar 1939 at the National Hotel has three themed cocktails through October. The hotel is at 1677 Collins Ave., and one drink comes topped with lychee eyeballs.",
+      "caption": "For a lower-commitment Halloween stop, Bar1939 at the National Hotel has 3 themed cocktails through October. The hotel is at 1677 Collins Ave., and one drink comes topped with lychee eyeballs.",
+      "overlay": "BAR1939",
+      "badge": "3 COCKTAILS",
+      "sub": "National Hotel",
+      "emoji": "🍸",
+      "stats": [
+        {
+          "value": "3",
+          "label": "cocktails"
+        },
+        {
+          "value": "1677",
+          "label": "Collins Ave."
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "National Hotel Miami Beach",
+        "lat": 25.7918,
+        "lon": -80.1296,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -34,
+        "heading": 210,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sunday night, Peter Bjorn and John play ZeyZey Miami at seven p.m. The band is marking twenty years of Writer’s Block, with tickets listed at thirty-five dollars at the venue on Northeast sixty-first Street. If you’re at ZeyZey, open NEAR and see who else was there.",
+      "caption": "Sunday night, Peter Bjorn and John play ZeyZey Miami at 7 p.m. The band is marking 20 years of Writer’s Block, with tickets listed at $35 at the venue on NE 61st St. If you’re at ZeyZey, open NEAR and see who else was there.",
+      "overlay": "ZEYZEY",
+      "badge": "$35",
+      "sub": "Sunday at 7 PM",
+      "emoji": "🎸",
+      "stats": [
+        {
+          "value": "$35",
+          "label": "tickets"
+        },
+        {
+          "value": "20",
+          "label": "album years"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "ZeyZey Miami",
+        "lat": 25.8315,
+        "lon": -80.192,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 750,
+        "pitch": -32,
+        "heading": 28,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Hollywood offered garage parking to residents before another round of king tides. Coastal floodwaters already made driving difficult Sunday morning, so check the route before you go.",
+      "caption": "Hollywood offered garage parking to residents before another round of king tides. Coastal floodwaters already made driving difficult Sunday morning, so check the route before you go.",
+      "overlay": "HOLLYWOOD",
+      "badge": "KING TIDES",
+      "sub": "Driving was difficult",
+      "emoji": "🌊",
+      "stats": [
+        {
+          "value": "another round",
+          "label": "king tides"
+        }
+      ],
+      "source": "Local 10",
+      "location": {
+        "name": "Hollywood, Florida",
+        "lat": 26.0112,
+        "lon": -80.1495,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -30,
+        "heading": 315,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Check the streets first, then pick the stop that fits your night. And if you spent the night passing strangers on the same flooded streets, NEAR is the app that shows you who those faces were.",
+      "overlay": "WHAT’S THE MOVE? 🎃",
+      "sub": "Free, cheap, close by",
+      "location": {
+        "name": "Miami Beach, Florida",
+        "lat": 25.7907,
+        "lon": -80.13,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "122-free-cheap-and-halloween-plans-after-the"
+}
