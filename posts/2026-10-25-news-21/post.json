@@ -1,0 +1,91 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "CBS SAYS",
+    "main": "A MAN WAS",
+    "highlight": "SET ON FIRE",
+    "bottom": "AND A WOMAN WAS IDENTIFIED IN NORTHWEST MIAMI-DADE",
+    "blur": false,
+    "photo": {
+      "query": "Miami-Dade Fire Rescue ambulance police lights night street",
+      "prompt": "Miami-Dade Fire Rescue ambulance and police cruisers with flashing lights on a dark northwest Miami-Dade street, smoke in the air, no people visible"
+    },
+    "emojis": [
+      "🚔",
+      "🔥",
+      "🚑"
+    ],
+    "logos": [
+      "cbsnews.com",
+      "wsvn.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WPLG",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "A man was left critically burned in northwest Miami-Dade",
+      "highlight": "80% of his body",
+      "body": "Local reporting says the attack left 80% of the man's body critically burned.",
+      "place": "Northwest Miami-Dade",
+      "source": "CBS News",
+      "photo": {
+        "query": "Miami-Dade Fire Rescue ambulance night emergency lights",
+        "prompt": "Miami-Dade Fire Rescue ambulance at night with red lights reflecting on wet pavement, police lights in the background, no patient visible"
+      },
+      "emoji": "🚑",
+      "chip": "80% BURNED",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WPLG"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Authorities say a woman was arrested Sunday",
+      "highlight": "woman was arrested",
+      "body": "Authorities said a woman was arrested after the fire attack in Miami-Dade.",
+      "place": "Miami-Dade County",
+      "source": "CBS News",
+      "photo": {
+        "query": "Miami-Dade police cruiser night flashing lights",
+        "prompt": "Miami-Dade police cruiser with flashing lights on a dark residential block, fire rescue lights farther down the street, no people visible"
+      },
+      "emoji": "🚔",
+      "chip": "OCT 25",
+      "mark": "stamp: ARRESTED",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WPLG"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "WSVN says she faces attempted murder and arson charges",
+      "highlight": "attempted murder",
+      "body": "WSVN reported that the woman faces attempted murder and arson charges.",
+      "place": "Northwest Miami-Dade",
+      "source": "WSVN",
+      "photo": {
+        "query": "Miami-Dade courthouse exterior night police lights",
+        "prompt": "Miami-Dade courthouse exterior at night with police vehicle lights nearby, dramatic sky, no people visible"
+      },
+      "emoji": "⚖️",
+      "chip": "2 CHARGES",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WPLG"
+    }
+  ],
+  "caption": "Police say a man was set on fire in northwest Miami-Dade and left with burns over 80% of his body.",
+  "hashtags": [
+    "#MiamiDade",
+    "#NorthwestMiamiDade"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say a man was set on fire in northwest Miami-Dade and left with burns over 80% of his body.\n\n📰 Sources: CBS News, WSVN\n\n#MiamiDade #NorthwestMiamiDade #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-25",
+  "id": "2026-10-25-news-21"
+}
