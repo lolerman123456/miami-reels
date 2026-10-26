@@ -1,0 +1,91 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "FAMU HOMECOMING",
+    "main": "12 PEOPLE WERE INJURED IN A SHOOTING NEAR THE STADIUM",
+    "highlight": "INCLUDING 6 CHILDREN",
+    "bottom": "AFTER THE GAME",
+    "blur": false,
+    "photo": {
+      "query": "Florida A&M University Bragg Memorial Stadium Tallahassee police lights night",
+      "prompt": "a dramatic night scene outside Bragg Memorial Stadium in Tallahassee with flashing police lights, barricades, and the stadium visible in the background"
+    },
+    "emojis": [
+      "🚨",
+      "🏟️",
+      "🐍"
+    ],
+    "logos": [
+      "famu.edu"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Total Pro Sports",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "12 injured near FAMU after the homecoming game",
+      "highlight": "12 injured",
+      "body": "Police say the shooting happened near Florida A&M University’s stadium after its homecoming game. Six children were among the people hurt.",
+      "place": "Tallahassee",
+      "source": "WESH",
+      "photo": {
+        "query": "Florida A&M University Bragg Memorial Stadium exterior night",
+        "prompt": "a nighttime view of Bragg Memorial Stadium at Florida A&M University with emergency lights flashing near the entrance"
+      },
+      "color": "#F58220",
+      "emoji": "🚨",
+      "chip": "12 INJURED",
+      "logo": "famu.edu",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Total Pro Sports",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police arrested a 15-year-old boy Monday",
+      "highlight": "15-year-old boy",
+      "body": "The Miami Herald reported police arrested a 15-year-old boy in the Tallahassee shooting on Monday, Oct. 26.",
+      "place": "Tallahassee",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Tallahassee police car night flashing lights",
+        "prompt": "a Tallahassee police cruiser with flashing lights parked on a dark street near the stadium"
+      },
+      "emoji": "👮",
+      "chip": "MON 10/26",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Total Pro Sports"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "5 victims were released, 1 remains critical",
+      "highlight": "1 critical",
+      "body": "Fox News reported five victims had been released from the hospital and one person remained in critical condition.",
+      "place": "Tallahassee",
+      "source": "Fox News",
+      "photo": {
+        "query": "Tallahassee Memorial HealthCare emergency entrance night ambulance",
+        "prompt": "a hospital emergency entrance at night with ambulance lights reflecting on the pavement"
+      },
+      "emoji": "🏥",
+      "chip": "1 CRITICAL",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Total Pro Sports"
+    }
+  ],
+  "caption": "A 15-year-old was arrested after 12 people were hurt near FAMU’s homecoming game",
+  "hashtags": [
+    "#FAMU",
+    "#Tallahassee"
+  ],
+  "collaborators": [],
+  "igCaption": "A 15-year-old was arrested after 12 people were hurt near FAMU’s homecoming game\n\n📰 Sources: WESH, Miami Herald, Fox News, WCTV, News4JAX\n\n#FAMU #Tallahassee #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-26",
+  "id": "2026-10-26-news-07"
+}
