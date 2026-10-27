@@ -1,0 +1,117 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "THREE MIAMI BROTHERS",
+    "main": "EACH GOT",
+    "highlight": "30 YEARS",
+    "bottom": "IN PRISON AFTER RAPE TESTIMONY",
+    "blur": false,
+    "photo": {
+      "query": "Daniel Patrick Moynihan United States Courthouse New York Wikimedia Commons",
+      "prompt": "dramatic federal courthouse exterior in New York with police barricades, TV cameras and dark clouds outside",
+      "mark": "stamp: SENTENCED"
+    },
+    "emojis": [
+      "⚖️",
+      "🚨",
+      "🏙️"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Boston Herald",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Alon, Tal and Oren Alexander each got 30 years in prison",
+      "highlight": "30 years each",
+      "body": "The Alexander brothers were sentenced Tuesday after a federal sex-trafficking case tied to luxury real estate and Miami money.",
+      "place": "New York",
+      "source": "CNN",
+      "photo": {
+        "query": "Daniel Patrick Moynihan United States Courthouse New York Wikimedia Commons",
+        "prompt": "federal courthouse steps in New York with security barricades and news cameras during a high-profile sentencing"
+      },
+      "emoji": "⚖️",
+      "chip": "SENTENCED",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: CNN"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Women spoke at sentencing about rape and drugging",
+      "highlight": "rape and drugging",
+      "body": "ABC7 New York reported women who accused the brothers of rape spoke at the sentencing hearing.",
+      "place": "New York",
+      "source": "ABC7 New York",
+      "photo": {
+        "query": "empty federal courtroom witness stand Wikimedia Commons",
+        "prompt": "somber federal courtroom interior with witness stand, judge bench and rows of seats, no people visible"
+      },
+      "emoji": "🗣️",
+      "chip": "10/27",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: Us Weekly"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case centered on sex trafficking charges",
+      "highlight": "sex trafficking",
+      "body": "NBC News identified the case as federal sex-trafficking charges against the former luxury real-estate brokers.",
+      "place": "New York",
+      "source": "NBC News",
+      "photo": {
+        "query": "United States District Court courtroom Wikimedia Commons",
+        "prompt": "close view of a federal courtroom seal and empty counsel tables, no people visible"
+      },
+      "emoji": "📄",
+      "chip": "FEDERAL",
+      "photoFile": "news-3.jpg",
+      "credit": "Photo: WSVN 7News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Reports tied the crimes to wealth and access to luxury real estate",
+      "highlight": "luxury real estate",
+      "body": "WSVN reported the brothers used wealth and access to luxury real estate to drug and rape women.",
+      "place": "Miami",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "Miami luxury condominium towers Biscayne Bay Wikimedia Commons",
+        "prompt": "Miami luxury condo towers along Biscayne Bay at night, shot from street level with no people visible"
+      },
+      "emoji": "🏙️",
+      "chip": "MIAMI",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Boston Herald"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The sentencing came after years of allegations",
+      "highlight": "years of allegations",
+      "body": "NBC 6 South Florida described the case as serial rapes spanning years.",
+      "place": "South Florida",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "federal prison razor wire fence Wikimedia Commons",
+        "prompt": "razor wire and federal prison fencing under a gray sky, no inmates or staff visible"
+      },
+      "emoji": "🔒",
+      "chip": "YEARS",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: CNN"
+    }
+  ],
+  "caption": "Alon, Tal and Oren Alexander each got 30 years in prison after women described rape and drugging in court.",
+  "hashtags": [
+    "#AlexanderBrothers",
+    "#MiamiRealEstate"
+  ],
+  "collaborators": [],
+  "igCaption": "Alon, Tal and Oren Alexander each got 30 years in prison after women described rape and drugging in court.\n\n📰 Sources: CNN, ABC7 New York, NBC News, WSVN 7News, NBC 6 South Florida\n\n#AlexanderBrothers #MiamiRealEstate #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-27",
+  "id": "2026-10-27-news-16"
+}
