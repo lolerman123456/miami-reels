@@ -1,0 +1,135 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "HERE ARE THE",
+    "highlight": "BIG EVENTS",
+    "bottom": "THIS WEEK",
+    "blur": false,
+    "photo": {
+      "query": "South Florida Halloween weekend event crowd neon lights",
+      "prompt": "dramatic South Florida Halloween weekend crowd under neon lights with costumes, a DJ booth, and palm trees"
+    },
+    "emojis": [
+      "🎃",
+      "🎶",
+      "🍕",
+      "🚤"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Hocus Pocus at Factory Town, Oct. 30 to Nov. 1",
+      "highlight": "Hocus Pocus",
+      "body": "Starts 7 p.m. Friday, Oct. 30, at Factory Town in Miami. Tickets cost $120 to $250. Chase & Status, Eric Prydz, Gorgon City, Indira Paganotto, Meduza, and Nora En Pure are on the bill.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Factory Town Miami electronic music festival Halloween",
+        "prompt": "Factory Town in Miami at night with stage lights, fog, and a packed crowd"
+      },
+      "emoji": "🎧",
+      "chip": "$120-$250",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "DC Pie and Dom’s Halloween party, Oct. 31",
+      "highlight": "Halloween party",
+      "body": "Starts at 5 p.m. Friday, Oct. 31, at DC Pie Co. and Dom's, 1010 Brickell Ave. in Miami. Kids 12 and under in costume get a free personal pizza with purchase at DC Pie Co., and Dom's runs a costume contest and tequila specials.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Brickell Miami pizza restaurant Halloween costume",
+        "prompt": "kids in Halloween costumes outside a Brickell pizzeria with pizza boxes and a nightlife entrance"
+      },
+      "emoji": "🍕",
+      "chip": "FREE PIZZA",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Lincoln Road Halloween Block Party, Oct. 31",
+      "highlight": "Block Party",
+      "body": "Starts at 5 p.m. Saturday, Oct. 31, on Lincoln Road in Miami Beach. Admission is free. Kids trick-or-treat from 5:30 to 7:30 p.m., then the adult party starts at 8 p.m.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Lincoln Road Miami Beach Halloween block party costumes",
+        "prompt": "Halloween crowd on Lincoln Road in Miami Beach with costumes, street lights, and a busy pedestrian mall"
+      },
+      "emoji": "👻",
+      "chip": "FREE",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Mushroom Jazz at ZeyZey, Oct. 31",
+      "highlight": "Mushroom Jazz",
+      "body": "Starts 7 p.m. Saturday, Oct. 31, at ZeyZey in Miami. Admission is free with RSVP before 11 p.m., then tickets cost $24 to $64. Mark Farina's series brings instrumental hip-hop and downtempo sets.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "ZeyZey Miami outdoor concert crowd",
+        "prompt": "outdoor Miami music venue at night with DJs, warm lighting, and a packed dance floor"
+      },
+      "emoji": "🎶",
+      "chip": "FREE RSVP",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Loe Shimmy Zombieland in Miramar, Oct. 31",
+      "highlight": "Zombieland",
+      "body": "Starts 8 p.m. Saturday, Oct. 31, at Miramar Amphitheater in Miramar. Tickets cost $54 to $128. BigXthaPlug, Sexyy Red, and Rob49 are scheduled to perform.",
+      "place": "Miramar",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miramar Amphitheater concert night crowd",
+        "prompt": "outdoor amphitheater concert at night with stage lights, Halloween costumes, and a crowded lawn"
+      },
+      "emoji": "🧟",
+      "chip": "$54-$128",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Bedouin at Club Space, Oct. 31",
+      "highlight": "Bedouin",
+      "body": "Starts 11 p.m. Saturday, Oct. 31, at Club Space in Miami. Tickets cost $30 to $100. Bedouin headlines a lineup that runs into Sunday afternoon.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Club Space Miami terrace DJ crowd",
+        "prompt": "Club Space Miami terrace at night with bright DJ lights, fog, and a dense dance crowd"
+      },
+      "emoji": "🪩",
+      "chip": "$30-$100",
+      "logo": "clubspace.com",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-6.png"
+    }
+  ],
+  "caption": "South Florida is booked for Halloween weekend. Who are you taking? Tag a friend 🎃",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiHalloween"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida is booked for Halloween weekend. Who are you taking? Tag a friend 🎃\n\n📰 Sources: Miami New Times, Secret Miami\n\n#SouthFloridaEvents #MiamiHalloween #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-27",
+  "id": "2026-10-27-upcoming"
+}
