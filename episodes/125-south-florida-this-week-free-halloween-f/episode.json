@@ -1,0 +1,236 @@
+{
+  "title": "South Florida This Week: Free Halloween, Food, Sports, Nightlife",
+  "sources": [
+    "Miami New Times",
+    "Local 10",
+    "Eater Miami"
+  ],
+  "collaborators": [
+    "miamiheat"
+  ],
+  "igCaption": "Free first, then burgers, sports, concerts and Halloween night.\n\nSources: Miami New Times, Local 10, Eater Miami\n\n#SouthFlorida #HalloweenWeekend #MiamiEvents #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a plan this week? Start free, then pick the burger, the game, or the late night.",
+      "overlay": [
+        "THIS WEEK",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🎃",
+        "🍔",
+        "🏀",
+        "🎧"
+      ],
+      "location": {
+        "name": "Bayside Marketplace",
+        "lat": 25.77831,
+        "lon": -80.186452,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "First free pick: LoveIsLove returns to Normandy Fountain on November 7. It is in its sixth year, and more than 1,200 people have already RSVP'd for the North Beach hip-hop block party.",
+      "caption": "First free pick: LoveIsLove returns to Normandy Fountain on Nov. 7. It is in its sixth year, and more than 1,200 people have already RSVP'd for the North Beach hip-hop block party.",
+      "overlay": "NORMANDY",
+      "badge": "FREE",
+      "sub": "1,200+ RSVPs",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "1,200+",
+          "label": "RSVPs"
+        },
+        {
+          "value": "6 YEARS",
+          "label": "event run"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Normandy Fountain",
+        "lat": 25.8547,
+        "lon": -80.1312,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For food, Skinny Louie starts its Burger Shot takeover in early November and runs it through December 31. The Bleeder Triple costs $15.49, with three Black Angus smash patties, American cheese, bacon, pickles, barbecue sauce, and ketchup.",
+      "caption": "For food, Skinny Louie starts its Burger Shot takeover in early November and runs it through Dec. 31. The Bleeder Triple costs $15.49, with 3 Black Angus smash patties, American cheese, bacon, pickles, barbecue sauce, and ketchup.",
+      "overlay": "BURGER SHOT",
+      "badge": "$15.49",
+      "sub": "Skinny Louie takeover",
+      "emoji": "🍔",
+      "stats": [
+        {
+          "value": "$15.49",
+          "label": "Bleeder Triple"
+        },
+        {
+          "value": "DEC. 31",
+          "label": "last day"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.7814014,
+        "lon": -80.1876809,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 210,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Monday night brings a sports equinox. MLB, NFL, NBA, WNBA, and NHL are all in play at the same time. If you’re watching the sports equinox out, NEAR shows who’s there too.",
+      "caption": "Monday night brings a sports equinox. MLB, NFL, NBA, WNBA, and NHL are all in play at the same time. If you’re watching the sports equinox out, NEAR shows who’s there too.",
+      "overlay": "HARD ROCK",
+      "badge": "5 LEAGUES",
+      "sub": "Same Monday night",
+      "emoji": "🏟️",
+      "stats": [
+        {
+          "value": "5",
+          "label": "leagues"
+        },
+        {
+          "value": "OCT. 26",
+          "label": "sports equinox"
+        }
+      ],
+      "source": "Local 10",
+      "location": {
+        "name": "Hard Rock Stadium",
+        "lat": 25.95805556,
+        "lon": -80.23888889,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 95,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a show, The Linda Lindas play Culture Room on Tuesday, October 27. Tickets cost $40 for the Los Angeles punk band.",
+      "caption": "For a show, The Linda Lindas play Culture Room on Tuesday, Oct. 27. Tickets cost $40 for the Los Angeles punk band.",
+      "overlay": "CULTURE ROOM",
+      "badge": "$40",
+      "sub": "Tuesday, Oct. 27",
+      "emoji": "🎸",
+      "stats": [
+        {
+          "value": "$40",
+          "label": "ticket"
+        },
+        {
+          "value": "OCT. 27",
+          "label": "show date"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 35,
+        "degrees": 75,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Hocus Pocus runs at Factory Town from Friday, October 30, to Sunday, November 1. Tickets cost $120 to $250, with Chase & Status, Eric Prydz, Gorgon City, Indira Paganotto, Meduza, and Nora En Pure on the bill.",
+      "caption": "Hocus Pocus runs at Factory Town from Friday, Oct. 30, to Sunday, Nov. 1. Tickets cost $120 to $250, with Chase & Status, Eric Prydz, Gorgon City, Indira Paganotto, Meduza, and Nora En Pure on the bill.",
+      "overlay": "FACTORY TOWN",
+      "badge": "$120-$250",
+      "sub": "Oct. 30 to Nov. 1",
+      "emoji": "🎧",
+      "stats": [
+        {
+          "value": "$120-$250",
+          "label": "tickets"
+        },
+        {
+          "value": "3 DAYS",
+          "label": "festival run"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Factory Town",
+        "lat": 25.8183,
+        "lon": -80.2598,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -32,
+        "heading": 280,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Pick one and keep the rest for next week. South Florida is full of quick passes and near misses, from late-night crowds to festival lines, and NEAR is what makes those anonymous faces turn into names.",
+      "overlay": "WHAT'S THE MOVE? 🎃",
+      "sub": "Drop the plan",
+      "location": {
+        "name": "Bayside Marketplace",
+        "lat": 25.77831,
+        "lon": -80.186452,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1700,
+        "pitch": -32,
+        "heading": 185
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "125-south-florida-this-week-free-halloween-f"
+}
