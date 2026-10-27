@@ -1,0 +1,102 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "LAUDERHILL OFFICER",
+    "main": "BRIAN LOUIS ACCUSED",
+    "highlight": "DEAD MAN'S HOME",
+    "bottom": "AFTER A WELFARE CHECK",
+    "blur": false,
+    "photo": {
+      "query": "Lauderhill Florida police cruiser outside house at night dramatic",
+      "prompt": "dramatic Lauderhill police cruiser lights outside a quiet South Florida home at night"
+    },
+    "emojis": [
+      "🚔",
+      "🏠",
+      "📄"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Brian Louis was accused of taking over a dead man’s house",
+      "highlight": "dead man’s house",
+      "body": "Lauderhill officer Brian Louis was accused of taking possession of a dead man’s home after a welfare check.",
+      "place": "Lauderhill",
+      "source": "Men's Journal",
+      "photo": {
+        "query": "Florida house exterior police lights at night",
+        "prompt": "quiet South Florida single-family home with police lights reflecting off the windows at night"
+      },
+      "emoji": "🏠",
+      "chip": "HOME",
+      "logo": "lauderhill-fl.gov",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: The Shade Room",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The home was reported at $400,000",
+      "highlight": "$400,000",
+      "body": "Men's Journal reported the house was worth $400,000. The accusation also includes taking the dead man’s identity.",
+      "place": "Florida",
+      "source": "Men's Journal",
+      "photo": {
+        "query": "Florida suburban house front exterior dramatic",
+        "prompt": "front view of a South Florida house with a for-sale style look and police tape near the curb"
+      },
+      "emoji": "📄",
+      "chip": "$400K",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case began with a welfare check",
+      "highlight": "welfare check",
+      "body": "Headlines say the case started with a welfare check. That check led investigators to the house and identity claims.",
+      "place": "Lauderhill",
+      "source": "Yahoo",
+      "photo": {
+        "query": "two police officers at front door welfare check Florida",
+        "prompt": "two officers at a front door during a welfare check in South Florida, seen from behind"
+      },
+      "emoji": "🔎",
+      "chip": "CHECK",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: The Shade Room"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Relatives learned their uncle had died years later",
+      "highlight": "years later",
+      "body": "NBC News reported relatives did not know their uncle had died for years. They later learned a cop was accused of stealing his house and identity.",
+      "place": "Florida",
+      "source": "NBC News",
+      "photo": {
+        "query": "Florida mailbox and home with police presence dramatic",
+        "prompt": "mailbox outside a Florida home with a patrol car in the background and late-day shadows"
+      },
+      "emoji": "📬",
+      "chip": "YEARS",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    }
+  ],
+  "caption": "Brian Louis resigned after investigators accused him of taking possession of a dead man’s home in Lauderhill.",
+  "hashtags": [
+    "#Lauderhill",
+    "#BrowardCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "Brian Louis resigned after investigators accused him of taking possession of a dead man’s home in Lauderhill.\n\n📰 Sources: Men's Journal, Yahoo, NBC News, WPLG Local 10\n\n#Lauderhill #BrowardCounty #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-27",
+  "id": "2026-10-27-news-18"
+}
