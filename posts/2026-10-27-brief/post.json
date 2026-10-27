@@ -1,0 +1,100 @@
+{
+  "sector": "CITY HALL",
+  "cover": {
+    "top": "PREDAWN MIAMI",
+    "main": "FIRE IN APARTMENT BUILDING",
+    "highlight": "100+ FIREFIGHTERS",
+    "bottom": "15 DISPLACED",
+    "blur": false,
+    "photo": {
+      "query": "Miami apartment building fire predawn firefighters ladder truck smoke",
+      "prompt": "Dramatic predawn Miami apartment building fire with ladder trucks, smoke from an upper floor, firefighters working under red emergency lights"
+    },
+    "emojis": [
+      "🚒",
+      "🔥",
+      "🚑"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: CBS News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CITY HALL",
+      "headline": "More than 100 firefighters raced to a fourth-floor apartment fire that displaced 15 people in Miami.",
+      "highlight": "100+ firefighters",
+      "body": "WPLG and WSVN said more than 100 firefighters responded before sunrise to a fire that started on the fourth floor.",
+      "place": "Miami",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami apartment building fire before sunrise firefighters ladder truck smoke",
+        "prompt": "Dramatic predawn scene of Miami firefighters and ladder trucks outside an apartment building with smoke coming from a fourth-floor window"
+      },
+      "emoji": "🚒",
+      "chip": "100+ RESPOND",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: NBC 6 South Florida"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "Two elderly residents were hurt",
+      "highlight": "2 hurt",
+      "body": "NBC 6 reported two elderly residents were transported with smoke inhalation.",
+      "place": "Miami",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Miami ambulance firefighters apartment fire before sunrise smoke inhalation",
+        "prompt": "Ambulance and Miami firefighters outside an apartment building before sunrise, with emergency lights and residents being helped away from the scene"
+      },
+      "emoji": "🚑",
+      "chip": "2 HURT",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "The fire broke out on the fourth floor",
+      "highlight": "fourth floor",
+      "body": "WSVN said the fire started on the fourth floor of a Miami apartment complex.",
+      "place": "Miami",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "apartment building fourth floor fire ladder truck firefighters Miami night",
+        "prompt": "Firefighters aiming hoses toward the fourth floor of a Miami apartment building at night, with a ladder truck extended toward smoke"
+      },
+      "emoji": "🔥",
+      "chip": "4TH FLOOR",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: NBC 6 South Florida"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "15 residents were displaced after the evacuation",
+      "highlight": "15 displaced",
+      "body": "WPLG reported 15 residents, including children and elderly people, were displaced after the fire.",
+      "place": "Miami",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "apartment fire residents evacuated blankets Miami firefighters morning",
+        "prompt": "Residents standing outside a Miami apartment building after a fire, with blankets, fire trucks and firefighters nearby before sunrise"
+      },
+      "emoji": "🏢",
+      "chip": "15 DISPLACED",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News"
+    }
+  ],
+  "caption": "More than 100 firefighters responded before sunrise in Miami. 15 residents were displaced, and two elderly residents were hurt.",
+  "hashtags": [
+    "#MiamiNews",
+    "#MiamiFire"
+  ],
+  "collaborators": [],
+  "igCaption": "More than 100 firefighters responded before sunrise in Miami. 15 residents were displaced, and two elderly residents were hurt.\n\n📰 Sources: WPLG Local 10, NBC 6 South Florida, WSVN 7News\n\n#MiamiNews #MiamiFire #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-27",
+  "id": "2026-10-27-brief"
+}
