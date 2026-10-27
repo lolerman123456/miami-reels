@@ -1,0 +1,84 @@
+{
+  "sector": "SPORTS",
+  "cover": {
+    "top": "FLORIDA TODDLER",
+    "main": "POLICE CALLED",
+    "highlight": "OVER A 3-YEAR-OLD",
+    "bottom": "SOCCER GAME IN WINTER PARK",
+    "blur": false,
+    "photo": {
+      "query": "Florida youth soccer field police car sideline sunset",
+      "prompt": "A dramatic Florida youth soccer field at sunset with a police car near the sideline, empty field, bright cones, and a small goal, no children or private people visible",
+      "mark": "arrow"
+    },
+    "emojis": [
+      "⚽",
+      "🚓"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Newsweek",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "SPORTS",
+      "headline": "Police were called after a 3-year-old soccer player was benched for being too good",
+      "highlight": "3-year-old",
+      "body": "Headlines said police were called to a Florida youth soccer game after parents said their 3-year-old was benched for being too good at soccer.",
+      "place": "Winter Park",
+      "source": "WION",
+      "photo": {
+        "query": "soccer ball in goal net close up Florida field",
+        "prompt": "A close-up of a soccer ball inside a small goal net on a youth soccer field, dramatic low angle, no people visible"
+      },
+      "emoji": "⚽",
+      "chip": "AGE 3",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Newsweek"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "Parents say officers were called to remove the family from the game",
+      "highlight": "remove the family",
+      "body": "ESPN and NBC News said officers were called to remove the family from the game during a dispute at a youth soccer field near Orlando.",
+      "place": "near Orlando",
+      "source": "ESPN",
+      "photo": {
+        "query": "police car parked near youth sports field Florida",
+        "prompt": "A police car parked beside a youth sports field with cones and a sideline bench in view, no children or private people visible"
+      },
+      "emoji": "🚓",
+      "chip": "POLICE CALLED",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Newsweek"
+    },
+    {
+      "tag": "SPORTS",
+      "headline": "League officials asked the family to leave the field",
+      "highlight": "asked to leave",
+      "body": "News4JAX and WKMG reported league officials asked Nevada Pierre and his family to leave the field after the dispute grew.",
+      "place": "Winter Park",
+      "source": "News4JAX",
+      "photo": {
+        "query": "empty youth soccer sideline cones bench Florida",
+        "prompt": "An empty youth soccer sideline with cones, a bench, and a small goal, tense and specific, no children or private people visible"
+      },
+      "emoji": "🟨",
+      "chip": "LEFT FIELD",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Newsweek"
+    }
+  ],
+  "caption": "Police were called to a Florida youth soccer game after parents said a 3-year-old was benched for being too good.",
+  "hashtags": [
+    "#WinterPark",
+    "#FloridaSoccer"
+  ],
+  "collaborators": [],
+  "igCaption": "Police were called to a Florida youth soccer game after parents said a 3-year-old was benched for being too good.\n\n📰 Sources: WION, ESPN, News4JAX, Action News 5\n\n#WinterPark #FloridaSoccer #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-27",
+  "id": "2026-10-27-news-10"
+}
