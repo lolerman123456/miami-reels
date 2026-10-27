@@ -1,0 +1,196 @@
+{
+  "title": "Fort Lauderdale’s 645-foot tower proposal",
+  "sources": [
+    "The Real Deal",
+    "The Business Journals",
+    "Wikipedia"
+  ],
+  "collaborators": [],
+  "igCaption": "Fort Lauderdale has a 645-foot skyline proposal to watch.\n\nSources: The Real Deal, The Business Journals, Wikipedia\n\n#FortLauderdale #BrowardCounty #SouthFlorida #NewBuild",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "A New York developer wants to build a 645-foot tower in Fort Lauderdale.",
+      "overlay": [
+        "645-FOOT",
+        "PROPOSAL"
+      ],
+      "emojis": [
+        "🏗️",
+        "🌆",
+        "📍",
+        "🏢"
+      ],
+      "location": {
+        "name": "Fort Lauderdale",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The proposal calls for a 645-foot tower. The Business Journals described it as 56 stories. The Real Deal said a New York developer pitched it as Fort Lauderdale’s tallest tower.",
+      "caption": "The proposal calls for a 645-foot tower. The Business Journals described it as 56 stories. The Real Deal said a New York developer pitched it as Fort Lauderdale’s tallest tower.",
+      "overlay": "TOWER PLAN",
+      "badge": "645 FT",
+      "sub": "Proposed 56 stories",
+      "emoji": "🏢",
+      "stats": [
+        {
+          "value": "645 FT",
+          "label": "tower height"
+        },
+        {
+          "value": "56",
+          "label": "stories"
+        }
+      ],
+      "source": "The Real Deal",
+      "location": {
+        "name": "Fort Lauderdale",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 120
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 155,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Las Olas River House has 42 stories and two matching towers. It held the city’s tallest-building title until The Icon on Las Olas passed it in late 2017.",
+      "caption": "Las Olas River House has 42 stories and two matching towers. It held the city’s tallest-building title until The Icon on Las Olas passed it in late 2017.",
+      "overlay": "RIVER HOUSE",
+      "badge": "42 STORIES",
+      "sub": "Former tallest tower",
+      "emoji": "🏙️",
+      "stats": [
+        {
+          "value": "42",
+          "label": "stories"
+        },
+        {
+          "value": "2017",
+          "label": "overtaken"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "Las Olas River House",
+        "lat": 26.11805556,
+        "lon": -80.14166667,
+        "h": 110
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1450,
+        "pitch": -36,
+        "heading": 25,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The city grew around the New River. One early fort sat at the fork of the river in 1838. Fort Lauderdale incorporated in 1911 and became Broward’s county seat in 1915.",
+      "caption": "The city grew around the New River. One early fort sat at the fork of the river in 1838. Fort Lauderdale incorporated in 1911 and became Broward’s county seat in 1915.",
+      "overlay": "NEW RIVER",
+      "badge": "BUILT 1838",
+      "sub": "Original fort area",
+      "emoji": "🌊",
+      "stats": [
+        {
+          "value": "1838",
+          "label": "first fort"
+        },
+        {
+          "value": "1911",
+          "label": "incorporated"
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "New River, Fort Lauderdale",
+        "lat": 26.11805556,
+        "lon": -80.14166667,
+        "h": 35
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -30,
+        "heading": 300,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Broward County had 1,944,375 residents in the 2020 census. Fort Lauderdale had 182,760, making it Broward’s most populous city.",
+      "caption": "Broward County had 1,944,375 residents in the 2020 census. Fort Lauderdale had 182,760, making it Broward’s most populous city.",
+      "overlay": "BROWARD",
+      "badge": "1.94M PEOPLE",
+      "sub": "2020 census count",
+      "emoji": "📊",
+      "stats": [
+        {
+          "value": "1,944,375",
+          "label": "Broward pop."
+        },
+        {
+          "value": "182,760",
+          "label": "city pop."
+        }
+      ],
+      "source": "Wikipedia",
+      "location": {
+        "name": "Broward County",
+        "lat": 26.193535,
+        "lon": -80.476683,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 2200,
+        "pitch": -32,
+        "heading": 95,
+        "degrees": 50,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "That would add a new height mark to the downtown skyline. Downtown keeps growing, and so do the people you pass without meeting, which is exactly why NEAR exists to show you who they were.",
+      "overlay": "DOWNTOWN PLAN",
+      "sub": "645 feet",
+      "location": {
+        "name": "Fort Lauderdale",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 90
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "NEW BUILD",
+  "id": "126-fort-lauderdale-s-645-foot-tower-proposa",
+  "tiktok": true,
+  "music": true
+}
