@@ -64,3 +64,4 @@ giving him back scratchies boosts testosterone study	Scratchies Boost Science	20
 letting her steal your fries increases your	fries tax science	2026-10-26-485555
 buying her a little treat improves your	Treat Economy Science	2026-10-26-430259
 letting her use your arm as a	arm pillow science	2026-10-27-846194
+letting her nap on your chest saves	Boyfriend Pillow Science	2026-10-27-646207
