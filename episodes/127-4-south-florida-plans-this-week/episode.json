@@ -1,0 +1,226 @@
+{
+  "title": "4 South Florida plans this week",
+  "sources": [
+    "WSVN 7News",
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Start with the free stuff, then Halloween and food.\nThis week in South Florida.\n\nSources: WSVN 7News, Miami New Times, Secret Miami\n\n#Miami #SouthFlorida #MiamiEvents #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need plans this week? Start with the free stuff, then get into Halloween and food.",
+      "overlay": [
+        "THIS WEEK",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🗓️",
+        "🎃",
+        "🍕",
+        "🍜"
+      ],
+      "location": {
+        "name": "Amerant Bank Arena",
+        "lat": 26.1585,
+        "lon": -80.3256,
+        "h": 35
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 120
+      }
+    },
+    {
+      "kind": "item",
+      "text": "First, the South Florida Mega Job Fair takes over Amerant Bank Arena in Sunrise later this week. Thousands of jobs are available.",
+      "caption": "First, the South Florida Mega Job Fair takes over Amerant Bank Arena in Sunrise later this week. Thousands of jobs are available.",
+      "overlay": "JOB FAIR",
+      "badge": "THOUSANDS OF JOBS",
+      "sub": "Amerant Bank Arena",
+      "emoji": "💼",
+      "stats": [
+        {
+          "value": "thousands",
+          "label": "jobs available"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Amerant Bank Arena",
+        "lat": 26.1585,
+        "lon": -80.3256,
+        "h": 35
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 80,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "On Halloween, DC Pie Co. in Brickell gives kids 12 and under a free personal pizza with a purchase if they show up in costume. It runs all day at 1010 Brickell Ave., Suite 200.",
+      "caption": "On Halloween, DC Pie Co. in Brickell gives kids 12 and under a free personal pizza with a purchase if they show up in costume. It runs all day at 1010 Brickell Ave., Suite 200.",
+      "overlay": "DC PIE CO.",
+      "badge": "FREE PIZZA",
+      "sub": "Kids 12 and under",
+      "emoji": "🍕",
+      "stats": [
+        {
+          "value": "12",
+          "label": "and under"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "DC Pie Co.",
+        "lat": 25.7645,
+        "lon": -80.193,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 210,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Next door, Dom’s starts its Trick or Tequila party at 5 p.m. Costumes get a free tequila shot with purchase, and the costume contest winner gets a $150 gift card. If you’re at Dom’s, open NEAR and see who else showed up.",
+      "caption": "Next door, Dom’s starts its Trick or Tequila party at 5 p.m. Costumes get a free tequila shot with purchase, and the costume contest winner gets a $150 gift card. If you’re at Dom’s, open NEAR and see who else showed up.",
+      "overlay": "DOM'S",
+      "badge": "$150 PRIZE",
+      "sub": "Starts at 5 p.m.",
+      "emoji": "🥃",
+      "stats": [
+        {
+          "value": "$150",
+          "label": "gift card"
+        },
+        {
+          "value": "5 PM",
+          "label": "party starts"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Dom's",
+        "lat": 25.7645,
+        "lon": -80.193,
+        "h": 80
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 700,
+        "pitch": -32,
+        "heading": 245,
+        "degrees": 50,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For dinner, Anako opened October 22 on Northeast Second Avenue in Little River. Chefs Leicel Ros and Nancy Dominguez moved from the Sili pop-up to just over 40 seats, Filipino family recipes, and a walk-in cocktail bar.",
+      "caption": "For dinner, Anako opened Oct. 22 on NE 2nd Ave. in Little River. Chefs Leicel Ros and Nancy Dominguez moved from the Sili pop-up to just over 40 seats, Filipino family recipes, and a walk-in cocktail bar.",
+      "overlay": "ANAKO",
+      "badge": "OPENED 10/22",
+      "sub": "Little River",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "10/22",
+          "label": "opened"
+        },
+        {
+          "value": "40+",
+          "label": "seats"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Anako",
+        "lat": 25.8501,
+        "lon": -80.193,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -30,
+        "heading": 30,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "A Pasta Bar opened October 21 in Sunset Harbour. The New York City restaurant brought handmade pastas, a marble pasta bar, and a 17-seat chef’s counter where you can watch dinner get built.",
+      "caption": "A Pasta Bar opened Oct. 21 in Sunset Harbour. The New York City restaurant brought handmade pastas, a marble pasta bar, and a 17-seat chef’s counter where you can watch dinner get built.",
+      "overlay": "A PASTA BAR",
+      "badge": "17 SEATS",
+      "sub": "Sunset Harbour",
+      "emoji": "🍝",
+      "stats": [
+        {
+          "value": "10/21",
+          "label": "opened"
+        },
+        {
+          "value": "17",
+          "label": "chef seats"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Sunset Harbour",
+        "lat": 25.7937,
+        "lon": -80.1447,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -31,
+        "heading": 155,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you doing first, the job fair or the pizza? And if the only thing you missed between stops was the person you kept passing on the sidewalk, NEAR is the app that shows you who they were.",
+      "overlay": "WHAT'S FIRST? 👇",
+      "sub": "Drop your pick",
+      "location": {
+        "name": "Brickell",
+        "lat": 25.7645,
+        "lon": -80.193,
+        "h": 90
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1700,
+        "pitch": -35,
+        "heading": 200
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "127-4-south-florida-plans-this-week"
+}
