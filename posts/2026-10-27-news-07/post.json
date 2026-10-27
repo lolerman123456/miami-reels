@@ -1,0 +1,109 @@
+{
+  "sector": "CITY HALL",
+  "cover": {
+    "top": "BEFORE SUNRISE",
+    "main": "100+ FIREFIGHTERS",
+    "highlight": "FOUGHT FLAMES",
+    "bottom": "15 DISPLACED",
+    "blur": false,
+    "photo": {
+      "query": "Miami apartment building fire firefighters ladder truck night smoke",
+      "prompt": "Dramatic pre-sunrise Miami apartment fire with ladder trucks, smoke rising from an upper floor and firefighters under flashing red lights"
+    },
+    "emojis": [
+      "🚒",
+      "🔥",
+      "🏢"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: CBS News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CITY HALL",
+      "headline": "More than 100 firefighters responded before sunrise",
+      "highlight": "100+ firefighters",
+      "body": "More than 100 firefighters responded early Tuesday to a five-story Miami apartment building after flames broke out on the fourth floor.",
+      "place": "Miami",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami firefighters ladder truck apartment fire night smoke",
+        "prompt": "Firefighters and ladder trucks outside a five-story Miami apartment building before sunrise with smoke and emergency lights"
+      },
+      "emoji": "🚒",
+      "chip": "100+",
+      "logo": "local10.com",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "The fire started on the fourth floor",
+      "highlight": "Fourth floor",
+      "body": "First responders said the flames broke out on the fourth floor and spread through the building before dawn.",
+      "place": "Miami",
+      "source": "Local 10",
+      "photo": {
+        "query": "apartment building fire fourth floor smoke firefighters ladder truck",
+        "prompt": "A five-story apartment building with smoke coming from a fourth-floor unit as firefighters work below",
+        "mark": "arrow"
+      },
+      "emoji": "🔥",
+      "chip": "4TH FLOOR",
+      "logo": "local10.com",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "15 residents were displaced",
+      "highlight": "15 residents",
+      "body": "Officials said 15 residents lost access to their homes, including children and elderly people.",
+      "place": "Miami",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Miami fire rescue apartment evacuation emergency vehicles smoke",
+        "prompt": "Fire rescue crews outside a Miami apartment building after an evacuation, with emergency vehicles and smoke in the background"
+      },
+      "emoji": "🏠",
+      "chip": "15 OUT",
+      "logo": "local10.com",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: Local 10",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "CITY HALL",
+      "headline": "Two people were transported with smoke inhalation",
+      "highlight": "smoke inhalation",
+      "body": "CBS News reported two residents were transported after the fire because of smoke inhalation.",
+      "place": "Miami",
+      "source": "CBS News",
+      "photo": {
+        "query": "Miami Fire Rescue ambulance apartment fire night emergency lights",
+        "prompt": "An ambulance and Miami fire rescue trucks outside an apartment fire scene before sunrise"
+      },
+      "emoji": "🚑",
+      "chip": "2 TAKEN",
+      "logo": "cbsnews.com",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News",
+      "logoFile": "logo-4.png"
+    }
+  ],
+  "caption": "More than 100 firefighters responded before sunrise, and 15 Miami residents were forced out of their homes.",
+  "hashtags": [
+    "#MiamiFire",
+    "#MiamiNews"
+  ],
+  "collaborators": [],
+  "igCaption": "More than 100 firefighters responded before sunrise, and 15 Miami residents were forced out of their homes.\n\n📰 Sources: WPLG Local 10, Local 10, CBS News\n\n#MiamiFire #MiamiNews #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-27",
+  "id": "2026-10-27-news-07"
+}
