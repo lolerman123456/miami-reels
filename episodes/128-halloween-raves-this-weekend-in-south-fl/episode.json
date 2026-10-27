@@ -1,0 +1,171 @@
+{
+  "title": "Halloween Raves This Weekend in South Florida",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [
+    "clubspace"
+  ],
+  "igCaption": "Halloween weekend plans in Miami.\nMiami, check venue ticket pages\n\nSources: Miami New Times, Secret Miami\n\n#Miami #MiamiNightlife #HalloweenMiami #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a Halloween plan in Miami this weekend without circling the same places?",
+      "overlay": [
+        "HALLOWEEN",
+        "RAVE GUIDE"
+      ],
+      "emojis": [
+        "🎃",
+        "🪩",
+        "🌙",
+        "🎧"
+      ],
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start with Miami New Times. They ran a Halloween weekend party guide on Monday, October 26, 2026.",
+      "caption": "Start with Miami New Times. They ran a Halloween weekend party guide on Monday, Oct. 26, 2026.",
+      "overlay": "MIAMI GUIDE",
+      "badge": "OCT 26 GUIDE",
+      "sub": "Halloween weekend party list",
+      "emoji": "🪩",
+      "stats": [
+        {
+          "value": "OCT 26",
+          "label": "guide date"
+        },
+        {
+          "value": "2026",
+          "label": "year"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 90
+      },
+      "shot": {
+        "type": "push",
+        "range": 900,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a second check, Miami New Times also published The Best Halloween Parties in Miami 2025 on Friday, October 31, 2025. That gives you another list to compare before you pick a spot. If you’re torn, open NEAR and see who’s heading there too.",
+      "caption": "Miami New Times also published The Best Halloween Parties in Miami 2025 on Friday, Oct. 31, 2025. If you’re torn, open NEAR and see who’s heading there too.",
+      "overlay": "MIAMI LIST",
+      "badge": "OCT 31, 2025",
+      "sub": "Halloween party guide",
+      "emoji": "📋",
+      "stats": [
+        {
+          "value": "OCT 31",
+          "label": "2025 guide"
+        },
+        {
+          "value": "2025",
+          "label": "year"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 90
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 260,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "If you want a stop with food and nightlife, DC Pie Co. and Dom's are at 1010 Brickell Ave #200 in Miami. On October 31, kids 12 and under in costume get a free personal pizza with a purchase, and Dom's runs Trick or Tequila from 5 p.m. with a costume contest, tequila specials, and a DJ.",
+      "caption": "DC Pie Co. and Dom's are at 1010 Brickell Ave #200 in Miami. On Oct. 31, kids 12 and under in costume get a free personal pizza with a purchase, and Dom's runs Trick or Tequila from 5 p.m.",
+      "overlay": "BRICKELL STOP",
+      "badge": "OCT 31",
+      "sub": "Pizza, tequila, DJ",
+      "emoji": "🌙",
+      "stats": [
+        {
+          "value": "12 and under",
+          "label": "kids age"
+        },
+        {
+          "value": "5 p.m.",
+          "label": "start time"
+        },
+        {
+          "value": "$150",
+          "label": "gift card"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 90
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1400,
+        "pitch": -34,
+        "heading": 310,
+        "degrees": 90,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Send the one that fits your group chat first. Spotted someone in a costume at the rave and never caught their name? NEAR is the app that shows you who that person was after the night ends.",
+      "overlay": "SEND THIS 🎃",
+      "sub": "Drop the party name",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 90
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2100,
+        "pitch": -35,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "128-halloween-raves-this-weekend-in-south-fl"
+}
