@@ -1,0 +1,122 @@
+{
+  "sector": "WORLD",
+  "cover": {
+    "top": "TRUMP APPROVED",
+    "main": "FLÁVIO BOLSONARO'S",
+    "highlight": "MIAMI LANDING",
+    "bottom": "AFTER BRAZIL LOSS",
+    "blur": false,
+    "photo": {
+      "query": "Flavio Bolsonaro Miami International Airport airplane arrivals Wikimedia Commons",
+      "prompt": "A dramatic jet landing at Miami International Airport at night, runway lights bright, Miami terminal in the background, no visible passengers"
+    },
+    "emojis": [
+      "✈️",
+      "🇧🇷",
+      "🇺🇸"
+    ],
+    "logos": [
+      "whitehouse.gov"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "WORLD",
+      "headline": "Trump approved Flávio Bolsonaro entering the U.S.",
+      "highlight": "entering the U.S.",
+      "body": "Reuters says Trump approved Flávio Bolsonaro coming to the U.S. CNN reported the approval came after Brazil’s election loss, citing a source.",
+      "place": "United States",
+      "source": "Reuters",
+      "photo": {
+        "query": "White House exterior American flag Wikimedia Commons",
+        "prompt": "A low-angle view of the White House behind an American flag under dark clouds, no people visible"
+      },
+      "emoji": "🇺🇸",
+      "chip": "APPROVED",
+      "logo": "whitehouse.gov",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "Reuters says he is expected to land in Miami",
+      "highlight": "land in Miami",
+      "body": "Reuters reported Flávio Bolsonaro was expected to land in Miami shortly after Trump offered a U.S. exit for the family.",
+      "place": "Miami",
+      "source": "Reuters",
+      "photo": {
+        "query": "Miami International Airport runway airplane landing Wikimedia Commons",
+        "prompt": "A passenger jet descending toward Miami International Airport at dusk with runway lights and palm silhouettes"
+      },
+      "emoji": "✈️",
+      "chip": "MIAMI",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "He left Brazil after the election loss",
+      "highlight": "left Brazil",
+      "body": "Reuters reported Flávio Bolsonaro left Brazil for the U.S. after the election defeat. Euronews also said he reportedly left Brazil for the U.S.",
+      "place": "Brazil",
+      "source": "Reuters",
+      "photo": {
+        "query": "Brasilia airport terminal airplane Brazil Wikimedia Commons",
+        "prompt": "A tense airport departure scene in Brazil with a jet at the gate and Portuguese signs, no identifiable people"
+      },
+      "emoji": "🛫",
+      "chip": "BRAZIL",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "Reports tied his travel to Argentina and Ecuador",
+      "highlight": "Argentina and Ecuador",
+      "body": "The Washington Post reported he fled Brazil through Argentina. France 24 said he flew on from Ecuador to an unknown destination despite a travel ban.",
+      "place": "Argentina and Ecuador",
+      "source": "The Washington Post",
+      "photo": {
+        "query": "Buenos Aires airport airplane runway Wikimedia Commons",
+        "prompt": "A jet taxiing at an Argentina airport under gray skies, with a departure board feel and no visible passengers"
+      },
+      "emoji": "🌎",
+      "chip": "2 COUNTRIES",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "Brazil’s Supreme Court said no search warrant was issued",
+      "highlight": "no search warrant",
+      "body": "AOL.com reported Brazil’s Supreme Court said no search warrant had been issued against Senator Flávio Bolsonaro as the reports tracked his move toward Miami.",
+      "place": "Brazil",
+      "source": "AOL.com",
+      "photo": {
+        "query": "Supreme Federal Court Brazil Brasilia building Wikimedia Commons",
+        "prompt": "Brazil’s Supreme Federal Court building in Brasília at dusk, sharp shadows, empty plaza, serious tone"
+      },
+      "emoji": "⚖️",
+      "chip": "NO WARRANT",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Cayambe / CC BY-SA 3.0"
+    }
+  ],
+  "caption": "A Bolsonaro is headed to Miami after Trump approved the U.S. entry",
+  "hashtags": [
+    "#MiamiNews",
+    "#BrazilPolitics"
+  ],
+  "collaborators": [],
+  "igCaption": "A Bolsonaro is headed to Miami after Trump approved the U.S. entry\n\n📰 Sources: Reuters, The Washington Post, AOL.com\n\n#MiamiNews #BrazilPolitics #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-28",
+  "id": "2026-10-28-brief"
+}
