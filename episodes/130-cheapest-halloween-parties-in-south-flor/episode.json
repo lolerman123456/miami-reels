@@ -1,0 +1,199 @@
+{
+  "title": "Cheapest Halloween Parties in South Florida This Weekend",
+  "sources": [
+    "Miami New Times, Where to party in Miami on Halloween weekend",
+    "Miami New Times, The best Halloween events in Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Four Halloween parties under $20, with three free picks.\nOct. 31, Miami and Miami Beach, free to $20\n\nSources: Miami New Times, Where to party in Miami on Halloween weekend, Miami New Times, The best Halloween events in Miami\n\n#MiamiHalloween #MiamiEvents #SouthFlorida #HalloweenWeekend",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Halloween lands on a Saturday in 2026, and these Miami parties stay under thirty dollars.",
+      "overlay": [
+        "HALLOWEEN",
+        "UNDER $30"
+      ],
+      "emojis": [
+        "🎃",
+        "🪩",
+        "👻",
+        "💸"
+      ],
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start in Wynwood. HalloWyn returns for its 13th consecutive year at Wynwood Marketplace, from 7 p.m. to 3 a.m. Admission is free, with live DJ sets, drink specials, and a free drink RSVP option.",
+      "caption": "Start in Wynwood. HalloWyn returns for its 13th year at Wynwood Marketplace, from 7 p.m. to 3 a.m. Admission is free, with live DJ sets, drink specials, and a free drink RSVP option.",
+      "overlay": "HALLOWYN",
+      "badge": "FREE",
+      "sub": "Wynwood Marketplace",
+      "emoji": "🎧",
+      "stats": [
+        {
+          "value": "$0",
+          "label": "admission"
+        },
+        {
+          "value": "13",
+          "label": "years running"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Wynwood Marketplace",
+        "lat": 25.7993,
+        "lon": -80.1995,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Lincoln Road starts earlier. Kids trick-or-treat from 5:30 to 7:30, then the adult block party takes over around 8. The whole thing runs on the pedestrian mall, and admission is free.",
+      "caption": "Lincoln Road starts earlier. Kids trick-or-treat from 5:30 to 7:30, then the adult block party takes over around 8. The whole thing runs on the pedestrian mall, and admission is free.",
+      "overlay": "LINCOLN ROAD",
+      "badge": "FREE",
+      "sub": "Miami Beach block party",
+      "emoji": "🍬",
+      "stats": [
+        {
+          "value": "$0",
+          "label": "admission"
+        },
+        {
+          "value": "5:30 PM",
+          "label": "kids start"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Lincoln Road",
+        "lat": 25.7907,
+        "lon": -80.1395,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 95,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "On Española Way, Kill Your Idol has Night of 1000 Villains at 8 p.m. Admission is free. The costume contest pays $200 cash, and drinks are half off before 10. If you go, open NEAR and see who else hit Villains night.",
+      "caption": "On Española Way, Kill Your Idol has Night of 1000 Villains at 8 p.m. Admission is free. The costume contest pays $200 cash, and drinks are half off before 10. If you go, open NEAR and see who else hit Villains night.",
+      "overlay": "KILL YOUR IDOL",
+      "badge": "$200 PRIZE",
+      "sub": "Española Way",
+      "emoji": "🧛",
+      "stats": [
+        {
+          "value": "$0",
+          "label": "admission"
+        },
+        {
+          "value": "$200",
+          "label": "costume prize"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Kill Your Idol",
+        "lat": 25.7867,
+        "lon": -80.1314,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -30,
+        "heading": 210,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Churchill’s in Little Haiti is the ticketed pick. Necrodanse starts at 9 p.m. with Last Grasp, In a Darkened Room, and Blood Orchid. DJ Lady Reaper and DJ Jason play between sets. Tickets run $11 to $20.",
+      "caption": "Churchill’s in Little Haiti is the ticketed pick. Necrodanse starts at 9 p.m. with Last Grasp, In a Darkened Room, and Blood Orchid. DJ Lady Reaper and DJ Jason play between sets. Tickets run $11 to $20.",
+      "overlay": "CHURCHILL'S",
+      "badge": "$11-$20",
+      "sub": "Little Haiti darkwave",
+      "emoji": "🦇",
+      "stats": [
+        {
+          "value": "$11-$20",
+          "label": "tickets"
+        },
+        {
+          "value": "3",
+          "label": "live bands"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Churchill’s Pub",
+        "lat": 25.8268,
+        "lon": -80.1922,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 20,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which under thirty dollar Halloween party should we cover next? Halloween nights are full of people you only remember by costume, and NEAR is for finding out who that mystery vampire or cowboy at the party actually was.",
+      "overlay": "WHERE NEXT? 🎃",
+      "sub": "Drop the party name",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 260
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "130-cheapest-halloween-parties-in-south-flor"
+}
