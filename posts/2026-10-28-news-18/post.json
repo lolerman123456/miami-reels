@@ -1,0 +1,89 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "POLICE SAY",
+    "main": "COP BRIAN SGUROS TRIED TO TAKE OVER",
+    "highlight": "DEAD MAN'S HOUSE",
+    "bottom": "",
+    "blur": false,
+    "photo": {
+      "query": "Lauderhill police cruiser outside a quiet single-family home Florida night",
+      "prompt": "dramatic night photo of a Lauderhill police cruiser parked outside a quiet South Florida home, flashing lights reflecting on the street"
+    },
+    "emojis": [
+      "🚔",
+      "🏠",
+      "🪪"
+    ],
+    "logos": [
+      "lauderhill-fl.gov"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: CBS News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Brian Sguros was accused after a welfare check",
+      "highlight": "Brian Sguros",
+      "body": "Police say the Lauderhill officer found a man dead during a welfare check, then got accused of trying to take over the dead man's home.",
+      "place": "Lauderhill",
+      "source": "People.com",
+      "photo": {
+        "query": "Lauderhill police cruiser outside home Florida",
+        "prompt": "police cruiser with flashing lights outside a dark South Florida home during a welfare check",
+        "mark": "stamp: ARRESTED"
+      },
+      "emoji": "🚔",
+      "chip": "WELFARE CHECK",
+      "logo": "lauderhill-fl.gov",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Reports say he moved in and renovated the home",
+      "highlight": "moved in",
+      "body": "Boing Boing reported the cop moved into the house, renovated it and impersonated the dead man.",
+      "place": "Lauderhill",
+      "source": "Boing Boing",
+      "photo": {
+        "query": "South Florida house renovation tools front door",
+        "prompt": "paint buckets, tools and a ladder outside a modest South Florida home, viewed from the sidewalk"
+      },
+      "emoji": "🛠️",
+      "chip": "RENOVATED",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The alleged takeover used the man's identity",
+      "highlight": "man's identity",
+      "body": "The Sun Sentinel reported Sguros was accused of using the dead man's identity to take over the home.",
+      "place": "Lauderhill",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "identity theft documents house key evidence",
+        "prompt": "police evidence table with a house key, property papers and a covered ID card, no personal information visible"
+      },
+      "emoji": "🪪",
+      "chip": "IDENTITY",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News"
+    }
+  ],
+  "caption": "Police say Lauderhill officer Brian Sguros tried to take over a dead man's home after a welfare check",
+  "hashtags": [
+    "#Lauderhill",
+    "#BrowardCrime"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say Lauderhill officer Brian Sguros tried to take over a dead man's home after a welfare check\n\n📰 Sources: People.com, Boing Boing, Sun Sentinel, Facebook, NBC News\n\n#Lauderhill #BrowardCrime #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-28",
+  "id": "2026-10-28-news-18"
+}
