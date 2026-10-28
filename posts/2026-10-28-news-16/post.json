@@ -1,0 +1,101 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "MIAMI BEACH POLICE FOUND",
+    "main": "19 DOGS IN A HOME",
+    "highlight": "SOME INSIDE A COOLER",
+    "bottom": "AFTER A WELFARE CHECK",
+    "blur": false,
+    "photo": {
+      "query": "Miami Beach home police response exterior night Wikimedia Commons",
+      "prompt": "dramatic night photo of a Miami Beach home with police lights reflecting off the front outside, no people visible",
+      "mark": "circle"
+    },
+    "emojis": [
+      "🐶",
+      "🚔",
+      "🏠"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "19 dogs, including puppies, were found inside a Miami Beach home",
+      "highlight": "19 dogs",
+      "body": "Police say they found 19 dogs, including puppies, inside a Miami Beach home after a welfare check.",
+      "place": "Miami Beach",
+      "source": "WSVN",
+      "photo": {
+        "query": "Miami Beach police outside home night Wikimedia Commons",
+        "prompt": "close-up of flashing police lights outside a Miami Beach residential home at night, no people visible"
+      },
+      "emoji": "🐶",
+      "chip": "WED",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Officers went to the home for a welfare check",
+      "highlight": "welfare check",
+      "body": "Miami Beach police say the discovery happened during a welfare check at the home Wednesday.",
+      "place": "Miami Beach",
+      "source": "WSVN",
+      "photo": {
+        "query": "Miami Beach residential street police cruiser Wikimedia Commons",
+        "prompt": "quiet Miami Beach residential street at night with a police cruiser parked outside a house, no people visible"
+      },
+      "emoji": "🏠",
+      "chip": "CHECK",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police recovered 19 dogs from the home",
+      "highlight": "19 dogs",
+      "body": "WSVN, WPLG Local 10 and CBS News all reported police recovered 19 dogs from the home.",
+      "place": "Miami Beach",
+      "source": "CBS News",
+      "photo": {
+        "query": "animal shelter dog kennels Wikimedia Commons",
+        "prompt": "clean animal shelter kennels ready for rescued dogs, no people visible"
+      },
+      "emoji": "🐾",
+      "chip": "19 DOGS",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police said the dogs were living in unsanitary conditions",
+      "highlight": "unsanitary conditions",
+      "body": "WSVN said the dogs were living in unsanitary conditions. WPLG Local 10 and CBS News described the conditions as deplorable.",
+      "place": "Miami Beach",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "dirty dog crate rescue scene Wikimedia Commons",
+        "prompt": "striking rescue scene showing dirty pet crates and cleaning gear in a cramped room, no people visible"
+      },
+      "emoji": "🚨",
+      "chip": "INSIDE HOME",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News"
+    }
+  ],
+  "caption": "Police say 19 dogs, including puppies, were found inside a Miami Beach home, with some inside a cooler.",
+  "hashtags": [
+    "#MiamiBeach",
+    "#SouthFloridaNews"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say 19 dogs, including puppies, were found inside a Miami Beach home, with some inside a cooler.\n\n📰 Sources: WSVN, CBS News, WPLG Local 10\n\n#MiamiBeach #SouthFloridaNews #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-28",
+  "id": "2026-10-28-news-16"
+}
