@@ -1,0 +1,128 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "POLICE SAY",
+    "main": "FLIGHT ATTENDANT WAS ARRESTED AT MIA",
+    "highlight": "FOR",
+    "bottom": "A $25K SENIOR SCAM USING FLIGHT BENEFITS",
+    "blur": false,
+    "photo": {
+      "query": "Miami International Airport American Airlines terminal police car night",
+      "prompt": "Dramatic night photo of Miami International Airport departures curb with American Airlines signage and police lights reflecting on glass, no identifiable people",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚨",
+      "✈️",
+      "💳"
+    ],
+    "logos": [
+      "aa.com",
+      "miami-airport.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: Leadership",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Police say a Florida senior lost more than $25,000",
+      "highlight": "$25K",
+      "body": "Police say the alleged loss was more than $25,000 in a sweepstakes scam targeting a Florida senior.",
+      "place": "Florida",
+      "source": "Tampa Free Press",
+      "photo": {
+        "query": "sweepstakes mail phone credit card fraud investigation",
+        "prompt": "Dramatic close-up of sweepstakes mail, a phone and a credit card on a table with a blurred police report in the background, no people"
+      },
+      "emoji": "💳",
+      "chip": "$25K",
+      "logo": "aa.com",
+      "color": "#0078D2",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: WESH",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police say the arrest happened at Miami airport",
+      "highlight": "Miami airport",
+      "body": "Police arrested the American Airlines flight attendant at Miami International Airport, also called MIA.",
+      "place": "Miami International Airport",
+      "source": "WNWO",
+      "photo": {
+        "query": "Miami International Airport departures curb police cruiser night",
+        "prompt": "Miami International Airport departures curb with an American Airlines sign and a police cruiser in the foreground, no identifiable people"
+      },
+      "emoji": "🚓",
+      "chip": "MIA",
+      "logo": "miami-airport.com",
+      "color": "#0078D2",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: News4JAX",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case involved a sweepstakes scam",
+      "highlight": "sweepstakes scam",
+      "body": "FOX 13 Tampa Bay said the case centers on a sweepstakes scam targeting a Florida senior.",
+      "place": "Florida",
+      "source": "FOX 13 Tampa Bay",
+      "photo": {
+        "query": "phone sweepstakes scam paperwork table",
+        "prompt": "A phone, printed sweepstakes paperwork and a bank card on a desk, lit like an evidence photo, no people"
+      },
+      "emoji": "📄",
+      "chip": "SCAM",
+      "logo": "fox13news.com",
+      "photoFile": "news-3.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police say airline perks helped the scheme",
+      "highlight": "flight benefits",
+      "body": "Tampa Free Press reported that police say she used airline perks to help pull it off.",
+      "place": "Florida",
+      "source": "Tampa Free Press",
+      "photo": {
+        "query": "American Airlines standby pass boarding gate airport",
+        "prompt": "An airport gate area with an American Airlines boarding sign and standby-style travel paperwork, no identifiable people"
+      },
+      "emoji": "✈️",
+      "chip": "AIRLINE PERKS",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: Leadership"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case is tied to Palm Coast",
+      "highlight": "Palm Coast",
+      "body": "News4JAX said the victim was in Palm Coast and the case led to the Miami airport arrest.",
+      "place": "Palm Coast",
+      "source": "News4JAX",
+      "photo": {
+        "query": "Palm Coast Florida neighborhood street homes palm trees",
+        "prompt": "Quiet Palm Coast residential street with palm trees and mailboxes, no people"
+      },
+      "emoji": "📍",
+      "chip": "PALM COAST",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: WESH"
+    }
+  ],
+  "caption": "Police say an American Airlines flight attendant was arrested at Miami International Airport in a $25,000 sweepstakes scam targeting a Florida senior.",
+  "hashtags": [
+    "#MiamiAirport",
+    "#FloridaCrime"
+  ],
+  "collaborators": [],
+  "igCaption": "Police say an American Airlines flight attendant was arrested at Miami International Airport in a $25,000 sweepstakes scam targeting a Florida senior.\n\n📰 Sources: Tampa Free Press, WNWO, FOX 13 Tampa Bay, News4JAX\n\n#MiamiAirport #FloridaCrime #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-28",
+  "id": "2026-10-28-news-07"
+}
