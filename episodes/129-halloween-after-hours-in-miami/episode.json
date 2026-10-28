@@ -1,0 +1,214 @@
+{
+  "title": "Halloween After-Hours in Miami",
+  "sources": [
+    "Resident Advisor",
+    "Time Out Worldwide",
+    "Miami New Times",
+    "EDMTunes",
+    "RESIDENT Magazine"
+  ],
+  "collaborators": [
+    "clubspace"
+  ],
+  "igCaption": "Halloween in Miami keeps going after midnight.\nOct. 31, Club Space, Floyd, Edge Miami and Factory Town\n\nSources: Resident Advisor, Time Out Worldwide, Miami New Times, EDMTunes, RESIDENT Magazine\n\n#Miami #MiamiEvents #HalloweenMiami #ClubSpace",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Halloween weekend in Miami has late-night options across downtown and the west side.",
+      "overlay": [
+        "HALLOWEEN",
+        "AFTER HOURS"
+      ],
+      "emojis": [
+        "🎃",
+        "🌙",
+        "🪩",
+        "☀️"
+      ],
+      "location": {
+        "name": "Club Space",
+        "lat": 25.7843,
+        "lon": -80.1932,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start with Club Space. Resident Advisor lists Halloweek with CamelPhat and Volkoder at Club Space Miami. Time Out includes Space on its Miami club list for nonstop partying.",
+      "caption": "Start with Club Space. Resident Advisor lists Halloweek with CamelPhat and Volkoder at Club Space Miami. Time Out includes Space on its Miami club list for nonstop partying.",
+      "overlay": "CLUB SPACE",
+      "badge": "HALLOWEEK",
+      "sub": "CamelPhat and Volkoder",
+      "emoji": "🚀",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "Halloween"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "Club Space",
+        "lat": 25.7843,
+        "lon": -80.1932,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 155,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Ground at Club Space has its own listings too. Resident Advisor also shows events there, so one address can carry more than one room and more than one lineup.",
+      "caption": "The Ground at Club Space has its own listings too. Resident Advisor also shows events there, so one address can carry more than one room and more than one lineup.",
+      "overlay": "THE GROUND",
+      "badge": "1 COMPLEX",
+      "sub": "Another room at Space",
+      "emoji": "🔊",
+      "stats": [
+        {
+          "value": "1",
+          "label": "complex"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "The Ground at Club Space",
+        "lat": 25.7843,
+        "lon": -80.1932,
+        "h": 65
+      },
+      "shot": {
+        "type": "push",
+        "range": 850,
+        "pitch": -30,
+        "heading": 95
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Floyd adds another Halloween-week stop. Resident Advisor lists OTHERWORLD 5 Year Anniversary at Floyd, Miami. If you hit Floyd for OTHERWORLD, check NEAR for who was there too.",
+      "caption": "Floyd adds another Halloween-week stop. Resident Advisor lists OTHERWORLD 5 Year Anniversary at Floyd, Miami. If you hit Floyd for OTHERWORLD, check NEAR for who was there too.",
+      "overlay": "FLOYD",
+      "badge": "5 YEARS",
+      "sub": "OTHERWORLD anniversary",
+      "emoji": "🌀",
+      "stats": [
+        {
+          "value": "5 YEARS",
+          "label": "anniversary"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "Floyd Miami",
+        "lat": 25.7842,
+        "lon": -80.1934,
+        "h": 55
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 700,
+        "pitch": -28,
+        "heading": 240
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Edge Miami gives Edgewater a late-night option. RESIDENT says it keeps the neighborhood dancing past midnight with no velvet ropes and a tech house calendar. Resident Advisor lists Daft Disko Halloween there.",
+      "caption": "Edge Miami gives Edgewater a late-night option. RESIDENT says it keeps the neighborhood dancing past midnight with no velvet ropes and a tech house calendar. Resident Advisor lists Daft Disko Halloween there.",
+      "overlay": "EDGE MIAMI",
+      "badge": "PAST MIDNIGHT",
+      "sub": "Edgewater tech house",
+      "emoji": "🌃",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "Daft Disko"
+        }
+      ],
+      "source": "RESIDENT Magazine",
+      "location": {
+        "name": "Edge Miami",
+        "lat": 25.8023,
+        "lon": -80.1906,
+        "h": 70
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -32,
+        "heading": 18,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Factory Town sits west of downtown. EDMTunes reviewed how Club Space and Factory Town ruled Miami Music Week 2026, and Resident Advisor also lists Halloween-week programming across the Miami club circuit.",
+      "caption": "Factory Town sits west of downtown. EDMTunes reviewed how Club Space and Factory Town ruled Miami Music Week 2026, and Resident Advisor also lists Halloween-week programming across the Miami club circuit.",
+      "overlay": "FACTORY TOWN",
+      "badge": "MIAMI MUSIC WEEK",
+      "sub": "West of downtown",
+      "emoji": "🏭",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "Music Week"
+        }
+      ],
+      "source": "EDMTunes",
+      "location": {
+        "name": "Factory Town",
+        "lat": 25.817,
+        "lon": -80.258,
+        "h": 30
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -30,
+        "heading": 300,
+        "degrees": 90,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which after-hours stop would you pick for Halloween weekend? Lost track of the person you kept passing all night? NEAR is for the people who were right there in Miami but never quite became a conversation.",
+      "overlay": "WHAT'S NEXT? 🎃",
+      "sub": "Drop the late-night pick",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7843,
+        "lon": -80.1932,
+        "h": 100
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -35,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "129-halloween-after-hours-in-miami"
+}
