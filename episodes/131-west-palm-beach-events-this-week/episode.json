@@ -1,0 +1,196 @@
+{
+  "title": "West Palm Beach Events This Week",
+  "sources": [
+    "Owner request",
+    "Miami New Times",
+    "The Palm Beach Post"
+  ],
+  "collaborators": [],
+  "igCaption": "West Palm Beach has a lantern festival coming up at Mounts Botanical Garden.\nIt opens November 18 in West Palm Beach, tickets start at $10 for children and $28 for adults.\n\nSources: Owner request, Miami New Times, The Palm Beach Post\n\n#WestPalmBeach #PalmBeachCounty #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "West Palm Beach has one event on the calendar next, and Mounts Botanical Garden is leading the way.",
+      "overlay": [
+        "WEST PALM BEACH",
+        "THIS FALL"
+      ],
+      "emojis": [
+        "🎃",
+        "🌿",
+        "🕯️",
+        "🌙"
+      ],
+      "location": {
+        "name": "Mounts Botanical Garden, West Palm Beach",
+        "lat": 26.7066,
+        "lon": -80.1047,
+        "h": 15
+      },
+      "shot": {
+        "type": "dive",
+        "range": 900,
+        "pitch": -32,
+        "heading": 105
+      }
+    },
+    {
+      "kind": "item",
+      "text": "ILUMINA: A Tropical Garden Lantern Festival opens November 18 at Mounts Botanical Garden. The event runs through January 17, 2027.",
+      "caption": "ILUMINA opens November 18 at Mounts Botanical Garden. The event runs through January 17, 2027.",
+      "overlay": "ILUMINA",
+      "badge": "OPENS NOV 18",
+      "sub": "West Palm Beach",
+      "emoji": "🕯️",
+      "stats": [
+        {
+          "value": "NOV 18",
+          "label": "opens"
+        },
+        {
+          "value": "JAN 17 2027",
+          "label": "runs through"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Mounts Botanical Garden, West Palm Beach",
+        "lat": 26.7066,
+        "lon": -80.1047,
+        "h": 15
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 40,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The festival features over 500 handcrafted silk lanterns along illuminated pathways. One of the displays is a 195-foot dragon over the garden’s lake.",
+      "caption": "The festival features over 500 handcrafted silk lanterns along illuminated pathways. One display is a 195-foot dragon over the garden’s lake.",
+      "overlay": "500+ LANTERNS",
+      "badge": "195 FT DRAGON",
+      "sub": "Garden walk",
+      "emoji": "🐉",
+      "stats": [
+        {
+          "value": "500+",
+          "label": "lanterns"
+        },
+        {
+          "value": "195 ft",
+          "label": "dragon"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Mounts Botanical Garden, West Palm Beach",
+        "lat": 26.7066,
+        "lon": -80.1047,
+        "h": 15
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 900,
+        "pitch": -32,
+        "heading": 135,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Tickets start at $10 for children and $28 for adults. Children under 5 get in free. If you go, open NEAR and see who else showed up for it.",
+      "caption": "Tickets start at $10 for children and $28 for adults. Children under 5 get in free. If you go, open NEAR and see who else showed up for it.",
+      "overlay": "TICKETS START AT $10",
+      "badge": "KIDS FREE UNDER 5",
+      "sub": "Family night out",
+      "emoji": "🎟️",
+      "stats": [
+        {
+          "value": "$10",
+          "label": "children"
+        },
+        {
+          "value": "$28",
+          "label": "adults"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Mounts Botanical Garden, West Palm Beach",
+        "lat": 26.7066,
+        "lon": -80.1047,
+        "h": 15
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 800,
+        "pitch": -34,
+        "heading": 210,
+        "degrees": 50,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Palm Beach also has a Halloween party on the calendar at Mar-a-Lago. The Palm Beach Post reported Donald Trump returning there for a Halloween party in Palm Beach.",
+      "caption": "Palm Beach also has a Halloween party on the calendar at Mar-a-Lago. The Palm Beach Post reported Donald Trump returning there for a Halloween party in Palm Beach.",
+      "overlay": "PALM BEACH",
+      "badge": "HALLOWEEN PARTY",
+      "sub": "Nearby in Palm Beach",
+      "emoji": "🍸",
+      "stats": [
+        {
+          "value": "PALM BEACH",
+          "label": "location"
+        }
+      ],
+      "source": "The Palm Beach Post",
+      "location": {
+        "name": "Palm Beach",
+        "lat": 26.7057,
+        "lon": -80.0365,
+        "h": 5
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 850,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "If you want a West Palm Beach plan, start with the lantern festival. A week full of festivals and stops like this always means passing people you never meet, and NEAR is the app that shows who they were. If you want a Palm Beach Halloween stop, Mar-a-Lago is on the list.",
+      "overlay": "PLAN AHEAD",
+      "sub": "West Palm Beach and Palm Beach",
+      "location": {
+        "name": "West Palm Beach Waterfront",
+        "lat": 26.7138,
+        "lon": -80.0466,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 115
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "131-west-palm-beach-events-this-week"
+}
