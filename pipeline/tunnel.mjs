@@ -39,14 +39,19 @@ export async function serveFilesPublicly(files) {
   const bin = process.env.CLOUDFLARED_BIN || path.join(ROOT, 'tools', 'cloudflared');
   const cf = spawn(bin,
     ['tunnel', '--no-autoupdate', '--url', `http://127.0.0.1:${port}`], { stdio: ['ignore', 'pipe', 'pipe'] });
+  let timer;
   const base = await new Promise((resolve, reject) => {
-    const timer = setTimeout(() => reject(new Error('Tunnel did not start')), 60000);
+    timer = setTimeout(() => reject(new Error('Tunnel did not start')), 60000);
     const onData = d => {
       const m = /https:\/\/[a-z0-9-]+\.trycloudflare\.com/.exec(String(d));
       if (m) { clearTimeout(timer); resolve(m[0]); }
     };
     cf.stdout.on('data', onData); cf.stderr.on('data', onData);
     cf.on('exit', c => reject(new Error('cloudflared exited ' + c)));
+  }).catch(e => {
+    // Oct 28: a failed tunnel left the local server listening, so node never exited after the post went out
+    // and the Posts job hung for 2 h, blocking the next carousel
+    clearTimeout(timer); cf.kill(); server.close(); throw e;
   });
 
   const urls = [...routes.keys()].map(r => base + r);
