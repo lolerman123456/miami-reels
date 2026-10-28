@@ -1,0 +1,105 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "FLORIDA MAN",
+    "main": "ARRESTED OVER",
+    "highlight": "FAKE COVERAGE",
+    "bottom": "AFTER BEING BARRED SINCE 2002",
+    "blur": false,
+    "photo": {
+      "query": "Florida insurance investigator arrest scene documents handcuffs",
+      "prompt": "dramatic close-up of insurance documents on a desk beside handcuffs, with red and blue police lights reflecting off the paper",
+      "mark": "stamp: ARRESTED"
+    },
+    "emojis": [
+      "🚨",
+      "📄",
+      "💸"
+    ],
+    "logos": [
+      "myfloridacfo.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "Barred from insurance since 2002, now arrested",
+      "highlight": "since 2002",
+      "body": "A Florida man barred from the insurance industry since 2002 was arrested over an alleged fake coverage scheme.",
+      "place": "Florida",
+      "source": "Insurance Business",
+      "photo": {
+        "query": "insurance papers handcuffs desk police lights",
+        "prompt": "close-up of insurance paperwork on a desk beside handcuffs, with police lights reflecting across the pages"
+      },
+      "emoji": "🚨",
+      "chip": "SINCE 2002",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "DFS announced the arrest on Oct. 27",
+      "highlight": "Oct. 27",
+      "body": "The Florida Department of Financial Services said CFO Blaise Ingoglia announced the arrest of an unlicensed insurance agent and an accomplice.",
+      "place": "Florida",
+      "source": "The Florida Department of Financial Services",
+      "photo": {
+        "query": "Florida Department of Financial Services building exterior Tallahassee",
+        "prompt": "state office building in Tallahassee with a police vehicle parked outside and a gray sky overhead"
+      },
+      "emoji": "🏛️",
+      "chip": "OCT 27",
+      "logo": "myfloridacfo.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Tampa Free Press tied the case to an agency head",
+      "highlight": "agency head",
+      "body": "Tampa Free Press described the case as a fake insurance scheme that led to the arrest of a Florida agent and an agency head.",
+      "place": "Florida",
+      "source": "Tampa Free Press",
+      "photo": {
+        "query": "empty insurance office closed sign night",
+        "prompt": "closed insurance office at night, dark windows, paperwork in the doorway, and police lights washing the storefront"
+      },
+      "emoji": "🏢",
+      "chip": "AGENCY HEAD",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The allegation centers on fake coverage",
+      "highlight": "fake coverage",
+      "body": "The reports say the case involves an alleged fake coverage scheme.",
+      "place": "Florida",
+      "source": "Insurance Business",
+      "photo": {
+        "query": "car insurance policy form close up",
+        "prompt": "close-up of a car insurance form on a desk with a calculator, a pen, and a highlighted coverage section"
+      },
+      "emoji": "📄",
+      "chip": "FAKE COVERAGE",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Barred from insurance since 2002, then arrested over alleged fake coverage.",
+  "hashtags": [
+    "#FloridaInsurance",
+    "#InsuranceFraud"
+  ],
+  "collaborators": [],
+  "igCaption": "Barred from insurance since 2002, then arrested over alleged fake coverage.\n\n📰 Sources: Insurance Business, The Florida Department of Financial Services, Tampa Free Press\n\n#FloridaInsurance #InsuranceFraud #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-28",
+  "id": "2026-10-28-news-10"
+}
