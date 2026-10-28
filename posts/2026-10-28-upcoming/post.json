@@ -1,0 +1,117 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "EVERY BIG",
+    "highlight": "EVENT",
+    "bottom": "THIS WEEK",
+    "blur": false,
+    "photo": {
+      "query": "Fort Lauderdale International Boat Show yachts Bahia Mar marina aerial",
+      "prompt": "dramatic aerial photo of luxury yachts packed into a Fort Lauderdale marina during a boat show"
+    },
+    "emojis": [
+      "👀",
+      "🎃",
+      "🎶",
+      "🛥️"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.jpg",
+    "credit": "Photo: Tamanoeconomico / CC BY-SA 4.0",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Fort Lauderdale International Boat Show, Oct. 28",
+      "highlight": "Boat Show",
+      "body": "The 67th Fort Lauderdale International Boat Show starts Wednesday. It runs in Fort Lauderdale, with hybrid yachts and 50-plus debuts listed in the lineup.",
+      "place": "Fort Lauderdale",
+      "source": "WPLG Local 10",
+      "photo": {
+        "query": "Fort Lauderdale International Boat Show yachts marina",
+        "prompt": "wide dramatic photo of superyachts lined up at a Fort Lauderdale marina with crowds on the docks"
+      },
+      "emoji": "🛥️",
+      "chip": "OCT. 28",
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Tamanoeconomico / CC BY-SA 4.0"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Hollyweird Halloween Festival, Oct. 31",
+      "highlight": "Hollyweird",
+      "body": "Downtown Hollywood’s Halloween festival runs Saturday. It takes over downtown Hollywood with costumes, music, and street-party crowds.",
+      "place": "Hollywood",
+      "source": "Axios",
+      "photo": {
+        "query": "Downtown Hollywood Florida Halloween street festival crowd",
+        "prompt": "street-level photo of a crowded downtown Hollywood block party at night with costumes and Halloween lights"
+      },
+      "emoji": "🎃",
+      "chip": "OCT. 31",
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: U+1F360 / CC BY-SA 4.0"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Nights of Fright, Oct. 29 to 30",
+      "highlight": "Nights of Fright",
+      "body": "The indoor haunt runs Wednesday and Thursday at 3801 S. Pine Island Road in Davie. Tickets cost $20 to $35.",
+      "place": "Davie",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "haunted house Halloween fog dark hallway",
+        "prompt": "dark indoor haunted house hallway with fog, red lighting and a scary doorway at the end"
+      },
+      "emoji": "👻",
+      "chip": "$20-$35",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Daantjuh92 / CC BY-SA 3.0"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Lincoln Road Halloween Block Party, Oct. 31",
+      "highlight": "Lincoln Road",
+      "body": "The Miami Beach block party starts at 5 p.m. Saturday. Admission is free.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Lincoln Road Miami Beach Halloween block party neon crowd",
+        "prompt": "busy Miami Beach pedestrian mall at night with Halloween costumes, storefront lights and a street-party crowd"
+      },
+      "emoji": "🕺",
+      "chip": "FREE",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: W. M. Cline Co. / Public domain"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "DC Pie and Dom's Halloween party, Oct. 31",
+      "highlight": "DC Pie and Dom's",
+      "body": "The Brickell pizzeria and cocktail bar start their Halloween celebration at 5 p.m. Saturday. DC Pie opens at noon, and Dom’s runs the adults-only party late into the night.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Brickell Miami pizzeria halloween party neon crowd",
+        "prompt": "brickell restaurant entrance at night with Halloween decor, glowing signage and a busy crowd in costume"
+      },
+      "emoji": "🍕",
+      "chip": "5 PM",
+      "photoFile": "photo-6.jpg",
+      "credit": "Photo: Daniel Christensen / Public domain"
+    }
+  ],
+  "caption": "South Florida has a full Halloween week. Tag a friend and tell us who you’re taking 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#HalloweenMiami"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has a full Halloween week. Tag a friend and tell us who you’re taking 👀\n\n📰 Sources: WPLG Local 10, Axios, Miami New Times, Secret Miami\n\n#SouthFloridaEvents #HalloweenMiami #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-28",
+  "id": "2026-10-28-upcoming"
+}
