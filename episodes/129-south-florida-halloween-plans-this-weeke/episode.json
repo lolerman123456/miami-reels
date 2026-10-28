@@ -1,0 +1,183 @@
+{
+  "title": "South Florida Halloween Plans This Weekend",
+  "sources": [
+    "Sun Sentinel",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has a few Halloween plans this weekend.\nCheck event pages for cover and timing.\n\nSources: Sun Sentinel, Secret Miami\n\n#SouthFlorida #HalloweenWeekend #FortLauderdale #Broward",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a Halloween plan for Saturday in South Florida? Start with the pop-ups, then choose the one that fits your group.",
+      "overlay": [
+        "HALLOWEEN",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🎃",
+        "👻",
+        "🕸️",
+        "🧛"
+      ],
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sun Sentinel’s South Florida Halloween roundup includes a Carrie-themed speakeasy and a haunted kitchen. Both lean into the spooky side of the season.",
+      "caption": "Sun Sentinel’s South Florida Halloween roundup includes a Carrie-themed speakeasy and a haunted kitchen.",
+      "overlay": "HALLOWEEN POP-UPS",
+      "badge": "SOUTH FLORIDA",
+      "sub": "Speakeasy and haunted kitchen",
+      "emoji": "🧪",
+      "stats": [
+        {
+          "value": "2",
+          "label": "popup themes"
+        }
+      ],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "In Brickell, DC Pie Co. gives kids 12 and under a free personal pizza with a purchase on October 31. Next door, Dom’s turns into a Trick or Tequila party for adults at 5 p.m.",
+      "caption": "In Brickell, DC Pie Co. gives kids 12 and under a free personal pizza with a purchase on Oct. 31. Next door, Dom’s turns into a Trick or Tequila party for adults at 5 p.m.",
+      "overlay": "FREE PIZZA",
+      "badge": "OCT 31",
+      "sub": "Kids and adults",
+      "emoji": "🍕",
+      "stats": [
+        {
+          "value": "12",
+          "label": "kids age limit"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 850,
+        "pitch": -33,
+        "heading": 215,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Dom’s adds a costume contest, tequila specials, and a DJ. Costumes get you a free tequila shot with purchase, and the best-dressed guest gets a 150-dollar gift card. If you go, open NEAR and see who else showed up in costume.",
+      "caption": "Dom’s adds a costume contest, tequila specials, and a DJ. Costumes get you a free tequila shot with purchase, and the best-dressed guest gets a $150 gift card. If you go, open NEAR and see who else showed up in costume.",
+      "overlay": "TRICK OR TEQUILA",
+      "badge": "5 P.M.",
+      "sub": "Costume contest",
+      "emoji": "🍹",
+      "stats": [
+        {
+          "value": "$150",
+          "label": "gift card"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 315,
+        "degrees": 75,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Mounts Botanical Garden starts ILUMINA on November 18. The lantern festival runs through January 17, 2027, and tickets start at $10 for children and $28 for adults.",
+      "caption": "Mounts Botanical Garden starts ILUMINA on Nov. 18. The lantern festival runs through Jan. 17, 2027, and tickets start at $10 for children and $28 for adults.",
+      "overlay": "ILUMINA",
+      "badge": "NOV 18",
+      "sub": "Lantern festival",
+      "emoji": "🏮",
+      "stats": [
+        {
+          "value": "$10",
+          "label": "children tickets"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Broward County, Florida",
+        "lat": 26.193535,
+        "lon": -80.476683,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -30,
+        "heading": 60,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which South Florida Halloween stop should we map next? It is the same feeling as spotting someone in costume all night and never learning their name, which is exactly where the NEAR app comes in.",
+      "overlay": "COMMENT NEXT 🎃",
+      "sub": "Tell us where to go",
+      "location": {
+        "name": "Broward County, Florida",
+        "lat": 26.193535,
+        "lon": -80.476683,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -30,
+        "heading": 250
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "129-south-florida-halloween-plans-this-weeke"
+}
