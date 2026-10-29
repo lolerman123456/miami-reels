@@ -1,0 +1,119 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "EVERY BIG",
+    "highlight": "EVENT",
+    "bottom": "THIS WEEK",
+    "blur": false,
+    "photo": {
+      "query": "South Florida events collage Bayfront Park Halloween costumes Fort Lauderdale yachts Miami nightlife",
+      "prompt": "A dramatic South Florida events collage with Bayfront Park crowds, Halloween costumes, Fort Lauderdale yachts, and Miami nightlife at night"
+    },
+    "emojis": [
+      "🎃",
+      "🚤",
+      "🎶",
+      "👀"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Red Bull Flugtag, Oct. 31",
+      "highlight": "Red Bull Flugtag",
+      "body": "Saturday, Oct. 31, 11 a.m. to 4 p.m. at Bayfront Park in Miami. The event is free.",
+      "place": "Bayfront Park, Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Red Bull Flugtag launch Bayfront Park Miami crowd",
+        "prompt": "A homemade flying machine launching over the water at Bayfront Park in Miami with a crowded shoreline and bright daylight"
+      },
+      "emoji": "🛩️",
+      "chip": "FREE",
+      "logo": "redbull.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "DC Pie Co. Halloween, Oct. 31",
+      "highlight": "DC Pie Co.",
+      "body": "Friday, Oct. 31, noon to 11 p.m. at 1010 Brickell Ave., Miami. Kids 12 and under in costume get a free personal pizza with purchase.",
+      "place": "Brickell, Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Brickell pizzeria Halloween costume night pizza",
+        "prompt": "A Brickell pizzeria on Halloween with pizza boxes, orange lighting, and costumed guests outside the entrance"
+      },
+      "emoji": "🍕",
+      "chip": "KIDS EAT FREE",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Dom’s Trick or Tequila, Oct. 31",
+      "highlight": "Dom’s",
+      "body": "Friday, Oct. 31, starting at 5 p.m. at 1010 Brickell Ave., Miami. Costumes get a free tequila shot with purchase, and the costume contest has a $150 gift card prize.",
+      "place": "Brickell, Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Miami cocktail bar Halloween party DJ costume contest",
+        "prompt": "A dark cocktail bar in Brickell with tequila drinks, a DJ booth, and guests in Halloween costumes"
+      },
+      "emoji": "🍹",
+      "chip": "$150 PRIZE",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Hollyweird Halloween Festival, Oct. 31",
+      "highlight": "Hollyweird Halloween",
+      "body": "Friday, Oct. 31 in Hollywood. The Sun Sentinel includes it in its Halloween Weekend Top 10.",
+      "place": "Hollywood",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "Hollywood Florida Halloween street festival costumes night",
+        "prompt": "A packed Halloween street festival in Hollywood, Florida with costumes, stage lights, and palm trees at night"
+      },
+      "emoji": "🎭",
+      "chip": "OCT 31",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Miami Gardens Family Fall Festival, Oct. 31",
+      "highlight": "Family Fall Festival",
+      "body": "Friday, Oct. 31 in Miami Gardens. South Florida Times lists it as a local fall event for the holiday weekend.",
+      "place": "Miami Gardens",
+      "source": "South Florida Times",
+      "photo": {
+        "query": "Miami Gardens family fall festival pumpkins costumes park",
+        "prompt": "A family fall festival in Miami Gardens with pumpkins, food tents, kids in costumes, and a community park setting"
+      },
+      "emoji": "🍂",
+      "chip": "OCT 31",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "South Florida has a flying Cuban sandwich, Halloween parties, and a festival this week. Who are they taking? Tag a friend 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has a flying Cuban sandwich, Halloween parties, and a festival this week. Who are they taking? Tag a friend 👀\n\n📰 Sources: Secret Miami, Sun Sentinel, South Florida Times\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-29",
+  "id": "2026-10-29-upcoming"
+}
