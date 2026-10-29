@@ -100,7 +100,8 @@ function stickersFor(episode, s, i) {
   const laugh = fs.existsSync(path.join(ROOT, 'assets', 'sfx', 'laugh.wav'));
   return {
     scare: s.kind === 'hook' && pack.scare ? { ...pack.scare, sound: laugh } : null,
-    critters: s.kind === 'hook' || s.image ? null : { perch: s.kind === 'item' ? pick(pack.perch, k) : null, runner: pick(pack.runners, k), flyer: i % 2 ? pick(pack.flyers, k) : null },
+    // owner, Oct 29: "less emojis, way less": one monster on every other place, a single runner in the whole Reel, no flyers
+    critters: s.kind !== 'item' || s.image || i % 2 === 0 ? null : { perch: pick(pack.perch, k), runner: i === 3 ? pick(pack.runners, k) : null, flyer: null },
   };
 }
 
