@@ -8,6 +8,7 @@ index.html
 .claude/
 episodes/*/*
 !episodes/*/episode.json
+!episodes/*/logo.png
 posts/*/*.jpg
 posts/*/*.png
 !episodes/*/images/
