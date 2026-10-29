@@ -1,0 +1,116 @@
+{
+  "sector": "WORLD",
+  "cover": {
+    "top": "FLÁVIO BOLSONARO",
+    "main": "LANDS IN MIAMI",
+    "highlight": "AFTER FLEEING BRAZIL",
+    "bottom": "THE DETAIL PEOPLE WILL REPEAT FIRST",
+    "blur": false,
+    "photo": {
+      "query": "Miami International Airport arrivals terminal night news cameras police vehicles Wikimedia Commons",
+      "prompt": "Miami International Airport arrivals at night with TV cameras, police vehicles, and flashing lights outside the terminal, dramatic news photo style"
+    },
+    "emojis": [
+      "🇧🇷",
+      "✈️",
+      "🇺🇸"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: CBS News",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "WORLD",
+      "headline": "Flávio Bolsonaro lands in Miami after fleeing Brazil",
+      "highlight": "lands in Miami",
+      "body": "The Miami Herald reported Bolsonaro fled Brazil and landed in Miami after his election loss.",
+      "place": "Miami",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "Miami International Airport arrivals terminal news cameras Wikimedia Commons",
+        "prompt": "Crowded international arrivals area at Miami International Airport with cameras pointed at the doors, tense nighttime news scene"
+      },
+      "emoji": "✈️",
+      "chip": "MIAMI",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "He lost Brazil’s presidential election before the trip",
+      "highlight": "election loss",
+      "body": "Al Jazeera says Bolsonaro landed in Miami after losing Brazil’s presidential election.",
+      "place": "Brazil",
+      "source": "Al Jazeera",
+      "photo": {
+        "query": "Brazil election polling station ballot box Wikimedia Commons",
+        "prompt": "Brazilian election scene with ballot boxes, voters, and national colors, documentary news photo style"
+      },
+      "emoji": "🗳️",
+      "chip": "ELECTION",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: HuffPost"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "His family arrived with him in Miami",
+      "highlight": "with his family",
+      "body": "The Times of Israel says Bolsonaro arrived in Miami with his family after Trump offered an exit from Brazil.",
+      "place": "Miami",
+      "source": "The Times of Israel",
+      "photo": {
+        "query": "Miami International Airport curbside SUVs luggage carts night Wikimedia Commons",
+        "prompt": "Airport curbside at Miami International Airport with SUVs, luggage carts, and camera flashes near the arrivals doors"
+      },
+      "emoji": "👨‍👩‍👧",
+      "chip": "FAMILY",
+      "photoFile": "news-3.jpg",
+      "credit": "Photo: Proto Thema"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "Reports placed part of the trip through Argentina",
+      "highlight": "through Argentina",
+      "body": "EL PAÍS English reported Bolsonaro fled Brazil via Argentina.",
+      "place": "Argentina",
+      "source": "EL PAÍS English",
+      "photo": {
+        "query": "Argentina airport runway commercial jet dusk Wikimedia Commons",
+        "prompt": "Commercial jet on a runway in Argentina at dusk with terminal lights and a news-style travel scene"
+      },
+      "emoji": "🛫",
+      "chip": "ROUTE",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "WORLD",
+      "headline": "After landing in the U.S., he declared himself Brazil’s rightful leader",
+      "highlight": "rightful leader",
+      "body": "Reuters reported that Bolsonaro declared himself Brazil’s rightful leader after landing in the U.S. The Washington Post said he called himself Brazil’s true leader.",
+      "place": "United States",
+      "source": "Reuters",
+      "photo": {
+        "query": "Brazil flag microphones press conference podium Wikimedia Commons",
+        "prompt": "Press conference podium with microphones and a Brazilian flag behind it, hard news lighting"
+      },
+      "emoji": "🎙️",
+      "chip": "CLAIM",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: CBS News"
+    }
+  ],
+  "caption": "Flávio Bolsonaro landed in Miami after fleeing Brazil, and the political fight followed him here.",
+  "hashtags": [
+    "#FlavioBolsonaro",
+    "#MiamiNews"
+  ],
+  "collaborators": [],
+  "igCaption": "Flávio Bolsonaro landed in Miami after fleeing Brazil, and the political fight followed him here.\n\n📰 Sources: Miami Herald, Al Jazeera, The Times of Israel, EL PAÍS English, Reuters\n\n#FlavioBolsonaro #MiamiNews #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-29",
+  "id": "2026-10-29-news-07"
+}
