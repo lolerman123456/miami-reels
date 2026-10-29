@@ -23,6 +23,7 @@ export type Scene = {
   reveal?: { at: number; text: string; label?: string | null } | null; // guess-it game: countdown, then the answer pops
   screen?: ScreenSpec | null; // how-to walkthrough: a browser window with typing, clicks and results
   stats?: { value: string; label: string }[] | null; // big numbers that count up while the narrator says them
+  logo?: { file: string; label?: string | null } | null; // host's logo on the hook (event promos, owner Oct 29)
   source?: string | null; // where the facts come from, shown small
   hit?: string | null;
   shotType?: string | null;
@@ -288,9 +289,24 @@ const Pop: React.FC<{ delay?: number; children: React.ReactNode; from?: number; 
 
 const Hook: React.FC<{ scene: Scene }> = ({ scene }) => {
   const lines = Array.isArray(scene.overlay) ? scene.overlay : [scene.overlay];
+  const frame = useCurrentFrame();
+  const l = ease(frame, 0, 8);
   return (
     <AbsoluteFill>
-      <div style={{ position: 'absolute', top: 430, left: 60, right: 60, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
+      {scene.logo && (
+        <div style={{ position: 'absolute', top: 150, left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12,
+          opacity: l, transform: `scale(${0.92 + 0.08 * l})` }}>
+          <div style={{ width: 300, height: 300, borderRadius: '50%', overflow: 'hidden', background: '#000', boxShadow: SHADOW, border: '4px solid rgba(255,255,255,.9)' }}>
+            <Img src={staticFile(scene.logo.file)} style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.18)' }} />
+          </div>
+          {scene.logo.label && (
+            <div style={{ background: GLASS, padding: '6px 18px', borderRadius: 10 }}>
+              <span style={{ fontFamily: FONT, fontWeight: 800, fontSize: 30, color: '#fff', letterSpacing: 3 }}>{scene.logo.label}</span>
+            </div>
+          )}
+        </div>
+      )}
+      <div style={{ position: 'absolute', top: scene.logo ? 560 : 430, left: 60, right: 60, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
         {lines.map((line, i) => (
           <Pop key={i} delay={2 + i * 5}>
             <div style={{

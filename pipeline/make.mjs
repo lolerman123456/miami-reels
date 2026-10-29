@@ -75,6 +75,7 @@ export function buildProps(episode, timeline, duration, captions, videos, music 
       image: s.image?.file ? { file: s.image.file, path: timeFocus(s.image, i, captions, timeline), label: s.image.label ?? 'AI RENDER' } : null,
       photos: s.photos?.files?.length ? { files: s.photos.files, at: s.photos.at ?? 0.4, style: s.photos.style ?? null } : null,
       reveal: s.reveal ?? null,
+      logo: s.logo?.file ? { file: s.logo.file, label: s.logo.label ?? null } : null,
       screen: s.screen ? timeScreen(s.screen, i, captions, timeline) : null,
       stats: s.stats ?? null, source: s.source ?? null, hit: s.hit ?? null, shotType: s.shot?.type ?? null, sfx: episode.sfx ?? 'hard',
       from: Math.round(timeline[i].start * FPS),

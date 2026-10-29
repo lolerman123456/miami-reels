@@ -1,0 +1,81 @@
+{
+  "id": "140-lorzy-international-house-party-halloween",
+  "title": "Lorzy Event's International House Party Halloween (Oct 29)",
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": { "provider": "openai", "voice": "ash" },
+  "collaborators": [],
+  "sources": ["Shotgun event page: International House Party Halloween by Lorzy Event"],
+  "igCaption": "Miami's Halloween house party with a secret address 🎃 Tonight, Oct. 29, doors at 11pm. Tickets on Shotgun: International House Party Halloween by Lorzy Event.",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Miami is hosting one of the craziest Halloween house parties ever. And nobody knows where it is.",
+      "overlay": ["CRAZIEST HALLOWEEN", "HOUSE PARTY 🎃"],
+      "emojis": ["🎃", "👻", "🪩", "🏠"],
+      "logo": { "file": "logo.png", "label": "LORZY EVENT PRESENTS" },
+      "location": { "name": "Miami, Florida", "lat": 25.7617, "lon": -80.1918, "h": 80 },
+      "shot": { "type": "dive", "range": 1800, "pitch": -32, "heading": 250 }
+    },
+    {
+      "kind": "item",
+      "text": "It's Lorzy Event's International House Party Halloween. Tonight, October twenty-ninth. Doors open at eleven p.m.",
+      "caption": "It's Lorzy Event's International House Party Halloween. Tonight, Oct. 29. Doors open at 11 p.m.",
+      "overlay": "TONIGHT",
+      "badge": "11 PM",
+      "sub": "Thursday, Oct. 29",
+      "emoji": "🎃",
+      "stats": [{ "value": "11 PM", "label": "Doors open" }],
+      "source": "Shotgun",
+      "location": { "name": "Miami Beach, Florida", "lat": 25.7907, "lon": -80.1300, "h": 60 },
+      "shot": { "type": "flyto", "range": 1600, "pitch": -34, "heading": 270 }
+    },
+    {
+      "kind": "item",
+      "text": "The address is secret. Here's what we know. Twenty-five minutes from Miami Beach. Fifteen from the airport. Nine from FIU.",
+      "caption": "The address is secret. Here's what we know: 25 min from Miami Beach. 15 from the airport. 9 from FIU.",
+      "overlay": "SECRET ADDRESS 🤫",
+      "badge": "9 MIN FROM FIU",
+      "sub": "Somewhere in here 👀",
+      "emoji": "📍",
+      "stats": [{ "value": "25 MIN", "label": "From Miami Beach" }, { "value": "15 MIN", "label": "From MIA" }],
+      "source": "Shotgun",
+      "location": { "name": "Florida International University, Miami", "lat": 25.7562, "lon": -80.3755, "h": 30 },
+      "shot": { "type": "flyto", "range": 1700, "pitch": -36, "heading": 90 }
+    },
+    {
+      "kind": "item",
+      "text": "Inside, it's a full house made for dancing. Afro, Latino, hip-hop, R and B and commercial sets, with a crowd from all over the world. Drinks are five dollars.",
+      "caption": "Inside, it's a full house made for dancing. Afro, Latino, hip-hop, R&B and commercial sets, with a crowd from all over the world. Drinks are $5.",
+      "overlay": "THE VIBE",
+      "badge": "$5 DRINKS",
+      "sub": "Afro · Latino · Hip-hop · R&B",
+      "emoji": "🪩",
+      "stats": [{ "value": "$5", "label": "Drinks" }],
+      "source": "Shotgun",
+      "location": { "name": "West Miami-Dade, Florida", "lat": 25.7650, "lon": -80.3400, "h": 30 },
+      "shot": { "type": "flyto", "range": 1500, "pitch": -34, "heading": 180 }
+    },
+    {
+      "kind": "item",
+      "text": "Costumes are strongly encouraged. There's security on site. And ticket prices go up with every tier, so the earlier you buy, the less you pay. The exact address goes to ticket holders only.",
+      "caption": "Costumes are strongly encouraged. There's security on site. Ticket prices go up with every tier, so the earlier you buy, the less you pay. The exact address goes to ticket holders only.",
+      "overlay": "TICKETS ON SHOTGUN",
+      "badge": "COSTUMES ON",
+      "sub": "Address sent to ticket holders",
+      "emoji": "🎟️",
+      "source": "Shotgun",
+      "location": { "name": "West Miami-Dade, Florida", "lat": 25.7650, "lon": -80.3400, "h": 30 },
+      "shot": { "type": "flyto", "range": 1300, "pitch": -40, "heading": 30 }
+    },
+    {
+      "kind": "outro",
+      "text": "Who are you bringing? Tag them. And when you're there, open NEAR. See who else is at the party, and finally get the name of that person in the best costume before the night ends.",
+      "overlay": "TAG YOUR CREW 👻",
+      "sub": "Open NEAR at the party",
+      "location": { "name": "Miami, Florida", "lat": 25.7617, "lon": -80.1918, "h": 80 },
+      "shot": { "type": "pullout", "range": 1800, "pitch": -30, "heading": 300 }
+    }
+  ]
+}
