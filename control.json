@@ -12,6 +12,11 @@
     "shareslop": [
       11,
       19
+    ],
+    "social": [
+      10,
+      17,
+      21
     ]
   },
   "tiktokSlideshowsPerDay": 8,

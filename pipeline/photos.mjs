@@ -147,7 +147,7 @@ async function aiPhoto(description, dir, name, raw = false, { hq = false } = {})
       headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
       body: JSON.stringify({ model, prompt, size: '1024x1536', quality: high ? 'high' : 'medium', n: 1 }), // shareslop: high (owner, Oct 6: "make the images a little better")
     });
-    if (!res.ok) { console.log(`  (image model ${model}: ${res.status})`); continue; }
+    if (!res.ok) { console.log(`  (image model ${model}: ${res.status} ${(await res.text()).slice(0, 200).replace(/\s+/g, ' ')})`); continue; }
     const b64 = (await res.json()).data?.[0]?.b64_json;
     if (!b64) continue;
     const file = path.join(dir, `${name}.png`);
