@@ -72,7 +72,7 @@
         "range": 1300,
         "pitch": -26,
         "heading": 250,
-        "degrees": 70,
+        "degrees": 120,
         "night": true
       }
     },
@@ -96,7 +96,7 @@
         "range": 1400,
         "pitch": -28,
         "heading": 300,
-        "degrees": 60,
+        "degrees": 110,
         "night": true
       }
     },
@@ -120,7 +120,7 @@
         "range": 1600,
         "pitch": -30,
         "heading": 220,
-        "degrees": 60,
+        "degrees": 110,
         "night": true
       }
     },
@@ -150,7 +150,7 @@
         "range": 1200,
         "pitch": -24,
         "heading": 90,
-        "degrees": 80,
+        "degrees": 130,
         "night": true
       }
     },
@@ -174,7 +174,7 @@
         "range": 1500,
         "pitch": -27,
         "heading": 30,
-        "degrees": 100,
+        "degrees": 160,
         "night": true
       }
     },
@@ -198,5 +198,28 @@
       }
     }
   ],
-  "night": true
+  "night": true,
+  "stickers": {
+    "scare": {
+      "emoji": "👹",
+      "text": "MYAHAHAHA"
+    },
+    "perch": [
+      "🎃",
+      "👻",
+      "🧛",
+      "💀",
+      "🧟",
+      "😈"
+    ],
+    "runners": [
+      "🧟",
+      "👻",
+      "💀",
+      "🎃"
+    ],
+    "flyers": [
+      "🦇"
+    ]
+  }
 }

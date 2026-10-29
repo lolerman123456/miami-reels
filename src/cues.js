@@ -7,6 +7,10 @@ export const ALERT_AT = 40;
 // (after the camera lands on fly-to scenes)
 export const statAt = (scene, i) => Math.max(16, Math.round(scene.duration * ((scene.shotType === 'flyto' ? 0.34 : 0.2) + 0.28 * i)));
 
+// hook stomps (owner, Oct 29): the logo (i = 0, only when there is one) then each overlay line (i = 1…) slams in;
+// a line lands 5 frames after its start
+export const stompAt = (scene, i) => (i === 0 ? 0 : (scene.logo ? 8 : 0) + (i - 1) * 7);
+
 export function sfxCues(scenes) {
   const cues = [];
   const items = scenes.filter(s => s.kind === 'item');
@@ -15,7 +19,11 @@ export function sfxCues(scenes) {
   scenes.forEach(s => {
     const hard = s.sfx !== 'soft';
     if (s.kind === 'hook') {
-      if (hard) { add(0, s.hit || 'explosion', 0.75); add(4, 'impact', 0.45); }
+      if (hard) {
+        add(0, s.hit || 'explosion', 0.6);
+        const n = (Array.isArray(s.overlay) ? s.overlay.length : 1) + 1;
+        for (let i = s.logo ? 0 : 1; i < n; i++) add(stompAt(s, i) + 4, 'stomp', 1);
+      }
       if (s.scare?.sound) add(3, 'laugh', 1); // evil laugh under the monster scare
       else { add(0, 'boom', 0.35); add(3, 'tick', 0.3); add(8, 'tick', 0.3); }
     } else if (s.shotType === 'flyto') {

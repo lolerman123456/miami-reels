@@ -4,7 +4,7 @@ import {
   useCurrentFrame, useVideoConfig,
 } from 'remotion';
 // @ts-ignore plain JS module shared with the node pipeline
-import { sfxCues, statAt } from './cues.js';
+import { sfxCues, statAt, stompAt } from './cues.js';
 import { Screen, ScreenSpec } from './Screen';
 
 export type Word = { text: string; start: number; end: number; scene: number };
@@ -99,9 +99,12 @@ export const Reel: React.FC<ReelProps> = ({ narration, music, captions, scenes, 
 
 const SceneView: React.FC<{ scene: Scene; index: number }> = ({ scene, index }) => {
   const frame = useCurrentFrame();
-  const scale = interpolate(frame, [0, scene.duration], [1.02, 1.07]);
+  // power motion (owner, Oct 29): every scene slams in (zoom punch), then keeps pushing in
+  const punch = index === 0 ? 0 : 0.2 * (1 - ease(frame, 0, 9));
+  const scale = interpolate(frame, [0, scene.duration], [1.03, 1.12]) + punch;
+  const shake = scene.kind === 'hook' ? hookShake(scene, frame) : index === 0 ? 0 : 14 * Math.max(0, 1 - frame / 8) * Math.sin(frame * 3.1);
   return (
-    <AbsoluteFill>
+    <AbsoluteFill style={{ transform: `translate(${shake * 0.6}px, ${shake}px)` }}>
       {scene.image ? <ImageView scene={scene} /> : (
         <AbsoluteFill style={{ transform: `scale(${scale})` }}>
           <Sequence from={scene.videoOffset ?? 0} layout="none">
@@ -355,6 +358,21 @@ const Pop: React.FC<{ delay?: number; children: React.ReactNode; from?: number; 
   return <div style={{ opacity: e, transform: `translateY(${(1 - e) * 24}px)`, ...style }}>{children}</div>;
 };
 
+// STOMP (owner, Oct 29: "the words STOMP IN, same with the logo, with a stomp sound, it needs to be powerful"):
+// each line drops in huge and slams down in 5 frames; the frame shakes on every landing (sound cues in cues.js)
+const stompScale = (frame: number, at: number) => interpolate(frame - at, [0, 5, 7, 9], [2.6, 0.94, 1.03, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: t => t * t });
+const Stomp: React.FC<{ at: number; children: React.ReactNode }> = ({ at, children }) => {
+  const frame = useCurrentFrame();
+  if (frame < at) return null;
+  return <div style={{ opacity: Math.min(1, (frame - at + 1) / 3), transform: `scale(${stompScale(frame, at)})` }}>{children}</div>;
+};
+function hookShake(scene: Scene, frame: number) {
+  const n = (Array.isArray(scene.overlay) ? scene.overlay.length : 1) + 1;
+  let s = 0;
+  for (let i = scene.logo ? 0 : 1; i < n; i++) { const t = frame - (stompAt(scene, i) + 5); if (t >= 0 && t < 10) s += 22 * (1 - t / 10) * Math.sin(t * 2.9); }
+  return s;
+}
+
 const Hook: React.FC<{ scene: Scene }> = ({ scene }) => {
   const lines = Array.isArray(scene.overlay) ? scene.overlay : [scene.overlay];
   const frame = useCurrentFrame();
@@ -363,7 +381,7 @@ const Hook: React.FC<{ scene: Scene }> = ({ scene }) => {
     <AbsoluteFill>
       {scene.logo && (
         <div style={{ position: 'absolute', top: 150, left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12,
-          opacity: l, transform: `scale(${0.92 + 0.08 * l})` }}>
+          opacity: Math.min(1, l * 3), transform: `scale(${stompScale(frame, 0)})` }}>
           <div style={{ width: 300, height: 300, borderRadius: '50%', overflow: 'hidden', background: '#000', boxShadow: SHADOW, border: '4px solid rgba(255,255,255,.9)' }}>
             <Img src={staticFile(scene.logo.file)} style={{ width: '100%', height: '100%', objectFit: 'cover', transform: 'scale(1.18)' }} />
           </div>
@@ -376,16 +394,16 @@ const Hook: React.FC<{ scene: Scene }> = ({ scene }) => {
       )}
       <div style={{ position: 'absolute', top: scene.logo ? 560 : 430, left: 60, right: 60, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
         {lines.map((line, i) => (
-          <Pop key={i} delay={2 + i * 5}>
+          <Stomp key={i} at={stompAt(scene, i + 1)}>
             <div style={{
               fontFamily: FONT, fontWeight: 900, fontSize: fitSize(line, i === 0 ? 104 : 112, 900), lineHeight: 1.02,
               color: '#fff', textAlign: 'center', whiteSpace: 'nowrap', textTransform: 'uppercase', letterSpacing: -1,
               background: i === lines.length - 1 ? BLUE : GLASS, padding: '10px 26px 14px', borderRadius: 16, boxShadow: SHADOW,
             }}>{line}</div>
-          </Pop>
+          </Stomp>
         ))}
         {scene.note && (
-          <Pop delay={4 + lines.length * 5}>
+          <Pop delay={stompAt(scene, lines.length) + 9}>
             <div style={{ background: GLASS, padding: '10px 22px', borderRadius: 12, marginTop: 8 }}>
               <span style={{ fontFamily: FONT, fontWeight: 700, fontSize: 32, color: '#fff' }}>{scene.note}</span>
             </div>

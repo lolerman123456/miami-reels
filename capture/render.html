@@ -63,12 +63,16 @@ async function main() {
 
   // Night look (owner, Oct 29: "make the map dark like at night with lit up skyscrapers"): the Google tiles only have
   // daytime textures, so grade them to night and make the bright texels on building faces (glass, windows) glow warm.
-  if (job.shots.some(s => s.night)) {
+  const night = job.shots.some(s => s.night);
+  if (night) {
+    scene.fog.enabled = false;
     if (scene.skyAtmosphere) scene.skyAtmosphere.show = false;
     if (scene.skyBox) scene.skyBox.show = false;
     if (scene.sun) scene.sun.show = false;
     if (scene.moon) scene.moon.show = false;
-    scene.backgroundColor = Cesium.Color.fromCssColorString('#060914');
+    scene.backgroundColor = Cesium.Color.BLACK;
+    // owner, Oct 29 (sent a NASA-style city-lights photo): black, not blue — the city only shows as its lights.
+    // Bright texels (rooftops, concrete, glass, road paint) become warm/white lights; everything else goes near black.
     tileset.customShader = new Cesium.CustomShader({
       lightingModel: Cesium.LightingModel.UNLIT,
       fragmentShaderText: `
@@ -79,11 +83,9 @@ void fragmentMain(FragmentInput fsInput, inout czm_modelMaterial material) {
   vec3 pEC = fsInput.attributes.positionEC;
   vec3 nEC = normalize(cross(dFdx(pEC), dFdy(pEC)));
   float facade = smoothstep(0.55, 0.85, 1.0 - abs(dot(nEC, upEC)));
-  vec3 night = base * vec3(0.17, 0.20, 0.32) + vec3(0.010, 0.012, 0.030);
-  float win = smoothstep(0.42, 0.72, lum) * facade;
-  vec3 warm = mix(vec3(1.00, 0.74, 0.40), vec3(0.75, 0.88, 1.00), smoothstep(0.78, 0.95, lum)); // office white on the brightest glass
-  vec3 street = vec3(0.30, 0.18, 0.06) * (1.0 - facade) * smoothstep(0.45, 0.80, lum);
-  material.diffuse = night + warm * win * 1.15 + street;
+  float light = smoothstep(0.50, 0.80, lum);
+  vec3 tint = mix(vec3(1.00, 0.72, 0.42), vec3(0.92, 0.95, 1.00), smoothstep(0.72, 0.92, lum));
+  material.diffuse = base * 0.045 + tint * light * (1.0 + 0.5 * facade);
 }`,
     });
   }
@@ -104,7 +106,7 @@ void fragmentMain(FragmentInput fsInput, inout czm_modelMaterial material) {
     const c = p.c != null && shot.prevCenter ? Cesium.Cartesian3.lerp(shot.prevCenter, shot.center, p.c, scratch) : shot.center;
     viewer.camera.lookAt(c, new Cesium.HeadingPitchRange(p.h, p.p, p.r));
     // fog hides whole tiles when the camera is high up (long fly-tos): the frame went plain blue. Keep it for low shots only.
-    scene.fog.enabled = viewer.camera.positionCartographic.height < 2500;
+    scene.fog.enabled = !night && viewer.camera.positionCartographic.height < 2500; // night: fog fades tiles to black
   };
 
   for (const shot of job.shots) {

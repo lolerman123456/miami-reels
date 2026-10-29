@@ -25,6 +25,9 @@ const SFX = {
   // one keyboard key (typing text on screen, owner Oct 3)
   key:       ['-f', 'lavfi', '-i', "aevalsrc='(random(0)*2-1)*exp(-260*t)*0.9+0.5*sin(2*PI*3200*t)*exp(-180*t)':d=0.06:s=44100",
               '-af', 'highpass=f=1200,lowpass=f=7000,volume=1.3'],
+  // hook words/logo slamming in (owner, Oct 29: "with a stomp sound, it needs to be powerful")
+  stomp:     ['-f', 'lavfi', '-i', "aevalsrc='1.0*sin(2*PI*(34+150*exp(-28*t))*t)*exp(-5.5*t)+0.7*(random(0)*2-1)*exp(-70*t)+0.35*sin(2*PI*90*t)*exp(-14*t)':d=0.9:s=44100",
+              '-af', 'lowpass=f=2600,volume=2.2,alimiter=limit=0.97'],
   count:     ['-f', 'lavfi', '-i', "aevalsrc='0.55*sin(2*PI*2600*t)*exp(-120*(t-0.045*floor(t/0.045)))*lt(t,0.62)':d=0.7:s=44100"],
 };
 
