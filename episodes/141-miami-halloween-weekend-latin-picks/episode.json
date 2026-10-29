@@ -1,0 +1,214 @@
+{
+  "title": "Miami Halloween Weekend Latin Picks",
+  "sources": [
+    "Secret Miami",
+    "Miami New Times",
+    "Business Insider"
+  ],
+  "collaborators": [],
+  "igCaption": "Miami’s Halloween weekend starts at Bayfront Park and with one flying Cuban sandwich.\nOct. 31, Bayfront Park, free\n\nSources: Secret Miami, Miami New Times, Business Insider\n\n#Miami #MiamiEvents #HalloweenMiami #ReggaetonMiami",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a Miami Halloween plan with Latin flavor? Start with the free one at Bayfront Park on Halloween day.",
+      "overlay": [
+        "HALLOWEEN",
+        "WEEKEND"
+      ],
+      "emojis": [
+        "🎃",
+        "🇨🇺",
+        "🎶",
+        "🕺"
+      ],
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Red Bull Flugtag returns to Bayfront Park on Halloween day. The event is free, and it comes back to Miami for the first time since 2013.",
+      "caption": "Red Bull Flugtag returns to Bayfront Park on Halloween day. The event is free, and it comes back to Miami for the first time since 2013.",
+      "overlay": "BAYFRONT PARK",
+      "badge": "FREE",
+      "sub": "Halloween day return",
+      "emoji": "🛩️",
+      "stats": [
+        {
+          "value": "2013",
+          "label": "last Miami run"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Bayfront Park",
+        "lat": 25.7753,
+        "lon": -80.1869,
+        "h": 25
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Cuban Flyer is a human-powered flying Cuban sandwich with a Cuban flag tail. A Day in Miami teamed up with Sanguich on it.",
+      "caption": "The Cuban Flyer is a human-powered flying Cuban sandwich with a Cuban flag tail. A Day in Miami teamed up with Sanguich on it.",
+      "overlay": "CUBAN FLYER",
+      "badge": "5-PERSON CREW",
+      "sub": "Built for Flugtag",
+      "emoji": "🥪",
+      "stats": [
+        {
+          "value": "5",
+          "label": "person crew"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Bayfront Park",
+        "lat": 25.7753,
+        "lon": -80.1869,
+        "h": 25
+      },
+      "shot": {
+        "type": "push",
+        "range": 700,
+        "pitch": -34,
+        "heading": 70
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Flugtag world distance record stands at 78.5 meters, about 257.5 feet. That is the mark every team is chasing. If you’re at Flugtag, open NEAR and see who’s cheering beside you.",
+      "caption": "The Flugtag world distance record stands at 78.5 meters, about 257.5 feet. That is the mark every team is chasing. If you’re at Flugtag, open NEAR and see who’s cheering beside you.",
+      "overlay": "WORLD RECORD",
+      "badge": "78.5 M",
+      "sub": "Current distance mark",
+      "emoji": "📏",
+      "stats": [
+        {
+          "value": "78.5 M",
+          "label": "record distance"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Bayfront Park",
+        "lat": 25.7753,
+        "lon": -80.1869,
+        "h": 25
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 650,
+        "pitch": -35,
+        "heading": 220
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami New Times put out its Halloween weekend party guide on October 22. It also ran last year’s Halloween party roundup on October 31, 2025.",
+      "caption": "Miami New Times put out its Halloween weekend party guide on Oct. 22. It also ran last year’s Halloween party roundup on Oct. 31, 2025.",
+      "overlay": "PARTY GUIDE",
+      "badge": "OCT 22",
+      "sub": "Halloween weekend list",
+      "emoji": "🎧",
+      "stats": [
+        {
+          "value": "OCT 22",
+          "label": "guide date"
+        },
+        {
+          "value": "2025",
+          "label": "last roundup"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 50,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami New Times also listed 14 spooky Halloween pop-up bars and events this season, from vampire dinners to murder mysteries and cocktails.",
+      "caption": "Miami New Times also listed 14 spooky Halloween pop-up bars and events this season, from vampire dinners to murder mysteries and cocktails.",
+      "overlay": "POP-UPS",
+      "badge": "14 EVENTS",
+      "sub": "Food and drink picks",
+      "emoji": "🍹",
+      "stats": [
+        {
+          "value": "14",
+          "label": "pop-ups"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -33,
+        "heading": 35,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Tell us which Miami Halloween stop you want first. If you kept seeing the same face between the party hops and never learned their name, NEAR shows you who that stranger from your night actually was.",
+      "overlay": "DROP THE PICK 🎃",
+      "sub": "Tell us where to go",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -32,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "141-miami-halloween-weekend-latin-picks"
+}
