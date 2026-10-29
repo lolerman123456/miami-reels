@@ -1,0 +1,116 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "DEPUTIES SAY",
+    "main": "2 DEAD AFTER MURDER-SUICIDE AT A NE MIAMI-DADE APARTMENT",
+    "highlight": "2 DEAD",
+    "bottom": "IN NE MIAMI-DADE",
+    "blur": false,
+    "photo": {
+      "query": "Northeast Miami-Dade apartment complex police lights night crime scene",
+      "prompt": "police lights outside a Northeast Miami-Dade apartment complex at night, with crime scene tape across the entrance and balconies visible"
+    },
+    "emojis": [
+      "🚨",
+      "🏢",
+      "🕯️"
+    ],
+    "logos": [],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: NBC 6 South Florida",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "2 dead after murder-suicide at a NE Miami-Dade apartment",
+      "highlight": "2 dead",
+      "body": "Authorities say a man and a woman died after an apparent murder-suicide at a Northeast Miami-Dade apartment on Thursday, Oct. 29.",
+      "place": "Northeast Miami-Dade",
+      "source": "NBC 6 South Florida",
+      "photo": {
+        "query": "Northeast Miami-Dade apartment complex police lights night",
+        "prompt": "patrol cars with flashing lights outside a Northeast Miami-Dade apartment building after a shooting investigation"
+      },
+      "emoji": "🚨",
+      "chip": "2 DEAD",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The case happened inside an apartment complex",
+      "highlight": "apartment complex",
+      "body": "CBS News reported deputies said the deaths happened at a Miami-Dade apartment complex.",
+      "place": "Miami-Dade",
+      "source": "CBS News",
+      "photo": {
+        "query": "Miami-Dade apartment complex crime scene tape",
+        "prompt": "wide view of an apartment complex entrance in Miami-Dade blocked by crime scene tape and police vehicles"
+      },
+      "emoji": "🚓",
+      "chip": "APARTMENT",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: WSVN 7News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "WSVN reported it was domestic-related",
+      "highlight": "domestic-related",
+      "body": "WSVN reported the shooting was domestic-related and involved a man and a woman in Northeast Miami-Dade.",
+      "place": "Northeast Miami-Dade",
+      "source": "WSVN",
+      "photo": {
+        "query": "apartment hallway police tape Miami-Dade",
+        "prompt": "apartment hallway sealed with crime scene tape after a domestic-related shooting, with no people visible"
+      },
+      "emoji": "🏠",
+      "chip": "DOMESTIC",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: NBC 6 South Florida"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The Miami Herald said deputies found both shot dead",
+      "highlight": "shot dead",
+      "body": "The Miami Herald reported deputies said the man and woman were found shot dead inside the apartment.",
+      "place": "Miami-Dade",
+      "source": "Miami Herald",
+      "photo": {
+        "query": "apartment door police tape shooting investigation",
+        "prompt": "apartment door taped off during a shooting investigation, with dim hallway lighting and police lights outside"
+      },
+      "emoji": "🕯️",
+      "chip": "FOUND INSIDE",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: CBS News"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Questions remain after the deaths",
+      "highlight": "questions remain",
+      "body": "CBS News reported questions remain after the man and woman were found dead in northeast Miami-Dade.",
+      "place": "Northeast Miami-Dade",
+      "source": "CBS News",
+      "photo": {
+        "query": "empty apartment complex parking lot police tape Miami-Dade night",
+        "prompt": "empty apartment complex parking lot at night with police tape near the entrance and no people in view"
+      },
+      "emoji": "❓",
+      "chip": "INVESTIGATION",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: WSVN 7News"
+    }
+  ],
+  "caption": "A man and a woman were found dead inside a Northeast Miami-Dade apartment, deputies say.",
+  "hashtags": [
+    "#MiamiDade",
+    "#NortheastMiamiDade"
+  ],
+  "collaborators": [],
+  "igCaption": "A man and a woman were found dead inside a Northeast Miami-Dade apartment, deputies say.\n\n📰 Sources: NBC 6 South Florida, CBS News, WSVN, Miami Herald\n\n#MiamiDade #NortheastMiamiDade #miami #southflorida",
+  "kind": "brief",
+  "kicker": "THE DADE BRIEF ☕",
+  "date": "2026-10-29",
+  "id": "2026-10-29-brief"
+}
