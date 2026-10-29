@@ -12,7 +12,7 @@
   "sources": [
     "Shotgun event page: International House Party Halloween by Lorzy Event"
   ],
-  "igCaption": "Miami's Halloween house party with a secret address 🎃 Tonight, Oct. 29, doors at 11pm. Tickets on Shotgun: International House Party Halloween by Lorzy Event.",
+  "igCaption": "Miami's Halloween house party with a secret address 🎃 Tonight, Oct. 29, doors at 11pm. Tickets on Shotgun: International House Party Halloween by Lorzy Event. Sponsored by NEAR, see who's at the party (app in our bio).",
   "scenes": [
     {
       "kind": "hook",
@@ -43,7 +43,8 @@
         "pitch": -30,
         "heading": 200,
         "night": true
-      }
+      },
+      "note": "Sponsored by NEAR 📍 app in our bio"
     },
     {
       "kind": "item",
@@ -179,9 +180,9 @@
     },
     {
       "kind": "outro",
-      "text": "Who are you bringing? Tag them. And when you're there, open NEAR. See who else is at the party, and finally get the name of that person in the best costume before the night ends.",
+      "text": "Who are you bringing? Tag them. And when you're there, open NEAR. See who else is at the party, and finally get the name of that person in the best costume before the night ends. NEAR is in our bio.",
       "overlay": "TAG YOUR CREW 👻",
-      "sub": "Open NEAR at the party",
+      "sub": "Download NEAR · link in bio 📍",
       "location": {
         "name": "Biscayne Bay, Miami",
         "lat": 25.778,
