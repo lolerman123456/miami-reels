@@ -61,6 +61,33 @@ async function main() {
   tileset.maximumScreenSpaceError = job.sse ?? 8;
   scene.primitives.add(tileset);
 
+  // Night look (owner, Oct 29: "make the map dark like at night with lit up skyscrapers"): the Google tiles only have
+  // daytime textures, so grade them to night and make the bright texels on building faces (glass, windows) glow warm.
+  if (job.shots.some(s => s.night)) {
+    if (scene.skyAtmosphere) scene.skyAtmosphere.show = false;
+    if (scene.skyBox) scene.skyBox.show = false;
+    if (scene.sun) scene.sun.show = false;
+    if (scene.moon) scene.moon.show = false;
+    scene.backgroundColor = Cesium.Color.fromCssColorString('#060914');
+    tileset.customShader = new Cesium.CustomShader({
+      lightingModel: Cesium.LightingModel.UNLIT,
+      fragmentShaderText: `
+void fragmentMain(FragmentInput fsInput, inout czm_modelMaterial material) {
+  vec3 base = material.diffuse;
+  float lum = dot(base, vec3(0.299, 0.587, 0.114));
+  vec3 upEC = normalize(mat3(czm_view) * normalize(fsInput.attributes.positionWC));
+  vec3 pEC = fsInput.attributes.positionEC;
+  vec3 nEC = normalize(cross(dFdx(pEC), dFdy(pEC)));
+  float facade = smoothstep(0.55, 0.85, 1.0 - abs(dot(nEC, upEC)));
+  vec3 night = base * vec3(0.17, 0.20, 0.32) + vec3(0.010, 0.012, 0.030);
+  float win = smoothstep(0.42, 0.72, lum) * facade;
+  vec3 warm = mix(vec3(1.00, 0.74, 0.40), vec3(0.75, 0.88, 1.00), smoothstep(0.78, 0.95, lum)); // office white on the brightest glass
+  vec3 street = vec3(0.30, 0.18, 0.06) * (1.0 - facade) * smoothstep(0.45, 0.80, lum);
+  material.diffuse = night + warm * win * 1.15 + street;
+}`,
+    });
+  }
+
   // South Florida is flat (~0–5 m above sea level), so a fixed geoid offset is more reliable than
   // sampling the surface (which hits rooftops in dense areas).
   for (const shot of job.shots) {
