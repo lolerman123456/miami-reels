@@ -112,32 +112,15 @@ void fragmentMain(FragmentInput fsInput, inout czm_modelMaterial material) {
   for (const shot of job.shots) {
     // parallel jobs render a slice [from, to) of a shot; t still spans the whole shot so slices join seamlessly
     const start = Math.max(shot.from ?? 0, shot.skip || 0), end = shot.to ?? shot.frames;
-    // pre-load the whole area (owner, Oct 29: "render an entire radius so it doesn't fail to render when it's that area's
-    // turn"): a full 360° ring around the place at the shot's distance, the whole shot's path, then the slice's path closely,
-    // so every tile the camera will see is downloaded and cached before the first real frame
-    for (let k = 0; k < 12; k++) {
-      viewer.camera.lookAt(shot.center, new Cesium.HeadingPitchRange(Cesium.Math.toRadians((shot.heading ?? 0) + k * 30), Cesium.Math.toRadians(shot.pitch ?? -30), shot.range ?? 1200));
-      await renderUntilLoaded(scene, tileset, k === 0 ? 45000 : 20000);
-    }
-    for (let f = 0; f < shot.frames; f += 8) { place(shot, f); await renderUntilLoaded(scene, tileset, 20000); }
-    for (let f = start; f < end; f += 2) { place(shot, f); await renderUntilLoaded(scene, tileset, 20000); }
+    // warm-up pass: visit the slice's path first so its tiles are downloaded and cached before the real frames
+    for (let f = start; f < end; f += 3) { place(shot, f); await renderUntilLoaded(scene, tileset, f === start ? 45000 : 20000); }
     for (let f = start; f < end; f++) {
       place(shot, f);
       // owner's rule: the map must never visibly load mid-video, so every frame waits until all its tiles are in
-      if (!await renderUntilLoaded(scene, tileset, f === start ? 60000 : (job.frameTimeout ?? 60000))) console.warn(`frame ${f} of shot ${shot.index}: tiles still loading after timeout`);
+      if (!await renderUntilLoaded(scene, tileset, f === start ? 60000 : (job.frameTimeout ?? 30000))) console.warn(`frame ${f} of shot ${shot.index}: tiles still loading after timeout`);
       // first frame of a slice: let lighting/atmosphere settle (otherwise it comes out darker = a visible blink)
       if (f === start) for (let w = 0; w < 12; w++) { scene.render(); await sleep(60); }
-      // owner, Oct 29: some frames came out with no map at all (blank). Re-draw a blank frame until the map is there;
-      // if it never comes, reuse the last good frame so a black flash can't reach the video
-      for (let k = 0; k < 8 && isBlank(scene.canvas); k++) {
-        await sleep(400 + k * 300);
-        place(shot, f);
-        await renderUntilLoaded(scene, tileset, 20000);
-        for (let w = 0; w < 6; w++) { scene.render(); await sleep(60); }
-      }
-      let blob = await new Promise(r => scene.canvas.toBlob(r, 'image/jpeg', 0.93));
-      if (isBlank(scene.canvas)) { log(`frame ${f} of shot ${shot.index}: still blank, reusing the last good frame`); if (lastGood) blob = lastGood; }
-      else lastGood = blob;
+      const blob = await new Promise(r => scene.canvas.toBlob(r, 'image/jpeg', 0.93));
       await fetch(`/api/frame?shot=${shot.index}&frame=${f}`, { method: 'POST', body: blob });
       if (f % 10 === 0) hud(`Shot ${shot.index + 1}/${job.shots.length} · frame ${f + 1}/${shot.frames}`);
     }
@@ -145,17 +128,6 @@ void fragmentMain(FragmentInput fsInput, inout czm_modelMaterial material) {
   }
   await fetch('/api/done', { method: 'POST' });
   hud('Done ✔');
-}
-
-let lastGood = null;
-// an empty frame (no tiles drawn) is one flat color: sample it small and check the spread of brightness
-function isBlank(canvas) {
-  const c = document.createElement('canvas'); c.width = 27; c.height = 48;
-  const g = c.getContext('2d'); g.drawImage(canvas, 0, 0, 27, 48);
-  const d = g.getImageData(0, 0, 27, 48).data;
-  let s = 0, s2 = 0; const n = d.length / 4;
-  for (let i = 0; i < d.length; i += 4) { const y = (d[i] + d[i + 1] + d[i + 2]) / 3; s += y; s2 += y * y; }
-  return s2 / n - (s / n) ** 2 < 6;
 }
 
 async function renderUntilLoaded(scene, tileset, timeout) {
