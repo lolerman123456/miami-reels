@@ -1,0 +1,162 @@
+{
+  "title": "South Florida Halloween Costume Contests With Prizes",
+  "sources": [
+    "Secret Miami",
+    "Miami New Times",
+    "Owner-provided event details"
+  ],
+  "collaborators": [],
+  "igCaption": "Costume contests with real prizes around South Florida this Halloween.\nOct. 31, South Florida, check each venue for entry details.\n\nSources: Secret Miami, Miami New Times, Owner-provided event details\n\n#SouthFlorida #HalloweenWeekend #MiamiEvents #FortLauderdale",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Dom’s in Brickell is giving the best-dressed guest a one hundred fifty dollar gift card this Halloween weekend.",
+      "overlay": [
+        "$150",
+        "BEST DRESSED"
+      ],
+      "emojis": [
+        "🎃",
+        "👻",
+        "💵",
+        "🧛"
+      ],
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start with Dom’s in Brickell. The costume contest begins at five p.m. on October thirty-first, and guests in costume get a free tequila shot with purchase. The best-dressed guest wins a one hundred fifty dollar gift card.",
+      "caption": "Start with Dom’s in Brickell. The costume contest begins at 5 p.m. on Oct. 31, and guests in costume get a free tequila shot with purchase. The best-dressed guest wins a $150 gift card.",
+      "overlay": "DOM'S",
+      "badge": "$150 CARD",
+      "sub": "1010 Brickell Ave",
+      "emoji": "🍸",
+      "stats": [
+        {
+          "value": "$150",
+          "label": "Gift card"
+        },
+        {
+          "value": "5 PM",
+          "label": "Party starts"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Dom's, 1010 Brickell Ave, Miami",
+        "lat": 25.7639,
+        "lon": -80.1914,
+        "h": 120
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 155,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Next door, DC Pie Co. gives kids twelve and under a free personal pizza with a purchase if they show up in costume. The pizzeria runs from noon to eleven p.m. on Halloween. If you’re there in costume, open NEAR and see who’s around.",
+      "caption": "Next door, DC Pie Co. gives kids 12 and under a free personal pizza with a purchase if they show up in costume. The pizzeria runs from noon to 11 p.m. on Halloween. If you’re there in costume, open NEAR and see who’s around.",
+      "overlay": "DC PIE CO.",
+      "badge": "FREE PIZZA",
+      "sub": "Kids in costume",
+      "emoji": "🍕",
+      "stats": [
+        {
+          "value": "12",
+          "label": "Age limit"
+        },
+        {
+          "value": "11 PM",
+          "label": "Kitchen closes"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "DC Pie Co., 1010 Brickell Ave, Miami",
+        "lat": 25.7639,
+        "lon": -80.1914,
+        "h": 120
+      },
+      "shot": {
+        "type": "push",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 245,
+        "degrees": 50,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami also gets Halloween on a Saturday this year. Miami New Times listed late-night parties across the city for October thirty-first, including costume contests, DJ sets, drink specials, and free admission at some stops.",
+      "caption": "Miami also gets Halloween on a Saturday this year. Miami New Times listed late-night parties across the city for Oct. 31, including costume contests, DJ sets, drink specials, and free admission at some stops.",
+      "overlay": "MIAMI",
+      "badge": "OCT. 31",
+      "sub": "Saturday Halloween",
+      "emoji": "🎧",
+      "stats": [
+        {
+          "value": "OCT. 31",
+          "label": "Halloween"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami, Florida",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 120
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1700,
+        "pitch": -35,
+        "heading": 20,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which South Florida costume contest should people know about next? The same way a costume contest leaves you wondering who that incredible costume belonged to, NEAR shows you the people you passed but never met.",
+      "overlay": "DROP THE CONTEST 🎃",
+      "sub": "Cash prizes only",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -30,
+        "heading": 300
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "133-south-florida-halloween-costume-contests"
+}
