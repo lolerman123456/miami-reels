@@ -1,0 +1,156 @@
+{
+  "title": "Halloween Eve: Friday Oct. 30 in South Florida",
+  "sources": [
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "The Friday Oct. 30 Halloween pick is at Factory Town.\nOct. 30 to Nov. 1, Factory Town, $120 to $250\n\nSources: Miami New Times\n\n#Miami #HalloweenMiami #SouthFlorida #MiamiEvents",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Looking for a Friday, October thirtieth Halloween party in South Florida? Hocus Pocus starts at Factory Town.",
+      "overlay": [
+        "FRIDAY",
+        "HALLOWEEN"
+      ],
+      "emojis": [
+        "🎃",
+        "🕺",
+        "🌙",
+        "🎧"
+      ],
+      "location": {
+        "name": "Factory Town",
+        "lat": 25.8089,
+        "lon": -80.2576,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Hocus Pocus starts at seven p.m. on Friday, October thirtieth, at Factory Town, 4800 Northwest 37th Avenue. It runs through Sunday, November first.",
+      "caption": "Hocus Pocus starts at 7 p.m. on Friday, Oct. 30, at Factory Town, 4800 NW 37th Ave. It runs through Sunday, Nov. 1.",
+      "overlay": "FACTORY TOWN",
+      "badge": "7 PM START",
+      "sub": "Friday through Sunday",
+      "emoji": "🎃",
+      "stats": [
+        {
+          "value": "7 PM",
+          "label": "start time"
+        },
+        {
+          "value": "3 DAYS",
+          "label": "festival run"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Factory Town",
+        "lat": 25.8089,
+        "lon": -80.2576,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 40,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Tickets cost one hundred twenty to two hundred fifty dollars through Dice. The lineup includes Chase and Status, Eric Prydz, Gorgon City, Indira Paganotto, Meduza, Nora En Pure, and others. If you’re there, open NEAR and see who’s at the same set.",
+      "caption": "Tickets cost $120 to $250 through Dice. The lineup includes Chase & Status, Eric Prydz, Gorgon City, Indira Paganotto, Meduza, Nora En Pure, and others. If you’re there, open NEAR and see who’s at the same set.",
+      "overlay": "HOCUS POCUS",
+      "badge": "$120-$250",
+      "sub": "Tickets through Dice",
+      "emoji": "🎟️",
+      "stats": [
+        {
+          "value": "$120",
+          "label": "low ticket"
+        },
+        {
+          "value": "$250",
+          "label": "high ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Factory Town",
+        "lat": 25.8089,
+        "lon": -80.2576,
+        "h": 20
+      },
+      "shot": {
+        "type": "push",
+        "range": 700,
+        "pitch": -34,
+        "heading": 118
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Hocus Pocus has become a Halloween tradition for Miami electronic music fans.",
+      "caption": "Hocus Pocus has become a Halloween tradition for Miami electronic music fans.",
+      "overlay": "THE LINEUP",
+      "badge": "6 NAMES",
+      "sub": "Electronic music weekend",
+      "emoji": "🎧",
+      "stats": [
+        {
+          "value": "6",
+          "label": "artists named"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Factory Town",
+        "lat": 25.8089,
+        "lon": -80.2576,
+        "h": 20
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 650,
+        "pitch": -35,
+        "heading": 286
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Friday gives you the full festival, and the weekend gives you time to recover. Passed someone in a costume and never got their name? NEAR is the quiet way to see who that person was after the night has already moved on.",
+      "overlay": "YOUR PICK? 🎃",
+      "sub": "Paid festival or free party",
+      "location": {
+        "name": "Factory Town",
+        "lat": 25.8089,
+        "lon": -80.2576,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 220
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "132-halloween-eve-friday-oct-30-in-south-flo"
+}
