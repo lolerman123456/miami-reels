@@ -16,6 +16,7 @@ export function sfxCues(scenes) {
     const hard = s.sfx !== 'soft';
     if (s.kind === 'hook') {
       if (hard) { add(0, s.hit || 'explosion', 0.75); add(4, 'impact', 0.45); }
+      if (s.scare?.sound) add(3, 'laugh', 1); // evil laugh under the monster scare
       else { add(0, 'boom', 0.35); add(3, 'tick', 0.3); add(8, 'tick', 0.3); }
     } else if (s.shotType === 'flyto') {
       add(s.from - 6, 'swoosh', hard ? 0.6 : 0.35);

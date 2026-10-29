@@ -151,8 +151,8 @@ export async function generateEpisode({ topic, hook, num: forcedNum } = {}) {
   // 1. plan
   const news = await fetchNews('local', { hours: 72, max: 80 }).catch(() => []);
   const plan = await chat([{ role: 'system', content: `You plan informational Instagram Reels for @getnearapp, a South Florida account.\n\n${FORMATS}\n\n` +
-    'Pick ONE topic people would send to a friend. Our best videos by far were the upcoming raves and the Halloween parties, so default to SOCIAL / COMMUNITY EVENTS / GUIDE: parties, raves, concerts, festivals, nightlife, day parties, food and drink events, pop-ups, watch parties, community events people go to with friends, coming up or happening now in South Florida (with dates, prices, venues), from the headlines. Never crime or history. ' +
-    'Use a news topic only when it is big (a record tower, a major opening, a price shock). Avoid boring topics: infrastructure stats, generic numbers, anything a viewer would not repeat to a friend. ' +
+    // owner, Oct 29: "from now on we're strictly saying social parties or stuff or clubs in Miami or South Florida for the map Reels"
+    'Pick ONE topic people would send to a friend. STRICTLY SOCIAL (owner, Oct 29): parties, clubs, raves, day parties, boat and rooftop parties, concerts and festivals, nightlife guides, coming up or happening now in Miami / South Florida (with dates, prices, venues), from the headlines. Never news, crime, history, real estate, prices or infrastructure. ' +
     'Don\'t repeat past videos. Return JSON: {"format":"…","angle":"one sentence","wikipedia":["up to 5 exact English Wikipedia article titles to pull facts from"],' +
     '"rent":["up to 12 South Florida city names or 5-digit ZIPs for Zillow rent data, only for rent/cost topics"],"news":[indexes of the relevant headlines],' +
     '"search":["up to 4 Google News searches for facts the other sources will not have: recent sales, events, crime data, case updates"]}' },

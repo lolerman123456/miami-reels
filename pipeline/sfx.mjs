@@ -35,5 +35,22 @@ export async function ensureSfx() {
     const file = path.join(dir, `${name}.wav`);
     if (!fs.existsSync(file)) await run('ffmpeg', ['-y', '-loglevel', 'error', ...args, '-ac', '2', file]);
   }
+  // evil laugh for the Halloween monster scare (owner, Oct 29: "MYAHAHAHA"): OpenAI voice, pitched down with an echo
+  const laugh = path.join(dir, 'laugh.wav');
+  if (!fs.existsSync(laugh) && process.env.OPENAI_API_KEY) {
+    try {
+      const res = await fetch('https://api.openai.com/v1/audio/speech', {
+        method: 'POST', headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model: 'gpt-4o-mini-tts', voice: 'onyx', input: 'Mwahahahahaha!', response_format: 'wav',
+          instructions: 'A horror movie demon laughing: a deep, slow, booming, evil, theatrical laugh. Only the laugh.' }),
+        signal: AbortSignal.timeout(60000),
+      });
+      if (!res.ok) throw new Error(`TTS ${res.status}`);
+      const raw = path.join(dir, 'laugh-raw.wav');
+      fs.writeFileSync(raw, Buffer.from(await res.arrayBuffer()));
+      await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', raw, '-af', 'asetrate=18720,aresample=44100,aecho=0.8:0.6:90|180:0.35|0.2,volume=1.6,alimiter=limit=0.95', '-ac', '2', laugh]);
+      fs.rmSync(raw, { force: true });
+    } catch (e) { console.log(`  (laugh sound not made: ${e.message})`); }
+  }
   return dir;
 }

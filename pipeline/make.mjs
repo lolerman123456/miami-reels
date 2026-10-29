@@ -76,6 +76,7 @@ export function buildProps(episode, timeline, duration, captions, videos, music 
       photos: s.photos?.files?.length ? { files: s.photos.files, at: s.photos.at ?? 0.4, style: s.photos.style ?? null } : null,
       reveal: s.reveal ?? null,
       logo: s.logo?.file ? { file: s.logo.file, label: s.logo.label ?? null } : null,
+      ...stickersFor(episode, s, i),
       screen: s.screen ? timeScreen(s.screen, i, captions, timeline) : null,
       stats: s.stats ?? null, source: s.source ?? null, hit: s.hit ?? null, shotType: s.shot?.type ?? null, sfx: episode.sfx ?? 'hard',
       from: Math.round(timeline[i].start * FPS),
@@ -83,6 +84,31 @@ export function buildProps(episode, timeline, duration, captions, videos, music 
       video: videos[i],
     })),
   };
+}
+
+// Map stickers (owner, Oct 29): a monster scare on the hook ("MYAHAHAHA", with the laugh sound when it was made) and
+// mini monsters perched on / running around the map. episode.stickers = {"scare":{"emoji","text"},"perch":[],"runners":[],
+// "flyers":[]} or false (off); without it the season picks a pack (stickerPack).
+function stickersFor(episode, s, i) {
+  const pack = episode.stickers === false ? null : episode.stickers || stickerPack();
+  if (!pack) return {};
+  const pick = (list, k) => (list?.length ? list[k % list.length] : null);
+  const k = i + (episode.id || '').length; // a different mix per episode
+  const laugh = fs.existsSync(path.join(ROOT, 'assets', 'sfx', 'laugh.wav'));
+  return {
+    scare: s.kind === 'hook' && pack.scare ? { ...pack.scare, sound: laugh } : null,
+    critters: s.kind === 'hook' || s.image ? null : { perch: s.kind === 'item' ? pick(pack.perch, k) : null, runner: pick(pack.runners, k), flyer: i % 2 ? pick(pack.flyers, k) : null },
+  };
+}
+
+export function stickerPack(d = new Date()) {
+  const md = d.toLocaleDateString('en-CA', { timeZone: 'America/New_York' }).slice(5);
+  if (md >= '10-10' && md <= '11-02') return { scare: { emoji: '👹', text: 'MYAHAHAHA' }, perch: ['🎃', '👻', '🧛', '💀', '🧟', '😈'], runners: ['🧟', '👻', '💀', '🎃'], flyers: ['🦇'] };
+  if (md >= '11-15' && md <= '11-28') return { perch: ['🦃', '🥧', '🍗'], runners: ['🦃'], flyers: ['🍂'] };
+  if (md >= '12-01' && md <= '12-26') return { perch: ['🎅', '⛄', '🎄', '🎁'], runners: ['🦌', '🧝'], flyers: ['❄️'] };
+  if (md >= '12-27' || md <= '01-01') return { perch: ['🍾', '🥳', '🪩'], runners: ['🕺', '💃'], flyers: ['🎆'] };
+  if (md >= '02-07' && md <= '02-14') return { perch: ['💘', '🌹', '🍾'], runners: ['💃', '🕺'], flyers: ['💘'] };
+  return { perch: ['🪩', '🍾', '🔥', '👽'], runners: ['🕺', '💃'], flyers: ['🛸'] }; // party pack
 }
 
 // How-to screens: each step happens on the word the narrator says ("cue"), typing a few frames early so the letters land

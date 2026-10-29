@@ -24,6 +24,8 @@ export type Scene = {
   screen?: ScreenSpec | null; // how-to walkthrough: a browser window with typing, clicks and results
   stats?: { value: string; label: string }[] | null; // big numbers that count up while the narrator says them
   logo?: { file: string; label?: string | null } | null; // host's logo on the hook (event promos, owner Oct 29)
+  scare?: { emoji: string; text: string } | null; // hook: a monster glows up behind the title for a second, laughing (owner, Oct 29)
+  critters?: { perch: string | null; runner: string | null; flyer: string | null } | null; // map easter eggs (owner, Oct 29)
   source?: string | null; // where the facts come from, shown small
   hit?: string | null;
   shotType?: string | null;
@@ -112,9 +114,75 @@ const SceneView: React.FC<{ scene: Scene; index: number }> = ({ scene, index }) 
         background: scene.image ? 'linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,0) 25%, rgba(0,0,0,0) 80%, rgba(0,0,0,.2) 100%)'
           : 'linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 32%, rgba(0,0,0,0) 58%, rgba(0,0,0,.55) 100%)',
       }} />
+      {scene.scare && <Scare scare={scene.scare} />}
+      {scene.critters && <Critters scene={scene} index={index} />}
       {scene.kind === 'hook' && <Hook scene={scene} />}
       {scene.kind === 'item' && <Item scene={scene} />}
       {scene.kind === 'outro' && <Outro scene={scene} />}
+    </AbsoluteFill>
+  );
+};
+
+// Stickers (owner, Oct 29: "a red demon slightly appears for a second saying MYAHAHAHA", "mini monsters running around
+// the map"): emoji with a white sticker outline. The camera always looks at the scene's place, so a sticker standing on
+// the frame's center sits on that building while the map orbits under it.
+const STICKER = 'drop-shadow(4px 0 0 #fff) drop-shadow(-4px 0 0 #fff) drop-shadow(0 4px 0 #fff) drop-shadow(0 -4px 0 #fff) drop-shadow(0 10px 18px rgba(0,0,0,.55))';
+
+const Scare: React.FC<{ scare: { emoji: string; text: string } }> = ({ scare }) => {
+  const frame = useCurrentFrame();
+  const show = interpolate(frame, [0, 6, 30, 44], [0, 1, 1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  if (show <= 0) return null;
+  const shake = Math.sin(frame * 2.7) * 10, grow = 0.86 + 0.24 * ease(frame, 0, 40);
+  return (
+    <AbsoluteFill style={{ pointerEvents: 'none' }}>
+      <AbsoluteFill style={{ background: 'radial-gradient(circle at 50% 55%, rgba(255,0,0,0) 30%, rgba(170,0,0,.55) 100%)', opacity: show }} />
+      <div style={{ position: 'absolute', left: 0, right: 0, top: 640, display: 'flex', justifyContent: 'center', opacity: 0.7 * show,
+        transform: `translateX(${shake}px) scale(${grow})` }}>
+        <span style={{ fontFamily: EMOJI, fontSize: 760, lineHeight: 1, filter: 'drop-shadow(0 0 50px rgba(255,20,20,.95)) saturate(1.4)' }}>{scare.emoji}</span>
+      </div>
+      <div style={{ position: 'absolute', left: 0, right: 0, top: 1420, display: 'flex', justifyContent: 'center', opacity: show }}>
+        <div style={{ transform: `rotate(-7deg) scale(${0.8 + 0.25 * ease(frame, 2, 8)})`, display: 'flex' }}>
+          {scare.text.split('').map((ch, i) => (
+            <span key={i} style={{ fontFamily: FONT, fontWeight: 900, fontStyle: 'italic', fontSize: 118, color: '#FF2424', letterSpacing: -2,
+              WebkitTextStroke: '5px #fff', paintOrder: 'stroke fill', textShadow: '0 0 30px rgba(255,0,0,.8)',
+              display: 'inline-block', transform: `translateY(${Math.sin(frame * 0.9 + i) * 12}px)` }}>{ch}</span>
+          ))}
+        </div>
+      </div>
+    </AbsoluteFill>
+  );
+};
+
+const Critters: React.FC<{ scene: Scene; index: number }> = ({ scene, index }) => {
+  const frame = useCurrentFrame();
+  const c = scene.critters!;
+  const out = 1 - ease(frame, scene.duration - 8, 6);
+  // real photos take over the frame at photos.at: the perched monster leaves before them
+  const photosAt = scene.photos ? Math.round(scene.duration * scene.photos.at) : Infinity;
+  const perchOn = ease(frame, 10, 8) * Math.min(out, 1 - ease(frame, photosAt - 10, 6));
+  const run = (frame - 18) / 75; // a runner crosses the lower map in ~2.5 s
+  const ltr = index % 2 === 0;
+  const fly = (frame - 34) / 90;
+  return (
+    <AbsoluteFill style={{ pointerEvents: 'none' }}>
+      {c.perch && perchOn > 0 && (
+        <div style={{ position: 'absolute', left: 540 - 95, top: 960 - 200, width: 190, textAlign: 'center', opacity: perchOn,
+          transform: `translateY(${Math.sin(frame / 5) * 7 + (1 - perchOn) * 30}px) rotate(${Math.sin(frame / 9) * 5}deg) scale(${0.6 + 0.4 * perchOn})`, transformOrigin: '50% 100%' }}>
+          <span style={{ fontFamily: EMOJI, fontSize: 170, lineHeight: 1, filter: STICKER }}>{c.perch}</span>
+        </div>
+      )}
+      {c.runner && run > 0 && run < 1 && (
+        <div style={{ position: 'absolute', top: 1500, left: ltr ? -160 + run * 1400 : 1240 - run * 1400,
+          transform: `translateY(${-Math.abs(Math.sin(frame / 3.2)) * 34}px) rotate(${Math.sin(frame / 1.6) * 8}deg) scaleX(${ltr ? -1 : 1})` }}>
+          <span style={{ fontFamily: EMOJI, fontSize: 115, lineHeight: 1, filter: STICKER }}>{c.runner}</span>
+        </div>
+      )}
+      {c.flyer && fly > 0 && fly < 1 && (
+        <div style={{ position: 'absolute', top: 700 + Math.sin(fly * 9) * 40, left: ltr ? 1200 - fly * 1400 : -120 + fly * 1400,
+          transform: `scale(${0.8 + 0.25 * Math.abs(Math.sin(frame / 2))}, ${1 - 0.25 * Math.abs(Math.sin(frame / 2))})` }}>
+          <span style={{ fontFamily: EMOJI, fontSize: 84, lineHeight: 1, filter: STICKER }}>{c.flyer}</span>
+        </div>
+      )}
     </AbsoluteFill>
   );
 };
