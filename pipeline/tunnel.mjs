@@ -37,22 +37,32 @@ export async function serveFilesPublicly(files) {
   const port = server.address().port;
 
   const bin = process.env.CLOUDFLARED_BIN || path.join(ROOT, 'tools', 'cloudflared');
-  const cf = spawn(bin,
-    ['tunnel', '--no-autoupdate', '--url', `http://127.0.0.1:${port}`], { stdio: ['ignore', 'pipe', 'pipe'] });
-  let timer;
-  const base = await new Promise((resolve, reject) => {
-    timer = setTimeout(() => reject(new Error('Tunnel did not start')), 60000);
-    const onData = d => {
-      const m = /https:\/\/[a-z0-9-]+\.trycloudflare\.com/.exec(String(d));
-      if (m) { clearTimeout(timer); resolve(m[0]); }
-    };
-    cf.stdout.on('data', onData); cf.stderr.on('data', onData);
-    cf.on('exit', c => reject(new Error('cloudflared exited ' + c)));
-  }).catch(e => {
-    // Oct 28: a failed tunnel left the local server listening, so node never exited after the post went out
-    // and the Posts job hung for 2 h, blocking the next carousel
-    clearTimeout(timer); cf.kill(); server.close(); throw e;
-  });
+  // Oct 25 + Oct 29: quick tunnels sometimes fail to start ("cloudflared exited 1") and the post was lost; try up to 3 times
+  let cf, base;
+  for (let attempt = 1; ; attempt++) {
+    cf = spawn(bin,
+      ['tunnel', '--no-autoupdate', '--url', `http://127.0.0.1:${port}`], { stdio: ['ignore', 'pipe', 'pipe'] });
+    let timer;
+    try {
+      base = await new Promise((resolve, reject) => {
+        timer = setTimeout(() => reject(new Error('Tunnel did not start')), 60000);
+        const onData = d => {
+          const m = /https:\/\/[a-z0-9-]+\.trycloudflare\.com/.exec(String(d));
+          if (m) { clearTimeout(timer); resolve(m[0]); }
+        };
+        cf.stdout.on('data', onData); cf.stderr.on('data', onData);
+        cf.on('exit', c => reject(new Error('cloudflared exited ' + c)));
+      });
+      break;
+    } catch (e) {
+      clearTimeout(timer); cf.kill();
+      // Oct 28: a failed tunnel left the local server listening, so node never exited after the post went out
+      // and the Posts job hung for 2 h, blocking the next carousel
+      if (attempt >= 3) { server.close(); throw e; }
+      console.log(`  (tunnel attempt ${attempt} failed: ${e.message}; retrying)`);
+      await new Promise(r => setTimeout(r, 5000 * attempt));
+    }
+  }
 
   const urls = [...routes.keys()].map(r => base + r);
   // wait until the tunnel actually serves the files (DNS for new tunnels can take a few seconds)
