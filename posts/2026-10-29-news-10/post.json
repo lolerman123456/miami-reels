@@ -1,0 +1,98 @@
+{
+  "sector": "CRIME",
+  "cover": {
+    "top": "AT A BOYNTON GAS STATION",
+    "main": "HIS IPHONE",
+    "highlight": "BLOCKED",
+    "bottom": "A 9MM BULLET",
+    "blur": false,
+    "photo": {
+      "query": "gas station police lights close-up damaged smartphone",
+      "prompt": "dramatic close-up of a damaged iPhone on a gas station counter, with police lights reflecting in the background",
+      "mark": "circle"
+    },
+    "emojis": [
+      "📱",
+      "⛽",
+      "🚨"
+    ],
+    "logos": [
+      "apple.com"
+    ],
+    "photoFile": "news-0.jpg",
+    "credit": "Photo: WSVN 7News",
+    "logoFiles": [
+      "logo-c0.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "CRIME",
+      "headline": "The phone saved his life, WPEC reported",
+      "highlight": "saved his life",
+      "body": "WPEC said the man survived an attempted robbery at a Boynton Beach gas station after a cellphone blocked a bullet.",
+      "place": "Boynton Beach",
+      "source": "WPEC",
+      "photo": {
+        "query": "Boynton Beach gas station police lights night",
+        "prompt": "nighttime Boynton Beach gas station with police lights reflecting off fuel pumps after a shooting investigation"
+      },
+      "emoji": "📱",
+      "chip": "FATHER",
+      "logo": "apple.com",
+      "color": "#A2AAAD",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "His iPhone blocked a bullet during the robbery attempt",
+      "highlight": "blocked a bullet",
+      "body": "WSVN reported that the man’s iPhone deflected the round during the attempted robbery at the gas station.",
+      "place": "Boynton Beach",
+      "source": "WSVN 7News",
+      "photo": {
+        "query": "damaged smartphone close-up bullet impact",
+        "prompt": "close-up of a damaged smartphone on a gas station counter with a visible impact mark"
+      },
+      "emoji": "🛡️",
+      "chip": "9MM",
+      "logo": "apple.com",
+      "color": "#00AEEF",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "The phone was in his pocket when it stopped the bullet",
+      "highlight": "in his pocket",
+      "body": "The Sun Sentinel said the cellphone was in the man’s pocket when it blocked the bullet.",
+      "place": "Boynton Beach",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "smartphone in pants pocket close-up",
+        "prompt": "close-up of a smartphone outline inside a pants pocket under harsh gas station lighting"
+      },
+      "emoji": "👖",
+      "chip": "POCKET",
+      "logo": "apple.com",
+      "color": "#A2AAAD",
+      "photoFile": "news-0.jpg",
+      "credit": "Photo: WSVN 7News",
+      "logoFile": "logo-3.png"
+    }
+  ],
+  "caption": "A cellphone stopped a bullet during a Boynton Beach robbery attempt.",
+  "hashtags": [
+    "#BoyntonBeach",
+    "#PalmBeachCounty"
+  ],
+  "collaborators": [],
+  "igCaption": "A cellphone stopped a bullet during a Boynton Beach robbery attempt.\n\n📰 Sources: WPEC, WSVN 7News, Sun Sentinel\n\n#BoyntonBeach #PalmBeachCounty #miami #southflorida",
+  "kind": "news",
+  "kicker": "MIAMI NEWS 🚨",
+  "date": "2026-10-29",
+  "id": "2026-10-29-news-10"
+}
