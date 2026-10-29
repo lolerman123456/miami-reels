@@ -90,7 +90,10 @@ export function buildProps(episode, timeline, duration, captions, videos, music 
 // mini monsters perched on / running around the map. episode.stickers = {"scare":{"emoji","text"},"perch":[],"runners":[],
 // "flyers":[]} or false (off); without it the season picks a pack (stickerPack).
 function stickersFor(episode, s, i) {
-  const pack = episode.stickers === false ? null : episode.stickers || stickerPack();
+  // owner, Oct 29: "we don't need to do it to every map Reel, every other day" (Oct 29 is an on day); episode.stickers forces it
+  const day = Math.floor(Date.parse(new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' })) / 864e5);
+  const on = (day - Math.floor(Date.parse('2026-10-29') / 864e5)) % 2 === 0;
+  const pack = episode.stickers === false ? null : episode.stickers || (on ? stickerPack() : null);
   if (!pack) return {};
   const pick = (list, k) => (list?.length ? list[k % list.length] : null);
   const k = i + (episode.id || '').length; // a different mix per episode
