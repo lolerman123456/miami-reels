@@ -32,7 +32,8 @@ export async function captureShots(episode, timeline, epDir, { mode } = {}) {
 // One camera job per scene. A "flyto" shot gets the previous shot so it can start exactly where that one ended.
 export function buildShots(episode, timeline) {
   const shots = episode.scenes.map((scene, index) => ({
-    index, frames: Math.ceil(timeline[index].duration * FPS) + 2, ...scene.location, ...scene.shot,
+    // owner, Oct 29: map Reels "always at night" (episode "night": false = daytime map)
+    index, frames: Math.ceil(timeline[index].duration * FPS) + 2, night: episode.night !== false, ...scene.location, ...scene.shot,
   }));
   return shots.map((s, i) => (s.type === 'flyto' && i > 0 ? { ...s, prev: { ...shots[i - 1] } } : s));
 }
