@@ -42,8 +42,25 @@ const KINDS = {
   // TikTok-first: things people can actually go to in the next 7 days (the raves Reel was our top post)
   // everyday share bait (owner): food deals, free stuff, giveaways, food drives — things people send to a friend
   deals: { kicker: 'FREE & CHEAP IN SOUTH FLORIDA 🍔', feed: 'local', ask: 'A "deals and free stuff" carousel for South Florida: the 5–6 best deals, freebies, giveaways and community food drives/distributions happening now or in the next 7 days (fast-food app deals and free-item days, national food day deals, free events, giveaways, church or food bank food drives with the place, date and time). One slide each (5–6 slides): what you get, the price or "FREE", WHO by name (the chain, brand, church or group; never "participating chains"), where (city for local ones), the exact dates, and how to get it (app, code, bring ID, first come). Only deals and drives stated in the headlines, still valid now or upcoming; never guess a price or date. Tags are DEALS. Tag the chain or organization if it is in the collaborators list. Not only food: parking (ParkMobile promos, free or $1 parking), transit and Brightline deals, free museum or attraction days, coupons and promo codes people here can use. The cover leads with the single best deal as a hook (e.g. "$1 PARKING ALL WEEKEND", "FREE CHICK-FIL-A TUESDAY"), or an owner-approved hook (Oct 4): "FREE FOOD IN SOUTH FLORIDA THIS WEEK 🍔", "7 FREE THINGS TO DO THIS WEEKEND", "FREE ENTRY: SPOTS THAT COST $0 THIS MONTH", "RESTAURANTS GIVING STUFF AWAY THIS WEEK", "BIRTHDAY FREEBIES IN SOUTH FLORIDA (SAVE THIS) 🎂". Say South Florida, not Miami, unless the place is in Miami. Caption ends with "send this to someone who needs it".' },
+  // owner, Oct 29: "we're strictly social now, Miami social" — relatable nightlife posts people send to their friends,
+  // e.g. "HOW TO KNOW YOU'RE THE ONE EVERYONE IS LOOKING AT IN THE CLUB"; invented people in crazy AI party photos
+  social: { kicker: 'MIAMI AFTER DARK 🪩', ask: 'A relatable Miami nightlife / social-life carousel people SEND to their friends and tag each other on. Pick ONE fresh idea that is different from our recent posts, in one of these shapes: "HOW TO KNOW YOU\'RE THE ONE EVERYONE IS LOOKING AT IN THE CLUB", "SIGNS YOU\'RE THE MAIN CHARACTER OF THE FRIEND GROUP", "TYPES OF PEOPLE AT EVERY MIAMI DAY PARTY", "THINGS EVERY GIRL DOES BEFORE A NIGHT OUT IN MIAMI", "RED FLAGS AT A BRICKELL ROOFTOP", "WHAT YOUR CLUB ORDER SAYS ABOUT YOU", "HOW TO TELL IF THE BOUNCER LIKES YOU", "THE 5 STAGES OF A MIAMI NIGHT OUT", "SIGNS YOU\'RE THE FRIEND WHO ALWAYS SAYS ONE MORE DRINK". 4–5 slides, one sign/type/stage each: the headline is the sign itself (short, specific, something people recognize from a real Miami night: the bottle-service sparklers, the Uber surge at 3am, the Wynwood line, the Brickell rooftop, the LIV wristband, the Cuban coffee after, the beach the next day), the body is 1–2 short lines that make the reader go "that\'s literally me" or "that\'s so my friend". Specific beats general. Light, confident, flattering to the reader; never mean, never about a real person, ethnicity, religion, nationality or body type, nothing sexual or about drugs, and no drinking-and-driving. Sector NIGHTLIFE on every slide; source empty. Photos: an AI "prompt" for every slide and the cover describing ONE crazy, specific party moment with invented people that matches the slide (who, doing what, where in Miami, the light), e.g. "a woman in a silver mini dress laughing on a packed LIV dance floor while three guys behind her stare, sparkler bottles overhead"; "query" empty. Cover: top = the setup ("HOW TO KNOW", "SIGNS", "TYPES OF"), main + highlight + bottom finish ONE short sentence, the highlight the 1–3 words people react to (e.g. "HOW TO KNOW / YOU\'RE THE ONE / EVERYONE\'S LOOKING AT / IN THE CLUB"). Caption: one line that makes people tag a friend, e.g. "tag the friend who walks in like this 👀". Emojis welcome on slides.' },
   upcoming: { kicker: 'THIS WEEK IN SOUTH FLORIDA 🎟️', feed: 'local', ask: 'An "upcoming in South Florida" carousel: the 5–6 best things happening in the next 7 days that people can actually go to (concerts, festivals, parties, restaurant openings, free events, big games, pop-ups). Cover hook in the owner-approved style (Oct 4): "THIS IS COMING TO SOUTH FLORIDA AND NOBODY\'S TALKING ABOUT IT 👀", "WHERE SOUTH FLORIDA IS GOING OUT THIS WEEKEND", "SAVE THIS: EVERY BIG EVENT THIS WEEK". Say South Florida, not Miami, unless the place is in Miami. One slide each: what it is, the exact date and time, the venue and city, the price if known, and one line on why it is worth going. Use events whose dates are in the headlines and fall within the next 7 days (or ongoing ones, like an exhibit or season that is open this week); skip anything already over. Always return 5–6 slides. Order by date. Headlines name the event; tags are EVENTS. Caption ends asking who they are taking (tag a friend).' },
 };
+
+// social posts aren't news: no headlines/sources, a relatable voice (still no em dashes and no AI-sounding formulas)
+const SOCIAL_SYSTEM = `You write relatable Miami nightlife and social-life carousels for @getnearapp (South Florida, audience 18–30). NEAR is an app for seeing who else is at the same party or place. You sound like the funniest friend in the group chat who goes out every weekend: specific, confident, quick.
+
+Rules:
+- Every line must feel like a real Miami night (real neighborhoods, real kinds of places: Brickell rooftops, Wynwood bars, South Beach clubs, day parties, boat days, the 3am food run). Specific details beat general ones.
+- Short. Headlines ≤ 55 characters, all about the reader. Body ≤ 120 characters, one or two lines, no filler.
+- Write like a person, not AI. Banned: em or en dashes, "It's not X, it's Y", "not just X", "Here's the thing", "Let's be real", "Plot twist", "energy", "vibe check", "starter pack", "main character energy", "nobody asked", hashtags in the text, "we've all been there", "be honest".
+- Never mean, never about real people, groups, ethnicities, religions, nationalities or bodies; nothing sexual, no drugs, no drunk driving.
+
+The cover is a scroll-stopping hook in stacked all caps lines: top (small setup), main, highlight (1–3 words in giant blue), bottom (the payoff). The four lines read as ONE sentence.
+
+Return JSON: {"sector":"NIGHTLIFE","cover":{"top":"...","main":"...","highlight":"...","bottom":"...","blur":false,"photo":{"query":"","prompt":"..."},"emojis":["2-4 emojis"]},"slides":[{"tag":"NIGHTLIFE","headline":"...","highlight":"2-3 word phrase copied exactly from the headline to color blue","body":"...","source":"","photo":{"query":"","prompt":"..."},"emoji":"1 emoji","chip":"short label ≤16 chars, e.g. SIGN #1"}],"caption":"...","hashtags":["2 specific hashtags"],"collaborators":[]}
+4 to 5 slides. EVERY slide must have tag, headline, highlight, body, photo and emoji.`;
 
 const SYSTEM = `You write carousel posts for @getnearapp, a South Florida Instagram account: local news, real facts and useful information, community first. You're the friend who always knows what's going on and explains it clearly.
 
@@ -232,7 +249,7 @@ async function digDeeper(news, what) {
 
 export async function writeCarousel(kind, { topic, preview } = {}) {
   const spec = KINDS[kind];
-  if (!spec) throw new Error(`Unknown carousel kind "${kind}" (brief|news|world|feature|upcoming|deals|celeb)`);
+  if (!spec) throw new Error(`Unknown carousel kind "${kind}" (brief|news|world|feature|upcoming|deals|celeb|social)`);
   const ownTopic = topic;
   let storyPhotos = [], storyText = '';
   const weekday = new Date(new Date().toLocaleString('en-US', { timeZone: 'America/New_York' })).getDay();
@@ -240,7 +257,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   const kicker = feature ? `${feature.name}` : spec.kicker;
 
   step(`Writing ${kind} carousel${feature ? ` (${feature.name})` : ''}`);
-  const news = kind === 'celeb' ? [] : await fetchNews(spec.feed);
+  const news = kind === 'celeb' || kind === 'social' ? [] : await fetchNews(spec.feed);
   const extra = [];
   let celeb = null;
   if (kind === 'celeb') {
@@ -250,7 +267,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     extra.push(`WIKIPEDIA "${celeb.person}" (the ONLY source for this post):\n${celeb.wiki.text}`);
     storyPhotos = celeb.photos;
     topic = `${celeb.person}: ${celeb.fact} (the article says: "${celeb.quote}")`;
-  } else if (topic) {
+  } else if (topic && kind !== 'social') {
     // owner's topic: pull topic-specific headlines + any matching data source
     const found = await searchNews(`${topic} Florida`).catch(() => []);
     news.unshift(...found);
@@ -329,13 +346,14 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   const recent = recentPosts();
   const ask = [
     kind === 'celeb' ? `${spec.ask}\nThe person and the fact (checked against the article): ${topic}` :
+    kind === 'social' ? `${spec.ask}${topic ? `\nThe account owner asked for this idea — use it: ${topic}` : ''}` :
     topic ? `${spec.pick ? spec.ask + '\n' : ''}The account owner asked for this — follow it: ${topic}` : (feature ? feature.ask : spec.ask),
     kind === 'world' ? 'COVER: the small top line is always "NEWS FROM AROUND THE WORLD" (we add it). Leave "top" empty and make main + highlight + bottom a complete sentence on their own, with its own subject, e.g. main "A NOR\'EASTER PUTS", highlight "50 MILLION", bottom "FROM MAINE TO VIRGINIA IN ITS PATH".' : '',
-    'PHOTOS must stop the scroll: ask for striking, dramatic, specific pictures (the actual person, scene, vehicle, building or moment). Optionally, on AT MOST ONE slide or the cover, and only when it adds meaning, add "mark" to draw on the photo: "circle" (point out the key detail), "arrow" (point at it), "x" (something destroyed, cancelled, banned or a public figure who lost/was ousted), or "stamp: WANTED" / "stamp: ON THE RUN" / "stamp: ARRESTED" / "stamp: CLOSED" / "stamp: SOLD OUT" style labels (few words). Be creative but never mark a private person, a victim or a child, and most posts need no mark.',
+    kind === 'social' ? '' : 'PHOTOS must stop the scroll: ask for striking, dramatic, specific pictures (the actual person, scene, vehicle, building or moment). Optionally, on AT MOST ONE slide or the cover, and only when it adds meaning, add "mark" to draw on the photo: "circle" (point out the key detail), "arrow" (point at it), "x" (something destroyed, cancelled, banned or a public figure who lost/was ousted), or "stamp: WANTED" / "stamp: ON THE RUN" / "stamp: ARRESTED" / "stamp: CLOSED" / "stamp: SOLD OUT" style labels (few words). Be creative but never mark a private person, a victim or a child, and most posts need no mark.',
     `Today (New York): ${new Date().toLocaleDateString('en-US', { timeZone: 'America/New_York', weekday: 'long', month: 'long', day: 'numeric' })}`,
     ['deals', 'upcoming'].includes(kind) ? 'LIST POST: ignore the rule that headlines chain with transitions (no "THAT\'S…", "AND…", "SO…"). Each headline names the thing itself, e.g. "DUNKIN\': FREE COFFEE TUESDAY" or "KAROL G POP-UP IN WYNWOOD, OCT. 3–4". Take dates, times, venues and prices from the ARTICLE texts. 5–6 DIFFERENT items: never two slides about the same place, event, restaurant or chain. For a national chain the place is "all locations" or "in the app" (only chains with South Florida locations). Prefer South Florida items; skip online shopping deals (Amazon, shipped items).' : '',
     kind === 'deals' ? `Headlines (date — outlet — headline — summary). Only use deals, freebies and drives that are still valid now or coming up in the next 7 days; skip expired ones:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` :
-    kind === 'celeb' ? '' :
+    kind === 'celeb' || kind === 'social' ? '' :
     kind === 'upcoming' ? `Headlines (date — outlet — headline — summary). Only use events whose date is stated and falls in the next 7 days:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}` :
     `Headlines (date — outlet — headline — summary). Only use headlines from the last 3 days about THIS exact event; a search can return an older, similar event (last winter's storm, a past case): ignore those, and if two headlines disagree, leave the detail out:\n${news.map(n => `- ${n.date ? new Date(n.date).toDateString() : '?'} — ${n.source} — ${n.title}${n.summary ? ' — ' + n.summary : ''}`).join('\n')}`,
     extra.length ? `Fact sources:\n\n${extra.join('\n\n')}` : '',
@@ -345,24 +363,25 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   let post;
   const TRIES = 5;
   for (let attempt = 1; attempt <= TRIES; attempt++) {
-    post = await chat([{ role: 'system', content: `${SYSTEM}\n\n${STYLE}\n\n${toneLines()}\n\n${HANDLES_RULE()}` }, { role: 'user', content: `${ask}\n\n${REMINDER}` }], 'write');
+    post = await chat([{ role: 'system', content: kind === 'social' ? SOCIAL_SYSTEM : `${SYSTEM}\n\n${STYLE}\n\n${toneLines()}\n\n${HANDLES_RULE()}` }, { role: 'user', content: kind === 'social' ? ask : `${ask}\n\n${REMINDER}` }], 'write');
     const n = post?.slides?.length || 0;
     const copy = JSON.stringify([post?.caption, ...(post?.slides || []).map(x => [x.headline, x.body])]);
     const tells = [...aiTells(copy), ...memeTells(copy), ...(copy.match(BANNED) || []).slice(0, 1)];
     if (tells.length && attempt < TRIES) { console.log(`  attempt ${attempt}: sounds like AI (${tells.join(' | ')}) — rewriting`); post = null; continue; }
     const incomplete = (post?.slides || []).filter(s => !s?.headline || !s?.body || !s?.photo).length;
     const CONNECT = /^(that|that's|thats|which|and|so|but|because|the reason|for |on top|meanwhile|now|still|plus|this|it|here|what|those|even|then|since|after|as a result)/i;
-    const loose = (kind === 'feature' || topic) && kind !== 'celeb' ? (post?.slides || []).slice(1).filter(x => !CONNECT.test(String(x.headline || '').trim())).length : 0;
+    const loose = (kind === 'feature' || topic) && kind !== 'celeb' && kind !== 'social' ? (post?.slides || []).slice(1).filter(x => !CONNECT.test(String(x.headline || '').trim())).length : 0;
     if (loose > 0 && attempt < TRIES) { console.log(`  attempt ${attempt}: ${loose} headlines don't connect — rewriting`); post = null; continue; }
     const listDupes = ['deals', 'upcoming'].includes(kind) ? n - new Set((post?.slides || []).map(x => String(x.headline || '').split(/[:,]| IN | AT /i)[0].trim().toLowerCase())).size : 0;
     if ((listDupes > 0 || (['deals', 'upcoming'].includes(kind) && n < 5)) && attempt < TRIES) { console.log(`  attempt ${attempt}: list needs 5–6 different items (${n} slides, ${listDupes} repeats) — rewriting`); post = null; continue; }
+    if (kind === 'social' && n > 5) post.slides = post.slides.slice(0, 5);
     if (post?.cover?.highlight && post.cover.photo && n >= 3 && n <= 8 && !incomplete) break;
     console.log(`  attempt ${attempt}: bad shape (${n} slides, ${incomplete} incomplete${n ? '' : `, got ${JSON.stringify(post || {}).slice(0, 160)}`}) — retrying`);
     post = null;
   }
   if (!post) throw new Error('Could not write carousel');
   // boring check (owner, Sep 29): rate the hook and the substance; a weak draft gets one rewrite with the editor's notes
-  if (!['deals', 'upcoming'].includes(kind)) {
+  if (!['deals', 'upcoming', 'social'].includes(kind)) {
     const ed = await chat([{ role: 'system', content: 'You are a tough Instagram news editor for a South Florida account (18–35 audience). Rate this carousel draft 1–10 on HOOK (would the cover make someone stop scrolling? specific and surprising, not dry or procedural) and SUBSTANCE (does every slide add a new concrete fact, and does the story build to real stakes?). Reply JSON {"hook": n, "substance": n, "fix": "specific notes: which surprising fact from the draft/headlines should lead, which slides are filler and what fact should replace them"}.' },
       { role: 'user', content: `DRAFT:\n${JSON.stringify({ cover: post.cover, slides: post.slides.map(s => ({ headline: s.headline, body: s.body })) })}` }]).catch(() => null);
     if (ed) console.log(`  editor: hook ${ed.hook}/10, substance ${ed.substance}/10${ed.fix ? ' — ' + String(ed.fix).slice(0, 200) : ''}`);
@@ -372,7 +391,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
       if (again?.cover?.highlight && again.cover.photo && again.slides?.length >= 3 && again.slides.every(s => s?.headline && s?.body && s?.photo)) { console.log('  rewritten after editor notes'); post = again; }
     }
   }
-  const checked =await chat([{ role: 'system', content: 'You fact-check an Instagram carousel (JSON) against the given headlines and sources. Fix or remove any number, date, name, "tallest/first/biggest" claim or outcome that is not supported. Keep the slides connected, but cut forced linking openers ("THAT\'S…", "AND THAT\'S AFTER…", "THAT ALSO MEANS…") and any slide that repeats the cover/hook in other words. Remove quirky lists, personification and meme-caption jokes; keep at most one dry, fact-based line per slide; keep it informative. Never mention "sources" in the text. Keep every JSON field and the same structure. Return only the corrected JSON plus "removed": [short notes].' },
+  const checked = kind === 'social' ? null : await chat([{ role: 'system', content: 'You fact-check an Instagram carousel (JSON) against the given headlines and sources. Fix or remove any number, date, name, "tallest/first/biggest" claim or outcome that is not supported. Keep the slides connected, but cut forced linking openers ("THAT\'S…", "AND THAT\'S AFTER…", "THAT ALSO MEANS…") and any slide that repeats the cover/hook in other words. Remove quirky lists, personification and meme-caption jokes; keep at most one dry, fact-based line per slide; keep it informative. Never mention "sources" in the text. Keep every JSON field and the same structure. Return only the corrected JSON plus "removed": [short notes].' },
     { role: 'user', content: `${ask}\n\nDRAFT:\n${JSON.stringify(post)}\n\n${STYLE}\n${REMINDER}` }]).catch(() => null);
   if (checked?.slides?.length >= 3 && checked.cover?.highlight) {
     if (checked.removed?.length) console.log(`  fact-check fixed: ${checked.removed.join(' | ').slice(0, 400)}`);
@@ -422,7 +441,8 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   // the writer kept copying the JSON example's ECONOMY onto event/food lists (Oct 5–6): upcoming/deals only get fitting labels
   if (/^(upcoming|deals)$/.test(kind) && !/^(EVENTS|FOOD|DEALS|SPORTS)$/.test(String(post.sector || '').toUpperCase())) post.sector = kind === 'deals' ? 'DEALS' : 'EVENTS';
   if (kind === 'celeb') post.sector = String(post.sector || '').toUpperCase() === 'SPORTS' ? 'SPORTS' : 'ENTERTAINMENT';
-  const SECTORS = /^(ENTERTAINMENT|FOOD|DEALS|EVENTS|ECONOMY|TRAFFIC|WEATHER|REAL ESTATE|CRIME|DEVELOPMENT|TRANSIT|HISTORY|SPORTS|HEALTH|EDUCATION|CITY HALL|WORLD|USA)$/;
+  if (kind === 'social') post.sector = 'NIGHTLIFE';
+  const SECTORS = /^(NIGHTLIFE|ENTERTAINMENT|FOOD|DEALS|EVENTS|ECONOMY|TRAFFIC|WEATHER|REAL ESTATE|CRIME|DEVELOPMENT|TRANSIT|HISTORY|SPORTS|HEALTH|EDUCATION|CITY HALL|WORLD|USA)$/;
   const single = kind === 'feature' || !!topic;
   for (const x of post.slides) {
     if (single && post.sector) x.tag = post.sector;
@@ -444,7 +464,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   if (celeb) Object.assign(post, { person: celeb.person, wikiUrl: celeb.wiki.url });
   post.date = nyDate();
   const hour = new Date().toLocaleString('en-US', { timeZone: 'America/New_York', hour: '2-digit', hour12: false });
-  post.id = `${post.date}-${kind}${kind === 'news' || kind === 'celeb' ? '-' + hour : ''}${ownTopic && !spec.pick ? '-custom' : ''}${preview ? '-preview' : ''}`;
+  post.id = `${post.date}-${kind}${['news', 'celeb', 'social'].includes(kind) ? '-' + hour : ''}${ownTopic && !spec.pick ? '-custom' : ''}${preview ? '-preview' : ''}`;
   const dir = path.join(ROOT, 'posts', post.id);
   fs.mkdirSync(dir, { recursive: true });
   step('Finding photos');
@@ -453,7 +473,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   // world: the story's own hook, with "NEWS FROM AROUND THE WORLD" as the small top line (owner's format)
   if (kind === 'world') Object.assign(post.cover, { top: 'NEWS FROM AROUND THE WORLD', blur: false });
   // owner's own topic (no story pick): still look for real photos of it
-  if (topic && !storyPhotos.length && !ALIVE.includes(kind) && kind !== 'celeb') {
+  if (topic && !storyPhotos.length && !ALIVE.includes(kind) && kind !== 'celeb' && kind !== 'social') {
     for (const a of await bingArticles(topic)) {
       const img = await ogImage(a.url);
       if (img && !storyPhotos.some(x => x.url === img)) storyPhotos.push({ url: img, credit: `Photo: ${a.source}` });
@@ -463,7 +483,7 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
     if (storyPhotos.length) console.log(`  real photos: ${storyPhotos.map(p => p.credit).join(', ')}`);
   }
   // owner (Oct 2): if the agency released video of this story, it goes in as slide 2 and the carousel shrinks to 4 slides
-  if ((storyText || topic) && !ALIVE.includes(kind) && kind !== 'celeb') {
+  if ((storyText || topic) && !ALIVE.includes(kind) && kind !== 'celeb' && kind !== 'social') {
     const { videoForStory } = await import('./clip.mjs');
     const v = await videoForStory(storyText || topic, dir);
     if (v) {
@@ -482,7 +502,8 @@ export async function writeCarousel(kind, { topic, preview } = {}) {
   for (const [i, item] of [post.cover, ...post.slides].entries()) {
     const reuse = real.length && (i < real.length || !ALIVE.includes(kind)) ? real[r++ % real.length] : null;
     const photo = reuse || await getPhoto(item.photo, dir, i ? `photo-${i}` : 'photo-cover',
-      { context: i ? item.headline : [item.top, item.main, item.highlight, item.bottom].filter(Boolean).join(' '), aiFirst: false });
+      { context: i ? item.headline : [item.top, item.main, item.highlight, item.bottom].filter(Boolean).join(' '),
+        ...(kind === 'social' ? { aiFirst: true, raw: 'nightlife', hq: !i } : { aiFirst: false }) }); // social: crazy AI party photos, cover on the full model
     if (photo) { item.photoFile = path.basename(photo.file); item.credit = photo.credit; }
     console.log(`  ${i ? '#' + i : 'cover'}: ${photo ? photo.credit : 'no photo'}`);
   }
@@ -534,7 +555,7 @@ body { width: 1080px; height: var(--h); overflow: hidden; background: #000; colo
 const arrow = `<svg width="64" height="24" viewBox="0 0 64 24"><path d="M0 12h58M48 2l12 10-12 10" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
 const bar = (right, style = '') => `<div class="bar"${style ? ` style="${style}"` : ''}><span class="brand">getnearapp</span><span class="more">${right}</span></div>`;
 // slide themes (owner: every slideshow should look alive): the brand/team color from the writer, else the section's color
-const SECTOR_COLORS = { DEALS: '#FF6B1A', EVENTS: '#8A2BE2', FOOD: '#E8590C', SPORTS: '#008E97', CRIME: '#C8102E', WEATHER: '#0A84C6', TRAFFIC: '#E0A100',
+const SECTOR_COLORS = { NIGHTLIFE: '#D6168B', DEALS: '#FF6B1A', EVENTS: '#8A2BE2', FOOD: '#E8590C', SPORTS: '#008E97', CRIME: '#C8102E', WEATHER: '#0A84C6', TRAFFIC: '#E0A100',
   TRANSIT: '#2F9E44', ECONOMY: '#1E9E5A', 'REAL ESTATE': '#B8860B', DEVELOPMENT: '#E8590C', HISTORY: '#8B5A2B', HEALTH: '#E03E7A',
   EDUCATION: '#5F3DC4', 'CITY HALL': '#364FC7', WORLD: '#1C7ED6', USA: '#1C3F94', NEWS: BLUE };
 const hexOk = c => /^#[0-9a-f]{6}$/i.test(String(c || ''));
@@ -678,8 +699,9 @@ function ctaHTML(post, dir) {
     <div style="position:absolute;left:60px;right:60px;top:300px;text-align:center">
       <div style="font-size:150px">📍</div>
       <div class="caps" style="font-size:120px;margin-top:20px">STAY <span style="color:#FFD24A">NEAR.</span></div>
-      <div style="margin-top:40px;font-size:42px;font-weight:700;line-height:1.35">Follow <b style="font-weight:900;color:#FFD24A">@getnearapp</b> for what South Florida is actually talking about.</div>
-      <div style="margin-top:50px;font-size:34px;font-weight:800;color:rgba(255,255,255,.75)">Got an only-in-Miami moment?<br>Tag us or DM us to get featured.</div>
+      ${post.kind === 'social' ? `<div style="margin-top:40px;font-size:42px;font-weight:700;line-height:1.35">Saw someone at the party and never got their name? <b style="font-weight:900;color:#FFD24A">NEAR</b> shows you who else is there.</div>
+      <div style="margin-top:50px;font-size:34px;font-weight:800;color:rgba(255,255,255,.75)">Download NEAR: link in our bio 📍<br>Follow <b>@getnearapp</b> for Miami after dark.</div>` : `<div style="margin-top:40px;font-size:42px;font-weight:700;line-height:1.35">Follow <b style="font-weight:900;color:#FFD24A">@getnearapp</b> for what South Florida is actually talking about.</div>
+      <div style="margin-top:50px;font-size:34px;font-weight:800;color:rgba(255,255,255,.75)">Got an only-in-Miami moment?<br>Tag us or DM us to get featured.</div>`}
     </div>
     ${bar(`follow for more ${arrow}`)}`;
 }

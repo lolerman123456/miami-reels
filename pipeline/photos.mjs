@@ -20,7 +20,7 @@ const FL_TITLE = /miami|florida|\bfla\b|\bfl\b|dade|broward|palm beach|lauderdal
 let aiThisPost = 0;     // at most AI_IMAGES_PER_POST (default 4) per carousel (owner: AI instead of boring stock)
 export function newPost() { used.clear(); aiThisPost = 0; }
 
-export async function getPhoto(spec, dir, name, { context = '', aiFirst = false } = {}) {
+export async function getPhoto(spec, dir, name, { context = '', aiFirst = false, raw = false, hq = false } = {}) {
   if (!spec) return null;
   const attempt = async (fn, ...a) => { try { return await fn(...a); } catch (e) { console.log(`  (${fn.name} failed for ${name}: ${e.message.slice(0, 160)})`); return null; } };
   const fl = FL_WORDS.test(spec.query || '') ? FL_TITLE : null; // keep the place when the search drops it
@@ -28,7 +28,7 @@ export async function getPhoto(spec, dir, name, { context = '', aiFirst = false 
   // owner asked for AI images on this post: AI first, no budget caps
   if (process.env.AI_PHOTOS === '1' && spec.prompt) { const p = await attempt(aiPhoto, spec.prompt, dir, name); if (p) return p; }
   // news carousels (owner, Sep 29: stock looks bland): eye-catching AI image first, stock only as a fallback
-  if (aiFirst && spec.prompt && aiBudgetLeft() > 0) { const p = await attempt(aiPhoto, spec.prompt, dir, name); if (p) return p; }
+  if (aiFirst && spec.prompt && aiBudgetLeft() > 0) { const p = await attempt(aiPhoto, spec.prompt, dir, name, raw, { hq }); if (p) return p; }
   return (spec.query && await attempt(stockPhoto, spec.query, dir, name, context, false, fl))
     || (simple && simple !== spec.query && simple.split(' ').length >= 1 && await attempt(stockPhoto, simple, dir, name, context, false, fl))
     || (spec.prompt && aiBudgetLeft() > 0 && aiThisPost < Number(process.env.AI_IMAGES_PER_POST ?? 4) && await attempt(aiPhoto, spec.prompt, dir, name))
@@ -121,25 +121,31 @@ async function judge(list, query, context, lenient = false) {
 function aiBudgetLeft() {
   const today = new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
   const usedToday = fs.existsSync(BUDGET_FILE) ? fs.readFileSync(BUDGET_FILE, 'utf8').split('\n').filter(l => l.startsWith(today)).length : 0;
-  return Number(process.env.AI_IMAGES_PER_DAY ?? 10) - usedToday; // ~1–2¢ each (gpt-image-1-mini): cheap next to the text calls; real photos + stock still go first
+  return Number(process.env.AI_IMAGES_PER_DAY ?? 30) - usedToday; // owner, Oct 29: social carousels are AI-first (3 a day × 6 images) + shareslop
 }
 
 // AI picture for a Reel scene (owner, Oct 4: costume photos in the Halloween Reel) — same budget file as carousels
-export async function aiImage(description, dir, name, raw = false) { return aiPhoto(description, dir, name, raw); }
+export async function aiImage(description, dir, name, raw = false, opts = {}) { return aiPhoto(description, dir, name, raw, opts); }
 
-async function aiPhoto(description, dir, name, raw = false) {
+// owner, Oct 29: "the AI images look so bad and no effort, they gotta be crazier" → nightlife/social images are shot like
+// high-end flash/neon party photography, high quality; covers (hq) use the full model
+const NIGHTLIFE = 'Shot like a viral high-end party photo by a Miami nightlife photographer: hard on-camera flash mixed with neon, laser and LED light, haze and light beams, motion-blur light trails, confetti or sparkler bottles when it fits, bold wide-angle low or high angle, deep saturated magenta, electric blue and gold, rich blacks, sharp focus on attractive, stylish invented people in their 20s with big real expressions (laughing, shocked, side-eyeing, mid-dance), packed crowd behind them, a Miami club, rooftop, yacht, pool party or Ocean Drive setting. It must look like a real photo (real skin texture, real hands, natural faces), never CGI, cartoon or illustration, no floating icons or emoji. Invented people only: no celebrities, public figures or real identifiable people. No text, no captions, no logos, no watermarks.';
+const HQ_MODELS = [process.env.OPENAI_IMAGE_MODEL_HQ || 'gpt-image-1.5', 'gpt-image-1'];
+
+async function aiPhoto(description, dir, name, raw = false, { hq = false } = {}) {
   if (!process.env.OPENAI_API_KEY) return null;
   // raw: the caller's prompt as is (studio product renders for floating Reel cards), only the safety line added
   // raw 'people' (shareslop, owner Oct 6): staged shock scenes with invented people — faces allowed, never real/famous people
-  const prompt = raw === 'people' ? `${description}. Looks like a REAL viral photo shot on an iPhone: candid, natural light, sharp focus, realistic skin texture and hands, attractive stylish people in their 20s, vivid but natural color, slightly wide angle. The comedy comes from real expressions and the situation, not from cartoon effects (no glowing brains, lightbulbs, sparkles, floating icons, hearts, heart-eyes or emoji). Invented ordinary people only: no celebrities, public figures or real identifiable people. No text, no captions, no logos, no watermarks.`
+  const prompt = raw === 'nightlife' ? `${description}. ${NIGHTLIFE}` : raw === 'people' ? `${description}. Looks like a REAL viral photo shot on an iPhone: candid, natural light, sharp focus, realistic skin texture and hands, attractive stylish people in their 20s, vivid but natural color, slightly wide angle. The comedy comes from real expressions and the situation, not from cartoon effects (no glowing brains, lightbulbs, sparkles, floating icons, hearts, heart-eyes or emoji). Invented ordinary people only: no celebrities, public figures or real identifiable people. No text, no captions, no logos, no watermarks.`
     : raw ? `${description}. No text, no logos, no watermarks, no real people or faces.` : `${description}. Eye-catching photorealistic editorial photo that stops the scroll: vivid saturated color, bright light (golden hour, neon or strong sun, never dull or gray), bold close or low angle, a clear striking subject with something happening, cinematic depth, South Florida setting when relevant. ` +
     'No text, no readable numbers, no price signs or price displays, no logos, no watermarks. No identifiable real people or public figures; faces turned away, blurred or out of frame.';
-  // cheap first (owner: mini model, ~4-5x cheaper), full model only if the mini one fails
-  for (const model of [...new Set([process.env.OPENAI_IMAGE_MODEL || 'gpt-image-1-mini', 'gpt-image-1'])]) {
+  // cheap first (owner: mini model, ~4-5x cheaper), full model only if the mini one fails; covers + shareslop: full model first
+  const best = hq || raw === 'people', high = best || raw === 'nightlife';
+  for (const model of [...new Set([...(best ? HQ_MODELS : []), process.env.OPENAI_IMAGE_MODEL || 'gpt-image-1-mini', 'gpt-image-1'])]) {
     const res = await fetch('https://api.openai.com/v1/images/generations', {
       method: 'POST',
       headers: { Authorization: `Bearer ${process.env.OPENAI_API_KEY}`, 'Content-Type': 'application/json' },
-      body: JSON.stringify({ model, prompt, size: '1024x1536', quality: raw === 'people' ? 'high' : 'medium', n: 1 }), // shareslop: high (owner, Oct 6: "make the images a little better")
+      body: JSON.stringify({ model, prompt, size: '1024x1536', quality: high ? 'high' : 'medium', n: 1 }), // shareslop: high (owner, Oct 6: "make the images a little better")
     });
     if (!res.ok) { console.log(`  (image model ${model}: ${res.status})`); continue; }
     const b64 = (await res.json()).data?.[0]?.b64_json;
