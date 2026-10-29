@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "YOUR MIAMI NIGHT OUT",
+    "main": "HAS 5 STAGES",
+    "highlight": "BRICKELL",
+    "bottom": "STARTING IN",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "five friends dressed for a Miami night laughing in a Brickell condo elevator, one holding heels in hand, one checking a rideshare app, city lights glowing behind them, flash photo style"
+    },
+    "emojis": [
+      "🌃",
+      "🥂",
+      "🚗"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You say Brickell for one quick stop",
+      "highlight": "one quick stop",
+      "body": "Now you’re on a rooftop pretending the reservation didn’t start 40 minutes ago.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a group of stylish friends squeezed around a high top table on a packed Brickell rooftop, skyline behind them, one person checking the time while everyone laughs under pink sunset lights"
+      },
+      "emoji": "🏙️",
+      "chip": "STAGE 1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You join the Wynwood line like it’s normal",
+      "highlight": "Wynwood line",
+      "body": "Everyone is suddenly best friends once the bouncer looks at the group.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "four friends waiting in a long Wynwood bar line outside a colorful mural wall, neon sign glowing, one friend waving to someone near the door, late night Miami street scene"
+      },
+      "emoji": "🎨",
+      "chip": "STAGE 2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You spot the sparklers and start filming",
+      "highlight": "start filming",
+      "body": "Phone out before the first bottle hits the table. This is journalism.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a packed South Beach club table with bottle service sparklers held high, a woman filming on her phone while friends cheer, blue and purple club lights, confetti in the air"
+      },
+      "emoji": "✨",
+      "chip": "STAGE 3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You check Uber at 3am and freeze",
+      "highlight": "3am and freeze",
+      "body": "The surge has everybody suddenly loving a long sidewalk debrief.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "three friends standing outside a Miami Beach club at 3am staring at a rideshare app, neon lights reflecting on wet pavement, people leaving in the background, funny shocked expressions"
+      },
+      "emoji": "🚙",
+      "chip": "STAGE 4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You end with Cuban coffee and receipts",
+      "highlight": "Cuban coffee",
+      "body": "Somehow the recap at the ventanita is better than half the night.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "friends gathered at a Miami ventanita before sunrise holding tiny Cuban coffees and a paper bag of pastelitos, laughing over phone photos, warm cafe light against early morning sky"
+      },
+      "emoji": "☕",
+      "chip": "STAGE 5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who always turns one quick stop into a full Miami night 🌃",
+  "hashtags": [
+    "MiamiNightOut",
+    "BrickellRooftop"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who always turns one quick stop into a full Miami night 🌃\n\n#MiamiNightOut #BrickellRooftop #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-10-29",
+  "id": "2026-10-29-social-16"
+}
