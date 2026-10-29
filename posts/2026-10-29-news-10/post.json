@@ -1,96 +1,122 @@
 {
   "sector": "CRIME",
   "cover": {
-    "top": "AT A BOYNTON GAS STATION",
-    "main": "HIS IPHONE",
-    "highlight": "BLOCKED",
-    "bottom": "A 9MM BULLET",
+    "top": "POLICE SAY",
+    "main": "AMERICAN AIRLINES",
+    "highlight": "FLIGHT PERKS",
+    "bottom": "LED TO A MORE THAN $25,000 ARREST AT MIA",
     "blur": false,
     "photo": {
-      "query": "gas station police lights close-up damaged smartphone",
-      "prompt": "dramatic close-up of a damaged iPhone on a gas station counter, with police lights reflecting in the background",
-      "mark": "circle"
+      "query": "Miami International Airport American Airlines terminal police car night",
+      "prompt": "dramatic photo of Miami International Airport departures at night with American Airlines signage and police lights near the curb",
+      "mark": "stamp: ARRESTED"
     },
     "emojis": [
-      "📱",
-      "⛽",
-      "🚨"
+      "✈️",
+      "🚨",
+      "💳"
     ],
     "logos": [
-      "apple.com"
+      "aa.com",
+      "miami-airport.com"
     ],
     "photoFile": "news-0.jpg",
-    "credit": "Photo: WSVN 7News",
-    "logoFiles": [
-      "logo-c0.png"
-    ]
+    "credit": "Photo: Leadership",
+    "logoFiles": []
   },
   "slides": [
     {
       "tag": "CRIME",
-      "headline": "The phone saved his life, WPEC reported",
-      "highlight": "saved his life",
-      "body": "WPEC said the man survived an attempted robbery at a Boynton Beach gas station after a cellphone blocked a bullet.",
-      "place": "Boynton Beach",
-      "source": "WPEC",
+      "headline": "Police say the victim lost more than $25,000",
+      "highlight": "more than $25,000",
+      "body": "A Palm Coast senior was targeted in a sweepstakes scam, according to WFTV and WPLG Local 10.",
+      "place": "Palm Coast",
+      "source": "WFTV",
       "photo": {
-        "query": "Boynton Beach gas station police lights night",
-        "prompt": "nighttime Boynton Beach gas station with police lights reflecting off fuel pumps after a shooting investigation"
+        "query": "Palm Coast Florida residential street evening police lights",
+        "prompt": "quiet Palm Coast residential street at dusk with police lights reflecting off the road, no people visible"
       },
-      "emoji": "📱",
-      "chip": "FATHER",
-      "logo": "apple.com",
-      "color": "#A2AAAD",
-      "photoFile": "news-0.jpg",
-      "credit": "Photo: WSVN 7News",
-      "logoFile": "logo-1.png"
+      "color": "#0078D2",
+      "emoji": "🏠",
+      "chip": "PALM COAST",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: WESH"
     },
     {
       "tag": "CRIME",
-      "headline": "His iPhone blocked a bullet during the robbery attempt",
-      "highlight": "blocked a bullet",
-      "body": "WSVN reported that the man’s iPhone deflected the round during the attempted robbery at the gas station.",
-      "place": "Boynton Beach",
-      "source": "WSVN 7News",
+      "headline": "Police say an American Airlines flight attendant is the suspect",
+      "highlight": "American Airlines flight attendant",
+      "body": "WPLG Local 10 and News4JAX identified the suspect as an American Airlines flight attendant.",
+      "place": "Miami International Airport",
+      "source": "WPLG Local 10",
       "photo": {
-        "query": "damaged smartphone close-up bullet impact",
-        "prompt": "close-up of a damaged smartphone on a gas station counter with a visible impact mark"
+        "query": "American Airlines check in counter Miami International Airport",
+        "prompt": "American Airlines check-in area at Miami International Airport with a tense airport terminal mood, no identifiable people"
       },
-      "emoji": "🛡️",
-      "chip": "9MM",
-      "logo": "apple.com",
-      "color": "#00AEEF",
-      "photoFile": "news-0.jpg",
-      "credit": "Photo: WSVN 7News",
-      "logoFile": "logo-2.png"
+      "color": "#0078D2",
+      "emoji": "🧳",
+      "chip": "AA",
+      "logo": "aa.com",
+      "photoFile": "news-2.jpg",
+      "credit": "Photo: WFTV",
+      "logoFile": null
     },
     {
       "tag": "CRIME",
-      "headline": "The phone was in his pocket when it stopped the bullet",
-      "highlight": "in his pocket",
-      "body": "The Sun Sentinel said the cellphone was in the man’s pocket when it blocked the bullet.",
-      "place": "Boynton Beach",
-      "source": "Sun Sentinel",
+      "headline": "The scheme used a sweepstakes story",
+      "highlight": "sweepstakes scam",
+      "body": "NBC 6 South Florida said the case centers on a sweepstakes fraud targeting a Florida woman.",
+      "place": "Florida",
+      "source": "NBC 6 South Florida",
       "photo": {
-        "query": "smartphone in pants pocket close-up",
-        "prompt": "close-up of a smartphone outline inside a pants pocket under harsh gas station lighting"
+        "query": "airline boarding pass suitcase credit card scam close up",
+        "prompt": "close-up of a boarding pass, suitcase handle, credit card and sweepstakes paperwork on a table, no personal data visible"
       },
-      "emoji": "👖",
-      "chip": "POCKET",
-      "logo": "apple.com",
-      "color": "#A2AAAD",
+      "emoji": "🎫",
+      "chip": "SWEEPSTAKES",
+      "photoFile": "news-3.jpg",
+      "credit": "Photo: News4JAX"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "Police say travel benefits helped the trip",
+      "highlight": "travel benefits",
+      "body": "NBC 6 South Florida and PYOK said the flight attendant used travel benefits to get to Florida for the alleged scam.",
+      "place": "Florida",
+      "source": "PYOK",
+      "photo": {
+        "query": "airport standby passengers departure board airplane gate",
+        "prompt": "moody airport gate scene with a departures board showing standby-style travel atmosphere, no identifiable people"
+      },
+      "emoji": "🛫",
+      "chip": "PERKS",
       "photoFile": "news-0.jpg",
-      "credit": "Photo: WSVN 7News",
-      "logoFile": "logo-3.png"
+      "credit": "Photo: Leadership"
+    },
+    {
+      "tag": "CRIME",
+      "headline": "One report says she flew standby",
+      "highlight": "flew standby",
+      "body": "Flagler County Buzz reported she flew standby before the Palm Coast scam arrest.",
+      "place": "Palm Coast",
+      "source": "Flagler County Buzz",
+      "photo": {
+        "query": "Miami International Airport terminal exterior police vehicle night",
+        "prompt": "Miami International Airport terminal exterior at night with a police vehicle near the entrance and aircraft lights in the background"
+      },
+      "emoji": "🚔",
+      "chip": "STANDBY",
+      "photoFile": "news-1.jpg",
+      "credit": "Photo: WESH"
     }
   ],
-  "caption": "A cellphone stopped a bullet during a Boynton Beach robbery attempt.",
+  "caption": "Police say a flight attendant used travel perks in a sweepstakes scam that cost a Palm Coast senior more than $25,000, then got arrested at MIA.",
   "hashtags": [
-    "#BoyntonBeach",
-    "#PalmBeachCounty"
+    "#MiamiInternationalAirport",
+    "#PalmCoast"
   ],
   "collaborators": [],
-  "igCaption": "A cellphone stopped a bullet during a Boynton Beach robbery attempt.\n\n📰 Sources: WPEC, WSVN 7News, Sun Sentinel\n\n#BoyntonBeach #PalmBeachCounty #miami #southflorida",
+  "igCaption": "Police say a flight attendant used travel perks in a sweepstakes scam that cost a Palm Coast senior more than $25,000, then got arrested at MIA.\n\n📰 Sources: WFTV, WPLG Local 10, NBC 6 South Florida, PYOK, Flagler County Buzz\n\n#MiamiInternationalAirport #PalmCoast #miami #southflorida",
   "kind": "news",
   "kicker": "MIAMI NEWS 🚨",
   "date": "2026-10-29",
