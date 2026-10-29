@@ -1,0 +1,161 @@
+{
+  "title": "Halloween gets an extra hour in South Florida",
+  "sources": [
+    "Local 10",
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Halloween weekend in South Florida has clocks, cocktails, and a few costume stops. Oct. 31, prices vary\n\nSources: Local 10, Miami New Times\n\n#SouthFlorida #Halloween #FortLauderdale #MiamiBeach",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "The Senate is unlikely to act this year on making daylight saving time permanent, so the clock change is still on.",
+      "overlay": [
+        "DAYLIGHT SAVING TIME",
+        "HALLOWEEN"
+      ],
+      "emojis": [
+        "🎃",
+        "🕑",
+        "🌙",
+        "🪩"
+      ],
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1700,
+        "pitch": -32,
+        "heading": 190
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Room 901 in Fort Lauderdale runs its Carrie takeover through Halloween. The hidden speakeasy inside Hyatt Centric Las Olas, at 100 E. Las Olas Blvd., has a 1970s prom setup, red-and-black decor, candlelight, dramatic florals, and Prom Punch.",
+      "caption": "Room 901 in Fort Lauderdale runs its Carrie takeover through Halloween. The hidden speakeasy inside Hyatt Centric Las Olas, at 100 E. Las Olas Blvd., has a 1970s prom setup, red-and-black decor, candlelight, dramatic florals, and Prom Punch.",
+      "overlay": "ROOM 901",
+      "badge": "THRU OCT 31",
+      "sub": "Hyatt Centric Las Olas",
+      "emoji": "🩸",
+      "stats": [
+        {
+          "value": "OCT 31",
+          "label": "final night"
+        },
+        {
+          "value": "1970S",
+          "label": "prom theme"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Room 901 at Hyatt Centric Las Olas",
+        "lat": 26.1193,
+        "lon": -80.1436,
+        "h": 55
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -32,
+        "heading": 125,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Bar1939 at the National Hotel Miami Beach has three Halloween cocktails throughout October. The bar is inside the adults-only Art Deco hotel at 1677 Collins Ave., serving Morticia’s Bleeding Heart Margarita, Wednesday’s Woe, and Lurch’s Smoky Gin & Tonic. If you’re sipping Morticia’s here, check NEAR later and see who was there.",
+      "caption": "Bar1939 at the National Hotel Miami Beach has 3 Halloween cocktails throughout October. The bar is inside the adults-only Art Deco hotel at 1677 Collins Ave., serving Morticia’s Bleeding Heart Margarita, Wednesday’s Woe, and Lurch’s Smoky Gin & Tonic. If you’re sipping Morticia’s here, check NEAR later and see who was there.",
+      "overlay": "BAR1939",
+      "badge": "3 COCKTAILS",
+      "sub": "National Hotel",
+      "emoji": "🍸",
+      "stats": [
+        {
+          "value": "3",
+          "label": "cocktails"
+        },
+        {
+          "value": "1677",
+          "label": "Collins Ave."
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Bar1939 at National Hotel Miami Beach",
+        "lat": 25.7926,
+        "lon": -80.1295,
+        "h": 65
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -33,
+        "heading": 82,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Thursday starts warmer and humid ahead of Halloween weekend. South Florida costume weather still asks for a backup plan.",
+      "caption": "Thursday starts warmer and humid ahead of Halloween weekend. South Florida costume weather still asks for a backup plan.",
+      "overlay": "FORECAST",
+      "badge": "HUMID START",
+      "sub": "Halloween weekend",
+      "emoji": "🌫️",
+      "stats": [
+        {
+          "value": "OCT 29",
+          "label": "forecast"
+        }
+      ],
+      "source": "Local 10",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1700,
+        "pitch": -35,
+        "heading": 160,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Halloween night has plenty going on in South Florida. And if Halloween had you crossing paths with someone all night without catching their name, NEAR is the part that lets you see who they were. Room 901 has the prom, Bar1939 has the cocktails, and the clock change is still in play.",
+      "overlay": "YOUR PICK? 🎃",
+      "sub": "Comment your move",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -32,
+        "heading": 205
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "134-halloween-gets-an-extra-hour-in-south-fl"
+}
