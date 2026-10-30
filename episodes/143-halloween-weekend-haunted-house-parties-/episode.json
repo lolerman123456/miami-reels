@@ -1,0 +1,166 @@
+{
+  "title": "Halloween Weekend Haunted-House Parties in South Florida",
+  "sources": [
+    "WSVN 7News",
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Three Halloween stops with DJs and late-night plans.\nOct. 31, South Florida\n\nSources: WSVN 7News, Miami New Times, Secret Miami\n\n#MiamiHalloween #SouthFloridaEvents #HalloweenWeekend #MiamiNightlife",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Which Halloween spots in South Florida also bring DJs and late-night plans this weekend?",
+      "overlay": [
+        "HAUNTED",
+        "PARTY GUIDE"
+      ],
+      "emojis": [
+        "🏚️",
+        "🎧",
+        "🩸",
+        "🌙"
+      ],
+      "location": {
+        "name": "Factory Town",
+        "lat": 25.817,
+        "lon": -80.258,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 210
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Factory Town in Hialeah is staging Halloween with five massive stages, more than 100 artists, and haunted dystopian performances.",
+      "caption": "Factory Town in Hialeah is staging Halloween with five massive stages, more than 100 artists, and haunted dystopian performances.",
+      "overlay": "FACTORY TOWN",
+      "badge": "5 STAGES",
+      "sub": "Hialeah warehouse zone",
+      "emoji": "🏭",
+      "stats": [
+        {
+          "value": "5",
+          "label": "stages"
+        },
+        {
+          "value": "more than 100",
+          "label": "artists"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Factory Town",
+        "lat": 25.817,
+        "lon": -80.258,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 120,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Room 901 in Fort Lauderdale turns into a Carrie-inspired 1970s prom from October 8 through Halloween. It sits inside Hyatt Centric Las Olas at 100 E. Las Olas Blvd. with red-and-black décor, candlelight, dramatic florals, and a retro soundtrack. If you’re there, open NEAR and see who else is at prom.",
+      "caption": "Room 901 in Fort Lauderdale turns into a Carrie-inspired 1970s prom from Oct. 8 through Halloween. It sits inside Hyatt Centric Las Olas at 100 E. Las Olas Blvd. with red-and-black décor, candlelight, dramatic florals, and a retro soundtrack. If you’re there, open NEAR and see who else is at prom.",
+      "overlay": "ROOM 901",
+      "badge": "THRU OCT 31",
+      "sub": "Carrie prom takeover",
+      "emoji": "🩸",
+      "stats": [
+        {
+          "value": "1970s",
+          "label": "prom theme"
+        },
+        {
+          "value": "Oct 31",
+          "label": "final night"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Room 901 at Hyatt Centric Las Olas",
+        "lat": 26.1196,
+        "lon": -80.1423,
+        "h": 70
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 70,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Dom’s in Brickell runs its Trick or Tequila party on October 31. It starts at 5 p.m. with tequila specials, a costume contest, a DJ spinning spooky tunes, and a $150 gift card for the best-dressed guest.",
+      "caption": "Dom’s in Brickell runs its Trick or Tequila party on Oct. 31. It starts at 5 p.m. with tequila specials, a costume contest, a DJ spinning spooky tunes, and a $150 gift card for the best-dressed guest.",
+      "overlay": "DOM'S",
+      "badge": "$150 PRIZE",
+      "sub": "DJ and costume contest",
+      "emoji": "🎧",
+      "stats": [
+        {
+          "value": "5 PM",
+          "label": "start time"
+        },
+        {
+          "value": "$150",
+          "label": "gift card"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Dom's",
+        "lat": 25.7634,
+        "lon": -80.1921,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 155,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you hit first on Halloween weekend? Halloween weekends are full of faces you pass once and never ask about, which is exactly where NEAR comes in and shows you who they were.",
+      "overlay": "PICK ONE 🎃",
+      "sub": "Comment your first stop",
+      "location": {
+        "name": "South Florida",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 120
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -32,
+        "heading": 240
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "143-halloween-weekend-haunted-house-parties-"
+}
