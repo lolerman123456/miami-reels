@@ -1,0 +1,189 @@
+{
+  "title": "Hip-hop Halloween weekend in Miami and Fort Lauderdale",
+  "sources": [
+    "WSVN 7News",
+    "Miami New Times",
+    "Sun Sentinel",
+    "Eventbrite"
+  ],
+  "collaborators": [],
+  "igCaption": "Halloween weekend has options, so check the traffic before you go. Oct. 30 to Nov. 1, Miami and Fort Lauderdale\n\nSources: WSVN 7News, Miami New Times, Sun Sentinel, Eventbrite\n\n#MiamiEvents #FortLauderdale #HalloweenMiami #HipHop",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Looking for Halloween plans this weekend? Start with Wynwood and Brickell, then check the traffic.",
+      "overlay": [
+        "HIP-HOP",
+        "HALLOWEEN"
+      ],
+      "emojis": [
+        "🎃",
+        "🎤",
+        "🚗",
+        "🌴"
+      ],
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami Police warned drivers on Friday, October thirtieth, to expect road closures, parking restrictions, and heavier pedestrian traffic for Halloween celebrations this weekend.",
+      "caption": "Miami Police warned drivers on Friday, Oct. 30, to expect road closures, parking restrictions, and heavier pedestrian traffic for Halloween celebrations this weekend.",
+      "overlay": "WYNWOOD",
+      "badge": "OCT. 30",
+      "sub": "Road closures warned",
+      "emoji": "🚧",
+      "stats": [
+        {
+          "value": "OCT. 30",
+          "label": "traffic warning"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 120,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a Miami hip-hop tie-in, Yung Miami released Watch Dis. She celebrated it Thursday, October twenty-ninth, at Privé 954 Restaurant and Lounge with 103.5 The Beat.",
+      "caption": "For a Miami hip-hop tie-in, Yung Miami released Watch Dis. She celebrated it Thursday, Oct. 29, at Privé 954 Restaurant & Lounge with 103.5 The Beat.",
+      "overlay": "PRIVÉ 954",
+      "badge": "OCT. 29",
+      "sub": "Yung Miami release",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "OCT. 29",
+          "label": "release party"
+        },
+        {
+          "value": "103.5",
+          "label": "The Beat"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 40,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Fort Lauderdale has 18 night club music events on Eventbrite for this weekend. It also has Halloween house party listings if you want to keep scrolling. If you end up at one, open NEAR and spot who else showed.",
+      "caption": "Fort Lauderdale has 18 night club music events on Eventbrite for this weekend. It also has Halloween house party listings if you want to keep scrolling. If you end up at one, open NEAR and spot who else showed.",
+      "overlay": "FORT LAUD",
+      "badge": "18 EVENTS",
+      "sub": "Night club music",
+      "emoji": "🎧",
+      "stats": [
+        {
+          "value": "18",
+          "label": "night club events"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 60
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -30,
+        "heading": 255,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "If your weekend plans run into November, Broward County has Beer B Que Music Festival on the radar. Sun Sentinel included Kodak Black and Rick Ross in its can’t-miss November events list.",
+      "caption": "If your weekend plans run into November, Broward County has Beer B Que Music Festival on the radar. Sun Sentinel included Kodak Black and Rick Ross in its can’t-miss November events list.",
+      "overlay": "BROWARD",
+      "badge": "NOVEMBER",
+      "sub": "Kodak and Rick Ross",
+      "emoji": "🔥",
+      "stats": [
+        {
+          "value": "NOVEMBER",
+          "label": "event list"
+        }
+      ],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Broward County, Florida",
+        "lat": 26.193535,
+        "lon": -80.476683,
+        "h": 30
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 2200,
+        "pitch": -28,
+        "heading": 300,
+        "degrees": 50,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which stop are you hitting first, Miami or Fort Lauderdale? Missed the name of that costume you kept seeing between Miami and Fort Lauderdale? NEAR shows you the people who walked past you, even if you never said hello.",
+      "overlay": "WHERE YOU GOING? 🎃",
+      "sub": "Drop the move",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -30,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "145-hip-hop-halloween-weekend-in-miami-and-f"
+}
