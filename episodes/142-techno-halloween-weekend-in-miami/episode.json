@@ -1,0 +1,202 @@
+{
+  "title": "Techno Halloween Weekend in Miami",
+  "sources": [
+    "Resident Advisor",
+    "Time Out Worldwide",
+    "Miami New Times"
+  ],
+  "collaborators": [
+    "clubspace"
+  ],
+  "igCaption": "Halloween weekend is for the DJ calendar. @clubspace is on it.\nOct. 31, Miami, price not listed\n\nSources: Resident Advisor, Time Out Worldwide, Miami New Times\n\n#Miami #MiamiNightlife #HalloweenMiami #Techno",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Miami’s Halloween weekend has three DJ-heavy nights to know, and two of them point straight at Club Space.",
+      "overlay": [
+        "HALLOWEEN",
+        "CLUB GUIDE"
+      ],
+      "emojis": [
+        "🎃",
+        "🔊",
+        "🪩",
+        "🌙"
+      ],
+      "location": {
+        "name": "Club Space Miami",
+        "lat": 25.7841,
+        "lon": -80.1937,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start with Halloweek at Club Space Miami. Resident Advisor listed Dixon back to back with Jimi Jules, plus WhoMadeWho doing a hybrid set. The listing went up October fourth.",
+      "caption": "Start with Halloweek at Club Space Miami. Resident Advisor listed Dixon B2B Jimi Jules, plus WhoMadeWho doing a hybrid set. The listing went up Oct. 4.",
+      "overlay": "CLUB SPACE",
+      "badge": "OCT 4",
+      "sub": "Halloweek listing",
+      "emoji": "🖤",
+      "stats": [
+        {
+          "value": "OCT 4",
+          "label": "RA listing"
+        },
+        {
+          "value": "2026",
+          "label": "Halloween year"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "Club Space Miami",
+        "lat": 25.7841,
+        "lon": -80.1937,
+        "h": 90
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 145,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Ground at Club Space has Perreo del Futuro Halloween. Resident Advisor posted that listing September twenty-third.",
+      "caption": "The Ground at Club Space has PERREO DEL FUTURO Halloween. Resident Advisor posted that listing Sept. 23.",
+      "overlay": "THE GROUND",
+      "badge": "SEP 23",
+      "sub": "At Club Space",
+      "emoji": "🪩",
+      "stats": [
+        {
+          "value": "SEP 23",
+          "label": "RA listing"
+        },
+        {
+          "value": "2026",
+          "label": "Halloween year"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "The Ground at Club Space",
+        "lat": 25.7841,
+        "lon": -80.1937,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1400,
+        "pitch": -35,
+        "heading": 40,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "E11EVEN has Halloween Night with DJ Diesel, also known as Shaq. Resident Advisor listed it October eleventh. If you're at E11EVEN, open NEAR and see who else showed up.",
+      "caption": "E11EVEN has Halloween Night with DJ Diesel, also known as Shaq. Resident Advisor listed it Oct. 11. If you're at E11EVEN, open NEAR and see who else showed up.",
+      "overlay": "E11EVEN",
+      "badge": "OCT 11",
+      "sub": "DJ Diesel listed",
+      "emoji": "🔊",
+      "stats": [
+        {
+          "value": "OCT 11",
+          "label": "RA listing"
+        },
+        {
+          "value": "2026",
+          "label": "Halloween year"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "E11EVEN Miami",
+        "lat": 25.785,
+        "lon": -80.1938,
+        "h": 85
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 1500,
+        "pitch": -33,
+        "heading": 265,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Time Out ran a Miami club guide on January twenty-ninth. Miami New Times followed with a Miami and Miami Beach nightclub list on March nineteenth. Halloween weekend just pulls the schedule into one stretch.",
+      "caption": "Time Out ran a Miami club guide on Jan. 29. Miami New Times followed with a Miami and Miami Beach nightclub list on Mar. 19.",
+      "overlay": "DOWNTOWN",
+      "badge": "2 GUIDES",
+      "sub": "Miami club context",
+      "emoji": "🌙",
+      "stats": [
+        {
+          "value": "JAN 29",
+          "label": "Time Out guide"
+        },
+        {
+          "value": "MAR 19",
+          "label": "New Times list"
+        }
+      ],
+      "source": "Time Out Worldwide",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 100
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 15,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which Halloween night should we map out next? When everyone’s in costume, you can cross paths with someone all night and still never know who they were—that’s the kind of moment NEAR turns into a name.",
+      "overlay": "WHAT NEXT? 🎃",
+      "sub": "Drop the party name",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 100
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2300,
+        "pitch": -32,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "142-techno-halloween-weekend-in-miami"
+}
