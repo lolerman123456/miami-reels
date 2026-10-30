@@ -1,0 +1,145 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "WHERE",
+    "main": "SOUTH FLORIDA",
+    "highlight": "GOING OUT",
+    "bottom": "THIS WEEKEND",
+    "blur": false,
+    "photo": {
+      "query": "Bayfront Park Miami waterfront crowd festival skyline",
+      "prompt": "A dramatic waterfront event crowd at Bayfront Park with the Miami skyline behind it at sunset"
+    },
+    "emojis": [
+      "🎃",
+      "🎬",
+      "💀",
+      "👀"
+    ],
+    "logos": [
+      "miami.gov",
+      "redbull.com",
+      "cityplacedoral.com",
+      "miamibeachbandshell.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Spooktacular Miami City Cemetery Walking Tour, Oct. 30",
+      "highlight": "Cemetery Walking Tour",
+      "body": "Starts at 5 p.m. at Miami City Cemetery, 1800 NE Second Ave., Miami. Tickets are $35 for adults and $15 for kids 14 and under. It puts a local history tour on Halloween weekend.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miami City Cemetery historic graves Miami",
+        "prompt": "A moody historic cemetery in Miami at dusk with old headstones and people carrying flashlights"
+      },
+      "emoji": "🪦",
+      "chip": "OCT 30",
+      "photoFile": "photo-1.jpg",
+      "credit": "Photo: Phillip Pessar / CC BY 2.0"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Rosa Obscura at Rosa Sky Rooftop, Oct. 30 to 31",
+      "highlight": "Rosa Obscura",
+      "body": "The rooftop party runs Oct. 30 and 31 at 115 SW Eighth St., 22nd Floor, Miami. Expect DJs, costume looks and Halloween cocktails.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Rosa Sky rooftop Miami skyline Halloween party",
+        "prompt": "A rooftop Halloween party in Brickell with skyline views, costume-clad guests and orange and purple lights"
+      },
+      "emoji": "🎃",
+      "chip": "OCT 30 to 31",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Red Bull Flugtag at Bayfront Park, Oct. 31",
+      "highlight": "Red Bull Flugtag",
+      "body": "The free event runs from 11 a.m. to 4 p.m. at Bayfront Park, Miami, with the site opening at 10 a.m. It brings homemade flying machines to the water.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Red Bull Flugtag Miami Bayfront Park flying machine",
+        "prompt": "A human-powered flying machine launching off a platform over Biscayne Bay with a large crowd watching"
+      },
+      "emoji": "✈️",
+      "chip": "FREE",
+      "logo": "redbull.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "DC Pie Co. Halloween and Dom's Trick or Tequila, Oct. 31",
+      "highlight": "DC Pie Co. and Dom's",
+      "body": "DC Pie Co. at 1010 Brickell Ave. in Miami opens noon to 11 p.m. Dom's starts at 5 p.m. and goes late. Kids in costume get a free personal pizza with purchase, and Dom's adds a costume contest and tequila specials.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Brickell Halloween pizza party cocktail bar",
+        "prompt": "A Brickell Halloween party scene with pizza boxes, cocktails, costumes and a busy bar at night"
+      },
+      "emoji": "🍕",
+      "chip": "OCT 31",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Day of the Dead at CityPlace Doral, Nov. 1",
+      "highlight": "CityPlace Doral",
+      "body": "The fifth-annual celebration starts at 4 p.m. at CityPlace Doral, 8300 NW 36th St., Doral. Entry is free with RSVP, and the event includes folkloric dancers, stilt walkers and mariachis.",
+      "place": "Doral",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "CityPlace Doral Day of the Dead celebration mariachis",
+        "prompt": "A colorful Day of the Dead celebration in Doral with mariachis, dancers, papel picado and decorated skulls"
+      },
+      "emoji": "💀",
+      "chip": "FREE",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "The Rocky Horror Picture Show at Miami Beach Bandshell, Nov. 1",
+      "highlight": "Rocky Horror",
+      "body": "The screening starts at 7 p.m. at Miami Beach Bandshell, 7275 Collins Ave., Miami Beach. Tickets cost $35, and the night includes drag performances, a live shadowcast and a costume contest.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miami Beach Bandshell night concert crowd",
+        "prompt": "A night screening at Miami Beach Bandshell with a costumed crowd, stage lights and a movie screen"
+      },
+      "emoji": "🎬",
+      "chip": "$35",
+      "logo": "miamibeachbandshell.com",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    }
+  ],
+  "caption": "South Florida weekend plans are handled. Who are you taking? Tag a friend 🎃",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiWeekend"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida weekend plans are handled. Who are you taking? Tag a friend 🎃\n\n📰 Sources: Miami New Times, Secret Miami\n\n#SouthFloridaEvents #MiamiWeekend #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-30",
+  "id": "2026-10-30-upcoming"
+}
