@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "WHAT YOUR",
+    "main": "CLUB ORDER",
+    "highlight": "SAYS",
+    "bottom": "ABOUT YOU IN MIAMI",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "four stylish friends at a packed South Beach club table holding different club orders, one with sparkling water, one with espresso martini, one with fries from a late night bag, neon blue light, confetti in the air, Miami nightlife chaos"
+    },
+    "emojis": [
+      "🍸",
+      "🪩",
+      "👀"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Espresso Martini At Midnight",
+      "highlight": "Espresso Martini",
+      "body": "You said you were tired in the Brickell Uber.\nNow you’re leading the whole night.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a woman in a black dress holding an espresso martini at a crowded Brickell rooftop, laughing while her friends cheer behind her, downtown Miami skyline glowing, midnight blue lighting"
+      },
+      "emoji": "☕",
+      "chip": "ORDER #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Sparkling Water With Lime",
+      "highlight": "Sparkling Water",
+      "body": "You’re the responsible legend.\nStill dancing harder than everyone at Space.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a stylish guy holding sparkling water with lime on the Club Space terrace, smiling while friends dance around him under sunrise lights, disco ball reflections and palms in the background"
+      },
+      "emoji": "💧",
+      "chip": "ORDER #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Champagne When Sparklers Pass",
+      "highlight": "Champagne When",
+      "body": "You saw the bottles move through LIV and suddenly remembered your camera works.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a friend group at LIV Miami filming champagne bottles with sparklers moving through the packed dance floor, gold light, confetti, excited faces, glamorous South Beach club scene"
+      },
+      "emoji": "✨",
+      "chip": "ORDER #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Tequila Soda In Wynwood",
+      "highlight": "Tequila Soda",
+      "body": "You waited 28 minutes in line.\nThis order was decided on the sidewalk.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "two friends at a busy Wynwood bar ordering tequila sodas after standing in a long line outside, colorful murals, string lights, bouncer stand in the background, Friday night Miami crowd"
+      },
+      "emoji": "🍋",
+      "chip": "ORDER #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Fries At The 3am Food Run",
+      "highlight": "3am Food",
+      "body": "Your real order was survival.\nSouth Beach sidewalk fries hit like a reservation.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "three friends sitting on a South Beach curb at 3am sharing a huge bag of fries after the club, heels off nearby, neon diner sign, Ocean Drive lights, happy exhausted faces"
+      },
+      "emoji": "🍟",
+      "chip": "ORDER #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend whose order gave them away 👀",
+  "hashtags": [
+    "MiamiNightlife",
+    "BrickellAfterDark"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend whose order gave them away 👀\n\n#MiamiNightlife #BrickellAfterDark #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-10-30",
+  "id": "2026-10-30-social-09"
+}
