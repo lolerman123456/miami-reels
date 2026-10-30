@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "HOW TO TELL",
+    "main": "THE BOUNCER",
+    "highlight": "LIKES YOU",
+    "bottom": "BEFORE YOU EVEN GET IN",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "two stylish friends in black outfits walking up to a velvet rope outside a packed South Beach club, the bouncer smiling and lifting the rope while neon pink light hits the sidewalk, Miami nightlife chaos behind them"
+    },
+    "emojis": [
+      "🪩",
+      "👀",
+      "🚪"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "He Spots You Before The Wynwood Line",
+      "highlight": "Spots You",
+      "body": "You’re still fixing your lip gloss by the mural and he’s already doing the head nod.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a woman in a cropped blazer fixing lip gloss beside a colorful Wynwood mural while a long club line watches and the bouncer at the door nods at her under purple street lights"
+      },
+      "emoji": "👀",
+      "chip": "SIGN #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "He Moves The Rope Like It’s Choreography",
+      "highlight": "Moves The Rope",
+      "body": "No clipboard drama. No fake searching. Just one clean swoop and your friends start whispering.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a confident bouncer in all black smoothly opening a velvet rope for a group of four friends outside a Brickell rooftop entrance, city lights above, everyone behind them reacting"
+      },
+      "emoji": "🚪",
+      "chip": "SIGN #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "He Remembers You From Last Saturday",
+      "highlight": "Remembers You",
+      "body": "You said hi once outside Space and now you’re apparently part of the building.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "two friends laughing outside Club Space in downtown Miami at night while the door staff greets them like regulars, red and blue lights glowing on the sidewalk"
+      },
+      "emoji": "🫡",
+      "chip": "SIGN #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "He Lets Your Late Friend Slide In",
+      "highlight": "Late Friend",
+      "body": "The group is inside. One friend is “two minutes away” on Biscayne. Somehow, peace is kept.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a group of friends waiting just inside a Miami club entrance while one late friend jogs up from a rideshare on Biscayne Boulevard, the bouncer calmly holding the door in warm amber light"
+      },
+      "emoji": "🏃‍♀️",
+      "chip": "SIGN #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "He Warns You About The 3am Surge",
+      "highlight": "3am Surge",
+      "body": "That’s not door security anymore. That’s nightlife guardian angel behavior.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "friends outside a South Beach club at 3am checking rideshare prices on a phone while the bouncer points toward Collins Avenue, neon signs, taxis, and late night food spots glowing nearby"
+      },
+      "emoji": "🚕",
+      "chip": "SIGN #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who always gets the rope lifted 👀",
+  "hashtags": [
+    "MiamiNightlife",
+    "SouthBeachNights"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who always gets the rope lifted 👀\n\n#MiamiNightlife #SouthBeachNights #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-10-30",
+  "id": "2026-10-30-social-16"
+}
