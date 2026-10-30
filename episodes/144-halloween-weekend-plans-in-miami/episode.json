@@ -1,0 +1,198 @@
+{
+  "title": "Halloween weekend plans in Miami",
+  "sources": [
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Start with the free plans, then decide how much Halloween you want. 🎃\n\nSources: Miami New Times\n\n#Miami #MiamiHalloween #ThingsToDoMiami #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Looking for Halloween plans this weekend? Start with the free ones, then work up to thirty-five dollars.",
+      "overlay": [
+        "HALLOWEEN",
+        "WEEKEND"
+      ],
+      "emojis": [
+        "🎃",
+        "👻",
+        "🕯️",
+        "💀"
+      ],
+      "location": {
+        "name": "Miami Beach, Florida",
+        "lat": 25.82555556,
+        "lon": -80.1325,
+        "h": 40
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Saturday plan is Deli Lane and Sunset Tavern in South Miami. Their final Halloween party at this location starts at ten a.m. Admission is free, with live music from Drako, spooky cocktails and a costume contest.",
+      "caption": "The Saturday plan is Deli Lane & Sunset Tavern in South Miami. Their final Halloween party at this location starts at 10 a.m. Admission is free, with live music from Drako, spooky cocktails and a costume contest.",
+      "overlay": "SOUTH MIAMI",
+      "badge": "FREE",
+      "sub": "10 a.m. Saturday",
+      "emoji": "🎸",
+      "stats": [
+        {
+          "value": "FREE",
+          "label": "admission"
+        },
+        {
+          "value": "10 AM",
+          "label": "start time"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Deli Lane & Sunset Tavern",
+        "lat": 25.7049,
+        "lon": -80.2892,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "On Sunday, CityPlace Doral has its fifth annual Day of the Dead celebration at four p.m. It has folkloric dancers, stilt walkers, mariachis, face painting, food samples and free admission with RSVP.",
+      "caption": "On Sunday, CityPlace Doral has its 5th annual Day of the Dead celebration at 4 p.m. It has folkloric dancers, stilt walkers, mariachis, face painting, food samples and free admission with RSVP.",
+      "overlay": "DORAL",
+      "badge": "FREE RSVP",
+      "sub": "5th annual event",
+      "emoji": "🌼",
+      "stats": [
+        {
+          "value": "5TH",
+          "label": "annual event"
+        },
+        {
+          "value": "4 PM",
+          "label": "start time"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "CityPlace Doral",
+        "lat": 25.8096,
+        "lon": -80.3328,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -30,
+        "heading": 82,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a history option, the Spooktacular Miami City Cemetery Walking Tour starts Friday at five p.m. It covers Julia Tuttle and early Miamians. Tickets cost thirty-five dollars for adults and fifteen dollars for kids fourteen and under. If you go, open NEAR after the tour and see who was there.",
+      "caption": "For a history option, the Spooktacular Miami City Cemetery Walking Tour starts Friday at 5 p.m. It covers Julia Tuttle and early Miamians. Tickets cost $35 for adults and $15 for kids 14 and under. If you go, open NEAR after the tour and see who was there.",
+      "overlay": "MIAMI CEMETERY",
+      "badge": "$15 KIDS",
+      "sub": "Friday at 5 p.m.",
+      "emoji": "🪦",
+      "stats": [
+        {
+          "value": "$35",
+          "label": "adult ticket"
+        },
+        {
+          "value": "$15",
+          "label": "kids ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami City Cemetery",
+        "lat": 25.7937,
+        "lon": -80.1908,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -34,
+        "heading": 228,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "On Sunday night, Miami Beach Bandshell screens The Rocky Horror Picture Show with a Day of the Dead twist. The seven p.m. event includes drag performances by TP Lords, a live shadowcast and a costume contest. Tickets cost thirty-five dollars.",
+      "caption": "On Sunday night, Miami Beach Bandshell screens The Rocky Horror Picture Show with a Day of the Dead twist. The 7 p.m. event includes drag performances by TP Lords, a live shadowcast and a costume contest. Tickets cost $35.",
+      "overlay": "MIAMI BEACH",
+      "badge": "$35",
+      "sub": "7 p.m. Sunday",
+      "emoji": "🎬",
+      "stats": [
+        {
+          "value": "$35",
+          "label": "ticket"
+        },
+        {
+          "value": "7 PM",
+          "label": "start time"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami Beach Bandshell",
+        "lat": 25.8587,
+        "lon": -80.1205,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 18,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Start with the free ones and save the $35 ticket for later. And if you keep spotting the same person in the crowd without ever talking, NEAR is the app that tells you who they were.",
+      "overlay": "WHAT'S THE PLAN? 🎃",
+      "sub": "Free first, then $35",
+      "location": {
+        "name": "Miami Beach, Florida",
+        "lat": 25.82555556,
+        "lon": -80.1325,
+        "h": 40
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 260
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "144-halloween-weekend-plans-in-miami"
+}
