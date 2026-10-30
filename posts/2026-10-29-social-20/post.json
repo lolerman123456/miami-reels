@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "TYPES OF",
+    "main": "PEOPLE YOU SEE",
+    "highlight": "EVERY TIME",
+    "bottom": "AT A MIAMI DAY PARTY",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "a chaotic Miami day party on a Brickell rooftop at golden hour, four stylish friends posing with fans and sunglasses while a DJ plays, skyline glowing pink, pool lights on, plastic cups on a table, everyone laughing mid-photo"
+    },
+    "emojis": [
+      "🌴",
+      "🕶️",
+      "🍹"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Arrive Like You Own The Cabana",
+      "highlight": "Own The Cabana",
+      "body": "Sunglasses on, Miami Beach tote in hand. You found the good table in 12 seconds.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a confident woman in oversized sunglasses walking into a Miami Beach hotel pool party like she owns the cabana, friends behind her carrying a beach tote, palm shadows, bright noon sun, DJ booth in the background"
+      },
+      "emoji": "🕶️",
+      "chip": "TYPE #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Know The DJ By His First Name",
+      "highlight": "The DJ",
+      "body": "You said “he played Wynwood last week” and somehow got everyone closer to the booth.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a stylish friend group at a packed Wynwood outdoor day party waving at a DJ booth, one person pointing like they know the DJ, colorful murals, string lights still on in daylight, crowd dancing"
+      },
+      "emoji": "🎧",
+      "chip": "TYPE #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Turn Brunch Into A Full Send",
+      "highlight": "Full Send",
+      "body": "One mimosa at Coconut Grove became a Brickell rooftop reservation. Classic you.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "four friends leaving a Coconut Grove brunch patio in daytime, laughing while one holds up a phone with a Brickell rooftop reservation, plates still on the table, tropical plants, late afternoon Miami light"
+      },
+      "emoji": "🥂",
+      "chip": "TYPE #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Pack For The Beach After",
+      "highlight": "Beach After",
+      "body": "Swimsuit, charger, gloss, backup sandals. You came prepared for a 9-hour side quest.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a woman at a South Beach day party opening a tiny purse that somehow has sandals, phone charger, lip gloss and sunglasses, friends laughing beside a pool, bright blue sky, Art Deco hotel behind them"
+      },
+      "emoji": "👙",
+      "chip": "TYPE #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Call The 7pm Group Photo",
+      "highlight": "Group Photo",
+      "body": "Golden hour hit the Miami River and suddenly you became the creative director.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a friend directing a group photo at a Miami River waterfront day party at sunset, skyline reflecting on the water, everyone posing with sunglasses and bright outfits, warm orange light, boats passing behind them"
+      },
+      "emoji": "📸",
+      "chip": "TYPE #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who treats every day party like a scheduled performance 🕶️",
+  "hashtags": [
+    "MiamiDayParty",
+    "BrickellRooftop"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who treats every day party like a scheduled performance 🕶️\n\n#MiamiDayParty #BrickellRooftop #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-10-29",
+  "id": "2026-10-29-social-20"
+}
