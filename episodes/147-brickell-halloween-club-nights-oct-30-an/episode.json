@@ -1,0 +1,193 @@
+{
+  "title": "Brickell Halloween Club Nights, Oct. 30 and 31",
+  "sources": [
+    "Instagram",
+    "Eventbrite"
+  ],
+  "collaborators": [],
+  "igCaption": "Brickell has Halloween plans on Oct. 30 and 31.\nNegroni Brickell, MAD CLUB, AREA 305, and E11even are all on the map for Miami nightlife.\n\nSources: Instagram, Eventbrite\n\n#MiamiHalloween #Brickell #MiamiEvents #HalloweenMiami",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Brickell has Halloween plans on Oct. 30 and 31. These are the club nights on the calendar.",
+      "overlay": [
+        "BRICKELL",
+        "HALLOWEEN"
+      ],
+      "emojis": [
+        "🎃",
+        "🪩",
+        "🌃",
+        "👻"
+      ],
+      "location": {
+        "name": "Brickell",
+        "lat": 25.758,
+        "lon": -80.193,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Negroni Brickell has Negroni Sinners on Saturday, October 31. It starts at 11 PM and runs till late, with DJ sets by Andy Martinez and AVIV.",
+      "caption": "Negroni Brickell has Negroni Sinners on Saturday, Oct. 31. It starts at 11 PM and runs till late, with DJ sets by Andy Martinez and AVIV.",
+      "overlay": "NEGRONI",
+      "badge": "11 PM",
+      "sub": "Halloween night in Brickell",
+      "emoji": "🍸",
+      "stats": [
+        {
+          "value": "11 PM",
+          "label": "start time"
+        },
+        {
+          "value": "OCT 31",
+          "label": "Halloween night"
+        }
+      ],
+      "source": "Instagram",
+      "location": {
+        "name": "Negroni Brickell",
+        "lat": 25.7647,
+        "lon": -80.193,
+        "h": 75
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "MAD CLUB has A Night in Vice City on Oct. 30 and Oct. 31. The club says Vice City is calling, and tickets are in the link in bio.",
+      "caption": "MAD CLUB has A Night in Vice City on Oct. 30 and Oct. 31. The club says Vice City is calling, and tickets are in the link in bio.",
+      "overlay": "MAD CLUB",
+      "badge": "2 NIGHTS",
+      "sub": "Oct. 30 and Oct. 31",
+      "emoji": "🌆",
+      "stats": [
+        {
+          "value": "OCT 30",
+          "label": "night one"
+        },
+        {
+          "value": "OCT 31",
+          "label": "night two"
+        }
+      ],
+      "source": "Instagram",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 85
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -34,
+        "heading": 75,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "AREA 305 has Night Swim on Friday, October 30. It runs from 7 PM to 1 AM and bills itself as an official Halloween costume party. If you go, peek at NEAR after Night Swim and see who else was there.",
+      "caption": "AREA 305 has Night Swim on Friday, Oct. 30. It runs from 7 PM to 1 AM and bills itself as an official Halloween costume party. If you go, peek at NEAR after Night Swim and see who else was there.",
+      "overlay": "AREA 305",
+      "badge": "7 PM to 1 AM",
+      "sub": "Official Halloween costume party",
+      "emoji": "🌊",
+      "stats": [
+        {
+          "value": "7 PM",
+          "label": "doors"
+        },
+        {
+          "value": "1 AM",
+          "label": "end time"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "push",
+        "range": 850,
+        "pitch": -30,
+        "heading": 310
+      }
+    },
+    {
+      "kind": "item",
+      "text": "E11even is on the map for late-night Miami plans. Its location is listed in Miami, and that keeps it in the Brickell orbit for the weekend.",
+      "caption": "E11even is on the map for late-night Miami plans.",
+      "overlay": "E11EVEN",
+      "badge": "MIAMI",
+      "sub": "Late-night option",
+      "emoji": "🕺",
+      "stats": [
+        {
+          "value": "MIAMI",
+          "label": "location"
+        }
+      ],
+      "source": "Location data",
+      "location": {
+        "name": "E11even",
+        "lat": 25.7847,
+        "lon": -80.1935,
+        "h": 95
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -35,
+        "heading": 25,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "That gives Brickell four options for Halloween weekend. Brickell nights are full of people you brush past without a word, and NEAR is what shows you who that stranger at the club really was. Pick your night and go.",
+      "overlay": "PICK ONE 🎃",
+      "sub": "Oct. 30 and 31 plans",
+      "location": {
+        "name": "Brickell",
+        "lat": 25.758,
+        "lon": -80.193,
+        "h": 90
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "147-brickell-halloween-club-nights-oct-30-an"
+}
