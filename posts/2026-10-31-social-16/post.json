@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "SIGNS",
+    "main": "YOU'RE THE FRIEND",
+    "highlight": "WHO KNOWS",
+    "bottom": "WHERE EVERYONE IS TONIGHT",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "a stylish group of five invented friends huddled under neon lights outside a packed Wynwood bar, one woman holding up her phone showing a Miami nightlife app while everyone points excitedly, palm trees and murals behind them, humid Saturday night glow"
+    },
+    "emojis": [
+      "📍",
+      "👀",
+      "🌴"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Text The Spot Before They Ask",
+      "highlight": "The Spot",
+      "body": "Brickell rooftop at 10, Wynwood after midnight.\nYour group chat waits for your address drop.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented woman in a black going-out top standing in a Brickell apartment kitchen, texting a location to a loud group chat while her friends fix hair in the mirror, Miami skyline glowing through the window"
+      },
+      "emoji": "📲",
+      "chip": "SIGN #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Know Which Line Is Fake Long",
+      "highlight": "Fake Long",
+      "body": "That Wynwood sidewalk crowd doesn't scare you.\nYou already know the door moves in five.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a confident invented friend leading three friends past a crowded Wynwood bar line under pink neon, people waiting along a mural wall, door lights flashing, warm Miami night scene"
+      },
+      "emoji": "🚪",
+      "chip": "SIGN #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Spot The Table Before Sparklers",
+      "highlight": "Before Sparklers",
+      "body": "South Beach gets loud, but you see the bottle-service parade forming from across the room.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented person in a sleek blue outfit pointing across a packed South Beach club dance floor as servers prepare bottle-service sparklers in the background, lasers and confetti in the air"
+      },
+      "emoji": "✨",
+      "chip": "SIGN #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Check NEAR Before The Move",
+      "highlight": "Check NEAR",
+      "body": "One tap and suddenly you know who's at Space, who's at Do Not Sit, and who's lying about staying in.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented group standing outside a Downtown Miami club entrance at 1am, one friend checking the NEAR app on their phone while others lean in laughing, blue club lighting and palm shadows"
+      },
+      "emoji": "👀",
+      "chip": "SIGN #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Call The Cafecito Ending",
+      "highlight": "Cafecito Ending",
+      "body": "3:18am and you're already leading everyone to ventanita coffee like a tour guide with lashes on.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "four invented friends laughing at a Little Havana ventanita at 3am, tiny Cuban coffees on the counter, party outfits, neon cafecito sign, quiet street and warm yellow light"
+      },
+      "emoji": "☕",
+      "chip": "SIGN #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who always knows where everyone is tonight 👀",
+  "hashtags": [
+    "MiamiNightlife",
+    "WynwoodNights"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who always knows where everyone is tonight 👀\n\n#MiamiNightlife #WynwoodNights #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-10-31",
+  "id": "2026-10-31-social-16"
+}
