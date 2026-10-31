@@ -1,0 +1,200 @@
+{
+  "title": "Last-minute Halloween night plans",
+  "sources": [
+    "Eventbrite",
+    "Miami New Times",
+    "South Florida Reporter"
+  ],
+  "collaborators": [],
+  "igCaption": "Four Halloween plans you can still make tonight.\nTonight, Miami and Fort Lauderdale, free to $52.\n\nSources: Eventbrite, Miami New Times, South Florida Reporter\n\n#MiamiEvents #HalloweenMiami #FortLauderdale #ThingsToDoMiami",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need Halloween plans tonight? Start with the ones you can still walk into without overthinking it.",
+      "overlay": [
+        "HALLOWEEN",
+        "TONIGHT"
+      ],
+      "emojis": [
+        "🎃",
+        "👻",
+        "🎟️",
+        "🌧️"
+      ],
+      "location": {
+        "name": "Wynwood, Miami",
+        "lat": 25.8011,
+        "lon": -80.1996,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 900,
+        "pitch": -32,
+        "heading": 155
+      }
+    },
+    {
+      "kind": "item",
+      "text": "HalloWYN is the easiest first stop. It runs in Wynwood from seven p.m. to three a.m., and admission is free. That gives you eight hours to show up, leave, come back, and pretend that was the plan.",
+      "caption": "HalloWYN is the easiest first stop. It runs in Wynwood from 7 PM to 3 AM, and admission is free. That gives you 8 hours to show up, leave, come back, and pretend that was the plan.",
+      "overlay": "HALLOWYN",
+      "badge": "FREE",
+      "sub": "7 PM to 3 AM",
+      "emoji": "🎃",
+      "stats": [
+        {
+          "value": "FREE",
+          "label": "admission"
+        },
+        {
+          "value": "8 HOURS",
+          "label": "party window"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Wynwood, Miami",
+        "lat": 25.8011,
+        "lon": -80.1996,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 210,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "BIGXTHAPLUG is at Rockbar Fort Lauderdale tonight. The Eventbrite listing runs from nine p.m. to four a.m.",
+      "caption": "For a ticketed music plan, BIGXTHAPLUG is at Rockbar Fort Lauderdale tonight. The Eventbrite listing runs from 9 PM to 4 AM.",
+      "overlay": "ROCKBAR",
+      "badge": "9 PM",
+      "sub": "Fort Lauderdale",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "9 PM",
+          "label": "start time"
+        },
+        {
+          "value": "7 HOURS",
+          "label": "event window"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 80,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Horrorland is still open at Jungle Island from seven to ten tonight. Tickets cost thirty-nine dollars and ninety-nine cents. This is its seventh season, with haunted houses like Honky Tonk, Orphanage, and Seven Sins. If you end up there, open NEAR and see who else survived it.",
+      "caption": "The Horrorland is still open at Jungle Island from 7 to 10 tonight. Tickets cost $39.99. This is its 7th season, with haunted houses like Honky Tonk, Orphanage, and Seven Sins. If you end up there, open NEAR and see who else survived it.",
+      "overlay": "HORRORLAND",
+      "badge": "$39.99",
+      "sub": "Jungle Island",
+      "emoji": "🏚️",
+      "stats": [
+        {
+          "value": "$39.99",
+          "label": "ticket price"
+        },
+        {
+          "value": "7TH",
+          "label": "season"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Jungle Island",
+        "lat": 25.785,
+        "lon": -80.1742,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -34,
+        "heading": 245,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sounds of Screams is at the Miami-Dade Fair Expo Center from six to eleven tonight. Tickets run forty-two to fifty-two dollars. One ticket covers five haunted houses, carnival rides, scare zones, and live entertainment across thirteen acres.",
+      "caption": "Sounds of Screams is at the Miami-Dade Fair Expo Center from 6 to 11 tonight. Tickets run $42 to $52. One ticket covers 5 haunted houses, carnival rides, scare zones, and live entertainment across 13 acres.",
+      "overlay": "SOUNDS",
+      "badge": "13 ACRES",
+      "sub": "Miami-Dade Fair Expo",
+      "emoji": "🎡",
+      "stats": [
+        {
+          "value": "$42-$52",
+          "label": "tickets"
+        },
+        {
+          "value": "13 ACRES",
+          "label": "event site"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami-Dade Fair Expo Center",
+        "lat": 25.7466,
+        "lon": -80.3713,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 75,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you actually do tonight? It is the same feeling as spotting someone all night and never learning their name, which is exactly what NEAR shows you after the fact.",
+      "overlay": "PICK ONE 🎃",
+      "sub": "Free block or ticketed scare",
+      "location": {
+        "name": "Brickell",
+        "lat": 25.758,
+        "lon": -80.193,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1700,
+        "pitch": -36,
+        "heading": 25
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "149-last-minute-halloween-night-plans"
+}
