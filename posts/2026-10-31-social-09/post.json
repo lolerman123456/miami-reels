@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "SIGNS",
+    "main": "YOU'RE THE FRIEND THAT",
+    "highlight": "MIAMI",
+    "bottom": "FOLLOWS ALL NIGHT",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "a stylish group of invented friends stepping out of a rideshare in Brickell at night, one woman in a black satin outfit leading them toward a glowing rooftop entrance while everyone checks their phones and laughs, wet pavement reflecting neon blue lights"
+    },
+    "emojis": [
+      "👀",
+      "🌃",
+      "✨"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Pick The First Brickell Rooftop",
+      "highlight": "First Brickell Rooftop",
+      "body": "Everyone says “where are we going?” and somehow your Notes app has the whole route.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented friend group inside a packed Brickell rooftop bar, one woman pointing toward the skyline with her phone open while friends lean in around a high-top table, blue city lights and cocktail glasses on the table"
+      },
+      "emoji": "🏙️",
+      "chip": "SIGN #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Find The Wynwood Side Door",
+      "highlight": "Wynwood Side Door",
+      "body": "The front line is wrapped around the mural. You’re already texting “come left.”",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a confident invented woman waving her friends toward a side entrance beside a colorful Wynwood mural, a long nightlife line in the background, neon signs glowing pink and blue on the sidewalk"
+      },
+      "emoji": "🚪",
+      "chip": "SIGN #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Know When The Sparklers Hit",
+      "highlight": "Sparklers Hit",
+      "body": "Your camera opens before the bottle even reaches the table. Professional timing.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a packed South Beach club table with invented friends cheering as bottle-service sparklers move through the crowd, one friend filming perfectly from the corner, blue lasers cutting through haze"
+      },
+      "emoji": "✨",
+      "chip": "SIGN #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Call The 2:47am Food Run",
+      "highlight": "2:47am Food Run",
+      "body": "South Beach, Brickell, Wynwood, doesn’t matter. You know where the fries are.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "invented friends in going-out clothes crowding around a late-night Miami food window at 2:47am, holding fries and water bottles, laughing under bright fluorescent lights with palm trees and rideshares outside"
+      },
+      "emoji": "🍟",
+      "chip": "SIGN #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Make Sunday Beach Plans Anyway",
+      "highlight": "Sunday Beach Plans",
+      "body": "You left the club at 3. Still somehow texting “Key Biscayne at noon?”",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented friend lying on a Miami beach towel the next day wearing sunglasses, phone in hand showing a group chat, friends arriving with beach bags near turquoise water and bright noon sunlight"
+      },
+      "emoji": "🏖️",
+      "chip": "SIGN #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend everyone follows after the first plan 👀",
+  "hashtags": [
+    "MiamiNightlife",
+    "BrickellNights"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend everyone follows after the first plan 👀\n\n#MiamiNightlife #BrickellNights #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-10-31",
+  "id": "2026-10-31-social-09"
+}
