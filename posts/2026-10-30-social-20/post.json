@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "",
+    "main": "YOU DO THINGS BEFORE A",
+    "highlight": "MIAMI NIGHT",
+    "bottom": "GETS SERIOUS",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "four stylish friends in a Brickell apartment getting ready before a Miami night out, one steaming a dress, one holding heels, one checking a rideshare price, skyline glowing through the window, neon pink and blue bathroom light"
+    },
+    "emojis": [
+      "💄",
+      "🌃",
+      "🚗"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Say 8:30 Knowing It Means 10",
+      "highlight": "Means 10",
+      "body": "The group chat says Brickell rooftop. Your mirror says you need 40 more minutes.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a friend group in a high-rise Brickell apartment surrounded by outfit options, one person texting on a phone that says 8:30, makeup lights glowing, Miami skyline at sunset outside"
+      },
+      "emoji": "⏰",
+      "chip": "SIGN #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Try On The Same Top Three Times",
+      "highlight": "Same Top",
+      "body": "First it was Wynwood cute. Then South Beach cute. Then back to the first one.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a stylish woman standing in front of a bedroom mirror in Edgewater with three tops on the bed, friends sitting behind her giving thumbs up, city lights and party makeup scattered around"
+      },
+      "emoji": "👚",
+      "chip": "SIGN #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Check NEAR Before The Uber",
+      "highlight": "Check NEAR",
+      "body": "If half the group is already at the bar, suddenly that surge feels personal.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "close-up of a phone in manicured hands showing a nightlife app map near Wynwood, friends leaning over excitedly in the backseat of an Uber, neon bar lights through the window"
+      },
+      "emoji": "📍",
+      "chip": "SIGN #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Take The Elevator Selfie Down",
+      "highlight": "Elevator Selfie",
+      "body": "Brickell lobby lighting deserves documentation. The doorman has seen the full shoot.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "three friends taking a glamorous elevator mirror selfie in a luxury Brickell condo lobby, gold lighting, tiny purses, heels, one person fixing sunglasses at night"
+      },
+      "emoji": "🪞",
+      "chip": "SIGN #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Pack Flats Like A Professional",
+      "highlight": "Pack Flats",
+      "body": "They stay hidden until the South Beach walk back turns into a survival sport.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a friend secretly sliding foldable flats into a tiny purse outside a South Beach club, palm trees, wet pavement reflecting neon, friends laughing under club lights"
+      },
+      "emoji": "🥿",
+      "chip": "SIGN #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who starts getting ready before the plan even exists 💄",
+  "hashtags": [
+    "MiamiNightOut",
+    "BrickellNightlife"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who starts getting ready before the plan even exists 💄\n\n#MiamiNightOut #BrickellNightlife #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-10-30",
+  "id": "2026-10-30-social-20"
+}
