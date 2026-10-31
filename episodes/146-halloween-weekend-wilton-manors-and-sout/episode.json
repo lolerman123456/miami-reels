@@ -1,0 +1,132 @@
+{
+  "title": "Halloween Weekend: Wilton Manors and South Beach",
+  "sources": [
+    "WPLG Local 10",
+    "WSVN",
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Wilton Manors and South Beach for Halloween weekend.\nOct. 31, Wilton Manors and South Beach.\n\nSources: WPLG Local 10, WSVN, Miami New Times\n\n#MiamiEvents #WiltonManors #SouthBeach #Halloween",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Looking for Halloween this weekend? Start with Wilton Manors, then head to South Beach.",
+      "overlay": [
+        "HALLOWEEN",
+        "WEEKEND"
+      ],
+      "emojis": [
+        "🎃",
+        "👻",
+        "🏳️‍🌈",
+        "🕺"
+      ],
+      "location": {
+        "name": "Wilton Manors, Florida",
+        "lat": 26.15944444,
+        "lon": -80.13,
+        "h": 15
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "WPLG Local 10 called Wicked Manors one big party and one spooktacular show. WSVN also said South Florida is preparing for large Halloween parties in Wilton Manors and Wynwood.",
+      "caption": "WPLG Local 10 called Wicked Manors 1 big party and 1 spooktacular show. WSVN also said South Florida is preparing for large Halloween parties in Wilton Manors and Wynwood.",
+      "overlay": "WILTON MANORS",
+      "badge": "1 BIG PARTY",
+      "sub": "Wicked Manors weekend",
+      "emoji": "🏳️‍🌈",
+      "stats": [
+        {
+          "value": "1",
+          "label": "big party"
+        },
+        {
+          "value": "1",
+          "label": "show"
+        }
+      ],
+      "source": "WPLG Local 10",
+      "location": {
+        "name": "Wilton Manors, Florida",
+        "lat": 26.15944444,
+        "lon": -80.13,
+        "h": 15
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "South Beach is the late-night stop. The map puts it at 25.781875 latitude and -80.136262 longitude. If you end up in South Beach late, check NEAR for who’s around.",
+      "caption": "South Beach is the late-night stop. The map puts it at 25.781875 latitude and -80.136262 longitude. If you end up in South Beach late, check NEAR for who’s around.",
+      "overlay": "SOUTH BEACH",
+      "badge": "MIAMI BEACH",
+      "sub": "Late-night stop",
+      "emoji": "🌊",
+      "stats": [
+        {
+          "value": "25.781875",
+          "label": "latitude"
+        },
+        {
+          "value": "-80.136262",
+          "label": "longitude"
+        }
+      ],
+      "source": "South Beach location",
+      "location": {
+        "name": "South Beach",
+        "lat": 25.781875,
+        "lon": -80.136262,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 260,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you doing first, Wilton Manors or South Beach? That stranger in costume you kept noticing all night is exactly the kind of face NEAR turns into a name, without the awkward ask.",
+      "overlay": "PICK ONE 🎃",
+      "sub": "Wilton or South Beach",
+      "location": {
+        "name": "South Beach",
+        "lat": 25.781875,
+        "lon": -80.136262,
+        "h": 12
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 310
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "146-halloween-weekend-wilton-manors-and-sout"
+}
