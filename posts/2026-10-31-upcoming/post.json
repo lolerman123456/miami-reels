@@ -1,0 +1,132 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SOUTH FLORIDA",
+    "main": "IS GOING TO RED BULL FLUGTAG",
+    "highlight": "THIS WEEKEND",
+    "bottom": "AT BAYFRONT PARK",
+    "blur": false,
+    "photo": {
+      "query": "South Florida Halloween weekend night crowd lights carnival",
+      "prompt": "A dramatic South Florida night scene with a packed Halloween crowd, bright ride lights, fog, costumes and a clear sense of motion"
+    },
+    "emojis": [
+      "🎃",
+      "👻",
+      "🎟️"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Red Bull Flugtag at Bayfront Park",
+      "highlight": "FLUGTAG",
+      "body": "Saturday, Oct. 31 from 11 a.m. to 4 p.m. at Bayfront Park in Miami. Admission is free. Teams launch homemade flying machines over the water.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Red Bull Flugtag Bayfront Park Miami flying machine crowd",
+        "prompt": "A wide, dramatic photo of a homemade flying machine at Bayfront Park with the water, the launch deck and a crowd watching"
+      },
+      "emoji": "🪽",
+      "chip": "FREE",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Spooktacular Miami City Cemetery Walking Tour",
+      "highlight": "CEMETERY TOUR",
+      "body": "Friday, Oct. 30 at 5 p.m. at Miami City Cemetery in Miami. Tickets cost $35 for adults and $15 for children 14 and under. The tour mixes local history with a Halloween walk.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miami City Cemetery night walking tour historic graves",
+        "prompt": "A moody evening photo of Miami City Cemetery with flashlight-lit visitors, old graves and a historic path"
+      },
+      "emoji": "🔦",
+      "chip": "$35",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Halloween Party at Deli Lane and Sunset Tavern",
+      "highlight": "HALLOWEEN PARTY",
+      "body": "Saturday, Oct. 31 at 10 a.m. at Deli Lane and Sunset Tavern in South Miami. Admission is free. Live music, cocktails and a costume contest are on the schedule.",
+      "place": "South Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Deli Lane Sunset Tavern South Miami halloween party exterior",
+        "prompt": "A specific night-or-day photo of Deli Lane and Sunset Tavern with Halloween decor, people in costume and the entrance clearly visible"
+      },
+      "emoji": "🎭",
+      "chip": "FREE",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Rosa Obscura at Rosa Sky Rooftop",
+      "highlight": "ROSA OBSCURA",
+      "body": "Friday, Oct. 30 to Saturday, Oct. 31 at Rosa Sky Rooftop in Miami. The event runs as a Halloween rooftop party.",
+      "place": "Miami",
+      "source": "Our posts from the last week",
+      "photo": {
+        "query": "Rosa Sky Rooftop Miami Halloween rooftop night",
+        "prompt": "A dramatic rooftop nightlife scene at Rosa Sky with skyline lights, costumes, cocktails and a clear rooftop setting"
+      },
+      "emoji": "🌆",
+      "chip": "OCT 30 TO 31",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Day of the Dead at CityPlace Doral",
+      "highlight": "DAY OF THE DEAD",
+      "body": "Sunday, Nov. 1 at 4 p.m. at CityPlace Doral in Doral. Admission is free with RSVP. The event includes folkloric dancers, stilt walkers and mariachis.",
+      "place": "Doral",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "CityPlace Doral Day of the Dead event colorful crowd",
+        "prompt": "A colorful daytime photo of CityPlace Doral with Day of the Dead decor, performers in costume and a lively plaza"
+      },
+      "emoji": "💀",
+      "chip": "FREE",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "The Rocky Horror Picture Show at Miami Beach Bandshell",
+      "highlight": "ROCKY HORROR",
+      "body": "Sunday, Nov. 1 at 7 p.m. at Miami Beach Bandshell in Miami Beach. Tickets cost $35. The screening includes drag performances, a live shadowcast and a costume contest.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miami Beach Bandshell night Rocky Horror event crowd",
+        "prompt": "A striking nighttime photo of Miami Beach Bandshell with stage lights, costumed guests and the outdoor venue clearly visible"
+      },
+      "emoji": "🎬",
+      "chip": "$35",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "South Florida has a full Halloween weekend. Who are you taking? Tag a friend 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#EVENTS"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has a full Halloween weekend. Who are you taking? Tag a friend 👀\n\n📰 Sources: Secret Miami, Miami New Times, Our posts from the last week\n\n#SouthFloridaEvents #EVENTS #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-10-31",
+  "id": "2026-10-31-upcoming"
+}
