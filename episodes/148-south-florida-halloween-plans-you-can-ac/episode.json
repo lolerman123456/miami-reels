@@ -1,0 +1,197 @@
+{
+  "title": "South Florida Halloween plans you can actually verify",
+  "sources": [
+    "Miami New Times",
+    "Facebook",
+    "South Florida Reporter",
+    "The Palm Beach Post"
+  ],
+  "collaborators": [],
+  "igCaption": "Halloween plans across South Florida, with the details that are actually listed 🎃\nOct. 31, South Florida, free to $35 listed\n\nSources: Miami New Times, Facebook, South Florida Reporter, The Palm Beach Post\n\n#MiamiEvents #FortLauderdaleEvents #WestPalmBeach #HalloweenMiami",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Halloween plans in South Florida have a few clear listings.",
+      "overlay": [
+        "HALLOWEEN",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🎃",
+        "🍸",
+        "👻",
+        "🕒"
+      ],
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "In Miami, Deli Lane and Sunset Tavern in South Miami lists a Halloween party at 10 a.m. on October 31. Admission is free, and there is a costume contest.",
+      "caption": "In Miami, Deli Lane and Sunset Tavern in South Miami lists a Halloween party at 10 a.m. on Oct. 31. Admission is free, and there is a costume contest.",
+      "overlay": "SOUTH MIAMI",
+      "badge": "FREE",
+      "sub": "10 a.m. costume contest",
+      "emoji": "🎭",
+      "stats": [
+        {
+          "value": "10 AM",
+          "label": "start time"
+        },
+        {
+          "value": "FREE",
+          "label": "admission"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Deli Lane & Sunset Tavern",
+        "lat": 25.7044,
+        "lon": -80.2896,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "In Fort Lauderdale, Flagler Village is set for the 3rd Annual Flagler Village Halloween Bar Crawl on October 31. Five local hotspots are taking part.",
+      "caption": "In Fort Lauderdale, Flagler Village is set for the 3rd Annual Flagler Village Halloween Bar Crawl on Oct. 31. Five local hotspots are taking part.",
+      "overlay": "FLAGLER VILLAGE",
+      "badge": "5 SPOTS",
+      "sub": "Oct. 31 evening crawl",
+      "emoji": "🍻",
+      "stats": [
+        {
+          "value": "5",
+          "label": "hotspots"
+        },
+        {
+          "value": "3RD",
+          "label": "annual crawl"
+        }
+      ],
+      "source": "Facebook",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 40,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For West Palm Beach, the local event pages point to Halloween weekend activity, but they do not list crawl details. Daylight saving time ends today in Florida, and clocks fall back tonight. If you end up at a West Palm crawl, NEAR shows who was there too.",
+      "caption": "For West Palm Beach, the local event pages point to Halloween weekend activity, but they do not list crawl details. Daylight saving time ends today in Florida, and clocks fall back tonight. If you end up at a West Palm crawl, NEAR shows who was there too.",
+      "overlay": "WEST PALM",
+      "badge": "FALL BACK",
+      "sub": "Clocks change tonight",
+      "emoji": "🎟️",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "Halloween weekend"
+        },
+        {
+          "value": "2 AM",
+          "label": "clock change"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "West Palm Beach, Florida",
+        "lat": 26.74694444,
+        "lon": -80.13111111,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 310,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Halloween brings showers and storms into the early evening on the mainland. A high risk of dangerous rip currents stays in place at Atlantic beaches through Sunday evening.",
+      "caption": "Halloween brings showers and storms into the early evening on the mainland. A high risk of dangerous rip currents stays in place at Atlantic beaches through Sunday evening.",
+      "overlay": "SOUTH FLORIDA",
+      "badge": "STORMS",
+      "sub": "Rip currents through Sunday",
+      "emoji": "🌧️",
+      "stats": [
+        {
+          "value": "SUNDAY EVENING",
+          "label": "rip current risk"
+        }
+      ],
+      "source": "South Florida Reporter",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1700,
+        "pitch": -36,
+        "heading": 210,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which city should we track for the next update? That’s the same idea as NEAR, which shows you the people who walked past you during the day, so the stranger from last night becomes a face you actually know.",
+      "overlay": "WHICH CITY? 🎃",
+      "sub": "Miami, Fort Lauderdale, or West Palm",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -35,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "148-south-florida-halloween-plans-you-can-ac"
+}
