@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "RED FLAGS",
+    "main": "THE RED FLAG IS THAT YOU'RE TOO GOOD FOR THIS BRICKELL ROOFTOP.",
+    "highlight": "TOO GOOD",
+    "bottom": "",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "four stylish friends pausing at the entrance of a packed Brickell rooftop, one woman raising an eyebrow at a reserved table with giant sparklers, Miami skyline glowing behind them, blue and pink club lights, cinematic flash photo"
+    },
+    "emojis": [
+      "🚩",
+      "🌃",
+      "👀"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The Elevator Opens To A Line",
+      "highlight": "Elevator Opens",
+      "body": "Thirty floors up and somehow the wait starts again. Brickell loves a surprise queue.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a group of invented friends stepping out of a sleek elevator into a crowded Brickell rooftop lobby line, everyone dressed for a night out, neon blue lighting, city skyline visible through glass walls, candid party flash"
+      },
+      "emoji": "🚪",
+      "chip": "RED FLAG #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Your Table Has Zero View",
+      "highlight": "Zero View",
+      "body": "If the skyline is behind a pillar, someone owes the group a better plan.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "five invented friends at a Brickell rooftop table tucked behind a large column, one friend pointing at the blocked skyline view while other tables face downtown Miami lights, warm sparklers in the distance, funny candid nightlife photo"
+      },
+      "emoji": "🏙️",
+      "chip": "RED FLAG #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The DJ Keeps Restarting The Hook",
+      "highlight": "Restarting The Hook",
+      "body": "You already heard the best 12 seconds three times. The dance floor is negotiating.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a packed Brickell rooftop dance floor with invented partygoers laughing as the DJ dramatically restarts the same chorus, blue laser lights, hands in the air, Miami high-rise skyline at night, energetic flash photography"
+      },
+      "emoji": "🎧",
+      "chip": "RED FLAG #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The Bathroom Mirror Is A Photoshoot",
+      "highlight": "Bathroom Mirror",
+      "body": "You came to fix lip gloss. Now you're waiting behind a full campaign.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a glamorous Brickell rooftop bathroom where invented women and men are taking mirror selfies with phone flashes, one friend holding lip gloss and laughing while waiting, marble sinks, club lighting, playful Miami nightlife scene"
+      },
+      "emoji": "📸",
+      "chip": "RED FLAG #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Everyone Checks NEAR At Once",
+      "highlight": "Checks NEAR",
+      "body": "When the whole group goes quiet, the next move is already happening.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a circle of invented friends on a Brickell rooftop couch all looking down at their phones and smiling as they check a social nightlife app, sparklers passing behind them, downtown Miami lights, late night blue glow"
+      },
+      "emoji": "📍",
+      "chip": "RED FLAG #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who would clock all five before the first photo 👀",
+  "hashtags": [
+    "BrickellRooftop",
+    "MiamiNightlife"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who would clock all five before the first photo 👀\n\n#BrickellRooftop #MiamiNightlife #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-04",
+  "id": "2026-11-04-social-16"
+}
