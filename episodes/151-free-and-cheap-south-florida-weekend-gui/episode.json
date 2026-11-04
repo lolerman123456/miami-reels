@@ -1,0 +1,193 @@
+{
+  "title": "Free and cheap South Florida weekend guide",
+  "sources": [
+    "Secret Miami",
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Start with the free stuff, then decide what gets your weekend money.\nNov. 5, 9, 14 and 15 in Aventura, Hialeah Gardens and Doral. Free entry at Hialeah Gardens and Doral.\n\nSources: Secret Miami, Miami New Times\n\n#SouthFlorida #Aventura #Doral #WeekendGuide",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need weekend plans that start free and stay reasonable? Three South Florida stops have dates, giveaways and live music.",
+      "overlay": [
+        "WEEKEND GUIDE",
+        "FREE FIRST"
+      ],
+      "emojis": [
+        "🎨",
+        "🥁",
+        "📚",
+        "🎶"
+      ],
+      "location": {
+        "name": "Aventura Mall",
+        "lat": 25.958,
+        "lon": -80.1436,
+        "h": 25
+      },
+      "shot": {
+        "type": "dive",
+        "range": 900,
+        "pitch": -32,
+        "heading": 170
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Uniqlo opens at Aventura Mall on Thursday, November 5, at 10 a.m. The four-day opening has Taiko drum performances, daily giveaways and Miami-exclusive merch from Dani Klarić, Bobbie Goods and Jarritos.",
+      "caption": "Uniqlo opens at Aventura Mall on Thursday, Nov. 5, at 10 a.m. The four-day opening has Taiko drum performances, daily giveaways and Miami-exclusive merch from Dani Klarić, Bobbie Goods and Jarritos.",
+      "overlay": "AVENTURA MALL",
+      "badge": "OPENS NOV 5",
+      "sub": "Taiko drums and giveaways",
+      "emoji": "🥁",
+      "stats": [
+        {
+          "value": "4 DAYS",
+          "label": "opening"
+        },
+        {
+          "value": "10 AM",
+          "label": "first day"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Aventura Mall",
+        "lat": 25.958,
+        "lon": -80.1436,
+        "h": 25
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 210,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The first 500 people in line get free knot bags filled with goodies. The first 500 spending $99 or more get stainless steel water bottles. Repairs at the sustainability studio start at $5.",
+      "caption": "The first 500 people in line get free knot bags filled with goodies. The first 500 spending $99 or more get stainless steel water bottles. Repairs at the sustainability studio start at $5.",
+      "overlay": "AVENTURA",
+      "badge": "500 GIVEAWAYS",
+      "sub": "Free bags, $5 repairs",
+      "emoji": "🛍️",
+      "stats": [
+        {
+          "value": "500",
+          "label": "free bags"
+        },
+        {
+          "value": "$5",
+          "label": "repairs start"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Aventura Mall",
+        "lat": 25.958,
+        "lon": -80.1436,
+        "h": 25
+      },
+      "shot": {
+        "type": "push",
+        "range": 650,
+        "pitch": -30,
+        "heading": 120
+      }
+    },
+    {
+      "kind": "item",
+      "text": "On Monday, November 9, the Hialeah Gardens Branch Library runs a Create Your Own Manga workshop for young adults. YouMedia Miami helps them build characters and visuals. If you go, open NEAR and see who’s there making manga too.",
+      "caption": "On Monday, Nov. 9, the Hialeah Gardens Branch Library runs a Create Your Own Manga workshop for young adults. YouMedia Miami helps them build characters and visuals. If you go, open NEAR and see who’s there making manga too.",
+      "overlay": "HIALEAH GARDENS",
+      "badge": "NOV 9",
+      "sub": "Manga workshop",
+      "emoji": "✏️",
+      "stats": [
+        {
+          "value": "NOV 9",
+          "label": "workshop"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Hialeah Gardens Branch Library",
+        "lat": 25.8782,
+        "lon": -80.3482,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -33,
+        "heading": 35,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Next weekend, Downtown Doral Arts Festival takes over Northwest 53rd Street on November 14 and 15. Entry is free, with more than 60 artists, live music, food and student art from Downtown Doral Charter School.",
+      "caption": "Next weekend, Downtown Doral Arts Festival takes over NW 53rd Street on Nov. 14 and 15. Entry is free, with more than 60 artists, live music, food and student art from Downtown Doral Charter School.",
+      "overlay": "DOWNTOWN DORAL",
+      "badge": "FREE ENTRY",
+      "sub": "60+ artists on NW 53rd",
+      "emoji": "🎨",
+      "stats": [
+        {
+          "value": "60+",
+          "label": "artists"
+        },
+        {
+          "value": "2 DAYS",
+          "label": "festival"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Downtown Doral Main Street",
+        "lat": 25.8215,
+        "lon": -80.3365,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 750,
+        "pitch": -31,
+        "heading": 285,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Pick one and go. A crowded South Florida weekend is full of people you notice and never meet, and NEAR is what turns that passing glance into a name. Free entry is the easiest yes here.",
+      "overlay": "WHAT’S YOUR PICK? 🎟️",
+      "sub": "Drop the plan",
+      "location": {
+        "name": "Downtown Doral Main Street",
+        "lat": 25.8215,
+        "lon": -80.3365,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1300,
+        "pitch": -30,
+        "heading": 245
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "151-free-and-cheap-south-florida-weekend-gui"
+}
