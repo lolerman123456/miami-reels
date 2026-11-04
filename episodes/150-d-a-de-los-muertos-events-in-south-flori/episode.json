@@ -1,0 +1,187 @@
+{
+  "title": "Día de los Muertos events in South Florida Nov. 1 and 2",
+  "sources": [
+    "Boca Raton Observer",
+    "Islander News",
+    "Sun Sentinel",
+    "WLRN",
+    "Out South Florida",
+    "AP News"
+  ],
+  "collaborators": [],
+  "igCaption": "Día de los Muertos falls on Nov. 1 and 2. Here’s where South Florida is marking it.\nNov. 1 and 2, Miami Beach, Doral and Fort Lauderdale\n\nSources: Boca Raton Observer, Islander News, Sun Sentinel, WLRN, Out South Florida, AP News\n\n#MiamiEvents #Doral #MiamiBeach #FortLauderdale",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Día de los Muertos lands on November 1 and 2. South Florida has events in Miami Beach, Doral and Fort Lauderdale tied to it.",
+      "overlay": [
+        "DÍA DE LOS",
+        "MUERTOS"
+      ],
+      "emojis": [
+        "💀",
+        "🕯️",
+        "🌼",
+        "🎶"
+      ],
+      "location": {
+        "name": "The Goodtime Hotel",
+        "lat": 25.7743,
+        "lon": -80.1346,
+        "h": 35
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start on Miami Beach. The Goodtime Hotel has Goodtime Sundays: Day of the Dead Pool Party on November 1.",
+      "caption": "Start on Miami Beach. The Goodtime Hotel has Goodtime Sundays: Day of the Dead Pool Party on Nov. 1.",
+      "overlay": "MIAMI BEACH",
+      "badge": "NOV. 1",
+      "sub": "Goodtime Hotel pool party",
+      "emoji": "🏊",
+      "stats": [
+        {
+          "value": "NOV. 1",
+          "label": "pool party"
+        }
+      ],
+      "source": "Boca Raton Observer",
+      "location": {
+        "name": "The Goodtime Hotel",
+        "lat": 25.7743,
+        "lon": -80.1346,
+        "h": 35
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "In Doral, CityPlace Doral is hosting its fifth annual Día de los Muertos celebration.",
+      "caption": "In Doral, CityPlace Doral is hosting its 5th annual Día de los Muertos celebration.",
+      "overlay": "CITYPLACE DORAL",
+      "badge": "5TH ANNUAL",
+      "sub": "Doral celebration",
+      "emoji": "🌼",
+      "stats": [
+        {
+          "value": "5TH",
+          "label": "annual event"
+        }
+      ],
+      "source": "Islander News",
+      "location": {
+        "name": "CityPlace Doral",
+        "lat": 25.8107,
+        "lon": -80.3314,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -33,
+        "heading": 260,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Fort Lauderdale also has a Day of the Dead celebration. The Sun Sentinel covered its return with photos. If you go, check NEAR to see who else was at the altar.",
+      "caption": "Fort Lauderdale also has a Day of the Dead celebration. The Sun Sentinel covered its return with photos. If you go, check NEAR to see who else was at the altar.",
+      "overlay": "FORT LAUDERDALE",
+      "badge": "PHOTOS",
+      "sub": "Celebration returned",
+      "emoji": "🎭",
+      "stats": [
+        {
+          "value": "PHOTOS",
+          "label": "coverage"
+        }
+      ],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Downtown Fort Lauderdale",
+        "lat": 26.1195,
+        "lon": -80.1436,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -34,
+        "heading": 35,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami has another layer to this weekend. WLRN covered Haiti’s Day of the Dead in Miami, centered on spirituality and community.",
+      "caption": "Miami has another layer to this weekend. WLRN covered Haiti’s Day of the Dead in Miami, centered on spirituality and community.",
+      "overlay": "MIAMI",
+      "badge": "DAY OF THE DEAD",
+      "sub": "Haiti’s Day of the Dead",
+      "emoji": "🕯️",
+      "stats": [
+        {
+          "value": "MIAMI",
+          "label": "location"
+        }
+      ],
+      "source": "WLRN",
+      "location": {
+        "name": "Little Haiti Cultural Complex",
+        "lat": 25.8304,
+        "lon": -80.1917,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 115,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Those are the South Florida events for Nov. At gatherings like these, you can pass someone in the crowd and never learn their name, which is exactly where NEAR makes the day feel connected. 1 and 2.",
+      "overlay": "WHAT NEXT? 💀",
+      "sub": "Tell us where to go",
+      "location": {
+        "name": "Miami Beach",
+        "lat": 25.7907,
+        "lon": -80.13,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "150-d-a-de-los-muertos-events-in-south-flori"
+}
