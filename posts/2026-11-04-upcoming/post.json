@@ -1,0 +1,136 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "EVERY BIG EVENT",
+    "highlight": "THIS WEEK",
+    "bottom": "IN SOUTH FLORIDA 👀",
+    "blur": false,
+    "photo": {
+      "query": "South Florida night event crowd stage lights palm trees",
+      "prompt": "A dramatic South Florida event crowd at night with stage lights, palm trees, and people walking toward a venue entrance"
+    },
+    "emojis": [
+      "👀",
+      "🎟️",
+      "📍"
+    ],
+    "logos": [
+      "uniqlo.com",
+      "mbgarden.org",
+      "icamiami.org",
+      "mdpls.org"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c2.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Uniqlo Aventura grand opening, Nov. 5",
+      "highlight": "Uniqlo Aventura",
+      "body": "The store opens Thursday at 10 a.m. at Aventura Mall in Aventura. The first 500 in line get knot bags with goodies.",
+      "place": "Aventura",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Aventura Mall grand opening line storefront Florida",
+        "prompt": "A sharp photo of Aventura Mall with a long opening-day line outside a new clothing store, bright storefront lights, and shoppers arriving"
+      },
+      "color": "#FF0000",
+      "emoji": "🛍️",
+      "chip": "NOV 5",
+      "logo": "uniqlo.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "In the Lab: The Little Wetland, Nov. 7",
+      "highlight": "Little Wetland",
+      "body": "The workshop starts at 10 a.m. at Miami Beach Botanical Garden in Miami Beach. Tickets cost $58.50 for members and $65 for non-members.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "children planting wetland plants garden workshop Miami Beach Botanical Garden",
+        "prompt": "A close, dramatic photo of children building a miniature wetland with small plants, shallow containers, and hands working at a garden table"
+      },
+      "emoji": "🌿",
+      "chip": "$65",
+      "logo": "mbgarden.org",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Movement & Music at ICA Miami, Nov. 8",
+      "highlight": "Movement & Music",
+      "body": "The free ICA Family Sunday event starts at 11:30 a.m. at the Institute of Contemporary Art, Miami in Miami. Paloma Dueñas leads movement and dance inspired by Manuel Chavajay's exhibition.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Institute of Contemporary Art Miami exterior family event",
+        "prompt": "A clean, striking photo of ICA Miami with families arriving for a free daytime program and the museum facade in clear focus"
+      },
+      "emoji": "🎨",
+      "chip": "FREE",
+      "logo": "icamiami.org",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Create Your Own Manga, Nov. 9",
+      "highlight": "Own Manga",
+      "body": "The free workshop starts at 4:30 p.m. at Hialeah Gardens Branch Library in Hialeah Gardens. Young adults can learn character and visual storytelling.",
+      "place": "Hialeah Gardens",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "manga workshop library desk closeup pencils sketchbook",
+        "prompt": "A dramatic close-up of a manga sketchbook, pencils, and a tablet on a library table with hands drawing panels"
+      },
+      "emoji": "✏️",
+      "chip": "4:30PM",
+      "logo": "mdpls.org",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Smorgasburg South Florida celebrates Diwali, Nov. 7",
+      "highlight": "Diwali at Smorgasburg",
+      "body": "The Fort Lauderdale event takes place on Friday, Nov. 7. The article does not list a time or price in the headline.",
+      "place": "Fort Lauderdale",
+      "source": "RESIDENT™ | A Luxury Lifestyle Magazine",
+      "photo": {
+        "query": "South Florida food market Diwali lights Fort Lauderdale",
+        "prompt": "A striking night-market scene with colorful Diwali lights, food stalls, and a Fort Lauderdale crowd moving through the market"
+      },
+      "emoji": "🪔",
+      "chip": "NOV 7",
+      "logo": "smorgasburg.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "Save this for the week. Who are you taking? Tag a friend.",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "Save this for the week. Who are you taking? Tag a friend.\n\n📰 Sources: Secret Miami, Miami New Times, RESIDENT™ | A Luxury Lifestyle Magazine\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-11-04",
+  "id": "2026-11-04-upcoming"
+}
