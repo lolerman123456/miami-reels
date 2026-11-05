@@ -1,0 +1,197 @@
+{
+  "title": "Where South Florida Is Going Out This Friday",
+  "sources": [
+    "WSVN 7News",
+    "Miami New Times",
+    "stupidDOPE",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Friday has boats in Key West, dinner in Little River, and concerts after dark.\nNov 6, South Florida, price varies\n\nSources: WSVN 7News, Miami New Times, stupidDOPE, Secret Miami\n\n#MiamiEvents #SouthFlorida #MiamiWeekend #ThingsToDoMiami",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Where do you go this Friday when South Florida has powerboat racing, a new dinner spot, and arena concerts?",
+      "overlay": [
+        "FRIDAY NIGHT",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🚤",
+        "🍽️",
+        "🎤",
+        "🌴"
+      ],
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.7814,
+        "lon": -80.187,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start in Key West. The 45th Annual Offshore Powerboat World Championship kicked off Wednesday, with more racing scheduled for Friday and Sunday.",
+      "caption": "Start in Key West. The 45th Annual Offshore Powerboat World Championship kicked off Wednesday, with more racing scheduled for Friday and Sunday.",
+      "overlay": "KEY WEST",
+      "badge": "45TH YEAR",
+      "sub": "Racing Friday and Sunday",
+      "emoji": "🚤",
+      "stats": [
+        {
+          "value": "45TH",
+          "label": "Championship"
+        },
+        {
+          "value": "FRI + SUN",
+          "label": "Race days"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Key West Harbor",
+        "lat": 24.5591,
+        "lon": -81.8068,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For dinner, Anako opened October 22 at 8222 NE Second Ave. in Little River. Chefs Leicel Ros and Nancy Dominguez built it after Sili at 1-800-Lucky, with dishes like lumpia, kinilaw crudo, and oxtail kare-kare.",
+      "caption": "For dinner, Anako opened October 22 at 8222 NE Second Ave. in Little River. Chefs Leicel Ros and Nancy Dominguez built it after Sili at 1-800-Lucky, with dishes like lumpia, kinilaw crudo, and oxtail kare-kare.",
+      "overlay": "ANAKO",
+      "badge": "OPENED OCT 22",
+      "sub": "Little River dinner stop",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "OCT 22",
+          "label": "Opened"
+        },
+        {
+          "value": "8222",
+          "label": "NE Second Ave"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Anako",
+        "lat": 25.8502,
+        "lon": -80.1921,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 65,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "In Miami, Doja Cat and Latto are on the Kaseya Center lineup for the November 6 to 12 concert week. If you're at Kaseya Center, NEAR shows who else caught Doja and Latto.",
+      "caption": "In Miami, Doja Cat and Latto are on the Kaseya Center lineup for the Nov. 6-12 concert week. If you're at Kaseya Center, NEAR shows who else caught Doja and Latto.",
+      "overlay": "KASEYA CENTER",
+      "badge": "NOV 6-12",
+      "sub": "Doja Cat and Latto",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "NOV 6-12",
+          "label": "Concert week"
+        }
+      ],
+      "source": "stupidDOPE",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.7814,
+        "lon": -80.187,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 225,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Hollywood has another show run this week. Rush plays Hollywood twice during that same November 6 to 12 window.",
+      "caption": "Hollywood has another show run this week. Rush plays Hollywood twice during that same Nov. 6-12 window.",
+      "overlay": "HOLLYWOOD",
+      "badge": "RUSH TWICE",
+      "sub": "Two shows this week",
+      "emoji": "🎸",
+      "stats": [
+        {
+          "value": "2",
+          "label": "Rush shows"
+        },
+        {
+          "value": "NOV 6-12",
+          "label": "Concert week"
+        }
+      ],
+      "source": "stupidDOPE",
+      "location": {
+        "name": "Hard Rock Live Hollywood",
+        "lat": 26.0513,
+        "lon": -80.2114,
+        "h": 50
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1100,
+        "pitch": -32,
+        "heading": 310,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which Friday plan would you pick first? That friend-of-a-friend you kept passing at every spot but never met? NEAR is the app that shows who they were.",
+      "overlay": "PICK ONE 👇",
+      "sub": "Boats, dinner, or concerts",
+      "location": {
+        "name": "Biscayne Bay",
+        "lat": 25.7907,
+        "lon": -80.1752,
+        "h": 40
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "154-where-south-florida-is-going-out-this-fr"
+}
