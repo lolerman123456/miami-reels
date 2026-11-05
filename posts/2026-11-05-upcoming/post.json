@@ -1,0 +1,116 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "EVERY BIG EVENT",
+    "highlight": "THIS WEEK",
+    "bottom": "IN SOUTH FLORIDA 👀",
+    "blur": false,
+    "photo": {
+      "query": "South Florida event crowd art museum opening dramatic",
+      "prompt": "Dramatic South Florida event scene with a crowd entering a museum or gallery, strong lighting, big installations, and clear local-city energy"
+    },
+    "emojis": [
+      "🎨",
+      "🌴",
+      "📍"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "UNIQLO AVENTURA GRAND OPENING, NOV. 5",
+      "highlight": "UNIQLO Aventura",
+      "body": "The new Aventura Mall store opens Thursday, Nov. 5 at 10 a.m. at Aventura Mall in Aventura. The opening includes four days of Taiko drum performances and giveaways, with limited-time discounts through Nov. 11.",
+      "place": "Aventura Mall, Aventura",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Aventura Mall entrance fashion retail grand opening dramatic",
+        "prompt": "Striking photo of the Aventura Mall entrance with a store opening crowd, bright signage, people lined up, and a clean retail scene"
+      },
+      "emoji": "🛍️",
+      "chip": "10 a.m.",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "JOSH ARONSON AT VIZCAYA, NOV. 7",
+      "highlight": "Josh Aronson",
+      "body": "The show opens Saturday, Nov. 7 at Vizcaya Museum and Gardens in Miami. Aronson places photographs throughout the historic mansion and gardens in an immersive installation.",
+      "place": "Vizcaya Museum and Gardens, Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Vizcaya Museum and Gardens Miami wide dramatic exterior",
+        "prompt": "Wide, dramatic photo of Vizcaya Museum and Gardens in Miami with the mansion, formal gardens, and Biscayne Bay in the background"
+      },
+      "emoji": "📸",
+      "chip": "NOV. 7",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "SMORGASBURG SOUTH FLORIDA CELEBRATES DIWALI, NOV. 7",
+      "highlight": "Smorgasburg South Florida",
+      "body": "The Diwali edition takes place Saturday, Nov. 7 at Smorgasburg South Florida in Fort Lauderdale. The market mixes food vendors with a holiday theme and free entry.",
+      "place": "Fort Lauderdale",
+      "source": "RESIDENT™ | A Luxury Lifestyle Magazine",
+      "photo": {
+        "query": "Smorgasburg South Florida food market Fort Lauderdale crowd",
+        "prompt": "Colorful outdoor food market scene in Fort Lauderdale with vendor stalls, crowds, string lights, and a festive Diwali feel"
+      },
+      "emoji": "🥟",
+      "chip": "FREE",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "HOMEGROWN AT BAKEHOUSE, NOV. 9",
+      "highlight": "Homegrown",
+      "body": "The exhibition opens Monday, Nov. 9 at Bakehouse Art Complex in Miami. It features work from 32 current and former resident artists and runs through April 16, 2027.",
+      "place": "Bakehouse Art Complex, Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Bakehouse Art Complex Wynwood Miami art opening interior",
+        "prompt": "Bright interior of an art complex in Miami with gallery walls, installed works, and a clean opening-night look"
+      },
+      "emoji": "🖼️",
+      "chip": "NOV. 9",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "GEOFFREY HOLDER AT MOCA NORTH MIAMI, NOV. 12",
+      "highlight": "Geoffrey Holder",
+      "body": "Black Magic opens Thursday, Nov. 12 at the Museum of Contemporary Art, North Miami. The retrospective spans more than 60 works from Holder’s eight-decade career.",
+      "place": "Museum of Contemporary Art, North Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Museum of Contemporary Art North Miami exterior dramatic",
+        "prompt": "Dramatic exterior photo of the Museum of Contemporary Art in North Miami with clean architecture, evening light, and a museum-goer scene"
+      },
+      "emoji": "🎭",
+      "chip": "60+ works",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "South Florida art season is moving fast this week. Who are you taking? Tag a friend 🎨",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida art season is moving fast this week. Who are you taking? Tag a friend 🎨\n\n📰 Sources: Secret Miami, Miami New Times, RESIDENT™ | A Luxury Lifestyle Magazine\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-11-05",
+  "id": "2026-11-05-upcoming"
+}
