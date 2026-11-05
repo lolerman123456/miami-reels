@@ -1,0 +1,159 @@
+{
+  "title": "South Florida Weekend Nightlife Guide",
+  "sources": [
+    "Sun Sentinel",
+    "Florida Politics",
+    "Miami New Times",
+    "The Miami Guide"
+  ],
+  "collaborators": [],
+  "igCaption": "Start free, then spend where it counts this weekend.\nFriday to Sunday, South Florida\n\nSources: Sun Sentinel, Florida Politics, Miami New Times, The Miami Guide\n\n#SouthFlorida #WeekendGuide #ThingsToDo #Nightlife",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a Friday to Sunday plan that starts cheap and still gets you out after dark?",
+      "overlay": [
+        "WEEKEND",
+        "NIGHT GUIDE"
+      ],
+      "emojis": [
+        "🌙",
+        "🎶",
+        "🎟️",
+        "🍻"
+      ],
+      "location": {
+        "name": "Dania Beach City Hall",
+        "lat": 26.0523,
+        "lon": -80.1439,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 900,
+        "pitch": -32,
+        "heading": 190
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start with the free stuff. South Florida has America’s 250th celebrations in 2026, including fireworks, drone shows, parades, and concerts by city. Miami-Dade also rolled out free Fourth of July fireworks, concerts, and other America 250 festivities.",
+      "caption": "Start with the free stuff. South Florida has America’s 250th celebrations in 2026, including fireworks, drone shows, parades, and concerts by city. Miami-Dade also rolled out free Fourth of July fireworks, concerts, and other America 250 festivities.",
+      "overlay": "FREE EVENTS",
+      "badge": "2026",
+      "sub": "Fireworks and concerts",
+      "emoji": "🎆",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "Event year"
+        }
+      ],
+      "source": "Florida Politics",
+      "location": {
+        "name": "Dania Beach City Hall",
+        "lat": 26.0523,
+        "lon": -80.1439,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a visual stop, Sun Sentinel listed drones over Dania in its November 12 weekend guide. The same guide pointed to cowboys getting dirty in Davie. That gives you two Broward options without repeating the same plan. If you hit Dania, open NEAR and see who else watched the drones.",
+      "caption": "For a visual stop, Sun Sentinel listed drones over Dania in its November 12 weekend guide. The same guide pointed to cowboys getting dirty in Davie. If you hit Dania, open NEAR and see who else watched the drones.",
+      "overlay": "DANIA AND DAVIE",
+      "badge": "NOV 12",
+      "sub": "Two Broward picks",
+      "emoji": "🚁",
+      "stats": [
+        {
+          "value": "NOV 12",
+          "label": "Weekend guide"
+        }
+      ],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Davie Town Hall",
+        "lat": 26.0765,
+        "lon": -80.2521,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 265,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "If you want music instead, July and October both had free concert roundups in Miami. You can build the night around a show and keep the rest of the budget for food or a second stop.",
+      "caption": "If you want music instead, July and October both had free concert roundups in Miami. You can build the night around a show and keep the rest of the budget for food or a second stop.",
+      "overlay": "FREE CONCERTS",
+      "badge": "MIAMI",
+      "sub": "Music roundup",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "July",
+          "label": "Concert roundup"
+        },
+        {
+          "value": "October",
+          "label": "Concert roundup"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Amerant Bank Arena",
+        "lat": 26.1585,
+        "lon": -80.3256,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -34,
+        "heading": 40,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Free first, tickets second. Nightlife has plenty of faces you clock for a second and never meet, and NEAR is the part that lets you figure out who that was after the night ends. That is the cleanest weekend move.",
+      "overlay": "PICK ONE 🌙",
+      "sub": "Free first or tickets first",
+      "location": {
+        "name": "Amerant Bank Arena",
+        "lat": 26.1585,
+        "lon": -80.3256,
+        "h": 45
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -35,
+        "heading": 95
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "153-south-florida-weekend-nightlife-guide"
+}
