@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "EVERY",
+    "main": "MIAMI DAY",
+    "highlight": "PARTY",
+    "bottom": "HAS THESE TYPES OF PEOPLE",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "a packed Miami day party on a Biscayne Bay boat with invented friends in sunglasses laughing, one person holding a speaker, skyline behind them, bright blue water, golden afternoon light, champagne sparklers in the background"
+    },
+    "emojis": [
+      "🛥️",
+      "☀️",
+      "🥂"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Arrive With The Cooler Agenda",
+      "highlight": "Cooler Agenda",
+      "body": "You packed ice, cups, snacks, and somehow saved the whole Key Biscayne boat day.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented woman in white linen sunglasses opening an overpacked cooler on a Miami boat near Key Biscayne while friends cheer, bright sun, turquoise water, skyline in the distance"
+      },
+      "emoji": "🧊",
+      "chip": "TYPE #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Know The Sandbar Arrival Time",
+      "highlight": "Sandbar Arrival",
+      "body": "You said Nixon Sandbar by 2 like you run marine logistics for the group chat.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented friend standing at the front of a boat pointing toward Nixon Sandbar while everyone checks phones and laughs, Miami afternoon sun, other boats nearby, blue water"
+      },
+      "emoji": "🕑",
+      "chip": "TYPE #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Start The Brickell Rooftop After",
+      "highlight": "Rooftop After",
+      "body": "Still salty, still in slides, already texting the next move before the boat docks.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented group walking off a Miami marina dock in beach outfits while one person texts about a Brickell rooftop, sunset light, yachts behind them, city skyline glowing"
+      },
+      "emoji": "🏙️",
+      "chip": "TYPE #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Take The Waterproof Phone Too Far",
+      "highlight": "Waterproof Phone",
+      "body": "Every cannonball gets 4 angles. Your camera roll is basically Biscayne Bay TV.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented guy holding a waterproof phone half above the water filming friends jumping off a boat into Biscayne Bay, splash frozen midair, bright Miami daylight"
+      },
+      "emoji": "📱",
+      "chip": "TYPE #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Call The 3am Food Run Early",
+      "highlight": "Food Run",
+      "body": "By sunset you already know this ends with fries, cafecito, and everyone in the same Uber.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented group at 3am outside a Miami late-night food window holding fries and cafecito after a day party, neon lights, rideshare waiting safely at the curb"
+      },
+      "emoji": "🍟",
+      "chip": "TYPE #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who turns a day party into a full itinerary 🛥️",
+  "hashtags": [
+    "#MiamiDayParty",
+    "#BiscayneBay"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who turns a day party into a full itinerary 🛥️\n\n#MiamiDayParty #BiscayneBay #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-04",
+  "id": "2026-11-04-social-20"
+}
