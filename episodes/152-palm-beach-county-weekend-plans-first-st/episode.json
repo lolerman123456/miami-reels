@@ -1,0 +1,216 @@
+{
+  "title": "Palm Beach County weekend plans, first stop first",
+  "sources": [
+    "The Boca Raton Tribune",
+    "The Zebra",
+    "WPEC",
+    "Sun Sentinel",
+    "The Palm Beach Post"
+  ],
+  "collaborators": [],
+  "igCaption": "Palm Beach County weekend plans.\nStart with the first stop that fits your night.\n\nSources: The Boca Raton Tribune, The Zebra, WPEC, Sun Sentinel, The Palm Beach Post\n\n#WestPalmBeach #BocaRaton #DelrayBeach #PalmBeachCounty",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a Palm Beach County night out this weekend? Start with the first stop that fits your night.",
+      "overlay": [
+        "WEEKEND GUIDE",
+        "PALM BEACH COUNTY"
+      ],
+      "emojis": [
+        "🌴",
+        "🎶",
+        "🍻",
+        "🎟️"
+      ],
+      "location": {
+        "name": "Downtown West Palm Beach",
+        "lat": 26.7134,
+        "lon": -80.0565,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Boca Raton Tribune ran a Palm Beach Event Roundup for July 16 to 19. It gives you a countywide list before you commit to one plan.",
+      "caption": "The Boca Raton Tribune ran a Palm Beach Event Roundup for July 16 to 19. It gives you a countywide list before you commit to one plan.",
+      "overlay": "PALM BEACH ROUNDUP",
+      "badge": "JUL 16-19",
+      "sub": "Countywide roundup",
+      "emoji": "📍",
+      "stats": [
+        {
+          "value": "4 DAYS",
+          "label": "Roundup window"
+        }
+      ],
+      "source": "The Boca Raton Tribune",
+      "location": {
+        "name": "Downtown West Palm Beach",
+        "lat": 26.7134,
+        "lon": -80.0565,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 110,
+        "degrees": 75,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Delray Beach has the Women’s Crawl in Old Town on Saturday. It gives you one neighborhood and one night to work with.",
+      "caption": "Delray Beach has the Women’s Crawl in Old Town on Saturday. It gives you one neighborhood and one night to work with.",
+      "overlay": "DELRAY BEACH",
+      "badge": "SATURDAY",
+      "sub": "Old Town crawl",
+      "emoji": "🚶",
+      "stats": [
+        {
+          "value": "1 NIGHT",
+          "label": "Crawl format"
+        }
+      ],
+      "source": "The Zebra",
+      "location": {
+        "name": "Old School Square",
+        "lat": 26.4619,
+        "lon": -80.0731,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 35,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Boca Raton has the Seafood Festival back at Mizner Park this weekend. WPEC tied the event to Mizner Park, so that is the easy food stop. If you head to Mizner Park, check NEAR for who’s there too.",
+      "caption": "Boca Raton has the Seafood Festival back at Mizner Park this weekend. WPEC tied the event to Mizner Park, so that is the easy food stop. If you head to Mizner Park, check NEAR for who’s there too.",
+      "overlay": "MIZNER PARK",
+      "badge": "THIS WEEKEND",
+      "sub": "Seafood Festival",
+      "emoji": "🦞",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "Return covered"
+        }
+      ],
+      "source": "WPEC",
+      "location": {
+        "name": "Mizner Park Amphitheater",
+        "lat": 26.3543,
+        "lon": -80.0853,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 750,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Beatles on the Beach also returned to Mizner Park Amphitheater this week. That puts another Boca option in the same venue.",
+      "caption": "Beatles on the Beach also returned to Mizner Park Amphitheater this week. That puts another Boca option in the same venue.",
+      "overlay": "BOCA RATON",
+      "badge": "THIS WEEK",
+      "sub": "Mizner Amphitheater",
+      "emoji": "🎸",
+      "stats": [
+        {
+          "value": "1 VENUE",
+          "label": "Amphitheater"
+        }
+      ],
+      "source": "WPEC",
+      "location": {
+        "name": "Mizner Park Amphitheater",
+        "lat": 26.3543,
+        "lon": -80.0853,
+        "h": 45
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 700,
+        "pitch": -34,
+        "heading": 245,
+        "degrees": 85,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sun Sentinel listed Beer B Que Music Festival in its November event roundup and named Kodak Black and Rick Ross. That makes the headliner choice simple.",
+      "caption": "Sun Sentinel listed Beer B Que Music Festival in its November event roundup and named Kodak Black and Rick Ross.",
+      "overlay": "PBC NIGHT OUT",
+      "badge": "2 HEADLINERS",
+      "sub": "Kodak Black, Rick Ross",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "2",
+          "label": "Headliners"
+        }
+      ],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Palm Beach County",
+        "lat": 26.6515,
+        "lon": -80.2767,
+        "h": 120
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 2200,
+        "pitch": -35,
+        "heading": 300,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which stop would you do first, West Palm, Boca, or Delray? Weekend routes in Palm Beach always blur together, and NEAR is what turns that one person you passed in West Palm into a face you actually know.",
+      "overlay": "PICK ONE",
+      "sub": "West Palm, Boca, Delray",
+      "location": {
+        "name": "Palm Beach County",
+        "lat": 26.6515,
+        "lon": -80.2767,
+        "h": 120
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2400,
+        "pitch": -35,
+        "heading": 325
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "152-palm-beach-county-weekend-plans-first-st"
+}
