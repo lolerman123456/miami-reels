@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "SIGNS",
+    "main": "YOU'RE THE FRIEND WHO SAYS",
+    "highlight": "ONE MORE",
+    "bottom": "AND SOMEHOW SAVES THE NIGHT",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "four stylish friends laughing outside a Brickell rooftop elevator at midnight, one woman holding up one finger like one more stop, neon skyline behind them, glossy Miami night lighting"
+    },
+    "emojis": [
+      "🌃",
+      "👀",
+      "✨"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Find The Second Spot In 12 Seconds",
+      "highlight": "Second Spot",
+      "body": "Everyone's hovering by the valet. You already found the Wynwood bar with no line.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a confident woman in a black going out outfit showing her phone to three friends outside a crowded Wynwood bar, people lined up behind velvet ropes, colorful mural walls and neon lights"
+      },
+      "emoji": "📍",
+      "chip": "SIGN #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Turn The Elevator Ride Into A Pep Talk",
+      "highlight": "Elevator Ride",
+      "body": "Brickell rooftop downstairs was cute. Upstairs is where you decide the night starts.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "five friends packed into a sleek Brickell high rise elevator, one friend hyping everyone up with both hands raised, mirrored walls, city lights reflecting everywhere"
+      },
+      "emoji": "🛗",
+      "chip": "SIGN #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Hear Sparklers And Start Walking",
+      "highlight": "Hear Sparklers",
+      "body": "South Beach table just lit up. You move like the DJ personally sent for you.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a group of friends turning toward bright bottle service sparklers on a packed South Beach club dance floor, blue and pink club lights, confetti in the air"
+      },
+      "emoji": "✨",
+      "chip": "SIGN #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Negotiate The 3am Uber Like A CFO",
+      "highlight": "3am Uber",
+      "body": "Surge is disrespectful. You have three apps open and a Design District pickup plan.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "four friends standing on a Miami sidewalk at 3am near the Design District, one friend comparing rideshare prices on two phones, streetlights and luxury storefronts glowing"
+      },
+      "emoji": "🚗",
+      "chip": "SIGN #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Order Cafecito Like It's The Finale",
+      "highlight": "Order Cafecito",
+      "body": "Night ends at the ventanita. Everyone's quiet until you say pastelitos too.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "friends gathered at a Miami ventanita after a night out, one person ordering Cuban coffee and pastelitos through the window, warm fluorescent light, sleepy happy faces"
+      },
+      "emoji": "☕",
+      "chip": "SIGN #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who always finds one more move 👀",
+  "hashtags": [
+    "MiamiNightOut",
+    "BrickellNightlife"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who always finds one more move 👀\n\n#MiamiNightOut #BrickellNightlife #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-05",
+  "id": "2026-11-05-social-09"
+}
