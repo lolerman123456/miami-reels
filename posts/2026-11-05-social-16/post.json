@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "YOU KNOW",
+    "main": "YOU'RE THE ONE",
+    "highlight": "EVERYONE CLOCKS",
+    "bottom": "AS YOU WALK IN",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "a woman in a blue satin top walking into a packed South Beach club with her friends behind her, people turning their heads near the entrance, pink and blue lights, bottle sparklers in the distance, glossy Miami nightlife scene"
+    },
+    "emojis": [
+      "👀",
+      "💅",
+      "🌴"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Pause At The Door On Purpose",
+      "highlight": "At The Door",
+      "body": "South Beach entrance. Tiny bag check. Full room suddenly needs to know your plans.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a confident woman pausing at the entrance of a South Beach club while her friends laugh behind her, velvet rope to the side, blue neon light hitting the doorway, crowded dance floor inside"
+      },
+      "emoji": "🚪",
+      "chip": "SIGN #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Your Friend Starts Filming Before You Dance",
+      "highlight": "Before You Dance",
+      "body": "You hit the floor in Wynwood and the camera is already up. No warmup needed.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a group of friends at a Wynwood bar dance floor, one friend holding up a phone filming as a woman steps into the center smiling, colorful murals visible outside the open patio, purple party lights"
+      },
+      "emoji": "📹",
+      "chip": "SIGN #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The DJ Booth Suddenly Feels Close",
+      "highlight": "Suddenly Feels Close",
+      "body": "You were by the bar two minutes ago. Now the whole crew is near the speakers.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a stylish friend group drifting toward the DJ booth at a Brickell rooftop party, city skyline behind them, DJ lights flashing, people dancing around high-top tables"
+      },
+      "emoji": "🎧",
+      "chip": "SIGN #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Make The Wristband Look Rare",
+      "highlight": "Look Rare",
+      "body": "Same LIV band as everyone else, somehow yours looks like an invite-only artifact.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a close-up of a woman showing a LIV nightclub wristband while laughing with friends under blue club lights, crowded dance floor and bottle-service sparklers glowing behind her"
+      },
+      "emoji": "🎟️",
+      "chip": "SIGN #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Leave And The Group Chat Wakes Up",
+      "highlight": "Group Chat Wakes",
+      "body": "By the Collins Ave food run, three people are asking where you went next.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a late-night Miami food run on Collins Avenue with friends holding takeout bags outside a bright cafe at 3am, one person checking a buzzing phone and laughing, neon signs and palm trees in the background"
+      },
+      "emoji": "📲",
+      "chip": "SIGN #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who walks in and changes the whole room 👀",
+  "hashtags": [
+    "MiamiNightlife",
+    "SouthBeachNights"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who walks in and changes the whole room 👀\n\n#MiamiNightlife #SouthBeachNights #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-05",
+  "id": "2026-11-05-social-16"
+}
