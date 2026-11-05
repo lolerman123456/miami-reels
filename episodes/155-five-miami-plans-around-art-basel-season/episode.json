@@ -1,0 +1,233 @@
+{
+  "title": "Five Miami plans around Art Basel season",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami",
+    "Pixidia",
+    "Forbes",
+    "Time Out Worldwide",
+    "Page Six"
+  ],
+  "collaborators": [],
+  "igCaption": "Start with the free stuff, then pace yourself for Art Week.\n\nSources: Miami New Times, Secret Miami, Pixidia, Forbes, Time Out Worldwide, Page Six\n\n#Miami #ArtBasel #MiamiArtWeek #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Art Basel season is coming. These are five South Florida plans to start with before the expensive parties take over.",
+      "overlay": [
+        "BASEL SEASON",
+        "START HERE"
+      ],
+      "emojis": [
+        "🎨",
+        "🌴",
+        "🎶",
+        "📍"
+      ],
+      "location": {
+        "name": "Miami Beach Convention Center",
+        "lat": 25.7948,
+        "lon": -80.1332,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number five, Bakehouse Art Complex in Wynwood. Homegrown opens November ninth with work from thirty-two current and former resident artists. Miami New Times says most November art shows are free unless noted, so start here before Art Week crowds arrive.",
+      "caption": "Number 5, Bakehouse Art Complex in Wynwood. Homegrown opens Nov. 9 with work from 32 current and former resident artists. Miami New Times says most November art shows are free unless noted, so start here before Art Week crowds arrive.",
+      "overlay": "BAKEHOUSE",
+      "badge": "32 ARTISTS",
+      "sub": "Homegrown opens Nov. 9",
+      "emoji": "🖼️",
+      "stats": [
+        {
+          "value": "32",
+          "label": "resident artists"
+        },
+        {
+          "value": "NOV 9",
+          "label": "opens"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Bakehouse Art Complex",
+        "lat": 25.8062,
+        "lon": -80.2047,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 35,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number four, Miami Book Fair at Miami Dade College’s Wolfson Campus. The forty-third edition runs November fifteenth through twenty-second, with nearly five hundred authors. Margaret Atwood, Colson Whitehead, Tony Shalhoub, Bonnie Garmus, and Salman Rushdie are on the schedule.",
+      "caption": "Number 4, Miami Book Fair at Miami Dade College’s Wolfson Campus. The 43rd edition runs Nov. 15-22, with nearly 500 authors. Margaret Atwood, Colson Whitehead, Tony Shalhoub, Bonnie Garmus, and Salman Rushdie are on the schedule.",
+      "overlay": "BOOK FAIR",
+      "badge": "500 AUTHORS",
+      "sub": "Nov. 15 to 22",
+      "emoji": "📚",
+      "stats": [
+        {
+          "value": "43RD",
+          "label": "edition"
+        },
+        {
+          "value": "500",
+          "label": "authors"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Miami Dade College Wolfson Campus",
+        "lat": 25.7776,
+        "lon": -80.1907,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number three, Vizcaya Museum and Gardens. Josh Aronson’s Welcome to Wonder opens November seventh, placing photographs across the mansion and gardens. Admission is twenty dollars for guests thirteen and older, and ten dollars for children six to twelve. If you wander the gardens, open NEAR and see who else is there.",
+      "caption": "Number 3, Vizcaya Museum and Gardens. Josh Aronson’s Welcome to Wonder opens Nov. 7, placing photographs across the mansion and gardens. Admission is $20 for guests 13 and older, and $10 for children 6 to 12. If you wander the gardens, open NEAR and see who else is there.",
+      "overlay": "VIZCAYA",
+      "badge": "$20 ADULTS",
+      "sub": "Photos in the gardens",
+      "emoji": "🏛️",
+      "stats": [
+        {
+          "value": "$20",
+          "label": "adult admission"
+        },
+        {
+          "value": "NOV 7",
+          "label": "opens"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Vizcaya Museum and Gardens",
+        "lat": 25.7445,
+        "lon": -80.2104,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -34,
+        "heading": 210,
+        "degrees": 75,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Number two, Wynwood for Art Basel Miami Beach week. Pixidia’s guide points to satellite fairs, Wynwood, and the Design District for December third through sixth.",
+      "caption": "Number 2, Wynwood for Art Basel Miami Beach week. Pixidia’s guide points to satellite fairs, Wynwood, and the Design District for Dec. 3-6.",
+      "overlay": "WYNWOOD",
+      "badge": "DEC 3-6",
+      "sub": "Satellite fair zone",
+      "emoji": "🎨",
+      "stats": [
+        {
+          "value": "DEC 3-6",
+          "label": "Art Basel dates"
+        }
+      ],
+      "source": "Pixidia",
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.804,
+        "lon": -80.199,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "And number one, Art Basel Miami Beach at the Miami Beach Convention Center. The 2026 fair runs December third through sixth. Forbes, Time Out, and Page Six also cover the parties, dinners, and late-night Art Week events around it.",
+      "caption": "And number 1, Art Basel Miami Beach at the Miami Beach Convention Center. The 2026 fair runs Dec. 3-6. Forbes, Time Out, and Page Six also cover the parties, dinners, and late-night Art Week events around it.",
+      "overlay": "ART BASEL",
+      "badge": "DEC 3-6",
+      "sub": "Convention Center week",
+      "emoji": "🌙",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "fair year"
+        },
+        {
+          "value": "DEC 3-6",
+          "label": "fair dates"
+        }
+      ],
+      "source": "Pixidia",
+      "location": {
+        "name": "Miami Beach Convention Center",
+        "lat": 25.7948,
+        "lon": -80.1332,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -36,
+        "heading": 155,
+        "degrees": 90,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you doing first? Art Basel is full of people you notice in passing and never meet again, which is exactly the kind of moment NEAR turns into a name.",
+      "overlay": "WHAT'S FIRST? 🎨",
+      "sub": "Drop the plan",
+      "location": {
+        "name": "South Beach",
+        "lat": 25.781875,
+        "lon": -80.136262,
+        "h": 45
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 80
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "155-five-miami-plans-around-art-basel-season"
+}
