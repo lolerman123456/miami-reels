@@ -1,0 +1,198 @@
+{
+  "title": "Free first, late plans after",
+  "sources": [
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Free Greek festival, then late-night plans.\nNov. 6 to 9, South Florida, $0 to $60\n\nSources: Miami New Times\n\n#SouthFlorida #MiamiEvents #WeekendGuide #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Free Greek festival first, then the after-dark picks after dinner.",
+      "overlay": [
+        "WEEKEND",
+        "PLANS"
+      ],
+      "emojis": [
+        "🎟️",
+        "🌙",
+        "🎶",
+        "🍽️"
+      ],
+      "location": {
+        "name": "Greek Orthodox Church of the Annunciation",
+        "lat": 25.8896,
+        "lon": -80.2038,
+        "h": 18
+      },
+      "shot": {
+        "type": "dive",
+        "range": 900,
+        "pitch": -32,
+        "heading": 155
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start Friday at the North Miami Greek Festival. It takes over the Greek Orthodox Church of the Annunciation at 12250 NW Second Ave. Admission is free with RSVP, and the church grounds turn into a Greek village with live music, traditional dancing, homemade meals, raffles, vendors, and guided church tours.",
+      "caption": "Start Friday at the North Miami Greek Festival. It takes over the Greek Orthodox Church of the Annunciation at 12250 NW Second Ave. Admission is free with RSVP, and the church grounds turn into a Greek village with live music, traditional dancing, homemade meals, raffles, vendors, and guided church tours.",
+      "overlay": "NORTH MIAMI",
+      "badge": "FREE RSVP",
+      "sub": "Greek festival Friday",
+      "emoji": "🇬🇷",
+      "stats": [
+        {
+          "value": "$0",
+          "label": "admission"
+        },
+        {
+          "value": "12250",
+          "label": "NW 2nd Ave"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Greek Orthodox Church of the Annunciation",
+        "lat": 25.8896,
+        "lon": -80.2038,
+        "h": 18
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 700,
+        "pitch": -30,
+        "heading": 120,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For film, Subtropic Film Festival opens its fourth installment Friday with Homegrown. That block has five short films from five directors. This year’s theme is Between Two Waters, focused on where the ocean and the Everglades meet. Tickets run $10 to $30 at various venues.",
+      "caption": "For film, Subtropic Film Festival opens its 4th installment Friday with Homegrown. That block has 5 short films from 5 directors. This year’s theme is Between Two Waters, focused on where the ocean and the Everglades meet. Tickets run $10 to $30 at various venues.",
+      "overlay": "SUBTROPIC",
+      "badge": "$10 TO $30",
+      "sub": "Five shorts Friday",
+      "emoji": "🎬",
+      "stats": [
+        {
+          "value": "5",
+          "label": "short films"
+        },
+        {
+          "value": "$10-$30",
+          "label": "tickets"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Subtropic Film Festival",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 205,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Saturday night, Pinecrest Gardens starts its 17th annual Jazz at Pinecrest Gardens season at 8 p.m. Singer Allyson Briggs and Big Band leader Dan Gabel open with America: Together in Harmony, built around the Great American Songbook. Tickets cost $45 to $60. If you’re there Saturday, check NEAR after the set to spot familiar faces.",
+      "caption": "Saturday night, Pinecrest Gardens starts its 17th annual Jazz at Pinecrest Gardens season at 8 p.m. Singer Allyson Briggs and Big Band leader Dan Gabel open with America: Together in Harmony, built around the Great American Songbook. Tickets cost $45 to $60. If you’re there Saturday, check NEAR after the set to spot familiar faces.",
+      "overlay": "PINECREST",
+      "badge": "8 PM",
+      "sub": "Jazz at the gardens",
+      "emoji": "🎷",
+      "stats": [
+        {
+          "value": "17TH",
+          "label": "annual season"
+        },
+        {
+          "value": "$45-$60",
+          "label": "tickets"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Pinecrest Gardens",
+        "lat": 25.6695,
+        "lon": -80.2843,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -30,
+        "heading": 40,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sunday at 7 p.m., Fall for Dance Now! hits the Miami Beach Bandshell at 7275 Collins Ave. Dance Now! Miami gives a preview of its 27th season with excerpts from Clara and work from the company’s Youth Ensemble. Tickets cost $10 to $25.",
+      "caption": "Sunday at 7 p.m., Fall for Dance Now! hits the Miami Beach Bandshell at 7275 Collins Ave. Dance Now! Miami gives a preview of its 27th season with excerpts from Clara and work from the company’s Youth Ensemble. Tickets cost $10 to $25.",
+      "overlay": "BANDSHELL",
+      "badge": "$10 TO $25",
+      "sub": "Dance Sunday night",
+      "emoji": "💃",
+      "stats": [
+        {
+          "value": "27TH",
+          "label": "season"
+        },
+        {
+          "value": "7 PM",
+          "label": "showtime"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami Beach Bandshell",
+        "lat": 25.8587,
+        "lon": -80.1207,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -31,
+        "heading": 285,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you go to this weekend? The same way a free first stop can turn into late plans, NEAR shows you who that person you passed all day actually was, even without a hello.",
+      "overlay": "PICK ONE 🌙",
+      "sub": "Drop your weekend move",
+      "location": {
+        "name": "Miami Beach Bandshell",
+        "lat": 25.8587,
+        "lon": -80.1207,
+        "h": 15
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1400,
+        "pitch": -30,
+        "heading": 320
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "158-free-first-late-plans-after"
+}
