@@ -1,0 +1,116 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SOUTH FLORIDA IS",
+    "main": "GOING OUT THIS WEEKEND FOR",
+    "highlight": "EVENTS",
+    "bottom": "NOV. 6 TO 8",
+    "blur": false,
+    "photo": {
+      "query": "South Florida event crowd night stage lights palm trees",
+      "prompt": "a South Florida crowd outside at night with stage lights, palm trees, and a clear view of the event scene"
+    },
+    "emojis": [
+      "🎟️",
+      "🎶",
+      "🍿"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "North Miami Greek Festival, Nov. 6",
+      "highlight": "Greek Festival",
+      "body": "Friday at the Greek Orthodox Church of the Annunciation in North Miami. Admission is free with RSVP. Expect food, live music, dancing, vendors, and church tours.",
+      "place": "North Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Greek festival outside church dancers food tents night",
+        "prompt": "a Greek festival outside a church with dancers, food tents, blue and white details, and a busy evening crowd"
+      },
+      "emoji": "🇬🇷",
+      "chip": "FREE",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Subtropic Film Festival, Nov. 6",
+      "highlight": "Subtropic",
+      "body": "The fourth Subtropic Film Festival opens Friday at venues across South Florida. Tickets cost $10 to $30. The lineup centers on stories about the ocean and the Everglades.",
+      "place": "South Florida",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "indie film screening audience theater South Florida",
+        "prompt": "a dim film screening room with a glowing screen, seated audience, and a South Florida setting"
+      },
+      "emoji": "🎬",
+      "chip": "$10-$30",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Jazz at Pinecrest Gardens, Nov. 7",
+      "highlight": "Pinecrest Gardens",
+      "body": "Saturday at 8 p.m. at Pinecrest Gardens in Pinecrest. Tickets cost $45 to $60. Allyson Briggs and Dan Gabel open the season with America: Together in Harmony.",
+      "place": "Pinecrest",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "outdoor jazz concert garden stage night Pinecrest",
+        "prompt": "a jazz singer and big band on an outdoor garden stage at night with warm lights and tropical greenery"
+      },
+      "emoji": "🎷",
+      "chip": "SAT 8 PM",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Rocky Dale Davis at Ft. Lauderdale Improv, Nov. 8",
+      "highlight": "Rocky Dale Davis",
+      "body": "Sunday at 6 p.m. at the Ft. Lauderdale Improv in Dania Beach. Tickets cost $31.90. The set comes from a comic with a large online following.",
+      "place": "Dania Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "stand-up comedy club microphone spotlight crowd",
+        "prompt": "a stand-up comedy microphone under a spotlight with a packed club and red stage curtains"
+      },
+      "emoji": "🎤",
+      "chip": "$31.90",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Fall for Dance Now! at Miami Beach Bandshell, Nov. 8",
+      "highlight": "Dance Now!",
+      "body": "Sunday at 7 p.m. at the Miami Beach Bandshell in Miami Beach. Tickets cost $10 to $25. Dance Now! Miami previews its 27th season with excerpts from Clara and a youth ensemble set.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "contemporary dancers stage Miami Beach Bandshell night",
+        "prompt": "contemporary dancers performing on the Miami Beach Bandshell stage under dramatic blue lights"
+      },
+      "emoji": "💃",
+      "chip": "SUN 7 PM",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "South Florida has a full weekend. Tag a friend and tell them who they’re taking 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has a full weekend. Tag a friend and tell them who they’re taking 👀\n\n📰 Sources: Miami New Times\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-11-06",
+  "id": "2026-11-06-upcoming"
+}
