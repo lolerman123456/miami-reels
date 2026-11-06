@@ -1,0 +1,226 @@
+{
+  "title": "South Florida Friday and Saturday Night Picks",
+  "sources": [
+    "Resident Advisor",
+    "Eventbrite",
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Friday and Saturday plans in Miami.\nNov. 6 and 7, Miami venues, prices vary\n\nSources: Resident Advisor, Eventbrite, Miami New Times\n\n#Miami #SouthFlorida #MiamiNightlife #WeekendGuide",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Friday and Saturday plans start with the clubs, then dinner can handle the rest.",
+      "overlay": [
+        "WEEKEND",
+        "GOING OUT"
+      ],
+      "emojis": [
+        "🌙",
+        "🎧",
+        "🍸",
+        "🍽️"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 120
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 155
+      }
+    },
+    {
+      "kind": "item",
+      "text": "At LIV Nightclub Miami, Resident Advisor lists Soundtuary at LIV. The listing went up on October 31.",
+      "caption": "At LIV Nightclub Miami, Resident Advisor lists Soundtuary at LIV. The listing went up on Oct. 31.",
+      "overlay": "LIV MIAMI",
+      "badge": "OCT 31",
+      "sub": "Soundtuary at LIV",
+      "emoji": "🎧",
+      "stats": [
+        {
+          "value": "OCT 31",
+          "label": "RA listing"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "LIV Nightclub Miami",
+        "lat": 25.8179,
+        "lon": -80.1222,
+        "h": 85
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 205,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Floyd has Roujeee Tunes All Night Long on Resident Advisor. The Miami listing appeared on November 3.",
+      "caption": "Floyd has Roujeee Tunes All Night Long on Resident Advisor. The Miami listing appeared on Nov. 3.",
+      "overlay": "FLOYD",
+      "badge": "NOV 3",
+      "sub": "Roujeee all night",
+      "emoji": "🔊",
+      "stats": [
+        {
+          "value": "NOV 3",
+          "label": "RA listing"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "Floyd Miami",
+        "lat": 25.784,
+        "lon": -80.1937,
+        "h": 65
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 95,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Eventbrite lists Miami's Diwali After Dark 2026 at Kan Zaman Lounge. The listing came out November 5. If you hit Diwali After Dark, check NEAR for who showed up.",
+      "caption": "Eventbrite lists Miami's Diwali After Dark 2026 at Kan Zaman Lounge. The listing came out Nov. 5. If you hit Diwali After Dark, check NEAR for who showed up.",
+      "overlay": "KAN ZAMAN",
+      "badge": "NOV 5",
+      "sub": "Diwali After Dark",
+      "emoji": "✨",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "event year"
+        },
+        {
+          "value": "NOV 5",
+          "label": "listing date"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Kan Zaman Lounge",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 70
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For dinner before the night starts, LPM in Brickell unveiled a $3 million transformation. The restaurant added an expanded patio, a separate entrance, and a new 10-cocktail Déjà Vu menu.",
+      "caption": "For dinner before the night starts, LPM in Brickell unveiled a $3 million transformation. The restaurant added an expanded patio, a separate entrance, and a new 10-cocktail Déjà Vu menu.",
+      "overlay": "LPM BRICKELL",
+      "badge": "$3M REDO",
+      "sub": "Patio and cocktails",
+      "emoji": "🍸",
+      "stats": [
+        {
+          "value": "$3M",
+          "label": "transformation"
+        },
+        {
+          "value": "10",
+          "label": "cocktails"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "LPM Restaurant & Bar Brickell",
+        "lat": 25.763,
+        "lon": -80.1919,
+        "h": 95
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 850,
+        "pitch": -33,
+        "heading": 230,
+        "degrees": 75,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Pastis opened in West Palm Beach this October at the Nora Hotel. It's the restaurant's fifth location, on the ground floor of a 201-room hotel.",
+      "caption": "Pastis opened in West Palm Beach this October at the Nora Hotel. It's the restaurant's 5th location, on the ground floor of a 201-room hotel.",
+      "overlay": "PASTIS WPB",
+      "badge": "201 ROOMS",
+      "sub": "Dinner in Nora",
+      "emoji": "🥂",
+      "stats": [
+        {
+          "value": "5TH",
+          "label": "location"
+        },
+        {
+          "value": "201",
+          "label": "hotel rooms"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "The Nora Hotel",
+        "lat": 26.7153,
+        "lon": -80.0534,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -31,
+        "heading": 20,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you pick for this weekend? Weekend spots are full of people you notice for a second and never meet, and NEAR turns those quick crossings into names.",
+      "overlay": "YOUR PICK? 👇",
+      "sub": "Friday and Saturday plans",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 120
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1900,
+        "pitch": -35,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "156-south-florida-friday-and-saturday-night-"
+}
