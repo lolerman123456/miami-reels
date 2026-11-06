@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "YOUR MIAMI NIGHT OUT",
+    "main": "ON FRIDAY HAS",
+    "highlight": "5 STAGES",
+    "bottom": "",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "a packed Miami Friday night collage moment with five invented friends spilling out of a rideshare in Brickell, one checking NEAR on her phone, neon rooftop lights above, palm trees, blurred club line, late night glow"
+    },
+    "emojis": [
+      "🌴",
+      "🪩",
+      "👀"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Start With Dinner In Coconut Grove",
+      "highlight": "Dinner In",
+      "body": "Everyone says “chill night.”\nThe reservation is already giving pregame.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "four invented friends laughing at an outdoor Coconut Grove dinner table, string lights overhead, half-finished plates, one friend showing a phone screen with Miami plans, warm tropical night lighting"
+      },
+      "emoji": "🍽️",
+      "chip": "STAGE 1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Check NEAR Before Brickell",
+      "highlight": "Before Brickell",
+      "body": "One look at who’s out and suddenly the group chat has a route.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented woman in a black top sitting in the back of a rideshare crossing into Brickell, city towers glowing outside, friends leaning in as she checks NEAR on her phone, neon dashboard light"
+      },
+      "emoji": "📍",
+      "chip": "STAGE 2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Treat The Rooftop Like A Reunion",
+      "highlight": "Rooftop Like",
+      "body": "You came with four people.\nSomehow you know half the terrace by 12:18.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a crowded Brickell rooftop party with invented friends hugging and laughing near glass railings, Miami skyline behind them, blue and pink lights, a DJ booth in the corner"
+      },
+      "emoji": "🏙️",
+      "chip": "STAGE 3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Say South Beach Is One Quick Stop",
+      "highlight": "Quick Stop",
+      "body": "The wristband appears.\nNow it’s a whole chapter with club lights and receipts.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "invented friends outside a South Beach club entrance, one holding up a fresh wristband, velvet rope nearby, bright marquee lights, palm shadows, excited late night street scene"
+      },
+      "emoji": "🎟️",
+      "chip": "STAGE 4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You End With Cafecito And Big Plans",
+      "highlight": "Big Plans",
+      "body": "It’s 3:26am and someone is pitching beach at 11 like a CEO.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "five invented friends at a bright late night Miami ventanita ordering cafecito and pastries, one still wearing a club wristband, sleepy smiles, streetlights and pastel storefront glow"
+      },
+      "emoji": "☕",
+      "chip": "STAGE 5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who turns one dinner into a full Miami itinerary 👀",
+  "hashtags": [
+    "MiamiNightOut",
+    "BrickellNightlife"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who turns one dinner into a full Miami itinerary 👀\n\n#MiamiNightOut #BrickellNightlife #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-06",
+  "id": "2026-11-06-social-16"
+}
