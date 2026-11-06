@@ -1,0 +1,194 @@
+{
+  "title": "South Florida weekend guide: November nights",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami",
+    "Sun Sentinel",
+    "Ones To Watch",
+    "WSVN 7News"
+  ],
+  "collaborators": [],
+  "igCaption": "A few South Florida plans for Friday and Saturday night.\nNov. 6 and 7, South Florida, prices vary\n\nSources: Miami New Times, Secret Miami, Sun Sentinel, Ones To Watch, WSVN 7News\n\n#MiamiEvents #SouthFlorida #FortLauderdale #PalmBeach",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Looking for Friday and Saturday night plans? South Florida has concerts, food events, and one museum show already open.",
+      "overlay": [
+        "WEEKEND",
+        "GUIDE"
+      ],
+      "emojis": [
+        "🎤",
+        "🍖",
+        "🎨",
+        "🌙"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 120
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start with Miami’s weekend listings. Secret Miami has a November 6 to 8 guide with 23 things to do around the city.",
+      "caption": "Start with Miami’s weekend listings. Secret Miami has a Nov. 6-8 guide with 23 things to do around the city.",
+      "overlay": "MIAMI",
+      "badge": "23 THINGS",
+      "sub": "Nov. 6 through 8",
+      "emoji": "📍",
+      "stats": [
+        {
+          "value": "23",
+          "label": "things to do"
+        },
+        {
+          "value": "NOV 6-8",
+          "label": "weekend guide"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 120
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 40,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "In Broward, Ones To Watch has a November concert guide for Fort Lauderdale. It also rounds up 13 concerts in the Southeast this month.",
+      "caption": "In Broward, Ones To Watch has a November concert guide for Fort Lauderdale. It also rounds up 13 concerts in the Southeast this month.",
+      "overlay": "FORT LAUDERDALE",
+      "badge": "13 CONCERTS",
+      "sub": "November music guide",
+      "emoji": "🎶",
+      "stats": [
+        {
+          "value": "13",
+          "label": "concerts"
+        }
+      ],
+      "source": "Ones To Watch",
+      "location": {
+        "name": "Downtown Fort Lauderdale",
+        "lat": 26.1224,
+        "lon": -80.1373,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1300,
+        "pitch": -32,
+        "heading": 118,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sun Sentinel’s November roundup points to Beer B Que Music Festival, with Kodak Black and Rick Ross on the bill. At Beer B Que, open NEAR and see who else showed up.",
+      "caption": "Sun Sentinel’s November roundup points to Beer B Que Music Festival, with Kodak Black and Rick Ross on the bill. At Beer B Que, open NEAR and see who else showed up.",
+      "overlay": "BROWARD",
+      "badge": "NOV EVENTS",
+      "sub": "Kodak Black, Rick Ross",
+      "emoji": "🍖",
+      "stats": [
+        {
+          "value": "NOV",
+          "label": "event month"
+        }
+      ],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Broward County",
+        "lat": 26.1901,
+        "lon": -80.3659,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 2200,
+        "pitch": -30,
+        "heading": 260,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a quieter stop, Morikami Museum in Delray Beach has Naoko Fukumaru’s Mending Cracks in Time. It opened October 17 and runs through February 28, 2027. Adult admission is $18.",
+      "caption": "For a quieter stop, Morikami Museum in Delray Beach has Naoko Fukumaru’s Mending Cracks in Time. It opened Oct. 17 and runs through Feb. 28, 2027. Adult admission is $18.",
+      "overlay": "MORIKAMI",
+      "badge": "$18 ADULTS",
+      "sub": "Runs through Feb. 28",
+      "emoji": "🏺",
+      "stats": [
+        {
+          "value": "$18",
+          "label": "adult ticket"
+        },
+        {
+          "value": "FEB 28",
+          "label": "last day"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Morikami Museum and Japanese Gardens",
+        "lat": 26.4299,
+        "lon": -80.1567,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -28,
+        "heading": 145,
+        "degrees": 90,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you doing this weekend, Miami or Broward? The same way you can spend a whole night in Miami and only realize later who was рядом? NEAR shows you the people you crossed paths with.",
+      "overlay": "WHAT'S YOUR PLAN? 🌙",
+      "sub": "Drop the Friday pick",
+      "location": {
+        "name": "Biscayne Bay",
+        "lat": 25.7617,
+        "lon": -80.1518,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2100,
+        "pitch": -30,
+        "heading": 300
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "157-south-florida-weekend-guide-november-nig"
+}
