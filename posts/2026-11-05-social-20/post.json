@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "THIS IS",
+    "main": "A SIGN YOU'RE THE FRIEND WHO SAYS",
+    "highlight": "ONE MORE",
+    "bottom": "BEFORE BRICKELL LETS YOU LEAVE",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "five stylish friends outside a Brickell rooftop elevator at 1:40am, one woman holding the door open and laughing while everyone else checks their phones, neon skyline lights, glossy lobby floor, chaotic Miami night out"
+    },
+    "emojis": [
+      "🌃",
+      "🍸",
+      "😂"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Call A Rooftop Reset",
+      "highlight": "Rooftop Reset",
+      "body": "Everyone says they’re tired. You say Sugar is 8 minutes away and suddenly nobody is tired.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a confident woman in a black going-out top pointing toward the Brickell skyline while four friends pile into a rideshare outside a downtown Miami bar, city lights, late night excitement"
+      },
+      "emoji": "🏙️",
+      "chip": "SIGN #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Read NEAR Before The Next Move",
+      "highlight": "NEAR Before",
+      "body": "You see two friends at a Wynwood bar nearby and now the group has a full itinerary again.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a group of friends huddled around a phone showing a nightlife app outside a colorful Wynwood bar line, murals behind them, neon sign glow, midnight Miami street scene"
+      },
+      "emoji": "📍",
+      "chip": "SIGN #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Treat The Line Like A Meetup",
+      "highlight": "Line Like",
+      "body": "The South Beach wait turns into selfies, gossip, and three new people joining your plans.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "five friends laughing in a velvet rope line outside a South Beach club, one friend taking a wide angle selfie, palm trees and pink neon lighting, busy but glamorous Miami night"
+      },
+      "emoji": "📸",
+      "chip": "SIGN #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Hear The DJ Switch And Stay",
+      "highlight": "DJ Switch",
+      "body": "One song fixes your whole group. Suddenly leaving sounds dramatic and unnecessary.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a packed Miami club dance floor at 2am, a woman grabbing her friend's hand as the DJ changes songs, blue and purple lights, confetti in the air, everyone smiling"
+      },
+      "emoji": "🎶",
+      "chip": "SIGN #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Promise Cafecito After",
+      "highlight": "Cafecito After",
+      "body": "Your exit strategy is Cuban coffee, pastelitos, and acting normal at the beach tomorrow.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "four friends in going-out outfits at a bright Cuban coffee window in Little Havana at 3:30am, cafecitos and pastelitos on the counter, warm streetlights, funny tired smiles"
+      },
+      "emoji": "☕",
+      "chip": "SIGN #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who turns “we’re leaving” into one more stop 😂",
+  "hashtags": [
+    "BrickellNights",
+    "MiamiNightOut"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who turns “we’re leaving” into one more stop 😂\n\n#BrickellNights #MiamiNightOut #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-05",
+  "id": "2026-11-05-social-20"
+}
