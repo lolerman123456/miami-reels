@@ -1,0 +1,193 @@
+{
+  "title": "South Florida Weekend Plans, Cheapest First",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Start with the cheaper plans and work up from there.\n\nSources: Miami New Times, Secret Miami\n\n#SouthFlorida #MiamiWeekend #MiamiEvents #WeekendPlans",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need Friday through Sunday plans in South Florida? Start with the cheaper options first.",
+      "overlay": [
+        "WEEKEND PLANS",
+        "CHEAPEST FIRST"
+      ],
+      "emojis": [
+        "🎟️",
+        "🍸",
+        "🎤",
+        "🍽️"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 120
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Friday starts in Little River at Anako. The Filipino restaurant opened October 22 at 8222 NE Second Ave. Chefs Leicel Ros and Nancy Dominguez run it after Sili at 1-800-Lucky in Wynwood.",
+      "caption": "Friday starts in Little River at Anako. The Filipino restaurant opened Oct. 22 at 8222 NE 2nd Ave. Chefs Leicel Ros and Nancy Dominguez run it after Sili at 1-800-Lucky in Wynwood.",
+      "overlay": "ANAKO",
+      "badge": "OPENED OCT 22",
+      "sub": "Little River dinner plan",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "October 22",
+          "label": "opened"
+        },
+        {
+          "value": "8222",
+          "label": "NE 2nd Ave"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Anako",
+        "lat": 25.8496,
+        "lon": -80.1921,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The menu includes pork-and-shrimp lumpia, kinilaw crudo, chicken inasal, sisig, and kare-kare with slow-braised oxtail, peanut curry, Romano beans, okra, and bagoong.",
+      "caption": "The menu includes pork-and-shrimp lumpia, kinilaw crudo, chicken inasal, sisig, and kare-kare with slow-braised oxtail, peanut curry, Romano beans, okra, and bagoong.",
+      "overlay": "LITTLE RIVER",
+      "badge": "2 CHEFS",
+      "sub": "Filipino dinner stop",
+      "emoji": "🥘",
+      "stats": [
+        {
+          "value": "2",
+          "label": "chefs"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Anako",
+        "lat": 25.8496,
+        "lon": -80.1921,
+        "h": 18
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 650,
+        "pitch": -30,
+        "heading": 210,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sunday has comedy in Dania Beach. Rocky Dale Davis performs at 6 p.m. at the Ft. Lauderdale Improv at 177 N. Pointe Drive. Tickets cost $31.90. If you go, check NEAR later and see who else was there.",
+      "caption": "Sunday has comedy in Dania Beach. Rocky Dale Davis performs at 6 p.m. at the Ft. Lauderdale Improv at 177 N. Pointe Drive. Tickets cost $31.90. If you go, check NEAR later and see who else was there.",
+      "overlay": "DANIA BEACH",
+      "badge": "$31.90",
+      "sub": "Sunday comedy show",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "$31.90",
+          "label": "tickets"
+        },
+        {
+          "value": "6 PM",
+          "label": "showtime"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Dania Improv",
+        "lat": 26.0499,
+        "lon": -80.1595,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 20,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Davis built his following with TikTok and Instagram videos that have topped 500 million views and drawn more than a million followers.",
+      "caption": "Davis built his following with TikTok and Instagram videos that have topped 500 million views and drawn more than a million followers.",
+      "overlay": "ROCKY DAVIS",
+      "badge": "500M VIEWS",
+      "sub": "From feeds to stage",
+      "emoji": "📱",
+      "stats": [
+        {
+          "value": "500M",
+          "label": "views"
+        },
+        {
+          "value": "1M+",
+          "label": "followers"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Dania Improv",
+        "lat": 26.0499,
+        "lon": -80.1595,
+        "h": 18
+      },
+      "shot": {
+        "type": "push",
+        "range": 700,
+        "pitch": -28,
+        "heading": 295
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you pick for this weekend? And just like the cheapest spot can be the best surprise, NEAR makes the people you passed all day feel less random by showing you who they were.",
+      "overlay": "WHAT’S THE MOVE? 🎟️",
+      "sub": "Drop your weekend pick",
+      "location": {
+        "name": "Dania Beach",
+        "lat": 26.0523,
+        "lon": -80.1439,
+        "h": 30
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -34,
+        "heading": 80
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "159-south-florida-weekend-plans-cheapest-fir"
+}
