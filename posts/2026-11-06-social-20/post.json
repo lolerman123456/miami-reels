@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "SIGNS",
+    "main": "YOU'RE THE FRIEND WHO SAYS",
+    "highlight": "ONE MORE STOP",
+    "bottom": "AFTER EVERY MIAMI PLAN",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "four stylish friends laughing outside a glowing Wynwood bar at 1:18am, one woman holding her phone up with a map open like she found the next move, neon murals and party lights behind them"
+    },
+    "emojis": [
+      "🌃",
+      "👀",
+      "📍"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Call Wynwood A Warmup",
+      "highlight": "Wynwood A Warmup",
+      "body": "The group thinks this is the night. You think this is the lobby.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a confident woman in a black going-out outfit standing outside a packed Wynwood bar under pink neon, pointing down the street while her friends laugh and check their phones"
+      },
+      "emoji": "🎨",
+      "chip": "SIGN #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Save A Brickell Rooftop Backup",
+      "highlight": "Brickell Rooftop Backup",
+      "body": "You had Plan B pinned before everyone finished taking lobby pics.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a group of friends in a Brickell apartment lobby taking mirror selfies while one guy in a blazer quietly shows a rooftop reservation on his phone, city lights through glass doors"
+      },
+      "emoji": "🏙️",
+      "chip": "SIGN #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Check NEAR Mid-Song",
+      "highlight": "Check NEAR",
+      "body": "If three friends are at the next spot, suddenly everyone has stamina.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a woman on a crowded South Beach club dance floor checking the NEAR app on her phone mid-song, colorful lights flashing, friends leaning in excitedly around her"
+      },
+      "emoji": "📱",
+      "chip": "SIGN #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Treat 2:40am Like Prime Time",
+      "highlight": "2:40am Like",
+      "body": "Everyone else sees the clock. You see one more perfect group photo.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "five friends posing for a dramatic sidewalk photo on Collins Avenue at 2:40am, club lights spilling onto the pavement, one friend directing the shot with total confidence"
+      },
+      "emoji": "⏰",
+      "chip": "SIGN #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You End With Cafecito Plans",
+      "highlight": "Cafecito Plans",
+      "body": "The night is done when you say it is. Usually after Cuban coffee.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a late-night Miami ventanita scene with four friends in going-out clothes holding tiny Cuban coffee cups, laughing under warm streetlights after leaving the club"
+      },
+      "emoji": "☕",
+      "chip": "SIGN #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who turns every exit into a second location 👀",
+  "hashtags": [
+    "#MiamiNightOut",
+    "#BrickellAfterDark"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who turns every exit into a second location 👀\n\n#MiamiNightOut #BrickellAfterDark #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-06",
+  "id": "2026-11-06-social-20"
+}
