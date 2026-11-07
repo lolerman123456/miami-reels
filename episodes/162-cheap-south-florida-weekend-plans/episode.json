@@ -1,0 +1,196 @@
+{
+  "title": "Cheap South Florida Weekend Plans",
+  "sources": [
+    "Miami New Times",
+    "CBS News",
+    "Local 10"
+  ],
+  "collaborators": [],
+  "igCaption": "Start with the free plan, then work your way up.\nNov. 6-9, South Florida, free to $60\n\nSources: Miami New Times, CBS News, Local 10\n\n#MiamiEvents #SouthFlorida #MiamiWeekend #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Here are weekend plans in South Florida that start free. Start in North Miami.",
+      "overlay": [
+        "WEEKEND PLANS",
+        "START FREE"
+      ],
+      "emojis": [
+        "🎟️",
+        "🍽️",
+        "🎬",
+        "🎷"
+      ],
+      "location": {
+        "name": "Greek Orthodox Church of the Annunciation",
+        "lat": 25.8891,
+        "lon": -80.2028,
+        "h": 15
+      },
+      "shot": {
+        "type": "dive",
+        "range": 900,
+        "pitch": -32,
+        "heading": 190
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The North Miami Greek Festival runs Friday at the Greek Orthodox Church of the Annunciation on Northwest Second Avenue. Admission is free with RSVP. The church grounds turn into a Greek village with live music, traditional dancing, homemade meals, raffles, vendors, and guided church tours.",
+      "caption": "The North Miami Greek Festival runs Friday at the Greek Orthodox Church of the Annunciation on NW 2nd Ave. Admission is free with RSVP. The church grounds turn into a Greek village with live music, traditional dancing, homemade meals, raffles, vendors, and guided church tours.",
+      "overlay": "NORTH MIAMI",
+      "badge": "FREE RSVP",
+      "sub": "Greek festival Friday",
+      "emoji": "🇬🇷",
+      "stats": [
+        {
+          "value": "FREE",
+          "label": "Admission"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Greek Orthodox Church of the Annunciation",
+        "lat": 25.8891,
+        "lon": -80.2028,
+        "h": 15
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 700,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Subtropic Film Festival opens its fourth installment with Homegrown, a block of five short films from five directors. This year’s theme is Between Two Waters, focused on where the ocean and the Everglades meet. Tickets cost ten to thirty dollars.",
+      "caption": "Subtropic Film Festival opens its 4th installment with Homegrown, a block of 5 short films from 5 directors. This year’s theme is Between Two Waters, focused on where the ocean and the Everglades meet. Tickets cost $10 to $30.",
+      "overlay": "SUBTROPIC",
+      "badge": "$10-$30",
+      "sub": "Films across Miami",
+      "emoji": "🎬",
+      "stats": [
+        {
+          "value": "$10",
+          "label": "Low ticket"
+        },
+        {
+          "value": "5",
+          "label": "Short films"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -35,
+        "heading": 35,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sunday at the Miami Beach Bandshell, Dance Now! Miami gives a preview of its 27th season. Fall for Dance Now starts at 7 p.m. and includes excerpts from the company’s Nutcracker Clara. Tickets cost ten to twenty-five dollars. If you’re at the Bandshell, check NEAR to see who else showed up.",
+      "caption": "Sunday at the Miami Beach Bandshell, Dance Now! Miami gives a preview of its 27th season. Fall for Dance Now starts at 7 p.m. and includes excerpts from the company’s Nutcracker Clara. Tickets cost $10 to $25. If you’re at the Bandshell, check NEAR to see who else showed up.",
+      "overlay": "MIAMI BEACH",
+      "badge": "$10-$25",
+      "sub": "Sunday at Bandshell",
+      "emoji": "💃",
+      "stats": [
+        {
+          "value": "27TH",
+          "label": "Season preview"
+        },
+        {
+          "value": "$10",
+          "label": "Low ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami Beach Bandshell",
+        "lat": 25.8587,
+        "lon": -80.12,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 260,
+        "degrees": 90,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Saturday at Pinecrest Gardens, the 17th annual Jazz at Pinecrest Gardens starts at 8 p.m. Singer Allyson Briggs and Big Band leader Dan Gabel open the season with America: Together in Harmony. Tickets cost forty-five to sixty dollars.",
+      "caption": "Saturday at Pinecrest Gardens, the 17th annual Jazz at Pinecrest Gardens starts at 8 p.m. Singer Allyson Briggs and Big Band leader Dan Gabel open the season with America: Together in Harmony. Tickets cost $45 to $60.",
+      "overlay": "PINECREST",
+      "badge": "$45-$60",
+      "sub": "Jazz Saturday night",
+      "emoji": "🎷",
+      "stats": [
+        {
+          "value": "17TH",
+          "label": "Annual jazz"
+        },
+        {
+          "value": "$45",
+          "label": "Low ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Pinecrest Gardens",
+        "lat": 25.6696,
+        "lon": -80.2852,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 145,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Free to sixty dollars covers the whole list this weekend. The same way a budget-friendly weekend lets you bump into new faces without planning much, NEAR shows you who that person was after they passed by.",
+      "overlay": "PICK ONE 👇",
+      "sub": "Free to sixty dollars",
+      "location": {
+        "name": "South Florida",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 120
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -35,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "162-cheap-south-florida-weekend-plans"
+}
