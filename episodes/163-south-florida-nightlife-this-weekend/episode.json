@@ -1,0 +1,226 @@
+{
+  "title": "South Florida Nightlife This Weekend",
+  "sources": [
+    "NBC 6 South Florida",
+    "Data Portuaria",
+    "Miami New Times",
+    "Haute Living",
+    "The Miami Guide"
+  ],
+  "collaborators": [
+    "clubspace"
+  ],
+  "igCaption": "Boats, rooftops, clubs and live music are on the South Florida weekend lineup.\n\nSources: NBC 6 South Florida, Data Portuaria, Miami New Times, Haute Living, The Miami Guide\n\n#Miami #FortLauderdale #SouthFlorida #Nightlife",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "This weekend starts on the water, then moves to rooftops, clubs, and live music around South Florida.",
+      "overlay": [
+        "THIS WEEKEND",
+        "NIGHTLIFE GUIDE"
+      ],
+      "emojis": [
+        "⛵",
+        "🌃",
+        "🎧",
+        "🎶"
+      ],
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start with Sail La Vie in Miami. NBC 6 says the weekend celebrates Black sailing culture on Saturday, November 7.",
+      "caption": "Start with Sail La Vie in Miami. NBC 6 says the weekend celebrates Black sailing culture on Saturday, Nov. 7.",
+      "overlay": "SAIL LA VIE",
+      "badge": "NOV 7",
+      "sub": "Black sailing culture",
+      "emoji": "⛵",
+      "stats": [
+        {
+          "value": "NOV 7",
+          "label": "event date"
+        },
+        {
+          "value": "2026",
+          "label": "this weekend"
+        }
+      ],
+      "source": "NBC 6 South Florida",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 180,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Fort Lauderdale gets the other boat headline. Data Portuaria says Legend of the Seas homeports there on its first U.S. visit.",
+      "caption": "Fort Lauderdale gets the other boat headline. Data Portuaria says Legend of the Seas homeports there on its first U.S. visit.",
+      "overlay": "FORT LAUDERDALE",
+      "badge": "FIRST U.S.",
+      "sub": "Legend of the Seas",
+      "emoji": "🛳️",
+      "stats": [
+        {
+          "value": "FIRST U.S.",
+          "label": "visit"
+        }
+      ],
+      "source": "Data Portuaria",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 70
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 35,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Then watch Club Space downtown. Miami New Times says Space teased a GTA VI transformation called the Vault on Wednesday, November 4. If you end up at Space, open NEAR and see who else was there.",
+      "caption": "Then watch Club Space downtown. Miami New Times says Space teased a GTA VI transformation called the Vault on Wednesday, Nov. 4. If you end up at Space, open NEAR and see who else was there.",
+      "overlay": "CLUB SPACE",
+      "badge": "GTA VI",
+      "sub": "The Vault tease",
+      "emoji": "🎧",
+      "stats": [
+        {
+          "value": "GTA VI",
+          "label": "theme tease"
+        },
+        {
+          "value": "NOV 4",
+          "label": "tease date"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Club Space",
+        "lat": 25.78405,
+        "lon": -80.19312,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -35,
+        "heading": 155,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For live music, keep Miami on the board. Haute Living published its guide to the best live music venues in Miami on September 25, covering jazz clubs and supper clubs.",
+      "caption": "For live music, keep Miami on the board. Haute Living published its guide to the best live music venues in Miami on Sept. 25, covering jazz clubs and supper clubs.",
+      "overlay": "LIVE MUSIC",
+      "badge": "SEP 25",
+      "sub": "Jazz and supper clubs",
+      "emoji": "🎶",
+      "stats": [
+        {
+          "value": "SEP 25",
+          "label": "guide date"
+        }
+      ],
+      "source": "Haute Living",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 240,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Wynwood also has the party runway warming up. The Miami Guide published its Art Basel and Miami Art Week parties guide on October 1.",
+      "caption": "Wynwood also has the party runway warming up. The Miami Guide published its Art Basel and Miami Art Week parties guide on Oct. 1.",
+      "overlay": "WYNWOOD",
+      "badge": "OCT 1",
+      "sub": "Miami Week planning",
+      "emoji": "🌃",
+      "stats": [
+        {
+          "value": "OCT 1",
+          "label": "guide date"
+        }
+      ],
+      "source": "The Miami Guide",
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.804,
+        "lon": -80.199,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -30,
+        "heading": 310,
+        "degrees": 75,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which stop would you start with: boat, rooftop, club, or live music? After a night like this, it’s easy to remember a face and not a name, and NEAR shows you who those people were.",
+      "overlay": "PICK ONE 🌃",
+      "sub": "Drop the first stop",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 100
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -32,
+        "heading": 205
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "163-south-florida-nightlife-this-weekend"
+}
