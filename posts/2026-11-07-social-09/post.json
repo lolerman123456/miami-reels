@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "THINGS EVERY GIRL",
+    "main": "DOES BEFORE",
+    "highlight": "MIAMI NIGHT",
+    "bottom": "ACTUALLY STARTS",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "four stylish women in a Brickell apartment getting ready before a Miami night out, one holding heels, one checking a rideshare app, one fixing lip gloss in a hallway mirror, skyline lights glowing through the window"
+    },
+    "emojis": [
+      "💄",
+      "🌃",
+      "👠"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Change Shoes In The Elevator",
+      "highlight": "Change Shoes",
+      "body": "Heels for the lobby. Backup pair in the tote.\nBrickell has seen your whole strategy.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a woman in a sleek black outfit changing from flats into heels inside a glossy Brickell condo elevator while her friends laugh and hold tiny purses, city lights reflecting in the mirror"
+      },
+      "emoji": "👠",
+      "chip": "SIGN #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Ask The Group Chat For Final Approval",
+      "highlight": "Final Approval",
+      "body": "Three mirror pics, one “too much?” text.\nEveryone replies late but you already knew.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a woman posing in front of a full length mirror in a Miami apartment while her phone screen shows a busy group chat, friends in the background doing makeup under warm vanity lights"
+      },
+      "emoji": "📱",
+      "chip": "SIGN #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Pack Like South Beach Is A Flight",
+      "highlight": "South Beach",
+      "body": "Lip gloss, portable charger, ID, gum.\nYour mini bag is doing a full weekend shift.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "close up of a tiny metallic purse on a South Beach hotel bed packed with lip gloss, portable charger, ID holder, gum, and sunglasses, neon pink club light spilling through the window"
+      },
+      "emoji": "👜",
+      "chip": "SIGN #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Check NEAR Before Saying Yes",
+      "highlight": "Check NEAR",
+      "body": "Wynwood, Brickell, or Beach?\nYou need to know who’s there before committing.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "three friends in a parked rideshare outside a Wynwood bar checking the NEAR app on one phone, colorful murals outside, blue and purple nightlife lighting on their faces"
+      },
+      "emoji": "👀",
+      "chip": "SIGN #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Schedule Tomorrow Beach Like A Threat",
+      "highlight": "Tomorrow Beach",
+      "body": "It’s 12:18am and you’re already saying “early.”\nNobody believes you. Everyone agrees.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a group of women outside a South Beach club at night laughing while one points at a phone calendar that says beach tomorrow, palm trees and club lights behind them"
+      },
+      "emoji": "🏖️",
+      "chip": "SIGN #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who starts getting ready three hours early and still makes the night better 💄",
+  "hashtags": [
+    "MiamiNightOut",
+    "BrickellGirlsNight"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who starts getting ready three hours early and still makes the night better 💄\n\n#MiamiNightOut #BrickellGirlsNight #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-07",
+  "id": "2026-11-07-social-09"
+}
