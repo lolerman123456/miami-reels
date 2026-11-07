@@ -1,0 +1,134 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "",
+    "main": "THIS IS WHERE SOUTH FLORIDA GOES OUT",
+    "highlight": "THIS WEEK",
+    "bottom": "",
+    "blur": false,
+    "photo": {
+      "query": "South Florida nightlife crowd venue palm trees stage lights",
+      "prompt": "A dramatic South Florida night crowd outside a lit venue with palm trees, stage lights, and people walking in"
+    },
+    "emojis": [
+      "👀",
+      "🎶",
+      "🍸"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Good Night John Boy opens in Fort Lauderdale",
+      "highlight": "Good Night John Boy",
+      "body": "The 1970s-themed bar opened Nov. 6 at 270 SE Sixth Ave. in Fort Lauderdale. It has nightly DJs, a dance floor, and cocktails including Disco Punch in a take-home cup.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "disco ball cocktail bar Fort Lauderdale nightlife",
+        "prompt": "A 1970s-style disco bar with mirrored disco balls, neon lights, wood paneling, and cocktails on a crowded dance floor"
+      },
+      "emoji": "🪩",
+      "chip": "OPEN NOW",
+      "logo": "goodnightjb.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "North Miami Greek Festival at the Greek Orthodox Church of the Annunciation",
+      "highlight": "North Miami Greek Festival",
+      "body": "The festival runs Friday, Nov. 6 at the Greek Orthodox Church of the Annunciation, 12250 NW Second Ave., North Miami. Admission is free with RSVP.",
+      "place": "North Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Greek festival food music church grounds North Miami",
+        "prompt": "A festival scene with Greek food, music, and dancing on church grounds under string lights"
+      },
+      "emoji": "🎉",
+      "chip": "FREE RSVP",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Subtropic Film Festival opens its fourth installment",
+      "highlight": "Subtropic Film Festival",
+      "body": "The festival opens Friday, Nov. 6 at various venues across Miami. Tickets cost $10 to $30, and the opening block is 'Homegrown,' a set of five short films.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "independent film festival screening audience Miami",
+        "prompt": "A dark theater with a film screen, audience silhouettes, and a festival poster near the entrance"
+      },
+      "emoji": "🎬",
+      "chip": "$10-$30",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Jazz at Pinecrest Gardens on Nov. 7",
+      "highlight": "Jazz at Pinecrest Gardens",
+      "body": "The 17th Annual Jazz at Pinecrest Gardens starts Saturday, Nov. 7 at 8 p.m. at Pinecrest Gardens, 11000 Red Road, Pinecrest. Tickets cost $45 to $60.",
+      "place": "Pinecrest",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "jazz performance outdoor garden stage night Pinecrest",
+        "prompt": "An outdoor jazz performance at night in a garden setting with a singer, band, and stage lights"
+      },
+      "emoji": "🎷",
+      "chip": "SAT 8 PM",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Rocky Dale Davis at Ft. Lauderdale Improv on Nov. 8",
+      "highlight": "Rocky Dale Davis",
+      "body": "The comedian performs Sunday, Nov. 8 at 6 p.m. at the Ft. Lauderdale Improv, 177 N. Pointe Drive, Dania Beach. Tickets cost $31.90.",
+      "place": "Dania Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "comedy club stage microphone spotlight audience",
+        "prompt": "A comedy club stage with a single microphone under a spotlight and a packed audience in a dark room"
+      },
+      "emoji": "🎤",
+      "chip": "SUN 6 PM",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Fall for Dance Now! at Miami Beach Bandshell on Nov. 8",
+      "highlight": "Fall for Dance Now!",
+      "body": "Dance Now! Miami performs Sunday, Nov. 8 at 7 p.m. at Miami Beach Bandshell, 7275 Collins Ave., Miami Beach. Tickets cost $10 to $25.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miami Beach Bandshell performance stage night dance",
+        "prompt": "A dramatic outdoor dance performance on the Miami Beach Bandshell stage at night with colorful lights"
+      },
+      "emoji": "💃",
+      "chip": "SUN 7 PM",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Save this and tell us who you're taking. Tag a friend.",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#EVENTS"
+  ],
+  "collaborators": [],
+  "igCaption": "Save this and tell us who you're taking. Tag a friend.\n\n📰 Sources: Miami New Times\n\n#SouthFloridaEvents #EVENTS #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-11-07",
+  "id": "2026-11-07-upcoming"
+}
