@@ -1,0 +1,187 @@
+{
+  "title": "South Florida nightlife this weekend, cheapest first",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Three South Florida plans this weekend, starting with the cheapest ones first.\n\nSources: Miami New Times, Secret Miami\n\n#Miami #FortLauderdale #Brickell #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a South Florida night out this weekend?",
+      "overlay": [
+        "WEEKEND",
+        "NIGHTLIFE"
+      ],
+      "emojis": [
+        "🌙",
+        "🍸",
+        "🪩",
+        "🌴"
+      ],
+      "location": {
+        "name": "Good Night John Boy Fort Lauderdale",
+        "lat": 26.1165,
+        "lon": -80.1398,
+        "h": 25
+      },
+      "shot": {
+        "type": "dive",
+        "range": 900,
+        "pitch": -32,
+        "heading": 155
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start in Fort Lauderdale. Good Night John Boy celebrates its grand opening Friday, November 6, at 270 SE Sixth Avenue. It takes over the former Howl at the Moon space with 1970s decor, nightly DJs, and dancing.",
+      "caption": "Start in Fort Lauderdale. Good Night John Boy celebrates its grand opening Friday, Nov. 6, at 270 SE 6th Ave. It takes over the former Howl at the Moon space with 1970s decor, nightly DJs, and dancing.",
+      "overlay": "GOOD NIGHT JOHN",
+      "badge": "OPENS NOV 6",
+      "sub": "Former Howl space",
+      "emoji": "🪩",
+      "stats": [
+        {
+          "value": "NOV 6",
+          "label": "grand opening"
+        },
+        {
+          "value": "1970s",
+          "label": "bar theme"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Good Night John Boy Fort Lauderdale",
+        "lat": 26.1165,
+        "lon": -80.1398,
+        "h": 25
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 700,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The bar comes from Forward Hospitality Group, led by Michael Schwartz and Bobby Rutter. Fort Lauderdale joins Delray Beach, St. Petersburg, Cleveland, Chicago, Columbus, and San Diego. Disco Punch is a Bacardí Superior rum punch served in a take-home disco cup.",
+      "caption": "The bar comes from Forward Hospitality Group, led by Michael Schwartz and Bobby Rutter. Fort Lauderdale joins Delray Beach, St. Petersburg, Cleveland, Chicago, Columbus, and San Diego. Disco Punch is a Bacardí Superior rum punch served in a take-home disco cup.",
+      "overlay": "DISCO PUNCH",
+      "badge": "7 CITIES",
+      "sub": "Take-home cup",
+      "emoji": "🍹",
+      "stats": [
+        {
+          "value": "7",
+          "label": "locations"
+        },
+        {
+          "value": "1",
+          "label": "signature drink"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Good Night John Boy Fort Lauderdale",
+        "lat": 26.1165,
+        "lon": -80.1398,
+        "h": 25
+      },
+      "shot": {
+        "type": "push",
+        "range": 650,
+        "pitch": -30,
+        "heading": 210
+      }
+    },
+    {
+      "kind": "item",
+      "text": "In Brickell, LPM Restaurant and Bar has a $3 million transformation. The patio now has its own entrance, lounge seating around a central fountain, and a new cocktail program called Déjà Vu. If you end up on the patio, check NEAR for the same crowd.",
+      "caption": "In Brickell, LPM Restaurant & Bar has a $3 million transformation. The patio now has its own entrance, lounge seating around a central fountain, and a new cocktail program called Déjà Vu. If you end up on the patio, check NEAR for the same crowd.",
+      "overlay": "LPM BRICKELL",
+      "badge": "$3M REDO",
+      "sub": "New patio setup",
+      "emoji": "🍸",
+      "stats": [
+        {
+          "value": "$3 million",
+          "label": "transformation"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "LPM Restaurant and Bar Miami",
+        "lat": 25.7657,
+        "lon": -80.1913,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 48,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Déjà Vu has ten signature cocktails and comes as a collectible European-style fashion magazine. The Soleil arrives with a sample of the French perfume that inspired it.",
+      "caption": "Déjà Vu has 10 signature cocktails and comes as a collectible European-style fashion magazine. The Soleil arrives with a sample of the French perfume that inspired it.",
+      "overlay": "DÉJÀ VU",
+      "badge": "10 DRINKS",
+      "sub": "Magazine-style menu",
+      "emoji": "📖",
+      "stats": [
+        {
+          "value": "10",
+          "label": "signature drinks"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "LPM Restaurant and Bar Miami",
+        "lat": 25.7657,
+        "lon": -80.1913,
+        "h": 80
+      },
+      "shot": {
+        "type": "zoomin",
+        "range": 1400,
+        "pitch": -34,
+        "heading": 300
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Fort Lauderdale opens Friday. South Florida nights move fast, and the person you kept spotting across the bar but never met is exactly the kind of moment NEAR helps you place. Brickell has the new patio and cocktail menu.",
+      "overlay": "PICK ONE 🍸",
+      "sub": "Fort Lauderdale or Brickell",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 100
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 170
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "161-south-florida-nightlife-this-weekend-che"
+}
