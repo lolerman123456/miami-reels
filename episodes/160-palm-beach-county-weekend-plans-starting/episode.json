@@ -1,0 +1,199 @@
+{
+  "title": "Palm Beach County weekend plans, starting cheap",
+  "sources": [
+    "Secret Miami",
+    "Miami New Times",
+    "Sun Sentinel",
+    "Markets of Tomorrow",
+    "WPTV",
+    "The Boca Raton Tribune"
+  ],
+  "collaborators": [],
+  "igCaption": "Palm Beach County weekend plans, starting with the cheap one.\n\nSources: Secret Miami, Miami New Times, Sun Sentinel, Markets of Tomorrow, WPTV, The Boca Raton Tribune\n\n#PalmBeachCounty #WestPalmBeach #BocaRaton #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need Palm Beach County weekend plans? Start with the twenty-eight dollar train deal, then plan the rest of the day.",
+      "overlay": [
+        "PBC WEEKEND",
+        "START CHEAP"
+      ],
+      "emojis": [
+        "🚆",
+        "🍷",
+        "🍽️",
+        "🌴"
+      ],
+      "location": {
+        "name": "West Palm Beach Brightline Station",
+        "lat": 26.7136,
+        "lon": -80.0643,
+        "h": 35
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Amtrak has Winter Wanderlust fares as low as twenty-eight dollars each way from Miami to Orlando and Miami to Tampa. Book by November twelfth. Travel runs from December first through March fourteenth, with blackout dates from December eighteenth to January third and February twelfth to fifteenth.",
+      "caption": "Amtrak has Winter Wanderlust fares as low as $28 each way from Miami to Orlando and Miami to Tampa. Book by Nov. 12. Travel runs from Dec. 1 through March 14, with blackout dates from Dec. 18 to Jan. 3 and Feb. 12 to 15.",
+      "overlay": "TRAIN DEAL",
+      "badge": "$28 EACH WAY",
+      "sub": "Book by Nov. 12",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "$28",
+          "label": "sample fare"
+        },
+        {
+          "value": "NOV 12",
+          "label": "book by"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "West Palm Beach Amtrak Station",
+        "lat": 26.7134,
+        "lon": -80.0622,
+        "h": 30
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Pastis opened in West Palm Beach this past October inside The Nora Hotel. The French brasserie started in New York’s Meatpacking District in nineteen ninety-nine, closed in twenty fourteen, returned in twenty nineteen, and now has its fifth location here.",
+      "caption": "Pastis opened in West Palm Beach this past October inside The Nora Hotel. The French brasserie started in New York’s Meatpacking District in 1999, closed in 2014, returned in 2019, and now has its fifth location here.",
+      "overlay": "PASTIS WPB",
+      "badge": "5TH LOCATION",
+      "sub": "Inside The Nora Hotel",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "1999",
+          "label": "NYC opening"
+        },
+        {
+          "value": "5",
+          "label": "locations"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "The Nora Hotel",
+        "lat": 26.7186,
+        "lon": -80.0569,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 55,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Taste of West Palm Beach is coming to CityPlace this October. Related Ross announced it as a citywide culinary festival, so downtown gets another food stop on the calendar. If you hit CityPlace, open NEAR and see who else tasted there.",
+      "caption": "Taste of West Palm Beach is coming to CityPlace this October. Related Ross announced it as a citywide culinary festival. If you hit CityPlace, open NEAR and see who else tasted there.",
+      "overlay": "CITYPLACE",
+      "badge": "THIS OCTOBER",
+      "sub": "Citywide food festival",
+      "emoji": "🍷",
+      "stats": [
+        {
+          "value": "OCT",
+          "label": "festival month"
+        }
+      ],
+      "source": "Markets of Tomorrow",
+      "location": {
+        "name": "CityPlace",
+        "lat": 26.7071,
+        "lon": -80.057,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -30,
+        "heading": 210,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Boca has two more food events on the radar. Sun Sentinel listed Savor Boca Experience in its November plans, and the Palm Beach Food and Wine Festival has already unveiled its 2026 events, celebrity chefs, and ticket sales.",
+      "caption": "Boca has two food events on the radar. Sun Sentinel listed Savor Boca Experience in its November plans, and the Palm Beach Food & Wine Festival has already unveiled 2026 events, celebrity chefs, and ticket sales.",
+      "overlay": "BOCA RATON",
+      "badge": "2026 EVENTS",
+      "sub": "Food weekends ahead",
+      "emoji": "🍴",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "festival year"
+        },
+        {
+          "value": "NOV",
+          "label": "plans list"
+        }
+      ],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Downtown Boca Raton",
+        "lat": 26.3504,
+        "lon": -80.0856,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 75,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which Palm Beach County night plan should we cover next? Weekend plans in Palm Beach County get blurry fast, and NEAR helps put a name to that person you kept seeing around town but never actually met.",
+      "overlay": "WHAT NEXT? 🌙",
+      "sub": "Drop the city",
+      "location": {
+        "name": "Downtown West Palm Beach",
+        "lat": 26.7153,
+        "lon": -80.0534,
+        "h": 60
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 260
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "160-palm-beach-county-weekend-plans-starting"
+}
