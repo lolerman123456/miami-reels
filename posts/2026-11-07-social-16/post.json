@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "HOW TO KNOW",
+    "main": "THE BOUNCER",
+    "highlight": "REMEMBERS YOU",
+    "bottom": "BEFORE YOU SAY HI",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "a stylish group of friends arriving at a South Beach club entrance at midnight, the bouncer smiling and lifting the rope before they speak, neon pink lights, palm trees, glossy sidewalk, Miami nightlife chaos behind them"
+    },
+    "emojis": [
+      "👀",
+      "🪩",
+      "🌴"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "He Says Your Name First",
+      "highlight": "Your Name",
+      "body": "You barely reach the rope and suddenly you're famous on Collins Ave.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a woman in a black going-out fit laughing at the rope outside a packed South Beach club while the bouncer greets her by name, friends behind her cheering, blue and pink neon reflecting on wet pavement"
+      },
+      "emoji": "😌",
+      "chip": "SIGN #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The Line Gets Quiet Around You",
+      "highlight": "Gets Quiet",
+      "body": "That Wynwood sidewalk just watched you skip the whole group debate.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a confident friend group walking past a long Wynwood bar line while people pause and look over, colorful murals, warm streetlights, club glow spilling from the doorway"
+      },
+      "emoji": "🤭",
+      "chip": "SIGN #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Get The Wristband Tap",
+      "highlight": "Wristband Tap",
+      "body": "No speech. No confusion. Just the silent little VIP arts and crafts moment.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "close-up of a velvet rope entrance in Brickell with a bouncer placing a shiny wristband on a smiling guest, rooftop lights above, friends filming on phones, city skyline in the background"
+      },
+      "emoji": "🎟️",
+      "chip": "SIGN #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "He Points You To The Better Door",
+      "highlight": "Better Door",
+      "body": "You came for one entrance and left with a shortcut past the velvet rope.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a bouncer discreetly pointing a dressed-up group toward a side entrance at a Miami Beach lounge, golden doorway light, velvet ropes, palm shadows, busy crowd waiting at the main door"
+      },
+      "emoji": "🚪",
+      "chip": "SIGN #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Your Friends Start Walking Behind You",
+      "highlight": "Behind You",
+      "body": "The group chat appointed you door captain and nobody held a vote.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "one friend leading a dressed-up group through a Brickell rooftop entrance while everyone follows closely behind, elevator doors open, blue club lighting, Miami skyline visible through glass"
+      },
+      "emoji": "👑",
+      "chip": "SIGN #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who somehow knows every door in Miami 👀",
+  "hashtags": [
+    "#MiamiNightlife",
+    "#SouthBeachNights"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who somehow knows every door in Miami 👀\n\n#MiamiNightlife #SouthBeachNights #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-07",
+  "id": "2026-11-07-social-16"
+}
