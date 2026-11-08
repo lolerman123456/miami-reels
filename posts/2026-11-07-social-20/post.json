@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "WHAT",
+    "main": "YOUR CLUB ORDER",
+    "highlight": "SAYS",
+    "bottom": "ABOUT YOU IN MIAMI",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "a packed South Beach club at midnight, invented friends Maya, Jules, and Leo at a glowing bar laughing while holding different colorful drinks and waters, neon pink and blue lights, DJ booth in the background, Miami nightlife"
+    },
+    "emojis": [
+      "🍸",
+      "👀",
+      "🌴"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Order Water Like A VIP",
+      "highlight": "Water Like",
+      "body": "You have Brickell rooftop plans after this. Hydrated, booked, impossible to rush.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "invented woman in a black satin top holding an ice water with lime at a crowded Brickell rooftop bar, city skyline behind her, friends checking phones and laughing under warm string lights"
+      },
+      "emoji": "💧",
+      "chip": "ORDER #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Ask For The Pretty Glass",
+      "highlight": "Pretty Glass",
+      "body": "Doesn’t matter what’s inside. The South Beach mirror pic needs the assignment done.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "invented friends posing near a South Beach club bathroom mirror, one holding a sparkling drink in a fancy coupe glass, glossy tile, flash photography, bright club lighting"
+      },
+      "emoji": "🥂",
+      "chip": "ORDER #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Get Espresso Before Wynwood",
+      "highlight": "Espresso Before",
+      "body": "The line is long and you’re treating 12:18 like the night just clocked in.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "invented group outside a busy Wynwood bar, one person holding a tiny espresso cup from a walk-up window, colorful murals, nightlife crowd, bright streetlights and camera flash"
+      },
+      "emoji": "☕",
+      "chip": "ORDER #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Order Fries For The Table",
+      "highlight": "Fries For",
+      "body": "You felt the group fading at 1:40 and saved the entire section with one basket.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "invented group at a crowded Miami lounge table sharing a huge basket of fries, phones on table, neon blue light, people cheering like the food just arrived at the perfect moment"
+      },
+      "emoji": "🍟",
+      "chip": "ORDER #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You End With A Ventanita Run",
+      "highlight": "Ventanita Run",
+      "body": "3:07am, sunglasses in your bag, Cuban coffee in hand, already recapping the night.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "invented friends at a Miami ventanita at 3am, holding small Cuban coffees and pastelito bags, club outfits, soft yellow streetlight, parked rideshare nearby, laughing on the sidewalk"
+      },
+      "emoji": "🌙",
+      "chip": "ORDER #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend whose order tells the whole story 👀",
+  "hashtags": [
+    "MiamiNightlife",
+    "SouthBeachNights"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend whose order tells the whole story 👀\n\n#MiamiNightlife #SouthBeachNights #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-07",
+  "id": "2026-11-07-social-20"
+}
