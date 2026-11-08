@@ -1,0 +1,198 @@
+{
+  "title": "Free and cheap South Florida events this week",
+  "sources": [
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Start with the free one, then work up from there.\nNov. 6 to 9, across Miami, free to $60\n\nSources: Miami New Times\n\n#MiamiEvents #SouthFlorida #MiamiNightlife #ThingsToDoMiami",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need something to do this week without starting at a hundred dollars?",
+      "overlay": [
+        "THIS WEEK",
+        "FREE FIRST"
+      ],
+      "emojis": [
+        "🎟️",
+        "🎷",
+        "🎬",
+        "💃"
+      ],
+      "location": {
+        "name": "Greek Orthodox Church of the Annunciation",
+        "lat": 25.8896,
+        "lon": -80.2018,
+        "h": 15
+      },
+      "shot": {
+        "type": "dive",
+        "range": 900,
+        "pitch": -32,
+        "heading": 190
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start in North Miami on Friday, November sixth. The North Miami Greek Festival is free with RSVP at the Greek Orthodox Church of the Annunciation on Northwest Second Avenue. They’ll have live music, traditional dancing, homemade food, raffles, vendors and guided church tours.",
+      "caption": "Start in North Miami on Friday, Nov. 6. The North Miami Greek Festival is free with RSVP at the Greek Orthodox Church of the Annunciation on NW 2nd Ave. They’ll have live music, traditional dancing, homemade food, raffles, vendors and guided church tours.",
+      "overlay": "NORTH MIAMI",
+      "badge": "FREE RSVP",
+      "sub": "Greek festival",
+      "emoji": "🇬🇷",
+      "stats": [
+        {
+          "value": "$0",
+          "label": "admission"
+        },
+        {
+          "value": "NOV. 6",
+          "label": "Friday"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Greek Orthodox Church of the Annunciation",
+        "lat": 25.8896,
+        "lon": -80.2018,
+        "h": 15
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 700,
+        "pitch": -30,
+        "heading": 120,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The Subtropic Film Festival opens its fourth installment this week with Homegrown, a block of five short films from five directors. This year’s theme is Between Two Waters, focused on where the ocean and the Everglades meet. Tickets run ten to thirty dollars.",
+      "caption": "The Subtropic Film Festival opens its 4th installment this week with Homegrown, a block of 5 short films from 5 directors. This year’s theme is Between Two Waters, focused on where the ocean and the Everglades meet. Tickets run $10 to $30.",
+      "overlay": "SUBTROPIC",
+      "badge": "$10 TO $30",
+      "sub": "Film festival",
+      "emoji": "🎬",
+      "stats": [
+        {
+          "value": "5",
+          "label": "short films"
+        },
+        {
+          "value": "$10",
+          "label": "low ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 35,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "On Sunday, November eighth, Dance Now! Miami brings Fall for Dance Now! to the Miami Beach Bandshell at seven p.m. The show previews the company’s twenty-seventh season, with excerpts from Clara and work by its Youth Ensemble. Tickets are ten to twenty-five dollars. If you’re at the Bandshell, NEAR shows who else caught the same set.",
+      "caption": "On Sunday, Nov. 8, Dance Now! Miami brings Fall for Dance Now! to the Miami Beach Bandshell at 7 p.m. The show previews the company’s 27th season, with excerpts from Clara and work by its Youth Ensemble. Tickets are $10 to $25. If you’re at the Bandshell, NEAR shows who else caught the same set.",
+      "overlay": "MIAMI BEACH",
+      "badge": "$10 TO $25",
+      "sub": "Dance at Bandshell",
+      "emoji": "💃",
+      "stats": [
+        {
+          "value": "27TH",
+          "label": "season"
+        },
+        {
+          "value": "$10",
+          "label": "low ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami Beach Bandshell",
+        "lat": 25.8587,
+        "lon": -80.1205,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 210,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "At Pinecrest Gardens, the seventeenth annual Jazz at Pinecrest Gardens opens on Saturday, November seventh at eight p.m. Singer Allyson Briggs and big band leader Dan Gabel perform America: Together in Harmony. Tickets cost forty-five to sixty dollars.",
+      "caption": "At Pinecrest Gardens, the 17th annual Jazz at Pinecrest Gardens opens on Saturday, Nov. 7 at 8 p.m. Singer Allyson Briggs and Big Band leader Dan Gabel perform America: Together in Harmony. Tickets cost $45 to $60.",
+      "overlay": "PINECREST",
+      "badge": "$45 TO $60",
+      "sub": "Jazz season opener",
+      "emoji": "🎷",
+      "stats": [
+        {
+          "value": "17TH",
+          "label": "annual season"
+        },
+        {
+          "value": "$60",
+          "label": "top ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Pinecrest Gardens",
+        "lat": 25.6692,
+        "lon": -80.2847,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 300,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "That’s the lineup for the week. And if you keep seeing the same face at these events but never catch a name, NEAR is the app that shows you who walked past you that day.",
+      "overlay": "WHAT’S THE MOVE? 🎟️",
+      "sub": "Free to sixty dollars",
+      "location": {
+        "name": "Pinecrest Gardens",
+        "lat": 25.6692,
+        "lon": -80.2847,
+        "h": 12
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 260
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "166-free-and-cheap-south-florida-events-this"
+}
