@@ -1,0 +1,199 @@
+{
+  "title": "South Florida Going Out Guide, Cheapest First",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Free RSVP, $28 train fares, $31.90 comedy, and a new disco bar.\nNov. 6 to 12, South Florida, free to $31.90\n\nSources: Miami New Times, Secret Miami\n\n#MiamiEvents #FortLauderdale #SouthFlorida #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Looking for plans this week? Start with free, then twenty-eight dollars, then late-night disco in Fort Lauderdale.",
+      "overlay": [
+        "CHEAP PLANS",
+        "THIS WEEK"
+      ],
+      "emojis": [
+        "🎟️",
+        "🚆",
+        "🎤",
+        "🪩"
+      ],
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The cheapest move is a free RSVP. The North Miami Greek Festival runs Friday, November sixth, at the Greek Orthodox Church of the Annunciation, with live music, traditional dancing, homemade meals, vendors, raffles, and guided church tours.",
+      "caption": "The cheapest move is a free RSVP. The North Miami Greek Festival runs Friday, Nov. 6, at the Greek Orthodox Church of the Annunciation, with live music, traditional dancing, homemade meals, vendors, raffles, and guided church tours.",
+      "overlay": "GREEK FEST",
+      "badge": "FREE RSVP",
+      "sub": "Church grounds event",
+      "emoji": "🇬🇷",
+      "stats": [
+        {
+          "value": "FREE",
+          "label": "RSVP"
+        },
+        {
+          "value": "NOV 6",
+          "label": "event date"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Greek Orthodox Church of the Annunciation",
+        "lat": 25.8889,
+        "lon": -80.2032,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a cheap getaway, Amtrak has one-way Coach fares from Miami to Orlando and Miami to Tampa as low as twenty-eight dollars. Book by November twelfth for travel from December first through March fourteenth.",
+      "caption": "For a cheap getaway, Amtrak has one-way Coach fares from Miami to Orlando and Miami to Tampa as low as $28. Book by Nov. 12 for travel from Dec. 1 through March 14.",
+      "overlay": "AMTRAK SALE",
+      "badge": "$28 FARES",
+      "sub": "Book by Nov. 12",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "$28",
+          "label": "one-way fare"
+        },
+        {
+          "value": "NOV 12",
+          "label": "book by"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Miami",
+        "lat": 25.77416667,
+        "lon": -80.19361111,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 35,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sunday comedy is Rocky Dale Davis at the Fort Lauderdale Improv in Dania Beach. The show starts at six p.m. Tickets cost thirty-one dollars and ninety cents. His videos have topped five hundred million views. If you’re there, open NEAR and see who else caught the set.",
+      "caption": "Sunday comedy is Rocky Dale Davis at the Fort Lauderdale Improv in Dania Beach. The show starts at 6 p.m. Tickets cost $31.90. His videos have topped 500 million views. If you’re there, open NEAR and see who else caught the set.",
+      "overlay": "FTL IMPROV",
+      "badge": "$31.90",
+      "sub": "Sunday at 6 p.m.",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "$31.90",
+          "label": "ticket price"
+        },
+        {
+          "value": "500M",
+          "label": "video views"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Fort Lauderdale Improv",
+        "lat": 26.0529,
+        "lon": -80.1613,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 260,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Late-night goes to Good Night John Boy at 270 SE Sixth Avenue in Fort Lauderdale. It opened Friday, November sixth, with 1970s decor, nightly DJs, dancing, and Disco Punch served in a take-home disco cup.",
+      "caption": "Late-night goes to Good Night John Boy at 270 SE Sixth Ave. in Fort Lauderdale. It opened Friday, Nov. 6, with 1970s decor, nightly DJs, dancing, and Disco Punch served in a take-home disco cup.",
+      "overlay": "JOHN BOY",
+      "badge": "OPENED NOV 6",
+      "sub": "270 SE 6th Ave.",
+      "emoji": "🪩",
+      "stats": [
+        {
+          "value": "NOV 6",
+          "label": "opened"
+        },
+        {
+          "value": "270",
+          "label": "SE 6th Ave"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Good Night John Boy Fort Lauderdale",
+        "lat": 26.119,
+        "lon": -80.1395,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -31,
+        "heading": 115,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you doing, and what should we cover next? That same night-out haze is why NEAR matters, turning the faces you passed in line or on the dance floor into names you actually know.",
+      "overlay": "WHAT'S THE MOVE? 🎟️",
+      "sub": "Drop the next plan",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.14111111,
+        "lon": -80.14444444,
+        "h": 60
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 300
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "167-south-florida-going-out-guide-cheapest-f"
+}
