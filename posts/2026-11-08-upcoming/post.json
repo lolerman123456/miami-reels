@@ -1,0 +1,137 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "WHERE",
+    "main": "SOUTH FLORIDA",
+    "highlight": "IS GOING OUT",
+    "bottom": "THIS WEEKEND",
+    "blur": false,
+    "photo": {
+      "query": "Miami Beach Bandshell night crowd dramatic lights",
+      "prompt": "A dramatic night crowd outside the Miami Beach Bandshell with bright stage lights, palm trees, and people heading into a show"
+    },
+    "emojis": [
+      "👀",
+      "🎟️",
+      "🌴"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Dolphins vs. Lions at Hard Rock Stadium",
+      "highlight": "Dolphins vs. Lions",
+      "body": "Sunday, Nov. 8 at 1 p.m. at Hard Rock Stadium in Miami Gardens. Get in for the Week 9 game between Miami and Detroit.",
+      "place": "Miami Gardens",
+      "source": "Miami Dolphins",
+      "photo": {
+        "query": "Hard Rock Stadium Miami Dolphins game day wide shot",
+        "prompt": "A wide, dramatic photo of Hard Rock Stadium on game day with the field lit and the crowd filling the seats"
+      },
+      "color": "#008E97",
+      "emoji": "🏈",
+      "chip": "NOV. 8",
+      "logo": "miamidolphins.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-1.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Rocky Dale Davis at Ft. Lauderdale Improv",
+      "highlight": "Rocky Dale Davis",
+      "body": "Sunday, Nov. 8 at 6 p.m. at Ft. Lauderdale Improv in Dania Beach. Tickets are $31.90 for the stand-up comic with more than 500 million video views.",
+      "place": "Dania Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "stand-up comedy microphone club stage spotlight",
+        "prompt": "A close-up of a stand-up microphone on a small comedy club stage with a warm spotlight and dark audience"
+      },
+      "emoji": "🎤",
+      "chip": "NOV. 8",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Fall for Dance Now! at Miami Beach Bandshell",
+      "highlight": "Fall for Dance Now!",
+      "body": "Sunday, Nov. 8 at 7 p.m. at Miami Beach Bandshell in Miami Beach. Tickets are $10 to $25 for Dance Now! Miami’s fall showcase.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Miami Beach Bandshell outdoor dance performance night",
+        "prompt": "A dramatic outdoor dance performance on the Miami Beach Bandshell stage at night with blue lighting and an audience"
+      },
+      "emoji": "💃",
+      "chip": "$10-$25",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Good Night John Boy opens in Fort Lauderdale",
+      "highlight": "Good Night John Boy",
+      "body": "Opened Friday, Nov. 6 at 270 SE Sixth Ave. in Fort Lauderdale. The 1970s-themed bar has disco ball cocktails, DJs, and a dance floor.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "1970s disco bar Fort Lauderdale interior nightlife",
+        "prompt": "A bold interior shot of a 1970s-style disco bar with a mirrored ball, neon lighting, retro wallpaper, and people at the bar"
+      },
+      "emoji": "🪩",
+      "chip": "OPEN NOW",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Anako in Little River",
+      "highlight": "Anako",
+      "body": "Opened Oct. 22 at 8222 NE Second Ave. in Miami. The Filipino restaurant serves pork-and-shrimp lumpia, kinilaw crudo, and oxtail kare-kare.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Filipino restaurant dishes warm wood interior",
+        "prompt": "A moody restaurant table with Filipino dishes, warm natural wood, terracotta tones, and dramatic lighting"
+      },
+      "emoji": "🥟",
+      "chip": "OPEN NOW",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Pastis West Palm Beach at The Nora Hotel",
+      "highlight": "Pastis",
+      "body": "Opened in October at 1115 N. Railroad Ave. in West Palm Beach, inside The Nora Hotel. The menu runs through French brasserie dishes for lunch and dinner.",
+      "place": "West Palm Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "French brasserie West Palm Beach white tablecloths evening",
+        "prompt": "A polished French brasserie dining room with white tablecloths, wine glasses, and warm evening lighting"
+      },
+      "emoji": "🍽️",
+      "chip": "OPEN NOW",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "South Florida has plans already. Tag a friend and tell them who you’re taking.",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [
+    "miamidolphins"
+  ],
+  "igCaption": "South Florida has plans already. Tag a friend and tell them who you’re taking.\n\n📰 Sources: Miami Dolphins, Miami New Times\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-11-08",
+  "id": "2026-11-08-upcoming"
+}
