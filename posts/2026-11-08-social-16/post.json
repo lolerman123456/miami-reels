@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "WHAT YOUR",
+    "main": "CLUB ORDER",
+    "highlight": "SAYS",
+    "bottom": "ABOUT YOU",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "four stylish friends at a packed South Beach club table, one holding fries, one holding sparkling water with lime, one holding a phone with NEAR open, blue club lights and bottle sparklers in the background"
+    },
+    "emojis": [
+      "🍟",
+      "👀",
+      "🪩"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Order Fries Before Midnight",
+      "highlight": "Fries Before Midnight",
+      "body": "You know the South Beach timeline.\nFeed the table before everyone gets dramatic.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a woman in a black mini dress proudly carrying a huge basket of fries through a packed South Beach club booth area, friends cheering, neon blue lights, sparklers behind her"
+      },
+      "emoji": "🍟",
+      "chip": "ORDER #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Ask For Sparkling Water With Lime",
+      "highlight": "Sparkling Water",
+      "body": "Hydrated, booked, unbothered.\nBrickell rooftop behavior with a view.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a stylish guy at a Brickell rooftop bar holding a sparkling water with lime like a cocktail, Miami skyline glowing behind him, friends laughing around a high top table"
+      },
+      "emoji": "💧",
+      "chip": "ORDER #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Get Espresso Before Wynwood",
+      "highlight": "Espresso Before Wynwood",
+      "body": "You came prepared.\nThat second bar was never a question.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "two friends at a Wynwood bar patio ordering tiny espresso cups at a crowded counter before heading to a warehouse party, colorful murals, warm string lights, late night Miami street scene"
+      },
+      "emoji": "☕",
+      "chip": "ORDER #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Order The Round For The Photo",
+      "highlight": "For The Photo",
+      "body": "The tray lands and suddenly everyone remembers angles.\nIconic service, honestly.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a group of friends in a Wynwood lounge leaning in as a server places a tray of colorful mocktails and cocktails on the table, everyone raising phones for photos, pink and blue party lighting"
+      },
+      "emoji": "📸",
+      "chip": "ORDER #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Ask What Everyone Wants First",
+      "highlight": "Everyone Wants First",
+      "body": "Group chat captain in heels.\nYou keep the night moving without a speech.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a confident woman at a crowded Brickell rooftop bar holding her phone and asking her friends for orders, skyline lights behind her, bartender waiting, lively Saturday night atmosphere"
+      },
+      "emoji": "👑",
+      "chip": "ORDER #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend whose club order tells the whole story 👀",
+  "hashtags": [
+    "MiamiNightlife",
+    "BrickellRooftop"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend whose club order tells the whole story 👀\n\n#MiamiNightlife #BrickellRooftop #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-08",
+  "id": "2026-11-08-social-16"
+}
