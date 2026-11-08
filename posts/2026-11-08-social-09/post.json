@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "TYPES OF",
+    "main": "PEOPLE YOU SEE",
+    "highlight": "DAY PARTY",
+    "bottom": "IN MIAMI",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "a crowded Miami day party on a sunny rooftop pool deck in Brickell, four stylish friends laughing around a cabana, inflatable flamingo in pool, DJ booth in the back, golden afternoon light, skyline behind them"
+    },
+    "emojis": [
+      "☀️",
+      "🍹",
+      "🕶️"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The 1pm Sunglasses Celebrity",
+      "highlight": "Sunglasses Celebrity",
+      "body": "Shows up to the Wynwood patio like paparazzi is outside.\nRefuses shade. Looks correct.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a stylish woman in oversized sunglasses walking into a packed Wynwood outdoor patio party at 1pm, friends cheering from a high-top table, bright Miami sun, colorful murals, DJ lights still visible in daylight"
+      },
+      "emoji": "🕶️",
+      "chip": "TYPE #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The Cabana Reservation Mayor",
+      "highlight": "Cabana Reservation",
+      "body": "Knows the wristband color, the server’s name, and where everyone left their tote.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a confident guy standing beside a poolside cabana at a Miami Beach day club, holding a reservation clipboard phone screen, friends lounging with towels and iced drinks, turquoise pool, palm shadows, bright afternoon light"
+      },
+      "emoji": "🏖️",
+      "chip": "TYPE #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The Pool Pic Creative Director",
+      "highlight": "Pic Creative Director",
+      "body": "Moves one chair, tilts one glass, fixes one curl.\nNow it’s a campaign.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a friend crouching dramatically to take the perfect pool photo of two friends posing at a Miami rooftop pool party, lounge chairs being rearranged, skyline and blue water behind them, crisp sunny light"
+      },
+      "emoji": "📸",
+      "chip": "TYPE #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The Sunset Second Spot Scout",
+      "highlight": "Second Spot Scout",
+      "body": "At 6:47, they already found the Brickell rooftop with room for eight.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a group of friends at a Miami day party checking a phone together as the sun sets, one friend pointing toward Brickell skyline, pool deck clearing out, orange pink sky, party lights turning on"
+      },
+      "emoji": "🌇",
+      "chip": "TYPE #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The Monday Beach Planner",
+      "highlight": "Beach Planner",
+      "body": "Still at the day party, already saying South Pointe tomorrow fixes everything.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "three friends laughing at a Miami Beach day party table covered with sunglasses and beach bags, one friend showing a South Pointe Park plan on their phone, late afternoon glow, palm trees and ocean hint in background"
+      },
+      "emoji": "🌊",
+      "chip": "TYPE #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who becomes a different person at a Miami day party ☀️",
+  "hashtags": [
+    "MiamiDayParty",
+    "BrickellRooftop"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who becomes a different person at a Miami day party ☀️\n\n#MiamiDayParty #BrickellRooftop #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-08",
+  "id": "2026-11-08-social-09"
+}
