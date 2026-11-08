@@ -1,0 +1,191 @@
+{
+  "title": "South Florida nightlife picks for this weekend",
+  "sources": [
+    "Resident Advisor",
+    "Ticketmaster"
+  ],
+  "collaborators": [],
+  "igCaption": "Four nightlife picks for this weekend.\nNov. 7 to Nov. 8, Miami and Hollywood, prices vary\n\nSources: Resident Advisor, Ticketmaster\n\n#MiamiNightlife #SouthFlorida #ThingsToDoMiami #WeekendGuide",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a weekend night out without repeating the same spots? These South Florida events are still on the board.",
+      "overlay": [
+        "WEEKEND",
+        "NIGHT OUT"
+      ],
+      "emojis": [
+        "🌙",
+        "🎟️",
+        "🎧",
+        "📍"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7847,
+        "lon": -80.1935,
+        "h": 100
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start at Floyd. Resident Advisor lists Escape Room’s 1 Year Anniversary there on Friday, November 7. Floyd gives you an easy first stop for a club night in Miami.",
+      "caption": "Start at Floyd. Resident Advisor lists Escape Room’s 1 Year Anniversary there on Friday, Nov. 7. Floyd gives you an easy first stop for a club night in Miami.",
+      "overlay": "FLOYD",
+      "badge": "1 YEAR",
+      "sub": "Friday Miami stop",
+      "emoji": "🎛️",
+      "stats": [
+        {
+          "value": "1 YEAR",
+          "label": "anniversary"
+        },
+        {
+          "value": "NOV 7",
+          "label": "listed date"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "Floyd Miami",
+        "lat": 25.7851,
+        "lon": -80.1933,
+        "h": 90
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 245,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Edge Miami has Technasia, Kike Moreno, Nathalia Palacio, and Do-Han listed by Resident Advisor. That is four names on one bill.",
+      "caption": "Edge Miami has Technasia, Kike Moreno, Nathalia Palacio, and Do-Han listed by Resident Advisor. That is 4 names on one bill.",
+      "overlay": "EDGE MIAMI",
+      "badge": "4 ARTISTS",
+      "sub": "Technasia listed",
+      "emoji": "🔊",
+      "stats": [
+        {
+          "value": "4",
+          "label": "artists listed"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "Edge Miami",
+        "lat": 25.7915,
+        "lon": -80.1946,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -33,
+        "heading": 120,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Aire Miami is another one to check. Resident Advisor lists Lerso, Marie Posa, Neovibe, and more. That keeps you in Miami for another option this weekend. If you end up at Aire Miami, open NEAR and see who’s there.",
+      "caption": "Aire Miami is another one to check. Resident Advisor lists Lerso, Marie Posa, Neovibe, and more. That keeps you in Miami for another option this weekend. If you end up at Aire Miami, open NEAR and see who’s there.",
+      "overlay": "AIRE MIAMI",
+      "badge": "3 NAMES",
+      "sub": "Lerso, Marie Posa",
+      "emoji": "🌬️",
+      "stats": [
+        {
+          "value": "3",
+          "label": "named artists"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "Aire Miami",
+        "lat": 25.7898,
+        "lon": -80.1941,
+        "h": 90
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 40,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a bigger concert night, Ticketmaster lists RUSH: Fifty Something for Saturday, November 7 in Hollywood. That gives Broward people a weekend option outside Miami.",
+      "caption": "For a bigger concert night, Ticketmaster lists RUSH: Fifty Something for Saturday, Nov. 7 in Hollywood. That gives Broward people a weekend option outside Miami.",
+      "overlay": "HOLLYWOOD",
+      "badge": "NOV 7",
+      "sub": "RUSH listed",
+      "emoji": "🎸",
+      "stats": [
+        {
+          "value": "NOV 7",
+          "label": "event date"
+        },
+        {
+          "value": "2026",
+          "label": "show year"
+        }
+      ],
+      "source": "Ticketmaster",
+      "location": {
+        "name": "Hollywood, Florida",
+        "lat": 26.0112,
+        "lon": -80.1495,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 310,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you actually go to this weekend? Half the people you pass on a night out stay strangers, and NEAR is the app that shows you who they were after the music cuts off.",
+      "overlay": "PICK ONE 🎟️",
+      "sub": "Drop the move",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7847,
+        "lon": -80.1935,
+        "h": 100
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2200,
+        "pitch": -32,
+        "heading": 200
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "164-south-florida-nightlife-picks-for-this-w"
+}
