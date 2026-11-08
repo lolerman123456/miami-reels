@@ -1,0 +1,187 @@
+{
+  "title": "South Florida nightlife this week",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Start with dinner, then pick the neighborhood.\n\nSources: Miami New Times, Secret Miami\n\n#MiamiNightlife #SouthFlorida #Brickell #LittleRiver",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Want a night out this week without a long commute between stops?",
+      "overlay": [
+        "NIGHT OUT",
+        "THIS WEEK"
+      ],
+      "emojis": [
+        "🍸",
+        "🍽️",
+        "🌙",
+        "📍"
+      ],
+      "location": {
+        "name": "LPM Restaurant & Bar",
+        "lat": 25.7656,
+        "lon": -80.1918,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start in Brickell at LPM Restaurant and Bar. It just finished a $3 million transformation with an expanded patio, a dedicated patio entrance, and a new cocktail program called Déjà Vu.",
+      "caption": "Start in Brickell at LPM Restaurant & Bar. It just finished a $3 million transformation with an expanded patio, a dedicated patio entrance, and a new cocktail program called Déjà Vu.",
+      "overlay": "LPM BRICKELL",
+      "badge": "$3M REDO",
+      "sub": "New patio and cocktails",
+      "emoji": "🍸",
+      "stats": [
+        {
+          "value": "$3M",
+          "label": "Transformation"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "LPM Restaurant & Bar",
+        "lat": 25.7656,
+        "lon": -80.1918,
+        "h": 90
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 40,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Next is Anako in Little River. It opened October 22 at 8222 NE Second Avenue, from chefs Leicel Ros and Nancy Dominguez, the couple behind Sili at 1-800-Lucky.",
+      "caption": "Next is Anako in Little River. It opened Oct. 22 at 8222 NE 2nd Ave., from chefs Leicel Ros and Nancy Dominguez, the couple behind Sili at 1-800-Lucky.",
+      "overlay": "ANAKO",
+      "badge": "OPENED OCT 22",
+      "sub": "Modern Filipino spot",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "OCT 22",
+          "label": "Opening date"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Anako",
+        "lat": 25.8493,
+        "lon": -80.1924,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 118,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The opening menu goes deeper than snacks. Anako serves pork and whole Gulf shrimp lumpia, kinilaw crudo with Japanese hiramasa, chicken inasal, sisig, and kare-kare with slow-braised oxtail. If you're at Anako, check NEAR and see who else came for sisig.",
+      "caption": "The opening menu goes deeper than snacks. Anako serves pork and whole Gulf shrimp lumpia, kinilaw crudo with Japanese hiramasa, chicken inasal, sisig, and kare-kare with slow-braised oxtail. If you're at Anako, check NEAR and see who else came for sisig.",
+      "overlay": "LITTLE RIVER",
+      "badge": "8222 NE 2ND",
+      "sub": "Dinner plan, no ticket",
+      "emoji": "🥢",
+      "stats": [
+        {
+          "value": "8222",
+          "label": "NE 2nd Ave."
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Anako",
+        "lat": 25.8493,
+        "lon": -80.1924,
+        "h": 18
+      },
+      "shot": {
+        "type": "push",
+        "range": 650,
+        "pitch": -28,
+        "heading": 210,
+        "degrees": 50,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a farther dinner plan, Pastis opened in West Palm Beach this October. It sits on the ground floor of the 201-room Nora Hotel, and this is the restaurant’s fifth location.",
+      "caption": "For a farther dinner plan, Pastis opened in West Palm Beach this October. It sits on the ground floor of the 201-room Nora Hotel, and this is the restaurant’s fifth location.",
+      "overlay": "PASTIS WPB",
+      "badge": "5TH LOCATION",
+      "sub": "At The Nora Hotel",
+      "emoji": "🥂",
+      "stats": [
+        {
+          "value": "201",
+          "label": "Hotel rooms"
+        },
+        {
+          "value": "5TH",
+          "label": "Location"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Pastis West Palm Beach",
+        "lat": 26.7134,
+        "lon": -80.0534,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 75,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you actually do this week? A night out is full of faces you notice and never meet, and NEAR is what turns that missed connection into a name.",
+      "overlay": "PICK ONE 🌙",
+      "sub": "Comments decide the plan",
+      "location": {
+        "name": "Brickell",
+        "lat": 25.7656,
+        "lon": -80.1918,
+        "h": 90
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -34,
+        "heading": 155
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "165-south-florida-nightlife-this-week"
+}
