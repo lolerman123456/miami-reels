@@ -1,0 +1,196 @@
+{
+  "title": "South Florida Nightlife This Week",
+  "sources": [
+    "Resident Advisor",
+    "Eventbrite",
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Club nights first, holiday plans later. Nov 7 in Miami.\n\nSources: Resident Advisor, Eventbrite, Miami New Times\n\n#MiamiNightlife #SouthFlorida #MiamiEvents #ThisWeek",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a South Florida nightlife plan this week without repeating the same five places everyone already posted?",
+      "overlay": [
+        "NIGHTLIFE",
+        "THIS WEEK"
+      ],
+      "emojis": [
+        "🎧",
+        "🍸",
+        "🌴",
+        "📍"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "First, EZ Dee All Nite is listed for Thursday, November fifth, at The Corner in Miami.",
+      "caption": "First, EZ Dee All Nite is listed for Thu, Nov 5, at The Corner in Miami.",
+      "overlay": "THE CORNER",
+      "badge": "NOV 5",
+      "sub": "EZ Dee All Nite",
+      "emoji": "🎚️",
+      "stats": [
+        {
+          "value": "NOV 5",
+          "label": "event date"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "The Corner",
+        "lat": 25.7844,
+        "lon": -80.1938,
+        "h": 25
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 700,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Next, Technasia, Kike Moreno, Nathalia Palacio and Do-Han are listed at Edge Miami on Tuesday, November third.",
+      "caption": "Next, Technasia, Kike Moreno, Nathalia Palacio and Do-Han are listed at Edge Miami on Tue, Nov 3.",
+      "overlay": "EDGE MIAMI",
+      "badge": "4 ACTS",
+      "sub": "Technasia on the bill",
+      "emoji": "🔊",
+      "stats": [
+        {
+          "value": "4",
+          "label": "listed acts"
+        },
+        {
+          "value": "NOV 3",
+          "label": "event date"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "Edge Miami",
+        "lat": 25.7992,
+        "lon": -80.1989,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -34,
+        "heading": 55,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "TraTraTrax Nonstop lands on Saturday, November seventh. Resident Advisor lists Verraco, Pariah, PLO Man, BADSISTA, Gabrielle Kwarteng, Nick León and more. If you’re at TraTraTrax, check NEAR to see who else showed up.",
+      "caption": "TraTraTrax Nonstop lands on Sat, Nov 7. Resident Advisor lists Verraco, Pariah, PLO Man, BADSISTA, Gabrielle Kwarteng, Nick León and more. If you’re at TraTraTrax, check NEAR to see who else showed up.",
+      "overlay": "TRATRATRAX",
+      "badge": "NOV 7",
+      "sub": "Nonstop Miami listing",
+      "emoji": "🪩",
+      "stats": [
+        {
+          "value": "6+",
+          "label": "listed acts"
+        },
+        {
+          "value": "NOV 7",
+          "label": "event date"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 315,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The W Hotel Miami New Year’s Eve party is listed for Wednesday, December thirty-first, 2025, from nine p.m. to one a.m.",
+      "caption": "The W Hotel Miami New Year’s Eve party is listed for Wed, Dec 31, 2025, from 9 PM to 1 AM.",
+      "overlay": "W MIAMI",
+      "badge": "9 PM-1 AM",
+      "sub": "New Year’s Eve listing",
+      "emoji": "🥂",
+      "stats": [
+        {
+          "value": "4 HRS",
+          "label": "party window"
+        },
+        {
+          "value": "DEC 31",
+          "label": "event date"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "W Miami",
+        "lat": 25.7706,
+        "lon": -80.1897,
+        "h": 100
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 120,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you actually go to this week? Which one would you actually go to this week, and if you kept passing the same person all night without talking, NEAR is what would tell you who they were.",
+      "overlay": "PICK ONE 🎧",
+      "sub": "Drop the move",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 90
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "168-south-florida-nightlife-this-week"
+}
