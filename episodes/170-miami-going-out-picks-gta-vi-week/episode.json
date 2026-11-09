@@ -1,0 +1,233 @@
+{
+  "title": "Miami Going-Out Picks, GTA VI Week",
+  "sources": [
+    "Secret Miami",
+    "Miami New Times"
+  ],
+  "collaborators": [
+    "iiipoints"
+  ],
+  "igCaption": "GTA VI week starts in Wynwood, and @iiipoints is in the mix.\nNov. 10 to 21, Miami and Fort Lauderdale, $0 to $298\n\nSources: Secret Miami, Miami New Times\n\n#MiamiEvents #MiamiNightlife #SouthFlorida #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "The official Grand Theft Auto VI festival is landing in Wynwood this month.",
+      "overlay": [
+        "GTA VI",
+        "IN WYNWOOD"
+      ],
+      "emojis": [
+        "🎮",
+        "🎤",
+        "🌴",
+        "🎧"
+      ],
+      "location": {
+        "name": "Mana Wynwood",
+        "lat": 25.7994,
+        "lon": -80.2006,
+        "h": 25
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Grand Theft Auto VI: The Festival takes over Mana Wynwood on Saturday, Nov. 21. Rockstar and PlayStation announced two stages, produced by the team behind III Points. Travis Scott, Cardi B, Metro Boomin, Tainy, Rauw Alejandro and Justice are on the bill.",
+      "caption": "Grand Theft Auto VI: The Festival takes over Mana Wynwood on Saturday, Nov. 21. Rockstar and PlayStation announced 2 stages, produced by the team behind III Points. Travis Scott, Cardi B, Metro Boomin, Tainy, Rauw Alejandro and Justice are on the bill.",
+      "overlay": "MANA WYNWOOD",
+      "badge": "NOV. 21",
+      "sub": "Two stages in Wynwood",
+      "emoji": "🎮",
+      "stats": [
+        {
+          "value": "2",
+          "label": "stages"
+        },
+        {
+          "value": "NOV. 21",
+          "label": "festival date"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Mana Wynwood",
+        "lat": 25.7994,
+        "lon": -80.2006,
+        "h": 25
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 850,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Fans must enter the lottery by Tuesday, Nov. 10 at 4 p.m. Selected entries get an SMS code by 7 p.m., then the sale opens Wednesday at noon. The event is 17 and older.",
+      "caption": "Fans must enter the lottery by Tuesday, Nov. 10 at 4 p.m. Selected entries get an SMS code by 7 p.m., then the sale opens Wednesday at noon. The event is 17 and older.",
+      "overlay": "TICKET LOTTERY",
+      "badge": "4 PM DEADLINE",
+      "sub": "Code does not guarantee entry",
+      "emoji": "📲",
+      "stats": [
+        {
+          "value": "4 PM",
+          "label": "entry deadline"
+        },
+        {
+          "value": "17+",
+          "label": "age rule"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Mana Wynwood",
+        "lat": 25.7994,
+        "lon": -80.2006,
+        "h": 25
+      },
+      "shot": {
+        "type": "push",
+        "range": 700,
+        "pitch": -30,
+        "heading": 35
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Doja Cat brings the Ma Vie World Tour to Kaseya Center on Wednesday, Nov. 11. Latto is the special guest. The show starts at 7:30 p.m., and tickets list from $39 to $159. If you’re there, check NEAR later and see who else was at Kaseya.",
+      "caption": "Doja Cat brings the Ma Vie World Tour to Kaseya Center on Wednesday, Nov. 11. Latto is the special guest. The show starts at 7:30 p.m., and tickets list from $39 to $159. If you’re there, check NEAR later and see who else was at Kaseya.",
+      "overlay": "KASEYA CENTER",
+      "badge": "$39-$159",
+      "sub": "Doja Cat and Latto",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "$39",
+          "label": "low ticket"
+        },
+        {
+          "value": "$159",
+          "label": "high ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.7814,
+        "lon": -80.187,
+        "h": 70
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 248,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Emo Orchestra plays Revolution Live in Fort Lauderdale on Tuesday, Nov. 10. The Spill Canvas joins a full orchestra for songs by Taking Back Sunday, Fall Out Boy, A Day to Remember and The Used. The show starts at 6 p.m. Tickets cost $44.",
+      "caption": "Emo Orchestra plays Revolution Live in Fort Lauderdale on Tuesday, Nov. 10. The Spill Canvas joins a full orchestra for songs by Taking Back Sunday, Fall Out Boy, A Day to Remember and The Used. The show starts at 6 p.m. Tickets cost $44.",
+      "overlay": "REVOLUTION LIVE",
+      "badge": "$44",
+      "sub": "Full orchestra, emo catalog",
+      "emoji": "🎻",
+      "stats": [
+        {
+          "value": "$44",
+          "label": "ticket price"
+        },
+        {
+          "value": "6 PM",
+          "label": "start time"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Revolution Live",
+        "lat": 26.1219,
+        "lon": -80.1465,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Common joins Nu Deco Ensemble at the Adrienne Arsht Center at 8 p.m., with tickets from $70 to $298. NightGarden opens at Fairchild from 6 to 10 p.m., with real ice-skating under the palms.",
+      "caption": "Common joins Nu Deco Ensemble at the Adrienne Arsht Center at 8 p.m., with tickets from $70 to $298. NightGarden opens at Fairchild from 6 to 10 p.m., with real ice-skating under the palms.",
+      "overlay": "THURSDAY PICKS",
+      "badge": "$70-$298",
+      "sub": "Arsht Center and Fairchild",
+      "emoji": "🌙",
+      "stats": [
+        {
+          "value": "$70",
+          "label": "low ticket"
+        },
+        {
+          "value": "6-10 PM",
+          "label": "NightGarden"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Adrienne Arsht Center",
+        "lat": 25.7877,
+        "lon": -80.1898,
+        "h": 65
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -34,
+        "heading": 310,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you actually go to this week? Miami nights are full of people you notice in passing but never meet, and NEAR is the part that tells you who that person across the room actually was.",
+      "overlay": "WHAT'S YOUR PICK? 🎟️",
+      "sub": "Tell us where you are going",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.784,
+        "lon": -80.1937,
+        "h": 90
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 25
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "170-miami-going-out-picks-gta-vi-week"
+}
