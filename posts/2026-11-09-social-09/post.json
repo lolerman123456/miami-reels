@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "THE 5 STAGES OF",
+    "main": "A MIAMI NIGHT",
+    "highlight": "THAT STARTS",
+    "bottom": "WAY TOO CONFIDENT",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "five friends in glossy going-out outfits hyping each other up outside a Brickell condo lobby at 10:48pm, one holding heels, one checking NEAR on their phone, city lights and valet line glowing behind them"
+    },
+    "emojis": [
+      "🌴",
+      "🪩",
+      "✨"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Say One Spot In Brickell",
+      "highlight": "One Spot",
+      "body": "Then someone sees a rooftop packed on NEAR and suddenly your night has a route.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a group of four friends outside a Brickell rooftop entrance, one friend pointing at a phone with NEAR open while warm elevator lights and skyline reflections hit their outfits"
+      },
+      "emoji": "📍",
+      "chip": "STAGE 1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Pretend Wynwood Is Nearby",
+      "highlight": "Wynwood Is Nearby",
+      "body": "Everyone says 12 minutes like Biscayne isn’t doing side quests.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "three friends laughing in the back seat of a rideshare headed toward Wynwood, neon murals visible through the window, phone map glowing with traffic and a new destination"
+      },
+      "emoji": "🚗",
+      "chip": "STAGE 2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Find The Bathroom Lighting",
+      "highlight": "Bathroom Lighting",
+      "body": "The group chat gets 14 photos before anyone remembers the DJ exists.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "two women and two men taking mirror photos in a stylish Miami club bathroom with gold lighting, tiny purses on the counter, blurry dance floor lights outside the door"
+      },
+      "emoji": "📸",
+      "chip": "STAGE 3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Act Calm Near The Sparklers",
+      "highlight": "Near The Sparklers",
+      "body": "You were walking to the bar. Now you’re accidentally in a music video.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a woman in a black mini dress and her friends dancing beside bottle service sparklers at a packed South Beach club, blue and pink lights cutting through the room"
+      },
+      "emoji": "✨",
+      "chip": "STAGE 4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Debate Breakfast At 3:17",
+      "highlight": "Breakfast At 3:17",
+      "body": "South Beach, Brickell, or a ventanita. Somehow everyone has a speech prepared.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "five friends outside a late night Miami ventanita at 3:17am, one holding cafecito, one checking NEAR, streetlights glowing on Ocean Drive style palm trees in the background"
+      },
+      "emoji": "☕",
+      "chip": "STAGE 5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who turns one spot into a full Miami itinerary 🪩",
+  "hashtags": [
+    "MiamiNightOut",
+    "BrickellNightlife"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who turns one spot into a full Miami itinerary 🪩\n\n#MiamiNightOut #BrickellNightlife #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-09",
+  "id": "2026-11-09-social-09"
+}
