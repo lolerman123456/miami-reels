@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "YOUR MIAMI",
+    "main": "NIGHT OUT HAS",
+    "highlight": "5 STAGES",
+    "bottom": "WHEN SUNDAY IS TOMORROW",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "five stylish friends laughing outside a neon lit Wynwood bar at 1:47am, one holding a phone with a rideshare map, another fixing sunglasses for no reason, wet pavement glowing pink and blue"
+    },
+    "emojis": [
+      "🌴",
+      "🪩",
+      "📍"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Say Dinner Will Be Chill",
+      "highlight": "Dinner Will",
+      "body": "Coconut Grove at 8 turns into everyone checking NEAR before the apps land.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "four friends at an outdoor Coconut Grove dinner table under string lights, menus open, one person secretly checking a party app on their phone, candles and palm shadows everywhere"
+      },
+      "emoji": "🍝",
+      "chip": "STAGE 1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Pick Wynwood For One Stop",
+      "highlight": "One Stop",
+      "body": "One bar becomes three because the sidewalk is somehow the pregame now.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a group of friends walking past a colorful Wynwood mural outside packed bars, one pointing down the block, neon signs reflecting on the sidewalk, late night crowd behind them"
+      },
+      "emoji": "🎨",
+      "chip": "STAGE 2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Spot Your Friend Across The Room",
+      "highlight": "Across The Room",
+      "body": "No text. Just eye contact from the Brickell rooftop and the whole group starts moving.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a packed Brickell rooftop party with skyline views, two friends locking eyes across the crowd and laughing, the rest of the group starting to weave through people, warm city lights"
+      },
+      "emoji": "👀",
+      "chip": "STAGE 3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Treat The Club Bathroom Like HQ",
+      "highlight": "Bathroom Like HQ",
+      "body": "Phone charging, lip gloss passing, South Beach strategy meeting in the mirror.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "three friends in a glamorous South Beach club bathroom mirror, one charging a phone, one applying lip gloss, one pointing at a phone like planning the next move, bright vanity lights"
+      },
+      "emoji": "💄",
+      "chip": "STAGE 4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Wake Up Planning The Beach",
+      "highlight": "Planning The Beach",
+      "body": "Sunday morning, one eye open, somehow asking who has towels and cafecito.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a sunny Miami Beach apartment morning after a night out, friends in casual clothes on a couch with sunglasses and iced coffees, one holding beach towels, bright ocean light through the window"
+      },
+      "emoji": "🏖️",
+      "chip": "STAGE 5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who turns one chill dinner into a full Miami itinerary 🪩",
+  "hashtags": [
+    "MiamiNightOut",
+    "WynwoodBars"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who turns one chill dinner into a full Miami itinerary 🪩\n\n#MiamiNightOut #WynwoodBars #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-08",
+  "id": "2026-11-08-social-20"
+}
