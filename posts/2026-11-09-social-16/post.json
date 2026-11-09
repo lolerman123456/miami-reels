@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "SIGNS",
+    "main": "YOU'RE THE FRIEND",
+    "highlight": "WHO SAYS",
+    "bottom": "ONE MORE ROUND IN MIAMI",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "four stylish friends laughing at a Brickell rooftop table at midnight, one woman holding up one finger to ask for one more round, skyline lights behind them, blue neon glow, candid party flash"
+    },
+    "emojis": [
+      "🥂",
+      "🌃",
+      "👀"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Check NEAR Before The Group Leaves",
+      "highlight": "Check NEAR",
+      "body": "Brickell was “done” 30 seconds ago.\nNow you found half the room heading to Wynwood.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a guy in a black button down checking the NEAR app on his phone while friends hover around him outside a Brickell rooftop elevator, city lights, excited midnight chaos"
+      },
+      "emoji": "📍",
+      "chip": "SIGN #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Call One More Song At The DJ Booth",
+      "highlight": "One More Song",
+      "body": "The Uber is outside.\nThen the DJ drops the song and suddenly nobody has legs.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a woman in a blue dress pointing toward the DJ booth at a packed South Beach club while her friends turn back from the exit, colorful lasers, crowded dance floor, 1:45am flash photo"
+      },
+      "emoji": "🎧",
+      "chip": "SIGN #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Turn A Wynwood Line Into Plans",
+      "highlight": "Wynwood Line",
+      "body": "Ten people deep at the door.\nYou already picked the backup bar and the after-after.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "three friends standing in a lively Wynwood bar line under mural-covered walls, one friend confidently showing a map on her phone, string lights, bouncer at the door, late night street scene"
+      },
+      "emoji": "🚪",
+      "chip": "SIGN #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Say South Beach Is Basically Close",
+      "highlight": "Basically Close",
+      "body": "From Brickell, this sentence is a lifestyle choice.\nSomehow everyone still gets in.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a group of friends piling into a rideshare outside a Brickell tower, one friend laughing with the South Beach destination open on her phone, palm trees, headlights, 2am Miami street glow"
+      },
+      "emoji": "🚗",
+      "chip": "SIGN #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You End The Night With A Beach Plan",
+      "highlight": "Beach Plan",
+      "body": "It’s 3:26am and you’re assigning sunscreen.\nSomehow brunch became sunrise.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "four friends at a Miami ventanita after a night out, holding coffee cups and laughing while one friend types a beach plan into the group chat, soft early morning light, neon cafe sign"
+      },
+      "emoji": "🌅",
+      "chip": "SIGN #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who says one more round and somehow plans tomorrow too 👀",
+  "hashtags": [
+    "MiamiNightlife",
+    "BrickellNights"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who says one more round and somehow plans tomorrow too 👀\n\n#MiamiNightlife #BrickellNights #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-09",
+  "id": "2026-11-09-social-16"
+}
