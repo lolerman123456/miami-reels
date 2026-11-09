@@ -1,0 +1,153 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "EVERY BIG EVENT",
+    "highlight": "THIS WEEK",
+    "bottom": "IN SOUTH FLORIDA",
+    "blur": false,
+    "photo": {
+      "query": "South Florida event crowd concert lights venue exterior",
+      "prompt": "dramatic South Florida nightlife scene with bright stage lights, a crowd, and a venue entrance at night"
+    },
+    "emojis": [
+      "🎤",
+      "🎻",
+      "🌴",
+      "🎬"
+    ],
+    "logos": [
+      "kaseyacenter.com",
+      "arshtcenter.org",
+      "fairchildgarden.org",
+      "miamishortfilmfestival.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c1.png",
+      "logo-c3.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Viva Salsa Mondays at Elia, Nov. 9",
+      "highlight": "Viva Salsa Mondays",
+      "body": "Monday, Nov. 9 at 7 p.m. Elia on the River, Miami. Free with RSVP. Eleonor and her band play live salsa and Latin beats on the Miami River.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "salsa band dancing crowd Miami River restaurant night",
+        "prompt": "live salsa band playing beside the Miami River with couples dancing and warm restaurant lights"
+      },
+      "emoji": "💃",
+      "chip": "FREE",
+      "logo": "eliaontheriver.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Emo Orchestra in Fort Lauderdale, Nov. 10",
+      "highlight": "Emo Orchestra",
+      "body": "Tuesday, Nov. 10 at 6 p.m. Revolution Live, Fort Lauderdale. Tickets are $44. The full orchestra joins songs by Taking Back Sunday, Fall Out Boy, A Day to Remember, and The Used.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Revolution Live Fort Lauderdale orchestra rock show crowd",
+        "prompt": "rock show at Revolution Live with a full orchestra, bright stage lights, and a packed standing crowd"
+      },
+      "emoji": "🎻",
+      "chip": "$44",
+      "logo": "jointherevolution.net",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Doja Cat at Kaseya Center, Nov. 11",
+      "highlight": "Doja Cat",
+      "body": "Wednesday, Nov. 11 at 7:30 p.m. Kaseya Center, Miami. Tickets are $39 to $159. Doja Cat brings the Ma Vie World Tour with Latto as special guest.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Doja Cat arena concert red lighting crowd",
+        "prompt": "Doja Cat performing on a large arena stage with red lighting, dancers, and a packed crowd"
+      },
+      "emoji": "🎤",
+      "chip": "$39 TO $159",
+      "logo": "kaseyacenter.com",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Nu Deco Ensemble with Common, Nov. 12",
+      "highlight": "Nu Deco Ensemble",
+      "body": "Thursday, Nov. 12 at 8 p.m. Adrienne Arsht Center, Miami. Tickets are $70 to $298. Nu Deco Ensemble and Common rework his catalog with orchestral arrangements.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Adrienne Arsht Center orchestral hip hop performance",
+        "prompt": "orchestra and rapper onstage inside the Adrienne Arsht Center with cinematic lighting and a formal concert hall"
+      },
+      "emoji": "🎼",
+      "chip": "$70+",
+      "logo": "arshtcenter.org",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-4.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "NightGarden at Fairchild Tropical Botanic Garden, Nov. 12",
+      "highlight": "NightGarden",
+      "body": "Thursday, Nov. 12 from 6 to 10 p.m. Fairchild Tropical Botanic Garden, Coral Gables. Tickets are $32 to $35, and ice-skating tickets are $18 to $21. The season opens with light installations and skating under the palms.",
+      "place": "Coral Gables",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Fairchild Tropical Botanic Garden NightGarden lights ice rink",
+        "prompt": "palm trees glowing with colorful light installations at night with an ice rink and bright garden paths"
+      },
+      "emoji": "🌴",
+      "chip": "$32+",
+      "logo": "fairchildgarden.org",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Miami Short Film Festival opens, Nov. 13",
+      "highlight": "Miami Short Film Festival",
+      "body": "Friday, Nov. 13 at 8 p.m. O Cinema South Beach, Miami Beach. All-access passes are $100, and single-screening prices vary. The opening night program is “Echoes We Carry.”",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "O Cinema South Beach film festival marquee night",
+        "prompt": "art house theater marquee in Miami Beach at night with film festival posters and a crowd outside"
+      },
+      "emoji": "🎬",
+      "chip": "$100 PASS",
+      "logo": "miamishortfilmfestival.com",
+      "photoFile": "photo-6.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-6.png"
+    }
+  ],
+  "caption": "Your week just got planned. Who are you taking? Tag a friend.",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "Your week just got planned. Who are you taking? Tag a friend.\n\n📰 Sources: Miami New Times\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-11-09",
+  "id": "2026-11-09-upcoming"
+}
