@@ -1,0 +1,198 @@
+{
+  "title": "Miami Nightlife This Week, Weirdest First",
+  "sources": [
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Ice-skating under palms is on the nightlife calendar this week.\nNov. 9 to 13, Miami, free to $298\n\nSources: Miami New Times\n\n#MiamiEvents #MiamiNightlife #ThingsToDoMiami #SouthFloridaEvents",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Miami this week has real ice-skating under palm trees, salsa on the river, and Common with an orchestra.",
+      "overlay": [
+        "MIAMI THIS WEEK",
+        "WEIRDEST FIRST"
+      ],
+      "emojis": [
+        "🧊",
+        "🌴",
+        "🎻",
+        "💃"
+      ],
+      "location": {
+        "name": "Fairchild Tropical Botanic Garden",
+        "lat": 25.6766,
+        "lon": -80.2746,
+        "h": 18
+      },
+      "shot": {
+        "type": "dive",
+        "range": 900,
+        "pitch": -32,
+        "heading": 110
+      }
+    },
+    {
+      "kind": "item",
+      "text": "NightGarden opens Thursday at Fairchild Tropical Botanic Garden on Old Cutler Road. The new piece this season is real ice-skating under the palms. It runs from six to ten p.m., with light installations, a laser show at the Tree of Life, and Archimedes the talking tree.",
+      "caption": "NightGarden opens Thursday at Fairchild Tropical Botanic Garden on Old Cutler Road. The new piece this season is real ice-skating under the palms. It runs from 6 to 10 p.m., with light installations, a laser show at the Tree of Life, and Archimedes the talking tree.",
+      "overlay": "NIGHTGARDEN",
+      "badge": "$32 TO $35",
+      "sub": "Ice rink costs $18",
+      "emoji": "🧊",
+      "stats": [
+        {
+          "value": "$32-$35",
+          "label": "garden tickets"
+        },
+        {
+          "value": "$18",
+          "label": "ice-rink ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Fairchild Tropical Botanic Garden",
+        "lat": 25.6766,
+        "lon": -80.2746,
+        "h": 18
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 40,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Good Night John Boy opened Friday in Fort Lauderdale at 270 SE Sixth Avenue. The bar takes over the former Howl at the Moon space, with 1970s decor, nightly DJs, and Disco Punch served in a take-home disco cup.",
+      "caption": "Good Night John Boy opened Friday in Fort Lauderdale at 270 SE 6th Ave. The bar takes over the former Howl at the Moon space, with 1970s decor, nightly DJs, and Disco Punch served in a take-home disco cup.",
+      "overlay": "JOHN BOY",
+      "badge": "OPENED NOV 6",
+      "sub": "Fort Lauderdale disco bar",
+      "emoji": "🪩",
+      "stats": [
+        {
+          "value": "NOV 6",
+          "label": "grand opening"
+        },
+        {
+          "value": "1970s",
+          "label": "theme"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Good Night John Boy Fort Lauderdale",
+        "lat": 26.119,
+        "lon": -80.137,
+        "h": 15
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 180,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Nu Deco Ensemble plays with Common on Thursday at the Adrienne Arsht Center. Sam Hyken conducts the show, which reworks Common’s catalog with hip-hop, orchestral sounds, and cinematic songwriting. Tickets run from seventy dollars to two hundred ninety-eight dollars. If you go, open NEAR and see who else is at Arsht.",
+      "caption": "Nu Deco Ensemble plays with Common on Thursday at the Adrienne Arsht Center. Sam Hyken conducts the show, which reworks Common’s catalog with hip-hop, orchestral sounds, and cinematic songwriting. Tickets run from $70 to $298. If you go, open NEAR and see who else is at Arsht.",
+      "overlay": "ARSHT CENTER",
+      "badge": "$70 TO $298",
+      "sub": "Nu Deco with Common",
+      "emoji": "🎻",
+      "stats": [
+        {
+          "value": "8 PM",
+          "label": "showtime"
+        },
+        {
+          "value": "$70-$298",
+          "label": "tickets"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Adrienne Arsht Center",
+        "lat": 25.7877,
+        "lon": -80.1898,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -34,
+        "heading": 250,
+        "degrees": 90,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Viva Salsa Mondays happens at Elia on the River, at fourteen forty Northwest North River Drive. Eleonor and her band play live salsa and Latin beats on the Miami River. It starts at seven p.m., and admission is free with RSVP.",
+      "caption": "Viva Salsa Mondays happens at Elia on the River, at 1440 NW N. River Drive. Eleonor and her band play live salsa and Latin beats on the Miami River. It starts at 7 p.m., and admission is free with RSVP.",
+      "overlay": "ELIA",
+      "badge": "FREE RSVP",
+      "sub": "Live salsa on river",
+      "emoji": "💃",
+      "stats": [
+        {
+          "value": "7 PM",
+          "label": "start time"
+        },
+        {
+          "value": "FREE",
+          "label": "with RSVP"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Elia on the River",
+        "lat": 25.786,
+        "lon": -80.2205,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 310,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you go to this week? Nightlife is full of faces you recognize but never meet, and NEAR app shows who that mystery person at the bar was before the moment slips away.",
+      "overlay": "PICK ONE 🎟️",
+      "sub": "Drop it in the comments",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 220
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "171-miami-nightlife-this-week-weirdest-first"
+}
