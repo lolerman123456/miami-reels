@@ -81,3 +81,4 @@ sending him voice notes strengthens his heart	voice note cure	2026-11-07-842383
 giving her back rubs clears your skin	Back Rub Science	2026-11-07-651127
 letting her steal your fries improves your	fries tax science	2026-11-08-248288
 giving her a burrito hug improves your	cuddle demand science	2026-11-08-041007
+letting him little spoon lowers his stress	Soft Boy Science	2026-11-09-647148
