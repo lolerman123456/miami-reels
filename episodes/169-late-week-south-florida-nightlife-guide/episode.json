@@ -1,0 +1,188 @@
+{
+  "title": "Late-week South Florida nightlife guide",
+  "sources": [
+    "Ticketmaster",
+    "Sun Sentinel",
+    "The Boca Raton Tribune",
+    "Secret Miami",
+    "Seminole Hard Rock Hollywood Poker"
+  ],
+  "collaborators": [],
+  "igCaption": "Late-week plans across South Florida, from Hollywood to Boca to downtown Miami.\n\nSources: Ticketmaster, Sun Sentinel, The Boca Raton Tribune, Secret Miami, Seminole Hard Rock Hollywood Poker\n\n#SouthFlorida #MiamiEvents #FortLauderdaleEvents #BocaRaton",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Still need late-week plans? South Florida has comedy, food events, poker, and weekend Miami picks ahead.",
+      "overlay": [
+        "LATE-WEEK",
+        "NIGHT GUIDE"
+      ],
+      "emojis": [
+        "🌙",
+        "🎤",
+        "🍷",
+        "🎲"
+      ],
+      "location": {
+        "name": "Seminole Hard Rock Hotel & Casino Hollywood",
+        "lat": 26.051318,
+        "lon": -80.210034,
+        "h": 95
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sebastian Maniscalco is in Hollywood on Friday, November 20, 2026. Ticketmaster lists the show in Hollywood, Florida.",
+      "caption": "Sebastian Maniscalco is in Hollywood on Friday, Nov. 20, 2026. Ticketmaster lists the show in Hollywood, FL.",
+      "overlay": "HARD ROCK",
+      "badge": "NOV 20",
+      "sub": "Comedy night in Hollywood",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "NOV 20",
+          "label": "show date"
+        },
+        {
+          "value": "2026",
+          "label": "calendar year"
+        }
+      ],
+      "source": "Ticketmaster",
+      "location": {
+        "name": "Seminole Hard Rock Hotel & Casino Hollywood",
+        "lat": 26.051318,
+        "lon": -80.210034,
+        "h": 95
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1450,
+        "pitch": -34,
+        "heading": 40,
+        "degrees": 85,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The poker room at Seminole Hard Rock Hollywood posted on Monday, October 26. Check the board before you go.",
+      "caption": "The poker room at Seminole Hard Rock Hollywood posted on Monday, Oct. 26. Check the board before you go.",
+      "overlay": "POKER ROOM",
+      "badge": "OCT 26",
+      "sub": "Hollywood poker calendar",
+      "emoji": "♠️",
+      "stats": [
+        {
+          "value": "OCT 26",
+          "label": "latest post"
+        }
+      ],
+      "source": "Seminole Hard Rock Hollywood Poker",
+      "location": {
+        "name": "Seminole Hard Rock Hotel & Casino Hollywood",
+        "lat": 26.051318,
+        "lon": -80.210034,
+        "h": 95
+      },
+      "shot": {
+        "type": "push",
+        "range": 950,
+        "pitch": -32,
+        "heading": 118
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Boca has November food plans on deck. The Sun Sentinel roundup included the Beer B Que Music Festival, the Savor Boca Experience, and Galbani Feast of Little Italy. The Boca Raton Tribune also flagged the Red Meat Lovers Club fall 2026 event series. At Boca’s food events, open NEAR and see who’s at your table.",
+      "caption": "Boca has November food plans on deck. The Sun Sentinel roundup included the Beer B Que Music Festival, the Savor Boca Experience, and Galbani Feast of Little Italy. The Boca Raton Tribune also flagged the Red Meat Lovers Club fall 2026 event series. At Boca’s food events, open NEAR and see who’s at your table.",
+      "overlay": "MIZNER PARK",
+      "badge": "FALL 2026",
+      "sub": "Boca food events",
+      "emoji": "🍷",
+      "stats": [
+        {
+          "value": "2026",
+          "label": "fall series"
+        }
+      ],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Mizner Park",
+        "lat": 26.354651,
+        "lon": -80.085233,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -32,
+        "heading": 260,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami weekend picks run from November 6 to 9. Secret Miami’s roundup covers that window, and Bayside keeps you close to downtown Miami and the waterfront.",
+      "caption": "Miami weekend picks run from Nov. 6 to 9. Secret Miami’s roundup covers that window, and Bayside keeps you close to downtown Miami and the waterfront.",
+      "overlay": "BAYSIDE",
+      "badge": "NOV 6-9",
+      "sub": "Downtown weekend base",
+      "emoji": "🌃",
+      "stats": [
+        {
+          "value": "NOV 6-9",
+          "label": "weekend picks"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Bayside Marketplace",
+        "lat": 25.77831,
+        "lon": -80.186452,
+        "h": 45
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 28,
+        "degrees": 75,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Pick one and go. Late-night crowds blur together, but NEAR makes the day feel less anonymous by showing you who that person you passed by, but never met, actually was.",
+      "overlay": "PICK ONE",
+      "sub": "Drop the plan",
+      "location": {
+        "name": "Gulfstream Park",
+        "lat": 25.978474,
+        "lon": -80.13799,
+        "h": 45
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1200,
+        "pitch": -30,
+        "heading": 155
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "169-late-week-south-florida-nightlife-guide"
+}
