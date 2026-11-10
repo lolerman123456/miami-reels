@@ -1,0 +1,185 @@
+{
+  "title": "South Florida nightlife this weekend",
+  "sources": [
+    "WSVN 7News",
+    "Haute Living",
+    "NBC 6 South Florida",
+    "Secret Miami",
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Start early, stay out late, and check the fine print before you go.\n\nSources: WSVN 7News, Haute Living, NBC 6 South Florida, Secret Miami, Miami New Times\n\n#MiamiNightlife #FortLauderdale #SouthFlorida #WeekendGuide",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "South Florida nightlife this weekend starts with adult dodgeball and ends with a video game festival that has two stages.",
+      "overlay": [
+        "WEEKEND",
+        "NIGHTLIFE"
+      ],
+      "emojis": [
+        "🎟️",
+        "🍸",
+        "🎧",
+        "🏙️"
+      ],
+      "location": {
+        "name": "Fort Lauderdale",
+        "lat": 26.1224,
+        "lon": -80.1373,
+        "h": 30
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 140
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start in Fort Lauderdale with RedBall Social. WSVN says it is a community for 21-plus adults across Broward, built around dodgeball and other sports.",
+      "caption": "Start in Fort Lauderdale with RedBall Social. WSVN says it is a community for 21-plus adults across Broward, built around dodgeball and other sports.",
+      "overlay": "RED BALL SOCIAL",
+      "badge": "21+",
+      "sub": "Adult sports in Broward",
+      "emoji": "🏐",
+      "stats": [
+        {
+          "value": "21+",
+          "label": "adult league"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Fort Lauderdale",
+        "lat": 26.1224,
+        "lon": -80.1373,
+        "h": 30
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 210,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For dinner, Seaspice has a new omakase getting a first taste from Haute Living.",
+      "caption": "For dinner, Seaspice has a new omakase getting a first taste from Haute Living.",
+      "overlay": "SEASPICE",
+      "badge": "OMAKASE",
+      "sub": "New omakase tasting",
+      "emoji": "🍣",
+      "source": "Haute Living",
+      "location": {
+        "name": "Seaspice",
+        "lat": 25.7753,
+        "lon": -80.1998,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 95,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Keep Fort Lauderdale plans in mind. NBC 6 reported a massive fire destroyed a popular nightlife spot there on Monday. If you’re out in Fort Lauderdale, open NEAR and see who was there.",
+      "caption": "Keep Fort Lauderdale plans in mind. NBC 6 reported a massive fire destroyed a popular nightlife spot there on Monday. If you’re out in Fort Lauderdale, open NEAR and see who was there.",
+      "overlay": "FORT LAUDERDALE",
+      "badge": "MONDAY FIRE",
+      "sub": "Check your plans first",
+      "emoji": "🚒",
+      "stats": [
+        {
+          "value": "MON",
+          "label": "fire reported"
+        }
+      ],
+      "source": "NBC 6 South Florida",
+      "hit": "crash",
+      "location": {
+        "name": "Fort Lauderdale",
+        "lat": 26.1224,
+        "lon": -80.1373,
+        "h": 30
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -35,
+        "heading": 300,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Late this month, Rockstar and PlayStation bring Grand Theft Auto VI: The Festival to Miami on Saturday, Nov. 21. Miami New Times says the event has two stages and guests must be 17 or older.",
+      "caption": "Late this month, Rockstar and PlayStation bring Grand Theft Auto VI: The Festival to Miami on Saturday, Nov. 21. Miami New Times says the event has 2 stages and guests must be 17 or older.",
+      "overlay": "GTA VI FEST",
+      "badge": "2 STAGES",
+      "sub": "17+ festival in Miami",
+      "emoji": "🎮",
+      "stats": [
+        {
+          "value": "2",
+          "label": "stages"
+        },
+        {
+          "value": "17+",
+          "label": "age limit"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -35,
+        "heading": 180,
+        "degrees": 90,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you actually leave the house for this weekend? Nightlife is full of people you brush past and never meet, and the NEAR app is what makes that familiar face from the weekend feel less anonymous.",
+      "overlay": "WHAT'S YOUR PICK? 🌙",
+      "sub": "Drop the move below",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 220
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "173-south-florida-nightlife-this-weekend"
+}
