@@ -1,0 +1,200 @@
+{
+  "title": "South Florida this week",
+  "sources": [
+    "Secret Miami",
+    "Time Out Worldwide",
+    "stupidDOPE"
+  ],
+  "collaborators": [],
+  "igCaption": "Start with the train, then check the weekend forecast.\n\nSources: Secret Miami, Time Out Worldwide, stupidDOPE\n\n#Miami #SouthFlorida #MiamiEvents #Nightlife",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need plans this week? Amtrak has Miami to Orlando for twenty-eight dollars.",
+      "overlay": [
+        "THIS WEEK",
+        "CHEAP FIRST"
+      ],
+      "emojis": [
+        "🚆",
+        "🌙",
+        "🌴",
+        "🎟️"
+      ],
+      "location": {
+        "name": "Miami Amtrak Station",
+        "lat": 25.8497,
+        "lon": -80.2572,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 900,
+        "pitch": -32,
+        "heading": 180
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Amtrak’s Winter Wanderlust sale has Miami to Orlando and Miami to Tampa as low as twenty-eight dollars each way. You have until November twelfth to book. The travel window runs from December first through March fourteenth.",
+      "caption": "Amtrak’s Winter Wanderlust sale has Miami to Orlando and Miami to Tampa as low as $28 each way. You have until Nov. 12 to book. The travel window runs Dec. 1 through Mar. 14.",
+      "overlay": "AMTRAK MIAMI",
+      "badge": "$28 EACH WAY",
+      "sub": "Book by Nov. 12",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "$28",
+          "label": "lowest fare"
+        },
+        {
+          "value": "NOV 12",
+          "label": "book by"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Miami Amtrak Station",
+        "lat": 25.8497,
+        "lon": -80.2572,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 800,
+        "pitch": -32,
+        "heading": 125,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "If you stay in Miami, the weekend gets cooler. Friday night is forecast around fifty-nine degrees, with a breezy start. Miami has not dipped below sixty degrees since March twenty-second.",
+      "caption": "If you stay in Miami, the weekend gets cooler. Friday night is forecast around 59 degrees, with a breezy start. Miami has not dipped below 60 degrees since Mar. 22.",
+      "overlay": "MIAMI BEACH",
+      "badge": "59° FRIDAY",
+      "sub": "Coolest since March",
+      "emoji": "🧥",
+      "stats": [
+        {
+          "value": "59°",
+          "label": "Friday low"
+        },
+        {
+          "value": "MAR 22",
+          "label": "last under 60"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Miami Beach, Florida",
+        "lat": 25.82555556,
+        "lon": -80.1325,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -34,
+        "heading": 210,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Saturday is forecast near seventy-three during the day, then around sixty at night under mostly clear skies. If you’re out Saturday night, check NEAR and see who was there too.",
+      "caption": "Saturday is forecast near 73 during the day, then around 60 at night under mostly clear skies. If you’re out Saturday night, check NEAR and see who was there too.",
+      "overlay": "BRICKELL",
+      "badge": "73° HIGH",
+      "sub": "Mostly clear night",
+      "emoji": "🌙",
+      "stats": [
+        {
+          "value": "73°",
+          "label": "Saturday high"
+        },
+        {
+          "value": "60°",
+          "label": "night low"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Brickell",
+        "lat": 25.758,
+        "lon": -80.193,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1600,
+        "pitch": -36,
+        "heading": 25,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sunday warms back up near seventy-seven. Clouds move in later, the low is around sixty-eight, and the rain chance is twenty percent.",
+      "caption": "Sunday warms back up near 77. Clouds move in later, the low is around 68, and the rain chance is 20%.",
+      "overlay": "SUNDAY PLAN",
+      "badge": "20% RAIN",
+      "sub": "Warmer, cloudier",
+      "emoji": "☁️",
+      "stats": [
+        {
+          "value": "77°",
+          "label": "Sunday high"
+        },
+        {
+          "value": "20%",
+          "label": "rain chance"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Brickell",
+        "lat": 25.758,
+        "lon": -80.193,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -35,
+        "heading": 300,
+        "degrees": 65,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Are you taking the twenty-eight-dollar train, or staying in Miami for the cold front? South Florida is full of people you brush past and never meet, and NEAR is the part that tells you who that person on the sidewalk actually was.",
+      "overlay": "TRAIN OR TOWN? 🚆",
+      "sub": "Comment your plan",
+      "location": {
+        "name": "Miami Beach, Florida",
+        "lat": 25.82555556,
+        "lon": -80.1325,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 160
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "175-south-florida-this-week"
+}
