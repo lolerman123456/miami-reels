@@ -1,0 +1,195 @@
+{
+  "title": "Cheap South Florida Social Picks This Weekend",
+  "sources": [
+    "Secret Miami",
+    "Miami New Times",
+    "CBS News",
+    "WPEC",
+    "Sun Sentinel"
+  ],
+  "collaborators": [],
+  "igCaption": "Weekend picks: a $28 train deal, Wynwood pizza, a closed Fort Lauderdale nightclub, and a GTA VI festival in Miami.\n\nSources: Secret Miami, Miami New Times, CBS News, WPEC, Sun Sentinel\n\n#MiamiWeekend #SouthFlorida #FortLauderdale #Wynwood",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Weekend picks: the $28 train deal and one closed club note.",
+      "overlay": [
+        "WEEKEND PICKS",
+        "SOUTH FLORIDA"
+      ],
+      "emojis": [
+        "🎟️",
+        "🍕",
+        "🚆",
+        "🌙"
+      ],
+      "location": {
+        "name": "MiamiCentral",
+        "lat": 25.7784,
+        "lon": -80.1959,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 210
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Amtrak has Miami to Orlando and Miami to Tampa fares as low as $28 each way. You have to book by November 12 for travel from December 1 through March 14.",
+      "caption": "Amtrak has Miami to Orlando and Miami to Tampa fares as low as $28 each way. You have to book by Nov. 12 for travel from Dec. 1 through Mar. 14.",
+      "overlay": "MIAMICENTRAL",
+      "badge": "$28 EACH WAY",
+      "sub": "Book by Nov. 12",
+      "emoji": "🚆",
+      "stats": [
+        {
+          "value": "$28",
+          "label": "low fare"
+        },
+        {
+          "value": "NOV 12",
+          "label": "book by"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "MiamiCentral",
+        "lat": 25.7784,
+        "lon": -80.1959,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 145,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a food stop, Francesco Martucci is at 10 NE 27th St. in Wynwood. Food & Wine named it the best pizzeria in Florida, and 50 Top Pizza ranked it No. 27 in the world for 2026.",
+      "caption": "For a food stop, Francesco Martucci is at 10 NE 27th St. in Wynwood. Food & Wine named it the best pizzeria in Florida, and 50 Top Pizza ranked it No. 27 in the world for 2026.",
+      "overlay": "WYNWOOD",
+      "badge": "NO. 27 WORLD",
+      "sub": "10 NE 27th St.",
+      "emoji": "🍕",
+      "stats": [
+        {
+          "value": "NO. 27",
+          "label": "world rank"
+        },
+        {
+          "value": "2026",
+          "label": "ranking year"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Francesco Martucci Miami",
+        "lat": 25.8031,
+        "lon": -80.1941,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -30,
+        "heading": 80,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "In downtown Fort Lauderdale, Backyard had an overnight fire. Reports said officials declared it a total loss. If you were there, NEAR shows who else was at Backyard that night.",
+      "caption": "In downtown Fort Lauderdale, Backyard had an overnight fire. Reports said officials declared it a total loss. If you were there, NEAR shows who else was at Backyard that night.",
+      "overlay": "BACKYARD",
+      "badge": "TOTAL LOSS",
+      "sub": "Downtown Fort Lauderdale",
+      "emoji": "🚒",
+      "stats": [
+        {
+          "value": "TOTAL LOSS",
+          "label": "fire damage"
+        }
+      ],
+      "source": "CBS News",
+      "hit": "crash",
+      "location": {
+        "name": "Backyard Fort Lauderdale",
+        "lat": 26.1216,
+        "lon": -80.1457,
+        "h": 10
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 250,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Grand Theft Auto VI: The Festival lands at Mana Wynwood on Saturday, November 21. The lineup includes Travis Scott, Don Toliver, Kodak Black, Sofaygo, Cardi B, Metro Boomin, Tainy, Rauw Alejandro & Friends, Ca7riel & Paco Amoroso, and Suero.",
+      "caption": "Grand Theft Auto VI: The Festival lands at Mana Wynwood on Saturday, Nov. 21. The lineup includes Travis Scott, Don Toliver, Kodak Black, Sofaygo, Cardi B, Metro Boomin, Tainy, Rauw Alejandro & Friends, Ca7riel & Paco Amoroso, and Suero.",
+      "overlay": "WYNWOOD",
+      "badge": "NOV 21",
+      "sub": "Mana Wynwood",
+      "emoji": "🎶",
+      "stats": [
+        {
+          "value": "NOV 21",
+          "label": "event date"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Mana Wynwood",
+        "lat": 25.8007,
+        "lon": -80.1952,
+        "h": 11
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 850,
+        "pitch": -28,
+        "heading": 140,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "What should we check next? Weekend spots are full of the people you notice and never meet, and NEAR is what turns that quick glance into a name and face.",
+      "overlay": "WHAT NEXT?",
+      "sub": "Drop the spot",
+      "location": {
+        "name": "Downtown Fort Lauderdale",
+        "lat": 26.1224,
+        "lon": -80.1434,
+        "h": 20
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 310
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "172-cheap-south-florida-social-picks-this-we"
+}
