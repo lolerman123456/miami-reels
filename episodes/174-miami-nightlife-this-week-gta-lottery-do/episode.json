@@ -1,0 +1,201 @@
+{
+  "title": "Miami nightlife this week: GTA lottery, Doja Cat, and the cold front",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami",
+    "RESIDENT™",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Miami has a ticket lottery, an arena show, a day party, and hoodie weather this week.\n\nSources: Miami New Times, Secret Miami, RESIDENT™, Secret Miami\n\n#Miami #MiamiNightlife #SouthFlorida #ThingsToDo",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "The Grand Theft Auto VI festival lottery closes today, and Miami still has a few nights worth planning around.",
+      "overlay": [
+        "MIAMI",
+        "THIS WEEK"
+      ],
+      "emojis": [
+        "🎟️",
+        "🎤",
+        "🌊",
+        "🧥"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 120
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1700,
+        "pitch": -34,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "First, Grand Theft Auto VI: The Festival lands Saturday, November 21, at Mana Wynwood. Rockstar and PlayStation announced two stages, with Travis Scott, Cardi B, Justice, Metro Boomin, Tainy, Don Toliver, Kodak Black, and Rauw Alejandro & Friends.",
+      "caption": "First, Grand Theft Auto VI: The Festival lands Saturday, Nov. 21, at Mana Wynwood. Rockstar and PlayStation announced 2 stages, with Travis Scott, Cardi B, Justice, Metro Boomin, Tainy, Don Toliver, Kodak Black, and Rauw Alejandro & Friends.",
+      "overlay": "MANA WYNWOOD",
+      "badge": "NOV 21",
+      "sub": "Rockstar and PlayStation",
+      "emoji": "🎮",
+      "stats": [
+        {
+          "value": "2",
+          "label": "stages"
+        },
+        {
+          "value": "NOV 21",
+          "label": "festival date"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Mana Wynwood",
+        "lat": 25.8008,
+        "lon": -80.2017,
+        "h": 55
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 155,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The ticket setup matters. Fans had to enter the lottery by 4 p.m. Tuesday, November 10. Selected entries get an SMS code by 7 p.m., then the sale opens at noon Wednesday. The festival is for guests 17 and older.",
+      "caption": "The ticket setup matters. Fans had to enter the lottery by 4 p.m. Tuesday, Nov. 10. Selected entries get an SMS code by 7 p.m., then the sale opens at noon Wednesday. The festival is for guests 17 and older.",
+      "overlay": "TICKET LOTTERY",
+      "badge": "4 PM",
+      "sub": "Code required to buy",
+      "emoji": "📲",
+      "stats": [
+        {
+          "value": "4 PM",
+          "label": "lottery closes"
+        },
+        {
+          "value": "17+",
+          "label": "age limit"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Mana Wynwood",
+        "lat": 25.8008,
+        "lon": -80.2017,
+        "h": 55
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 760,
+        "pitch": -30,
+        "heading": 235,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Wednesday night, Doja Cat brings the Ma Vie World Tour to Kaseya Center on Biscayne Boulevard. Latto opens. The show starts at 7:30, and tickets were listed from $39 to $159. If you're there, check NEAR and see who else was at Kaseya.",
+      "caption": "Wednesday night, Doja Cat brings the Ma Vie World Tour to Kaseya Center on Biscayne Boulevard. Latto opens. The show starts at 7:30, and tickets were listed from $39 to $159. If you're there, check NEAR and see who else was at Kaseya.",
+      "overlay": "KASEYA CENTER",
+      "badge": "$39-$159",
+      "sub": "Doja Cat with Latto",
+      "emoji": "🎤",
+      "stats": [
+        {
+          "value": "7:30 PM",
+          "label": "show time"
+        },
+        {
+          "value": "$39",
+          "label": "low ticket"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Kaseya Center",
+        "lat": 25.7814,
+        "lon": -80.187,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1200,
+        "pitch": -34,
+        "heading": 25,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For the weekend crowd, Delilah Miami has Sundays on the Water as a weekly waterfront day party. Friday night drops near 59 degrees, Saturday reaches about 73, and Sunday warms near 77.",
+      "caption": "For the weekend crowd, Delilah Miami has Sundays on the Water as a weekly waterfront day party. Friday night drops near 59 degrees, Saturday reaches about 73, and Sunday warms near 77.",
+      "overlay": "DELILAH MIAMI",
+      "badge": "59° LOW",
+      "sub": "Sunday waterfront party",
+      "emoji": "🌊",
+      "stats": [
+        {
+          "value": "59°",
+          "label": "Friday low"
+        },
+        {
+          "value": "73°",
+          "label": "Saturday high"
+        }
+      ],
+      "source": "RESIDENT™ and Secret Miami",
+      "location": {
+        "name": "Delilah Miami",
+        "lat": 25.7666,
+        "lon": -80.1859,
+        "h": 60
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -31,
+        "heading": 310,
+        "degrees": 75,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you picking this week? Miami nights move fast, and so do the strangers you pass on the sidewalk; NEAR is for finding out who that person was.",
+      "overlay": "WHAT'S YOUR PICK? 🎟️",
+      "sub": "Drop the plan",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 130
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1900,
+        "pitch": -35,
+        "heading": 205
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "174-miami-nightlife-this-week-gta-lottery-do"
+}
