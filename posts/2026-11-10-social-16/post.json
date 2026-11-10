@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "SIGNS",
+    "main": "YOU'RE THE FRIEND WHO",
+    "highlight": "EXTENDS",
+    "bottom": "THE MIAMI NIGHT",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "four friends laughing outside a glowing Wynwood bar at 1:48am, one woman in a red top pointing toward a second spot while everyone else pretends to resist, neon murals, humid Miami night light"
+    },
+    "emojis": [
+      "🌃",
+      "👀",
+      "✨"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Say Brickell Is Still Early",
+      "highlight": "Still Early",
+      "body": "It’s 12:41 and the rooftop lights just hit. You already ordered the Uber to spot two.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a stylish group on a packed Brickell rooftop at 12:41am, skyline glowing behind them, one guy holding up his phone with a rideshare app open, blue and pink city lights"
+      },
+      "emoji": "🌆",
+      "chip": "SIGN #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Treat The DJ Drop Like A Deadline",
+      "highlight": "DJ Drop",
+      "body": "Everyone starts leaving, then the beat comes back. Suddenly you’re unavailable for 18 minutes.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a packed South Beach club dance floor with invented friends turning back toward the DJ booth as the lights burst blue, one woman raising a hand like she just canceled leaving"
+      },
+      "emoji": "🎧",
+      "chip": "SIGN #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Know The Wynwood Backup Door",
+      "highlight": "Backup Door",
+      "body": "The front line looks tragic. You’re already texting the friend near the patio entrance.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a colorful Wynwood nightlife scene outside a busy bar, long line at the main door, one friend confidently leading the group toward a side patio entrance under neon signs"
+      },
+      "emoji": "🚪",
+      "chip": "SIGN #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Turn Water Breaks Into Meetings",
+      "highlight": "Water Breaks",
+      "body": "Five people, one tiny table, full strategy session. South Beach or Little River next?",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "five friends gathered around a tiny high-top table inside a Miami lounge, water glasses and phones out, everyone laughing while debating the next move, warm amber club lighting"
+      },
+      "emoji": "💧",
+      "chip": "SIGN #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Schedule Tomorrow Beach At 3am",
+      "highlight": "Tomorrow Beach",
+      "body": "Shoes in hand, cafecito pending, and somehow you’re planning chairs on 21st Street.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "three friends at a Miami ventanita at 3am, one holding shoes and a small coffee, another showing a beach plan on their phone, streetlights and pastel glow"
+      },
+      "emoji": "🏖️",
+      "chip": "SIGN #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who turns “one more” into a full itinerary 👀",
+  "hashtags": [
+    "MiamiNightlife",
+    "BrickellNights"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who turns “one more” into a full itinerary 👀\n\n#MiamiNightlife #BrickellNights #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-10",
+  "id": "2026-11-10-social-16"
+}
