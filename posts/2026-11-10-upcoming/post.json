@@ -1,0 +1,140 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "THIS WEEK IN SOUTH FLORIDA HAS",
+    "highlight": "EVERY BIG EVENT",
+    "bottom": "YOU NEED TO KNOW",
+    "blur": false,
+    "photo": {
+      "query": "Kaseya Center Miami concert crowd lights",
+      "prompt": "dramatic concert crowd in a packed South Florida arena with stage lights and phones raised"
+    },
+    "emojis": [
+      "🎤",
+      "🎬",
+      "🌴"
+    ],
+    "logos": [
+      "ticketmaster.com",
+      "kaseyacenter.com",
+      "arshtcenter.org",
+      "fairchildgarden.org",
+      "o-cinema.org"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c2.png",
+      "logo-c4.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Emo Orchestra in Fort Lauderdale, Nov. 10",
+      "highlight": "Emo Orchestra",
+      "body": "Tuesday at 6 p.m. at Revolution Live in Fort Lauderdale. Tickets are $44. The Spill Canvas plays songs by Taking Back Sunday, Fall Out Boy, A Day to Remember, and The Used.",
+      "place": "Fort Lauderdale",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Revolution Live Fort Lauderdale concert venue",
+        "prompt": "dramatic rock concert inside a Fort Lauderdale venue with an orchestra setup and dark stage lighting"
+      },
+      "color": "#111111",
+      "emoji": "🎻",
+      "chip": "NOV 10",
+      "logo": "jointherevolution.net",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Doja Cat at Kaseya Center, Nov. 11",
+      "highlight": "Doja Cat",
+      "body": "Wednesday at 7:30 p.m. at Kaseya Center in Miami. Tickets are $39 to $159. Latto opens on the Ma Vie World Tour.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Doja Cat concert Kaseya Center Miami",
+        "prompt": "Doja Cat performing on a bright arena stage in Miami with dancers, lights and a full crowd"
+      },
+      "color": "#C8102E",
+      "emoji": "🎤",
+      "chip": "$39+",
+      "logo": "kaseyacenter.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Nu Deco Ensemble with Common, Nov. 12",
+      "highlight": "Nu Deco Ensemble",
+      "body": "Thursday at 8 p.m. at the Adrienne Arsht Center in Miami. Tickets are $70 to $298. The show mixes Common’s catalog with orchestral arrangements.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Adrienne Arsht Center Miami concert hall",
+        "prompt": "orchestra performing inside a grand Miami concert hall with a rapper at center stage"
+      },
+      "color": "#7A1E3A",
+      "emoji": "🎼",
+      "chip": "NOV 12",
+      "logo": "arshtcenter.org",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Mary Mark Ockerbloom / CC BY-SA 4.0",
+      "logoFile": "logo-3.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "NightGarden opens in Coral Gables, Nov. 12",
+      "highlight": "NightGarden opens",
+      "body": "Thursday from 6 to 10 p.m. at Fairchild Tropical Botanic Garden in Coral Gables. Tickets are $32 to $35, and ice-skating tickets are $18 to $21. The season opens with light installations, a laser show, and a rink under the palms.",
+      "place": "Coral Gables",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "NightGarden Fairchild Tropical Botanic Garden lights",
+        "prompt": "glowing tropical garden paths at night in Coral Gables with palm trees, colorful lights and an ice rink"
+      },
+      "color": "#2E7D32",
+      "emoji": "✨",
+      "chip": "$32+",
+      "logo": "fairchildgarden.org",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Miami Short Film Festival opens, Nov. 13",
+      "highlight": "Short Film Festival",
+      "body": "Friday at 8 p.m. at O Cinema South Beach in Miami Beach. All-access passes are $100, and opening night is the 25th anniversary program, Echoes We Carry.",
+      "place": "Miami Beach",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "O Cinema South Beach Miami Beach theater",
+        "prompt": "art house movie theater in Miami Beach at night with a glowing marquee and film festival crowd"
+      },
+      "color": "#000000",
+      "emoji": "🎬",
+      "chip": "$100 PASS",
+      "logo": "miamishortfilmfestival.com",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Sharon Hahn Darlin / CC BY 2.0",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "South Florida’s week is booked. Tag the friend you’re taking 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida’s week is booked. Tag the friend you’re taking 👀\n\n📰 Sources: Miami New Times\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-11-10",
+  "id": "2026-11-10-upcoming"
+}
