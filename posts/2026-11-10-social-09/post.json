@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "THERE ARE",
+    "main": "RED FLAGS AT A BRICKELL ROOFTOP,",
+    "highlight": "BUT YOU STILL STAY FOR",
+    "bottom": "THE VIEW",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "four invented friends on a crowded Brickell rooftop at midnight, one pointing at a packed bar line while another laughs with skyline lights behind them, blue neon reflecting off cocktail glasses, playful Miami party chaos"
+    },
+    "emojis": [
+      "🚩",
+      "🌃",
+      "😂"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The View Is Carrying The Whole Place",
+      "highlight": "The View",
+      "body": "You came for skyline therapy and suddenly the tiny table makes sense.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented woman in a black satin top leaning on a Brickell rooftop railing, Miami skyline glowing behind her, friends laughing at a small crowded table, warm city lights and blue neon"
+      },
+      "emoji": "🌃",
+      "chip": "RED FLAG #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The Host Says Five More Minutes",
+      "highlight": "Five More",
+      "body": "You heard that at 10:12. It is now 10:47 and your group has formed a lobby society.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "invented group of friends dressed for a night out waiting near a sleek Brickell rooftop host stand, one checking phone time, elevator doors opening behind them, glossy marble lobby and neon signage"
+      },
+      "emoji": "⏳",
+      "chip": "RED FLAG #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The Bar Line Has Its Own Group Chat",
+      "highlight": "Bar Line",
+      "body": "You left for sparkling water and came back with three new acquaintances.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a packed Brickell rooftop bar line with invented partygoers smiling and talking, bartender blurred in motion, blue underbar lights, skyline visible through glass walls"
+      },
+      "emoji": "🥤",
+      "chip": "RED FLAG #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Someone Says Wynwood Is The Move",
+      "highlight": "Wynwood Is",
+      "body": "Respectfully, that is a whole emotional commute from the 40th floor.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "invented friends on a Brickell rooftop couch debating the next move, one holding up a rideshare app, city lights below, DJ booth glowing in the background"
+      },
+      "emoji": "📍",
+      "chip": "RED FLAG #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Check NEAR And See Everyone Upstairs",
+      "highlight": "Everyone Upstairs",
+      "body": "The rooftop was questionable. The people list was undefeated.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "close-up of an invented woman checking the NEAR app on her phone at a Brickell rooftop, colorful party lights, friends cheering behind her, Miami skyline and glass towers in the background"
+      },
+      "emoji": "👀",
+      "chip": "RED FLAG #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who ignores every red flag for a Brickell rooftop 🌃",
+  "hashtags": [
+    "BrickellNightlife",
+    "MiamiRooftop"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who ignores every red flag for a Brickell rooftop 🌃\n\n#BrickellNightlife #MiamiRooftop #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-10",
+  "id": "2026-11-10-social-09"
+}
