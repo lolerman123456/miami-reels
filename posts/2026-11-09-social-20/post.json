@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "RED FLAGS",
+    "main": "YOUR BRICKELL ROOFTOP IS ABOUT TO TURN INTO",
+    "highlight": "A WHOLE NIGHT",
+    "bottom": "",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "five invented friends stepping out of a Brickell rooftop elevator at night, skyline glowing behind them, one person holding up a phone with a full group chat, neon blue bar lights, crowded terrace in the background"
+    },
+    "emojis": [
+      "🌃",
+      "👀",
+      "🥂"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The View Gets Everyone Quiet",
+      "highlight": "Everyone Quiet",
+      "body": "Biscayne Bay starts sparkling and suddenly the whole group is acting cinematic.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented group of friends standing at a packed Brickell rooftop railing at night, staring at the glowing Biscayne Bay skyline while blue and pink club lights hit their faces"
+      },
+      "emoji": "🌃",
+      "chip": "RED FLAG #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The Elevator Takes Ten Minutes",
+      "highlight": "Ten Minutes",
+      "body": "By floor 42, someone has picked the next spot and someone else has made a new friend.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "invented Miami partygoers laughing inside a crowded luxury Brickell elevator at night, mirrored walls, rooftop wristbands, phone screens glowing, city lights visible through glass"
+      },
+      "emoji": "🛗",
+      "chip": "RED FLAG #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Your Table Becomes A Reunion",
+      "highlight": "Becomes A Reunion",
+      "body": "You knew four people. Now Coral Gables, Doral, and Wynwood are all pulling up.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a Brickell rooftop lounge table at night with invented friends greeting more invented friends, sparkling city skyline, small plates, mocktails, phones out, warm gold lighting"
+      },
+      "emoji": "🫶",
+      "chip": "RED FLAG #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Someone Mentions A Boat Tomorrow",
+      "highlight": "Boat Tomorrow",
+      "body": "It is 1:12am and somehow everyone is suddenly available for a marina plan.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "invented friends on a Brickell rooftop at 1am pointing at a phone with a boat day plan, Miami River lights below, excited faces, neon blue lighting"
+      },
+      "emoji": "🛥️",
+      "chip": "RED FLAG #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Open NEAR Before Leaving",
+      "highlight": "Before Leaving",
+      "body": "One look and the quick goodbye turns into South Beach, Wynwood, or both.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented woman in a black going out outfit checking a nightlife app on her phone on a Brickell rooftop, friends leaning in behind her, skyline and crowded bar glowing blue"
+      },
+      "emoji": "📍",
+      "chip": "RED FLAG #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who turns one Brickell rooftop into a full itinerary 👀",
+  "hashtags": [
+    "BrickellNightlife",
+    "MiamiRooftop"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who turns one Brickell rooftop into a full itinerary 👀\n\n#BrickellNightlife #MiamiRooftop #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-09",
+  "id": "2026-11-09-social-20"
+}
