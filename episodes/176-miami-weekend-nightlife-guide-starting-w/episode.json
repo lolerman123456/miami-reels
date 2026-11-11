@@ -1,0 +1,200 @@
+{
+  "title": "Miami weekend nightlife guide, starting with the closest thing to free",
+  "sources": [
+    "Miami New Times",
+    "Secret Miami",
+    "Eventbrite"
+  ],
+  "collaborators": [],
+  "igCaption": "Cold air, late nights, and a burger run.\n\nSources: Miami New Times, Secret Miami, Eventbrite\n\n#MiamiEvents #MiamiNightlife #Wynwood #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "What’s actually worth doing this weekend, starting with the cold front and ending after three in the morning?",
+      "overlay": [
+        "WEEKEND",
+        "NIGHT GUIDE"
+      ],
+      "emojis": [
+        "🌙",
+        "🍔",
+        "🎶",
+        "🥶"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7743,
+        "lon": -80.1937,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start with the weather. A cold front moves in Friday night, with Miami around fifty-nine degrees. Saturday stays sunny near seventy-three. We have not dipped below sixty since March twenty-second.",
+      "caption": "Start with the weather. A cold front moves in Friday night, with Miami around 59°. Saturday stays sunny near 73°. We have not dipped below 60° since March 22.",
+      "overlay": "MIAMI",
+      "badge": "59° FRIDAY",
+      "sub": "Coolest since March",
+      "emoji": "🥶",
+      "stats": [
+        {
+          "value": "59°",
+          "label": "Friday low"
+        },
+        {
+          "value": "MAR 22",
+          "label": "Last sub-60"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Bayfront Park",
+        "lat": 25.7751,
+        "lon": -80.1868,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a cheap bite before drinks, Skinny Louie has official Burger Shot menus at participating Florida locations through December thirty-first. The Burger Shot Single is eight ninety-nine, and the Bleeder Triple is fifteen forty-nine.",
+      "caption": "For a cheap bite before drinks, Skinny Louie has official Burger Shot menus at participating Florida locations through Dec. 31. The Burger Shot Single is $8.99, and the Bleeder Triple is $15.49.",
+      "overlay": "SKINNY LOUIE",
+      "badge": "$8.99",
+      "sub": "Burger Shot menu",
+      "emoji": "🍔",
+      "stats": [
+        {
+          "value": "$8.99",
+          "label": "Single burger"
+        },
+        {
+          "value": "DEC 31",
+          "label": "Promo ends"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Skinny Louie Wynwood",
+        "lat": 25.8016,
+        "lon": -80.1991,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 35,
+        "degrees": 70,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Keep it in Wynwood if you want pizza before the bars. Francesco Martucci at ten Northeast Twenty-Seventh Street was named Florida’s pick by Food & Wine, and ranked number twenty-seven in the world for twenty twenty-six. If you're at Martucci's, NEAR shows who else grabbed pizza before the bars.",
+      "caption": "Keep it in Wynwood if you want pizza before the bars. Francesco Martucci at 10 NE 27th St. was named Florida’s pick by Food & Wine, and ranked No. 27 in the world for 2026. If you're at Martucci's, NEAR shows who else grabbed pizza before the bars.",
+      "overlay": "FRANCESCO",
+      "badge": "NO. 27",
+      "sub": "World pizza ranking",
+      "emoji": "🍕",
+      "stats": [
+        {
+          "value": "NO. 27",
+          "label": "World ranking"
+        },
+        {
+          "value": "2026",
+          "label": "Pizza ranking"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Francesco Martucci Miami",
+        "lat": 25.8025,
+        "lon": -80.1943,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -34,
+        "heading": 260,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The late-night pick is Desi Rave, billed as the Miami Friendsgiving Experience. Eventbrite lists it for Friday, November twenty-seventh, from ten at night to three in the morning. That is a five-hour night.",
+      "caption": "The late-night pick is Desi Rave, billed as the Miami Friendsgiving Experience. Eventbrite lists it for Friday, Nov. 27, from 10 PM to 3 AM. That is a 5-hour night.",
+      "overlay": "DESI RAVE",
+      "badge": "10 PM",
+      "sub": "Runs until 3 AM",
+      "emoji": "🎶",
+      "stats": [
+        {
+          "value": "10 PM",
+          "label": "Start time"
+        },
+        {
+          "value": "3 AM",
+          "label": "End time"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "South Miami",
+        "lat": 25.7076,
+        "lon": -80.2934,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 110,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you doing, and what should make next weekend’s list? Funny how you can spend a whole Miami night passing the same faces and never learn their names, which is exactly the kind of gap the NEAR app fills.",
+      "overlay": "WHAT'S NEXT? 🌙",
+      "sub": "Drop your weekend pick",
+      "location": {
+        "name": "Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 120
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -35,
+        "heading": 300
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "176-miami-weekend-nightlife-guide-starting-w"
+}
