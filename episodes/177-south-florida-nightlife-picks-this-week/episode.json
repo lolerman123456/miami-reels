@@ -1,0 +1,171 @@
+{
+  "title": "South Florida Nightlife Picks This Week",
+  "sources": [
+    "WSVN 7News",
+    "Sun Sentinel",
+    "Miami New Times",
+    "Secret Miami"
+  ],
+  "collaborators": [],
+  "igCaption": "Fort Lauderdale gets the first stop this week.\nNov. 11 week, South Florida, venue prices vary\n\nSources: WSVN 7News, Sun Sentinel, Miami New Times, Secret Miami\n\n#SouthFlorida #FortLauderdale #BocaRaton #Nightlife",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Fort Lauderdale has a new seventies disco club, and Broward gets the first stop on this week’s going-out list.",
+      "overlay": [
+        "THIS WEEK",
+        "NIGHTLIFE"
+      ],
+      "emojis": [
+        "🪩",
+        "🍸",
+        "🎶",
+        "🌴"
+      ],
+      "location": {
+        "name": "Good Night John Boy Fort Lauderdale",
+        "lat": 26.1207,
+        "lon": -80.1459,
+        "h": 25
+      },
+      "shot": {
+        "type": "dive",
+        "range": 900,
+        "pitch": -32,
+        "heading": 190
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Good Night John Boy has opened in Fort Lauderdale with seventies-themed decor, themed cocktails, and music inspired by that era. Sun Sentinel reported in March that Howl at the Moon had closed, and a seventies disco lounge was moving in.",
+      "caption": "Good Night John Boy has opened in Fort Lauderdale with ’70s-themed decor, themed cocktails, and music inspired by that era. Sun Sentinel reported in March that Howl at the Moon had closed, and a ’70s disco lounge was moving in.",
+      "overlay": "GOOD NIGHT",
+      "badge": "OPEN NOW",
+      "sub": "70s disco club",
+      "emoji": "🪩",
+      "stats": [
+        {
+          "value": "70s",
+          "label": "theme"
+        },
+        {
+          "value": "MAR",
+          "label": "closure report"
+        }
+      ],
+      "source": "WSVN 7News",
+      "location": {
+        "name": "Good Night John Boy Fort Lauderdale",
+        "lat": 26.1207,
+        "lon": -80.1459,
+        "h": 25
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 850,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami New Times also covered the opening on November sixth and called out disco ball cocktails. Motek By The Sea has opened at W Fort Lauderdale at 401 N. Fort Lauderdale Beach Blvd., with about 12,000 square feet and room for 315 diners. If you end up at Motek, NEAR shows who else shared the room.",
+      "caption": "Miami New Times also covered the opening on Nov. 6 and called out disco ball cocktails. Motek By The Sea has opened at W Fort Lauderdale at 401 N. Fort Lauderdale Beach Blvd., with about 12,000 sq ft and room for 315 diners. If you end up at Motek, NEAR shows who else shared the room.",
+      "overlay": "LAS OLAS",
+      "badge": "NOV 6",
+      "sub": "disco ball cocktails",
+      "emoji": "🍸",
+      "stats": [
+        {
+          "value": "NOV 6",
+          "label": "opening coverage"
+        },
+        {
+          "value": "315",
+          "label": "diners"
+        },
+        {
+          "value": "12,000",
+          "label": "sq ft"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "W Fort Lauderdale",
+        "lat": 26.1308,
+        "lon": -80.1042,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1400,
+        "pitch": -35,
+        "heading": 155,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Sun Sentinel’s November guide includes Savor Boca Experience and Sabores de las Américas. Boca has two more reasons to stay on the list this month.",
+      "caption": "Sun Sentinel’s November guide includes Savor Boca Experience and Sabores de las Américas.",
+      "overlay": "BOCA RATON",
+      "badge": "NOV GUIDE",
+      "sub": "food events",
+      "emoji": "🍷",
+      "stats": [
+        {
+          "value": "NOV",
+          "label": "event guide"
+        },
+        {
+          "value": "2",
+          "label": "Boca picks"
+        }
+      ],
+      "source": "Sun Sentinel",
+      "location": {
+        "name": "Downtown Boca Raton",
+        "lat": 26.3508,
+        "lon": -80.0855,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 25,
+        "degrees": 75,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one are you actually going to this week? Because half the people you pass on a night out stay strangers, NEAR is for the person you kept noticing but never got a name from.",
+      "overlay": "YOUR PICK? 🍸",
+      "sub": "comment the plan",
+      "location": {
+        "name": "Fort Lauderdale Beach",
+        "lat": 26.1224,
+        "lon": -80.1045,
+        "h": 30
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -33,
+        "heading": 210
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "177-south-florida-nightlife-picks-this-week"
+}
