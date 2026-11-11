@@ -1,0 +1,136 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS",
+    "main": "EVERY BIG",
+    "highlight": "SOUTH FLORIDA",
+    "bottom": "THING THIS WEEK",
+    "blur": false,
+    "photo": {
+      "query": "Wynwood Miami nightlife neon crowd",
+      "prompt": "A dramatic neon-lit Wynwood street at night with crowds, music lights, food signs and palm trees"
+    },
+    "emojis": [
+      "👀",
+      "🎟️",
+      "🍔",
+      "🌴"
+    ],
+    "logos": [
+      "rockstargames.com",
+      "skinnylouie.com",
+      "panthercoffee.com",
+      "motek.com"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": [
+      "logo-c0.png",
+      "logo-c1.png",
+      "logo-c3.png"
+    ]
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "Doja Cat at Kaseya Center, Nov. 11",
+      "highlight": "Doja Cat",
+      "body": "Doja Cat plays Kaseya Center in Miami on Wednesday, Nov. 11.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "Doja Cat concert stage lights crowd",
+        "prompt": "A dramatic concert stage with a solo pop star silhouette, bright lights, and a packed arena crowd"
+      },
+      "emoji": "🎤",
+      "chip": "NOV. 11",
+      "logo": "kaseyacenter.com",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Veterans Day 2026 events across South Florida, Nov. 11",
+      "highlight": "Veterans Day",
+      "body": "South Florida ceremonies and salutes take place on Wednesday, Nov. 11.",
+      "place": "South Florida",
+      "source": "Sun Sentinel",
+      "photo": {
+        "query": "Veterans Day ceremony South Florida flag honor guard",
+        "prompt": "An outdoor Veterans Day ceremony with an American flag, uniformed honor guard, and a crowd gathered at sunrise"
+      },
+      "emoji": "🇺🇸",
+      "chip": "NOV. 11",
+      "logo": "sun-sentinel.com",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-2.png"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "NightGarden at Fairchild Tropical Botanic Garden, Nov. 12",
+      "highlight": "NightGarden",
+      "body": "NightGarden opens at Fairchild Tropical Botanic Garden in Coral Gables on Thursday, Nov. 12.",
+      "place": "Coral Gables",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "NightGarden Fairchild tropical lights path",
+        "prompt": "A dark botanical garden path lit with glowing colors, oversized flowers, and reflective water"
+      },
+      "emoji": "✨",
+      "chip": "NOV. 12",
+      "logo": "fairchildgarden.org",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Nu Deco Ensemble with Common, Nov. 12",
+      "highlight": "Common",
+      "body": "Nu Deco Ensemble performs with Common on Thursday, Nov. 12.",
+      "place": "South Florida",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "orchestra performance with rapper on stage",
+        "prompt": "A live orchestra on stage with a rapper in front, bright concert lighting, and a full audience"
+      },
+      "emoji": "🎼",
+      "chip": "NOV. 12",
+      "logo": "nudecoensemble.com",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration",
+      "logoFile": null
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Miami Short Film Festival opens, Nov. 13",
+      "highlight": "Miami Short Film Festival",
+      "body": "The festival opens on Friday, Nov. 13 in Miami.",
+      "place": "Miami",
+      "source": "Miami New Times",
+      "photo": {
+        "query": "film festival red carpet movie projector Miami",
+        "prompt": "A cinema entrance with a red carpet, projector glow, and people entering a film festival venue"
+      },
+      "emoji": "🎬",
+      "chip": "NOV. 13",
+      "logo": "miamishortfilmfestival.com",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration",
+      "logoFile": "logo-5.png"
+    }
+  ],
+  "caption": "South Florida has concerts, film, and Veterans Day events this week. Who are you taking? Tag a friend 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "South Florida has concerts, film, and Veterans Day events this week. Who are you taking? Tag a friend 👀\n\n📰 Sources: Miami New Times, Sun Sentinel\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-11-11",
+  "id": "2026-11-11-upcoming"
+}
