@@ -1,0 +1,195 @@
+{
+  "title": "South Florida nightlife guide, cheapest first",
+  "sources": [
+    "Eventbrite",
+    "Resident Advisor",
+    "Secret Miami",
+    "Miami New Times"
+  ],
+  "collaborators": [
+    "iiipoints"
+  ],
+  "igCaption": "Cheap plans first for the next few nights.\nNov 11 to 21, South Florida, free and ticketed.\n\nSources: Eventbrite, Resident Advisor, Secret Miami, Miami New Times\n\n#SouthFlorida #FortLauderdale #Wynwood #Nightlife",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a plan for the next few nights? Start with the free ones, then work up from there.",
+      "overlay": [
+        "CHEAP PLANS",
+        "FIRST"
+      ],
+      "emojis": [
+        "🎟️",
+        "🌙",
+        "🎧",
+        "📍"
+      ],
+      "location": {
+        "name": "Downtown Fort Lauderdale",
+        "lat": 26.1224,
+        "lon": -80.1373,
+        "h": 20
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1500,
+        "pitch": -32,
+        "heading": 155
+      }
+    },
+    {
+      "kind": "item",
+      "text": "First up is Fort Lauderdale. Eventbrite has a Free Ladies Night listing for November twenty-first. The page puts it in Fort Lauderdale, so that one comes in free and easy to start the week.",
+      "caption": "First up is Fort Lauderdale. Eventbrite has a Free Ladies Night listing for Nov. 21. The page puts it in Fort Lauderdale, so that one comes in free and easy to start the week.",
+      "overlay": "FORT LAUD",
+      "badge": "FREE",
+      "sub": "Ladies Night listing",
+      "emoji": "💃",
+      "stats": [
+        {
+          "value": "FREE",
+          "label": "listed price"
+        },
+        {
+          "value": "NOV 21",
+          "label": "event date"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Fort Lauderdale",
+        "lat": 26.1224,
+        "lon": -80.1373,
+        "h": 20
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 60,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Next is Ctrl Room at Club M two. Resident Advisor has it listed with tickets on November eleventh. Club M two is in Miami, and the listing keeps it on the radar for a late-night stop.",
+      "caption": "Next is Ctrl Room at Club M2. Resident Advisor has it listed with tickets on Nov. 11. Club M2 is in Miami, and the listing keeps it on the radar for a late-night stop.",
+      "overlay": "CLUB M2",
+      "badge": "NOV 11",
+      "sub": "RA ticket listing",
+      "emoji": "🔊",
+      "stats": [
+        {
+          "value": "NOV 11",
+          "label": "listed date"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "Club M2",
+        "lat": 25.7915,
+        "lon": -80.1325,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 850,
+        "pitch": -35,
+        "heading": 118,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Club Perreo is on the Resident Advisor calendar at Supernatural Haus. The listing went up November fourth. It is a Latin party at a Miami room built for dancing. If you’re at Perreo, open NEAR later and see who danced there.",
+      "caption": "Club Perreo is on the Resident Advisor calendar at Supernatural Haus. The listing went up Nov. 4. It is a Latin party at a Miami room built for dancing. If you’re at Perreo, open NEAR later and see who danced there.",
+      "overlay": "SUPER HAUS",
+      "badge": "NOV 4",
+      "sub": "Club Perreo listing",
+      "emoji": "🪩",
+      "stats": [
+        {
+          "value": "NOV 4",
+          "label": "RA listing"
+        }
+      ],
+      "source": "Resident Advisor",
+      "location": {
+        "name": "Supernatural Haus",
+        "lat": 25.8002,
+        "lon": -80.2018,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 240,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Then comes Grand Theft Auto VI: The Festival at Mana Wynwood on Saturday, November twenty-first. Rockstar Games and PlayStation announced it, III Points is producing it, and the event uses two stages. Tickets run through a lottery.",
+      "caption": "Then comes Grand Theft Auto VI: The Festival at Mana Wynwood on Saturday, Nov. 21. Rockstar Games and PlayStation announced it, III Points is producing it, and the event uses two stages. Tickets run through a lottery.",
+      "overlay": "MANA WYNWOOD",
+      "badge": "NOV 21",
+      "sub": "Two-stage festival",
+      "emoji": "🎮",
+      "stats": [
+        {
+          "value": "NOV 21",
+          "label": "festival date"
+        },
+        {
+          "value": "2 STAGES",
+          "label": "announced setup"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Mana Wynwood",
+        "lat": 25.8017,
+        "lon": -80.2037,
+        "h": 25
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 900,
+        "pitch": -34,
+        "heading": 310,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "That gives you one free night, two club options, and one lottery ticket for the calendar. A night out in South Florida can leave you with a face you noticed and never named, and that is the kind of gap NEAR fills.",
+      "overlay": "YOUR PICK? 🎟️",
+      "sub": "Free first, then tickets",
+      "location": {
+        "name": "Mana Wynwood",
+        "lat": 25.8017,
+        "lon": -80.2037,
+        "h": 25
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -30,
+        "heading": 15
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "178-south-florida-nightlife-guide-cheapest-f"
+}
