@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "SIGNS",
+    "main": "YOU'RE THE FRIEND",
+    "highlight": "EVERYONE FOLLOWS",
+    "bottom": "AFTER MIDNIGHT",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "four stylish friends stepping out of a Brickell rooftop elevator after midnight, one woman in a blue satin top leading the group while everyone laughs and checks their phones, Miami skyline glowing behind them, flash photo lighting"
+    },
+    "emojis": [
+      "👀",
+      "🌃",
+      "✨"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Pick The Side Quest In Wynwood",
+      "highlight": "Side Quest",
+      "body": "Everyone said one place.\nNow you’re pointing at a neon door on NW 2nd Ave.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a group of five friends outside a packed Wynwood bar on NW 2nd Ave, one person excitedly pointing toward a neon side entrance while the others laugh and follow, colorful mural wall, humid midnight glow"
+      },
+      "emoji": "🌀",
+      "chip": "SIGN #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Know Which Elevator Opens Faster",
+      "highlight": "Elevator Opens",
+      "body": "Brickell rooftop lobby packed.\nYou’re already by the quiet elevator like security told you.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a confident friend standing by a less crowded elevator in a sleek Brickell rooftop lobby while a packed line waits across the room, friends looking impressed, marble floors, city lights through glass doors"
+      },
+      "emoji": "🏙️",
+      "chip": "SIGN #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Make The Wristband Look Planned",
+      "highlight": "Wristband Look",
+      "body": "South Beach stamp, LIV wristband, tiny bag.\nSomehow the outfit got better.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a stylish person in South Beach holding up their wrist with a club wristband and entry stamp, friends hyping them up outside a glowing club entrance, palm trees, blue and pink nightlife lighting"
+      },
+      "emoji": "🎟️",
+      "chip": "SIGN #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Find A Table Before Anyone Panics",
+      "highlight": "Find A Table",
+      "body": "No reservation drama.\nYou spot the one corner opening like you work there.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "inside a crowded Miami lounge, one friend spots an open corner table and gestures the group over before anyone else notices, low amber lighting, sparklers in the background, packed dance floor"
+      },
+      "emoji": "🛋️",
+      "chip": "SIGN #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Call The Safe Ride Before 3am Hits",
+      "highlight": "Safe Ride",
+      "body": "Surge is lurking.\nYou booked the car while everyone was still saying one more song.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "three friends outside a Miami club at 2:48am, one person proudly showing a confirmed rideshare on their phone while the group cheers, wet pavement reflecting neon signs, palm trees and traffic lights"
+      },
+      "emoji": "🚗",
+      "chip": "SIGN #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend everyone follows after midnight 👀",
+  "hashtags": [
+    "MiamiNightlife",
+    "BrickellNights"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend everyone follows after midnight 👀\n\n#MiamiNightlife #BrickellNights #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-10",
+  "id": "2026-11-10-social-20"
+}
