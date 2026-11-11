@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "WHAT YOUR",
+    "main": "MIAMI CLUB",
+    "highlight": "ORDER",
+    "bottom": "SAYS ABOUT YOU",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "four invented friends at a glossy South Beach club table, one holding sparkling water with lime, one holding espresso, one pointing at fries arriving, blue and pink lights, crowded dance floor, bottle sparklers in the background"
+    },
+    "emojis": [
+      "🍸",
+      "🌴",
+      "👀"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Sparkling Water With Lime",
+      "highlight": "Water With Lime",
+      "body": "You came to South Beach hydrated, booked, and fully aware tomorrow has beach potential.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented woman in a white blazer at a South Beach club bar holding sparkling water with lime, laughing with friends under blue neon lights, crowded dance floor behind her"
+      },
+      "emoji": "💧",
+      "chip": "ORDER #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Espresso Before Wynwood",
+      "highlight": "Espresso Before",
+      "body": "You said one stop, then found three more on NEAR before the first song ended.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented group of friends outside a Wynwood bar at midnight, one holding a tiny espresso cup, colorful mural walls, people lining up, warm streetlights and flash photography"
+      },
+      "emoji": "☕",
+      "chip": "ORDER #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Fries For The Table",
+      "highlight": "Fries For",
+      "body": "You are the friend who saves morale when the Brickell rooftop gets too cute to function.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented friend placing a huge tray of fries on a packed Brickell rooftop table, skyline glowing behind them, friends cheering, golden lights and humid Miami night air"
+      },
+      "emoji": "🍟",
+      "chip": "ORDER #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The Pretty Glass Drink",
+      "highlight": "Pretty Glass",
+      "body": "You already know the bathroom mirror at this place is about to do overtime.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented woman holding a colorful mocktail in a fancy coupe glass near a mirrored hallway at a Brickell lounge, friends posing behind her, pink bathroom lighting and chrome details"
+      },
+      "emoji": "🍹",
+      "chip": "ORDER #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Cafecito After The Club",
+      "highlight": "Cafecito After",
+      "body": "You turned 3:08am into a strategy meeting and somehow made tomorrow sound possible.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "four invented friends at a Miami ventanita after leaving a club, holding tiny cafecito cups, one checking NEAR on their phone, neon signs, late night street glow, laughing in line"
+      },
+      "emoji": "☕",
+      "chip": "ORDER #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend whose order gives them away immediately 👀",
+  "hashtags": [
+    "MiamiNightlife",
+    "SouthBeachNights"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend whose order gives them away immediately 👀\n\n#MiamiNightlife #SouthBeachNights #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-11",
+  "id": "2026-11-11-social-10"
+}
