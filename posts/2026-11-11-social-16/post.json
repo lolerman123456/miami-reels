@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "SIGNS",
+    "main": "YOU'RE THE FRIEND WHO SAYS",
+    "highlight": "ONE MORE",
+    "bottom": "IN MIAMI",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "four stylish friends laughing outside a packed Wynwood bar at 1:45am, one woman holding up one finger like she has a final plan, neon murals behind them, blue and pink streetlight, busy Miami sidewalk"
+    },
+    "emojis": [
+      "☝️",
+      "🌴",
+      "👀"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Call The Sidewalk Huddle",
+      "highlight": "Sidewalk Huddle",
+      "body": "Outside the Wynwood bar, you have everyone in a circle like the next move is a board meeting.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a group of five friends in dressed-up nightlife outfits forming a dramatic sidewalk circle outside a Wynwood bar, one person confidently pointing toward the next spot, neon mural walls, late-night Miami street glow"
+      },
+      "emoji": "☝️",
+      "chip": "SIGN #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Know A Better Room Upstairs",
+      "highlight": "Better Room",
+      "body": "Brickell rooftop packed? You already heard the music from the lounge nobody checked yet.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "two friends stepping out of a Brickell rooftop elevator into a hidden upstairs lounge with city lights behind them, one person smiling like they discovered the secret room, warm gold bar lighting"
+      },
+      "emoji": "🏙️",
+      "chip": "SIGN #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Say South Beach Is Close",
+      "highlight": "South Beach",
+      "body": "From Midtown, you say it with full confidence. The group pauses, then opens NEAR.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a stylish friend group standing near a rideshare pickup in Midtown Miami at night, one person showing a phone map toward South Beach, palm trees and headlights, everyone debating the next move"
+      },
+      "emoji": "📍",
+      "chip": "SIGN #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Turn The Lobby Into Plans",
+      "highlight": "Lobby Into Plans",
+      "body": "Everyone thought the night was ending. Now the hotel lobby has a new guest list.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a glamorous group of friends in a Miami Beach hotel lobby at 2am, one person sitting on a velvet couch rallying everyone for one more stop, marble floors, soft chandelier light, doorman in background"
+      },
+      "emoji": "🛋️",
+      "chip": "SIGN #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Promise Breakfast After",
+      "highlight": "Breakfast After",
+      "body": "One more song becomes pancakes in South Beach and beach talk for tomorrow.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "four friends in nightlife outfits sliding into a bright South Beach diner booth at 3:30am, plates of pancakes and fries on the table, everyone laughing under fluorescent lights, Ocean Drive glow outside"
+      },
+      "emoji": "🥞",
+      "chip": "SIGN #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who can turn one more into a whole Miami side quest ☝️",
+  "hashtags": [
+    "MiamiNightOut",
+    "WynwoodNights"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who can turn one more into a whole Miami side quest ☝️\n\n#MiamiNightOut #WynwoodNights #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-11",
+  "id": "2026-11-11-social-16"
+}
