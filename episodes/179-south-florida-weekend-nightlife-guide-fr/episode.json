@@ -1,0 +1,189 @@
+{
+  "title": "South Florida Weekend Nightlife Guide, Free And Cheap First",
+  "sources": [
+    "Secret Miami",
+    "WSVN 7News",
+    "Eventbrite",
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Cold front weekend, cheap plans first.\n\nSources: Secret Miami, WSVN 7News, Eventbrite, Miami New Times\n\n#SouthFlorida #Broward #WeekendGuide #Nightlife",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "South Florida gets its coolest weekend since March, so this nightlife guide starts with free and cheap plans.",
+      "overlay": [
+        "COOL WEEKEND",
+        "CHEAP PLANS"
+      ],
+      "emojis": [
+        "🌬️",
+        "🧥",
+        "🎶",
+        "🍹"
+      ],
+      "location": {
+        "name": "Dania Beach, Florida",
+        "lat": 26.05777778,
+        "lon": -80.1375,
+        "h": 12
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 120
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start with the free stuff in Fort Lauderdale. Eventbrite has a current page for fun free things to do there, and Friday night dips to around 59 degrees.",
+      "caption": "Start with the free stuff in Fort Lauderdale. Eventbrite has a current page for fun free things to do there, and Friday night dips to around 59 degrees.",
+      "overlay": "FREE LAUDERDALE",
+      "badge": "FREE",
+      "sub": "Friday low near 59",
+      "emoji": "🆓",
+      "stats": [
+        {
+          "value": "59°",
+          "label": "Friday low"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Fort Lauderdale, Florida",
+        "lat": 26.1224386,
+        "lon": -80.1373174,
+        "h": 20
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 40,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Next is Motek By The Sea at W Fort Lauderdale. The new oceanfront location has a $5 happy hour, about 12,000 square feet, and room for 315 diners.",
+      "caption": "Next is Motek By The Sea at W Fort Lauderdale. The new oceanfront location has a $5 happy hour, about 12,000 square feet, and room for 315 diners.",
+      "overlay": "MOTEK BY SEA",
+      "badge": "$5 HAPPY HR",
+      "sub": "W Fort Lauderdale",
+      "emoji": "🍸",
+      "stats": [
+        {
+          "value": "$5",
+          "label": "happy hour"
+        },
+        {
+          "value": "315",
+          "label": "seats"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "W Fort Lauderdale",
+        "lat": 26.129277,
+        "lon": -80.104219,
+        "h": 75
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1500,
+        "pitch": -36,
+        "heading": 105,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For Wilton Manors, Eventbrite has current pages for Hideaway on 26, soca parties, and whiskey festival activities. Saturday looks sunny with a high near 73. If you end up at Hideaway on 26, check NEAR for familiar faces.",
+      "caption": "For Wilton Manors, Eventbrite has current pages for Hideaway on 26, soca parties, and whiskey festival activities. Saturday looks sunny with a high near 73. If you end up at Hideaway on 26, check NEAR for familiar faces.",
+      "overlay": "WILTON MANORS",
+      "badge": "73° HIGH",
+      "sub": "Soca and whiskey pages",
+      "emoji": "🎧",
+      "stats": [
+        {
+          "value": "73°",
+          "label": "Saturday high"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Wilton Manors, Florida",
+        "lat": 26.160362,
+        "lon": -80.138934,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 210,
+        "degrees": 60,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "If you want an indoor night, check the Seminole Hard Rock in Hollywood. Eventbrite has a current page for Hard Rock casino parties, and Sunday stays near 77.",
+      "caption": "If you want an indoor night, check the Seminole Hard Rock in Hollywood. Eventbrite has a current page for Hard Rock casino parties, and Sunday stays near 77.",
+      "overlay": "HARD ROCK",
+      "badge": "77° SUNDAY",
+      "sub": "Hollywood casino nights",
+      "emoji": "🎰",
+      "stats": [
+        {
+          "value": "77°",
+          "label": "Sunday high"
+        }
+      ],
+      "source": "Eventbrite",
+      "location": {
+        "name": "Seminole Hard Rock Hotel & Casino Hollywood",
+        "lat": 26.051318,
+        "lon": -80.210034,
+        "h": 80
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1000,
+        "pitch": -34,
+        "heading": 300,
+        "degrees": 75,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which South Florida plan should we cover next weekend? A night out is full of faces you pass by without ever meeting them, and NEAR is what turns that blur into names and context.",
+      "overlay": "WHAT NEXT? 💬",
+      "sub": "Drop the plan",
+      "location": {
+        "name": "Dania Beach, Florida",
+        "lat": 26.05777778,
+        "lon": -80.1375,
+        "h": 12
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -30,
+        "heading": 160
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "179-south-florida-weekend-nightlife-guide-fr"
+}
