@@ -1,0 +1,200 @@
+{
+  "title": "South Florida nightlife this weekend",
+  "sources": [
+    "Secret Miami",
+    "Food & Wine",
+    "Miami New Times"
+  ],
+  "collaborators": [],
+  "igCaption": "Start with hoodie weather, then add Wynwood pizza, Coral Gables dinner, and a new late-night spot in Wynwood.\nNov 12-15, South Florida\n\nSources: Secret Miami, Food & Wine, Miami New Times\n\n#MiamiNightlife #MiamiWeekend #Wynwood #SouthFlorida",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "This weekend starts with hoodie weather, then moves to Wynwood pizza, Coral Gables dinner, and a new late-night spot in Wynwood.",
+      "overlay": [
+        "WEEKEND",
+        "NIGHT GUIDE"
+      ],
+      "emojis": [
+        "🌙",
+        "🍕",
+        "🍸",
+        "🧥"
+      ],
+      "location": {
+        "name": "Miami Beach",
+        "lat": 25.790654,
+        "lon": -80.130045,
+        "h": 25
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Friday night drops to around 59 degrees. Saturday is sunny with a high near 73 degrees. Miami has not dipped below 60 degrees since March 22.",
+      "caption": "Friday night drops to around 59°. Saturday is sunny with a high near 73°. Miami has not dipped below 60° since March 22.",
+      "overlay": "MIAMI WEATHER",
+      "badge": "59° LOW",
+      "sub": "Coolest since March",
+      "emoji": "🧥",
+      "stats": [
+        {
+          "value": "59°",
+          "label": "Friday low"
+        },
+        {
+          "value": "73°",
+          "label": "Saturday high"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Miami Beach",
+        "lat": 25.790654,
+        "lon": -80.130045,
+        "h": 25
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -32,
+        "heading": 120,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For a Wynwood dinner stop, Francesco Martucci is at 10 NE 27th St. Food & Wine named it Florida’s must-try pizzeria, and 50 Top Pizza ranked it No. 27 in the world.",
+      "caption": "For a Wynwood dinner stop, Francesco Martucci is at 10 NE 27th St. Food & Wine named it Florida’s must-try pizzeria, and 50 Top Pizza ranked it No. 27 in the world.",
+      "overlay": "FRANCESCO",
+      "badge": "NO. 27",
+      "sub": "Wynwood pizza stop",
+      "emoji": "🍕",
+      "stats": [
+        {
+          "value": "27",
+          "label": "World rank"
+        },
+        {
+          "value": "10 NE 27th St",
+          "label": "Address"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Francesco Martucci Miami",
+        "lat": 25.802532,
+        "lon": -80.193294,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -32,
+        "heading": 35,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "If Coral Gables is your dinner move, Eating House has been around 14 years. State inspectors closed it on Wednesday, November 4, and it reopened the next morning after a callback inspection at 9:52. If you end up at Eating House, check NEAR for who’s there.",
+      "caption": "If Coral Gables is your dinner move, Eating House has been around 14 years. State inspectors closed it on Wednesday, Nov. 4, and it reopened the next morning after a callback inspection at 9:52. If you end up at Eating House, check NEAR for who’s there.",
+      "overlay": "EATING HOUSE",
+      "badge": "14 YEARS",
+      "sub": "Reopened next day",
+      "emoji": "🍽️",
+      "stats": [
+        {
+          "value": "14",
+          "label": "Years open"
+        },
+        {
+          "value": "9:52",
+          "label": "Callback time"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Eating House",
+        "lat": 25.751964,
+        "lon": -80.259315,
+        "h": 12
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 650,
+        "pitch": -30,
+        "heading": 260,
+        "degrees": 55,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "For the late-night watchlist, Bronco opens in early December at 23rd Street and N. Miami Ave. The former Oasis space is 45,000 square feet, with a 350-seat saloon and a mechanical bull.",
+      "caption": "For the late-night watchlist, Bronco opens in early December at 23rd Street and N. Miami Ave. The former Oasis space is 45,000 square feet, with a 350-seat saloon and a mechanical bull.",
+      "overlay": "BRONCO",
+      "badge": "45K SQ FT",
+      "sub": "Opening early December",
+      "emoji": "🐂",
+      "stats": [
+        {
+          "value": "45,000",
+          "label": "Square feet"
+        },
+        {
+          "value": "350",
+          "label": "Saloon seats"
+        }
+      ],
+      "source": "Miami New Times",
+      "location": {
+        "name": "Bronco Miami",
+        "lat": 25.799902,
+        "lon": -80.194694,
+        "h": 18
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 750,
+        "pitch": -32,
+        "heading": 155,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Pick the dinner stop or the late-night spot. In a night out, the person you noticed at the bar but never met is exactly the kind of moment NEAR turns into a name.",
+      "overlay": "PICK ONE 🌙",
+      "sub": "Wynwood to Coral Gables",
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.801117,
+        "lon": -80.199408,
+        "h": 25
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 310
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "180-south-florida-nightlife-this-weekend"
+}
