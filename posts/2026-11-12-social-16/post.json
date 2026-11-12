@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "RED FLAGS",
+    "main": "YOU'RE IGNORING",
+    "highlight": "UPSTAIRS",
+    "bottom": "AT A BRICKELL ROOFTOP",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "a group of four stylish friends stepping out of a glass elevator onto a packed Brickell rooftop at night, neon blue bar lights, skyline glowing, one friend holding up their phone like they already found a problem"
+    },
+    "emojis": [
+      "🚩",
+      "🏙️",
+      "👀"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The Elevator Line Feels Like TSA",
+      "highlight": "Elevator Line",
+      "body": "You came for skyline pics. Now you're bonding with strangers on floor 38.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "five invented friends waiting in a crowded Brickell hotel elevator lobby at night, everyone dressed for a rooftop, gold mirrors, glowing elevator numbers, one woman checking her phone while people laugh behind her"
+      },
+      "emoji": "🛗",
+      "chip": "RED FLAG #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The View Is Doing All The Work",
+      "highlight": "The View",
+      "body": "The playlist is confused, but Biscayne Bay looks expensive so you stay.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a packed Brickell rooftop bar overlooking Biscayne Bay at midnight, blue skyline lights, invented partygoers taking photos by the glass railing while the dance floor behind them looks half full"
+      },
+      "emoji": "🌃",
+      "chip": "RED FLAG #2",
+      "photoFile": "photo-2.jpg",
+      "credit": "Photo: Kowloonese at English Wikipedia / Public domain"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Everyone Says Wynwood After This",
+      "highlight": "Wynwood After",
+      "body": "Nobody has ordered yet and the group chat is already planning the exit.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "three invented friends around a small high-top table on a Brickell rooftop, city lights behind them, one friend showing a group chat on their phone with a Wynwood map open, colorful cocktails untouched"
+      },
+      "emoji": "📍",
+      "chip": "RED FLAG #3",
+      "photoFile": "photo-3.jpg",
+      "credit": "Photo: Ralph Evans ralphevansphotography / CC0"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "The Best Spot Is By The Bathroom",
+      "highlight": "Best Spot",
+      "body": "Somehow the lighting there beats the whole rooftop. Photos are handled.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "two invented women taking mirror selfies near a stylish rooftop bathroom hallway in Brickell, soft pink lighting, marble walls, crowded rooftop visible through an open door behind them"
+      },
+      "emoji": "📸",
+      "chip": "RED FLAG #4",
+      "photoFile": "photo-4.jpg",
+      "credit": "Photo: JiriMatejicek / CC BY-SA 4.0"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "Your Safe Ride Costs More Than Dinner",
+      "highlight": "Safe Ride",
+      "body": "3:08am hits and everyone becomes a transportation analyst.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "four invented friends standing outside a Brickell rooftop entrance at 3am under blue streetlights, checking rideshare prices on phones, valet lights glowing, city towers behind them"
+      },
+      "emoji": "🚗",
+      "chip": "RED FLAG #5",
+      "photoFile": "photo-5.jpg",
+      "credit": "Photo: Nicácio Sales de Lima / CC BY-SA 4.0"
+    }
+  ],
+  "caption": "tag the friend who still says the rooftop is worth it 🚩",
+  "hashtags": [
+    "BrickellNightlife",
+    "MiamiRooftops"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who still says the rooftop is worth it 🚩\n\n#BrickellNightlife #MiamiRooftops #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-12",
+  "id": "2026-11-12-social-16"
+}
