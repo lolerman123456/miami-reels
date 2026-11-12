@@ -1,0 +1,189 @@
+{
+  "title": "South Florida nightlife this week",
+  "sources": [
+    "The Palm Beach Post",
+    "Latin Times",
+    "Secret Miami",
+    "Ones To Watch",
+    "The Miami Guide"
+  ],
+  "collaborators": [],
+  "igCaption": "Holiday lights, live music, and a Latin weekend out in South Florida.\n\nSources: The Palm Beach Post, Latin Times, Secret Miami, Ones To Watch, The Miami Guide\n\n#MiamiEvents #SouthFlorida #MiamiNightlife #PalmBeach",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a South Florida weekend plan? Start with lights, baseball, and live music.",
+      "overlay": [
+        "WEEKEND",
+        "PLANS"
+      ],
+      "emojis": [
+        "🎄",
+        "🎶",
+        "⚾",
+        "🌴"
+      ],
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 90
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "CityPlace in West Palm Beach starts its new holiday experience on November 14.",
+      "caption": "CityPlace in West Palm Beach starts its new holiday experience on Nov. 14.",
+      "overlay": "CITYPLACE",
+      "badge": "NOV 14",
+      "sub": "Holiday kickoff",
+      "emoji": "🎄",
+      "stats": [
+        {
+          "value": "NOV 14",
+          "label": "opening date"
+        }
+      ],
+      "source": "The Palm Beach Post",
+      "location": {
+        "name": "CityPlace",
+        "lat": 26.7134,
+        "lon": -80.0564,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Miami’s Choque de Gigantes weekend puts Venezuelan baseball, live music, and earthquake relief on the same bill.",
+      "caption": "Miami’s Choque de Gigantes weekend puts Venezuelan baseball, live music, and earthquake relief on the same bill.",
+      "overlay": "CHOQUE",
+      "badge": "WEEKEND",
+      "sub": "Baseball and music",
+      "emoji": "⚾",
+      "stats": [],
+      "source": "Latin Times",
+      "location": {
+        "name": "Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 90
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 1700,
+        "pitch": -35,
+        "heading": 65,
+        "degrees": 80,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Secret Miami’s weekend list covers November 13 to 15 and names 22 things to do. That gives you three days to pick something and still have time to change your mind. Pick one spot, then open NEAR and see who else was there.",
+      "caption": "Secret Miami’s weekend list covers Nov. 13 to 15 and names 22 things to do. Pick one spot, then open NEAR and see who else was there.",
+      "overlay": "MIAMI",
+      "badge": "22 THINGS",
+      "sub": "Nov. 13 to 15",
+      "emoji": "📍",
+      "stats": [
+        {
+          "value": "22",
+          "label": "things to do"
+        },
+        {
+          "value": "NOV 13-15",
+          "label": "weekend dates"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 90
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1600,
+        "pitch": -34,
+        "heading": 250,
+        "degrees": 90,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Ones To Watch published its Southeast concert picks on November 3. The list includes 13 concerts in November.",
+      "caption": "Ones To Watch published its Southeast concert picks on Nov. 3. The list includes 13 concerts in November.",
+      "overlay": "LIVE MUSIC",
+      "badge": "13 SHOWS",
+      "sub": "Southeast picks",
+      "emoji": "🎶",
+      "stats": [
+        {
+          "value": "13",
+          "label": "concert picks"
+        },
+        {
+          "value": "NOV 3",
+          "label": "published"
+        }
+      ],
+      "source": "Ones To Watch",
+      "location": {
+        "name": "Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 90
+      },
+      "shot": {
+        "type": "push",
+        "range": 1500,
+        "pitch": -33,
+        "heading": 315,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Which one would you do this weekend? Nightlife is full of faces you recognize for a second and lose in the crowd, and the NEAR app makes those missed connections feel less anonymous.",
+      "overlay": "PICK ONE 👇",
+      "sub": "Tell us your plan",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7617,
+        "lon": -80.1918,
+        "h": 90
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 2100,
+        "pitch": -32,
+        "heading": 180
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "183-south-florida-nightlife-this-week"
+}
