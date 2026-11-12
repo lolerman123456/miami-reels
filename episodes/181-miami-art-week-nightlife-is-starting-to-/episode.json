@@ -1,0 +1,190 @@
+{
+  "title": "Miami Art Week Nightlife Is Starting to Stack Up",
+  "sources": [
+    "Electronic Groove",
+    "Secret Miami",
+    "The Miami Guide",
+    "Miami New Times",
+    "Forbes",
+    "NBC 6 South Florida",
+    "Wallpaper*"
+  ],
+  "collaborators": [],
+  "igCaption": "Miami Art Week nightlife is already filling the calendar.\n\nSources: Electronic Groove, Secret Miami, The Miami Guide, Miami New Times, Forbes, NBC 6 South Florida, Wallpaper*\n\n#MiamiArtWeek #ArtBaselMiami #MiamiNightlife #MiamiEvents",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Miami Art Week nightlife is already stacking up. Parties, DJs, and concerts are landing across the week.",
+      "overlay": [
+        "MIAMI ART WEEK",
+        "NIGHTLIFE GUIDE"
+      ],
+      "emojis": [
+        "🎨",
+        "🎧",
+        "🌴",
+        "🌙"
+      ],
+      "location": {
+        "name": "Miami Beach Convention Center",
+        "lat": 25.7948,
+        "lon": -80.1332,
+        "h": 80
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 200
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Start on Miami Beach. Art Basel Miami Beach centers the week around the Miami Beach Convention Center. NBC 6 South Florida covered Miami Art Week 2025 with Art Basel, more fairs, and panels.",
+      "caption": "Start on Miami Beach. Art Basel Miami Beach centers the week around the Miami Beach Convention Center. NBC 6 South Florida covered Miami Art Week 2025 with Art Basel, more fairs, and panels.",
+      "overlay": "MIAMI BEACH",
+      "badge": "ART BASEL",
+      "sub": "Convention Center anchor",
+      "emoji": "🎨",
+      "stats": [
+        {
+          "value": "2025",
+          "label": "Art Week return"
+        }
+      ],
+      "source": "NBC 6 South Florida",
+      "location": {
+        "name": "Miami Beach Convention Center",
+        "lat": 25.7948,
+        "lon": -80.1332,
+        "h": 80
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 1500,
+        "pitch": -34,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Design Miami also sits in the Art Week orbit. Wallpaper* covered the November 18, 2025 edition. That keeps hotel events and dinners close to the design fair crowd.",
+      "caption": "Design Miami also sits in the Art Week orbit. Wallpaper* covered the November 18, 2025 edition. That keeps hotel events and dinners close to the design fair crowd.",
+      "overlay": "DESIGN MIAMI",
+      "badge": "NOV 18",
+      "sub": "Design week crowd",
+      "emoji": "🪑",
+      "stats": [
+        {
+          "value": "NOV 18",
+          "label": "Guide date"
+        }
+      ],
+      "source": "Wallpaper*",
+      "location": {
+        "name": "Miami Beach Convention Center",
+        "lat": 25.7948,
+        "lon": -80.1332,
+        "h": 80
+      },
+      "shot": {
+        "type": "push",
+        "range": 1200,
+        "pitch": -30,
+        "heading": 85
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Wynwood is the other nightlife zone to watch. Electronic Groove reported on November 12, 2026, that WHERE ARE MY KEYS revealed a Miami Basel lineup. If you’re in Wynwood, open NEAR and see who’s at Basel too.",
+      "caption": "Wynwood is the other nightlife zone to watch. Electronic Groove reported on November 12, 2026, that WHERE ARE MY KEYS revealed a Miami Basel lineup. If you’re in Wynwood, open NEAR and see who’s at Basel too.",
+      "overlay": "WYNWOOD",
+      "badge": "2026 LINEUP",
+      "sub": "Miami Basel party watch",
+      "emoji": "🎧",
+      "stats": [
+        {
+          "value": "NOV 12",
+          "label": "Lineup report"
+        },
+        {
+          "value": "2026",
+          "label": "Basel season"
+        }
+      ],
+      "source": "Electronic Groove",
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.804,
+        "lon": -80.199,
+        "h": 40
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 25,
+        "degrees": 60,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Electronic Groove also reported that Rampa joined ANOTR for a Miami Art Week celebration on November 12, 2026. That adds another electronic night to the calendar.",
+      "caption": "Electronic Groove also reported that Rampa joined ANOTR for a Miami Art Week celebration on November 12, 2026. That adds another electronic night to the calendar.",
+      "overlay": "ANOTR + RAMPA",
+      "badge": "NOV 12",
+      "sub": "Art Week celebration",
+      "emoji": "🔊",
+      "stats": [
+        {
+          "value": "NOV 12",
+          "label": "Report date"
+        }
+      ],
+      "source": "Electronic Groove",
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.804,
+        "lon": -80.199,
+        "h": 40
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 850,
+        "pitch": -35,
+        "heading": 310,
+        "degrees": 80,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Miami Art Week already has a full nightlife map. Miami Art Week already has a full nightlife map, and NEAR is the part that tells you who that person across the room was after the night blurs together.",
+      "overlay": "CALENDAR IS FILLING",
+      "sub": "Miami Beach and Wynwood",
+      "location": {
+        "name": "Wynwood",
+        "lat": 25.804,
+        "lon": -80.199,
+        "h": 40
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -32,
+        "heading": 260
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "181-miami-art-week-nightlife-is-starting-to-"
+}
