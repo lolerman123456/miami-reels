@@ -1,0 +1,218 @@
+{
+  "title": "South Florida nightlife guide: new openings, concerts, and candlelight plans",
+  "sources": [
+    "Miami’s Community News",
+    "Secret Miami",
+    "stupidDOPE"
+  ],
+  "collaborators": [],
+  "igCaption": "New openings and candlelight plans for South Florida this weekend.\nMiami and Sunrise, price not listed\n\nSources: Miami’s Community News, Secret Miami, stupidDOPE\n\n#MiamiNightlife #SouthFlorida #MiamiEvents #WeekendGuide",
+  "scenes": [
+    {
+      "kind": "hook",
+      "text": "Need a weekend plan? Start with the Miami River, where a new Italian Riviera restaurant is on the calendar.",
+      "overlay": [
+        "WEEKEND",
+        "NIGHT GUIDE"
+      ],
+      "emojis": [
+        "🌙",
+        "🎶",
+        "🍸",
+        "🕯️"
+      ],
+      "location": {
+        "name": "Miami River",
+        "lat": 25.7695,
+        "lon": -80.1996,
+        "h": 18
+      },
+      "shot": {
+        "type": "dive",
+        "range": 1600,
+        "pitch": -32,
+        "heading": 205
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Mercante is opening on the Miami River in January 2027. Nicola Siervo is behind it, and the concept is Italian Riviera on the river.",
+      "caption": "Mercante is opening on the Miami River in January 2027. Nicola Siervo is behind it, and the concept is Italian Riviera on the river.",
+      "overlay": "MIAMI RIVER",
+      "badge": "JAN 2027",
+      "sub": "Mercante is coming",
+      "emoji": "🍝",
+      "stats": [
+        {
+          "value": "2027",
+          "label": "opening year"
+        }
+      ],
+      "source": "Miami’s Community News",
+      "location": {
+        "name": "Miami River",
+        "lat": 25.7695,
+        "lon": -80.1996,
+        "h": 18
+      },
+      "shot": {
+        "type": "orbit",
+        "range": 900,
+        "pitch": -30,
+        "heading": 140,
+        "degrees": 70,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Candlelight is spreading Christmas concerts across four venues this winter. The lineup includes Trinity Episcopal Cathedral, Eden Roc Miami Beach, First Church Miami, and Jungle Island.",
+      "caption": "Candlelight is spreading Christmas concerts across four venues this winter. The lineup includes Trinity Episcopal Cathedral, Eden Roc Miami Beach, First Church Miami, and Jungle Island.",
+      "overlay": "4 VENUES",
+      "badge": "WINTER",
+      "sub": "Holiday strings",
+      "emoji": "🕯️",
+      "stats": [
+        {
+          "value": "4",
+          "label": "Miami venues"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Trinity Episcopal Cathedral",
+        "lat": 25.7906,
+        "lon": -80.1862,
+        "h": 35
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 800,
+        "pitch": -32,
+        "heading": 210,
+        "degrees": 65,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "At Trinity Episcopal Cathedral, a string quartet plays Christmas music for about an hour, surrounded by flameless candles. The set includes White Christmas and music from The Polar Express. If you go, open NEAR and see who else caught the quartet.",
+      "caption": "At Trinity Episcopal Cathedral, a string quartet plays Christmas music for about an hour, surrounded by flameless candles. The set includes White Christmas and music from The Polar Express. If you go, open NEAR and see who else caught the quartet.",
+      "overlay": "TRINITY",
+      "badge": "ABOUT 1 HOUR",
+      "sub": "Christmas soundtracks",
+      "emoji": "🎻",
+      "stats": [
+        {
+          "value": "about an hour",
+          "label": "concert length"
+        },
+        {
+          "value": "1942",
+          "label": "White Christmas"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Trinity Episcopal Cathedral",
+        "lat": 25.7906,
+        "lon": -80.1862,
+        "h": 35
+      },
+      "shot": {
+        "type": "arrive",
+        "range": 700,
+        "pitch": -34,
+        "heading": 35,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "The First Church Miami program starts with Dance of the Sugar Plum Fairy and moves through Feliz Navidad, Last Christmas, and All I Want for Christmas Is You. One track, Love Is All Around from Love Actually, spent 15 weeks at No. 1 in the UK charts in 1994.",
+      "caption": "The First Church Miami program starts with Dance of the Sugar Plum Fairy and moves through Feliz Navidad, Last Christmas, and All I Want for Christmas Is You. One track, Love Is All Around from Love Actually, spent 15 weeks at No. 1 in the UK charts in 1994.",
+      "overlay": "FIRST CHURCH",
+      "badge": "CLASSICS",
+      "sub": "Holiday strings",
+      "emoji": "🎶",
+      "stats": [
+        {
+          "value": "15 weeks at No. 1",
+          "label": "UK chart run"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "First Church Miami",
+        "lat": 25.7747,
+        "lon": -80.1936,
+        "h": 30
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 700,
+        "pitch": -34,
+        "heading": 35,
+        "degrees": 55,
+        "dir": -1
+      }
+    },
+    {
+      "kind": "item",
+      "text": "Jungle Island is also part of the lineup. The format stays the same with a string quartet, flameless candles, and Christmas music.",
+      "caption": "Jungle Island is also part of the lineup. The format stays the same with a string quartet, flameless candles, and Christmas music.",
+      "overlay": "JUNGLE ISLAND",
+      "badge": "WINTER VENUE",
+      "sub": "Holiday strings",
+      "emoji": "🌴",
+      "stats": [
+        {
+          "value": "4",
+          "label": "Miami venues"
+        }
+      ],
+      "source": "Secret Miami",
+      "location": {
+        "name": "Jungle Island",
+        "lat": 25.785,
+        "lon": -80.1742,
+        "h": 25
+      },
+      "shot": {
+        "type": "flyto",
+        "range": 900,
+        "pitch": -32,
+        "heading": 300,
+        "degrees": 75,
+        "dir": 1
+      }
+    },
+    {
+      "kind": "outro",
+      "text": "Mercante or candlelight, which one gets your weekend? Night out stories are full of people you notice in passing and never meet, which is exactly the kind of thing NEAR makes a little less anonymous.",
+      "overlay": "YOUR PICK? 🎶",
+      "sub": "Mercante or candles",
+      "location": {
+        "name": "Downtown Miami",
+        "lat": 25.7766,
+        "lon": -80.1937,
+        "h": 80
+      },
+      "shot": {
+        "type": "pullout",
+        "range": 1800,
+        "pitch": -34,
+        "heading": 160
+      }
+    }
+  ],
+  "format": "EVENTS / GUIDE",
+  "tiktok": true,
+  "music": true,
+  "voice": {
+    "provider": "openai",
+    "voice": "ash"
+  },
+  "id": "182-south-florida-nightlife-guide-new-openin"
+}
