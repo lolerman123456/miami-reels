@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "THE 5 STAGES",
+    "main": "OF YOUR MIAMI NIGHT",
+    "highlight": "GROUP CHAT",
+    "bottom": "GOING THROUGH 5 STAGES ON THE WAY TO LEGEND STATUS",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "five stylish friends laughing outside a neon-lit South Beach club at 2am, one holding up a phone with a rideshare map, palm trees glowing pink, party lights spilling onto the sidewalk"
+    },
+    "emojis": [
+      "🌴",
+      "✨",
+      "📍"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Say Dinner Is The Whole Plan",
+      "highlight": "Whole Plan",
+      "body": "Then Brickell starts glowing and suddenly everyone is checking who’s nearby on NEAR.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "four friends at an outdoor Brickell restaurant table at night, skyline lights behind them, one friend showing NEAR on their phone while everyone leans in laughing"
+      },
+      "emoji": "🍽️",
+      "chip": "STAGE 1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Choose The Bar By The Line",
+      "highlight": "The Bar",
+      "body": "Wynwood has three doors, two crowds, and you somehow pick the one that looks famous.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a packed Wynwood bar entrance at night with colorful murals, a confident friend pointing at the shorter line while the group follows, neon reflections on the sidewalk"
+      },
+      "emoji": "🚪",
+      "chip": "STAGE 2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Find The Loudest Corner",
+      "highlight": "Loudest Corner",
+      "body": "One song in and your table turns into the unofficial reunion for everyone you know.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a lively corner table inside a Miami lounge, friends cheering and waving more people over, blue and purple club lights, phones out capturing the moment"
+      },
+      "emoji": "🔊",
+      "chip": "STAGE 3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Vanish To The Rooftop View",
+      "highlight": "Rooftop View",
+      "body": "Brickell skyline hits and now everyone needs a photo like the night has sponsors.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "two friends posing on a Brickell rooftop at midnight with skyscrapers behind them, one friend crouched taking the perfect flash photo, city lights sparkling"
+      },
+      "emoji": "🏙️",
+      "chip": "STAGE 4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Make Sunrise Sound Reasonable",
+      "highlight": "Sound Reasonable",
+      "body": "3:12am, safe ride booked, someone says beach tomorrow, and nobody says no fast enough.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "a friend group outside a Miami late-night food spot at 3am, warm streetlights, takeout bags in hand, one person holding up a phone with a safe ride arriving"
+      },
+      "emoji": "🌅",
+      "chip": "STAGE 5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who turns one dinner into all five stages 🌴",
+  "hashtags": [
+    "MiamiNightOut",
+    "BrickellNights"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who turns one dinner into all five stages 🌴\n\n#MiamiNightOut #BrickellNights #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-11",
+  "id": "2026-11-11-social-20"
+}
