@@ -1,0 +1,110 @@
+{
+  "sector": "NIGHTLIFE",
+  "cover": {
+    "top": "TYPES OF",
+    "main": "PEOPLE YOU SEE AT",
+    "highlight": "EVERY DAY PARTY",
+    "bottom": "IN MIAMI",
+    "blur": false,
+    "photo": {
+      "query": "",
+      "prompt": "five stylish invented friends at a packed Miami Beach hotel pool day party, one holding a tiny fan, one filming sunglasses selfies, one pointing toward the cabanas, bright 2pm sun, palm shadows, sparkling pool, DJ booth in the background"
+    },
+    "emojis": [
+      "🌴",
+      "🕶️",
+      "🍟"
+    ],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Arrive With A Backup Swimsuit",
+      "highlight": "Backup Swimsuit",
+      "body": "South Beach pool party at 1pm, boat invite by 4. You came prepared because Miami changes plans fast.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented woman in a white coverup at a South Beach hotel pool party pulling a bright blue backup swimsuit from a tote while friends laugh under striped umbrellas, harsh sunny light, palm trees, DJ booth nearby"
+      },
+      "emoji": "👙",
+      "chip": "TYPE #1",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Know The Cabana Password Somehow",
+      "highlight": "Cabana Password",
+      "body": "No one saw you book anything, but suddenly the whole group has shade and a charger.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented friend in oversized sunglasses confidently waving a group into a cabana at a Miami Beach day party, white daybeds, pool towels, phone charging cables, bright afternoon light, crowded pool behind them"
+      },
+      "emoji": "🛋️",
+      "chip": "TYPE #2",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Treat Sunscreen Like Security",
+      "highlight": "Sunscreen Like Security",
+      "body": "SPF in the tote, mini fan in hand, sunglasses on. You are surviving the party and tomorrow.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented guy and girl at a Brickell rooftop pool day party applying sunscreen like a serious ritual, mini handheld fan, skyline behind them, golden afternoon sun, people dancing near the pool"
+      },
+      "emoji": "🧴",
+      "chip": "TYPE #3",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Find Fries Before The DJ Drops",
+      "highlight": "Find Fries",
+      "body": "Everyone is dancing, you are locating the snack window. The group will thank you in ten minutes.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented woman in a pink swimsuit coverup carrying a tray of fries through a packed Wynwood outdoor day party, colorful murals, DJ lights starting early, friends cheering from a high-top table"
+      },
+      "emoji": "🍟",
+      "chip": "TYPE #4",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "NIGHTLIFE",
+      "headline": "You Call Sunset Like A Meeting",
+      "highlight": "Call Sunset",
+      "body": "At 6:42 you point to the sky and suddenly everyone is taking pics facing Biscayne Bay.",
+      "source": "",
+      "photo": {
+        "query": "",
+        "prompt": "an invented group of friends at a Biscayne Bay waterfront day party turning toward a pink orange sunset for photos, one friend directing everyone with a phone raised, boats in the distance, warm golden light"
+      },
+      "emoji": "🌅",
+      "chip": "TYPE #5",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "tag the friend who has a whole day party role 🌴",
+  "hashtags": [
+    "MiamiDayParty",
+    "SouthBeachWeekend"
+  ],
+  "collaborators": [],
+  "igCaption": "tag the friend who has a whole day party role 🌴\n\n#MiamiDayParty #SouthBeachWeekend #miami #southflorida",
+  "kind": "social",
+  "kicker": "MIAMI AFTER DARK 🪩",
+  "date": "2026-11-12",
+  "id": "2026-11-12-social-09"
+}
