@@ -1,0 +1,116 @@
+{
+  "sector": "EVENTS",
+  "cover": {
+    "top": "SAVE THIS:",
+    "main": "HERE ARE THE BIG EVENTS THIS WEEK IN SOUTH FLORIDA",
+    "highlight": "BIG EVENTS",
+    "bottom": "👀",
+    "blur": false,
+    "photo": {
+      "query": "South Florida night events crowd concert lights art festival palm trees",
+      "prompt": "A dramatic South Florida night scene with concert lights, art crowd silhouettes, palm trees, and a busy event entrance"
+    },
+    "emojis": [
+      "👀",
+      "🎟️",
+      "🌴"
+    ],
+    "logos": [],
+    "photoFile": "photo-cover.png",
+    "credit": "AI illustration",
+    "logoFiles": []
+  },
+  "slides": [
+    {
+      "tag": "EVENTS",
+      "headline": "NightGarden in Coral Gables, Nov. 12",
+      "highlight": "NightGarden",
+      "body": "NightGarden opens Nov. 12 at Fairchild Tropical Botanic Garden in Coral Gables. It is an after-dark garden walk with light installations.",
+      "place": "Fairchild Tropical Botanic Garden, Coral Gables",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Fairchild Tropical Botanic Garden NightGarden lights Coral Gables",
+        "prompt": "Glowing light installations winding through tropical garden paths at Fairchild Tropical Botanic Garden at night"
+      },
+      "emoji": "🌙",
+      "chip": "NOV 12",
+      "photoFile": "photo-1.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Nu Deco Ensemble with Common, Nov. 12",
+      "highlight": "Nu Deco Ensemble",
+      "body": "Nu Deco Ensemble performs with Common on Nov. 12. The venue and ticket price were not listed in the event text.",
+      "place": "South Florida",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Nu Deco Ensemble Common Miami concert stage",
+        "prompt": "A live orchestra on a dark stage with bright concert lighting and a rapper on mic in South Florida"
+      },
+      "emoji": "🎻",
+      "chip": "NOV 12",
+      "photoFile": "photo-2.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Miami Short Film Festival opens, Nov. 13",
+      "highlight": "Miami Short Film Festival",
+      "body": "Miami Short Film Festival opens Nov. 13 in Miami. The screening venue, time, and ticket price were not listed in the event text.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "Miami short film festival audience cinema",
+        "prompt": "A packed Miami movie theater with a bright screen and audience silhouettes"
+      },
+      "emoji": "🎬",
+      "chip": "NOV 13",
+      "photoFile": "photo-3.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Candlelight Christmas concerts in Miami",
+      "highlight": "Candlelight concerts",
+      "body": "Candlelight concerts bring Christmas music to Trinity Episcopal Cathedral, Eden Roc Miami Beach, First Church Miami, and Jungle Island. Dates, times, and prices were not listed in the event text.",
+      "place": "Miami",
+      "source": "Secret Miami",
+      "photo": {
+        "query": "candlelight string quartet Miami church concert",
+        "prompt": "A string quartet performing in a candlelit Miami church with warm golden light and a formal audience"
+      },
+      "emoji": "🕯️",
+      "chip": "4 VENUES",
+      "photoFile": "photo-4.png",
+      "credit": "AI illustration"
+    },
+    {
+      "tag": "EVENTS",
+      "headline": "Seminole Modern exhibit at HFL, Nov. 6",
+      "highlight": "Seminole Modern",
+      "body": "Seminole Modern: Photographs and Artifacts from a Changing Florida is on view at HFL in Palm Beach County. The exact hours were not listed in the event text.",
+      "place": "Palm Beach County",
+      "source": "The Palm Beach Post",
+      "photo": {
+        "query": "museum exhibit photographs artifacts Florida gallery",
+        "prompt": "A museum gallery wall with framed Florida photographs and artifacts under clean spotlights"
+      },
+      "emoji": "🖼️",
+      "chip": "NOW",
+      "photoFile": "photo-5.png",
+      "credit": "AI illustration"
+    }
+  ],
+  "caption": "Save this for the week. Who are you taking? Tag a friend 👀",
+  "hashtags": [
+    "#SouthFloridaEvents",
+    "#MiamiEvents"
+  ],
+  "collaborators": [],
+  "igCaption": "Save this for the week. Who are you taking? Tag a friend 👀\n\n📰 Sources: Secret Miami, The Palm Beach Post\n\n#SouthFloridaEvents #MiamiEvents #miami #southflorida",
+  "kind": "upcoming",
+  "kicker": "THIS WEEK IN SOUTH FLORIDA 🎟️",
+  "date": "2026-11-12",
+  "id": "2026-11-12-upcoming"
+}
