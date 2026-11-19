@@ -219,7 +219,7 @@ async function main() {
   await run('npx', ['remotion', 'render', 'src/index.ts', comp, out, `--props=${path.join(dir, 'props.json')}`, `--public-dir=${dir}`,
     '--codec=h264', '--crf=20', '--audio-bitrate=192k', ...(!process.env.CI && fs.existsSync(local) ? [`--browser-executable=${local}`] : [])]);
   // Owner, Nov 19: speed the whole Reel up 1.3x (like the map Reels).
-  const speed = Number(process.env.TRULOADER_SPEED || 1.3);
+  const speed = Number(process.env.TRULOADER_SPEED || (comp === 'Cards' ? 1 : 1.3)); // owner, Nov 19: the tips/funny Reels were too fast
   if (speed && Math.abs(speed - 1) > 0.01) {
     const fast = path.join(dir, 'reel-fast.mp4');
     await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', out, '-filter_complex', `[0:v]setpts=PTS/${speed},fps=30[v];[0:a]atempo=${speed}[a]`,

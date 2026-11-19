@@ -199,18 +199,18 @@ const PACKS = [
     ['PILLOW', 'Your pillow from home', 'Small thing. Big difference']] },
   // ----- funny (at most every 4 days) -----
   { key: 'truck', funny: true, title: ['WHAT YOUR TRUCK', 'SAYS ABOUT YOU'], tag: 'WHAT YOUR TRUCK SAYS ABOUT YOU', hook: 'What your truck says about you. Be honest, which one are you?', ask: 'Which one are you? Be honest 👇', tags: '#peterbilt #kenworth', cta: 'Whatever you drive, find the loads that pay.', items: [
-    ['PETERBILT 389|Peterbilt 389', 'His chrome budget is bigger than his retirement.', '', 'Peterbilt three eighty nine. His chrome budget is bigger than his retirement.'],
-    ['KENWORTH W900|Kenworth W900', 'Still says “10-4” at the dinner table.', '', 'Kenworth W nine hundred. Still says ten four at the dinner table.'],
-    ['FREIGHTLINER CASCADIA|Freightliner Cascadia', 'Company driver. 14 years. Many opinions about dispatch.', '', 'Freightliner Cascadia. Company driver, fourteen years. Many opinions about dispatch.'],
-    ['VOLVO VNL|Volvo VNL', 'Sleeps 8 hours, eats salad, reads the manual. Suspicious.', '', 'Volvo. Sleeps eight hours, eats salad, reads the manual. Suspicious.'],
-    ['INTERNATIONAL LT|International LT truck', 'Bought it used, fixed it himself, will tell you about it. Twice.', '', 'International. Bought it used, fixed it himself, and will tell you about it. Twice.'],
-    ['MACK ANTHEM|Mack Anthem', 'Says “they don’t build ’em like they used to.” Is right.', '', 'Mack. Says they don’t build them like they used to. And he’s right.']] },
+    ['PETERBILT 389|Peterbilt 389', 'His chrome budget is bigger than his retirement.', 'Every light on that truck works. His knees don’t.', 'Peterbilt three eighty nine. His chrome budget is bigger than his retirement.'],
+    ['KENWORTH W900|Kenworth W900', 'Still says “10-4” at the dinner table.', 'Has a story for every exit on I-80. You will hear all of them.', 'Kenworth W nine hundred. Still says ten four at the dinner table.'],
+    ['FREIGHTLINER CASCADIA|Freightliner Cascadia', 'Company driver. 14 years. Many opinions about dispatch.', 'Has the dispatcher’s number saved as “DO NOT ANSWER.”', 'Freightliner Cascadia. Company driver, fourteen years. Many opinions about dispatch.'],
+    ['VOLVO VNL|Volvo VNL', 'Sleeps 8 hours, eats salad, reads the manual. Suspicious.', 'Has never once been late. Nobody trusts him.', 'Volvo. Sleeps eight hours, eats salad, reads the manual. Suspicious.'],
+    ['INTERNATIONAL LT|International LT truck', 'Bought it used, fixed it himself, will tell you about it. Twice.', 'Has more zip ties holding it together than bolts.', 'International. Bought it used, fixed it himself, and will tell you about it. Twice.'],
+    ['MACK ANTHEM|Mack Anthem', 'Says “they don’t build ’em like they used to.” Is right.', 'Will drive it until the wheels fall off. Then fix the wheels.', 'Mack. Says they don’t build them like they used to. And he’s right.']] },
   { key: 'trailer', photos: ['flatbed semi-trailer', 'refrigerated semi-trailer', 'box semi-trailer', 'lowboy semi-trailer', 'pickup gooseneck trailer'], funny: true, title: ['WHAT YOUR TRAILER', 'SAYS ABOUT YOU'], tag: 'WHAT YOUR TRAILER SAYS ABOUT YOU', hook: 'What your trailer says about you. Number five is going to start a fight.', ask: 'Hotshot guys, don’t come at us 👇', tags: '#flatbed #reefer', cta: 'Flatbed, reefer or van: find the loads that pay.', items: [
-    ['FLATBED', 'Can tarp a load in a thunderstorm. Can’t find his reading glasses.', ''],
-    ['REEFER', 'Hears that unit kick on in his sleep.', ''],
-    ['DRY VAN', 'Waited 6 hours at a dock and called it “a good day.”', '', 'Dry van. Waited six hours at a dock and called it a good day.'],
-    ['STEP DECK', 'Measures everything twice. Including the grill.', ''],
-    ['HOTSHOT', 'Tells everyone it’s “basically the same thing.”', '']] },
+    ['FLATBED', 'Can tarp a load in a thunderstorm. Can’t find his reading glasses.', 'They’re on his head. They’ve always been on his head.'],
+    ['REEFER', 'Hears that unit kick on in his sleep.', 'Hasn’t had a full night of sleep since 2009.'],
+    ['DRY VAN', 'Waited 6 hours at a dock and called it “a good day.”', 'Knows every vending machine on the East Coast.', 'Dry van. Waited six hours at a dock and called it a good day.'],
+    ['STEP DECK', 'Measures everything twice. Including the grill.', 'Owns four tape measures. Can’t find any of them.'],
+    ['HOTSHOT', 'Tells everyone it’s “basically the same thing.”', 'It’s not. But we love you anyway.']] },
   { key: 'oldschool', photos: ['logbook truck', 'CB radio', 'pay phone', 'road atlas', 'truck stop 1970s'], funny: true, title: ['ONLY REAL TRUCKERS', 'REMEMBER THIS'], tag: 'OLD SCHOOL TRUCKING', hook: 'Only real truckers remember these. How many do you remember?', ask: 'How many do you remember? 👇', tags: '#oldschooltrucking', cta: 'The load board moved to your phone. All of them, in one feed.', items: [
     ['PAPER LOGBOOKS', 'Every hour written by hand', 'Before ELDs became required in 2017', 'Paper logbooks. Every hour written by hand.'],
     ['YOUR CB HANDLE', 'Everybody knew it', 'Nobody knew your real name'],
@@ -218,29 +218,29 @@ const PACKS = [
     ['THE ROAD ATLAS', 'Folded and coffee-stained', 'Better than any GPS'],
     ['THE BOARD ON THE WALL', 'Loads posted at the truck stop', 'Now it’s in your pocket']] },
   { key: 'truckstop', photos: ['truck stop night', 'semi truck backing', 'truck stop parking', 'truck stop diner', 'truck stop showers'], funny: true, title: ['TYPES OF TRUCKERS', 'AT THE TRUCK STOP'], tag: 'TRUCK STOP TYPES', hook: 'Types of truckers at every truck stop. You’re one of them.', ask: 'Which one are you? 👇', items: [
-    ['THE 4AM GUY', 'Coffee in hand, already done his pre-trip', ''],
-    ['ONE-SHOT', 'Backs in on the first try. Doesn’t look around to see who saw. (He looks.)', '', 'One shot. Backs in on the first try. Then checks who saw.'],
-    ['SIX TRIES', 'Gets out and looks. Every. Single. Time.', '', 'Six tries. Gets out and looks, every single time.'],
-    ['THE STORYTELLER', 'Has been driving since before you were born. Will tell you.', ''],
-    ['THE SHOWER GUY', 'Knows every shower number by heart', '']] },
+    ['THE 4AM GUY', 'Coffee in hand, already done his pre-trip', 'Has been up since 3. Wants you to know.'],
+    ['ONE-SHOT', 'Backs in on the first try. Doesn’t look around to see who saw. (He looks.)', 'Then walks in like nothing happened.', 'One shot. Backs in on the first try. Then checks who saw.'],
+    ['SIX TRIES', 'Gets out and looks. Every. Single. Time.', 'Everybody at the fuel island is watching. He knows.', 'Six tries. Gets out and looks, every single time.'],
+    ['THE STORYTELLER', 'Has been driving since before you were born. Will tell you.', 'Started with “back in ’79…” Never stopped.'],
+    ['THE SHOWER GUY', 'Knows every shower number by heart', 'Has opinions about every truck stop’s water pressure.']] },
   { key: 'neversay', photos: ['truck driver cab', 'semi truck highway', 'semi truck backing up', 'truck parking', 'semi truck interstate'], funny: true, title: ['NEVER SAY THIS', 'TO A TRUCKER'], tag: 'NEVER SAY THIS', hook: 'Things you should never say to a trucker. Number one, really.', ask: 'What’s the worst one you’ve heard? 👇', items: [
-    ['#1', '“Must be nice sitting all day”', '', 'One. Must be nice sitting all day.'],
-    ['#2', '“So it’s basically a road trip?”', '', 'Two. So it’s basically a road trip?'],
-    ['#3', '“How hard can backing up be?”', '', 'Three. How hard can backing up be?'],
-    ['#4', '“Can’t you just park anywhere?”', '', 'Four. Can’t you just park anywhere?'],
-    ['#5', '“You get paid to drive around?”', '', 'Five. You get paid to drive around?']] },
+    ['#1', '“Must be nice sitting all day”', 'Try sitting 11 hours, then tarping a load in the rain.', 'One. Must be nice sitting all day.'],
+    ['#2', '“So it’s basically a road trip?”', 'Sure. A road trip with a deadline, a dispatcher and no bathroom.', 'Two. So it’s basically a road trip?'],
+    ['#3', '“How hard can backing up be?”', 'Here’s 53 feet. Go ahead.', 'Three. How hard can backing up be?'],
+    ['#4', '“Can’t you just park anywhere?”', 'At 9pm? There is no anywhere.', 'Four. Can’t you just park anywhere?'],
+    ['#5', '“You get paid to drive around?”', 'Every box in your house rode in a truck first.', 'Five. You get paid to drive around?']] },
   { key: 'toolong', photos: ['grocery store parking lot', 'semi trucks highway', 'diner', 'semi truck', 'CB radio'], funny: true, title: ['SIGNS YOU’VE BEEN', 'TRUCKING TOO LONG'], tag: 'TRUCKING TOO LONG', hook: 'Signs you’ve been trucking too long. Number two is everybody.', ask: 'Tag the guy who does all five 👇', items: [
-    ['#1', 'You back into the grocery store spot', '', 'One. You back into your parking spot at the grocery store.'],
-    ['#2', 'You judge every truck on the highway', '', 'Two. You judge every truck on the highway.'],
-    ['#3', 'You eat dinner at 4pm', '', 'Three. You eat dinner at four PM.'],
-    ['#4', 'You wave at trucks from your car', '', 'Four. You wave at trucks from your car.'],
-    ['#5', 'You say “10-4” to your wife', '', 'Five. You say ten four to your wife.']] },
+    ['#1', 'You back into the grocery store spot', 'In a minivan. Perfectly.', 'One. You back into your parking spot at the grocery store.'],
+    ['#2', 'You judge every truck on the highway', '“Look at that load securement…”', 'Two. You judge every truck on the highway.'],
+    ['#3', 'You eat dinner at 4pm', 'And breakfast at midnight.', 'Three. You eat dinner at four PM.'],
+    ['#4', 'You wave at trucks from your car', 'And get mad when they don’t wave back.', 'Four. You wave at trucks from your car.'],
+    ['#5', 'You say “10-4” to your wife', 'She does not think it’s funny anymore.', 'Five. You say ten four to your wife.']] },
   { key: 'dispatcher', photos: ['truck dispatcher office', 'loading dock trucks', 'freight rates', 'semi truck sunset', 'telephone office'], funny: true, title: ['WHAT DISPATCH SAYS', 'VS WHAT IT MEANS'], tag: 'DISPATCH TRANSLATOR', hook: 'What dispatch says, and what it really means.', ask: 'What did we miss? 👇', items: [
-    ['“QUICK LOAD”', 'There is nothing quick about it', ''],
-    ['“EASY DOCK”', 'You’ll be there 6 hours', '', 'Easy dock. You’ll be there six hours.'],
-    ['“GREAT RATE”', 'For them', ''],
-    ['“HOME BY FRIDAY”', 'Which Friday is not specified', ''],
-    ['“I’LL CALL YOU BACK”', 'He will not call you back', '']] },
+    ['“QUICK LOAD”', 'There is nothing quick about it', 'Three stops, two lumpers, one locked gate.'],
+    ['“EASY DOCK”', 'You’ll be there 6 hours', 'Bring a book. Bring two.', 'Easy dock. You’ll be there six hours.'],
+    ['“GREAT RATE”', 'For them', 'Not for you. Never for you.'],
+    ['“HOME BY FRIDAY”', 'Which Friday is not specified', 'Could be this one. Probably not.'],
+    ['“I’LL CALL YOU BACK”', 'He will not call you back', 'You will call him. Four times.']] },
   { key: 'fourwheelers', photos: ['traffic semi truck', 'truck blind spot', 'highway merge traffic', 'highway traffic trucks', 'truck parking lot'], funny: true, title: ['THINGS CARS DO', 'THAT DRIVE US CRAZY'], tag: 'FOUR-WHEELERS', hook: 'Things four wheelers do that drive truckers crazy.', ask: 'Which one gets you the most? 👇', items: [
     ['#1', 'Cut in and brake', 'Right into your stopping distance', 'One. Cut in front and hit the brakes.'],
     ['#2', 'Live in the blind spot', 'For 20 miles', 'Two. Ride in your blind spot for twenty miles.'],
@@ -252,7 +252,7 @@ const packBuilder = (p) => async () => ({
   photos: p.photos,
   id: `${p.key}-1`, ttlDays: 6, funny: !!p.funny, title: p.title, tag: p.tag, source: '', showMap: false, cta: p.cta,
   hook: p.hook,
-  items: p.items.map(([kq, title, sub = '', say], i) => { const [kicker, own] = kq.split('|'); return { kicker, big: '', title, sub, photo: own || p.photos?.[i % p.photos.length], strict: !!own, say: say || `${kicker.replace(/[#“”"]/g, '')}. ${title.replace(/[“”"]/g, '')}` }; }),
+  items: p.items.map(([kq, title, sub = '', say], i) => { const [kicker, own] = kq.split('|'); return { kicker, big: '', title, sub, photo: own || p.photos?.[i % p.photos.length], strict: !!own, say: `${say || `${kicker.replace(/[#“”"]/g, '')}. ${title.replace(/[“”"]/g, '')}`} ${sub.replace(/[“”"]/g, '')}`.trim() }; }),
   caption: `${p.hook}\n\n${p.items.map(([kq, t]) => kq.split('|')[0]).map((k, i) => [k, p.items[i][1]]).map(([k, t]) => `• ${k.startsWith('#') ? '' : `${k}: `}${t}`).join('\n')}\n\n${p.ask}\n\nEvery load board in one feed, with a broker check on every load. Try TruLoader free for 3 days: truloader.com\n\n${TAGS}${p.tags ? ` ${p.tags}` : ''}`,
 });
 for (const p of PACKS) BUILDERS[p.key] = packBuilder(p);
@@ -300,11 +300,11 @@ export async function buildConcept(name, { dir, lanes, brand }) {
   const fr = (sec) => Math.ceil(sec * FPS);
   let at = 75;
   try {
-    process.env.KOKORO_VOICE ||= 'am_adam'; process.env.KOKORO_SPEED ||= '1.2';
+    process.env.KOKORO_VOICE ||= 'am_adam'; process.env.KOKORO_SPEED = process.env.TRULOADER_VOICE_SPEED || '1.0'; // owner, Nov 19: slower
     const { makeNarration } = await import('./voice.mjs');
     const { timeline } = await makeNarration({ voice: { provider: 'kokoro' }, scenes }, dir);
     props.hookFrames = Math.max(60, fr(timeline[0].duration)); at = props.hookFrames;
-    spec.items.forEach((it, i) => { const d = Math.max(66, fr(timeline[i + 1].duration) + 10); props.items.push({ ...it, start: at, dur: d }); at += d; });
+    spec.items.forEach((it, i) => { const d = Math.max(135, fr(timeline[i + 1].duration) + 30); props.items.push({ ...it, start: at, dur: d }); at += d; });
     const { execFileSync } = await import('node:child_process');
     const parts = timeline.map((t, i) => ({ file: path.join(dir, 'voice', `${i}.wav`), at: i === 0 ? t.speechStart : (i <= spec.items.length ? props.items[i - 1].start / FPS + 0.15 : at / FPS + 0.4) }));
     execFileSync('ffmpeg', ['-y', '-loglevel', 'error', ...parts.flatMap(p => ['-i', p.file]), '-filter_complex',
