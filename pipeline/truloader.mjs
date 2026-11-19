@@ -154,7 +154,13 @@ async function main() {
   const post = { id: `truloader-${id}`, week: [data.weekStart, data.weekEnd], video: out, caption };
   writeJSON(path.join(dir, 'post.json'), post);
   console.log(`✔ ${out}\n\n${caption}\n`);
-  if (dryRun) { console.log('(dry run) not posted'); return post; }
+  if (dryRun) {
+    if (process.env.TRULOADER_FB_TOKEN) {
+      try { const t = await pageToken(); console.log(`Facebook token check: OK, can post to "${t.name}"`); }
+      catch (e) { console.log(`Facebook token check: FAILED, ${e.message}`); }
+    } else console.log('Facebook token check: TRULOADER_FB_TOKEN not set');
+    console.log('(dry run) not posted'); return post;
+  }
 
   step('Posting to the TruLoader Facebook Page');
   const res = await postPageReel(out, caption);
