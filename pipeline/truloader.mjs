@@ -164,9 +164,12 @@ export async function addVoiceAndMusic(props, dir) {
   } catch (e) {
     console.log(`⚠ voiceover failed (${String(e.message).slice(0, 200)}) — continuing without voice`);
   }
-  const { makeBeat } = await import('./beat.mjs');
-  makeBeat(path.join(dir, 'music.wav'), props.durationInFrames / FPS + 1);
-  props.music = 'music.wav';
+  // Owner, Nov 19: no home-made beat. Music is a trending Facebook sound, which the Page Reels API cannot attach.
+  if (process.env.TRULOADER_BEAT === '1') {
+    const { makeBeat } = await import('./beat.mjs');
+    makeBeat(path.join(dir, 'music.wav'), props.durationInFrames / FPS + 1);
+    props.music = 'music.wav';
+  }
 }
 
 async function main() {
@@ -194,6 +197,14 @@ async function main() {
   const local = '/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell';
   await run('npx', ['remotion', 'render', 'src/index.ts', 'Lanes', out, `--props=${path.join(dir, 'props.json')}`, `--public-dir=${dir}`,
     '--codec=h264', '--crf=20', '--audio-bitrate=192k', ...(!process.env.CI && fs.existsSync(local) ? [`--browser-executable=${local}`] : [])]);
+  // Owner, Nov 19: speed the whole Reel up 1.3x (like the map Reels).
+  const speed = Number(process.env.TRULOADER_SPEED || 1.3);
+  if (speed && Math.abs(speed - 1) > 0.01) {
+    const fast = path.join(dir, 'reel-fast.mp4');
+    await run('ffmpeg', ['-y', '-loglevel', 'error', '-i', out, '-filter_complex', `[0:v]setpts=PTS/${speed},fps=30[v];[0:a]atempo=${speed}[a]`,
+      '-map', '[v]', '-map', '[a]', '-c:v', 'libx264', '-crf', '20', '-preset', 'medium', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', fast]);
+    fs.renameSync(fast, out);
+  }
   const caption = captionFor(data, props);
   const post = { id: `truloader-${id}`, week: [data.weekStart, data.weekEnd], video: out, caption };
   writeJSON(path.join(dir, 'post.json'), post);
