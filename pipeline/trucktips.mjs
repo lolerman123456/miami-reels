@@ -101,97 +101,97 @@ const BUILDERS = {
 // ---------- evergreen packs (owner, Nov 19: "write more evergreen packs so it's 4 a day") ----------
 // [kicker, title, sub, spoken?]. Spoken defaults to "kicker. title". funny packs post at most every 4 days, evening slot only.
 const PACKS = [
-  { key: 'redflags', title: ['5 SIGNS A LOAD', 'IS A SCAM'], tag: 'BROKER RED FLAGS', hook: 'Five signs that load is a scam. Number three gets drivers every week.', ask: 'Tag a driver who needs this 👇', tags: '#doublebrokering', items: [
+  { key: 'redflags', photos: ['truck driver phone', 'semi truck parked', 'loading dock trucks', 'truck stop night', 'semi trailer truck highway'], title: ['5 SIGNS A LOAD', 'IS A SCAM'], tag: 'BROKER RED FLAGS', hook: 'Five signs that load is a scam. Number three gets drivers every week.', ask: 'Tag a driver who needs this 👇', tags: '#doublebrokering', items: [
     ['#1', 'Their MC number is brand new', 'A few weeks old? Look up the authority date on FMCSA before you book', 'One. Their MC number is brand new. Check the authority date before you book.'],
     ['#2', 'The rate is way above the lane', 'If it pays a dollar more than everything else, ask why', 'Two. The rate is way above everything else on that lane.'],
     ['#3', 'The email doesn’t match the company', 'Gmail, or one letter off the real domain = someone posing as a real broker', 'Three. The email doesn’t match the company. One letter off is all it takes.'],
     ['#4', 'They want money from YOU', 'Any “setup fee”, deposit or payment app request is a no', 'Four. They ask you for money. A setup fee, a deposit. That’s a no.'],
     ['#5', 'No rate con, or the address changes', 'Get it in writing before you roll. New pickup after dispatch? Call the shipper', 'Five. No rate confirmation, or the pickup address changes after dispatch.']] },
-  { key: 'brokercheck', title: ['CHECK THIS BEFORE', 'YOU BOOK A LOAD'], tag: 'BROKER CHECK', hook: 'Check these five things before you book with a broker you don’t know.', ask: 'What do you check first? 👇', items: [
+  { key: 'brokercheck', photos: ['semi truck highway', 'freight broker office', 'truck stop', 'loading dock semi', 'truck driver cab'], title: ['CHECK THIS BEFORE', 'YOU BOOK A LOAD'], tag: 'BROKER CHECK', hook: 'Check these five things before you book with a broker you don’t know.', ask: 'What do you check first? 👇', items: [
     ['AUTHORITY', 'Active broker authority', 'Look up their MC on FMCSA. Active, and not brand new'],
     ['BOND', 'Broker bond on file', 'Brokers need a $75,000 bond. No bond, no load', 'Bond. Brokers need a seventy five thousand dollar bond on file.'],
     ['PAY', 'How fast do they pay?', 'Days to pay and credit score tell you who pays late'],
     ['REVIEWS', 'What other drivers say', 'One bad review is noise. Ten is a pattern'],
     ['RATE CON', 'Everything on paper', 'Rate, stops, times, detention, lumper. Before you roll']] },
-  { key: 'rookie', title: ['ROOKIE MISTAKES', 'THAT COST YOU MONEY'], tag: 'ROOKIE MISTAKES', hook: 'Rookie mistakes that cost you money. Most drivers made number two.', ask: 'Which one did you make? 👇', items: [
+  { key: 'rookie', photos: ['semi truck highway', 'truck stop parking', 'loading dock trucks', 'semi truck night', 'empty flatbed trailer'], title: ['ROOKIE MISTAKES', 'THAT COST YOU MONEY'], tag: 'ROOKIE MISTAKES', hook: 'Rookie mistakes that cost you money. Most drivers made number two.', ask: 'Which one did you make? 👇', items: [
     ['#1', 'Taking the first load offered', 'The first number is the broker’s best case, not yours', 'One. Taking the first load they offer.'],
     ['#2', 'Forgetting the deadhead', 'A great rate 200 miles away isn’t a great rate', 'Two. Forgetting the deadhead miles.'],
     ['#3', 'Not knowing your cost per mile', 'If you don’t know it, you can’t tell a good load from a bad one', 'Three. Not knowing your cost per mile.'],
     ['#4', 'Booking without detention terms', 'Six hours at a dock for free adds up fast', 'Four. Booking without detention terms.'],
     ['#5', 'No plan for the reload', 'Delivering into a dead market means driving out empty', 'Five. No plan for the next load out.']] },
-  { key: 'negotiate', title: ['GET MORE PER MILE', 'FROM ANY BROKER'], tag: 'NEGOTIATING', hook: 'How to get more per mile from any broker. Use number three today.', ask: 'What’s your best negotiating line? 👇', items: [
+  { key: 'negotiate', photos: ['truck driver phone', 'semi truck parked', 'freight yard trucks', 'semi truck sunset', 'truck driver cab'], title: ['GET MORE PER MILE', 'FROM ANY BROKER'], tag: 'NEGOTIATING', hook: 'How to get more per mile from any broker. Use number three today.', ask: 'What’s your best negotiating line? 👇', items: [
     ['KNOW THE LANE', 'Know what it usually pays', 'Check the lane average before you call'],
     ['ASK', '“What’s the best you can do?”', 'Then stay quiet. Let them fill the silence', 'Ask. What’s the best you can do? Then stay quiet.'],
     ['TIMING', 'Late-day loads pay more', 'Loads still posted in the afternoon are hot. Brokers need trucks', 'Timing. Loads still posted late in the day pay more.'],
     ['LEVERAGE', '“I’m empty and close”', 'A truck that can load today is worth more to them'],
     ['LOCK IT', 'Get it on the rate con', 'A promise on the phone is not a rate']] },
-  { key: 'costpermile', title: ['DO YOU KNOW YOUR', 'COST PER MILE?'], tag: 'COST PER MILE', hook: 'Most owner operators can’t answer this. What’s your cost per mile?', ask: 'Owner-operators: what’s yours? 👇', items: [
+  { key: 'costpermile', photos: ['truck fuel pump diesel', 'semi truck highway', 'truck repair shop', 'semi truck tires', 'truck driver'], title: ['DO YOU KNOW YOUR', 'COST PER MILE?'], tag: 'COST PER MILE', hook: 'Most owner operators can’t answer this. What’s your cost per mile?', ask: 'Owner-operators: what’s yours? 👇', items: [
     ['FUEL', 'Usually the biggest one', 'Gallons per mile × what you pay at the pump'],
     ['TRUCK & TRAILER', 'Payments or lease', 'Divide the monthly payment by the miles you run'],
     ['INSURANCE', 'Every month, loaded or not', 'Spread it over your yearly miles'],
     ['MAINTENANCE', 'Tires, oil, repairs', 'Set money aside every mile. It always comes due'],
     ['YOU', 'Pay yourself', 'If it’s not in the math, you’re working for free']] },
-  { key: 'detention', title: ['GET PAID', 'FOR WAITING'], tag: 'DETENTION PAY', hook: 'Sitting at the dock for free? Here’s how to get paid for waiting.', ask: 'Longest you’ve waited at a dock? 👇', items: [
+  { key: 'detention', photos: ['loading dock trucks', 'warehouse loading dock', 'semi trucks waiting', 'distribution center trucks', 'truck stop'], title: ['GET PAID', 'FOR WAITING'], tag: 'DETENTION PAY', hook: 'Sitting at the dock for free? Here’s how to get paid for waiting.', ask: 'Longest you’ve waited at a dock? 👇', items: [
     ['BEFORE', 'Ask the detention terms', 'How many free hours, and how much per hour after'],
     ['ON PAPER', 'Put it on the rate con', 'If it’s not written down, it didn’t happen'],
     ['TIMES', 'Get in and out times signed', 'On the BOL, every time'],
     ['UPDATE', 'Tell the broker early', 'Let them know before the free time runs out'],
     ['PROOF', 'Photos with timestamps', 'Check-in, the dock, the clock. Proof gets paid']] },
-  { key: 'winter', title: ['WINTER DRIVING', 'CHECKLIST'], tag: 'WINTER READY', hook: 'Winter is here. Five things to check before your next run.', ask: 'What’s in your winter kit? 👇', tags: '#winterdriving', items: [
+  { key: 'winter', photos: ['semi truck snow', 'truck tire chains', 'semi truck winter highway', 'truck stop snow', 'icy bridge road'], title: ['WINTER DRIVING', 'CHECKLIST'], tag: 'WINTER READY', hook: 'Winter is here. Five things to check before your next run.', ask: 'What’s in your winter kit? 👇', tags: '#winterdriving', items: [
     ['DIESEL', 'Anti-gel before the cold hits', 'Treat the fuel before it gels, not after'],
     ['CHAINS', 'Chains, and you know how', 'Some passes require them. Practice before you need it'],
     ['TANKS', 'Keep the tanks full', 'Less condensation, and fuel if you get stuck'],
     ['KIT', 'Warm clothes, food, water', 'Assume you could sit for hours'],
     ['BRIDGES', 'Bridges freeze first', 'Slow down before the overpass, not on it']] },
-  { key: 'fuelsave', title: ['SAVE ON FUEL', 'STARTING TODAY'], tag: 'FUEL SAVING', hook: 'Five ways to burn less fuel, starting today.', ask: 'Best fuel trick you know? 👇', tags: '#diesel', items: [
+  { key: 'fuelsave', photos: ['semi truck highway', 'diesel pump truck stop', 'idling truck', 'semi truck tires', 'truck aerodynamic'], title: ['SAVE ON FUEL', 'STARTING TODAY'], tag: 'FUEL SAVING', hook: 'Five ways to burn less fuel, starting today.', ask: 'Best fuel trick you know? 👇', tags: '#diesel', items: [
     ['SPEED', 'Slow down a little', 'Wind drag grows fast with speed. A few mph saves real money'],
     ['IDLE', 'Idle less', 'Idling burns fuel for zero miles'],
     ['TIRES', 'Check tire pressure', 'Low tires drag and burn more fuel'],
     ['WHERE', 'Fuel where it’s cheaper', 'Prices change a lot by region. Plan the stop'],
     ['SMOOTH', 'Easy on the throttle', 'Smooth starts and coasting to stops add up']] },
-  { key: 'loadtips', title: ['FIND BETTER LOADS', 'FASTER'], tag: 'LOAD BOARD TIPS', hook: 'Spend less time on the load board and find better loads.', ask: 'How long do you spend on load boards a day? 👇', items: [
+  { key: 'loadtips', photos: ['semi truck highway', 'freight yard', 'flatbed trailer load', 'truck stop', 'semi trucks interstate'], title: ['FIND BETTER LOADS', 'FASTER'], tag: 'LOAD BOARD TIPS', hook: 'Spend less time on the load board and find better loads.', ask: 'How long do you spend on load boards a day? 👇', items: [
     ['RADIUS', 'Search a wider radius', 'The best load might be 40 miles further out'],
     ['RELOAD', 'Check reloads near the drop', 'Before you book, look at what’s going out from there'],
     ['BACKHAUL', 'Book the backhaul early', 'Don’t wait until you’re empty to look'],
     ['BROKER', 'Filter out bad brokers', 'A great rate means nothing if they never pay'],
     ['ONE FEED', 'Stop switching apps', 'Every board in one feed saves time every day']] },
-  { key: 'brokerquestions', title: ['ASK THE BROKER', 'BEFORE YOU BOOK'], tag: 'QUESTIONS TO ASK', hook: 'Ask the broker these five questions before you say yes.', ask: 'What did we miss? 👇', items: [
+  { key: 'brokerquestions', photos: ['truck driver phone', 'loading dock', 'truck weigh station', 'warehouse lumper', 'semi truck parked'], title: ['ASK THE BROKER', 'BEFORE YOU BOOK'], tag: 'QUESTIONS TO ASK', hook: 'Ask the broker these five questions before you say yes.', ask: 'What did we miss? 👇', items: [
     ['WEIGHT', 'What does it weigh?', 'Know before you show up'],
     ['TIMES', 'Appointment or first come?', 'An FCFS dock can eat your day'],
     ['LUMPER', 'Who pays the lumper?', 'And how you get reimbursed'],
     ['DETENTION', 'When does detention start?', 'And how much per hour'],
     ['PAY', 'When do I get paid?', 'Standard terms, quick pay, and the fee']] },
-  { key: 'pretrip', title: ['PRE-TRIP STUFF', 'DRIVERS SKIP'], tag: 'PRE-TRIP', hook: 'Pre-trip checks drivers skip. Number five is the scary one.', ask: 'Ever caught something on a pre-trip? 👇', items: [
+  { key: 'pretrip', photos: ['semi truck tires', 'gladhands trailer', 'semi truck lights night', 'truck air brake', 'fifth wheel coupling'], title: ['PRE-TRIP STUFF', 'DRIVERS SKIP'], tag: 'PRE-TRIP', hook: 'Pre-trip checks drivers skip. Number five is the scary one.', ask: 'Ever caught something on a pre-trip? 👇', items: [
     ['#1', 'Tire tread and sidewalls', 'Cuts and bulges, not just the pressure', 'One. Tire tread and sidewalls.'],
     ['#2', 'Air lines and gladhands', 'Listen for leaks with the brakes released', 'Two. Air lines and gladhands.'],
     ['#3', 'Every light', 'Including the ones you can’t see from the cab', 'Three. Every light.'],
     ['#4', 'Brake adjustment', 'Out of adjustment brakes are a top out-of-service reason', 'Four. Brake adjustment.'],
     ['#5', 'Fifth wheel locked', 'Look at it. Tug test. Every time', 'Five. Make sure the fifth wheel is locked. Look at it, every time.']] },
-  { key: 'family', title: ['ONLY A TRUCKER’S', 'FAMILY GETS THIS'], tag: 'TRUCKER FAMILIES', hook: 'Only a trucker’s family understands this. Send it to yours.', ask: 'Tag your family 👇', items: [
+  { key: 'family', photos: ['truck driver family', 'semi truck sunset', 'truck stop', 'semi truck home', 'semi truck night highway'], title: ['ONLY A TRUCKER’S', 'FAMILY GETS THIS'], tag: 'TRUCKER FAMILIES', hook: 'Only a trucker’s family understands this. Send it to yours.', ask: 'Tag your family 👇', items: [
     ['DINNER', 'Dinner on a video call', 'Still counts. Every time'],
     ['BIRTHDAYS', 'Celebrated a day late', 'Or a week. The cake still gets eaten'],
     ['GIFTS', 'Truck stop souvenirs', 'Every kid has a keychain collection'],
     ['HOME TIME', 'The countdown', 'Everybody in the house knows the date'],
     ['WHY', 'Every mile is for them', 'That’s the whole reason']] },
-  { key: 'health', title: ['STAY HEALTHY', 'ON THE ROAD'], tag: 'DRIVER HEALTH', hook: 'Five health habits that actually work on the road.', ask: 'What keeps you healthy out there? 👇', items: [
+  { key: 'health', photos: ['truck stop parking lot', 'water bottle', 'truck driver', 'semi truck sunrise', 'truck sleeper cab'], title: ['STAY HEALTHY', 'ON THE ROAD'], tag: 'DRIVER HEALTH', hook: 'Five health habits that actually work on the road.', ask: 'What keeps you healthy out there? 👇', items: [
     ['WALK', 'Walk the lot', 'Ten minutes at every stop'],
     ['WATER', 'Water over soda', 'Keep a big bottle in the cab'],
     ['COOLER', 'Pack a cooler', 'Fewer truck stop meals, more money in your pocket'],
     ['STRETCH', 'Stretch before you climb', 'Backs and shoulders go first'],
     ['SLEEP', 'Protect your sleep', 'Blackout curtains and the same schedule when you can']] },
-  { key: 'hours', title: ['MAKE YOUR HOURS', 'COUNT'], tag: 'HOURS OF SERVICE', hook: 'Make every hour on your clock count.', ask: 'Best hours tip you have? 👇', items: [
+  { key: 'hours', photos: ['traffic jam trucks', 'truck stop restaurant', 'sleeper cab truck', 'truck stop parking night', 'loading dock early morning'], title: ['MAKE YOUR HOURS', 'COUNT'], tag: 'HOURS OF SERVICE', hook: 'Make every hour on your clock count.', ask: 'Best hours tip you have? 👇', items: [
     ['TRAFFIC', 'Plan around rush hour', 'An hour in city traffic is an hour off your clock'],
     ['BREAK', 'Make the 30 count', 'Fuel, eat and the break at the same stop'],
     ['SPLIT', 'Know the split sleeper', '7/3 or 8/2 can save your day', 'Split. Know how the split sleeper berth works.'],
     ['PARKING', 'Plan parking early', 'Lots fill up fast at night'],
     ['DOCK', 'Push for the earliest appointment', 'Early docks mean less waiting']] },
-  { key: 'ownerop', title: ['COMPANY DRIVER OR', 'OWNER-OPERATOR?'], tag: 'COMPANY VS OWNER-OP', hook: 'Company driver or owner operator? Here’s the honest difference.', ask: 'Which one are you, and would you switch? 👇', items: [
+  { key: 'ownerop', photos: ['semi truck fleet', 'owner operator truck', 'truck repair shop', 'semi truck sunset', 'semi truck highway'], title: ['COMPANY DRIVER OR', 'OWNER-OPERATOR?'], tag: 'COMPANY VS OWNER-OP', hook: 'Company driver or owner operator? Here’s the honest difference.', ask: 'Which one are you, and would you switch? 👇', items: [
     ['PAY', 'Company: steady check', 'Owner-op: you keep more, and pay for everything'],
     ['LOADS', 'Company: dispatch picks', 'Owner-op: you pick, and you find them'],
     ['TRUCK', 'Company: their truck, their repairs', 'Owner-op: every breakdown is your bill'],
     ['TIME', 'Company: their schedule', 'Owner-op: your schedule, if the money works'],
     ['RISK', 'Company: low risk', 'Owner-op: higher risk, higher ceiling']] },
-  { key: 'cabkit', title: ['EVERY TRUCKER', 'KEEPS THIS IN THE CAB'], tag: 'CAB ESSENTIALS', hook: 'Every trucker keeps these in the cab. What’s in yours?', ask: 'What’s in your cab that we missed? 👇', items: [
+  { key: 'cabkit', photos: ['flashlight', 'duct tape', 'work gloves', 'truck stop food', 'truck sleeper cab'], title: ['EVERY TRUCKER', 'KEEPS THIS IN THE CAB'], tag: 'CAB ESSENTIALS', hook: 'Every trucker keeps these in the cab. What’s in yours?', ask: 'What’s in your cab that we missed? 👇', items: [
     ['LIGHT', 'A good flashlight', 'Pre-trips at 4am'],
     ['TAPE', 'Duct tape and zip ties', 'Fixes everything until the shop'],
     ['GLOVES', 'Spare gloves', 'The first pair is always wet'],
@@ -205,43 +205,43 @@ const PACKS = [
     ['VOLVO VNL|Volvo VNL', 'Sleeps 8 hours, eats salad, reads the manual. Suspicious.', '', 'Volvo. Sleeps eight hours, eats salad, reads the manual. Suspicious.'],
     ['INTERNATIONAL LT|International LT truck', 'Bought it used, fixed it himself, will tell you about it. Twice.', '', 'International. Bought it used, fixed it himself, and will tell you about it. Twice.'],
     ['MACK ANTHEM|Mack Anthem', 'Says “they don’t build ’em like they used to.” Is right.', '', 'Mack. Says they don’t build them like they used to. And he’s right.']] },
-  { key: 'trailer', funny: true, title: ['WHAT YOUR TRAILER', 'SAYS ABOUT YOU'], tag: 'WHAT YOUR TRAILER SAYS ABOUT YOU', hook: 'What your trailer says about you. Number five is going to start a fight.', ask: 'Hotshot guys, don’t come at us 👇', tags: '#flatbed #reefer', cta: 'Flatbed, reefer or van: find the loads that pay.', items: [
+  { key: 'trailer', photos: ['flatbed trailer tarp', 'reefer trailer', 'dry van trailer', 'step deck trailer', 'hotshot trailer pickup'], funny: true, title: ['WHAT YOUR TRAILER', 'SAYS ABOUT YOU'], tag: 'WHAT YOUR TRAILER SAYS ABOUT YOU', hook: 'What your trailer says about you. Number five is going to start a fight.', ask: 'Hotshot guys, don’t come at us 👇', tags: '#flatbed #reefer', cta: 'Flatbed, reefer or van: find the loads that pay.', items: [
     ['FLATBED', 'Can tarp a load in a thunderstorm. Can’t find his reading glasses.', ''],
     ['REEFER', 'Hears that unit kick on in his sleep.', ''],
     ['DRY VAN', 'Waited 6 hours at a dock and called it “a good day.”', '', 'Dry van. Waited six hours at a dock and called it a good day.'],
     ['STEP DECK', 'Measures everything twice. Including the grill.', ''],
     ['HOTSHOT', 'Tells everyone it’s “basically the same thing.”', '']] },
-  { key: 'oldschool', funny: true, title: ['ONLY REAL TRUCKERS', 'REMEMBER THIS'], tag: 'OLD SCHOOL TRUCKING', hook: 'Only real truckers remember these. How many do you remember?', ask: 'How many do you remember? 👇', tags: '#oldschooltrucking', cta: 'The load board moved to your phone. All of them, in one feed.', items: [
+  { key: 'oldschool', photos: ['logbook truck', 'CB radio', 'pay phone', 'road atlas', 'truck stop 1970s'], funny: true, title: ['ONLY REAL TRUCKERS', 'REMEMBER THIS'], tag: 'OLD SCHOOL TRUCKING', hook: 'Only real truckers remember these. How many do you remember?', ask: 'How many do you remember? 👇', tags: '#oldschooltrucking', cta: 'The load board moved to your phone. All of them, in one feed.', items: [
     ['PAPER LOGBOOKS', 'Every hour written by hand', 'Before ELDs became required in 2017', 'Paper logbooks. Every hour written by hand.'],
     ['YOUR CB HANDLE', 'Everybody knew it', 'Nobody knew your real name'],
     ['PAY PHONES', 'A pocket full of quarters', 'To call home from the truck stop', 'Pay phones, and a pocket full of quarters to call home.'],
     ['THE ROAD ATLAS', 'Folded and coffee-stained', 'Better than any GPS'],
     ['THE BOARD ON THE WALL', 'Loads posted at the truck stop', 'Now it’s in your pocket']] },
-  { key: 'truckstop', funny: true, title: ['TYPES OF TRUCKERS', 'AT THE TRUCK STOP'], tag: 'TRUCK STOP TYPES', hook: 'Types of truckers at every truck stop. You’re one of them.', ask: 'Which one are you? 👇', items: [
+  { key: 'truckstop', photos: ['truck stop night', 'semi truck backing', 'truck stop parking', 'truck stop diner', 'truck stop showers'], funny: true, title: ['TYPES OF TRUCKERS', 'AT THE TRUCK STOP'], tag: 'TRUCK STOP TYPES', hook: 'Types of truckers at every truck stop. You’re one of them.', ask: 'Which one are you? 👇', items: [
     ['THE 4AM GUY', 'Coffee in hand, already done his pre-trip', ''],
     ['ONE-SHOT', 'Backs in on the first try. Doesn’t look around to see who saw. (He looks.)', '', 'One shot. Backs in on the first try. Then checks who saw.'],
     ['SIX TRIES', 'Gets out and looks. Every. Single. Time.', '', 'Six tries. Gets out and looks, every single time.'],
     ['THE STORYTELLER', 'Has been driving since before you were born. Will tell you.', ''],
     ['THE SHOWER GUY', 'Knows every shower number by heart', '']] },
-  { key: 'neversay', funny: true, title: ['NEVER SAY THIS', 'TO A TRUCKER'], tag: 'NEVER SAY THIS', hook: 'Things you should never say to a trucker. Number one, really.', ask: 'What’s the worst one you’ve heard? 👇', items: [
+  { key: 'neversay', photos: ['truck driver cab', 'semi truck highway', 'semi truck backing up', 'truck parking', 'semi truck interstate'], funny: true, title: ['NEVER SAY THIS', 'TO A TRUCKER'], tag: 'NEVER SAY THIS', hook: 'Things you should never say to a trucker. Number one, really.', ask: 'What’s the worst one you’ve heard? 👇', items: [
     ['#1', '“Must be nice sitting all day”', '', 'One. Must be nice sitting all day.'],
     ['#2', '“So it’s basically a road trip?”', '', 'Two. So it’s basically a road trip?'],
     ['#3', '“How hard can backing up be?”', '', 'Three. How hard can backing up be?'],
     ['#4', '“Can’t you just park anywhere?”', '', 'Four. Can’t you just park anywhere?'],
     ['#5', '“You get paid to drive around?”', '', 'Five. You get paid to drive around?']] },
-  { key: 'toolong', funny: true, title: ['SIGNS YOU’VE BEEN', 'TRUCKING TOO LONG'], tag: 'TRUCKING TOO LONG', hook: 'Signs you’ve been trucking too long. Number two is everybody.', ask: 'Tag the guy who does all five 👇', items: [
+  { key: 'toolong', photos: ['grocery store parking lot', 'semi trucks highway', 'diner', 'semi truck', 'CB radio'], funny: true, title: ['SIGNS YOU’VE BEEN', 'TRUCKING TOO LONG'], tag: 'TRUCKING TOO LONG', hook: 'Signs you’ve been trucking too long. Number two is everybody.', ask: 'Tag the guy who does all five 👇', items: [
     ['#1', 'You back into the grocery store spot', '', 'One. You back into your parking spot at the grocery store.'],
     ['#2', 'You judge every truck on the highway', '', 'Two. You judge every truck on the highway.'],
     ['#3', 'You eat dinner at 4pm', '', 'Three. You eat dinner at four PM.'],
     ['#4', 'You wave at trucks from your car', '', 'Four. You wave at trucks from your car.'],
     ['#5', 'You say “10-4” to your wife', '', 'Five. You say ten four to your wife.']] },
-  { key: 'dispatcher', funny: true, title: ['WHAT DISPATCH SAYS', 'VS WHAT IT MEANS'], tag: 'DISPATCH TRANSLATOR', hook: 'What dispatch says, and what it really means.', ask: 'What did we miss? 👇', items: [
+  { key: 'dispatcher', photos: ['truck dispatcher office', 'loading dock trucks', 'freight rates', 'semi truck sunset', 'telephone office'], funny: true, title: ['WHAT DISPATCH SAYS', 'VS WHAT IT MEANS'], tag: 'DISPATCH TRANSLATOR', hook: 'What dispatch says, and what it really means.', ask: 'What did we miss? 👇', items: [
     ['“QUICK LOAD”', 'There is nothing quick about it', ''],
     ['“EASY DOCK”', 'You’ll be there 6 hours', '', 'Easy dock. You’ll be there six hours.'],
     ['“GREAT RATE”', 'For them', ''],
     ['“HOME BY FRIDAY”', 'Which Friday is not specified', ''],
     ['“I’LL CALL YOU BACK”', 'He will not call you back', '']] },
-  { key: 'fourwheelers', funny: true, title: ['THINGS CARS DO', 'THAT DRIVE US CRAZY'], tag: 'FOUR-WHEELERS', hook: 'Things four wheelers do that drive truckers crazy.', ask: 'Which one gets you the most? 👇', items: [
+  { key: 'fourwheelers', photos: ['traffic semi truck', 'truck blind spot', 'highway merge traffic', 'highway traffic trucks', 'truck parking lot'], funny: true, title: ['THINGS CARS DO', 'THAT DRIVE US CRAZY'], tag: 'FOUR-WHEELERS', hook: 'Things four wheelers do that drive truckers crazy.', ask: 'Which one gets you the most? 👇', items: [
     ['#1', 'Cut in and brake', 'Right into your stopping distance', 'One. Cut in front and hit the brakes.'],
     ['#2', 'Live in the blind spot', 'For 20 miles', 'Two. Ride in your blind spot for twenty miles.'],
     ['#3', 'Last-second merge', 'Then act surprised', 'Three. Merge at the very last second.'],
@@ -249,9 +249,10 @@ const PACKS = [
     ['#5', 'Take the truck parking', 'For a nap in a sedan', 'Five. Park in the truck spots.']] },
 ];
 const packBuilder = (p) => async () => ({
+  photos: p.photos,
   id: `${p.key}-1`, ttlDays: 6, funny: !!p.funny, title: p.title, tag: p.tag, source: '', showMap: false, cta: p.cta,
   hook: p.hook,
-  items: p.items.map(([kq, title, sub = '', say]) => { const [kicker, photo] = kq.split('|'); return { kicker, big: '', title, sub, photo, say: say || `${kicker.replace(/[#“”"]/g, '')}. ${title.replace(/[“”"]/g, '')}` }; }),
+  items: p.items.map(([kq, title, sub = '', say], i) => { const [kicker, own] = kq.split('|'); return { kicker, big: '', title, sub, photo: own || p.photos?.[i % p.photos.length], strict: !!own, say: say || `${kicker.replace(/[#“”"]/g, '')}. ${title.replace(/[“”"]/g, '')}` }; }),
   caption: `${p.hook}\n\n${p.items.map(([kq, t]) => kq.split('|')[0]).map((k, i) => [k, p.items[i][1]]).map(([k, t]) => `• ${k.startsWith('#') ? '' : `${k}: `}${t}`).join('\n')}\n\n${p.ask}\n\nEvery load board in one feed, with a broker check on every load. Try TruLoader free for 3 days: truloader.com\n\n${TAGS}${p.tags ? ` ${p.tags}` : ''}`,
 });
 for (const p of PACKS) BUILDERS[p.key] = packBuilder(p);
@@ -261,7 +262,7 @@ const FUNNY = PACKS.filter(p => p.funny).map(p => p.key);
 export const CONCEPTS = Object.keys(BUILDERS);
 
 // Free-licensed photo from Wikimedia Commons (owner, Nov 19: real truck pictures, free). Landscape, ≥ 800 px, no logos/fair use.
-export async function commonsPhoto(query, file) {
+export async function commonsPhoto(query, file, { strict = false, used = new Set() } = {}) {
   const UA = { 'user-agent': 'TruLoaderReelBot/1.0 (https://github.com/lolerman123456/miami-reels)' };
   const url = `https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=15&gsrsearch=${encodeURIComponent(`${query} filetype:bitmap`)}&prop=imageinfo&iiprop=url|size|extmetadata&iiurlwidth=1200`;
   const j = await (await fetch(url, { headers: UA })).json();
@@ -269,9 +270,11 @@ export async function commonsPhoto(query, file) {
   const cands = Object.values(j.query?.pages || {}).sort((a, b) => a.index - b.index).map(pg => ({ title: pg.title, ...pg.imageinfo?.[0] }))
     .filter(c => c.width >= 800 && c.width > c.height * 1.1 && c.thumburl)
     .filter(c => !/logo|emblem|badge|interior|engine|dashboard|toy|model/i.test(c.title))
-    .filter(c => words.every(w => c.title.toLowerCase().includes(w)))
+    .filter(c => !used.has(c.title))
     .filter(c => /^(cc|public domain|pd)/i.test(c.extmetadata?.LicenseShortName?.value || ''));
-  const c = cands[0]; if (!c) return null;
+  const match = (c) => words.every(w => c.title.toLowerCase().includes(w));
+  const c = cands.find(match) || (strict ? null : cands[0]); if (!c) return null;
+  used.add(c.title);
   const r = await fetch(c.thumburl, { headers: UA }); if (!r.ok) return null;
   fs.writeFileSync(file, Buffer.from(await r.arrayBuffer()));
   const artist = String(c.extmetadata?.Artist?.value || '').replace(/<[^>]+>/g, '').trim().slice(0, 40);
@@ -320,14 +323,15 @@ export async function buildConcept(name, { dir, lanes, brand }) {
   }
   // Zoom the map onto each card's states (owner, Nov 19: whole-US maps get scrolled past).
   const boxes = Object.fromEntries(map.states.map(st => { const n = (st.d.match(/-?\d+(\.\d+)?/g) || []).map(Number); const xs = n.filter((_, i) => i % 2 === 0), ys = n.filter((_, i) => i % 2 === 1); return [st.name, [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)]]; }));
+  const used = new Set();
   for (const [k, it] of props.items.entries()) {
     delete it.say;
     if (it.photo) {
       const f = `photo-${k}.jpg`;
-      const credit = await commonsPhoto(it.photo, path.join(dir, f)).catch(e => { console.log(`  photo "${it.photo}" failed: ${e.message}`); return null; });
+      const credit = await commonsPhoto(it.photo, path.join(dir, f), { strict: it.strict, used }).catch(e => { console.log(`  photo "${it.photo}" failed: ${e.message}`); return null; });
       if (credit) { it.img = f; it.credit = credit; } else console.log(`  no free photo for "${it.photo}"`);
     }
-    delete it.photo;
+    delete it.photo; delete it.strict;
     const bs = (it.focus || []).map(a => boxes[STATES[a]]).filter(Boolean); delete it.focus;
     if (!bs.length) continue;
     const x0 = Math.min(...bs.map(b => b[0])), y0 = Math.min(...bs.map(b => b[1])), x1 = Math.max(...bs.map(b => b[2])), y1 = Math.max(...bs.map(b => b[3]));
