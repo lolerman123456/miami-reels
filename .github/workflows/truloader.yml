@@ -1,0 +1,66 @@
+name: TruLoader Reel
+
+# Weekly "highest paying lanes" Reel for the TruLoader Facebook Page (pipeline/truloader.mjs + src/Lanes.tsx).
+# Scheduled: Mondays ~9am New York; posts only when control.json → truloader.publish is true (else a preview).
+# From a chat: commit requests/truloader.json {"publish": true|false, "equipment": "optional", "at": "..."}
+on:
+  schedule:
+    - cron: '41 13 * * 1'
+  push:
+    branches: [main]
+    paths: ['requests/truloader.json']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  truloader:
+    concurrency:
+      group: truloader
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Tools
+        run: bash scripts/ffmpeg.sh
+      - run: npm ci
+      - name: Cache Remotion browser
+        uses: actions/cache@v4
+        with:
+          path: node_modules/.remotion
+          key: remotion-browser-${{ hashFiles('package-lock.json') }}
+      - name: Make and post
+        env:
+          TRULOADER_FB_TOKEN: ${{ secrets.TRULOADER_FB_TOKEN }}
+          TRULOADER_FB_PAGE_ID: ${{ secrets.TRULOADER_FB_PAGE_ID }}
+        run: |
+          ARGS=()
+          if [ "${{ github.event_name }}" = "push" ] && [ -f requests/truloader.json ]; then
+            [ "$(jq -r 'if .publish == true then "y" else "n" end' requests/truloader.json)" = "y" ] || ARGS+=(--dry-run)
+            EQ=$(jq -r '.equipment // ""' requests/truloader.json); [ -n "$EQ" ] && ARGS+=(--equipment "$EQ")
+          else
+            [ "$(jq -r 'if .truloader.publish == true then "y" else "n" end' control.json)" = "y" ] || ARGS+=(--dry-run)
+          fi
+          node pipeline/truloader.mjs "${ARGS[@]}"
+      - name: Preview link
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          D=$(ls -d out/truloader/*/ 2>/dev/null | tail -1); [ -n "$D" ] && [ -f "${D}reel.mp4" ] || exit 0
+          N=$(basename "$D")
+          cp "${D}reel.mp4" "/tmp/truloader-$N.mp4"
+          gh release upload videos "/tmp/truloader-$N.mp4" --clobber
+          echo "▶ https://github.com/${{ github.repository }}/releases/download/videos/truloader-$N.mp4" | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Save log
+        if: always()
+        run: |
+          git config user.name "reel-bot"; git config user.email "reel-bot@users.noreply.github.com"
+          git add posted.log 2>/dev/null || true
+          if ! git diff --cached --quiet; then git add out/truloader/*/post.json 2>/dev/null || true; git commit -qm "TruLoader Reel post"; for i in 1 2 3; do git pull -q --rebase --autostash && git push -q && break; sleep 5; done; fi

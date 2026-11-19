@@ -112,3 +112,6 @@ Reel posted with TV graphics because its cleanup calls failed); pause with `cont
 `OPENAI_API_KEY`, `GOOGLE_MAPS_API_KEY`, `INSTAGRAM_ACCESS_TOKEN`, `INSTAGRAM_USER_ID`.
 The Instagram token is refreshed each run; if posting fails with an auth error, the owner must paste a new token
 into the `INSTAGRAM_ACCESS_TOKEN` secret.
+
+## TruLoader (owner's second brand, Nov 19)
+Weekly "highest paying lanes" map Reel for the **TruLoader Facebook Page** (Page ID 605976209261182, formerly "Mundo Artificial"; Jacobo is admin). `pipeline/truloader.mjs` + `src/Lanes.tsx` + `.github/workflows/truloader.yml`. Data: `https://truloader.com/api/public/top-lanes` (aggregated, dedups broker reposts, ≥3 brokers per lane; `?equipment=flatbed|dry_van|reefer|step_deck|power_only`); brand: `https://truloader.com/brand/{logo-white.png,brand.json,screens/1-4.png}`. Map = `assets/truloader/us-states.json` (Albers USA, same projection as `project()`). Posts with secret `TRULOADER_FB_TOKEN` (Jacobo's user token → Page token via me/accounts) through the Page Reels API. Mondays ~9am NY; posts only when `control.json` → `truloader.publish` is true, else preview at `releases/download/videos/truloader-<weekStart>.mp4`. Manual: `requests/truloader.json` → `{"publish": true|false, "equipment": "optional", "at": "..."}`. Never mix with @getnearapp.

@@ -3,6 +3,7 @@ import { Reel, ReelProps } from './Reel';
 import { Viral, ViralProps } from './Viral';
 import { Chat, ChatProps } from './Chat';
 import { Ugc, UgcProps } from './Ugc';
+import { Lanes, LanesProps } from './Lanes';
 
 const defaults: ReelProps = {
   fps: 30, width: 1080, height: 1920, durationInFrames: 300,
@@ -18,7 +19,23 @@ const chatDefaults: ChatProps = { durationInFrames: 270, chatName: 'the boys ðŸŒ
 
 const ugcDefaults: UgcProps = { durationInFrames: 300, video: 'base.mp4', timer: { line1: '', line2: '', seconds: 10 }, chunks: [], pops: [], zooms: [] };
 
+const lanesDefaults: LanesProps = {
+  durationInFrames: 300, hookFrames: 75, laneFrames: 60, outroFrames: 120, states: [], mapW: 975, mapH: 610,
+  week: '', title: ['', ''], lanes: [], colors: { primary: '#0066FF', secondary: '#0B1220', accent: '#FDC902' },
+  cta: '', site: 'truloader.com', narration: null,
+};
+
 export const RemotionRoot: React.FC = () => (<>
+  <Composition
+    id="Lanes"
+    component={Lanes}
+    defaultProps={lanesDefaults}
+    fps={30}
+    width={1080}
+    height={1920}
+    durationInFrames={300}
+    calculateMetadata={({ props }) => ({ durationInFrames: props.durationInFrames })}
+  />
   <Composition
     id="Ugc"
     component={Ugc}
