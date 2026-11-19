@@ -56,6 +56,7 @@ jobs:
             [ "$(jq -r 'if .publish == true then "y" else "n" end' requests/truloader.json)" = "y" ] || ARGS+=(--dry-run)
             EQ=$(jq -r '.equipment // ""' requests/truloader.json); [ -n "$EQ" ] && ARGS+=(--equipment "$EQ")
             CO=$(jq -r '.concept // ""' requests/truloader.json); [ -n "$CO" ] && ARGS+=(--concept "$CO")
+            [ "$(jq -r '.auto // false' requests/truloader.json)" = "true" ] && ARGS+=(--auto)
           else
             [ "$(jq -r 'if .truloader.publish == true then "y" else "n" end' control.json)" = "y" ] || ARGS+=(--dry-run)
             ARGS+=(--auto)
