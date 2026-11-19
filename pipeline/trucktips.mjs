@@ -199,12 +199,12 @@ const PACKS = [
     ['PILLOW', 'Your pillow from home', 'Small thing. Big difference']] },
   // ----- funny (at most every 4 days) -----
   { key: 'truck', funny: true, title: ['WHAT YOUR TRUCK', 'SAYS ABOUT YOU'], tag: 'WHAT YOUR TRUCK SAYS ABOUT YOU', hook: 'What your truck says about you. Be honest, which one are you?', ask: 'Which one are you? Be honest 👇', tags: '#peterbilt #kenworth', cta: 'Whatever you drive, find the loads that pay.', items: [
-    ['PETERBILT 389', 'His chrome budget is bigger than his retirement.', '', 'Peterbilt three eighty nine. His chrome budget is bigger than his retirement.'],
-    ['KENWORTH W900', 'Still says “10-4” at the dinner table.', '', 'Kenworth W nine hundred. Still says ten four at the dinner table.'],
-    ['FREIGHTLINER CASCADIA', 'Company driver. 14 years. Many opinions about dispatch.', '', 'Freightliner Cascadia. Company driver, fourteen years. Many opinions about dispatch.'],
-    ['VOLVO VNL', 'Sleeps 8 hours, eats salad, reads the manual. Suspicious.', '', 'Volvo. Sleeps eight hours, eats salad, reads the manual. Suspicious.'],
-    ['INTERNATIONAL LT', 'Bought it used, fixed it himself, will tell you about it. Twice.', '', 'International. Bought it used, fixed it himself, and will tell you about it. Twice.'],
-    ['MACK ANTHEM', 'Says “they don’t build ’em like they used to.” Is right.', '', 'Mack. Says they don’t build them like they used to. And he’s right.']] },
+    ['PETERBILT 389|Peterbilt 389', 'His chrome budget is bigger than his retirement.', '', 'Peterbilt three eighty nine. His chrome budget is bigger than his retirement.'],
+    ['KENWORTH W900|Kenworth W900', 'Still says “10-4” at the dinner table.', '', 'Kenworth W nine hundred. Still says ten four at the dinner table.'],
+    ['FREIGHTLINER CASCADIA|Freightliner Cascadia', 'Company driver. 14 years. Many opinions about dispatch.', '', 'Freightliner Cascadia. Company driver, fourteen years. Many opinions about dispatch.'],
+    ['VOLVO VNL|Volvo VNL', 'Sleeps 8 hours, eats salad, reads the manual. Suspicious.', '', 'Volvo. Sleeps eight hours, eats salad, reads the manual. Suspicious.'],
+    ['INTERNATIONAL LT|International LT truck', 'Bought it used, fixed it himself, will tell you about it. Twice.', '', 'International. Bought it used, fixed it himself, and will tell you about it. Twice.'],
+    ['MACK ANTHEM|Mack Anthem', 'Says “they don’t build ’em like they used to.” Is right.', '', 'Mack. Says they don’t build them like they used to. And he’s right.']] },
   { key: 'trailer', funny: true, title: ['WHAT YOUR TRAILER', 'SAYS ABOUT YOU'], tag: 'WHAT YOUR TRAILER SAYS ABOUT YOU', hook: 'What your trailer says about you. Number five is going to start a fight.', ask: 'Hotshot guys, don’t come at us 👇', tags: '#flatbed #reefer', cta: 'Flatbed, reefer or van: find the loads that pay.', items: [
     ['FLATBED', 'Can tarp a load in a thunderstorm. Can’t find his reading glasses.', ''],
     ['REEFER', 'Hears that unit kick on in his sleep.', ''],
@@ -251,14 +251,32 @@ const PACKS = [
 const packBuilder = (p) => async () => ({
   id: `${p.key}-1`, ttlDays: 6, funny: !!p.funny, title: p.title, tag: p.tag, source: '', showMap: false, cta: p.cta,
   hook: p.hook,
-  items: p.items.map(([kicker, title, sub = '', say]) => ({ kicker, big: '', title, sub, say: say || `${kicker.replace(/[#“”"]/g, '')}. ${title.replace(/[“”"]/g, '')}` })),
-  caption: `${p.hook}\n\n${p.items.map(([k, t]) => `• ${k.startsWith('#') ? '' : `${k}: `}${t}`).join('\n')}\n\n${p.ask}\n\nEvery load board in one feed, with a broker check on every load. Try TruLoader free for 3 days: truloader.com\n\n${TAGS}${p.tags ? ` ${p.tags}` : ''}`,
+  items: p.items.map(([kq, title, sub = '', say]) => { const [kicker, photo] = kq.split('|'); return { kicker, big: '', title, sub, photo, say: say || `${kicker.replace(/[#“”"]/g, '')}. ${title.replace(/[“”"]/g, '')}` }; }),
+  caption: `${p.hook}\n\n${p.items.map(([kq, t]) => kq.split('|')[0]).map((k, i) => [k, p.items[i][1]]).map(([k, t]) => `• ${k.startsWith('#') ? '' : `${k}: `}${t}`).join('\n')}\n\n${p.ask}\n\nEvery load board in one feed, with a broker check on every load. Try TruLoader free for 3 days: truloader.com\n\n${TAGS}${p.tags ? ` ${p.tags}` : ''}`,
 });
 for (const p of PACKS) BUILDERS[p.key] = packBuilder(p);
 const EVERGREEN = PACKS.filter(p => !p.funny).map(p => p.key);
 const FUNNY = PACKS.filter(p => p.funny).map(p => p.key);
 
 export const CONCEPTS = Object.keys(BUILDERS);
+
+// Free-licensed photo from Wikimedia Commons (owner, Nov 19: real truck pictures, free). Landscape, ≥ 800 px, no logos/fair use.
+export async function commonsPhoto(query, file) {
+  const UA = { 'user-agent': 'TruLoaderReelBot/1.0 (https://github.com/lolerman123456/miami-reels)' };
+  const url = `https://commons.wikimedia.org/w/api.php?action=query&format=json&generator=search&gsrnamespace=6&gsrlimit=15&gsrsearch=${encodeURIComponent(`${query} filetype:bitmap`)}&prop=imageinfo&iiprop=url|size|extmetadata&iiurlwidth=1200`;
+  const j = await (await fetch(url, { headers: UA })).json();
+  const words = query.toLowerCase().split(/\s+/).filter(w => w !== 'truck');
+  const cands = Object.values(j.query?.pages || {}).sort((a, b) => a.index - b.index).map(pg => ({ title: pg.title, ...pg.imageinfo?.[0] }))
+    .filter(c => c.width >= 800 && c.width > c.height * 1.1 && c.thumburl)
+    .filter(c => !/logo|emblem|badge|interior|engine|dashboard|toy|model/i.test(c.title))
+    .filter(c => words.every(w => c.title.toLowerCase().includes(w)))
+    .filter(c => /^(cc|public domain|pd)/i.test(c.extmetadata?.LicenseShortName?.value || ''));
+  const c = cands[0]; if (!c) return null;
+  const r = await fetch(c.thumburl, { headers: UA }); if (!r.ok) return null;
+  fs.writeFileSync(file, Buffer.from(await r.arrayBuffer()));
+  const artist = String(c.extmetadata?.Artist?.value || '').replace(/<[^>]+>/g, '').trim().slice(0, 40);
+  return `Photo: ${artist || 'Wikimedia Commons'} / ${c.extmetadata.LicenseShortName.value}`;
+}
 
 // ---------- build Cards props + voice (same Kokoro am_adam flow as the lanes Reel) ----------
 export async function buildConcept(name, { dir, lanes, brand }) {
@@ -302,8 +320,14 @@ export async function buildConcept(name, { dir, lanes, brand }) {
   }
   // Zoom the map onto each card's states (owner, Nov 19: whole-US maps get scrolled past).
   const boxes = Object.fromEntries(map.states.map(st => { const n = (st.d.match(/-?\d+(\.\d+)?/g) || []).map(Number); const xs = n.filter((_, i) => i % 2 === 0), ys = n.filter((_, i) => i % 2 === 1); return [st.name, [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)]]; }));
-  for (const it of props.items) {
+  for (const [k, it] of props.items.entries()) {
     delete it.say;
+    if (it.photo) {
+      const f = `photo-${k}.jpg`;
+      const credit = await commonsPhoto(it.photo, path.join(dir, f)).catch(e => { console.log(`  photo "${it.photo}" failed: ${e.message}`); return null; });
+      if (credit) { it.img = f; it.credit = credit; } else console.log(`  no free photo for "${it.photo}"`);
+    }
+    delete it.photo;
     const bs = (it.focus || []).map(a => boxes[STATES[a]]).filter(Boolean); delete it.focus;
     if (!bs.length) continue;
     const x0 = Math.min(...bs.map(b => b[0])), y0 = Math.min(...bs.map(b => b[1])), x1 = Math.max(...bs.map(b => b[2])), y1 = Math.max(...bs.map(b => b[3]));

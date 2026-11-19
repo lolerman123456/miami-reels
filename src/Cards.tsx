@@ -3,7 +3,7 @@
 import React from 'react';
 import { AbsoluteFill, Audio, Img, Sequence, staticFile, interpolate, spring, useCurrentFrame, useVideoConfig, Easing } from 'remotion';
 
-export type CardItem = { start: number; dur: number; kicker: string; big: string; title: string; sub: string; shade?: Record<string, string>; cam?: { cx: number; cy: number; s: number } };
+export type CardItem = { start: number; dur: number; kicker: string; big: string; title: string; sub: string; shade?: Record<string, string>; cam?: { cx: number; cy: number; s: number }; img?: string; credit?: string };
 export type CardsProps = {
   durationInFrames: number; hookFrames: number; outroFrames: number;
   title: [string, string]; tag: string; states: { d: string; name?: string }[]; mapW: number; mapH: number;
@@ -51,7 +51,12 @@ const Card: React.FC<{ p: CardsProps; it: CardItem }> = ({ p, it }) => {
   const pop = spring({ frame, fps, config: { damping: 14, stiffness: 160 } });
   const big = spring({ frame: frame - 10, fps, config: { damping: 10, stiffness: 200 } });
   const out = interpolate(frame, [it.dur - 8, it.dur], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
-  return (
+  const zoom = 1.05 + frame / Math.max(1, it.dur) * 0.08;
+  return (<>
+    {it.img && <div style={{ position: 'absolute', left: 40, right: 40, top: 250, height: 820, borderRadius: 36, overflow: 'hidden', opacity: out * Math.min(1, pop * 1.5), border: `4px solid ${p.colors.primary}`, boxShadow: '0 20px 60px rgba(0,0,0,0.6)' }}>
+      <Img src={staticFile(it.img)} style={{ width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${zoom})` }} />
+      {it.credit && <div style={{ position: 'absolute', right: 14, bottom: 10, color: '#fff', opacity: 0.75, fontFamily: FONT, fontSize: 20, textShadow: '0 1px 4px #000' }}>{it.credit}</div>}
+    </div>}
     <div style={{ position: 'absolute', left: 60, right: 60, bottom: 230, opacity: out, transform: `translateY(${(1 - pop) * 120}px)` }}>
       <div style={{ background: 'rgba(11,18,32,0.93)', border: `3px solid ${p.colors.primary}`, borderRadius: 36, padding: '34px 44px', boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }}>
         <div style={{ display: 'inline-block', background: p.colors.accent, color: p.colors.secondary, fontFamily: FONT, fontWeight: 900, fontSize: 40, borderRadius: 16, padding: '4px 20px' }}>{it.kicker}</div>
@@ -60,7 +65,7 @@ const Card: React.FC<{ p: CardsProps; it: CardItem }> = ({ p, it }) => {
         {it.sub && <div style={{ color: '#c8d3e6', fontFamily: FONT, fontWeight: 600, fontSize: 38, marginTop: 12, lineHeight: 1.25 }}>{it.sub}</div>}
       </div>
     </div>
-  );
+  </>);
 };
 
 const Hook: React.FC<{ p: CardsProps }> = ({ p }) => {
