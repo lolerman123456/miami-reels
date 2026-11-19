@@ -1,15 +1,11 @@
 name: TruLoader Reel
 
 # Weekly "highest paying lanes" Reel for the TruLoader Facebook Page (pipeline/truloader.mjs + src/Lanes.tsx).
-# Scheduled (owner, Nov 19): 4 a day, ~9am / 1pm / 5pm / 8pm New York (EST; ≥3 h apart). Each slot posts the next concept
+# Slots are started by the Claude routine "TruLoader slot starter" (trig_01KgK3DJXFaApgzjAh4MChW1, 8:49/12:49/4:49/7:49pm NY)
+# because GitHub's cron skipped the first 9am slot. (owner, Nov 19): 4 a day, ~9am / 1pm / 5pm / 8pm New York (EST; ≥3 h apart). Each slot posts the next concept
 # not posted recently (pickSlot in pipeline/trucktips.mjs); posts only when control.json → truloader.publish is true.
 # From a chat: commit requests/truloader.json {"publish": true|false, "equipment": "optional", "at": "..."}
 on:
-  schedule:
-    - cron: '47 13 * * *'   # ~9am NY (EST)
-    - cron: '47 17 * * *'   # ~1pm NY
-    - cron: '47 21 * * *'   # ~5pm NY
-    - cron: '47 0 * * *'    # ~8pm NY
   push:
     branches: [main]
     paths: ['requests/truloader.json']
