@@ -133,7 +133,7 @@ async function main() {
   const count = args.includes('--count') ? Number(args[args.indexOf('--count') + 1]) : 10;
 
   step('Fetching this week’s lanes');
-  const data = await getJSON(eq ? `${API}?equipment=${encodeURIComponent(eq)}` : API);
+  const data = await getJSON(`${API}?${eq ? `equipment=${encodeURIComponent(eq)}&` : ''}t=${Date.now()}`); // t= skips a stale CDN copy
   const brand = await getJSON(`${BRAND}/brand.json`).catch(() => ({}));
   const id = `${data.weekStart}${eq ? `-${eq}` : ''}`;
   const dir = path.join(ROOT, 'out', 'truloader', id);
