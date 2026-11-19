@@ -124,7 +124,7 @@ export const Cards: React.FC<CardsProps> = (p) => {
       <Sequence from={end} durationInFrames={p.outroFrames}><Outro p={p} /></Sequence>
       <Sequence durationInFrames={20}><Audio src={staticFile('sfx/impact.wav')} volume={0.7} /></Sequence>
       {p.narration && <Audio src={staticFile(p.narration)} />}
-      {p.music && <Audio src={staticFile(p.music)} volume={(f) => interpolate(f, [0, 15, p.durationInFrames - 45, p.durationInFrames], [0, 0.16, 0.16, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' })} />}
+      {p.music && <Audio src={staticFile(p.music)} volume={(f) => interpolate(f, [0, 15, p.durationInFrames - 45, p.durationInFrames], [0, 0.22, 0.22, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' })} />}
       {p.source && <div style={{ position: 'absolute', bottom: 60, left: 40, right: 40, textAlign: 'center', color: '#7f8ba3', fontFamily: FONT, fontWeight: 600, fontSize: 26 }}>{p.source}</div>}
     </AbsoluteFill>
   );

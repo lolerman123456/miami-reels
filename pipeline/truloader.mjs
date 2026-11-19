@@ -156,7 +156,7 @@ export async function addVoiceAndMusic(props, dir) {
     const parts = timeline.map((t, i) => ({ file: path.join(dir, 'voice', `${i}.wav`), at: i === 0 ? t.speechStart : (i <= props.lanes.length ? props.laneStarts[i - 1] / FPS + 0.15 : at / FPS + 0.4) }));
     const inputs = parts.flatMap(p => ['-i', p.file]);
     const delays = parts.map((p, i) => `[${i}]adelay=${Math.round(p.at * 1000)}:all=1[a${i}]`).join(';');
-    execFileSync('ffmpeg', ['-y', '-loglevel', 'error', ...inputs, '-filter_complex', `${delays};${parts.map((_, i) => `[a${i}]`).join('')}amix=inputs=${parts.length}:normalize=0,loudnorm=I=-14:TP=-1.5[out]`, '-map', '[out]', '-ar', '44100', path.join(dir, 'voiceover.wav')]);
+    execFileSync('ffmpeg', ['-y', '-loglevel', 'error', ...inputs, '-filter_complex', `${delays};${parts.map((_, i) => `[a${i}]`).join('')}amix=inputs=${parts.length}:normalize=0,loudnorm=I=-11:TP=-1[out]`, '-map', '[out]', '-ar', '44100', path.join(dir, 'voiceover.wav')]);
     const last = timeline[timeline.length - 1];
     props.outroFrames = Math.max(120, fr(last.speech + 1.4));
     props.durationInFrames = at + props.outroFrames;

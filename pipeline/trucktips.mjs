@@ -67,15 +67,30 @@ const BUILDERS = {
   },
   async states(ctx) {
     const top = (ctx.lanes.topStates || []).slice(0, 5); if (top.length < 3) throw new Error('no topStates');
+    // Owner, Nov 19: "boring" → each state also gets its diesel price (EIA region), what's left after fuel, and its best lane this week.
+    const f = await dieselByRegion().catch(() => null);
+    const mpg = 6.5;
+    const regionOf = (st) => f?.regions.find(r => r.states.includes(st));
+    const laneFrom = (st) => (ctx.lanes.lanes || []).find(l => l.origin?.state === st);
+    const avg = top.reduce((a, s) => a + s.avgRatePerMile, 0) / top.length;
+    const detail = (s) => {
+      const r = regionOf(s.state), l = laneFrom(s.state);
+      const net = r ? s.avgRatePerMile - r.price / mpg : null;
+      return {
+        sub: [r && `⛽ Diesel ${money(r.price, 2)}/gal · ~${money(net)}/mi left after fuel`, l ? `🔥 Best lane: ${l.origin.city} → ${l.destination.city}, ${l.destination.state} at ${money(l.avgRatePerMile)}/mi` : `📦 ${s.loadCount.toLocaleString('en-US')} loads posted this week`].filter(Boolean).join('\n'),
+        say: [r && `Diesel there is about ${sayMoney(r.price)} a gallon, so you keep about ${sayMoney(net)} a mile after fuel.`, l ? `Best lane out of there: ${l.origin.city} to ${l.destination.city}, at ${sayMoney(l.avgRatePerMile)} a mile.` : `${s.loadCount.toLocaleString('en-US')} loads posted this week.`].filter(Boolean).join(' '),
+        r, l, net,
+      };
+    };
     return {
       id: `states-${ctx.lanes.weekStart}`, ttlDays: 6, title: ['THE STATES PAYING', 'THE MOST RIGHT NOW'], tag: `TOP PAYING STATES · ${ctx.week}`,
-      source: 'Avg posted rate per mile for loads picking up in each state this week · truloader.com',
-      hook: 'These are the states paying truckers the most per mile right now.',
-      items: top.reverse().map((s, i, a) => ({
-        kicker: `#${a.length - i}`, big: `${money(s.avgRatePerMile)}/mi`, title: STATES[s.state] || s.state, sub: `${s.loadCount.toLocaleString('en-US')} loads posted this week`,
-        say: `Number ${a.length - i}. ${STATES[s.state] || s.state}. ${sayMoney(s.avgRatePerMile)} a mile.`, shade: shadeFor([s.state], '#FDC902'), focus: [s.state],
-      })),
-      caption: `💰 States paying the most per mile this week (${ctx.week.toLowerCase()})\n\n${[...top].reverse().map((s, i) => `#${i + 1} ${STATES[s.state]}: ${money(s.avgRatePerMile)}/mi (${s.loadCount} loads)`).join('\n')}\n\nIs your state on here? 👇\n\nEvery load board in one feed: truloader.com (3 days free)\n\n${TAGS}`,
+      source: `Avg posted rate per mile for loads picking up in each state this week · truloader.com${f ? ` · Diesel: U.S. EIA regional avg, week of ${f.date}, ${mpg} mpg` : ''}`,
+      hook: 'These are the states paying truckers the most per mile right now. And what you actually keep after fuel.',
+      items: [...top].reverse().map((s, i, a) => { const d = detail(s); return {
+        kicker: `#${a.length - i} · ${s.loadCount.toLocaleString('en-US')} LOADS`, big: `${money(s.avgRatePerMile)}/mi`, title: STATES[s.state] || s.state, sub: d.sub,
+        say: `Number ${a.length - i}. ${STATES[s.state] || s.state}. ${sayMoney(s.avgRatePerMile)} a mile. ${d.say}`, shade: shadeFor([s.state], '#FDC902'), focus: [s.state],
+      }; }),
+      caption: `💰 States paying the most per mile this week (${ctx.week.toLowerCase()}), and what's left after diesel\n\n${top.map((s, i) => { const d = detail(s); return `#${i + 1} ${STATES[s.state]}: ${money(s.avgRatePerMile)}/mi${d.r ? ` · diesel ${money(d.r.price)} · ~${money(d.net)}/mi after fuel` : ''}`; }).join('\n')}\n\nTop 5 average: ${money(avg)}/mi. Is your state on here? 👇\n\nEvery load board in one feed: truloader.com (3 days free)\n\n${TAGS}`,
     };
   },
   async fuel(ctx) {
@@ -308,7 +323,7 @@ export async function buildConcept(name, { dir, lanes, brand }) {
     const { execFileSync } = await import('node:child_process');
     const parts = timeline.map((t, i) => ({ file: path.join(dir, 'voice', `${i}.wav`), at: i === 0 ? t.speechStart : (i <= spec.items.length ? props.items[i - 1].start / FPS + 0.15 : at / FPS + 0.4) }));
     execFileSync('ffmpeg', ['-y', '-loglevel', 'error', ...parts.flatMap(p => ['-i', p.file]), '-filter_complex',
-      `${parts.map((p, i) => `[${i}]adelay=${Math.round(p.at * 1000)}:all=1[a${i}]`).join(';')};${parts.map((_, i) => `[a${i}]`).join('')}amix=inputs=${parts.length}:normalize=0,loudnorm=I=-14:TP=-1.5[out]`,
+      `${parts.map((p, i) => `[${i}]adelay=${Math.round(p.at * 1000)}:all=1[a${i}]`).join(';')};${parts.map((_, i) => `[a${i}]`).join('')}amix=inputs=${parts.length}:normalize=0,loudnorm=I=-11:TP=-1[out]`,
       '-map', '[out]', '-ar', '44100', path.join(dir, 'voiceover.wav')]);
     props.outroFrames = Math.max(120, fr(timeline[timeline.length - 1].speech + 1.4));
     props.narration = 'voiceover.wav';
