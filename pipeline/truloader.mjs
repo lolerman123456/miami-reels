@@ -24,12 +24,12 @@ export function project(lng, lat) { const [x, y] = raw(lng, lat); return { x: 48
 const fmtDay = (iso) => new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
 const EQUIP = { flatbed: 'flatbed', 'dry van': 'dry van', dry_van: 'dry van', reefer: 'reefer', step_deck: 'step deck', 'step deck': 'step deck', power_only: 'power only', 'power only': 'power only' };
 
-async function getJSON(url) {
+export async function getJSON(url) {
   const r = await fetch(url, { headers: { 'user-agent': 'reel-bot' } });
   if (!r.ok) throw new Error(`${url} → HTTP ${r.status}`);
   return r.json();
 }
-async function download(url, file) {
+export async function download(url, file) {
   const r = await fetch(url);
   if (!r.ok) throw new Error(`${url} → HTTP ${r.status}`);
   fs.writeFileSync(file, Buffer.from(await r.arrayBuffer()));
@@ -49,7 +49,7 @@ export async function buildProps(data, brand, count = 10) {
         .filter(Boolean).join(' · '),
     }))
     .reverse(); // countdown: lowest rank number last (#1 is the payoff)
-  if (lanes.length < 3) throw new Error(`only ${lanes.length} usable lanes this week — not making a Reel`);
+  if (lanes.length < Math.min(3, count)) throw new Error(`only ${lanes.length} usable lanes this week — not making a Reel`);
   const map = readJSON(path.join(ROOT, 'assets', 'truloader', 'us-states.json'));
   const hookFrames = 75, laneFrames = 66, outroFrames = 120;
   return {
@@ -57,7 +57,7 @@ export async function buildProps(data, brand, count = 10) {
     hookFrames, laneFrames, outroFrames,
     states: map.states.map(s => ({ d: s.d })), mapW: map.w, mapH: map.h,
     week: `${fmtDay(data.weekStart)} – ${fmtDay(data.weekEnd)}`.toUpperCase(),
-    title: [`TOP ${lanes.length} HIGHEST`, 'PAYING LANES'],
+    title: lanes.length === 1 ? ['THE #1 PAYING', 'LANE THIS WEEK'] : [`TOP ${lanes.length} HIGHEST`, 'PAYING LANES'],
     lanes,
     colors: { primary: brand.primary || '#0066FF', secondary: brand.secondary || '#0B1220', accent: brand.accent || '#FDC902' },
     cta: 'Every load board in one feed — with a broker check on every load.',
@@ -70,7 +70,7 @@ export function captionFor(data, props) {
   // TruLoader is its own brand: plain caption + a fuller trucking hashtag set (the 4-tag cap is a @getnearapp rule).
   const top = [...props.lanes].reverse();
   return [
-    `🚛 Highest paying lanes this week (${fmtDay(data.weekStart)} – ${fmtDay(data.weekEnd)})`,
+    props.lanes.length === 1 ? `🚛 The #1 paying lane on the load boards this week (${fmtDay(data.weekStart)} – ${fmtDay(data.weekEnd)}). Would you run it?` : `🚛 Highest paying lanes this week (${fmtDay(data.weekStart)} – ${fmtDay(data.weekEnd)})`,
     '',
     ...top.slice(0, 5).map(l => `#${l.rank} ${l.from.label} → ${l.to.label}: ${l.rate}/mi`),
     '',
@@ -127,14 +127,14 @@ export async function postPageReel(file, description) {
 }
 
 // ---------- Voiceover (free Kokoro male voice, am_adam — same as the Miami Reels fallback) + synthesized beat ----------
-const STATES = { AL: 'Alabama', AZ: 'Arizona', AR: 'Arkansas', CA: 'California', CO: 'Colorado', CT: 'Connecticut', DE: 'Delaware', FL: 'Florida', GA: 'Georgia', ID: 'Idaho', IL: 'Illinois', IN: 'Indiana', IA: 'Iowa', KS: 'Kansas', KY: 'Kentucky', LA: 'Louisiana', ME: 'Maine', MD: 'Maryland', MA: 'Massachusetts', MI: 'Michigan', MN: 'Minnesota', MS: 'Mississippi', MO: 'Missouri', MT: 'Montana', NE: 'Nebraska', NV: 'Nevada', NH: 'New Hampshire', NJ: 'New Jersey', NM: 'New Mexico', NY: 'New York', NC: 'North Carolina', ND: 'North Dakota', OH: 'Ohio', OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', RI: 'Rhode Island', SC: 'South Carolina', SD: 'South Dakota', TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VT: 'Vermont', VA: 'Virginia', WA: 'Washington', WV: 'West Virginia', WI: 'Wisconsin', WY: 'Wyoming', DC: 'D.C.' };
+export const STATES = { AL: 'Alabama', AZ: 'Arizona', AR: 'Arkansas', CA: 'California', CO: 'Colorado', CT: 'Connecticut', DE: 'Delaware', FL: 'Florida', GA: 'Georgia', ID: 'Idaho', IL: 'Illinois', IN: 'Indiana', IA: 'Iowa', KS: 'Kansas', KY: 'Kentucky', LA: 'Louisiana', ME: 'Maine', MD: 'Maryland', MA: 'Massachusetts', MI: 'Michigan', MN: 'Minnesota', MS: 'Mississippi', MO: 'Missouri', MT: 'Montana', NE: 'Nebraska', NV: 'Nevada', NH: 'New Hampshire', NJ: 'New Jersey', NM: 'New Mexico', NY: 'New York', NC: 'North Carolina', ND: 'North Dakota', OH: 'Ohio', OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', RI: 'Rhode Island', SC: 'South Carolina', SD: 'South Dakota', TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VT: 'Vermont', VA: 'Virginia', WA: 'Washington', WV: 'West Virginia', WI: 'Wisconsin', WY: 'Wyoming', DC: 'D.C.' };
 const spokenPlace = (label) => { const [city, st] = label.split(/,\s*/); return `${city}, ${STATES[st] || st}`; };
 const spokenRate = (rate) => { const [d, c] = rate.replace('$', '').split('.'); return `${d} ${c === '00' ? 'flat' : c.startsWith('0') ? `oh ${c[1]}` : c} a mile`; };
 
 export async function addVoiceAndMusic(props, dir) {
   step('Voiceover (Kokoro am_adam) + beat');
   const scenes = [
-    { text: `These are the ${props.lanes.length} highest paying lanes on the load boards this week.` },
+    { text: props.lanes.length === 1 ? 'This is the number one paying lane on the load boards this week.' : `These are the ${props.lanes.length} highest paying lanes on the load boards this week.` },
     ...props.lanes.map(l => ({ text: `Number ${l.rank}. ${spokenPlace(l.from.label)}, to ${spokenPlace(l.to.label)}. ${spokenRate(l.rate)}.` })),
     { text: 'Find loads like these in one feed, with a broker check on every load. Try Truloader free for three days.' },
   ];
@@ -175,21 +175,38 @@ export async function addVoiceAndMusic(props, dir) {
 async function main() {
   const args = process.argv.slice(2);
   const dryRun = args.includes('--dry-run');
-  const eq = args.includes('--equipment') ? args[args.indexOf('--equipment') + 1] : '';
-  const count = args.includes('--count') ? Number(args[args.indexOf('--count') + 1]) : 10;
+  let eq = args.includes('--equipment') ? args[args.indexOf('--equipment') + 1] : '';
+  let count = args.includes('--count') ? Number(args[args.indexOf('--count') + 1]) : 10;
+  let concept = args.includes('--concept') ? args[args.indexOf('--concept') + 1] : 'lanes';
+  const { CONCEPTS, buildConcept, pickSlot } = await import('./trucktips.mjs');
+  const log = fs.existsSync(path.join(ROOT, 'posted.log')) ? fs.readFileSync(path.join(ROOT, 'posted.log'), 'utf8') : '';
+  if (args.includes('--auto')) { // scheduled slot: next concept not posted recently (see pickSlot)
+    concept = pickSlot(log);
+    if (!concept) { console.log('nothing new for this slot (every concept posted recently) — skipping'); return null; }
+    console.log(`slot concept: ${concept}`);
+  }
+  if (concept === 'one') count = 1; else if (concept === 'lanes5') count = 5; else if (concept === 'lanes3') count = 3;
+  const isLanes = ['lanes', 'lanes5', 'lanes3', 'one'].includes(concept);
+  if (!isLanes && !CONCEPTS.includes(concept)) throw new Error(`unknown concept ${concept}`);
 
   step('Fetching this week’s lanes');
   const data = await getJSON(`${API}?${eq ? `equipment=${encodeURIComponent(eq)}&` : ''}t=${Date.now()}`); // t= skips a stale CDN copy
   const brand = await getJSON(`${BRAND}/brand.json`).catch(() => ({}));
-  const id = `${data.weekStart}${eq ? `-${eq}` : ''}${count !== 10 ? `-top${count}` : ''}`;
-  // Scheduled slots (--once): one post per week per variant, so the Page never gets the same Reel twice.
-  if (args.includes('--once') && !dryRun && fs.readFileSync(path.join(ROOT, 'posted.log'), 'utf8').includes(`truloader:${id}\t`)) {
-    console.log(`already posted truloader:${id} this week — skipping this slot`); return null;
+  let id, props, caption, comp = 'Lanes';
+  const tmp = path.join(ROOT, 'out', 'truloader', `tmp-${Date.now()}`);
+  fs.mkdirSync(tmp, { recursive: true });
+  if (isLanes) {
+    id = `${concept === 'lanes' && count !== 10 ? `lanes${count}` : concept}-${data.weekStart}${eq ? `-${eq}` : ''}`;
+    props = await buildProps(data, brand, count);
+    if (!args.includes('--no-voice')) await addVoiceAndMusic(props, tmp);
+    caption = captionFor(data, props);
+  } else {
+    const r = await buildConcept(concept, { dir: tmp, lanes: data, brand });
+    id = r.spec.id; props = r.props; caption = r.spec.caption; comp = 'Cards';
   }
+  if (log.includes(`truloader:${id}\t`) && !dryRun && args.includes('--auto')) { console.log(`already posted ${id} — skipping`); return null; }
   const dir = path.join(ROOT, 'out', 'truloader', id);
-  fs.mkdirSync(dir, { recursive: true });
-  const props = await buildProps(data, brand, count);
-  if (!args.includes('--no-voice')) await addVoiceAndMusic(props, dir);
+  fs.rmSync(dir, { recursive: true, force: true }); fs.renameSync(tmp, dir);
   writeJSON(path.join(dir, 'data.json'), data);
   writeJSON(path.join(dir, 'props.json'), props);
   await download(`${BRAND}/logo-white.png`, path.join(dir, 'logo-white.png'));
@@ -199,7 +216,7 @@ async function main() {
   step('Rendering');
   const out = path.join(dir, 'reel.mp4');
   const local = '/opt/pw-browsers/chromium_headless_shell-1194/chrome-linux/headless_shell';
-  await run('npx', ['remotion', 'render', 'src/index.ts', 'Lanes', out, `--props=${path.join(dir, 'props.json')}`, `--public-dir=${dir}`,
+  await run('npx', ['remotion', 'render', 'src/index.ts', comp, out, `--props=${path.join(dir, 'props.json')}`, `--public-dir=${dir}`,
     '--codec=h264', '--crf=20', '--audio-bitrate=192k', ...(!process.env.CI && fs.existsSync(local) ? [`--browser-executable=${local}`] : [])]);
   // Owner, Nov 19: speed the whole Reel up 1.3x (like the map Reels).
   const speed = Number(process.env.TRULOADER_SPEED || 1.3);
@@ -209,8 +226,7 @@ async function main() {
       '-map', '[v]', '-map', '[a]', '-c:v', 'libx264', '-crf', '20', '-preset', 'medium', '-pix_fmt', 'yuv420p', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', fast]);
     fs.renameSync(fast, out);
   }
-  const caption = captionFor(data, props);
-  const post = { id: `truloader-${id}`, week: [data.weekStart, data.weekEnd], video: out, caption };
+  const post = { id: `truloader-${id}`, concept, week: [data.weekStart, data.weekEnd], video: out, caption };
   writeJSON(path.join(dir, 'post.json'), post);
   console.log(`✔ ${out}\n\n${caption}\n`);
   if (dryRun) {

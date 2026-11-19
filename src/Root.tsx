@@ -4,6 +4,7 @@ import { Viral, ViralProps } from './Viral';
 import { Chat, ChatProps } from './Chat';
 import { Ugc, UgcProps } from './Ugc';
 import { Lanes, LanesProps } from './Lanes';
+import { Cards, CardsProps } from './Cards';
 
 const defaults: ReelProps = {
   fps: 30, width: 1080, height: 1920, durationInFrames: 300,
@@ -25,7 +26,22 @@ const lanesDefaults: LanesProps = {
   cta: '', site: 'truloader.com', narration: null,
 };
 
+const cardsDefaults: CardsProps = {
+  durationInFrames: 300, hookFrames: 75, outroFrames: 120, title: ['', ''], tag: '', states: [], mapW: 975, mapH: 610, items: [],
+  colors: { primary: '#0066FF', secondary: '#0B1220', accent: '#FDC902' }, cta: '', site: 'truloader.com', source: '', narration: null,
+};
+
 export const RemotionRoot: React.FC = () => (<>
+  <Composition
+    id="Cards"
+    component={Cards}
+    defaultProps={cardsDefaults}
+    fps={30}
+    width={1080}
+    height={1920}
+    durationInFrames={300}
+    calculateMetadata={({ props }) => ({ durationInFrames: props.durationInFrames })}
+  />
   <Composition
     id="Lanes"
     component={Lanes}

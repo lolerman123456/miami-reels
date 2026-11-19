@@ -1,14 +1,15 @@
 name: TruLoader Reel
 
 # Weekly "highest paying lanes" Reel for the TruLoader Facebook Page (pipeline/truloader.mjs + src/Lanes.tsx).
-# Scheduled (owner, Nov 19): 3 a day, 7am / 12pm / 5pm New York (≥3 h apart), each slot a different variant
-# (top 10 / top 5 / top 3 lanes), each posted once a week; posts only when control.json → truloader.publish is true.
+# Scheduled (owner, Nov 19): 4 a day, ~6am / 11am / 3pm / 8pm New York (EST; ≥3 h apart). Each slot posts the next concept
+# not posted recently (pickSlot in pipeline/trucktips.mjs); posts only when control.json → truloader.publish is true.
 # From a chat: commit requests/truloader.json {"publish": true|false, "equipment": "optional", "at": "..."}
 on:
   schedule:
-    - cron: '47 11 * * *'   # ~7am NY (EST) → top 10
-    - cron: '47 16 * * *'   # ~12pm NY → top 5
-    - cron: '47 21 * * *'   # ~5pm NY → top 3
+    - cron: '47 10 * * *'   # ~6am NY (EST)
+    - cron: '47 15 * * *'   # ~11am NY
+    - cron: '47 19 * * *'   # ~3pm NY
+    - cron: '47 0 * * *'    # ~8pm NY
   push:
     branches: [main]
     paths: ['requests/truloader.json']
@@ -54,10 +55,10 @@ jobs:
           if [ "${{ github.event_name }}" = "push" ] && [ -f requests/truloader.json ]; then
             [ "$(jq -r 'if .publish == true then "y" else "n" end' requests/truloader.json)" = "y" ] || ARGS+=(--dry-run)
             EQ=$(jq -r '.equipment // ""' requests/truloader.json); [ -n "$EQ" ] && ARGS+=(--equipment "$EQ")
+            CO=$(jq -r '.concept // ""' requests/truloader.json); [ -n "$CO" ] && ARGS+=(--concept "$CO")
           else
             [ "$(jq -r 'if .truloader.publish == true then "y" else "n" end' control.json)" = "y" ] || ARGS+=(--dry-run)
-            case "$(date -u +%H)" in 11) C=10;; 16) C=5;; *) C=3;; esac
-            ARGS+=(--count "$C" --once)
+            ARGS+=(--auto)
           fi
           node pipeline/truloader.mjs "${ARGS[@]}"
       - name: Preview link
@@ -65,7 +66,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          D=$(ls -d out/truloader/*/ 2>/dev/null | tail -1); [ -n "$D" ] && [ -f "${D}reel.mp4" ] || exit 0
+          D=$(ls -td out/truloader/*/ 2>/dev/null | head -1); [ -n "$D" ] && [ -f "${D}reel.mp4" ] || exit 0
           N=$(basename "$D")
           cp "${D}reel.mp4" "/tmp/truloader-$N.mp4"
           gh release upload videos "/tmp/truloader-$N.mp4" --clobber
