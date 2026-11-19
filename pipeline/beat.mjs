@@ -2,7 +2,8 @@
 // makeBeat(file, seconds, { bpm }) writes a mono WAV. Used by the TruLoader Reel (Facebook's API can't add a song).
 import { writeWav } from './util.mjs';
 
-export function makeBeat(file, seconds, { bpm = 100, sr = 44100, seed = 7 } = {}) {
+export function makeBeat(file, seconds, { bpm = 100, sr = 44100, seed = 7, light = false } = {}) {
+  if (light) return makeLight(file, seconds, { bpm: 112, sr, seed });
   const n = Math.ceil(seconds * sr);
   const out = new Float32Array(n);
   let s = seed; const rnd = () => ((s = (s * 1103515245 + 12345) & 0x7fffffff) / 0x7fffffff) * 2 - 1;
@@ -25,6 +26,32 @@ export function makeBeat(file, seconds, { bpm = 100, sr = 44100, seed = 7 } = {}
   }
   let peak = 0; for (const x of out) peak = Math.max(peak, Math.abs(x));
   for (let i = 0; i < n; i++) out[i] = (out[i] / (peak || 1)) * 0.85;
+  writeWav(file, out, sr);
+  return file;
+}
+
+// Light, upbeat bed (owner, Nov 19: "very light upbeat"): soft kick, claps, shaker, plucked major chords + a little bell melody. No 808.
+function makeLight(file, seconds, { bpm, sr, seed }) {
+  const n = Math.ceil(seconds * sr), out = new Float32Array(n);
+  let s = seed; const rnd = () => ((s = (s * 1103515245 + 12345) & 0x7fffffff) / 0x7fffffff) * 2 - 1;
+  const beat = 60 / bpm, bar = beat * 4, midi = (m) => 440 * 2 ** ((m - 69) / 12);
+  const add = (t0, len, fn) => { const a = Math.floor(t0 * sr), b = Math.min(n, a + Math.floor(len * sr)); for (let i = a; i < b; i++) out[i] += fn((i - a) / sr); };
+  const prog = [[60, 64, 67, 72], [55, 59, 62, 67], [57, 60, 64, 69], [53, 57, 60, 65]]; // C G Am F
+  const melody = [76, 74, 72, 74, 76, 76, 79, 76];
+  const kick = (t) => Math.sin(2 * Math.PI * (55 + 50 * Math.exp(-t * 30)) * t) * Math.exp(-t * 12) * 0.45;
+  const noise = (amp, dec) => { let prev = 0; return (t) => { const x = rnd(), hp = x - prev; prev = x; return hp * amp * Math.exp(-t * dec); }; };
+  const pluck = (f, amp) => (t) => (Math.sin(2 * Math.PI * f * t) + 0.3 * Math.sin(4 * Math.PI * f * t)) * amp * Math.exp(-t * 5) * Math.min(1, t * 200);
+  for (let b = 0; b * bar < seconds; b++) {
+    const t = b * bar, ch = prog[b % 4];
+    for (let k = 0; k < 4; k++) add(t + k * beat, 0.4, kick);
+    for (const k of [1, 3]) add(t + k * beat, 0.2, noise(0.22, 25));
+    for (let h = 0; h < 8; h++) add(t + h * beat / 2 + beat / 4, 0.06, noise(h % 2 ? 0.08 : 0.05, 60));
+    for (let k = 0; k < 8; k++) add(t + k * beat / 2, beat, pluck(midi(ch[k % 4]), 0.07));
+    add(t, bar, (x) => Math.sin(2 * Math.PI * midi(ch[0] - 12) * x) * 0.12 * Math.min(1, x * 20) * Math.exp(-x * 1.2));
+    if (b % 2) melody.forEach((m, i) => add(t + i * beat / 2, beat, pluck(midi(m), 0.05)));
+  }
+  let peak = 0; for (const x of out) peak = Math.max(peak, Math.abs(x));
+  for (let i = 0; i < n; i++) out[i] = (out[i] / (peak || 1)) * 0.8;
   writeWav(file, out, sr);
   return file;
 }

@@ -1,11 +1,14 @@
 name: TruLoader Reel
 
 # Weekly "highest paying lanes" Reel for the TruLoader Facebook Page (pipeline/truloader.mjs + src/Lanes.tsx).
-# Scheduled: Mondays ~9am New York; posts only when control.json → truloader.publish is true (else a preview).
+# Scheduled (owner, Nov 19): 3 a day, 7am / 12pm / 5pm New York (≥3 h apart), each slot a different variant
+# (top 10 / top 5 / top 3 lanes), each posted once a week; posts only when control.json → truloader.publish is true.
 # From a chat: commit requests/truloader.json {"publish": true|false, "equipment": "optional", "at": "..."}
 on:
   schedule:
-    - cron: '41 13 * * 1'
+    - cron: '47 11 * * *'   # ~7am NY (EST) → top 10
+    - cron: '47 16 * * *'   # ~12pm NY → top 5
+    - cron: '47 21 * * *'   # ~5pm NY → top 3
   push:
     branches: [main]
     paths: ['requests/truloader.json']
@@ -53,6 +56,8 @@ jobs:
             EQ=$(jq -r '.equipment // ""' requests/truloader.json); [ -n "$EQ" ] && ARGS+=(--equipment "$EQ")
           else
             [ "$(jq -r 'if .truloader.publish == true then "y" else "n" end' control.json)" = "y" ] || ARGS+=(--dry-run)
+            case "$(date -u +%H)" in 11) C=10;; 16) C=5;; *) C=3;; esac
+            ARGS+=(--count "$C" --once)
           fi
           node pipeline/truloader.mjs "${ARGS[@]}"
       - name: Preview link

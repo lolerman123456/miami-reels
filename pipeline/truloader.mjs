@@ -164,10 +164,10 @@ export async function addVoiceAndMusic(props, dir) {
   } catch (e) {
     console.log(`⚠ voiceover failed (${String(e.message).slice(0, 200)}) — continuing without voice`);
   }
-  // Owner, Nov 19: no home-made beat. Music is a trending Facebook sound, which the Page Reels API cannot attach.
-  if (process.env.TRULOADER_BEAT === '1') {
+  // Owner, Nov 19 (later): light upbeat background music, our own (the Page Reels API can't attach Facebook songs). TRULOADER_BEAT=0 turns it off.
+  if (process.env.TRULOADER_BEAT !== '0') {
     const { makeBeat } = await import('./beat.mjs');
-    makeBeat(path.join(dir, 'music.wav'), props.durationInFrames / FPS + 1);
+    makeBeat(path.join(dir, 'music.wav'), props.durationInFrames / FPS + 1, { light: true, seed: Date.now() % 1000 });
     props.music = 'music.wav';
   }
 }
@@ -181,7 +181,11 @@ async function main() {
   step('Fetching this week’s lanes');
   const data = await getJSON(`${API}?${eq ? `equipment=${encodeURIComponent(eq)}&` : ''}t=${Date.now()}`); // t= skips a stale CDN copy
   const brand = await getJSON(`${BRAND}/brand.json`).catch(() => ({}));
-  const id = `${data.weekStart}${eq ? `-${eq}` : ''}`;
+  const id = `${data.weekStart}${eq ? `-${eq}` : ''}${count !== 10 ? `-top${count}` : ''}`;
+  // Scheduled slots (--once): one post per week per variant, so the Page never gets the same Reel twice.
+  if (args.includes('--once') && !dryRun && fs.readFileSync(path.join(ROOT, 'posted.log'), 'utf8').includes(`truloader:${id}\t`)) {
+    console.log(`already posted truloader:${id} this week — skipping this slot`); return null;
+  }
   const dir = path.join(ROOT, 'out', 'truloader', id);
   fs.mkdirSync(dir, { recursive: true });
   const props = await buildProps(data, brand, count);

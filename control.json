@@ -32,7 +32,7 @@
   ],
   "tiktokDrafts": false,
   "truloader": {
-    "publish": false,
-    "note": "TruLoader weekly lanes Reel (Mondays ~9am NY). publish:false = preview only"
+    "publish": true,
+    "note": "3 posts a day (7am/12pm/5pm NY) to the TruLoader FB Page; false = previews only"
   }
 }
