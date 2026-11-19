@@ -120,6 +120,10 @@ jobs:
 
       - run: npm ci
 
+        env:
+
+          ONNXRUNTIME_NODE_INSTALL_CUDA: skip
+
       - name: Write, render and post
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}

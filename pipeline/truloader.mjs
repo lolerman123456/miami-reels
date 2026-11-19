@@ -5,7 +5,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { ROOT, run, writeJSON, readJSON, step } from './util.mjs';
-import { formatCaption } from './caption.mjs';
 
 const API = 'https://truloader.com/api/public/top-lanes';
 const BRAND = 'https://truloader.com/brand';
@@ -68,17 +67,18 @@ export async function buildProps(data, brand, count = 10) {
 }
 
 export function captionFor(data, props) {
+  // TruLoader is its own brand: plain caption + a fuller trucking hashtag set (the 4-tag cap is a @getnearapp rule).
   const top = [...props.lanes].reverse();
-  const lines = top.slice(0, 5).map(l => `#${l.rank} ${l.from.label} → ${l.to.label}: ${l.rate}/mi`);
-  return formatCaption([
-    `Highest paying lanes this week (${fmtDay(data.weekStart)} – ${fmtDay(data.weekEnd)}) 🚛💰`,
+  return [
+    `🚛 Highest paying lanes this week (${fmtDay(data.weekStart)} – ${fmtDay(data.weekEnd)})`,
     '',
-    ...lines,
+    ...top.slice(0, 5).map(l => `#${l.rank} ${l.from.label} → ${l.to.label}: ${l.rate}/mi`),
     '',
-    'Average posted rates across the load boards Truloader watches. See every load in one feed, check the broker, and call in one tap → truloader.com (3-day free trial)',
+    'Average posted rates across the load boards Truloader watches. Every load in one feed, a broker check on every load, one tap to call.',
+    '👉 Try it free for 3 days: truloader.com',
     '',
-    '#trucking #freight #dispatcher #owneroperator',
-  ].join('\n'));
+    '#trucking #truckinglife #freight #loadboard #dispatcher #owneroperator #truckdriver #flatbed #logistics #hotshot',
+  ].join('\n');
 }
 
 // ---------- Facebook Page Reels ----------
@@ -126,6 +126,49 @@ export async function postPageReel(file, description) {
   return { id: start.video_id, url: `https://www.facebook.com/${start.video_id}`, pending: true };
 }
 
+// ---------- Voiceover (free Kokoro male voice, am_adam — same as the Miami Reels fallback) + synthesized beat ----------
+const STATES = { AL: 'Alabama', AZ: 'Arizona', AR: 'Arkansas', CA: 'California', CO: 'Colorado', CT: 'Connecticut', DE: 'Delaware', FL: 'Florida', GA: 'Georgia', ID: 'Idaho', IL: 'Illinois', IN: 'Indiana', IA: 'Iowa', KS: 'Kansas', KY: 'Kentucky', LA: 'Louisiana', ME: 'Maine', MD: 'Maryland', MA: 'Massachusetts', MI: 'Michigan', MN: 'Minnesota', MS: 'Mississippi', MO: 'Missouri', MT: 'Montana', NE: 'Nebraska', NV: 'Nevada', NH: 'New Hampshire', NJ: 'New Jersey', NM: 'New Mexico', NY: 'New York', NC: 'North Carolina', ND: 'North Dakota', OH: 'Ohio', OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', RI: 'Rhode Island', SC: 'South Carolina', SD: 'South Dakota', TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VT: 'Vermont', VA: 'Virginia', WA: 'Washington', WV: 'West Virginia', WI: 'Wisconsin', WY: 'Wyoming', DC: 'D.C.' };
+const spokenPlace = (label) => { const [city, st] = label.split(/,\s*/); return `${city}, ${STATES[st] || st}`; };
+const spokenRate = (rate) => { const [d, c] = rate.replace('$', '').split('.'); return `${d} ${c === '00' ? 'flat' : c.startsWith('0') ? `oh ${c[1]}` : c} a mile`; };
+
+export async function addVoiceAndMusic(props, dir) {
+  step('Voiceover (Kokoro am_adam) + beat');
+  const scenes = [
+    { text: `These are the ${props.lanes.length} highest paying lanes on the load boards this week.` },
+    ...props.lanes.map(l => ({ text: `Number ${l.rank}. ${spokenPlace(l.from.label)}, to ${spokenPlace(l.to.label)}. ${spokenRate(l.rate)}.` })),
+    { text: 'Find loads like these in one feed, with a broker check on every load. Try Truloader free for three days.' },
+  ];
+  try {
+    process.env.KOKORO_VOICE ||= 'am_adam';
+    process.env.KOKORO_SPEED ||= '1.2';
+    const { makeNarration } = await import('./voice.mjs');
+    const { timeline } = await makeNarration({ voice: { provider: 'kokoro' }, scenes }, dir);
+    const fr = (sec) => Math.ceil(sec * FPS);
+    props.hookFrames = Math.max(60, fr(timeline[0].duration));
+    props.laneStarts = []; props.laneDurs = [];
+    let at = props.hookFrames;
+    for (let i = 0; i < props.lanes.length; i++) {
+      const d = Math.max(54, fr(timeline[i + 1].duration) + 6);
+      props.laneStarts.push(at); props.laneDurs.push(d); at += d;
+    }
+    // Narration was laid out back to back; shift each scene's voice to where its lane starts.
+    const { execFileSync } = await import('node:child_process');
+    const parts = timeline.map((t, i) => ({ file: path.join(dir, 'voice', `${i}.wav`), at: i === 0 ? t.speechStart : (i <= props.lanes.length ? props.laneStarts[i - 1] / FPS + 0.15 : at / FPS + 0.4) }));
+    const inputs = parts.flatMap(p => ['-i', p.file]);
+    const delays = parts.map((p, i) => `[${i}]adelay=${Math.round(p.at * 1000)}:all=1[a${i}]`).join(';');
+    execFileSync('ffmpeg', ['-y', '-loglevel', 'error', ...inputs, '-filter_complex', `${delays};${parts.map((_, i) => `[a${i}]`).join('')}amix=inputs=${parts.length}:normalize=0,loudnorm=I=-14:TP=-1.5[out]`, '-map', '[out]', '-ar', '44100', path.join(dir, 'voiceover.wav')]);
+    const last = timeline[timeline.length - 1];
+    props.outroFrames = Math.max(120, fr(last.speech + 1.4));
+    props.durationInFrames = at + props.outroFrames;
+    props.narration = 'voiceover.wav';
+  } catch (e) {
+    console.log(`⚠ voiceover failed (${String(e.message).slice(0, 200)}) — continuing without voice`);
+  }
+  const { makeBeat } = await import('./beat.mjs');
+  makeBeat(path.join(dir, 'music.wav'), props.durationInFrames / FPS + 1);
+  props.music = 'music.wav';
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const dryRun = args.includes('--dry-run');
@@ -139,6 +182,7 @@ async function main() {
   const dir = path.join(ROOT, 'out', 'truloader', id);
   fs.mkdirSync(dir, { recursive: true });
   const props = await buildProps(data, brand, count);
+  if (!args.includes('--no-voice')) await addVoiceAndMusic(props, dir);
   writeJSON(path.join(dir, 'data.json'), data);
   writeJSON(path.join(dir, 'props.json'), props);
   await download(`${BRAND}/logo-white.png`, path.join(dir, 'logo-white.png'));

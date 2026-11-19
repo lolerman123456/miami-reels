@@ -29,7 +29,14 @@ jobs:
           cache: npm
       - name: Tools
         run: bash scripts/ffmpeg.sh
-      - run: npm ci --ignore-scripts
+      - run: npm ci
+        env:
+          ONNXRUNTIME_NODE_INSTALL_CUDA: skip
+      - name: Cache voice model
+        uses: actions/cache@v4
+        with:
+          path: node_modules/@huggingface/transformers/.cache
+          key: kokoro-v1
       - name: Cache Remotion browser
         uses: actions/cache@v4
         with:

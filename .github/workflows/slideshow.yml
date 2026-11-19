@@ -21,6 +21,8 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+        env:
+          ONNXRUNTIME_NODE_INSTALL_CUDA: skip
       - name: Buffer status (TikTok)
         if: contains(github.event.head_commit.message, 'Buffer status')
         env:

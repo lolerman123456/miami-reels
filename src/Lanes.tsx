@@ -9,6 +9,7 @@ export type Lane = { rank: number; from: LanePt; to: LanePt; rate: string; sub: 
 export type LanesProps = {
   durationInFrames: number;
   hookFrames: number; laneFrames: number; outroFrames: number;
+  laneStarts?: number[]; laneDurs?: number[]; music?: string | null;
   states: { d: string }[]; mapW: number; mapH: number;
   week: string; title: [string, string]; lanes: Lane[];
   colors: { primary: string; secondary: string; accent: string };
@@ -16,6 +17,10 @@ export type LanesProps = {
 };
 
 const FONT = 'Inter, Arial, sans-serif';
+const starts = (p: LanesProps) => p.laneStarts || p.lanes.map((_, i) => p.hookFrames + i * p.laneFrames);
+const durs = (p: LanesProps) => p.laneDurs || p.lanes.map(() => p.laneFrames);
+const lanesEndOf = (p: LanesProps) => { const s = starts(p), d = durs(p); return s.length ? s[s.length - 1] + d[d.length - 1] : p.hookFrames; };
+const laneIndex = (p: LanesProps, frame: number) => { const s = starts(p); let i = -1; for (let k = 0; k < s.length; k++) if (frame >= s[k]) i = k; return frame >= lanesEndOf(p) ? p.lanes.length : i; };
 
 const useFonts = () => {
   React.useEffect(() => {
@@ -32,17 +37,16 @@ function camera(p: LanesProps, frame: number) {
     const span = Math.max(Math.abs(l.from.x - l.to.x), Math.abs(l.from.y - l.to.y) * 1.3, 60);
     return { cx, cy, s: Math.min(9, Math.max(1.4, (p.mapW * 0.45) / span)) };
   };
-  const t = frame - p.hookFrames;
-  if (t < 0) return full;
-  const i = Math.floor(t / p.laneFrames);
+  if (frame < p.hookFrames) return full;
+  const i = laneIndex(p, frame);
   if (i >= p.lanes.length) {
-    const k = interpolate(t - p.lanes.length * p.laneFrames, [0, 20], [0, 1], { extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic) });
+    const k = interpolate(frame - lanesEndOf(p), [0, 20], [0, 1], { extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic) });
     const a = shot(p.lanes[p.lanes.length - 1]);
     return { cx: a.cx + (full.cx - a.cx) * k, cy: a.cy + (full.cy - a.cy) * k, s: a.s + (full.s - a.s) * k };
   }
   const prev = i === 0 ? full : shot(p.lanes[i - 1]);
   const cur = shot(p.lanes[i]);
-  const k = interpolate(t - i * p.laneFrames, [0, 16], [0, 1], { extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic) });
+  const k = interpolate(frame - starts(p)[i], [0, 16], [0, 1], { extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic) });
   return { cx: prev.cx + (cur.cx - prev.cx) * k, cy: prev.cy + (cur.cy - prev.cy) * k, s: prev.s + (cur.s - prev.s) * k };
 }
 
@@ -65,7 +69,7 @@ const MapLayer: React.FC<{ p: LanesProps }> = ({ p }) => {
   const base = W / p.mapW;
   const scale = base * cam.s;
   const tx = W / 2 - cam.cx * scale, ty = VIEW_H / 2 + 60 - cam.cy * scale;
-  const cur = Math.floor((frame - p.hookFrames) / p.laneFrames);
+  const cur = laneIndex(p, frame);
   return (
     <svg width={W} height={1920} style={{ position: 'absolute', inset: 0 }}>
       <defs>
@@ -76,7 +80,7 @@ const MapLayer: React.FC<{ p: LanesProps }> = ({ p }) => {
           <path key={i} d={s.d} fill="#13203a" stroke={p.colors.primary} strokeOpacity={0.55} strokeWidth={1.2 / scale * base} />
         ))}
         {p.lanes.map((l, i) => {
-          const start = p.hookFrames + i * p.laneFrames;
+          const start = starts(p)[i];
           if (frame < start) return null;
           const t = frame - start;
           const prog = interpolate(t, [12, 40], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.quad) });
@@ -101,11 +105,12 @@ const MapLayer: React.FC<{ p: LanesProps }> = ({ p }) => {
   );
 };
 
-const Card: React.FC<{ p: LanesProps; l: Lane; idx: number }> = ({ p, l }) => {
+const Card: React.FC<{ p: LanesProps; l: Lane; idx: number }> = ({ p, l, idx }) => {
+  const dur = durs(p)[idx];
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const pop = spring({ frame, fps, config: { damping: 14, stiffness: 160 } });
-  const out = interpolate(frame, [p.laneFrames - 8, p.laneFrames], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  const out = interpolate(frame, [dur - 8, dur], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
   const rate = spring({ frame: frame - 18, fps, config: { damping: 10, stiffness: 200 } });
   return (
     <div style={{ position: 'absolute', left: 60, right: 60, bottom: 230, opacity: out, transform: `translateY(${(1 - pop) * 120}px)` }}>
@@ -162,7 +167,7 @@ const Outro: React.FC<{ p: LanesProps }> = ({ p }) => {
 export const Lanes: React.FC<LanesProps> = (p) => {
   useFonts();
   const frame = useCurrentFrame();
-  const lanesEnd = p.hookFrames + p.lanes.length * p.laneFrames;
+  const lanesEnd = lanesEndOf(p);
   return (
     <AbsoluteFill style={{ background: `radial-gradient(ellipse at 50% 35%, #12233f 0%, ${p.colors.secondary} 70%)` }}>
       <MapLayer p={p} />
@@ -174,14 +179,15 @@ export const Lanes: React.FC<LanesProps> = (p) => {
       )}
       <Sequence durationInFrames={p.hookFrames}><Hook p={p} /></Sequence>
       {p.lanes.map((l, i) => (
-        <Sequence key={i} from={p.hookFrames + i * p.laneFrames} durationInFrames={p.laneFrames}>
+        <Sequence key={i} from={starts(p)[i]} durationInFrames={durs(p)[i]}>
           <Card p={p} l={l} idx={i} />
-          <Audio src={staticFile('sfx/whoosh.wav')} volume={0.5} />
+          <Audio src={staticFile('sfx/whoosh.wav')} volume={0.3} />
         </Sequence>
       ))}
       <Sequence from={lanesEnd} durationInFrames={p.outroFrames}><Outro p={p} /></Sequence>
       <Sequence durationInFrames={20}><Audio src={staticFile('sfx/impact.wav')} volume={0.7} /></Sequence>
       {p.narration && <Audio src={staticFile(p.narration)} />}
+      {p.music && <Audio src={staticFile(p.music)} volume={(f) => interpolate(f, [0, 15, p.durationInFrames - 45, p.durationInFrames], [0, 0.16, 0.16, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' })} />}
       <div style={{ position: 'absolute', bottom: 60, left: 0, right: 0, textAlign: 'center', color: '#7f8ba3', fontFamily: FONT, fontWeight: 600, fontSize: 26 }}>Avg posted rates on load boards this week · source: truloader.com</div>
     </AbsoluteFill>
   );
