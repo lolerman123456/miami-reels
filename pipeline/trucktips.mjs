@@ -205,7 +205,7 @@ const PACKS = [
     ['VOLVO VNL|Volvo VNL', 'Sleeps 8 hours, eats salad, reads the manual. Suspicious.', '', 'Volvo. Sleeps eight hours, eats salad, reads the manual. Suspicious.'],
     ['INTERNATIONAL LT|International LT truck', 'Bought it used, fixed it himself, will tell you about it. Twice.', '', 'International. Bought it used, fixed it himself, and will tell you about it. Twice.'],
     ['MACK ANTHEM|Mack Anthem', 'Says “they don’t build ’em like they used to.” Is right.', '', 'Mack. Says they don’t build them like they used to. And he’s right.']] },
-  { key: 'trailer', photos: ['flatbed trailer tarp', 'reefer trailer', 'dry van trailer', 'step deck trailer', 'hotshot trailer pickup'], funny: true, title: ['WHAT YOUR TRAILER', 'SAYS ABOUT YOU'], tag: 'WHAT YOUR TRAILER SAYS ABOUT YOU', hook: 'What your trailer says about you. Number five is going to start a fight.', ask: 'Hotshot guys, don’t come at us 👇', tags: '#flatbed #reefer', cta: 'Flatbed, reefer or van: find the loads that pay.', items: [
+  { key: 'trailer', photos: ['flatbed semi-trailer', 'refrigerated semi-trailer', 'box semi-trailer', 'lowboy semi-trailer', 'pickup gooseneck trailer'], funny: true, title: ['WHAT YOUR TRAILER', 'SAYS ABOUT YOU'], tag: 'WHAT YOUR TRAILER SAYS ABOUT YOU', hook: 'What your trailer says about you. Number five is going to start a fight.', ask: 'Hotshot guys, don’t come at us 👇', tags: '#flatbed #reefer', cta: 'Flatbed, reefer or van: find the loads that pay.', items: [
     ['FLATBED', 'Can tarp a load in a thunderstorm. Can’t find his reading glasses.', ''],
     ['REEFER', 'Hears that unit kick on in his sleep.', ''],
     ['DRY VAN', 'Waited 6 hours at a dock and called it “a good day.”', '', 'Dry van. Waited six hours at a dock and called it a good day.'],
@@ -273,7 +273,8 @@ export async function commonsPhoto(query, file, { strict = false, used = new Set
     .filter(c => !used.has(c.title))
     .filter(c => /^(cc|public domain|pd)/i.test(c.extmetadata?.LicenseShortName?.value || ''));
   const match = (c) => words.every(w => c.title.toLowerCase().includes(w));
-  const c = cands.find(match) || (strict ? null : cands[0]); if (!c) return null;
+  const some = (c) => words.filter(w => w.length > 3 && !['semi', 'trailer'].includes(w)).some(w => c.title.toLowerCase().includes(w));
+  const c = cands.find(match) || (strict ? null : cands.find(some)); if (!c) return null; // loose: still needs a real word of the query in the file name (no brick walls)
   used.add(c.title);
   const r = await fetch(c.thumburl, { headers: UA }); if (!r.ok) return null;
   fs.writeFileSync(file, Buffer.from(await r.arrayBuffer()));
