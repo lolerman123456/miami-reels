@@ -1,9 +1,9 @@
 // TruLoader concept Reels (pipeline/trucktips.mjs): hook → one big card per point → TruLoader outro.
 // Same dark US map look as Lanes.tsx; each card can shade states (fuel by region, top-paying states) or dim the map.
 import React from 'react';
-import { AbsoluteFill, Audio, Img, Sequence, staticFile, interpolate, spring, useCurrentFrame, useVideoConfig } from 'remotion';
+import { AbsoluteFill, Audio, Img, Sequence, staticFile, interpolate, spring, useCurrentFrame, useVideoConfig, Easing } from 'remotion';
 
-export type CardItem = { start: number; dur: number; kicker: string; big: string; title: string; sub: string; shade?: Record<string, string> };
+export type CardItem = { start: number; dur: number; kicker: string; big: string; title: string; sub: string; shade?: Record<string, string>; cam?: { cx: number; cy: number; s: number } };
 export type CardsProps = {
   durationInFrames: number; hookFrames: number; outroFrames: number;
   title: [string, string]; tag: string; states: { d: string; name?: string }[]; mapW: number; mapH: number;
@@ -19,14 +19,26 @@ const useFonts = () => {
   }, []);
 };
 
+// Camera: full map during the hook, then flies to each card's states (item.cam) and back out for the outro.
+function camAt(p: CardsProps, frame: number) {
+  const full = { cx: p.mapW / 2, cy: p.mapH / 2, s: 1 };
+  let i = -1; p.items.forEach((it, k) => { if (frame >= it.start) i = k; });
+  if (i < 0) return full;
+  const end = p.items[p.items.length - 1].start + p.items[p.items.length - 1].dur;
+  const camOf = (k: number) => (k >= 0 && k < p.items.length && p.items[k].cam) || full;
+  const from = frame >= end ? camOf(p.items.length - 1) : camOf(i - 1), to = frame >= end ? full : camOf(i);
+  const k = interpolate(frame - (frame >= end ? end : p.items[i].start), [0, 18], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic) });
+  return { cx: from.cx + (to.cx - from.cx) * k, cy: from.cy + (to.cy - from.cy) * k, s: from.s + (to.s - from.s) * k };
+}
+
 const MapBg: React.FC<{ p: CardsProps; shade?: Record<string, string> }> = ({ p, shade }) => {
   const frame = useCurrentFrame();
-  const W = 1080, s = W / p.mapW, drift = 1 + frame * 0.00025;
+  const W = 1080, base = W / p.mapW, cam = camAt(p, frame), sc = base * cam.s * (1 + frame * 0.0002);
   return (
     <svg width={W} height={1920} style={{ position: 'absolute', inset: 0, opacity: p.showMap === false ? 0.25 : 1 }}>
-      <g transform={`translate(${W / 2},${560}) scale(${s * drift}) translate(${-p.mapW / 2},${-p.mapH / 2})`}>
+      <g transform={`translate(${W / 2},${620}) scale(${sc}) translate(${-cam.cx},${-cam.cy})`}>
         {p.states.map((st, i) => (
-          <path key={i} d={st.d} fill={(shade && st.name && shade[st.name]) || '#13203a'} stroke={p.colors.primary} strokeOpacity={0.55} strokeWidth={1.2} />
+          <path key={i} d={st.d} fill={(shade && st.name && shade[st.name]) || '#13203a'} stroke={p.colors.primary} strokeOpacity={0.55} strokeWidth={1.2 * base / sc * 1.5} />
         ))}
       </g>
     </svg>
