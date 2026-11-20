@@ -263,11 +263,14 @@ const PACKS = [
     ['#4', 'Pass you, then slow down', 'Every single time', 'Four. Pass you, then slow down.'],
     ['#5', 'Take the truck parking', 'For a nap in a sedan', 'Five. Park in the truck spots.']] },
 ];
+// Owner audience = US truckers: generic text queries returned foreign box trucks, so non-themed packs show US semis (strict model match).
+const US_TRUCKS = ['Freightliner Cascadia', 'Kenworth T680', 'Peterbilt 579', 'Volvo VNL', 'International LT truck', 'Kenworth W900', 'Peterbilt 389'];
+const THEMED = new Set(['truck', 'trailer', 'oldschool', 'cabkit', 'winter']);
 const packBuilder = (p) => async () => ({
   photos: p.photos,
   id: `${p.key}-1`, ttlDays: 6, funny: !!p.funny, title: p.title, tag: p.tag, source: '', showMap: false, cta: p.cta,
   hook: p.hook,
-  items: p.items.map(([kq, title, sub = '', say], i) => { const [kicker, own] = kq.split('|'); return { kicker, big: '', title, sub, photo: own || p.photos?.[i % p.photos.length], strict: !!own, say: `${say || `${kicker.replace(/[#“”"]/g, '')}. ${title.replace(/[“”"]/g, '')}`} ${sub.replace(/[“”"]/g, '')}`.trim() }; }),
+  items: p.items.map(([kq, title, sub = '', say], i) => { const [kicker, own] = kq.split('|'); return { kicker, big: '', title, sub, photo: own || (THEMED.has(p.key) ? p.photos?.[i % p.photos.length] : US_TRUCKS[(i + p.key.length) % US_TRUCKS.length]), strict: !!own || !THEMED.has(p.key), say: `${say || `${kicker.replace(/[#“”"]/g, '')}. ${title.replace(/[“”"]/g, '')}`} ${sub.replace(/[“”"]/g, '')}`.trim() }; }),
   caption: `${p.hook}\n\n${p.items.map(([kq, t]) => kq.split('|')[0]).map((k, i) => [k, p.items[i][1]]).map(([k, t]) => `• ${k.startsWith('#') ? '' : `${k}: `}${t}`).join('\n')}\n\n${p.ask}\n\nEvery load board in one feed, with a broker check on every load. Try TruLoader free for 3 days: truloader.com\n\n${TAGS}${p.tags ? ` ${p.tags}` : ''}`,
 });
 for (const p of PACKS) BUILDERS[p.key] = packBuilder(p);
