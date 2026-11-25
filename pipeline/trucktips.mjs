@@ -371,5 +371,6 @@ export function pickSlot(log, now = new Date()) {
   const nyHour = Number(now.toLocaleString('en-US', { timeZone: 'America/New_York', hour: 'numeric', hour12: false }));
   const oldest = (keys) => keys.filter(k => days(k) >= 6).sort((a, b) => last(a) - last(b))[0];
   if (nyHour >= 18 && Math.min(...FUNNY.map(days)) >= 4) { const f = oldest(FUNNY); if (f) return f; }
-  return oldest(EVERGREEN) || null;
+  // Every pack posted within 6 days (16 packs at 4 posts/day) → post the one posted longest ago instead of skipping the slot.
+  return oldest(EVERGREEN) || [...EVERGREEN].sort((a, b) => last(a) - last(b))[0] || null;
 }
