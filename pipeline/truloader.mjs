@@ -204,7 +204,9 @@ async function main() {
     const r = await buildConcept(concept, { dir: tmp, lanes: data, brand });
     id = r.spec.id; props = r.props; caption = r.spec.caption; comp = 'Cards';
   }
-  if (log.includes(`truloader:${id}\t`) && !dryRun && args.includes('--auto')) { console.log(`already posted ${id} — skipping`); return null; }
+  // Skip a repeat only if it went out in the last 3 days (evergreen packs keep the same id and rotate back in).
+  const lastSame = Math.max(0, ...log.split('\n').filter(l => l.includes(`\ttruloader:${id}\t`)).map(l => Date.parse(l.split('\t')[0]) || 0));
+  if (lastSame && Date.now() - lastSame < 3 * 864e5 && !dryRun && args.includes('--auto')) { console.log(`already posted ${id} recently — skipping`); return null; }
   const dir = path.join(ROOT, 'out', 'truloader', id);
   fs.rmSync(dir, { recursive: true, force: true }); fs.renameSync(tmp, dir);
   writeJSON(path.join(dir, 'data.json'), data);
